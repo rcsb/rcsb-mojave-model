@@ -182,12 +182,6 @@
             "items" : {
               "type" : "object",
               "properties" : {
-                "evidence" : {
-                  "type" : "array",
-                  "items" : {
-                    "type" : "integer"
-                  }
-                },
                 "type" : {
                   "enum" : [
                     "PRIMARY",
@@ -211,12 +205,6 @@
       "items" : {
         "type" : "object",
         "properties" : {
-          "evidence" : {
-            "type" : "array",
-            "items" : {
-              "type" : "integer"
-            }
-          },
           "id" : {
             "type" : "string"
           },
@@ -277,23 +265,6 @@
           "items" : {
             "type" : "object",
             "properties" : {
-              "allergen_name" : {
-                "type" : "object",
-                "properties" : {
-                  "evidence" : {
-                    "type" : "array",
-                    "items" : {
-                      "type" : "integer"
-                    }
-                  },
-                  "status" : {
-                    "type" : "string"
-                  },
-                  "value" : {
-                    "type" : "string"
-                  }
-                }
-              },
               "alternative_name" : {
                 "type" : "array",
                 "items" : {
@@ -304,15 +275,6 @@
                       "items" : {
                         "type" : "object",
                         "properties" : {
-                          "evidence" : {
-                            "type" : "array",
-                            "items" : {
-                              "type" : "integer"
-                            }
-                          },
-                          "status" : {
-                            "type" : "string"
-                          },
                           "value" : {
                             "type" : "string"
                           }
@@ -322,15 +284,6 @@
                     "full_name" : {
                       "type" : "object",
                       "properties" : {
-                        "evidence" : {
-                          "type" : "array",
-                          "items" : {
-                            "type" : "integer"
-                          }
-                        },
-                        "status" : {
-                          "type" : "string"
-                        },
                         "value" : {
                           "type" : "string"
                         }
@@ -341,77 +294,11 @@
                       "items" : {
                         "type" : "object",
                         "properties" : {
-                          "evidence" : {
-                            "type" : "array",
-                            "items" : {
-                              "type" : "integer"
-                            }
-                          },
-                          "status" : {
-                            "type" : "string"
-                          },
                           "value" : {
                             "type" : "string"
                           }
                         }
                       }
-                    }
-                  }
-                }
-              },
-              "biotech_name" : {
-                "type" : "object",
-                "properties" : {
-                  "evidence" : {
-                    "type" : "array",
-                    "items" : {
-                      "type" : "integer"
-                    }
-                  },
-                  "status" : {
-                    "type" : "string"
-                  },
-                  "value" : {
-                    "type" : "string"
-                  }
-                }
-              },
-              "cd_antigen_name" : {
-                "type" : "array",
-                "items" : {
-                  "type" : "object",
-                  "properties" : {
-                    "evidence" : {
-                      "type" : "array",
-                      "items" : {
-                        "type" : "integer"
-                      }
-                    },
-                    "status" : {
-                      "type" : "string"
-                    },
-                    "value" : {
-                      "type" : "string"
-                    }
-                  }
-                }
-              },
-              "inn_name" : {
-                "type" : "array",
-                "items" : {
-                  "type" : "object",
-                  "properties" : {
-                    "evidence" : {
-                      "type" : "array",
-                      "items" : {
-                        "type" : "integer"
-                      }
-                    },
-                    "status" : {
-                      "type" : "string"
-                    },
-                    "value" : {
-                      "type" : "string"
                     }
                   }
                 }
@@ -424,15 +311,6 @@
                     "items" : {
                       "type" : "object",
                       "properties" : {
-                        "evidence" : {
-                          "type" : "array",
-                          "items" : {
-                            "type" : "integer"
-                          }
-                        },
-                        "status" : {
-                          "type" : "string"
-                        },
                         "value" : {
                           "type" : "string"
                         }
@@ -442,15 +320,6 @@
                   "full_name" : {
                     "type" : "object",
                     "properties" : {
-                      "evidence" : {
-                        "type" : "array",
-                        "items" : {
-                          "type" : "integer"
-                        }
-                      },
-                      "status" : {
-                        "type" : "string"
-                      },
                       "value" : {
                         "type" : "string"
                       }
@@ -461,15 +330,6 @@
                     "items" : {
                       "type" : "object",
                       "properties" : {
-                        "evidence" : {
-                          "type" : "array",
-                          "items" : {
-                            "type" : "integer"
-                          }
-                        },
-                        "status" : {
-                          "type" : "string"
-                        },
                         "value" : {
                           "type" : "string"
                         }
@@ -488,15 +348,6 @@
                       "items" : {
                         "type" : "object",
                         "properties" : {
-                          "evidence" : {
-                            "type" : "array",
-                            "items" : {
-                              "type" : "integer"
-                            }
-                          },
-                          "status" : {
-                            "type" : "string"
-                          },
                           "value" : {
                             "type" : "string"
                           }
@@ -506,15 +357,6 @@
                     "full_name" : {
                       "type" : "object",
                       "properties" : {
-                        "evidence" : {
-                          "type" : "array",
-                          "items" : {
-                            "type" : "integer"
-                          }
-                        },
-                        "status" : {
-                          "type" : "string"
-                        },
                         "value" : {
                           "type" : "string"
                         }
@@ -534,15 +376,6 @@
               "allergen_name" : {
                 "type" : "object",
                 "properties" : {
-                  "evidence" : {
-                    "type" : "array",
-                    "items" : {
-                      "type" : "integer"
-                    }
-                  },
-                  "status" : {
-                    "type" : "string"
-                  },
                   "value" : {
                     "type" : "string"
                   }
@@ -558,15 +391,6 @@
                       "items" : {
                         "type" : "object",
                         "properties" : {
-                          "evidence" : {
-                            "type" : "array",
-                            "items" : {
-                              "type" : "integer"
-                            }
-                          },
-                          "status" : {
-                            "type" : "string"
-                          },
                           "value" : {
                             "type" : "string"
                           }
@@ -576,15 +400,6 @@
                     "full_name" : {
                       "type" : "object",
                       "properties" : {
-                        "evidence" : {
-                          "type" : "array",
-                          "items" : {
-                            "type" : "integer"
-                          }
-                        },
-                        "status" : {
-                          "type" : "string"
-                        },
                         "value" : {
                           "type" : "string"
                         }
@@ -595,77 +410,11 @@
                       "items" : {
                         "type" : "object",
                         "properties" : {
-                          "evidence" : {
-                            "type" : "array",
-                            "items" : {
-                              "type" : "integer"
-                            }
-                          },
-                          "status" : {
-                            "type" : "string"
-                          },
                           "value" : {
                             "type" : "string"
                           }
                         }
                       }
-                    }
-                  }
-                }
-              },
-              "biotech_name" : {
-                "type" : "object",
-                "properties" : {
-                  "evidence" : {
-                    "type" : "array",
-                    "items" : {
-                      "type" : "integer"
-                    }
-                  },
-                  "status" : {
-                    "type" : "string"
-                  },
-                  "value" : {
-                    "type" : "string"
-                  }
-                }
-              },
-              "cd_antigen_name" : {
-                "type" : "array",
-                "items" : {
-                  "type" : "object",
-                  "properties" : {
-                    "evidence" : {
-                      "type" : "array",
-                      "items" : {
-                        "type" : "integer"
-                      }
-                    },
-                    "status" : {
-                      "type" : "string"
-                    },
-                    "value" : {
-                      "type" : "string"
-                    }
-                  }
-                }
-              },
-              "inn_name" : {
-                "type" : "array",
-                "items" : {
-                  "type" : "object",
-                  "properties" : {
-                    "evidence" : {
-                      "type" : "array",
-                      "items" : {
-                        "type" : "integer"
-                      }
-                    },
-                    "status" : {
-                      "type" : "string"
-                    },
-                    "value" : {
-                      "type" : "string"
                     }
                   }
                 }
@@ -678,15 +427,6 @@
                     "items" : {
                       "type" : "object",
                       "properties" : {
-                        "evidence" : {
-                          "type" : "array",
-                          "items" : {
-                            "type" : "integer"
-                          }
-                        },
-                        "status" : {
-                          "type" : "string"
-                        },
                         "value" : {
                           "type" : "string"
                         }
@@ -696,15 +436,6 @@
                   "full_name" : {
                     "type" : "object",
                     "properties" : {
-                      "evidence" : {
-                        "type" : "array",
-                        "items" : {
-                          "type" : "integer"
-                        }
-                      },
-                      "status" : {
-                        "type" : "string"
-                      },
                       "value" : {
                         "type" : "string"
                       }
@@ -715,15 +446,6 @@
                     "items" : {
                       "type" : "object",
                       "properties" : {
-                        "evidence" : {
-                          "type" : "array",
-                          "items" : {
-                            "type" : "integer"
-                          }
-                        },
-                        "status" : {
-                          "type" : "string"
-                        },
                         "value" : {
                           "type" : "string"
                         }
@@ -742,15 +464,6 @@
                       "items" : {
                         "type" : "object",
                         "properties" : {
-                          "evidence" : {
-                            "type" : "array",
-                            "items" : {
-                              "type" : "integer"
-                            }
-                          },
-                          "status" : {
-                            "type" : "string"
-                          },
                           "value" : {
                             "type" : "string"
                           }
@@ -760,15 +473,6 @@
                     "full_name" : {
                       "type" : "object",
                       "properties" : {
-                        "evidence" : {
-                          "type" : "array",
-                          "items" : {
-                            "type" : "integer"
-                          }
-                        },
-                        "status" : {
-                          "type" : "string"
-                        },
                         "value" : {
                           "type" : "string"
                         }
@@ -777,23 +481,6 @@
                   }
                 }
               }
-            }
-          }
-        },
-        "allergen_name" : {
-          "type" : "object",
-          "properties" : {
-            "evidence" : {
-              "type" : "array",
-              "items" : {
-                "type" : "integer"
-              }
-            },
-            "status" : {
-              "type" : "string"
-            },
-            "value" : {
-              "type" : "string"
             }
           }
         },
@@ -807,15 +494,6 @@
                 "items" : {
                   "type" : "object",
                   "properties" : {
-                    "evidence" : {
-                      "type" : "array",
-                      "items" : {
-                        "type" : "integer"
-                      }
-                    },
-                    "status" : {
-                      "type" : "string"
-                    },
                     "value" : {
                       "type" : "string"
                     }
@@ -825,15 +503,6 @@
               "full_name" : {
                 "type" : "object",
                 "properties" : {
-                  "evidence" : {
-                    "type" : "array",
-                    "items" : {
-                      "type" : "integer"
-                    }
-                  },
-                  "status" : {
-                    "type" : "string"
-                  },
                   "value" : {
                     "type" : "string"
                   }
@@ -844,77 +513,11 @@
                 "items" : {
                   "type" : "object",
                   "properties" : {
-                    "evidence" : {
-                      "type" : "array",
-                      "items" : {
-                        "type" : "integer"
-                      }
-                    },
-                    "status" : {
-                      "type" : "string"
-                    },
                     "value" : {
                       "type" : "string"
                     }
                   }
                 }
-              }
-            }
-          }
-        },
-        "biotech_name" : {
-          "type" : "object",
-          "properties" : {
-            "evidence" : {
-              "type" : "array",
-              "items" : {
-                "type" : "integer"
-              }
-            },
-            "status" : {
-              "type" : "string"
-            },
-            "value" : {
-              "type" : "string"
-            }
-          }
-        },
-        "cd_antigen_name" : {
-          "type" : "array",
-          "items" : {
-            "type" : "object",
-            "properties" : {
-              "evidence" : {
-                "type" : "array",
-                "items" : {
-                  "type" : "integer"
-                }
-              },
-              "status" : {
-                "type" : "string"
-              },
-              "value" : {
-                "type" : "string"
-              }
-            }
-          }
-        },
-        "inn_name" : {
-          "type" : "array",
-          "items" : {
-            "type" : "object",
-            "properties" : {
-              "evidence" : {
-                "type" : "array",
-                "items" : {
-                  "type" : "integer"
-                }
-              },
-              "status" : {
-                "type" : "string"
-              },
-              "value" : {
-                "type" : "string"
               }
             }
           }
@@ -927,15 +530,6 @@
               "items" : {
                 "type" : "object",
                 "properties" : {
-                  "evidence" : {
-                    "type" : "array",
-                    "items" : {
-                      "type" : "integer"
-                    }
-                  },
-                  "status" : {
-                    "type" : "string"
-                  },
                   "value" : {
                     "type" : "string"
                   }
@@ -945,15 +539,6 @@
             "full_name" : {
               "type" : "object",
               "properties" : {
-                "evidence" : {
-                  "type" : "array",
-                  "items" : {
-                    "type" : "integer"
-                  }
-                },
-                "status" : {
-                  "type" : "string"
-                },
                 "value" : {
                   "type" : "string"
                 }
@@ -964,15 +549,6 @@
               "items" : {
                 "type" : "object",
                 "properties" : {
-                  "evidence" : {
-                    "type" : "array",
-                    "items" : {
-                      "type" : "integer"
-                    }
-                  },
-                  "status" : {
-                    "type" : "string"
-                  },
                   "value" : {
                     "type" : "string"
                   }
@@ -991,15 +567,6 @@
                 "items" : {
                   "type" : "object",
                   "properties" : {
-                    "evidence" : {
-                      "type" : "array",
-                      "items" : {
-                        "type" : "integer"
-                      }
-                    },
-                    "status" : {
-                      "type" : "string"
-                    },
                     "value" : {
                       "type" : "string"
                     }
@@ -1009,15 +576,6 @@
               "full_name" : {
                 "type" : "object",
                 "properties" : {
-                  "evidence" : {
-                    "type" : "array",
-                    "items" : {
-                      "type" : "integer"
-                    }
-                  },
-                  "status" : {
-                    "type" : "string"
-                  },
                   "value" : {
                     "type" : "string"
                   }
