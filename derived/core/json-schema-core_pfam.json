@@ -1,5 +1,7 @@
 {
   "type": "object",
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "title" : "core_pfam.json",
   "required" : [ "rcsb_pfam_container_identifiers", "accession" ],
   "properties": {
     "rcsb_pfam_container_identifiers" : {
@@ -13,25 +15,38 @@
     },
     "accession": {
       "type": "string",
-      "examples": ["PF00621", "PF00637", "PF00656"],
-      "description": "Accession code."
+      "examples": [ "PF00621", "PF00637", "PF00656" ],
+      "description": "The unique accession code of protein families and domains in the Pfam database."
     },
     "identifier": {
       "type": "string",
-      "examples": ["RhoGEF", "Clathrin", "Peptidase_C14"],
-      "description": "."
+      "examples": [ "RhoGEF", "Clathrin", "Peptidase_C14" ],
+      "description": "The unique identifier of protein families and domains in the Pfam database."
     },
     "seed_source": {
       "type": "string",
-      "description": "."
+      "enum": [
+        "Family",
+        "Domain",
+        "Repeat",
+        "Motif",
+        "Disordered",
+        "Coiled-Coil"
+      ],
+      "description": "Pfam entries are classified into six different categories, depending on the length \nand nature of the sequence regions included in the entry: family, domain, repeats, motifs, coiled-coil, and disordered."
     },
     "description": {
       "type": "string",
-      "description": "."
+      "examples": [
+        "Lectin like domain",
+        "Cell division control protein 24, OB domain 2",
+        "Protein of unknown function (DUF722)"
+      ],
+      "description": "A human-readable name of protein families and domains."
     },
     "comment": {
       "type": "string",
-      "description": "."
+      "description": "Textual description of the family."
     },
     "clan_id": {
       "type": "string",
@@ -42,7 +57,7 @@
       "enum":[
         "Pfam-A"
       ],
-      "description": "."
+      "description": "Pfam-A is the manually curated portion of the Pfam database."
     }
   }
 }
