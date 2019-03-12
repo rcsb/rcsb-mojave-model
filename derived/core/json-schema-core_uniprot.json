@@ -43,84 +43,34 @@
         "type" : "string"
       }
     },
+    "sequence" : {
+      "type" : "object",
+      "properties" : {
+        "length" : {
+          "type" : "integer"
+        },
+        "value" : {
+          "type" : "string"
+        },
+        "version" : {
+          "type" : "integer"
+        }
+      }
+    },
+    "name" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
     "feature" : {
       "type" : "array",
       "items" : {
         "type" : "object",
         "properties" : {
-          "description" : {
-            "type" : "string"
-          },
           "id" : {
-            "type" : "string"
-          },
-          "location" : {
-            "type" : "object",
-            "properties" : {
-              "begin" : {
-                "type" : "object",
-                "properties" : {
-                  "evidence" : {
-                    "type" : "array",
-                    "items" : {
-                      "type" : "integer"
-                    }
-                  },
-                  "position" : {
-                    "type" : "integer"
-                  },
-                  "status" : {
-                    "type" : "string"
-                  }
-                }
-              },
-              "end" : {
-                "type" : "object",
-                "properties" : {
-                  "evidence" : {
-                    "type" : "array",
-                    "items" : {
-                      "type" : "integer"
-                    }
-                  },
-                  "position" : {
-                    "type" : "integer"
-                  },
-                  "status" : {
-                    "type" : "string"
-                  }
-                }
-              },
-              "position" : {
-                "type" : "object",
-                "properties" : {
-                  "evidence" : {
-                    "type" : "array",
-                    "items" : {
-                      "type" : "integer"
-                    }
-                  },
-                  "position" : {
-                    "type" : "integer"
-                  },
-                  "status" : {
-                    "type" : "string"
-                  }
-                }
-              },
-              "sequence" : {
-                "type" : "string"
-              }
-            }
-          },
-          "original" : {
-            "type" : "string"
-          },
-          "ref" : {
-            "type" : "string"
-          },
-          "status" : {
-            "type" : "string"
+            "type" : "string",
+            "description": "Feature identifier, which allows to construct links directly from position-specific annotation to specialized protein-related databases."
           },
           "type" : {
             "enum" : [
@@ -130,7 +80,8 @@
               "CHAIN",
               "COILED_COIL_REGION",
               "COMPOSITIONALLY_BIASED_REGION",
-              "CROSS_LINK", "DISULFIDE_BOND",
+              "CROSS_LINK",
+              "DISULFIDE_BOND",
               "DNA_BINDING_REGION",
               "DOMAIN",
               "GLYCOSYLATION_SITE",
@@ -143,7 +94,8 @@
               "NON_CONSECUTIVE_RESIDUES",
               "NON_TERMINAL_RESIDUE",
               "NUCLEOTIDE_PHOSPHATE_BINDING_REGION",
-              "PEPTIDE", "PROPEPTIDE",
+              "PEPTIDE",
+              "PROPEPTIDE",
               "REGION_OF_INTEREST",
               "REPEAT",
               "NON_STANDARD_AMINO_ACID",
@@ -160,17 +112,51 @@
               "TURN",
               "UNSURE_RESIDUE",
               "ZINC_FINGER_REGION",
-              "INTRAMEMBRANE_REGION" ],
-            "type" : "string"
+              "INTRAMEMBRANE_REGION"
+            ],
+            "type" : "string",
+            "description": "Topics for which feature identifiers currently exist."
           },
-          "variation" : {
-            "type" : "array",
-            "items" : {
-              "type" : "string"
+          "location" : {
+            "type" : "object",
+            "properties" : {
+              "begin" : {
+                "type" : "integer"
+              },
+              "end" : {
+                "type" : "integer"
+              },
+              "position" : {
+                "type" : "integer"
+              }
             }
+          },
+          "description" : {
+            "type" : "string",
+            "description": "Human-readable feature description."
           }
         }
-      }
+      },
+      "description": "Sequence annotations describe regions or sites of interest in the protein sequence, \nsuch as post-translational modifications, binding sites, enzyme active sites, local secondary structure \nor other characteristics reported in the cited references."
+    },
+    "keyword" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "examples": ["KW-0275", "KW-0597"],
+            "description": "A unique keyword identifier."
+          },
+          "value" : {
+            "type" : "string",
+            "examples": [ "Lipid metabolism", "Phosphoprotein", "Fatty acid biosynthesis" ],
+            "description": "Human-readable keyword term."
+          }
+        }
+      },
+      "description": "Keywords constitute a controlled vocabulary that summarises the content of a UniProtKB entry."
     },
     "gene" : {
       "type" : "array",
@@ -194,63 +180,6 @@
                 "value" : {
                   "type" : "string"
                 }
-              }
-            }
-          }
-        }
-      }
-    },
-    "keyword" : {
-      "type" : "array",
-      "items" : {
-        "type" : "object",
-        "properties" : {
-          "id" : {
-            "type" : "string"
-          },
-          "value" : {
-            "type" : "string"
-          }
-        }
-      }
-    },
-    "name" : {
-      "type" : "array",
-      "items" : {
-        "type" : "string"
-      }
-    },
-    "organism" : {
-      "type" : "object",
-      "properties" : {
-        "lineage" : {
-          "type" : "object",
-          "properties" : {
-            "taxon" : {
-              "type" : "array",
-              "items" : {
-                "type" : "string"
-              }
-            }
-          }
-        },
-        "name" : {
-          "type" : "array",
-          "items" : {
-            "type" : "object",
-            "properties" : {
-              "type" : {
-                "enum" : [
-                  "COMMON",
-                  "FULL",
-                  "SCIENTIFIC",
-                  "SYNONYM",
-                  "ABBREVIATION"
-                ],
-                "type" : "string"
-              },
-              "value" : {
-                "type" : "string"
               }
             }
           }
@@ -373,14 +302,6 @@
           "items" : {
             "type" : "object",
             "properties" : {
-              "allergen_name" : {
-                "type" : "object",
-                "properties" : {
-                  "value" : {
-                    "type" : "string"
-                  }
-                }
-              },
               "alternative_name" : {
                 "type" : "array",
                 "items" : {
@@ -586,17 +507,40 @@
         }
       }
     },
-    "sequence" : {
+    "organism" : {
       "type" : "object",
       "properties" : {
-        "length" : {
-          "type" : "integer"
+        "lineage" : {
+          "type" : "object",
+          "properties" : {
+            "taxon" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            }
+          }
         },
-        "value" : {
-          "type" : "string"
-        },
-        "version" : {
-          "type" : "integer"
+        "name" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "type" : {
+                "enum" : [
+                  "COMMON",
+                  "FULL",
+                  "SCIENTIFIC",
+                  "SYNONYM",
+                  "ABBREVIATION"
+                ],
+                "type" : "string"
+              },
+              "value" : {
+                "type" : "string"
+              }
+            }
+          }
         }
       }
     },
@@ -640,20 +584,6 @@
         }
       }
     },
-    "rcsb_protein_function" : {
-      "type" : "object",
-      "required" : [ "details", "provenance_code" ],
-      "properties" : {
-        "details" : {
-          "type" : "string",
-          "description" : "General function(s) of a protein."
-        },
-        "provenance_code" : {
-          "type" : "string",
-          "description" : "Historical record of the data attribute."
-        }
-      }
-    },
     "rcsb_ec" : {
       "type" : "array",
       "items" : {
@@ -683,6 +613,20 @@
         "taxonomy_id" : {
           "type" : "integer",
           "description" : "NCBI Taxonomy identifier for the organism in which a protein occurs."
+        },
+        "provenance_code" : {
+          "type" : "string",
+          "description" : "Historical record of the data attribute."
+        }
+      }
+    },
+    "rcsb_protein_function" : {
+      "type" : "object",
+      "required" : [ "details", "provenance_code" ],
+      "properties" : {
+        "details" : {
+          "type" : "string",
+          "description" : "General function(s) of a protein."
         },
         "provenance_code" : {
           "type" : "string",
