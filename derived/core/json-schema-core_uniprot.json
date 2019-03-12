@@ -1,0 +1,1137 @@
+{
+  "type" : "object",
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "title" : "core_uniprot.json",
+  "required" : [ "rcsb_uniprot_container_identifiers" ],
+  "properties" : {
+    "rcsb_uniprot_container_identifiers" : {
+      "type" : "object",
+      "properties" : {
+        "uniprot_id" : {
+          "type" : "string",
+          "description" : "Primary accession number of UniProtKB entry."
+        },
+        "pfam_ids" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "description" : "Accession of Pfam entry."
+          },
+          "uniqueItems" : true
+        },
+        "go_ids" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "description" : "."
+          },
+          "uniqueItems" : true
+        },
+        "ensembl_ids" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "description" : "."
+          },
+          "uniqueItems" : true
+        }
+      }
+    },
+    "accession" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "feature" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "description" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "string"
+          },
+          "location" : {
+            "type" : "object",
+            "properties" : {
+              "begin" : {
+                "type" : "object",
+                "properties" : {
+                  "evidence" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "integer"
+                    }
+                  },
+                  "position" : {
+                    "type" : "integer"
+                  },
+                  "status" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "end" : {
+                "type" : "object",
+                "properties" : {
+                  "evidence" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "integer"
+                    }
+                  },
+                  "position" : {
+                    "type" : "integer"
+                  },
+                  "status" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "position" : {
+                "type" : "object",
+                "properties" : {
+                  "evidence" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "integer"
+                    }
+                  },
+                  "position" : {
+                    "type" : "integer"
+                  },
+                  "status" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "sequence" : {
+                "type" : "string"
+              }
+            }
+          },
+          "original" : {
+            "type" : "string"
+          },
+          "ref" : {
+            "type" : "string"
+          },
+          "status" : {
+            "type" : "string"
+          },
+          "type" : {
+            "enum" : [
+              "ACTIVE_SITE",
+              "BINDING_SITE",
+              "CALCIUM_BINDING_REGION",
+              "CHAIN",
+              "COILED_COIL_REGION",
+              "COMPOSITIONALLY_BIASED_REGION",
+              "CROSS_LINK", "DISULFIDE_BOND",
+              "DNA_BINDING_REGION",
+              "DOMAIN",
+              "GLYCOSYLATION_SITE",
+              "HELIX",
+              "INITIATOR_METHIONINE",
+              "LIPID_MOIETY_BINDING_REGION",
+              "METAL_ION_BINDING_SITE",
+              "MODIFIED_RESIDUE",
+              "MUTAGENESIS_SITE",
+              "NON_CONSECUTIVE_RESIDUES",
+              "NON_TERMINAL_RESIDUE",
+              "NUCLEOTIDE_PHOSPHATE_BINDING_REGION",
+              "PEPTIDE", "PROPEPTIDE",
+              "REGION_OF_INTEREST",
+              "REPEAT",
+              "NON_STANDARD_AMINO_ACID",
+              "SEQUENCE_CONFLICT",
+              "SEQUENCE_VARIANT",
+              "SHORT_SEQUENCE_MOTIF",
+              "SIGNAL_PEPTIDE",
+              "SITE",
+              "SPLICE_VARIANT",
+              "STRAND",
+              "TOPOLOGICAL_DOMAIN",
+              "TRANSIT_PEPTIDE",
+              "TRANSMEMBRANE_REGION",
+              "TURN",
+              "UNSURE_RESIDUE",
+              "ZINC_FINGER_REGION",
+              "INTRAMEMBRANE_REGION" ],
+            "type" : "string"
+          },
+          "variation" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "gene" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "array",
+            "items" : {
+              "type" : "object",
+              "properties" : {
+                "evidence" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "integer"
+                  }
+                },
+                "type" : {
+                  "enum" : [
+                    "PRIMARY",
+                    "SYNONYM",
+                    "ORDERED_LOCUS",
+                    "ORF"
+                  ],
+                  "type" : "string"
+                },
+                "value" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "keyword" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "evidence" : {
+            "type" : "array",
+            "items" : {
+              "type" : "integer"
+            }
+          },
+          "id" : {
+            "type" : "string"
+          },
+          "value" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "name" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "organism" : {
+      "type" : "object",
+      "properties" : {
+        "lineage" : {
+          "type" : "object",
+          "properties" : {
+            "taxon" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "name" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "type" : {
+                "enum" : [
+                  "COMMON",
+                  "FULL",
+                  "SCIENTIFIC",
+                  "SYNONYM",
+                  "ABBREVIATION"
+                ],
+                "type" : "string"
+              },
+              "value" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "protein" : {
+      "type" : "object",
+      "properties" : {
+        "component" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "allergen_name" : {
+                "type" : "object",
+                "properties" : {
+                  "evidence" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "integer"
+                    }
+                  },
+                  "status" : {
+                    "type" : "string"
+                  },
+                  "value" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "alternative_name" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "ec_number" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "evidence" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "integer"
+                            }
+                          },
+                          "status" : {
+                            "type" : "string"
+                          },
+                          "value" : {
+                            "type" : "string"
+                          }
+                        }
+                      }
+                    },
+                    "full_name" : {
+                      "type" : "object",
+                      "properties" : {
+                        "evidence" : {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "integer"
+                          }
+                        },
+                        "status" : {
+                          "type" : "string"
+                        },
+                        "value" : {
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "short_name" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "evidence" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "integer"
+                            }
+                          },
+                          "status" : {
+                            "type" : "string"
+                          },
+                          "value" : {
+                            "type" : "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "biotech_name" : {
+                "type" : "object",
+                "properties" : {
+                  "evidence" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "integer"
+                    }
+                  },
+                  "status" : {
+                    "type" : "string"
+                  },
+                  "value" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "cd_antigen_name" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "evidence" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "integer"
+                      }
+                    },
+                    "status" : {
+                      "type" : "string"
+                    },
+                    "value" : {
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "inn_name" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "evidence" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "integer"
+                      }
+                    },
+                    "status" : {
+                      "type" : "string"
+                    },
+                    "value" : {
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "recommended_name" : {
+                "type" : "object",
+                "properties" : {
+                  "ec_number" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "object",
+                      "properties" : {
+                        "evidence" : {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "integer"
+                          }
+                        },
+                        "status" : {
+                          "type" : "string"
+                        },
+                        "value" : {
+                          "type" : "string"
+                        }
+                      }
+                    }
+                  },
+                  "full_name" : {
+                    "type" : "object",
+                    "properties" : {
+                      "evidence" : {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "integer"
+                        }
+                      },
+                      "status" : {
+                        "type" : "string"
+                      },
+                      "value" : {
+                        "type" : "string"
+                      }
+                    }
+                  },
+                  "short_name" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "object",
+                      "properties" : {
+                        "evidence" : {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "integer"
+                          }
+                        },
+                        "status" : {
+                          "type" : "string"
+                        },
+                        "value" : {
+                          "type" : "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "submitted_name" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "ec_number" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "evidence" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "integer"
+                            }
+                          },
+                          "status" : {
+                            "type" : "string"
+                          },
+                          "value" : {
+                            "type" : "string"
+                          }
+                        }
+                      }
+                    },
+                    "full_name" : {
+                      "type" : "object",
+                      "properties" : {
+                        "evidence" : {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "integer"
+                          }
+                        },
+                        "status" : {
+                          "type" : "string"
+                        },
+                        "value" : {
+                          "type" : "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "domain" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "allergen_name" : {
+                "type" : "object",
+                "properties" : {
+                  "evidence" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "integer"
+                    }
+                  },
+                  "status" : {
+                    "type" : "string"
+                  },
+                  "value" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "alternative_name" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "ec_number" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "evidence" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "integer"
+                            }
+                          },
+                          "status" : {
+                            "type" : "string"
+                          },
+                          "value" : {
+                            "type" : "string"
+                          }
+                        }
+                      }
+                    },
+                    "full_name" : {
+                      "type" : "object",
+                      "properties" : {
+                        "evidence" : {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "integer"
+                          }
+                        },
+                        "status" : {
+                          "type" : "string"
+                        },
+                        "value" : {
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "short_name" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "evidence" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "integer"
+                            }
+                          },
+                          "status" : {
+                            "type" : "string"
+                          },
+                          "value" : {
+                            "type" : "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "biotech_name" : {
+                "type" : "object",
+                "properties" : {
+                  "evidence" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "integer"
+                    }
+                  },
+                  "status" : {
+                    "type" : "string"
+                  },
+                  "value" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "cd_antigen_name" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "evidence" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "integer"
+                      }
+                    },
+                    "status" : {
+                      "type" : "string"
+                    },
+                    "value" : {
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "inn_name" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "evidence" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "integer"
+                      }
+                    },
+                    "status" : {
+                      "type" : "string"
+                    },
+                    "value" : {
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "recommended_name" : {
+                "type" : "object",
+                "properties" : {
+                  "ec_number" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "object",
+                      "properties" : {
+                        "evidence" : {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "integer"
+                          }
+                        },
+                        "status" : {
+                          "type" : "string"
+                        },
+                        "value" : {
+                          "type" : "string"
+                        }
+                      }
+                    }
+                  },
+                  "full_name" : {
+                    "type" : "object",
+                    "properties" : {
+                      "evidence" : {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "integer"
+                        }
+                      },
+                      "status" : {
+                        "type" : "string"
+                      },
+                      "value" : {
+                        "type" : "string"
+                      }
+                    }
+                  },
+                  "short_name" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "object",
+                      "properties" : {
+                        "evidence" : {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "integer"
+                          }
+                        },
+                        "status" : {
+                          "type" : "string"
+                        },
+                        "value" : {
+                          "type" : "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "submitted_name" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "ec_number" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "evidence" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "integer"
+                            }
+                          },
+                          "status" : {
+                            "type" : "string"
+                          },
+                          "value" : {
+                            "type" : "string"
+                          }
+                        }
+                      }
+                    },
+                    "full_name" : {
+                      "type" : "object",
+                      "properties" : {
+                        "evidence" : {
+                          "type" : "array",
+                          "items" : {
+                            "type" : "integer"
+                          }
+                        },
+                        "status" : {
+                          "type" : "string"
+                        },
+                        "value" : {
+                          "type" : "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "allergen_name" : {
+          "type" : "object",
+          "properties" : {
+            "evidence" : {
+              "type" : "array",
+              "items" : {
+                "type" : "integer"
+              }
+            },
+            "status" : {
+              "type" : "string"
+            },
+            "value" : {
+              "type" : "string"
+            }
+          }
+        },
+        "alternative_name" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "ec_number" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "evidence" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "integer"
+                      }
+                    },
+                    "status" : {
+                      "type" : "string"
+                    },
+                    "value" : {
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "full_name" : {
+                "type" : "object",
+                "properties" : {
+                  "evidence" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "integer"
+                    }
+                  },
+                  "status" : {
+                    "type" : "string"
+                  },
+                  "value" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "short_name" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "evidence" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "integer"
+                      }
+                    },
+                    "status" : {
+                      "type" : "string"
+                    },
+                    "value" : {
+                      "type" : "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "biotech_name" : {
+          "type" : "object",
+          "properties" : {
+            "evidence" : {
+              "type" : "array",
+              "items" : {
+                "type" : "integer"
+              }
+            },
+            "status" : {
+              "type" : "string"
+            },
+            "value" : {
+              "type" : "string"
+            }
+          }
+        },
+        "cd_antigen_name" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "evidence" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "integer"
+                }
+              },
+              "status" : {
+                "type" : "string"
+              },
+              "value" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "inn_name" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "evidence" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "integer"
+                }
+              },
+              "status" : {
+                "type" : "string"
+              },
+              "value" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "recommended_name" : {
+          "type" : "object",
+          "properties" : {
+            "ec_number" : {
+              "type" : "array",
+              "items" : {
+                "type" : "object",
+                "properties" : {
+                  "evidence" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "integer"
+                    }
+                  },
+                  "status" : {
+                    "type" : "string"
+                  },
+                  "value" : {
+                    "type" : "string"
+                  }
+                }
+              }
+            },
+            "full_name" : {
+              "type" : "object",
+              "properties" : {
+                "evidence" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "integer"
+                  }
+                },
+                "status" : {
+                  "type" : "string"
+                },
+                "value" : {
+                  "type" : "string"
+                }
+              }
+            },
+            "short_name" : {
+              "type" : "array",
+              "items" : {
+                "type" : "object",
+                "properties" : {
+                  "evidence" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "integer"
+                    }
+                  },
+                  "status" : {
+                    "type" : "string"
+                  },
+                  "value" : {
+                    "type" : "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "submitted_name" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "ec_number" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "evidence" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "integer"
+                      }
+                    },
+                    "status" : {
+                      "type" : "string"
+                    },
+                    "value" : {
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "full_name" : {
+                "type" : "object",
+                "properties" : {
+                  "evidence" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "integer"
+                    }
+                  },
+                  "status" : {
+                    "type" : "string"
+                  },
+                  "value" : {
+                    "type" : "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "sequence" : {
+      "type" : "object",
+      "properties" : {
+        "length" : {
+          "type" : "integer"
+        },
+        "value" : {
+          "type" : "string"
+        },
+        "version" : {
+          "type" : "integer"
+        }
+      }
+    },
+    "organism_host" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "lineage" : {
+            "type" : "object",
+            "properties" : {
+              "taxon" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "string"
+                }
+              }
+            }
+          },
+          "name" : {
+            "type" : "array",
+            "items" : {
+              "type" : "object",
+              "properties" : {
+                "type" : {
+                  "enum" : [
+                    "COMMON",
+                    "FULL",
+                    "SCIENTIFIC",
+                    "SYNONYM",
+                    "ABBREVIATION"
+                  ],
+                  "type" : "string"
+                },
+                "value" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "rcsb_protein_function" : {
+      "type" : "object",
+      "required" : [ "details", "provenance_code" ],
+      "properties" : {
+        "details" : {
+          "type" : "string",
+          "description" : "General function(s) of a protein."
+        },
+        "provenance_code" : {
+          "type" : "string",
+          "description" : "Historical record of the data attribute."
+        }
+      }
+    },
+    "rcsb_ec" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "number" : {
+            "type" : "string"
+          },
+          "provenance_code" : {
+            "type" : "string",
+            "description" : "Historical record of the data attribute."
+          }
+        },
+        "description" : "Enzyme Commission (EC) number(s)"
+      },
+      "minItems" : 1,
+      "uniqueItems" : true
+    },
+    "rcsb_organism" : {
+      "type" : "object",
+      "required" : [ "scientific_name", "provenance_code" ],
+      "properties" : {
+        "scientific_name" : {
+          "type" : "string",
+          "description" : "The scientific name of the organism in which a protein occurs."
+        },
+        "taxonomy_id" : {
+          "type" : "integer",
+          "description" : "NCBI Taxonomy identifier for the organism in which a protein occurs."
+        },
+        "provenance_code" : {
+          "type" : "string",
+          "description" : "Historical record of the data attribute."
+        }
+      }
+    }
+  },
+  "additionalProperties" : false
+}

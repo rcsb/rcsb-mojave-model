@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "required" : [ "rcsb_pfam_container_identifiers", "accession" ],
+  "properties": {
+    "rcsb_pfam_container_identifiers" : {
+      "type" : "object",
+      "properties": {
+        "pfam_id": {
+          "type" : "string",
+          "description": "Accession number of Pfam entry."
+        }
+      }
+    },
+    "accession": {
+      "type": "string",
+      "examples": ["PF00621", "PF00637", "PF00656"],
+      "description": "Accession code."
+    },
+    "identifier": {
+      "type": "string",
+      "examples": ["RhoGEF", "Clathrin", "Peptidase_C14"],
+      "description": "."
+    },
+    "seed_source": {
+      "type": "string",
+      "description": "."
+    },
+    "description": {
+      "type": "string",
+      "description": "."
+    },
+    "comment": {
+      "type": "string",
+      "description": "."
+    },
+    "clan_id": {
+      "type": "string",
+      "description": "Details of the Pfam clan to which the entity belongs."
+    },
+    "rcsb_pfam_provenance_code": {
+      "type": "string",
+      "enum":[
+        "Pfam-A"
+      ],
+      "description": "."
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "type": "object",
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "title" : "core_assembly.json",
+  "required": [
+    "rcsb_assembly_container_identifiers"
+  ],
+  "properties": {
+    "rcsb_struct_symmetry": {
+      "type":"array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required":[
+          "symbol",
+          "type",
+          "stoichiometry",
+          "oligomeric_state",
+          "clusters",
+          "kind"
+        ],
+        "properties": {
+          "symbol": {
+            "type": "string",
+            "description": "Symmetry symbol refers to point group or helical symmetry of identical subunits. \n\n Contains point group symbol (e.g., C2, C5, D2, T, O, I) or H for helical symmetry."
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Asymmetric",
+              "Cyclic",
+              "Dihedral",
+              "Tetrahedral",
+              "Octahedral",
+              "Icosahedral",
+              "Helical"
+            ],
+            "description": "Symmetry type refers to point group or helical symmetry of identical subunits. \n\n Contains point group types (e.g. Cyclic, Dihedral) or Helical for helical symmetry."
+          },
+          "stoichiometry": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "description": "Each type of different subunits is assigned a latter. \nThe number of equivalent subunits is added as a coefficient after each letter (except 1 which is not added explicitly)."
+            },
+            "description": "Stoichiometry of a complex represents the quantitative description and composition of its subunits."
+          },
+          "oligomeric_state": {
+            "type": "string",
+            "description": "Oligomeric state refers to a composition of subunits in quaternary structure. \nQuaternary structure may be composed either exclusively of several copies of identical subunits, \nin which case they are termed homo-oligomers, or alternatively by at least one copy of different subunits (hetero-oligomers).\n Quaternary structure composed of a single subunit is demoted as 'Monomer'."
+          },
+          "clusters": {
+            "type":"array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "required":[
+                "members"
+              ],
+              "properties": {
+                "members": {
+                  "type":"array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "object",
+                    "description": "Subunits that belong to the cluster, identified by asym_id and optionally by assembly operator id(s).",
+                    "required": [
+                      "asym_id"
+                    ],
+                    "properties": {
+                      "asym_id": {
+                        "type": "string",
+                        "description": "Internal chain ID used in mmCIF files to uniquely identify structural elements in the asymmetric unit."
+                      },
+                      "pdbx_struct_oper_list_ids": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Optional list of operator ids (pdbx_struct_oper_list.id) as appears in pdbx_struct_assembly_gen.oper_expression. \nOne operator id per operand in the expression (most cases have only 1 operator). \nIf it's not given then identity operator is assumed."
+                      }
+
+                    }
+                  }
+                },
+                "avg_rmsd": {
+                  "type": "number",
+                  "description": "Average RMSD between members of a given cluster."
+                }
+              }
+            },
+            "description": "Clusters describe grouping of 'identical' subunits."
+          },
+          "rotation_axes": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "required":[
+                "start",
+                "end"
+              ],
+              "properties": {
+                "start": {
+                  "type": "array",
+                  "minItems": 3,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number",
+                    "description": "coordinate"
+                  },
+                  "description": "Describes x,y,z coordinate of the start point of the symmetry axis."
+                },
+                "end": {
+                  "type": "array",
+                  "minItems": 3,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number",
+                    "description": "coordinate"
+                  },
+                  "description": "Describes x,y,z coordinates of the end point of the symmetry axis."
+                },
+                "order":{
+                  "type":"integer",
+                  "description": "The number of times (order of rotation) that a subunit can be repeated by a rotation operation, \nbeing transformed into a new state indistinguishable from its starting state."
+                }
+              },
+              "description": "The orientation of the principal rotation (symmetry) axis."
+            },
+            "description": "Specifies a single or multiple rotation axes through the same point."
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "global",
+              "pseudo",
+              "local"
+            ],
+            "description": "Symmetry kind refers to the symmetry of the entire oligomeric complex. \n Complexes may be symmetric, pseudosymmetric, or asymmetric. Asymmetric complexes may have local symmetry."
+          }
+        }
+      }
+    },
+    "rcsb_struct_symmetry_provenance_code": {
+      "type": "string",
+      "description": "The title and version of software package used for symmetry calculations."
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "required" : [ "id" ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Node ID."
+    },
+    "name": {
+      "type": "string",
+      "description": "Node description."
+    },
+    "parents": {
+      "type" : "array",
+      "uniqueItems" : true,
+      "items" : {
+        "type": "string"
+      },
+      "description": "Reference to the ID of the node’s immediate parents."
+    },
+    "ancestors": {
+      "type" : "array",
+      "uniqueItems" : true,
+      "items" : {
+        "type": "string"
+      },
+      "description": "An array the ID(s) of the node’s ancestors."
+    },
+    "related": {
+      "type" : "array",
+      "uniqueItems" : true,
+      "items" : {
+        "type": "string"
+      },
+      "description": "An array the ID(s) related to the node."
+    }
+  }
+}
