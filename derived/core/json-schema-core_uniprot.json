@@ -63,82 +63,6 @@
         "type" : "string"
       }
     },
-    "feature" : {
-      "type" : "array",
-      "items" : {
-        "type" : "object",
-        "properties" : {
-          "id" : {
-            "type" : "string",
-            "description": "Feature identifier, which allows to construct links directly from position-specific annotation to specialized protein-related databases."
-          },
-          "type" : {
-            "enum" : [
-              "ACTIVE_SITE",
-              "BINDING_SITE",
-              "CALCIUM_BINDING_REGION",
-              "CHAIN",
-              "COILED_COIL_REGION",
-              "COMPOSITIONALLY_BIASED_REGION",
-              "CROSS_LINK",
-              "DISULFIDE_BOND",
-              "DNA_BINDING_REGION",
-              "DOMAIN",
-              "GLYCOSYLATION_SITE",
-              "HELIX",
-              "INITIATOR_METHIONINE",
-              "LIPID_MOIETY_BINDING_REGION",
-              "METAL_ION_BINDING_SITE",
-              "MODIFIED_RESIDUE",
-              "MUTAGENESIS_SITE",
-              "NON_CONSECUTIVE_RESIDUES",
-              "NON_TERMINAL_RESIDUE",
-              "NUCLEOTIDE_PHOSPHATE_BINDING_REGION",
-              "PEPTIDE",
-              "PROPEPTIDE",
-              "REGION_OF_INTEREST",
-              "REPEAT",
-              "NON_STANDARD_AMINO_ACID",
-              "SEQUENCE_CONFLICT",
-              "SEQUENCE_VARIANT",
-              "SHORT_SEQUENCE_MOTIF",
-              "SIGNAL_PEPTIDE",
-              "SITE",
-              "SPLICE_VARIANT",
-              "STRAND",
-              "TOPOLOGICAL_DOMAIN",
-              "TRANSIT_PEPTIDE",
-              "TRANSMEMBRANE_REGION",
-              "TURN",
-              "UNSURE_RESIDUE",
-              "ZINC_FINGER_REGION",
-              "INTRAMEMBRANE_REGION"
-            ],
-            "type" : "string",
-            "description": "Topics for which feature identifiers currently exist."
-          },
-          "location" : {
-            "type" : "object",
-            "properties" : {
-              "begin" : {
-                "type" : "integer"
-              },
-              "end" : {
-                "type" : "integer"
-              },
-              "position" : {
-                "type" : "integer"
-              }
-            }
-          },
-          "description" : {
-            "type" : "string",
-            "description": "Human-readable feature description."
-          }
-        }
-      },
-      "description": "Sequence annotations describe regions or sites of interest in the protein sequence, \nsuch as post-translational modifications, binding sites, enzyme active sites, local secondary structure \nor other characteristics reported in the cited references."
-    },
     "keyword" : {
       "type" : "array",
       "items" : {
@@ -544,46 +468,6 @@
         }
       }
     },
-    "organism_host" : {
-      "type" : "array",
-      "items" : {
-        "type" : "object",
-        "properties" : {
-          "lineage" : {
-            "type" : "object",
-            "properties" : {
-              "taxon" : {
-                "type" : "array",
-                "items" : {
-                  "type" : "string"
-                }
-              }
-            }
-          },
-          "name" : {
-            "type" : "array",
-            "items" : {
-              "type" : "object",
-              "properties" : {
-                "type" : {
-                  "enum" : [
-                    "COMMON",
-                    "FULL",
-                    "SCIENTIFIC",
-                    "SYNONYM",
-                    "ABBREVIATION"
-                  ],
-                  "type" : "string"
-                },
-                "value" : {
-                  "type" : "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "rcsb_ec" : {
       "type" : "array",
       "items" : {
@@ -633,6 +517,82 @@
           "description" : "Historical record of the data attribute."
         }
       }
+    },
+    "rcsb_protein_feature" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "description": "Feature identifier, which allows to construct links directly from position-specific annotation to specialized protein-related databases."
+          },
+          "type" : {
+            "enum" : [
+              "ACTIVE_SITE",
+              "BINDING_SITE",
+              "CALCIUM_BINDING_REGION",
+              "CHAIN",
+              "COILED_COIL_REGION",
+              "COMPOSITIONALLY_BIASED_REGION",
+              "CROSS_LINK",
+              "DISULFIDE_BOND",
+              "DNA_BINDING_REGION",
+              "DOMAIN",
+              "GLYCOSYLATION_SITE",
+              "HELIX",
+              "INITIATOR_METHIONINE",
+              "LIPID_MOIETY_BINDING_REGION",
+              "METAL_ION_BINDING_SITE",
+              "MODIFIED_RESIDUE",
+              "MUTAGENESIS_SITE",
+              "NON_CONSECUTIVE_RESIDUES",
+              "NON_TERMINAL_RESIDUE",
+              "NUCLEOTIDE_PHOSPHATE_BINDING_REGION",
+              "PEPTIDE",
+              "PROPEPTIDE",
+              "REGION_OF_INTEREST",
+              "REPEAT",
+              "NON_STANDARD_AMINO_ACID",
+              "SEQUENCE_CONFLICT",
+              "SEQUENCE_VARIANT",
+              "SHORT_SEQUENCE_MOTIF",
+              "SIGNAL_PEPTIDE",
+              "SITE",
+              "SPLICE_VARIANT",
+              "STRAND",
+              "TOPOLOGICAL_DOMAIN",
+              "TRANSIT_PEPTIDE",
+              "TRANSMEMBRANE_REGION",
+              "TURN",
+              "UNSURE_RESIDUE",
+              "ZINC_FINGER_REGION",
+              "INTRAMEMBRANE_REGION"
+            ],
+            "type" : "string",
+            "description": "Topics for which feature identifiers currently exist."
+          },
+          "location" : {
+            "type" : "object",
+            "properties" : {
+              "begin" : {
+                "type" : "integer"
+              },
+              "end" : {
+                "type" : "integer"
+              },
+              "position" : {
+                "type" : "integer"
+              }
+            }
+          },
+          "description" : {
+            "type" : "string",
+            "description": "Human-readable feature description."
+          }
+        }
+      },
+      "description": "Sequence annotations describe regions or sites of interest in the protein sequence, \nsuch as post-translational modifications, binding sites, enzyme active sites, local secondary structure \nor other characteristics reported in the cited references."
     }
   },
   "additionalProperties" : false
