@@ -1,6 +1,6 @@
 # RCSB-JSON-SCHEMA
 The repository is meant as a schema store that hosts [JSON Schemas](http://json-schema.org/latest/json-schema-core.html) 
-for RCSB data models!
+for RCSB data models.
 
 
 ### Vesrsioning
