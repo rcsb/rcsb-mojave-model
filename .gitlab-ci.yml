@@ -13,7 +13,7 @@ build:
     - hostname
     - pwd
 
-    - VERSION=$(git describe --tags)
+    - VERSION=$(git describe --tags --abbrev=0)
     - echo "Project version ${VERSION}"
 
     - FILENAME_VERSION=$FILENAME"_"$VERSION$FILE_EXT
@@ -25,7 +25,7 @@ build:
 #    Produce schema artifacts
     - cd ..
     - echo "Will create ${FILENAME_VERSION}"
-    - tar -cvzf ${FILENAME_VERSION} rcsb-json-schema/derived/ rcsb-json-schema/primary/
+    - tar -cvzf ${FILENAME_VERSION} rcsb-json-schema/derived/
     - echo "Will rename ${FILENAME_VERSION} to ${FILENAME_LATEST}"
     - cp ${FILENAME_VERSION} ${FILENAME_LATEST}
 
