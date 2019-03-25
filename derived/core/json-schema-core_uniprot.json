@@ -468,6 +468,20 @@
         }
       }
     },
+    "rcsb_protein_name": {
+      "type" : "object",
+      "required" : [ "value", "provenance_code" ],
+      "properties" : {
+        "value" : {
+          "type" : "string",
+          "description" : "Name that allow for an unambiguous identification of a protein."
+        },
+        "provenance_code" : {
+          "type" : "string",
+          "description" : "Historical record of the data attribute."
+        }
+      }
+    },
     "rcsb_ec" : {
       "type" : "array",
       "items" : {

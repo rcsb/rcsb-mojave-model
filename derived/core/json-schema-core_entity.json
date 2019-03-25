@@ -40,22 +40,26 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Identifier for membrane classification term."
+          "description": "Identifier for membrane classification term (system generated for internal purposes identifier)."
         },
         "name": {
           "type": "string",
           "description": "Membrane protein classification term."
         },
+        "depth": {
+          "type" : "integer",
+          "description" : "Hierarchy depth."
+        },
         "provenance_code": {
           "type": "string",
           "enum": [
-            "MpStruct",
+            "Mpstruc",
             "Homology"
           ],
-          "description": ""
+          "description": "Mpstruc keyword denotes original annotation, Homology keyword denotes annotation inferred by homology."
         }
       },
-      "description": "Information about integral membrane proteins whose crystallographic, or sometimes NMR or cryo-EM, structures \nhave been determined to a resolution sufficient to identify TM helices of helix-bundle membrane proteins (typically 4 - 4.5 A)."
+      "description": "Information about integral membrane proteins whose crystallographic, or sometimes NMR or cryo-EM, structures \nhave been determined to a resolution sufficient to identify TM helices of helix-bundle membrane proteins (typically 4 - 4.5 A). \n\nMpstruc provides manually curated information about integral membrane proteins. These manual annotations are extended using sequence clusters and according to the following procedure:\nSingle chain transmembrane proteins:\n Any PDB chain sharing 90% sequence identity to this transmembrane \nprotein is assigned as a transmembrane protein as well, and shares the same transmembrane annotation.\n\nMulti-chain transmembrane proteins:\nIf the reference mpstruc entry contains multiple protein entities, it is necessary to identify \nwhich of the entities are presumed to be transmembrane chains. \nThis is done in conjunction with Uniprot annotations. Transmembrane protein entities are identified by \nchecking if their corresponding Uniprot sequence has annotations labeled <i>transmembrane</i> \nor <i>intramembrane region</i>. For transmembrane entities, all members of the sequence \ncluster (90% sequence identity) are programmatically infered to be members of the same class of \ntransmembrane proteins by applying the above procedure for single entity mpstruc entries. \nAnnotations are denoned with 'Homology' provenance code."
     },
     "rcsb_membrane_lineage": {
       "type" : "array",
@@ -66,11 +70,15 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": ""
+            "description": "Identifier for membrane classification term (system generated for internal purposes identifier)."
           },
-          "name":{
+          "name": {
             "type": "string",
-            "description": ""
+            "description": "Membrane protein classification term."
+          },
+          "depth": {
+            "type" : "integer",
+            "description" : "Hierarchy depth."
           }
         },
         "description" : "An array the ID(s) listing the reference lineage."
@@ -116,31 +124,14 @@
           "name":{
             "type": "string",
             "description": ""
+          },
+          "depth": {
+            "type" : "integer",
+            "description" : "Hierarchy depth."
           }
         },
         "description" : "An array the ID(s) listing the reference lineage."
       }
-    },
-    "rcsb_go_reference": {
-      "type" : "array",
-      "minItems" : 1,
-      "uniqueItems" : true,
-      "items" : {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "examples": ["GO:0005125", "GO:0060092"],
-            "description": "A unique seven digit identifier prefixed by GO:."
-          },
-          "name": {
-            "type": "string",
-            "examples": [ "response to muscle activity", "sulfur utilization", "cell killing"],
-            "description": "A human-readable term name."
-          }
-        }
-      },
-      "description": "Ontologies that describe gene products in terms of their associated \nbiological processes, cellular components and molecular functions in a species-independent manner."
     },
     "rcsb_go_lineage": {
       "type" : "array",
@@ -160,7 +151,8 @@
             "description": "A human-readable term name."
           }
         }
-      }
+      },
+      "description": "Ontologies that describe gene products in terms of their associated \nbiological processes, cellular components and molecular functions in a species-independent manner."
     },
     "rcsb_gene_info": {
       "type":"array",
@@ -172,10 +164,6 @@
             "description": "The official gene name."
           },
           "type": {
-            "enum": [
-              "PRIMARY",
-              "SYNONYM"
-            ],
             "type": "string"
           },
           "approved": {
@@ -189,7 +177,8 @@
           "provenance_code": {
             "type": "string",
             "enum": [
-              "UniProt"
+              "UniProt",
+              "PDB Primary Data"
             ]
           }
         }
