@@ -1,0 +1,39 @@
+variables:
+  FILENAME: "dw_schemas_${CI_BUILD_REF_NAME}"
+  FILE_EXT: ".tar.gz"
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+#    Handy for debugging
+    - whoami
+    - hostname
+    - pwd
+
+    - VERSION=$(git describe --tags)
+    - echo "Project version ${VERSION}"
+
+    - FILENAME_VERSION=$FILENAME"_"$VERSION$FILE_EXT
+    - echo "Version filename ${FILENAME_VESTION}"
+
+    - FILENAME_LATEST=$FILENAME"_latest"$FILE_EXT
+    - echo "Latest filename ${FILENAME_LATEST}"
+
+#    Produce schema artifacts
+    - cd ..
+    - echo "Will create ${FILENAME_VERSION}"
+    - tar -cvzf ${FILENAME_VERSION} rcsb-json-schema/derived/ rcsb-json-schema/primary/
+    - echo "Will rename ${FILENAME_VERSION} to ${FILENAME_LATEST}"
+    - cp ${FILENAME_VERSION} ${FILENAME_LATEST}
+
+#    Send artifacts to build locker
+    - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ${FILENAME_VERSION}"
+
+#    Send artifacts as latest to build locker
+    - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ${FILENAME_LATEST}"
+
+  tags:
+  - Java8-Nexus3
