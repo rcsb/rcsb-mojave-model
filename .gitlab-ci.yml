@@ -25,7 +25,7 @@ build:
 #    Produce schema artifacts
     - cd ..
     - echo "Will create ${FILENAME_VERSION}"
-    - tar -cvzf ${FILENAME_VERSION} rcsb-json-schema/derived/
+    - tar -cvzf ${FILENAME_VERSION} rcsb-json-schema/schemas/
     - echo "Will rename ${FILENAME_VERSION} to ${FILENAME_LATEST}"
     - cp ${FILENAME_VERSION} ${FILENAME_LATEST}
 
