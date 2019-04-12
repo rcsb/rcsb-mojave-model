@@ -1,6 +1,7 @@
 variables:
-  FILENAME: "dw_source_schemas_${CI_BUILD_REF_NAME}"
-  FILE_EXT: ".tar.gz"
+  BRANCH: "${CI_BUILD_REF_NAME}"
+  FILENAME: "dw_source_schemas"
+  FILE_EXT: "tar.gz"
 
 stages:
   - build
@@ -14,27 +15,36 @@ build:
     - pwd
 
     - VERSION=$(git describe --tags --abbrev=0)
-    - echo "File name ${FILENAME}"
-    - echo "Latest version ${VERSION}"
+    - echo "Distribution file name ${FILENAME}"
+    - echo "Current branch name ${BRANCH}"
+    - echo "Latest version (latest git tag) ${VERSION}"
 
-    - FILENAME_VERSION=${FILENAME}"_"${VERSION}${FILE_EXT}
-    - echo "Latest version file name ${FILENAME_VERSION}"
+    - FILENAME_VERSION=${FILENAME}"_"${VERSION}"."${FILE_EXT}
+    - echo "Latest versioned file name ${FILENAME_VERSION}"
 
-    - FILENAME_LATEST=${FILENAME}"_latest"${FILE_EXT}
+    - FILENAME_LATEST=${FILENAME}"_latest_"${BRANCH}"."${FILE_EXT}
     - echo "Latest snapshot file name ${FILENAME_LATEST}"
 
-#    Produce schema artifacts
+#    Produce distribution of latest versioned schemas
+    - git checkout tags/${VERSION}
     - cd ..
     - echo "Will create ${FILENAME_VERSION}"
     - tar -cvzf ${FILENAME_VERSION} rcsb-json-schema/schemas/
-    - echo "Will rename ${FILENAME_VERSION} to ${FILENAME_LATEST}"
-    - cp ${FILENAME_VERSION} ${FILENAME_LATEST}
 
-#    Send artifacts to build locker
+#    Send artifacts to the build locker
     - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ${FILENAME_VERSION}"
+    - echo "Sent ${FILENAME_VERSION} to the build locker"
+
+#    Produce distribution of latest snapshot schemas
+    - cd rcsb-json-schema
+    - git checkout ${BRANCH}
+    - cd ..
+    - echo "Will create ${FILENAME_LATEST}"
+    - tar -cvzf ${FILENAME_LATEST} rcsb-json-schema/schemas/
 
 #    Send artifacts as latest to build locker
     - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ${FILENAME_LATEST}"
+    - echo "Sent ${FILENAME_LATEST} to the build locker"
 
   tags:
   - Java8-Nexus3
