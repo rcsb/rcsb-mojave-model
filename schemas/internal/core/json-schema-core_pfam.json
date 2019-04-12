@@ -9,19 +9,20 @@
       "properties": {
         "pfam_id": {
           "type" : "string",
-          "description": "Accession number of Pfam entry."
+          "description": "Accession number of Pfam entry.\n"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "accession": {
       "type": "string",
       "examples": [ "PF00621", "PF00637", "PF00656" ],
-      "description": "The unique accession code of protein families and domains in the Pfam database."
+      "description": "The unique accession code of protein families and domains in the Pfam database.\n"
     },
     "identifier": {
       "type": "string",
       "examples": [ "RhoGEF", "Clathrin", "Peptidase_C14" ],
-      "description": "The unique identifier of protein families and domains in the Pfam database."
+      "description": "The unique identifier of protein families and domains in the Pfam database.\n"
     },
     "seed_source": {
       "type": "string",
@@ -33,7 +34,7 @@
         "Disordered",
         "Coiled-coil"
       ],
-      "description": "Pfam entries are classified into six different categories, depending on the length \nand nature of the sequence regions included in the entry: family, domain, repeats, motifs, coiled-coil, and disordered."
+      "description": "Pfam entries are classified into six different categories, depending on the length\n and nature of the sequence regions included in the entry: family, domain, repeats, motifs, coiled-coil, and disordered.\n"
     },
     "description": {
       "type": "string",
@@ -42,22 +43,24 @@
         "Cell division control protein 24, OB domain 2",
         "Protein of unknown function (DUF722)"
       ],
-      "description": "A human-readable name of protein families and domains."
+      "description": "A human-readable name of protein families and domains.\n"
     },
     "comment": {
       "type": "string",
-      "description": "Textual description of the family."
+      "description": "Textual description of the family.\n"
     },
     "clan_id": {
       "type": "string",
-      "description": "Details of the Pfam clan to which the entity belongs."
+      "description": "Details of the Pfam clan to which the entity belongs.\n"
     },
     "rcsb_pfam_provenance_code": {
       "type": "string",
       "enum":[
         "Pfam-A"
       ],
-      "description": "Pfam-A is the manually curated portion of the Pfam database."
+      "description": "Pfam-A is the manually curated portion of the Pfam database.\n"
     }
-  }
+  },
+  "additionalProperties": false,
+  "description": "JSON schema for core Pfam collection in RCSB Data Warehouse.\n"
 }

@@ -23,7 +23,7 @@
         "properties": {
           "symbol": {
             "type": "string",
-            "description": "Symmetry symbol refers to point group or helical symmetry of identical subunits. \n\n Contains point group symbol (e.g., C2, C5, D2, T, O, I) or H for helical symmetry."
+            "description": "Symmetry symbol refers to point group or helical symmetry of identical subunits. \n\n Contains point group symbol (e.g., C2, C5, D2, T, O, I) or H for helical symmetry.\n"
           },
           "type": {
             "type": "string",
@@ -36,7 +36,7 @@
               "Icosahedral",
               "Helical"
             ],
-            "description": "Symmetry type refers to point group or helical symmetry of identical subunits. \n\n Contains point group types (e.g. Cyclic, Dihedral) or Helical for helical symmetry."
+            "description": "Symmetry type refers to point group or helical symmetry of identical subunits. \n\n Contains point group types (e.g. Cyclic, Dihedral) or Helical for helical symmetry.\n"
           },
           "stoichiometry": {
             "type": "array",
@@ -44,13 +44,13 @@
             "uniqueItems": true,
             "items": {
               "type": "string",
-              "description": "Each type of different subunits is assigned a latter. \nThe number of equivalent subunits is added as a coefficient after each letter (except 1 which is not added explicitly)."
+              "description": "Each type of different subunits is assigned a latter. \nThe number of equivalent subunits is added as a coefficient after each letter (except 1 which is not added explicitly).\n"
             },
-            "description": "Stoichiometry of a complex represents the quantitative description and composition of its subunits."
+            "description": "Stoichiometry of a complex represents the quantitative description and composition of its subunits.\n"
           },
           "oligomeric_state": {
             "type": "string",
-            "description": "Oligomeric state refers to a composition of subunits in quaternary structure. \nQuaternary structure may be composed either exclusively of several copies of identical subunits, \nin which case they are termed homo-oligomers, or alternatively by at least one copy of different subunits (hetero-oligomers).\n Quaternary structure composed of a single subunit is demoted as 'Monomer'."
+            "description": "Oligomeric state refers to a composition of subunits in quaternary structure. \nQuaternary structure may be composed either exclusively of several copies of identical subunits, \nin which case they are termed homo-oligomers, or alternatively by at least one copy of different subunits (hetero-oligomers).\n Quaternary structure composed of a single subunit is demoted as 'Monomer'.\n"
           },
           "clusters": {
             "type":"array",
@@ -68,14 +68,14 @@
                   "uniqueItems": true,
                   "items": {
                     "type": "object",
-                    "description": "Subunits that belong to the cluster, identified by asym_id and optionally by assembly operator id(s).",
+                    "description": "Subunits that belong to the cluster, identified by asym_id and optionally by assembly operator id(s).\n",
                     "required": [
                       "asym_id"
                     ],
                     "properties": {
                       "asym_id": {
                         "type": "string",
-                        "description": "Internal chain ID used in mmCIF files to uniquely identify structural elements in the asymmetric unit."
+                        "description": "Internal chain ID used in mmCIF files to uniquely identify structural elements in the asymmetric unit.\n"
                       },
                       "pdbx_struct_oper_list_ids": {
                         "type": "array",
@@ -83,19 +83,20 @@
                         "items": {
                           "type": "string"
                         },
-                        "description": "Optional list of operator ids (pdbx_struct_oper_list.id) as appears in pdbx_struct_assembly_gen.oper_expression. \nOne operator id per operand in the expression (most cases have only 1 operator). \nIf it's not given then identity operator is assumed."
+                        "description": "Optional list of operator ids (pdbx_struct_oper_list.id) as appears in pdbx_struct_assembly_gen.oper_expression. \nOne operator id per operand in the expression (most cases have only 1 operator). \nIf it's not given then identity operator is assumed.\n"
                       }
-
-                    }
+                    },
+                    "additionalProperties": false
                   }
                 },
                 "avg_rmsd": {
                   "type": "number",
-                  "description": "Average RMSD between members of a given cluster."
+                  "description": "Average RMSD between members of a given cluster.\n"
                 }
-              }
+              },
+              "additionalProperties": false
             },
-            "description": "Clusters describe grouping of 'identical' subunits."
+            "description": "Clusters describe grouping of 'identical' subunits.\n"
           },
           "rotation_axes": {
             "type": "array",
@@ -133,9 +134,10 @@
                   "description": "The number of times (order of rotation) that a subunit can be repeated by a rotation operation, \nbeing transformed into a new state indistinguishable from its starting state."
                 }
               },
+              "additionalProperties": false,
               "description": "The orientation of the principal rotation (symmetry) axis."
             },
-            "description": "Specifies a single or multiple rotation axes through the same point."
+            "description": "Specifies a single or multiple rotation axes through the same point.\n"
           },
           "kind": {
             "type": "string",
@@ -144,14 +146,15 @@
               "pseudo",
               "local"
             ],
-            "description": "Symmetry kind refers to the symmetry of the entire oligomeric complex. \n Complexes may be symmetric, pseudosymmetric, or asymmetric. Asymmetric complexes may have local symmetry."
+            "description": "Symmetry kind refers to the symmetry of the entire oligomeric complex. \n Complexes may be symmetric, pseudosymmetric, or asymmetric. Asymmetric complexes may have local symmetry.\n"
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "rcsb_struct_symmetry_provenance_code": {
       "type": "string",
-      "description": "The title and version of software package used for symmetry calculations."
+      "description": "The title and version of software package used for symmetry calculations.\n"
     },
     "rcsb_struct_symmetry_lineage": {
       "type" : "array",
@@ -163,20 +166,22 @@
           "id": {
             "type": "string",
             "examples": ["2", "546"],
-            "description": "A unique identifier automatically assigned to the symmetry term."
+            "description": "A unique identifier automatically assigned to the symmetry term.\n"
           },
           "name":{
             "type": "string",
             "examples": [ "Asymmetric", "global", "C1", "Hetero 3-mer"],
-            "description": "A human-readable term describing protein symmetry."
+            "description": "A human-readable term describing protein symmetry.\n"
           },
           "depth": {
             "type" : "integer",
-            "description" : "Hierarchy depth."
+            "description" : "Hierarchy depth.\n"
           }
-        }
+        },
+        "additionalProperties": false
       }
     }
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "description": "Combined JSON schema for RCSB Exchange Database: json-schema-min-pdbx_core_assembly.json\n and manually curated schema for RCSB Data Warehouse: json-schema-core_assembly.json\n"
 }

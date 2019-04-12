@@ -2,21 +2,25 @@
   "type": "object",
   "$schema" : "http://json-schema.org/draft-04/schema#",
   "title" : "core_go.json",
-  "required" : [ "rcsb_go_container_identifiers" ],
+  "required" : [
+    "rcsb_go_container_identifiers",
+    "aspect",
+    "label"
+  ],
   "properties": {
     "rcsb_go_container_identifiers" : {
       "type" : "object",
       "properties": {
         "go_id": {
           "type" : "string",
-          "description": "Unique GO identifier."
+          "description": "Unique GO identifier.\n"
         }
       }
     },
     "id": {
       "type": "string",
       "examples": ["GO:0005125", "GO:0060092"],
-      "description": "A unique seven digit identifier prefixed by GO:."
+      "description": "A unique seven digit identifier prefixed by GO:.\n"
     },
     "aspect": {
       "type": "string",
@@ -25,16 +29,16 @@
         "biological_process",
         "molecular_function"
       ],
-      "description": "Denotes which of the three sub-ontologies (cellular component, biological process or molecular function) the term belongs to."
+      "description": "Denotes which of the three sub-ontologies (cellular component, biological process or molecular function) the term belongs to.\n"
     },
     "description": {
       "type": "string",
-      "description": "A textual description of what the term represents."
+      "description": "A textual description of what the term represents.\n"
     },
     "label": {
       "type": "string",
       "examples": [ "response to muscle activity", "sulfur utilization", "cell killing"],
-      "description": "A human-readable term name."
+      "description": "A human-readable term name.\n"
     },
     "synonyms": {
       "type": "array",
@@ -45,5 +49,6 @@
       }
     }
   },
-  "description": "Controlled vocabularies (ontologies) that describe gene products in terms of their associated \nbiological processes, cellular components and molecular functions in a species-independent manner."
+  "additionalProperties": false,
+  "description": "JSON schema for core GO collection in RCSB Data Warehouse. Contains controlled vocabularies (ontologies)\n that describe gene products in terms of their associated\n biological processes, cellular components and molecular functions in a species-independent manner.\n"
 }

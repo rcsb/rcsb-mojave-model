@@ -10,23 +10,14 @@
     "rcsb_entry_info": {
       "type": "object",
       "properties": {
-        "atoms_count": {
-          "type": "integer",
-          "description": "Number of non-water atoms observed experimentally in the asymmetric unit."
-        },
-        "models_count": {
-          "type": "integer",
-          "minimum": 0,
-          "exclusiveMinimum": true,
-          "description": "Number of models."
-        },
         "molecular_weight": {
           "type": "number",
           "minimum": 0,
           "exclusiveMinimum": true,
-          "description": "Molecular weight of all non-water atoms in the asymmetric unit."
+          "description": "Molecular weight of all non-water atoms in the asymmetric unit.\n"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "rcsb_external_references": {
       "type": "array",
@@ -42,7 +33,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "ID (accession) from external resource linked to this entry."
+            "description": "ID (accession) from external resource linked to this entry.\n"
           },
           "type": {
             "type": "string",
@@ -55,13 +46,14 @@
               "PROTEIN_DIFFRACTION",
               "EM_DATA_RESOURCE"
             ],
-            "description": "Internal identifier for external resource."
+            "description": "Internal identifier for external resource.\n"
           },
           "link": {
             "type": "string",
-            "description": "Link to this entry in external resource."
+            "description": "Link to this entry in external resource.\n"
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "rcsb_publication": {
@@ -72,19 +64,19 @@
       "properties": {
         "pubmed_id": {
           "type": "integer",
-          "description": "Unique integer value assigned to each PubMed record."
+          "description": "Unique integer value assigned to each PubMed record.\n"
         },
         "pubmed_central_id": {
           "type": "string",
-          "description": "Unique integer value assigned to each PubMed Central record."
+          "description": "Unique integer value assigned to each PubMed Central record.\n"
         },
         "doi": {
           "type": "string",
-          "description": "Persistent identifier used to provide a link to an article location on the Internet."
+          "description": "Persistent identifier used to provide a link to an article location on the Internet.\n"
         },
         "abstract_text": {
           "type": "string",
-          "description": "A concise, accurate and factual mini-version of the paper contents."
+          "description": "A concise, accurate and factual mini-version of the paper contents.\n"
         },
         "affiliation_info": {
           "type": "array",
@@ -93,7 +85,7 @@
           "items": {
             "type": "string"
           },
-          "description": "The institution(s) that the author is affiliated with. Multiple affiliations per author are allowed."
+          "description": "The institution(s) that the author is affiliated with. Multiple affiliations per author are allowed.\n"
         },
         "mesh_heading_list": {
           "type": "array",
@@ -102,7 +94,7 @@
           "items": {
             "type": "string"
           },
-          "description": "NLM controlled vocabulary, Medical Subject Headings (MeSH), \n is used to characterize the content of the articles represented by MEDLINE citations."
+          "description": "NLM controlled vocabulary, Medical Subject Headings (MeSH), \n is used to characterize the content of the articles represented by MEDLINE citations.\n"
         },
         "provenance_code": {
           "type": "string",
@@ -110,7 +102,8 @@
             "PubMed"
           ]
         }
-      }
+      },
+      "additionalProperties": false
     },
     "rcsb_binding_affinity": {
       "type": "array",
@@ -123,21 +116,21 @@
           "type",
           "value",
           "unit",
-          "provenance_code",
-          "external_link",
+          "link",
           "display_order",
-          "display_value"
+          "display_value",
+          "provenance_code"
         ],
         "properties": {
           "comp_id": {
             "type":"string",
             "examples":[ "0WE", "SPE", "CL" ],
-            "description": "Ligand identifier."
+            "description": "Ligand identifier.\n"
           },
           "type": {
             "type":"string",
             "examples":[ "IC50", "EC50", "Kd", "Ka", "Ki" ],
-            "description": "Binding affinity measurement given in one of the following types: \n\n The concentration constants:\n IC50: the concentration of ligand that reduces enzyme activity by 50%; \n EC50: the concentration of compound that generates a half-maximal response; \n\n The binding constant: \n Kd: dissociation constant; \n Ka: association constant; \n Ki: enzyme inhibition constant; \n\n The thermodynamic parameters: \n delta G: Gibbs free energy of binding (for association reaction); \n delta H: change in enthalpy associated with a chemical reaction; \n delta S: change in entropy associated with a chemical reaction."
+            "description": "Binding affinity measurement given in one of the following types: \n\n The concentration constants:\n IC50: the concentration of ligand that reduces enzyme activity by 50%; \n EC50: the concentration of compound that generates a half-maximal response; \n\n The binding constant: \n Kd: dissociation constant; \n Ka: association constant; \n Ki: enzyme inhibition constant; \n\n The thermodynamic parameters: \n delta G: Gibbs free energy of binding (for association reaction); \n delta H: change in enthalpy associated with a chemical reaction; \n delta S: change in entropy associated with a chemical reaction.\n"
           },
           "value":{
             "type":"number",
@@ -146,17 +139,17 @@
           "unit": {
             "type":"string",
             "examples":[ "nM", "kJ/mol" ],
-            "description": "Binding affinity unit. \n Dissociation constant Kd is normally in molar units (or millimolar , micromolar, nanomolar, etc). \n Association constant Ka is normally expressed in inverse molar units (e.g. M-1)."
+            "description": "Binding affinity unit. \n Dissociation constant Kd is normally in molar units (or millimolar , micromolar, nanomolar, etc). \n Association constant Ka is normally expressed in inverse molar units (e.g. M-1).\n"
           },
           "symbol":{
             "type":"string",
             "examples" : [ "~", "=", ">", "<", ">=", "<=" ],
-            "description": "Binding affinity symbol indicating approximate or precise strength of the binding."
+            "description": "Binding affinity symbol indicating approximate or precise strength of the binding.\n"
           },
           "reference_sequence_identity": {
             "type": "integer",
             "examples":[ 100, 99, 85 ],
-            "description": "Data point provided by BindingDB. Percent identity between PDB sequence and reference sequence."
+            "description": "Data point provided by BindingDB. Percent identity between PDB sequence and reference sequence.\n"
           },
           "provenance_code": {
             "type": "string",
@@ -165,22 +158,24 @@
               "Binding MOAD",
               "BindingDB"
             ],
-            "description": "The resource name for the related binding affinity reference."
+            "description": "The resource name for the related binding affinity reference.\n"
           },
-          "external_link": {
+          "link": {
             "type":"string",
-            "description": "Link to external resource referencing the data."
+            "description": "Link to external resource referencing the data.\n"
           },
           "display_order": {
             "type": "integer",
-            "description": "Display order."
+            "description": "Display order.\n"
           },
           "display_value":{
             "type":"string"
           }
-        }
+        },
+        "additionalProperties": false
       }
     }
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "description": "Combined JSON schema for RCSB Exchange Database: json-schema-min-pdbx_core_entry.json\n and manually curated schema for RCSB Data Warehouse: json-schema-core_entry.json\n"
 }

@@ -9,13 +9,13 @@
       "properties" : {
         "uniprot_id" : {
           "type" : "string",
-          "description" : "Primary accession number of UniProtKB entry."
+          "description" : "Primary accession number of a given UniProtKB entry.\n"
         },
         "pfam_ids" : {
           "type" : "array",
           "items" : {
             "type" : "string",
-            "description" : "Accession of Pfam entry."
+            "description" : "Unique Pfam identifiers mapped to a given UniProtKB entry.\n"
           },
           "uniqueItems" : true
         },
@@ -23,7 +23,7 @@
           "type" : "array",
           "items" : {
             "type" : "string",
-            "description" : "."
+            "description" : "Unique GO identifiers mapped to a given UniProtKB entry.\n"
           },
           "uniqueItems" : true
         },
@@ -31,17 +31,19 @@
           "type" : "array",
           "items" : {
             "type" : "string",
-            "description" : "."
+            "description" : "Unique Ensembl identifiers mapped to a given UniProtKB entry.\n"
           },
           "uniqueItems" : true
         }
-      }
+      },
+      "additionalProperties": false
     },
     "accession" : {
       "type" : "array",
       "items" : {
         "type" : "string"
-      }
+      },
+      "description": "List of UniProtKB accession numbers where original accession numbers are retained as ‘secondary’ accession numbers.\n"
     },
     "sequence" : {
       "type" : "object",
@@ -55,13 +57,16 @@
         "version" : {
           "type" : "integer"
         }
-      }
+      },
+      "additionalProperties": false,
+      "description": "Protein sequence data for canonical protein sequence.\n"
     },
     "name" : {
       "type" : "array",
       "items" : {
         "type" : "string"
-      }
+      },
+      "description" : "A list of unique identifiers (former IDs), often containing biologically relevant information.\n"
     },
     "keyword" : {
       "type" : "array",
@@ -71,16 +76,17 @@
           "id" : {
             "type" : "string",
             "examples": ["KW-0275", "KW-0597"],
-            "description": "A unique keyword identifier."
+            "description": "A unique keyword identifier.\n"
           },
           "value" : {
             "type" : "string",
             "examples": [ "Lipid metabolism", "Phosphoprotein", "Fatty acid biosynthesis" ],
             "description": "Human-readable keyword term."
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "description": "Keywords constitute a controlled vocabulary that summarises the content of a UniProtKB entry."
+      "description": "Keywords constitute a controlled vocabulary that summarises the content of a UniProtKB entry.\n"
     },
     "gene" : {
       "type" : "array",
@@ -107,7 +113,9 @@
               }
             }
           }
-        }
+        },
+        "additionalProperties": false,
+        "description" : "The name(s) of the gene(s) that code for the protein sequence(s) described in the entry.\n"
       }
     },
     "protein" : {
@@ -131,7 +139,8 @@
                           "value" : {
                             "type" : "string"
                           }
-                        }
+                        },
+                        "additionalProperties": false
                       }
                     },
                     "full_name" : {
@@ -140,7 +149,8 @@
                         "value" : {
                           "type" : "string"
                         }
-                      }
+                      },
+                      "additionalProperties": false
                     },
                     "short_name" : {
                       "type" : "array",
@@ -150,7 +160,8 @@
                           "value" : {
                             "type" : "string"
                           }
-                        }
+                        },
+                        "additionalProperties": false
                       }
                     }
                   }
@@ -167,7 +178,8 @@
                         "value" : {
                           "type" : "string"
                         }
-                      }
+                      },
+                      "additionalProperties": false
                     }
                   },
                   "full_name" : {
@@ -176,7 +188,8 @@
                       "value" : {
                         "type" : "string"
                       }
-                    }
+                    },
+                    "additionalProperties": false
                   },
                   "short_name" : {
                     "type" : "array",
@@ -186,7 +199,8 @@
                         "value" : {
                           "type" : "string"
                         }
-                      }
+                      },
+                      "additionalProperties": false
                     }
                   }
                 }
@@ -213,12 +227,15 @@
                         "value" : {
                           "type" : "string"
                         }
-                      }
+                      },
+                      "additionalProperties": false
                     }
-                  }
+                  },
+                  "additionalProperties": false
                 }
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "domain" : {
@@ -340,18 +357,22 @@
                   "type" : "object",
                   "properties" : {
                     "value" : {
-                      "type" : "string"
+                      "type" : "string",
+                      "description": "Enzyme Commission number.\n"
                     }
-                  }
+                  },
+                  "additionalProperties": false
                 }
               },
               "full_name" : {
                 "type" : "object",
                 "properties" : {
                   "value" : {
-                    "type" : "string"
+                    "type" : "string",
+                    "description": "Synonym of the recommended name (full name).\n"
                   }
-                }
+                },
+                "additionalProperties": false
               },
               "short_name" : {
                 "type" : "array",
@@ -359,13 +380,17 @@
                   "type" : "object",
                   "properties" : {
                     "value" : {
-                      "type" : "string"
+                      "type" : "string",
+                      "description": "Abbreviation of the full name or an acronym.\n"
                     }
-                  }
+                  },
+                  "additionalProperties": false
                 }
               }
-            }
-          }
+            },
+            "additionalProperties": false
+          },
+          "description": "Synonyms of the recommended name (full name).\n"
         },
         "recommended_name" : {
           "type" : "object",
@@ -376,18 +401,22 @@
                 "type" : "object",
                 "properties" : {
                   "value" : {
-                    "type" : "string"
+                    "type" : "string",
+                    "description": "Enzyme Commission number.\n"
                   }
-                }
+                },
+                "additionalProperties": false
               }
             },
             "full_name" : {
               "type" : "object",
               "properties" : {
                 "value" : {
-                  "type" : "string"
+                  "type" : "string",
+                  "description": "Full name recommended by the UniProt consortium.\n"
                 }
-              }
+              },
+              "additionalProperties": false
             },
             "short_name" : {
               "type" : "array",
@@ -395,12 +424,16 @@
                 "type" : "object",
                 "properties" : {
                   "value" : {
-                    "type" : "string"
+                    "type" : "string",
+                    "description": "Abbreviation of the full name or acronym.\n"
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
-          }
+          },
+          "additionalProperties": false,
+          "description": "Name recommended by the UniProt consortium.\n"
         },
         "submitted_name" : {
           "type" : "array",
@@ -426,10 +459,14 @@
                   }
                 }
               }
-            }
-          }
+            },
+            "additionalProperties": false
+          },
+          "description": "UniProtKB/TrEMBL entries usually have Submitted name instead of Recommended name.\n Submitted names may later be improved by automatic annotation procedures.\n"
         }
-      }
+      },
+      "additionalProperties": false,
+      "description": "An exhaustive list of all names of the protein, from commonly used to obsolete, to allow unambiguous identification of a protein.\n"
     },
     "organism" : {
       "type" : "object",
@@ -464,9 +501,12 @@
                 "type" : "string"
               }
             }
-          }
+          },
+          "description": "The organism designation consists of the Latin scientific name,\n usually composed of the genus and species names (the binomial system developed by Linnaeus),\n the English common name, a synonym, etc.\n"
         }
-      }
+      },
+      "additionalProperties" : false,
+      "description": "Information on the name(s) of the organism that is the source of the protein sequence.\n"
     },
     "rcsb_protein_name": {
       "type" : "object",
@@ -474,13 +514,14 @@
       "properties" : {
         "value" : {
           "type" : "string",
-          "description" : "Name that allow for an unambiguous identification of a protein."
+          "description" : "Name that allows to unambiguously identify a protein.\n"
         },
         "provenance_code" : {
           "type" : "string",
-          "description" : "Historical record of the data attribute."
+          "description" : "Historical record of the data attribute.\n"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "rcsb_ec" : {
       "type" : "array",
@@ -492,10 +533,11 @@
           },
           "provenance_code" : {
             "type" : "string",
-            "description" : "Historical record of the data attribute."
+            "description" : "Historical record of the data attribute.\n"
           }
         },
-        "description" : "Enzyme Commission (EC) number(s)"
+        "additionalProperties": false,
+        "description" : "Enzyme Commission (EC) number(s).\n"
       },
       "minItems" : 1,
       "uniqueItems" : true
@@ -506,17 +548,19 @@
       "properties" : {
         "scientific_name" : {
           "type" : "string",
-          "description" : "The scientific name of the organism in which a protein occurs."
+          "description" : "The scientific name of the organism in which a protein occurs.\n"
         },
         "taxonomy_id" : {
           "type" : "integer",
-          "description" : "NCBI Taxonomy identifier for the organism in which a protein occurs."
+          "description" : "NCBI Taxonomy identifier for the organism in which a protein occurs.\n"
         },
         "provenance_code" : {
           "type" : "string",
-          "description" : "Historical record of the data attribute."
+          "description" : "Historical record of the data attribute.\n"
         }
-      }
+      },
+      "additionalProperties": false,
+      "description": "Taxonomy information on the organism that is the source of the protein sequence.\n"
     },
     "rcsb_protein_function" : {
       "type" : "object",
@@ -524,13 +568,14 @@
       "properties" : {
         "details" : {
           "type" : "string",
-          "description" : "General function(s) of a protein."
+          "description" : "General function(s) of a protein.\n"
         },
         "provenance_code" : {
           "type" : "string",
-          "description" : "Historical record of the data attribute."
+          "description" : "Historical record of the data attribute.\n"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "rcsb_protein_feature" : {
       "type" : "array",
@@ -539,7 +584,7 @@
         "properties" : {
           "id" : {
             "type" : "string",
-            "description": "Feature identifier, which allows to construct links directly from position-specific annotation to specialized protein-related databases."
+            "description": "Feature identifier, which allows to construct links directly from position-specific annotation to specialized protein-related databases.\n"
           },
           "type" : {
             "enum" : [
@@ -584,7 +629,7 @@
               "INTRAMEMBRANE_REGION"
             ],
             "type" : "string",
-            "description": "Topics for which feature identifiers currently exist."
+            "description": "Topics for which feature identifiers currently exist.\n"
           },
           "location" : {
             "type" : "object",
@@ -598,15 +643,17 @@
               "position" : {
                 "type" : "integer"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "description" : {
             "type" : "string",
-            "description": "Human-readable feature description."
+            "description": "Human-readable feature description.\n"
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "description": "Sequence annotations describe regions or sites of interest in the protein sequence, \nsuch as post-translational modifications, binding sites, enzyme active sites, local secondary structure \nor other characteristics reported in the cited references."
+      "description": "Sequence annotations describe regions or sites of interest in the protein sequence,\n such as post-translational modifications, binding sites, enzyme active sites, local secondary structure \nor other characteristics reported in the cited references.\n"
     }
   },
   "additionalProperties" : false
