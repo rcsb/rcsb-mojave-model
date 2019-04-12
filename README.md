@@ -1,5 +1,5 @@
 # RCSB-JSON-SCHEMA
-The repository is meant as a schema store that hosts [JSON Schemas](http://json-schema.org/latest/json-schema-core.html) 
+The repository is a schema store that hosts [JSON Schemas](http://json-schema.org/latest/json-schema-core.html) 
 for RCSB data models!
 
 
@@ -15,3 +15,9 @@ Given a version number **major.minor.patch**, increment the:
 - **major** version when changes are incompatible (removing fields, changing fields name or type) with previous version,
 - **minor** version when changes are backwards-compatible (adding new fields), and
 - **patch** version when changes are backwards-compatible and related to metadata (changing field description, adding examples, etc.).
+
+### Distribution
+This package provides tar files for the distribution of releases. The tar file for version **x.y.z** will be named 
+*dw_source_schemas_[branch name]_**x.y.z**.tar.gz*. Every build will provide the latest snapshot named as
+*dw_source_schemas_[branch name]_**latest**.tar.gz*. As a part of CI/CD process source schemas 
+(current version and latest snapshot) will be distributed to the build locker.
