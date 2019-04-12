@@ -14,13 +14,14 @@ build:
     - pwd
 
     - VERSION=$(git describe --tags --abbrev=0)
-    - echo "Project version ${VERSION}"
+    - echo "File name ${FILENAME}"
+    - echo "Latest version ${VERSION}"
 
-    - FILENAME_VERSION=$FILENAME"_"$VERSION$FILE_EXT
-    - echo "Version filename ${FILENAME_VESTION}"
+    - FILENAME_VERSION=${FILENAME}"_"${VERSION}${FILE_EXT}
+    - echo "Latest version file name ${FILENAME_VERSION}"
 
-    - FILENAME_LATEST=$FILENAME"_latest"$FILE_EXT
-    - echo "Latest filename ${FILENAME_LATEST}"
+    - FILENAME_LATEST=${FILENAME}"_latest"${FILE_EXT}
+    - echo "Latest snapshot file name ${FILENAME_LATEST}"
 
 #    Produce schema artifacts
     - cd ..
