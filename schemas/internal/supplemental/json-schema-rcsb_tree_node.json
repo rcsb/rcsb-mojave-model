@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "title" : "rcsb_tree_node.json",
+  "required" : [ "id", "name" ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique node identifier.\n"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable term associated with the node.\n"
+    },
+    "description": {
+      "type": "string",
+      "description": "Node description.\n"
+    },
+    "depth": {
+      "type" : "integer",
+      "description" : "Hierarchy depth.\n"
+    },
+    "parents": {
+      "type" : "array",
+      "minItems" : 1,
+      "uniqueItems" : true,
+      "items" : {
+        "type": "string"
+      },
+      "description": "ID(s) of the node’s immediate parents.\n"
+    },
+    "related": {
+      "type" : "array",
+      "minItems" : 1,
+      "uniqueItems" : true,
+      "items" : {
+        "type": "string"
+      },
+      "description": "Terms or IDs related to the node.\n"
+    }
+  },
+  "additionalProperties": false,
+  "description": "A tree node with a linkage to immediate parent(s) and all ancestors (node's lineage).\n"
+}
