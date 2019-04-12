@@ -1,0 +1,39 @@
+{
+   "type": "object",
+   "properties": {
+      "audit_author": {
+         "type": "string",
+         "examples": [
+            "Bleary, Percival R."
+         ],
+         "description": "Name of the audit author of the entry."
+      },
+      "entry_id": {
+         "type": "string",
+         "description": "The PDB entry accession code."
+      },
+      "ordinal_id": {
+         "type": "integer",
+         "description": "An ordinal identifier for an audit author in an entry."
+      },
+      "update_id": {
+         "type": "string",
+         "description": "Identifier for the current data exchange status record."
+      },
+      "_schema_version": {
+         "type": "string",
+         "description": "Version string for the schema and collection."
+      }
+   },
+   "required": [
+      "entry_id",
+      "ordinal_id",
+      "update_id"
+   ],
+   "additionalProperties": false,
+   "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-repository_holdings_removed_audit_authors.json",
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "schema: repository_holdings collection: repository_holdings_removed_audit_authors version: 1.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_removed_audit_authors version 1.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-repository_holdings_removed_audit_authors.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 1.1.0"
+}

@@ -1,0 +1,69 @@
+{
+   "type": "object",
+   "properties": {
+      "audit_authors": {
+         "type": "array",
+         "items": {
+            "type": "string",
+            "examples": [
+               "Bleary, Percival R.;O'Neil, F.K."
+            ],
+            "description": "Names of the authors of the entry."
+         },
+         "uniqueItems": false
+      },
+      "deposit_date": {
+         "type": "string",
+         "format": "date",
+         "description": "The entry deposition date."
+      },
+      "details": {
+         "type": "string",
+         "description": "The entry title."
+      },
+      "entry_id": {
+         "type": "string",
+         "description": "The PDB entry accession code."
+      },
+      "id_codes_replaced_by": {
+         "type": "array",
+         "items": {
+            "type": "string",
+            "description": "The list of superseding PDB accession codes for the removed entry."
+         },
+         "uniqueItems": false
+      },
+      "release_date": {
+         "type": "string",
+         "format": "date",
+         "description": "The initial date the entry was released in the PDB repository."
+      },
+      "remove_date": {
+         "type": "string",
+         "format": "date",
+         "description": "The date the entry was removed from the PDB repository."
+      },
+      "title": {
+         "type": "string",
+         "description": "The entry title."
+      },
+      "update_id": {
+         "type": "string",
+         "description": "Identifier for the current data exchange status record."
+      },
+      "_schema_version": {
+         "type": "string",
+         "description": "Version string for the schema and collection."
+      }
+   },
+   "required": [
+      "entry_id",
+      "update_id"
+   ],
+   "additionalProperties": false,
+   "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-repository_holdings_removed.json",
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "schema: repository_holdings collection: repository_holdings_removed version: 1.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_removed version 1.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-repository_holdings_removed.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 1.1.0"
+}

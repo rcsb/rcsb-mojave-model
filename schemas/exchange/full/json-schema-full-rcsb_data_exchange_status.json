@@ -1,0 +1,51 @@
+{
+   "type": "object",
+   "properties": {
+      "database_name": {
+         "type": "string",
+         "description": "Name of the database container for the current data exchange status record."
+      },
+      "object_name": {
+         "type": "string",
+         "description": "Name of the database object for the current data exchange status record."
+      },
+      "update_begin_timestamp": {
+         "type": "string",
+         "format": "date-time",
+         "description": "Starting timestamp for the current data exchange status record."
+      },
+      "update_end_timestamp": {
+         "type": "string",
+         "format": "date-time",
+         "description": "Ending timestamp for the current data exchange status record."
+      },
+      "update_id": {
+         "type": "string",
+         "description": "Identifier for the current data exchange status record."
+      },
+      "update_status_flag": {
+         "type": "string",
+         "enum": [
+            "N",
+            "Y"
+         ],
+         "description": "Success status for the current data exchange status record."
+      },
+      "_schema_version": {
+         "type": "string",
+         "description": "Version string for the schema and collection."
+      }
+   },
+   "required": [
+      "database_name",
+      "object_name",
+      "update_id",
+      "update_status_flag"
+   ],
+   "additionalProperties": false,
+   "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-rcsb_data_exchange_status.json",
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "schema: data_exchange collection: rcsb_data_exchange_status version: 1.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the data_exchange content type schema. This schema supports collection rcsb_data_exchange_status version 1.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-rcsb_data_exchange_status.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 1.1.0"
+}

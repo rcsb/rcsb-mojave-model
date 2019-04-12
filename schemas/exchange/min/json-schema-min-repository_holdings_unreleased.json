@@ -1,0 +1,108 @@
+{
+   "type": "object",
+   "properties": {
+      "audit_authors": {
+         "type": "array",
+         "items": {
+            "type": "string",
+            "examples": [
+               "Bleary, Percival R.; O'Neil, F.K."
+            ],
+            "description": "Names of the authors of the entry."
+         },
+         "uniqueItems": false
+      },
+      "author_prerelease_sequence_status": {
+         "type": "string",
+         "enum": [
+            "HOLD FOR RELEASE",
+            "HOLD FOR PUBLICATION",
+            "RELEASE IMMEDIATELY",
+            "RELEASE NOW"
+         ],
+         "description": "The prerelease status for the molecular sequences for the entry ."
+      },
+      "deposit_date": {
+         "type": "string",
+         "format": "date",
+         "description": "The entry deposition date."
+      },
+      "deposit_date_coordinates": {
+         "type": "string",
+         "format": "date",
+         "description": "The deposition date of entry coordinate data."
+      },
+      "deposit_date_nmr_restraints": {
+         "type": "string",
+         "format": "date",
+         "description": "The deposition date of entry NMR restraint data."
+      },
+      "deposit_date_structure_factors": {
+         "type": "string",
+         "format": "date",
+         "description": "The deposition date of entry structure factor data."
+      },
+      "entry_id": {
+         "type": "string",
+         "description": "The PDB entry accession code."
+      },
+      "hold_date_coordinates": {
+         "type": "string",
+         "format": "date",
+         "description": "The embargo date of entry coordinate data."
+      },
+      "hold_date_nmr_restraints": {
+         "type": "string",
+         "format": "date",
+         "description": "The embargo date of entry NMR restraint data."
+      },
+      "hold_date_structure_factors": {
+         "type": "string",
+         "format": "date",
+         "description": "The embargo date of entry structure factor data."
+      },
+      "release_date": {
+         "type": "string",
+         "format": "date",
+         "description": "The release date for the entry."
+      },
+      "status_code": {
+         "type": "string",
+         "enum": [
+            "HPUB",
+            "POLC",
+            "AUCO",
+            "HOLD",
+            "PROC",
+            "REPL",
+            "AUTH",
+            "WAIT",
+            "REFI",
+            "WDRN"
+         ],
+         "description": "The release status for the entry."
+      },
+      "title": {
+         "type": "string",
+         "description": "The entry title."
+      },
+      "update_id": {
+         "type": "string",
+         "description": "Identifier for the current data exchange status record."
+      },
+      "_schema_version": {
+         "type": "string",
+         "description": "Version string for the schema and collection."
+      }
+   },
+   "required": [
+      "entry_id",
+      "update_id"
+   ],
+   "additionalProperties": false,
+   "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-repository_holdings_unreleased.json",
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "schema: repository_holdings collection: repository_holdings_unreleased version: 1.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_unreleased version 1.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-repository_holdings_unreleased.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 1.1.0"
+}

@@ -1,0 +1,2215 @@
+{
+   "type": "object",
+   "properties": {
+      "pdbx_unobs_or_zero_occ_atoms": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_ins_code": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy atom.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": " Part of the identifier for the unobserved or zero occupancy atom.\n\nThis data item is a pointer to _atom_site.pdbx_PDB_model_num in the\nATOM_SITE category."
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy atom.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy atom.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy atom.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy atom.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_unobs_or_zero_occ_atoms.id must uniquely identify\n each item in the PDBX_UNOBS_OR_ZERO_OCC_ATOMS list.\n\n This is an integer serial number."
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy atom.\n\n This data item is a pointer to _atom_site.label_alt.id in the\n ATOM_SITE category."
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy atom.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "label_atom_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy atom.\n\n This data item is a pointer to _atom_site.label_atom_id in the\n ATOM_SITE category."
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy atom.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category."
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "Part of the identifier for the unobserved or zero occupancy atom.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
+               },
+               "occupancy_flag": {
+                  "type": "integer",
+                  "enum": [
+                     0,
+                     1
+                  ],
+                  "description": "The value of occupancy flag indicates whether the atom is\n either unobserved (=1) or has zero occupancy (=0)"
+               },
+               "polymer_flag": {
+                  "type": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ],
+                  "description": "The value of polymer flag indicates whether the unobserved or zero\n occupancy atom is part of a polymer chain"
+               }
+            },
+            "required": [
+               "PDB_model_num",
+               "auth_asym_id",
+               "auth_atom_id",
+               "auth_comp_id",
+               "auth_seq_id",
+               "id",
+               "occupancy_flag",
+               "polymer_flag"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_unobs_or_zero_occ_residues": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_ins_code": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy residue.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "Part of the identifier for the unobserved or zero occupancy residue.\n\n This data item is a pointer to _atom_site.pdbx_PDB_model_num in the\n ATOM_SITE category.\n"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy residue.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy residue.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy residue.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_unobs_or_zero_occ_residues.id must uniquely identify\n  each item in the PDBX_UNOBS_OR_ZERO_OCC_RESIDUES list.\n\n  This is an integer serial number."
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy residue.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the unobserved or zero occupancy residue.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category."
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "Part of the identifier for the unobserved or zero occupancy residue.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
+               },
+               "occupancy_flag": {
+                  "type": "integer",
+                  "enum": [
+                     0,
+                     1
+                  ],
+                  "description": "The value of occupancy flag indicates whether the residue\n is unobserved (= 1) or the coordinates have an occupancy of zero (=0)"
+               },
+               "polymer_flag": {
+                  "type": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ],
+                  "description": "The value of polymer flag indicates whether the unobserved or\n zero occupancy residue is part of a polymer chain or not"
+               }
+            },
+            "required": [
+               "PDB_model_num",
+               "auth_asym_id",
+               "auth_comp_id",
+               "auth_seq_id",
+               "id",
+               "occupancy_flag",
+               "polymer_flag"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_validate_chiral": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_ins_code": {
+                  "type": "string",
+                  "description": "Optional identifier of the residue\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "The model number for the given residue\n\n This data item is a pointer to _atom_site.pdbx_PDB_model_num in the\n ATOM_SITE category."
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "details": {
+                  "type": "string",
+                  "description": "A description of the outlier angle  e.g. ALPHA-CARBON"
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_validate_chiral.id must\n uniquely identify each item in the PDBX_VALIDATE_CHIRAL list.\n This is an integer serial number."
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "omega": {
+                  "type": "number",
+                  "minimum": -180.0,
+                  "maximum": 180.0,
+                  "description": "The value of the OMEGA angle for the peptide linkage between\n the two defined residues"
+               },
+               "rcsb_label_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               }
+            },
+            "required": [
+               "PDB_model_num",
+               "auth_asym_id",
+               "auth_comp_id",
+               "auth_seq_id",
+               "id",
+               "omega"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_validate_close_contact": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_ins_code_1": {
+                  "type": "string",
+                  "description": "Optional identifier of the first of the two atom sites that\n define the close contact.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_ins_code_2": {
+                  "type": "string",
+                  "description": "Optional identifier of the second of the two atom sites that\n define the close contact.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "The model number for the given contact"
+               },
+               "auth_asym_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the close contact.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_asym_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the close contact.\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the close contact.\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the close contact.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the close contact.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the close contact.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the close contact.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the close contact.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "dist": {
+                  "type": "number",
+                  "description": "The value of the close contact for the two atoms defined."
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_validate_close_contact.id must uniquely identify\n each item in the PDBX_VALIDATE_CLOSE_CONTACT list.\n This is an integer serial number."
+               },
+               "label_alt_id_1": {
+                  "type": "string",
+                  "description": "An optional identifier of the first of the two atoms that\n define the close contact.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "label_alt_id_2": {
+                  "type": "string",
+                  "description": "An optional identifier of the second of the two atoms that\n define the close contact.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "rcsb_label_asym_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the close contact.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "rcsb_label_asym_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the close contact.\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "symm_as_xyz_1": {
+                  "type": "string",
+                  "description": "The symmetry of the first of the two atoms define the close contact.\n The Symmetry equivalent position is given in the 'xyz' representation."
+               },
+               "symm_as_xyz_2": {
+                  "type": "string",
+                  "description": "The symmetry of the second of the two atoms define the close contact.\n The Symmetry equivalent position is given in the 'xyz' representation."
+               }
+            },
+            "required": [
+               "PDB_model_num",
+               "auth_asym_id_1",
+               "auth_asym_id_2",
+               "auth_atom_id_1",
+               "auth_atom_id_2",
+               "auth_comp_id_1",
+               "auth_comp_id_2",
+               "auth_seq_id_1",
+               "auth_seq_id_2",
+               "dist",
+               "id"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_validate_main_chain_plane": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_ins_code": {
+                  "type": "string",
+                  "description": "Optional identifier of the residue in which the plane is calculated\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "The model number for the residue in which the plane is calculated\n\n This data item is a pointer to _atom_site.pdbx_PDB_model_num in the\n ATOM_SITE category."
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue in which the plane is calculated\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue in which the plane is calculated\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue in which the plane is calculated\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_validate_main_chain_plane.id must uniquely identify\n each item in the PDBX_VALIDATE_MAIN_CHAIN_PLANE list.\n\n This is an integer serial number."
+               },
+               "improper_torsion_angle": {
+                  "type": "number",
+                  "description": "The value for the torsion angle  C(i-1) - CA(i-1) - N(i) - O(i-1)"
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "Optional identifier of the residue in which the plane is calculated\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "rcsb_label_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue in which the plane is calculated\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               }
+            },
+            "required": [
+               "PDB_model_num",
+               "auth_asym_id",
+               "auth_comp_id",
+               "auth_seq_id",
+               "id",
+               "improper_torsion_angle"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_validate_peptide_omega": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_ins_code_1": {
+                  "type": "string",
+                  "description": "Optional identifier of the first residue in the bond\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_ins_code_2": {
+                  "type": "string",
+                  "description": "Optional identifier of the second residue in the bond\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "The model number for the given residue\n\n This data item is a pointer to _atom_site.pdbx_PDB_model_num in the\n ATOM_SITE category."
+               },
+               "auth_asym_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first residue in the bond\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_asym_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second residue in the bond\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first residue in the bond\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second residue in the bond\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first residue in the bond\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second residue in the bond\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_validate_peptide_omega.id must\n uniquely identify each item in the PDBX_VALIDATE_PEPTIDE_OMEGA list.\n This is an integer serial number."
+               },
+               "label_alt_id_1": {
+                  "type": "string",
+                  "description": "Optional identifier of the first residue in the torsion angle\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "label_alt_id_2": {
+                  "type": "string",
+                  "description": "Optional identifier of the second residue in the torsion angle\nThis data item is a pointer to _atom_site.label_alt_id in the\nATOM_SITE category."
+               },
+               "omega": {
+                  "type": "number",
+                  "minimum": -180.0,
+                  "maximum": 180.0,
+                  "description": "The value of the OMEGA angle for the peptide linkage between\n the two defined residues"
+               },
+               "rcsb_label_asym_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first residue in the bond\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "rcsb_label_asym_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second residue in the bond\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               }
+            },
+            "required": [
+               "PDB_model_num",
+               "auth_asym_id_1",
+               "auth_asym_id_2",
+               "auth_comp_id_1",
+               "auth_comp_id_2",
+               "auth_seq_id_1",
+               "auth_seq_id_2",
+               "id",
+               "omega"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_validate_planes": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_ins_code": {
+                  "type": "string",
+                  "description": "Optional identifier of the residue in which the plane is calculated\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "The model number for the given angle\n\n This data item is a pointer to _atom_site.pdbx_PDB_model_num in the\n ATOM_SITE category."
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue in which the plane is calculated\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue in which the plane is calculated\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue in which the plane is calculated\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_validate_planes.id must uniquely identify\n each item in the PDBX_VALIDATE_PLANES list.\n\n This is an integer serial number."
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "Optional identifier of the residue in which the plane is calculated\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "rcsb_label_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue in which the plane is calculated\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "rmsd": {
+                  "type": "number",
+                  "description": "The value of the overall deviation from ideal plane for the atoms\n defining the plane."
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "MAIN CHAIN",
+                     "SIDE_CHAIN",
+                     "SIDE CHAIN",
+                     "MAIN_CHAIN"
+                  ],
+                  "description": "The type of plane - MAIN CHAIN or SIDE CHAIN atoms"
+               }
+            },
+            "required": [
+               "PDB_model_num",
+               "auth_asym_id",
+               "auth_comp_id",
+               "auth_seq_id",
+               "id",
+               "rmsd",
+               "type"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_validate_planes_atom": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_ins_code": {
+                  "type": "string",
+                  "description": "Optional identifier of an atom site that defines the plane"
+               },
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "The model number for an atom site defining the plane\n\n This data item is a pointer to _atom_site.pdbx_PDB_model_num in the\n ATOM_SITE category."
+               },
+               "atom_deviation": {
+                  "type": "number",
+                  "description": "The deviation from the plane per atom"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of an atom site that defines the plane\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of an atom site that defines the plane\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of an atom site that defines the plane\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of an atom site that defines the plane\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_validate_planes_atom.id must uniquely identify\n each item in the PDBX_VALIDATE_PLANES_ATOM list.\n\n This is an integer serial number."
+               },
+               "plane_id": {
+                  "type": "integer",
+                  "description": "A pointer to _pdbx_validate_planes.id\n This is an integer serial number."
+               },
+               "rcsb_label_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of an atom site that defines the plane\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               }
+            },
+            "required": [
+               "PDB_model_num",
+               "atom_deviation",
+               "auth_asym_id",
+               "auth_atom_id",
+               "auth_comp_id",
+               "auth_seq_id",
+               "id",
+               "plane_id"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_validate_polymer_linkage": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_ins_code_1": {
+                  "type": "string",
+                  "description": "Optional identifier of the first of the two atom sites that\n define the linkage.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_ins_code_2": {
+                  "type": "string",
+                  "description": "Optional identifier of the second of the two atom sites that\n define the linkage.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "The model number for the given linkage"
+               },
+               "auth_asym_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the linkage.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_asym_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the linkage.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the linkage.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the linkage.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the linkage.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the linkage.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the linkage.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the linkage.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "dist": {
+                  "type": "number",
+                  "description": "The value of the polymer linkage for the two atoms defined."
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_validate_polymer_linkage.id must uniquely identify\n each item in the PDBX_VALIDATE_POLYMER_LINKAGE list.\n\n This is an integer serial number."
+               },
+               "label_alt_id_1": {
+                  "type": "string",
+                  "description": "An optional identifier of the first of the two atoms that\n define the linkage.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "label_alt_id_2": {
+                  "type": "string",
+                  "description": "An optional identifier of the second of the two atoms that\n define the linkage.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "rcsb_label_asym_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the linkage.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "rcsb_label_asym_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the linkage.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               }
+            },
+            "required": [
+               "PDB_model_num",
+               "auth_asym_id_1",
+               "auth_asym_id_2",
+               "auth_atom_id_1",
+               "auth_atom_id_2",
+               "auth_comp_id_1",
+               "auth_comp_id_2",
+               "auth_seq_id_1",
+               "auth_seq_id_2",
+               "dist",
+               "id"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_validate_rmsd_angle": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_ins_code_1": {
+                  "type": "string",
+                  "description": "Optional identifier of the first of the three atom sites that\n define the angle.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_ins_code_2": {
+                  "type": "string",
+                  "description": "Optional identifier of the second of the three atom sites that\n define the angle.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_ins_code_3": {
+                  "type": "string",
+                  "description": "Optional identifier of the third of the three atom sites that\n define the angle.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "The model number for the given angle"
+               },
+               "angle_deviation": {
+                  "type": "number",
+                  "description": "Value of the deviation (in degrees)  from 6*REBI for the angle bounded\n by the three sites from the expected dictionary value."
+               },
+               "angle_standard_deviation": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "description": "The uncertainty in the target value of the bond angle expressed as a standard deviation."
+               },
+               "angle_target_value": {
+                  "type": "number",
+                  "description": "The target value of the bond angle"
+               },
+               "angle_value": {
+                  "type": "number",
+                  "description": "The value of the bond angle"
+               },
+               "auth_asym_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the three atom sites that\n define the angle.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_asym_id_2": {
+                  "type": "string",
+                  "description": "identifier of the second of the three atom sites\n that define the angle.\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_asym_id_3": {
+                  "type": "string",
+                  "description": "Part of the identifier of the third of the three atom sites that\n define the angle.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the three atom sites that\n define the angle.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the three atom sites\n that define the angle.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id_3": {
+                  "type": "string",
+                  "description": "Part of the identifier of the third of the three atom sites that\n define the angle.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the three atom sites that\n define the angle.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the three atom sites\n that define the angle.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id_3": {
+                  "type": "string",
+                  "description": "Part of the identifier of the third of the three atom sites that\n define the angle.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the three atom sites that\n define the angle.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the three atom sites\n that define the angle.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id_3": {
+                  "type": "string",
+                  "description": "Part of the identifier of the third of the three atom sites that\n define the angle.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_validate_rmsd_angle.id must uniquely identify\n each item in the PDBX_VALIDATE_RMSD_ANGLE list.\n This is an integer serial number."
+               },
+               "label_alt_id_1": {
+                  "type": "string",
+                  "description": "An optional identifier of the first of the three atoms that\n define the covalent angle.\n\n This data item is a pointer to _atom_site.label_alt.id in the\n ATOM_SITE category."
+               },
+               "label_alt_id_2": {
+                  "type": "string",
+                  "description": "An optional identifier of the second of the three atoms that\n define the covalent angle.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "label_alt_id_3": {
+                  "type": "string",
+                  "description": "An optional identifier of the third of the three atoms that\n define the covalent angle.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "linker_flag": {
+                  "type": "string",
+                  "description": "A flag to indicate if the angle is between two residues"
+               },
+               "rcsb_label_asym_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the three atom sites that\n define the angle.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "rcsb_label_asym_id_2": {
+                  "type": "string",
+                  "description": "identifier of the second of the three atom sites\n that define the angle.\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "rcsb_label_asym_id_3": {
+                  "type": "string",
+                  "description": "Part of the identifier of the third of the three atom sites that\n define the angle.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               }
+            },
+            "required": [
+               "PDB_model_num",
+               "angle_deviation",
+               "auth_asym_id_1",
+               "auth_asym_id_2",
+               "auth_asym_id_3",
+               "auth_atom_id_1",
+               "auth_atom_id_2",
+               "auth_atom_id_3",
+               "auth_comp_id_1",
+               "auth_comp_id_2",
+               "auth_comp_id_3",
+               "auth_seq_id_1",
+               "auth_seq_id_2",
+               "auth_seq_id_3",
+               "id"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_validate_rmsd_bond": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_ins_code_1": {
+                  "type": "string",
+                  "description": "Optional identifier of the first of the two atom sites that\n define the covalent bond.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_ins_code_2": {
+                  "type": "string",
+                  "description": "Optional identifier of the second of the two atom sites that\n define the covalent bond.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "The model number for the given bond"
+               },
+               "auth_asym_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the covalent bond.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_asym_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the covalent bond.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the covalent bond.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the covalent bond.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the covalent bond.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the covalent bond.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the covalent bond.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the covalent bond.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "bond_deviation": {
+                  "type": "number",
+                  "description": "The value of the deviation from ideal for the defined covalent\n bond for the two atoms defined."
+               },
+               "bond_standard_deviation": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "description": "The uncertaintiy in target value of the bond length expressed as a standard deviation."
+               },
+               "bond_target_value": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "description": "The target value of the bond length"
+               },
+               "bond_value": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "description": "The value of the bond length"
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_validate_rmsd_bond.id must uniquely identify\n each item in the PDBX_VALIDATE_RMSD_BOND list.\n This is an integer serial number."
+               },
+               "label_alt_id_1": {
+                  "type": "string",
+                  "description": "An optional identifier of the first of the two atoms that\n define the covalent bond.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "label_alt_id_2": {
+                  "type": "string",
+                  "description": "An optional identifier of the second of the two atoms that\n define the covalent bond.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "linker_flag": {
+                  "type": "string",
+                  "description": "A flag to indicate if the bond is between two residues"
+               },
+               "rcsb_label_asym_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the covalent bond.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "rcsb_label_asym_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the covalent bond.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               }
+            },
+            "required": [
+               "PDB_model_num",
+               "auth_asym_id_1",
+               "auth_asym_id_2",
+               "auth_atom_id_1",
+               "auth_atom_id_2",
+               "auth_comp_id_1",
+               "auth_comp_id_2",
+               "auth_seq_id_1",
+               "auth_seq_id_2",
+               "bond_deviation",
+               "id"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_validate_symm_contact": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_ins_code_1": {
+                  "type": "string",
+                  "description": "Optional identifier of the first of the two atom sites that\n define the close contact."
+               },
+               "PDB_ins_code_2": {
+                  "type": "string",
+                  "description": "Optional identifier of the second of the two atom sites that\n define the close contact."
+               },
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "The model number for the given angle"
+               },
+               "auth_asym_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the close contact.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_asym_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the close contact.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the close contact.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_atom_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the close contact.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the close contact.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the close contact.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the close contact.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the close contact.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "dist": {
+                  "type": "number",
+                  "description": "The value of the close contact for the two atoms defined."
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_validate_symm_contact.id must uniquely identify\n each item in the PDBX_VALIDATE_SYMM_CONTACT list.\n This is an integer serial number."
+               },
+               "label_alt_id_1": {
+                  "type": "string",
+                  "description": "An optional identifier of the first of the two atoms that\n define the close contact.\n\n This data item is a pointer to _atom_site.label_alt.id in the\n ATOM_SITE category."
+               },
+               "label_alt_id_2": {
+                  "type": "string",
+                  "description": "An optional identifier of the second of the two atoms that\n define the close contact.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "rcsb_label_asym_id_1": {
+                  "type": "string",
+                  "description": "Part of the identifier of the first of the two atom sites that\n define the close contact.\n\n This data item is a pointer to id in the\n ATOM_SITE category."
+               },
+               "rcsb_label_asym_id_2": {
+                  "type": "string",
+                  "description": "Part of the identifier of the second of the two atom sites\n that define the close contact.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "site_symmetry_1": {
+                  "type": "string",
+                  "description": "The symmetry of the first of the two atoms define the close contact.\n Symmetry defined in ORTEP style of 555 equal to unit cell with translations\n  +-1 from 555 as 000"
+               },
+               "site_symmetry_2": {
+                  "type": "string",
+                  "description": "The symmetry of the second of the two atoms define the close contact.\n Symmetry defined in ORTEP style of 555 equal to unit cell with translations\n  +-1 from 555 as 000"
+               }
+            },
+            "required": [
+               "PDB_model_num",
+               "auth_asym_id_1",
+               "auth_asym_id_2",
+               "auth_atom_id_1",
+               "auth_atom_id_2",
+               "auth_comp_id_1",
+               "auth_comp_id_2",
+               "auth_seq_id_1",
+               "auth_seq_id_2",
+               "dist",
+               "id",
+               "site_symmetry_1",
+               "site_symmetry_2"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_validate_torsion": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_ins_code": {
+                  "type": "string",
+                  "description": "Optional identifier of the residue\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
+               },
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "The model number for the given residue\n\n This data item is a pointer to _atom_site.pdbx_PDB_model_num in the\n ATOM_SITE category."
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "auth_comp_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_validate_torsion.id must\n uniquely identify each item in the PDBX_VALIDATE_TORSION list.\n This is an integer serial number."
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "Optional identifier of the residue\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
+               },
+               "phi": {
+                  "type": "number",
+                  "minimum": -180.0,
+                  "maximum": 180.0,
+                  "description": "The Phi value that for the residue that lies outside normal limits\n (in combination with the Psi value) with regards to the rammachandran plot"
+               },
+               "psi": {
+                  "type": "number",
+                  "minimum": -180.0,
+                  "maximum": 180.0,
+                  "description": "The Psi value that for the residue that lies outside normal limits\n (in combination with the Phi value) with regards to the rammachandran plot"
+               },
+               "rcsb_label_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier of the residue\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               }
+            },
+            "required": [
+               "PDB_model_num",
+               "auth_asym_id",
+               "auth_comp_id",
+               "auth_seq_id",
+               "id",
+               "phi",
+               "psi"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_angle_outliers": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "type": "string",
+                  "description": "\npdbx_vrpt_model_list identifier. Normally an integer but can be a string of up to 10 characters \nIf the structure does not have multiple models then PDB_model_num will be \"1\".\nExample:"
+               },
+               "Z": {
+                  "type": "number",
+                  "description": "\nThe Zscore of the deviation of the bond length or bond angle in the PDB_model_num compared to ideal values.\nA Z score is generally defined as the difference between an observed value an expected or average value,\ndivided by the standard deviations of the latter.\nUnits depend on the parameter being analyzed.\nExample:"
+               },
+               "atom0": {
+                  "type": "string",
+                  "description": "\nAn label_atom_id name from cif item _atom_site.label_atom_id and _chem_comp_atom.atom_id.\nCurrently limited to 4 characters.\n"
+               },
+               "atom1": {
+                  "type": "string",
+                  "description": "\nAn label_atom_id name from cif item _atom_site.label_atom_id and _chem_comp_atom.atom_id.\nCurrently limited to 4 characters.\n"
+               },
+               "atom2": {
+                  "type": "string",
+                  "description": "\nAn label_atom_id name from cif item _atom_site.label_atom_id and _chem_comp_atom.atom_id.\nCurrently limited to 4 characters.\n"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "\nThe auth_asym_id identifier for the residue or auth_asym_id obtained from cif item _atom_site.auth_asym_id.\nCurrently this is limited to 5 characters. \nExample:"
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "\nThe residue number aka sequence id for a residue. \nObtainned from _atom_site.auth_seq_id \nExample:"
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "\nThe entity id for the residue or chain. This is from item _atom_site.label_entity_id that is a pointer to _entity.id in the ENTITY category. \nExample:"
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "\nThis attribute will be set if the pdbx_vrpt_instance_results has atoms with the alternate position indicator set.\nNormally one character but can be up to 3.  Example            Obtained from _atom_site.label_alt_id \n"
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "\nThe_atom_site.label_asym_id label for the residue.  Normally this is the same as the chain.\nExample:"
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "\nThe \"residue type\", this is the name of the chemical component from the PDB chemical component dictionary.\nObtained from _atom_site.auth_comp_id\nExample"
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "\nFrom cif item _atom_site.label_seq_id \"a pointer to _entity_poly_seq.num\"\nExample: for a residue in a polymer\nExample: for a non-polymeric residue eg ligand or water.\n"
+               },
+               "link": {
+                  "type": "string",
+                  "enum": [
+                     "yes"
+                  ],
+                  "description": "\nThe string \"yes\".\n"
+               },
+               "mean": {
+                  "type": "number",
+                  "description": "\nThe \"ideal\" value of the bond length or bond angle or torsion angle.\nSource is mean value from Engh and Huber EH99 parameters, Parkinson et al. parameter set or Mogul analysis \nof CSD structures that have a similar local chemistry.\nUnits depend on the parameter being analyzed.\n Example:"
+               },
+               "obs": {
+                  "type": "number",
+                  "description": "\nThe observed value for the bond length or bond angle, \nthat is the value found in the structure being analyzed for the atoms involved.\nUnits depend on the parameter being analyzed.\nExample:"
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Uniquely identifies each instance of this category."
+               },
+               "stdev": {
+                  "type": "number",
+                  "description": "\nThe standard deviation for the bond length or bond angle or torsion angle.\nSource is standard deviation found from Engh and Huber EH99 parameters, Parkinson et al. parameter set \nor Mogul analysis of CSD structures that have a similar local chemistry.\nUnits depend on the parameter being analyzed.\nExample:"
+               }
+            },
+            "required": [
+               "ordinal"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_bond_outliers": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "type": "string",
+                  "description": "\npdbx_vrpt_model_list identifier. Normally an integer but can be a string of up to 10 characters \nIf the structure does not have multiple models then PDB_model_num will be \"1\".\nExample:"
+               },
+               "Z": {
+                  "type": "number",
+                  "description": "\nThe Zscore of the deviation of the bond length or bond angle in the PDB_model_num compared to ideal values.\nA Z score is generally defined as the difference between an observed value an expected or average value,\ndivided by the standard deviations of the latter.\nUnits depend on the parameter being analyzed.\nExample:"
+               },
+               "atom0": {
+                  "type": "string",
+                  "description": "\nAn label_atom_id name from cif item _atom_site.label_atom_id and _chem_comp_atom.atom_id.\nCurrently limited to 4 characters.\n"
+               },
+               "atom1": {
+                  "type": "string",
+                  "description": "\nAn label_atom_id name from cif item _atom_site.label_atom_id and _chem_comp_atom.atom_id.\nCurrently limited to 4 characters.\n"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "\nThe auth_asym_id identifier for the residue or auth_asym_id obtained from cif item _atom_site.auth_asym_id.\nCurrently this is limited to 5 characters. \nExample:"
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "\nThe residue number aka sequence id for a residue. \nObtainned from _atom_site.auth_seq_id \nExample:"
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "\nThe entity id for the residue or chain. This is from item _atom_site.label_entity_id that is a pointer to _entity.id in the ENTITY category. \nExample:"
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "\nThis attribute will be set if the pdbx_vrpt_instance_results has atoms with the alternate position indicator set.\nNormally one character but can be up to 3.  Example            Obtained from _atom_site.label_alt_id \n"
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "\nThe_atom_site.label_asym_id label for the residue.  Normally this is the same as the chain.\nExample:"
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "\nThe \"residue type\", this is the name of the chemical component from the PDB chemical component dictionary.\nObtained from _atom_site.auth_comp_id\nExample"
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "\nFrom cif item _atom_site.label_seq_id \"a pointer to _entity_poly_seq.num\"\nExample: for a residue in a polymer\nExample: for a non-polymeric residue eg ligand or water.\n"
+               },
+               "link": {
+                  "type": "string",
+                  "enum": [
+                     "yes"
+                  ],
+                  "description": "\nThe string \"yes\".\n"
+               },
+               "mean": {
+                  "type": "number",
+                  "description": "\nThe \"ideal\" value of the bond length or bond angle or torsion angle.\nSource is mean value from Engh and Huber EH99 parameters, Parkinson et al. parameter set or Mogul analysis \nof CSD structures that have a similar local chemistry.\nUnits depend on the parameter being analyzed.\n Example:"
+               },
+               "obs": {
+                  "type": "number",
+                  "description": "\nThe observed value for the bond length or bond angle, \nthat is the value found in the structure being analyzed for the atoms involved.\nUnits depend on the parameter being analyzed.\nExample:"
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Uniquely identifies each instance of this category."
+               },
+               "stdev": {
+                  "type": "number",
+                  "description": "\nThe standard deviation for the bond length or bond angle or torsion angle.\nSource is standard deviation found from Engh and Huber EH99 parameters, Parkinson et al. parameter set \nor Mogul analysis of CSD structures that have a similar local chemistry.\nUnits depend on the parameter being analyzed.\nExample:"
+               }
+            },
+            "required": [
+               "ordinal"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_clashes": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "type": "string",
+                  "description": "\npdbx_vrpt_model_list identifier. Normally an integer but can be a string of up to 10 characters \nIf the structure does not have multiple models then PDB_model_num will be \"1\".\nExample:"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "\nThe auth_asym_id identifier for the residue or auth_asym_id obtained from cif item _atom_site.auth_asym_id.\nCurrently this is limited to 5 characters. \nExample:"
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "\nThe residue number aka sequence id for a residue. \nObtainned from _atom_site.auth_seq_id \nExample:"
+               },
+               "cid": {
+                  "type": "integer",
+                  "description": "\nAn identifier that cross references the other label_atom_id in the clash. The two atoms in the clash\nwill have the same unique cid.\n"
+               },
+               "clashmag": {
+                  "type": "number",
+                  "description": "\nThe \"magnitude\" of the pdbx_vrpt_clashes in Angstroms assessed by MolProbity. The MolProbity \"magnitude\" of a pdbx_vrpt_clashes \nis defined as the difference between the observed interatomic distance and the sum of the van der Waals \nradii of the atoms involved.\n"
+               },
+               "dist": {
+                  "type": "number",
+                  "description": "\nThe distance in Angstroms between two atoms involved a clash.\n"
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "\nThe entity id for the residue or chain. This is from item _atom_site.label_entity_id that is a pointer to _entity.id in the ENTITY category. \nExample:"
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "\nThis attribute will be set if the pdbx_vrpt_instance_results has atoms with the alternate position indicator set.\nNormally one character but can be up to 3.  Example            Obtained from _atom_site.label_alt_id \n"
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "\nThe_atom_site.label_asym_id label for the residue.  Normally this is the same as the chain.\nExample:"
+               },
+               "label_atom_id": {
+                  "type": "string",
+                  "description": "\nAn label_atom_id name from cif item _atom_site.label_atom_id and _chem_comp_atom.atom_id.\nCurrently limited to 4 characters.\n"
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "\nThe \"residue type\", this is the name of the chemical component from the PDB chemical component dictionary.\nObtained from _atom_site.auth_comp_id\nExample"
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "\nFrom cif item _atom_site.label_seq_id \"a pointer to _entity_poly_seq.num\"\nExample: for a residue in a polymer\nExample: for a non-polymeric residue eg ligand or water.\n"
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Uniquely identifies each instance of this category."
+               }
+            },
+            "required": [
+               "ordinal"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_instance_results": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "OWAB": {
+                  "type": "number",
+                  "description": "\nThe Occupancy-Weighted Average B (OWAB) value per residue (in units Angstroms squared). \nThis value is calculated by multiplying the B factor for each label_atom_id in the residue by its occupancy and \nthen averaging this value over all atoms in the residue.\nExample:            X-ray specific produce by the EDS step.\n"
+               },
+               "PDB_ins_code": {
+                  "type": "string",
+                  "description": "\nInsertion code for residue from _atom_site.pdbx_PDB_ins_code \nExample: \"\n"
+               },
+               "PDB_model_num": {
+                  "type": "string",
+                  "description": "\npdbx_vrpt_model_list identifier. Normally an integer but can be a string of up to 10 characters \nIf the structure does not have multiple models then PDB_model_num will be \"1\".\nExample:"
+               },
+               "RNA_pucker": {
+                  "type": "string",
+                  "description": "\nPlaceholder for reporting RNA pucker problem from MolProbity.\nNot actually used at present, due to bug?\n"
+               },
+               "RNA_score": {
+                  "type": "number",
+                  "description": "\nMolProbity RNA match quality parameter \"suiteness\". \nThe suiteness is a measure of how well the detailed local backbone conformation fits one of the most \ncommonly observed (and thus presumably most favorable) conformational clusters. \nVaries between 1.0 meaning a good match to a commonly observed cluster to 0.0 meaning an outlier.\nExample:"
+               },
+               "RNA_suite": {
+                  "type": "string",
+                  "enum": [
+                     "NotAvailable",
+                     "Rotameric",
+                     "Triaged/NotBinned",
+                     "NonRotameric"
+                  ],
+                  "description": "\nMolProbity RNA_suite conformation analysis.\nRNA specific produced by the molprobity step.\n"
+               },
+               "RSR": {
+                  "type": "number",
+                  "description": "\nReal Space R-value (RSR) for the residue from the EDS generated map.\nExample:            X-ray specific produce by the EDS step.\n"
+               },
+               "RSRCC": {
+                  "type": "number",
+                  "description": "\n\t\t\tThe real space correlation coefficient for the instance. This is an alternative to RSR for assessing how well\n            the residue's calculated electron density map matches the EDS electron density map calculated from the\n            experimental diffraction data. A value above 0.95 normally indicates a very\n            good fit. RSCC around 0.90 are generally OK. A poor fit results in a value around or below 0.80.\n            Example:            X-ray specific produce by the EDS step.\n"
+               },
+               "RSRZ": {
+                  "type": "number",
+                  "description": "\nRSR Z-score (RSRZ) is a normalisation of RSR specific to a residue type and a resolution bin. \nRSRZ is calculated only for standard amino acids and nucleotides in protein, DNA and RNA chains. \nA residue is considered an RSRZ outlier if its RSRZ value is greater than 2.\nExample:            X-ray specific produce by the EDS step.\n"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "\nThe auth_asym_id identifier for the residue or auth_asym_id obtained from cif item _atom_site.auth_asym_id.\nCurrently this is limited to 5 characters. \nExample:"
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "\nThe residue number aka sequence id for a residue. \nObtainned from _atom_site.auth_seq_id \nExample:"
+               },
+               "average_occupancy": {
+                  "type": "number",
+                  "description": "\nThe average occupancy for the residue. Hydrogen atoms are excluded from consideration.\nExample:            X-ray specific produce by the EDS step.\n"
+               },
+               "cis_peptide": {
+                  "type": "string",
+                  "enum": [
+                     "yes"
+                  ],
+                  "description": "\nThe string \"yes\".\n"
+               },
+               "cyrange_domain_id": {
+                  "type": "integer",
+                  "description": "\nIdentifier of the well-defined core (domain) to which the residue belongs, \nas determined by Cyrange.\n"
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "\nThe entity id for the residue or chain. This is from item _atom_site.label_entity_id that is a pointer to _entity.id in the ENTITY category. \nExample:"
+               },
+               "flippable_sidechain": {
+                  "type": "string",
+                  "enum": [
+                     "1"
+                  ],
+                  "description": "\nMolProbity identifies side chains of asparagine, glutamine and histidine that can be be rotated (\"flipped\") \nto make optimal hydrogen bonds, improving its contacts with its neighbours, without affecting their fit to \nthe experimental electron density.\nThese residues will have            Protein and polypeptide specific produced by the molprobity step.\n"
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "\nThis attribute will be set if the pdbx_vrpt_instance_results has atoms with the alternate position indicator set.\nNormally one character but can be up to 3.  Example            Obtained from _atom_site.label_alt_id \n"
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "\nThe_atom_site.label_asym_id label for the residue.  Normally this is the same as the chain.\nExample:"
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "\nThe \"residue type\", this is the name of the chemical component from the PDB chemical component dictionary.\nObtained from _atom_site.auth_comp_id\nExample"
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "\nFrom cif item _atom_site.label_seq_id \"a pointer to _entity_poly_seq.num\"\nExample: for a residue in a polymer\nExample: for a non-polymeric residue eg ligand or water.\n"
+               },
+               "lig_RSRZ": {
+                  "type": "number",
+                  "description": "\nThis is the Local Ligand Density Fit (LLDF) for a ligand. LLDF compares the RSR of the non-standard residue \nto the mean and standard deviation of RSR for the neighbouring polymeric standard amino acids or nucleotides.\nNeighbouring polymeric residues are identified, as any standard amino acid or nucleotide that lies within \n5.0 Angstrom distance of the ligand or non standard residue, using the NCONT pdbx_vrpt_software from CCP4. \nThe mean and standard deviation of RSR values is then calculated for these neighbouring residues and \nthis is compared to the RSR value of the non-standard residue to calculate a Z-score. \nIf there are less than two neighbouring residues within 5.0 &#197; of the instance then LLDF cannot be calculated.  \nExample:            X-ray specific produce by the EDS step.\n"
+               },
+               "lig_RSRZ_nbr_id": {
+                  "type": "array",
+                  "items": {
+                     "type": "string",
+                     "description": "\nA unique integer key for each LLDF calculation identifying the neighbouring polymeric residues for the residue\nidentified as being with 5.0 Angstrom distance of the ligand or non standard residue. \nIf a residue is involved in two or more LLDF calculations then there will be a comma separated list.\nExample:            Example:            X-ray specific produce by the EDS step.\n"
+                  },
+                  "uniqueItems": false
+               },
+               "lig_RSR_nbr_mean": {
+                  "type": "number",
+                  "description": "\nLLDF calculation: the mean RSR value for the residues within 5.0 Angstrom distance of the ligand. \nCurrently the value is rounded to two decimal places so it would not be possible to actually use it practially.\nExample: \nX-ray specific produce by the EDS step.\n"
+               },
+               "lig_RSR_nbr_stdev": {
+                  "type": "number",
+                  "description": "\nLLDF calculation: the mean RSR value for the residues within 5.0 Angstrom distance of the ligand. \nCurrently the value is rounded to two decimal places so it would not be possible to actually use it practially.\nExample:            X-ray specific produce by the EDS step.\n"
+               },
+               "lig_RSR_numnbrs": {
+                  "type": "integer",
+                  "description": "\nLLDF calculation: the number of residues identified within 5.0 Angstrom distance of the ligand used in the calculation\nExample:            X-ray specific produce by the EDS step.\n"
+               },
+               "ligand_chirality_outlier": {
+                  "type": "string",
+                  "enum": [
+                     "yes"
+                  ],
+                  "description": "\nThe string \"yes\".\n"
+               },
+               "ligand_clashes_outlier": {
+                  "type": "string",
+                  "enum": [
+                     "yes"
+                  ],
+                  "description": "\nThe string \"yes\".\n"
+               },
+               "ligand_density_outlier": {
+                  "type": "string",
+                  "enum": [
+                     "yes"
+                  ],
+                  "description": "\nThe string \"yes\".\n"
+               },
+               "ligand_geometry_outlier": {
+                  "type": "string",
+                  "enum": [
+                     "yes"
+                  ],
+                  "description": "\nThe string \"yes\".\n"
+               },
+               "ligand_num_clashes": {
+                  "type": "integer",
+                  "description": "\nIf the residue is a ligand and involved in clashes then this will be the number of \nMolProbity All-atom clashes for the subgroup.\nExample: l\n"
+               },
+               "ligand_num_symm_clashes": {
+                  "type": "integer",
+                  "description": "\nIf the residue is a ligand and involved in clashes then this will be the number of \nsymmetry related (\"symm-clash\") clashes identified by Validation-pack\nExample:"
+               },
+               "mogul_RMSZ_num_angles": {
+                  "type": "integer",
+                  "description": "\nThe number of bond angles from the residue that are used in the calculation of \"mogul_angles_rmsz\".\nExample:            Produced by the mogul step.\n"
+               },
+               "mogul_RMSZ_num_bonds": {
+                  "type": "integer",
+                  "description": "\nThe number of bond lengths from the residue that are used in the calculation of \"mogul_lengths_rmsz\".\nExample:            Produced by the mogul step.\n"
+               },
+               "mogul_angles_RMSZ": {
+                  "type": "number",
+                  "description": "\nThe root-mean-square value of the Z-scores of bond angles for the residue in degrees.\nExample:            Mogul identifies structures with a similar bond angle in CSD small molecule crystal structure.\nThe Z-score is the deviation of the observed angle from the mean found in the Mogul survey\ndivided by the Mogul standard deviation.\nThe individual Z-scores are then combined to calculate a root-mean-square value.\nProduced by the mogul step.\n"
+               },
+               "mogul_bonds_RMSZ": {
+                  "type": "number",
+                  "description": "\nThe root-mean-square value of the Z-scores of bond lengths for the residue in Angstroms.\nExample:            Mogul identifies structures with a similar bond length in CSD small molecule crystal structure.\nThe Z-score is the deviation of the observed length from the mean found in the Mogul survey\ndivided by the Mogul standard deviation.\nThe individual Z-scores are then combined to calculate a root-mean-square value.\nProduced by the mogul step.\n"
+               },
+               "mogul_ignore": {
+                  "type": "string",
+                  "enum": [
+                     "yes"
+                  ],
+                  "description": "\nThe string \"yes\".\n"
+               },
+               "natoms_eds": {
+                  "type": "integer",
+                  "description": "\nThe number atoms in the residue that the EDS software returns.\nX-ray specific produce by the EDS step.\nExample"
+               },
+               "num_H_reduce": {
+                  "type": "number",
+                  "description": "\nThis is the number of hydrogen atoms added and optimized by the MolProbity reduce pdbx_vrpt_software as part of the\nall-atom clashscore.\n"
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Uniquely identifies each instance of this category."
+               },
+               "phi": {
+                  "type": "number",
+                  "description": "\nThe phi torsion angle for the residue in degrees. \nExample:            Protein and polypeptide specific produced by the molprobity step.\n"
+               },
+               "psi": {
+                  "type": "number",
+                  "description": "\nThe psi torsion angle for the residue in degrees. \nExample:            Protein and polypeptide specific produced by the molprobity step.\n"
+               },
+               "ramachandran_class": {
+                  "type": "string",
+                  "enum": [
+                     "OUTLIER",
+                     "Favored",
+                     "Allowed"
+                  ],
+                  "description": "\nMolProbity Ramachandran plot classification for this residue one of \"Favored\", \"Allowed\" or \"OUTLIER\".\nExample:            Protein and polypeptide specific produced by the molprobity step.\n"
+               },
+               "rotamer_class": {
+                  "type": "string",
+                  "description": "\nFor proteins the MolProbity classification of the side conformation from the chi dihedral angles.\nFor proline the ring pucker is classified as \"Cg_endo\", \"Cg_exo\" or \"OUTLIER\"\nExamples of common observed classifications:\n                                                                                                                                                                                    Protein and polypeptide specific produced by the molprobity step.\n"
+               },
+               "validate": {
+                  "type": "string",
+                  "description": "\nA flag for NMR entries to indicate if a residue should be included in calculating the \noverall entry scores (\"True\") or if it should be excluded from such calculations (\"False\").\n"
+               }
+            },
+            "required": [
+               "ordinal"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_mogul_angle_outliers": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "type": "string",
+                  "description": "\npdbx_vrpt_model_list identifier. Normally an integer but can be a string of up to 10 characters \nIf the structure does not have multiple models then PDB_model_num will be \"1\".\nExample:"
+               },
+               "Zscore": {
+                  "type": "number",
+                  "description": "\nThe Zscore of the deviation of the bond length or bond angle in the PDB_model_num compared to Mogul expected values\nand standard deviation.\nA Z score is generally defined as the difference between an observed value an expected or average value,\ndivided by the standard deviations of the latter.\nUnits depend on the parameter being analyzed.\nExample:"
+               },
+               "atoms": {
+                  "type": "string",
+                  "description": "\nA comma seperated list of label_atom_id names.\nExample:"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "\nThe auth_asym_id identifier for the residue or auth_asym_id obtained from cif item _atom_site.auth_asym_id.\nCurrently this is limited to 5 characters. \nExample:"
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "\nThe residue number aka sequence id for a residue. \nObtainned from _atom_site.auth_seq_id \nExample:"
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "\nThe entity id for the residue or chain. This is from item _atom_site.label_entity_id that is a pointer to _entity.id in the ENTITY category. \nExample:"
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "\nThis attribute will be set if the pdbx_vrpt_instance_results has atoms with the alternate position indicator set.\nNormally one character but can be up to 3.  Example            Obtained from _atom_site.label_alt_id \n"
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "\nThe_atom_site.label_asym_id label for the residue.  Normally this is the same as the chain.\nExample:"
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "\nThe \"residue type\", this is the name of the chemical component from the PDB chemical component dictionary.\nObtained from _atom_site.auth_comp_id\nExample"
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "\nFrom cif item _atom_site.label_seq_id \"a pointer to _entity_poly_seq.num\"\nExample: for a residue in a polymer\nExample: for a non-polymeric residue eg ligand or water.\n"
+               },
+               "mean": {
+                  "type": "number",
+                  "description": "\nThe \"ideal\" value of the bond length or bond angle or torsion angle.\nSource is mean value from Engh and Huber EH99 parameters, Parkinson et al. parameter set or Mogul analysis \nof CSD structures that have a similar local chemistry.\nUnits depend on the parameter being analyzed.\n Example:"
+               },
+               "mindiff": {
+                  "type": "number",
+                  "description": "\nThe difference to the nearest value of the bond length or bond angle or torsion angle found in \nthe Mogul analysis.\nUnits depend on the parameter being analyzed.\n"
+               },
+               "numobs": {
+                  "type": "integer",
+                  "description": "\nThe number of observations found for bond length or bond angle or torsion angle in the Mogul analysis.\nExample: \n"
+               },
+               "obsval": {
+                  "type": "number",
+                  "description": "\nThe observed value for the bond length or bond angle or torsion angle, \nthat is the value found in the structure being analyzed for the atoms involved.\nUnits depend on the parameter being analyzed.\nExample:"
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Uniquely identifies each instance of this category."
+               },
+               "stdev": {
+                  "type": "number",
+                  "description": "\nThe standard deviation for the bond length or bond angle or torsion angle.\nSource is standard deviation found from Engh and Huber EH99 parameters, Parkinson et al. parameter set \nor Mogul analysis of CSD structures that have a similar local chemistry.\nUnits depend on the parameter being analyzed.\nExample:"
+               }
+            },
+            "required": [
+               "ordinal"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_mogul_bond_outliers": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "type": "string",
+                  "description": "\npdbx_vrpt_model_list identifier. Normally an integer but can be a string of up to 10 characters \nIf the structure does not have multiple models then PDB_model_num will be \"1\".\nExample:"
+               },
+               "Zscore": {
+                  "type": "number",
+                  "description": "\nThe Zscore of the deviation of the bond length or bond angle in the PDB_model_num compared to Mogul expected values\nand standard deviation.\nA Z score is generally defined as the difference between an observed value an expected or average value,\ndivided by the standard deviations of the latter.\nUnits depend on the parameter being analyzed.\nExample:"
+               },
+               "atoms": {
+                  "type": "string",
+                  "description": "\nA comma seperated list of label_atom_id names.\nExample:"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "\nThe auth_asym_id identifier for the residue or auth_asym_id obtained from cif item _atom_site.auth_asym_id.\nCurrently this is limited to 5 characters. \nExample:"
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "\nThe residue number aka sequence id for a residue. \nObtainned from _atom_site.auth_seq_id \nExample:"
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "\nThe entity id for the residue or chain. This is from item _atom_site.label_entity_id that is a pointer to _entity.id in the ENTITY category. \nExample:"
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "\nThis attribute will be set if the pdbx_vrpt_instance_results has atoms with the alternate position indicator set.\nNormally one character but can be up to 3.  Example            Obtained from _atom_site.label_alt_id \n"
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "\nThe_atom_site.label_asym_id label for the residue.  Normally this is the same as the chain.\nExample:"
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "\nThe \"residue type\", this is the name of the chemical component from the PDB chemical component dictionary.\nObtained from _atom_site.auth_comp_id\nExample"
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "\nFrom cif item _atom_site.label_seq_id \"a pointer to _entity_poly_seq.num\"\nExample: for a residue in a polymer\nExample: for a non-polymeric residue eg ligand or water.\n"
+               },
+               "mean": {
+                  "type": "number",
+                  "description": "\nThe \"ideal\" value of the bond length or bond angle or torsion angle.\nSource is mean value from Engh and Huber EH99 parameters, Parkinson et al. parameter set or Mogul analysis \nof CSD structures that have a similar local chemistry.\nUnits depend on the parameter being analyzed.\n Example:"
+               },
+               "mindiff": {
+                  "type": "number",
+                  "description": "\nThe difference to the nearest value of the bond length or bond angle or torsion angle found in \nthe Mogul analysis.\nUnits depend on the parameter being analyzed.\n"
+               },
+               "numobs": {
+                  "type": "integer",
+                  "description": "\nThe number of observations found for bond length or bond angle or torsion angle in the Mogul analysis.\nExample: \n"
+               },
+               "obsval": {
+                  "type": "number",
+                  "description": "\nThe observed value for the bond length or bond angle or torsion angle, \nthat is the value found in the structure being analyzed for the atoms involved.\nUnits depend on the parameter being analyzed.\nExample:"
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Uniquely identifies each instance of this category."
+               },
+               "stdev": {
+                  "type": "number",
+                  "description": "\nThe standard deviation for the bond length or bond angle or torsion angle.\nSource is standard deviation found from Engh and Huber EH99 parameters, Parkinson et al. parameter set \nor Mogul analysis of CSD structures that have a similar local chemistry.\nUnits depend on the parameter being analyzed.\nExample:"
+               }
+            },
+            "required": [
+               "ordinal"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_mogul_ring_outliers": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "type": "string",
+                  "description": "\npdbx_vrpt_model_list identifier. Normally an integer but can be a string of up to 10 characters \nIf the structure does not have multiple models then PDB_model_num will be \"1\".\nExample:"
+               },
+               "atoms": {
+                  "type": "string",
+                  "description": "\nA comma seperated list of label_atom_id names.\nExample:"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "\nThe auth_asym_id identifier for the residue or auth_asym_id obtained from cif item _atom_site.auth_asym_id.\nCurrently this is limited to 5 characters. \nExample:"
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "\nThe residue number aka sequence id for a residue. \nObtainned from _atom_site.auth_seq_id \nExample:"
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "\nThe entity id for the residue or chain. This is from item _atom_site.label_entity_id that is a pointer to _entity.id in the ENTITY category. \nExample:"
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "\nThis attribute will be set if the pdbx_vrpt_instance_results has atoms with the alternate position indicator set.\nNormally one character but can be up to 3.  Example            Obtained from _atom_site.label_alt_id \n"
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "\nThe_atom_site.label_asym_id label for the residue.  Normally this is the same as the chain.\nExample:"
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "\nThe \"residue type\", this is the name of the chemical component from the PDB chemical component dictionary.\nObtained from _atom_site.auth_comp_id\nExample"
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "\nFrom cif item _atom_site.label_seq_id \"a pointer to _entity_poly_seq.num\"\nExample: for a residue in a polymer\nExample: for a non-polymeric residue eg ligand or water.\n"
+               },
+               "mean": {
+                  "type": "number",
+                  "description": "\nThe \"ideal\" value of the bond length or bond angle or torsion angle.\nSource is mean value from Engh and Huber EH99 parameters, Parkinson et al. parameter set or Mogul analysis \nof CSD structures that have a similar local chemistry.\nUnits depend on the parameter being analyzed.\n Example:"
+               },
+               "mindiff": {
+                  "type": "number",
+                  "description": "\nThe difference to the nearest value of the bond length or bond angle or torsion angle found in \nthe Mogul analysis.\nUnits depend on the parameter being analyzed.\n"
+               },
+               "numobs": {
+                  "type": "integer",
+                  "description": "\nThe number of observations found for bond length or bond angle or torsion angle in the Mogul analysis.\nExample: \n"
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Uniquely identifies each instance of this category."
+               },
+               "stdev": {
+                  "type": "number",
+                  "description": "\nThe standard deviation for the bond length or bond angle or torsion angle.\nSource is standard deviation found from Engh and Huber EH99 parameters, Parkinson et al. parameter set \nor Mogul analysis of CSD structures that have a similar local chemistry.\nUnits depend on the parameter being analyzed.\nExample:"
+               }
+            },
+            "required": [
+               "ordinal"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_mogul_torsion_outliers": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "type": "string",
+                  "description": "\npdbx_vrpt_model_list identifier. Normally an integer but can be a string of up to 10 characters \nIf the structure does not have multiple models then PDB_model_num will be \"1\".\nExample:"
+               },
+               "atoms": {
+                  "type": "string",
+                  "description": "\nA comma seperated list of label_atom_id names.\nExample:"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "\nThe auth_asym_id identifier for the residue or auth_asym_id obtained from cif item _atom_site.auth_asym_id.\nCurrently this is limited to 5 characters. \nExample:"
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "\nThe residue number aka sequence id for a residue. \nObtainned from _atom_site.auth_seq_id \nExample:"
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "\nThe entity id for the residue or chain. This is from item _atom_site.label_entity_id that is a pointer to _entity.id in the ENTITY category. \nExample:"
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "\nThis attribute will be set if the pdbx_vrpt_instance_results has atoms with the alternate position indicator set.\nNormally one character but can be up to 3.  Example            Obtained from _atom_site.label_alt_id \n"
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "\nThe_atom_site.label_asym_id label for the residue.  Normally this is the same as the chain.\nExample:"
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "\nThe \"residue type\", this is the name of the chemical component from the PDB chemical component dictionary.\nObtained from _atom_site.auth_comp_id\nExample"
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "\nFrom cif item _atom_site.label_seq_id \"a pointer to _entity_poly_seq.num\"\nExample: for a residue in a polymer\nExample: for a non-polymeric residue eg ligand or water.\n"
+               },
+               "mean": {
+                  "type": "number",
+                  "description": "\nThe \"ideal\" value of the bond length or bond angle or torsion angle.\nSource is mean value from Engh and Huber EH99 parameters, Parkinson et al. parameter set or Mogul analysis \nof CSD structures that have a similar local chemistry.\nUnits depend on the parameter being analyzed.\n Example:"
+               },
+               "mindiff": {
+                  "type": "number",
+                  "description": "\nThe difference to the nearest value of the bond length or bond angle or torsion angle found in \nthe Mogul analysis.\nUnits depend on the parameter being analyzed.\n"
+               },
+               "numobs": {
+                  "type": "integer",
+                  "description": "\nThe number of observations found for bond length or bond angle or torsion angle in the Mogul analysis.\nExample: \n"
+               },
+               "obsval": {
+                  "type": "number",
+                  "description": "\nThe observed value for the bond length or bond angle or torsion angle, \nthat is the value found in the structure being analyzed for the atoms involved.\nUnits depend on the parameter being analyzed.\nExample:"
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Uniquely identifies each instance of this category."
+               },
+               "stdev": {
+                  "type": "number",
+                  "description": "\nThe standard deviation for the bond length or bond angle or torsion angle.\nSource is standard deviation found from Engh and Huber EH99 parameters, Parkinson et al. parameter set \nor Mogul analysis of CSD structures that have a similar local chemistry.\nUnits depend on the parameter being analyzed.\nExample:"
+               }
+            },
+            "required": [
+               "ordinal"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_plane_outliers": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "type": "string",
+                  "description": "\npdbx_vrpt_model_list identifier. Normally an integer but can be a string of up to 10 characters \nIf the structure does not have multiple models then PDB_model_num will be \"1\".\nExample:"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "\nThe auth_asym_id identifier for the residue or auth_asym_id obtained from cif item _atom_site.auth_asym_id.\nCurrently this is limited to 5 characters. \nExample:"
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "\nThe residue number aka sequence id for a residue. \nObtainned from _atom_site.auth_seq_id \nExample:"
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "\nThe entity id for the residue or chain. This is from item _atom_site.label_entity_id that is a pointer to _entity.id in the ENTITY category. \nExample:"
+               },
+               "improper": {
+                  "type": "number",
+                  "description": "\nFor a outlier, the improper torsion angle in degrees.\n"
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "\nThis attribute will be set if the pdbx_vrpt_instance_results has atoms with the alternate position indicator set.\nNormally one character but can be up to 3.  Example            Obtained from _atom_site.label_alt_id \n"
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "\nThe_atom_site.label_asym_id label for the residue.  Normally this is the same as the chain.\nExample:"
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "\nThe \"residue type\", this is the name of the chemical component from the PDB chemical component dictionary.\nObtained from _atom_site.auth_comp_id\nExample"
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "\nFrom cif item _atom_site.label_seq_id \"a pointer to _entity_poly_seq.num\"\nExample: for a residue in a polymer\nExample: for a non-polymeric residue eg ligand or water.\n"
+               },
+               "omega": {
+                  "type": "number",
+                  "description": "\nFor a outlier, the omega torsion angle in degrees.\n"
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Uniquely identifies each instance of this category."
+               },
+               "plane_rmsd": {
+                  "type": "number",
+                  "description": "\nFor a outlier, the root mean squared deviation from the mean plane in Angstroms.\n"
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "mainchain",
+                     "peptide",
+                     "sidechain"
+                  ],
+                  "description": "\nThe type of chiral problem that the label_atom_id has. One of:\n(A) \"mainchain\": The N label_atom_id of an amino acid residue is expected to be in the same plane as the Calpha, \n    C, and O atoms of the previous residue. If the improper torsion angle of these atoms is more than 10 \n    degrees, this is flagged as a planarity deviation. From mmcif item \"_pdbx_validate_main_chain_plane\".\n(B) \"peptide\": A deviation is flagged if the omega torsion angle of a peptide group differs by more than 30 \n    degrees from the values expected for a proper cis or trans conformation (0 degrees and 180 degrees, \n    respectively). For mmcif item: \"_pdbx_validate_peptide_omega\".\n(C) \"sidechain\": Certain groups of atoms in protein sidechains and nucleotide bases are expected to be in \n    the same plane. An atom's deviation from planarity is calculated by fitting a plane through these atoms\n    and then calculating distance of individual label_atom_id from the plane. Expected value of such distances have\n    been pre-calculated from data analysis (wwPDB, 2012). If an label_atom_id is modelled to be more than six times \n    farther than the pre-calculated value, the residue is flagged to have a sidechain planarity deviation. \n    From mmcif item \"_pdbx_validate_planes\".\n"
+               }
+            },
+            "required": [
+               "ordinal"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_stereo_outliers": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "type": "string",
+                  "description": "\npdbx_vrpt_model_list identifier. Normally an integer but can be a string of up to 10 characters \nIf the structure does not have multiple models then PDB_model_num will be \"1\".\nExample:"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "\nThe auth_asym_id identifier for the residue or auth_asym_id obtained from cif item _atom_site.auth_asym_id.\nCurrently this is limited to 5 characters. \nExample:"
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "\nThe residue number aka sequence id for a residue. \nObtainned from _atom_site.auth_seq_id \nExample:"
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "\nThe entity id for the residue or chain. This is from item _atom_site.label_entity_id that is a pointer to _entity.id in the ENTITY category. \nExample:"
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "\nThis attribute will be set if the pdbx_vrpt_instance_results has atoms with the alternate position indicator set.\nNormally one character but can be up to 3.  Example            Obtained from _atom_site.label_alt_id \n"
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "\nThe_atom_site.label_asym_id label for the residue.  Normally this is the same as the chain.\nExample:"
+               },
+               "label_atom_id": {
+                  "type": "string",
+                  "description": "\nAn label_atom_id name from cif item _atom_site.label_atom_id and _chem_comp_atom.atom_id.\nCurrently limited to 4 characters.\n"
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "\nThe \"residue type\", this is the name of the chemical component from the PDB chemical component dictionary.\nObtained from _atom_site.auth_comp_id\nExample"
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "\nFrom cif item _atom_site.label_seq_id \"a pointer to _entity_poly_seq.num\"\nExample: for a residue in a polymer\nExample: for a non-polymeric residue eg ligand or water.\n"
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Uniquely identifies each instance of this category."
+               },
+               "problem": {
+                  "type": "string",
+                  "enum": [
+                     "PLANAR",
+                     "WRONG HAND"
+                  ],
+                  "description": "\nThe type of chiral problem that the label_atom_id has.\neither \"WRONG HAND\" or \"PLANAR\"\n"
+               }
+            },
+            "required": [
+               "ordinal"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_symmetry_clashes": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "type": "string",
+                  "description": "\npdbx_vrpt_model_list identifier. Normally an integer but can be a string of up to 10 characters \nIf the structure does not have multiple models then PDB_model_num will be \"1\".\nExample:"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "\nThe auth_asym_id identifier for the residue or auth_asym_id obtained from cif item _atom_site.auth_asym_id.\nCurrently this is limited to 5 characters. \nExample:"
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "\nThe residue number aka sequence id for a residue. \nObtainned from _atom_site.auth_seq_id \nExample:"
+               },
+               "clashmag": {
+                  "type": "number",
+                  "description": "\nThe \"magnitude\" of the pdbx_vrpt_clashes in Angstroms assessed by Validation-pack.\nIn this case, the \"magnitude\" of a pdbx_vrpt_clashes is defined as 2.2 Angstrom \n(or 1.6 Angstrom if either label_atom_id is a hydrogen atom) minus the interatomic distance.\n"
+               },
+               "dist": {
+                  "type": "number",
+                  "description": "\nThe distance in Angstroms between two atoms involved a clash.\n"
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "\nThe entity id for the residue or chain. This is from item _atom_site.label_entity_id that is a pointer to _entity.id in the ENTITY category. \nExample:"
+               },
+               "label_alt_id": {
+                  "type": "string",
+                  "description": "\nThis attribute will be set if the pdbx_vrpt_instance_results has atoms with the alternate position indicator set.\nNormally one character but can be up to 3.  Example            Obtained from _atom_site.label_alt_id \n"
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "\nThe_atom_site.label_asym_id label for the residue.  Normally this is the same as the chain.\nExample:"
+               },
+               "label_atom_id": {
+                  "type": "string",
+                  "description": "\nAn label_atom_id name from cif item _atom_site.label_atom_id and _chem_comp_atom.atom_id.\nCurrently limited to 4 characters.\n"
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "\nThe \"residue type\", this is the name of the chemical component from the PDB chemical component dictionary.\nObtained from _atom_site.auth_comp_id\nExample"
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "\nFrom cif item _atom_site.label_seq_id \"a pointer to _entity_poly_seq.num\"\nExample: for a residue in a polymer\nExample: for a non-polymeric residue eg ligand or water.\n"
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Uniquely identifies each instance of this category."
+               },
+               "scid": {
+                  "type": "integer",
+                  "description": "\nAn identifier that cross references the other label_atom_id in the clash. The two atoms in the clash\nwill have the same unique scid.\n"
+               },
+               "symop": {
+                  "type": "string",
+                  "description": "\nThe symmetry operator for the label_atom_id in the contact.\nThe 1_555 notation is crystallographic shorthand to describe a particular symmetry operator \n(the number before the underscore) and any required translation (the three numbers following \nthe underscore). Symmetry operators are defined by the space group and the translations are \ngiven for the three-unit cell axis (a, b, and c) where 5 indicates no translation and numbers\nhigher or lower signify the number of unit cell translations in the positive or negative direction.\nFor example, 4_565 indicates the use of symmetry operator 4 followed by a one-unit cell translation\nin the positive b direction. \nOne of the atoms in the contact will have that indicates the identity operator.\n"
+               }
+            },
+            "required": [
+               "ordinal"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_entity_instance_validation_container_identifiers": {
+         "type": "object",
+         "properties": {
+            "asym_id": {
+               "type": "string",
+               "description": "Instance identifier for this container."
+            },
+            "auth_asym_id": {
+               "type": "string",
+               "description": "Author instance identifier for this container."
+            },
+            "auth_seq_id": {
+               "type": "string",
+               "description": "Residue number for non-polymer entity instance."
+            },
+            "comp_id": {
+               "type": "string",
+               "description": "Component identifier for non-polymer entity instance."
+            },
+            "entity_id": {
+               "type": "string",
+               "description": "Entiy identifier for the container."
+            },
+            "entity_type": {
+               "type": "string",
+               "enum": [
+                  "branched",
+                  "polymer",
+                  "macrolide",
+                  "water",
+                  "non-polymer"
+               ],
+               "description": "Defines the type of the entity."
+            },
+            "entry_id": {
+               "type": "string",
+               "description": "Entry identifier for the container."
+            }
+         },
+         "required": [
+            "asym_id",
+            "auth_asym_id",
+            "auth_seq_id",
+            "comp_id",
+            "entity_id",
+            "entry_id"
+         ],
+         "additionalProperties": false
+      },
+      "rcsb_load_status": {
+         "type": "object",
+         "properties": {
+            "datablock_name": {
+               "type": "string",
+               "description": "Source data block containing the loaded data set"
+            },
+            "load_date": {
+               "type": "string",
+               "format": "date-time",
+               "description": "Time stamp of data load"
+            },
+            "locator": {
+               "type": "string",
+               "description": "Locator of file containing loaded data"
+            }
+         },
+         "required": [
+            "datablock_name",
+            "load_date",
+            "locator"
+         ],
+         "additionalProperties": false
+      },
+      "struct_asym": {
+         "type": "object",
+         "properties": {
+            "entity_id": {
+               "type": "string",
+               "description": "This data item is a pointer to _entity.id in the ENTITY category."
+            },
+            "id": {
+               "type": "string",
+               "examples": [
+                  "1",
+                  "A",
+                  "2B3"
+               ],
+               "description": "The value of _struct_asym.id must uniquely identify a record in\n the STRUCT_ASYM list.\n\n Note that this item need not be a number; it can be any unique\n identifier."
+            },
+            "pdbx_blank_PDB_chainid_flag": {
+               "type": "string",
+               "enum": [
+                  "N",
+                  "Y"
+               ],
+               "description": "A flag indicating that this entity was originally labeled\n with a blank PDB chain id."
+            },
+            "pdbx_modified": {
+               "type": "string",
+               "examples": [
+                  "y"
+               ],
+               "description": "This data item indicates whether the structural elements are modified."
+            }
+         },
+         "required": [
+            "entity_id",
+            "id"
+         ],
+         "additionalProperties": false
+      },
+      "_entry_id": {
+         "type": "string",
+         "description": "Entry identifier for the container."
+      },
+      "_entity_id": {
+         "type": "string",
+         "description": "Entiy identifier for the container."
+      },
+      "_asym_id": {
+         "type": "string",
+         "description": "Instance identifier for this container."
+      },
+      "_auth_asym_id": {
+         "type": "string",
+         "description": "Author instance identifier for this container."
+      },
+      "_comp_id": {
+         "type": "string",
+         "description": "Component identifier for non-polymer entity instance."
+      },
+      "_auth_seq_id": {
+         "type": "string",
+         "description": "Residue number for non-polymer entity instance."
+      },
+      "_schema_version": {
+         "type": "string",
+         "description": "Version string for the schema and collection."
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "_entry_id",
+      "_entity_id",
+      "_asym_id",
+      "_auth_asym_id"
+   ],
+   "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity_instance_validation.json",
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "schema: pdbx_core collection: pdbx_core_entity_instance_validation version: 5.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity_instance_validation version 5.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity_instance_validation.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 5.1.0"
+}

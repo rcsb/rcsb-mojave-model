@@ -1,0 +1,356 @@
+{
+   "type": "object",
+   "properties": {
+      "pdbx_struct_assembly": {
+         "type": "object",
+         "properties": {
+            "details": {
+               "type": "string",
+               "examples": [
+                  "The icosahedral virus particle."
+               ],
+               "description": "A description of special aspects of the macromolecular assembly."
+            },
+            "id": {
+               "type": "string",
+               "description": "The value of _pdbx_struct_assembly.id must uniquely identify a record in\n the PDBX_STRUCT_ASSEMBLY list."
+            },
+            "method_details": {
+               "type": "string",
+               "description": "Provides details of the method used to determine or\n compute the assembly."
+            },
+            "oligomeric_count": {
+               "type": "integer",
+               "description": "The number of polymer molecules in the assembly."
+            },
+            "oligomeric_details": {
+               "type": "string",
+               "examples": [
+                  "monomer",
+                  "octameric",
+                  "tetradecameric",
+                  "eicosameric",
+                  "21-meric",
+                  "60-meric",
+                  "180-meric",
+                  "helical"
+               ],
+               "description": "Provides the details of the oligomeric state of the assembly."
+            },
+            "rcsb_candidate_assembly": {
+               "type": "string",
+               "enum": [
+                  "N",
+                  "Y"
+               ],
+               "examples": [
+                  "Y"
+               ],
+               "description": "Candidate macromolecular assembly.\n\n Excludes the following cases classified in pdbx_struct_asembly.details:\n\n 'crystal asymmetric unit', 'crystal asymmetric unit, crystal frame', 'helical asymmetric unit',\n 'helical asymmetric unit, std helical frame','icosahedral 23 hexamer', 'icosahedral asymmetric unit',\n 'icosahedral asymmetric unit, std point frame','icosahedral pentamer', 'pentasymmetron capsid unit',\n 'point asymmetric unit', 'point asymmetric unit, std point frame','trisymmetron capsid unit',\n  and 'deposited_coordinates'."
+            },
+            "rcsb_details": {
+               "type": "string",
+               "enum": [
+                  "author_defined_assembly",
+                  "author_and_software_defined_assembly",
+                  "software_defined_assembly"
+               ],
+               "examples": [
+                  "author_and_software_defined_assembly"
+               ],
+               "description": "A filtered description of the macromolecular assembly."
+            }
+         },
+         "required": [
+            "id"
+         ],
+         "additionalProperties": false
+      },
+      "pdbx_struct_assembly_auth_evidence": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "assembly_id": {
+                  "type": "string",
+                  "description": "This item references an assembly in pdbx_struct_assembly"
+               },
+               "details": {
+                  "type": "string",
+                  "description": "Provides any additional information regarding the evidence of this assembly"
+               },
+               "experimental_support": {
+                  "type": "string",
+                  "enum": [
+                     "scanning transmission electron microscopy",
+                     "mass spectrometry",
+                     "cross-linking",
+                     "equilibrium centrifugation",
+                     "fluorescence resonance energy transfer",
+                     "isothermal titration calorimetry",
+                     "assay for oligomerization",
+                     "light scattering",
+                     "surface plasmon resonance",
+                     "SAXS",
+                     "gel filtration",
+                     "native gel electrophoresis",
+                     "immunoprecipitation",
+                     "none",
+                     "microscopy",
+                     "homology"
+                  ],
+                  "description": "Provides the experimental method to determine the state of this assembly"
+               },
+               "id": {
+                  "type": "string",
+                  "description": "Identifies a unique record in pdbx_struct_assembly_auth_evidence."
+               }
+            },
+            "required": [
+               "assembly_id",
+               "id"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_struct_assembly_gen": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "assembly_id": {
+                  "type": "string",
+                  "description": "This data item is a pointer to _pdbx_struct_assembly.id in the\n PDBX_STRUCT_ASSEMBLY category."
+               },
+               "asym_id_list": {
+                  "type": "array",
+                  "items": {
+                     "type": "string",
+                     "description": "This data item is a pointer to _struct_asym.id in\n the STRUCT_ASYM category.\n\n This item may be expressed as a comma separated list of identifiers."
+                  },
+                  "uniqueItems": false
+               },
+               "oper_expression": {
+                  "type": "string",
+                  "examples": [
+                     "(1)",
+                     "(1,2,5)",
+                     "(1-60)",
+                     "(1-60)(61)"
+                  ],
+                  "description": "Identifies the operation of collection of operations\n from category PDBX_STRUCT_OPER_LIST.\n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)\n"
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "This data item is an ordinal index for the\n PDBX_STRUCT_ASSEMBLY category."
+               }
+            },
+            "required": [
+               "ordinal"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_struct_assembly_prop": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "biol_id": {
+                  "type": "string",
+                  "description": "The identifier for the assembly used in category PDBX_STRUCT_ASSEMBLY."
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "ABSA (A^2)",
+                     "MORE",
+                     "SSA (A^2)"
+                  ],
+                  "description": "The property type for the assembly."
+               },
+               "value": {
+                  "type": "string",
+                  "description": "The value of the assembly property."
+               }
+            },
+            "required": [
+               "biol_id",
+               "type"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_struct_oper_list": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "id": {
+                  "type": "string",
+                  "description": "This identifier code must uniquely identify a\n record in the PDBX_STRUCT_OPER_LIST list."
+               },
+               "matrix_1_1": {
+                  "type": "number",
+                  "description": "The [1][1] element of the 3x3 matrix component of the\n transformation operation."
+               },
+               "matrix_1_2": {
+                  "type": "number",
+                  "description": "The [1][2] element of the 3x3 matrix component of the\n transformation operation."
+               },
+               "matrix_1_3": {
+                  "type": "number",
+                  "description": "The [1][3] element of the 3x3 matrix component of the\n transformation operation."
+               },
+               "matrix_2_1": {
+                  "type": "number",
+                  "description": "The [2][1] element of the 3x3 matrix component of the\n transformation operation."
+               },
+               "matrix_2_2": {
+                  "type": "number",
+                  "description": "The [2][2] element of the 3x3 matrix component of the\n transformation operation."
+               },
+               "matrix_2_3": {
+                  "type": "number",
+                  "description": "The [2][3] element of the 3x3 matrix component of the\n transformation operation."
+               },
+               "matrix_3_1": {
+                  "type": "number",
+                  "description": "The [3][1] element of the 3x3 matrix component of the\n transformation operation."
+               },
+               "matrix_3_2": {
+                  "type": "number",
+                  "description": "The [3][2] element of the 3x3 matrix component of the\n transformation operation."
+               },
+               "matrix_3_3": {
+                  "type": "number",
+                  "description": "The [3][3] element of the 3x3 matrix component of the\n transformation operation."
+               },
+               "name": {
+                  "type": "string",
+                  "examples": [
+                     "1_555",
+                     "two-fold rotation"
+                  ],
+                  "description": "A descriptive name for the transformation operation."
+               },
+               "symmetry_operation": {
+                  "type": "string",
+                  "examples": [
+                     "x,y,z",
+                     "x+1/2,y,-z"
+                  ],
+                  "description": "The symmetry operation corresponding to the transformation operation."
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "3D crystal symmetry operation",
+                     "2D crystal symmetry operation",
+                     "build point asymmetric unit",
+                     "transform to point frame",
+                     "build helical asymmetric unit",
+                     "helical symmetry operation",
+                     "transform to crystal frame",
+                     "build 2D crystal asymmetric unit",
+                     "transform to 2D crystal frame",
+                     "point symmetry operation",
+                     "crystal symmetry operation",
+                     "transform to 3D crystal frame",
+                     "build 3D crystal asymmetric unit",
+                     "identity operation",
+                     "transform to helical frame"
+                  ],
+                  "description": "A code to indicate the type of operator."
+               },
+               "vector_1": {
+                  "type": "number",
+                  "description": "The [1] element of the three-element vector component of the\n transformation operation."
+               },
+               "vector_2": {
+                  "type": "number",
+                  "description": "The [2] element of the three-element vector component of the\n transformation operation."
+               },
+               "vector_3": {
+                  "type": "number",
+                  "description": "The [3] element of the three-element vector component of the\n transformation operation."
+               }
+            },
+            "required": [
+               "id"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_assembly_container_identifiers": {
+         "type": "object",
+         "properties": {
+            "assembly_id": {
+               "type": "string",
+               "description": "Entiy identifier for the container."
+            },
+            "entry_id": {
+               "type": "string",
+               "description": "Entry identifier for the container."
+            }
+         },
+         "required": [
+            "assembly_id",
+            "entry_id"
+         ],
+         "additionalProperties": false
+      },
+      "rcsb_load_status": {
+         "type": "object",
+         "properties": {
+            "datablock_name": {
+               "type": "string",
+               "description": "Source data block containing the loaded data set"
+            },
+            "load_date": {
+               "type": "string",
+               "format": "date-time",
+               "description": "Time stamp of data load"
+            },
+            "locator": {
+               "type": "string",
+               "description": "Locator of file containing loaded data"
+            }
+         },
+         "required": [
+            "datablock_name"
+         ],
+         "additionalProperties": false
+      },
+      "_entry_id": {
+         "type": "string",
+         "description": "Entry identifier for the container."
+      },
+      "_assembly_id": {
+         "type": "string",
+         "description": "The value of _pdbx_struct_assembly.id must uniquely identify a record in\n the PDBX_STRUCT_ASSEMBLY list."
+      },
+      "_schema_version": {
+         "type": "string",
+         "description": "Version string for the schema and collection."
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "_entry_id",
+      "_assembly_id"
+   ],
+   "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json",
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "schema: pdbx_core collection: pdbx_core_assembly version: 5.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_assembly version 5.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 5.1.0"
+}
