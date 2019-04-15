@@ -1,5 +1,5 @@
 variables:
-  BRANCH: "${CI_BUILD_REF_NAME}"
+  VERSION: "${CI_BUILD_REF_NAME}"
   FILENAME: "dw_source_schemas"
   FILE_EXT: "tar.gz"
 
@@ -14,27 +14,13 @@ build:
     - hostname
     - pwd
 
-    - VERSION=$(git describe --tags --abbrev=0)
     - echo "Distribution file name ${FILENAME}"
-    - echo "Current branch name ${BRANCH}"
-    - echo "Latest version (latest git tag) ${VERSION}"
+    - echo "The branch or tag name for which project is built ${VERSION}"
 
     - FILENAME_VERSION=${FILENAME}"_"${VERSION}"."${FILE_EXT}
     - echo "Latest versioned file name ${FILENAME_VERSION}"
 
-    - FILENAME_LATEST=${FILENAME}"_latest_"${BRANCH}"."${FILE_EXT}
-    - echo "Latest snapshot file name ${FILENAME_LATEST}"
-
-#    Produce distribution of latest snapshot schemas
-    - echo "Will create ${FILENAME_LATEST}"
-    - tar -cvzf ../${FILENAME_LATEST} schemas/
-
-#    Send artifacts as latest to build locker
-    - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ../${FILENAME_LATEST}"
-    - echo "Sent ${FILENAME_LATEST} to the build locker"
-
-#    Produce distribution of latest versioned schemas
-    - git checkout tags/${VERSION}
+#    Produce distribution of latest schemas
     - echo "Will create ${FILENAME_VERSION}"
     - tar -cvzf ../${FILENAME_VERSION} schemas/
 
