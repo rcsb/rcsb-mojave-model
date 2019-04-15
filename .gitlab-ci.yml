@@ -30,7 +30,7 @@ build:
     - tar -cvzf ../${FILENAME_LATEST} schemas/
 
 #    Send artifacts as latest to build locker
-    - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ${FILENAME_LATEST}"
+    - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ../${FILENAME_LATEST}"
     - echo "Sent ${FILENAME_LATEST} to the build locker"
 
 #    Produce distribution of latest versioned schemas
@@ -39,7 +39,7 @@ build:
     - tar -cvzf ../${FILENAME_VERSION} schemas/
 
 #    Send artifacts to the build locker
-    - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ${FILENAME_VERSION}"
+    - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ../${FILENAME_VERSION}"
     - echo "Sent ${FILENAME_VERSION} to the build locker"
 
   tags:
