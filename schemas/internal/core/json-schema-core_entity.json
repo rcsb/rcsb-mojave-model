@@ -62,6 +62,21 @@
           },
           "description" : "Members of the membrane protein classification lineage.\n"
         },
+        "class": {
+          "type": "object",
+          "properties": {
+            "id": {
+                "type": "string",
+                "description": "Identifier for membrane classification term (system generated for internal purposes identifier).\n"
+              },
+            "name": {
+                "type": "string",
+                "description": "Membrane protein classification term.\n"
+              }
+          },
+          "additionalProperties": false,
+          "description" : "Members of the membrane protein classification used for main categories of membrane protein.\n"
+        },
         "provenance_code": {
           "type": "string",
           "enum": [
@@ -91,12 +106,6 @@
               "name": {
                 "type": "string",
                 "description": "Enzyme assignment as classification name.\n"
-              },
-              "provenance_code": {
-                "type": "string",
-                "enum": [
-                  "PDB primary data"
-                ]
               }
             },
             "additionalProperties": false
@@ -118,12 +127,6 @@
                 "type": "string",
                 "example": [ "Oxidoreductases", "Transferases", "Hydrolases", "Lyases", "Isomerases", "Ligases", "Translocases" ],
                 "description": "Enzyme main class assignment as classification name.\n"
-              },
-              "provenance_code": {
-                "type": "string",
-                "enum": [
-                  "PDB primary data"
-                ]
               }
             },
             "additionalProperties": false
