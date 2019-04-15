@@ -25,7 +25,17 @@ build:
     - FILENAME_LATEST=${FILENAME}"_latest_"${BRANCH}"."${FILE_EXT}
     - echo "Latest snapshot file name ${FILENAME_LATEST}"
 
+#    Produce distribution of latest snapshot schemas
+    - cd ..
+    - echo "Will create ${FILENAME_LATEST}"
+    - tar -cvzf ${FILENAME_LATEST} rcsb-json-schema/schemas/
+
+#    Send artifacts as latest to build locker
+    - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ${FILENAME_LATEST}"
+    - echo "Sent ${FILENAME_LATEST} to the build locker"
+
 #    Produce distribution of latest versioned schemas
+    - cd rcsb-json-schema
     - git checkout tags/${VERSION}
     - cd ..
     - echo "Will create ${FILENAME_VERSION}"
@@ -34,17 +44,6 @@ build:
 #    Send artifacts to the build locker
     - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ${FILENAME_VERSION}"
     - echo "Sent ${FILENAME_VERSION} to the build locker"
-
-#    Produce distribution of latest snapshot schemas
-    - cd rcsb-json-schema
-    - git checkout ${BRANCH}
-    - cd ..
-    - echo "Will create ${FILENAME_LATEST}"
-    - tar -cvzf ${FILENAME_LATEST} rcsb-json-schema/schemas/
-
-#    Send artifacts as latest to build locker
-    - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ${FILENAME_LATEST}"
-    - echo "Sent ${FILENAME_LATEST} to the build locker"
 
   tags:
   - Java8-Nexus3
