@@ -35,7 +35,7 @@
         }
       }
     },
-    "rcsb_membrane": {
+    "rcsb_go": {
       "type": "object",
       "properties": {
         "lineage": {
@@ -47,47 +47,57 @@
             "properties": {
               "id": {
                 "type": "string",
-                "description": "Identifier for membrane classification term (system generated for internal purposes identifier).\n"
+                "examples": ["GO:0005125", "GO:0060092"],
+                "description": "A unique seven digit identifier prefixed by GO:.\n"
               },
-              "name": {
+              "name":{
                 "type": "string",
-                "description": "Membrane protein classification term.\n"
+                "examples": [ "response to muscle activity", "sulfur utilization", "cell killing"],
+                "description": "A human-readable term name.\n"
+              }
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "description": "Ontologies that describe gene products in terms of their associated\n biological processes, cellular components and molecular functions in a species-independent manner.\n"
+    },
+    "rcsb_gene": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type":"array",
+          "items" : {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "string",
+                "description": "The official gene name.\n"
               },
-              "depth": {
-                "type": "integer",
-                "description": "Hierarchy depth.\n"
+              "type": {
+                "type": "string"
+              },
+              "approved": {
+                "type": "string",
+                "enum": [
+                  "Y",
+                  "N"
+                ],
+                "description": "Indicates if gene name is an HGNC-approved gene nomenclature.\n"
               }
             },
             "additionalProperties": false
-          },
-          "description" : "Members of the membrane protein classification lineage.\n"
-        },
-        "class": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string",
-              "description": "Identifier for membrane classification term (system generated for internal use).\n"
-            },
-            "name": {
-              "type": "string",
-              "description": "Membrane protein classification term.\n"
-            }
-          },
-          "additionalProperties": false,
-          "description" : "Members of the membrane protein classification used for main categories of membrane protein.\n"
+          }
         },
         "provenance_code": {
           "type": "string",
           "enum": [
-            "Mpstruc",
-            "Homology"
-          ],
-          "description": "Mpstruc keyword denotes original annotation, Homology keyword denotes annotation inferred by homology.\n"
+            "UniProt",
+            "PDB Primary Data"
+          ]
         }
       },
-      "additionalProperties": false,
-      "description": "Information about integral membrane proteins whose crystallographic, or sometimes NMR or cryo-EM, structures \nhave been determined to a resolution sufficient to identify TM helices of helix-bundle membrane proteins (typically 4 - 4.5 A). \n\nMpstruc provides manually curated information about integral membrane proteins. These manual annotations are extended using sequence clusters and according to the following procedure:\nSingle chain transmembrane proteins:\n Any PDB chain sharing 90% sequence identity to this transmembrane \nprotein is assigned as a transmembrane protein as well, and shares the same transmembrane annotation.\n\nMulti-chain transmembrane proteins:\nIf the reference mpstruc entry contains multiple protein entities, it is necessary to identify \nwhich of the entities are presumed to be transmembrane chains. \nThis is done in conjunction with Uniprot annotations. Transmembrane protein entities are identified by \nchecking if their corresponding Uniprot sequence has annotations labeled <i>transmembrane</i> \nor <i>intramembrane region</i>. For transmembrane entities, all members of the sequence \ncluster (90% sequence identity) are programmatically infered to be members of the same class of \ntransmembrane proteins by applying the above procedure for single entity mpstruc entries. \nAnnotations are denoned with 'Homology' provenance code.\n"
+      "additionalProperties": false
     },
     "rcsb_enzyme": {
       "type": "object",
@@ -165,58 +175,59 @@
         ]
       }
     },
-    "rcsb_go_lineage": {
-      "type" : "array",
-      "minItems" : 1,
-      "uniqueItems" : true,
-      "items" : {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "examples": ["GO:0005125", "GO:0060092"],
-            "description": "A unique seven digit identifier prefixed by GO:.\n"
+    "rcsb_membrane": {
+      "type": "object",
+      "properties": {
+        "lineage": {
+          "type" : "array",
+          "minItems" : 1,
+          "uniqueItems" : true,
+          "items" : {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Identifier for membrane classification term (system generated for internal purposes identifier).\n"
+              },
+              "name": {
+                "type": "string",
+                "description": "Membrane protein classification term.\n"
+              },
+              "depth": {
+                "type": "integer",
+                "description": "Hierarchy depth.\n"
+              }
+            },
+            "additionalProperties": false
           },
-          "name":{
-            "type": "string",
-            "examples": [ "response to muscle activity", "sulfur utilization", "cell killing"],
-            "description": "A human-readable term name.\n"
-          }
+          "description" : "Members of the membrane protein classification lineage.\n"
         },
-        "additionalProperties": false
+        "class": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Identifier for membrane classification term (system generated for internal use).\n"
+            },
+            "name": {
+              "type": "string",
+              "description": "Membrane protein classification term.\n"
+            }
+          },
+          "additionalProperties": false,
+          "description" : "Members of the membrane protein classification used for main categories of membrane protein.\n"
+        },
+        "provenance_code": {
+          "type": "string",
+          "enum": [
+            "Mpstruc",
+            "Homology"
+          ],
+          "description": "Mpstruc keyword denotes original annotation, Homology keyword denotes annotation inferred by homology.\n"
+        }
       },
-      "description": "Ontologies that describe gene products in terms of their associated\n biological processes, cellular components and molecular functions in a species-independent manner.\n"
-    },
-    "rcsb_gene_name": {
-      "type":"array",
-      "items" : {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The official gene name.\n"
-          },
-          "type": {
-            "type": "string"
-          },
-          "approved": {
-            "type": "string",
-            "enum": [
-              "Y",
-              "N"
-            ],
-            "description": "Indicates if gene name is an HGNC-approved gene nomenclature.\n"
-          },
-          "provenance_code": {
-            "type": "string",
-            "enum": [
-              "UniProt",
-              "PDB Primary Data"
-            ]
-          }
-        },
-        "additionalProperties": false
-      }
+      "additionalProperties": false,
+      "description": "Information about integral membrane proteins whose crystallographic, or sometimes NMR or cryo-EM, structures \nhave been determined to a resolution sufficient to identify TM helices of helix-bundle membrane proteins (typically 4 - 4.5 A). \n\nMpstruc provides manually curated information about integral membrane proteins. These manual annotations are extended using sequence clusters and according to the following procedure:\nSingle chain transmembrane proteins:\n Any PDB chain sharing 90% sequence identity to this transmembrane \nprotein is assigned as a transmembrane protein as well, and shares the same transmembrane annotation.\n\nMulti-chain transmembrane proteins:\nIf the reference mpstruc entry contains multiple protein entities, it is necessary to identify \nwhich of the entities are presumed to be transmembrane chains. \nThis is done in conjunction with Uniprot annotations. Transmembrane protein entities are identified by \nchecking if their corresponding Uniprot sequence has annotations labeled <i>transmembrane</i> \nor <i>intramembrane region</i>. For transmembrane entities, all members of the sequence \ncluster (90% sequence identity) are programmatically infered to be members of the same class of \ntransmembrane proteins by applying the above procedure for single entity mpstruc entries. \nAnnotations are denoned with 'Homology' provenance code.\n"
     },
     "rcsb_cluster_flexibility" : {
       "type" : "object",
