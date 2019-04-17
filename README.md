@@ -18,6 +18,6 @@ Given a version number **major.minor.patch**, increment the:
 
 ### Distribution
 This package provides tar files for the distribution of releases. The tar file for version **x.y.z** will be named 
-*dw_source_schemas_[branch name]_**x.y.z**.tar.gz*. Every build will provide the latest snapshot named as
-*dw_source_schemas_[branch name]_**latest**.tar.gz*. As a part of CI/CD process source schemas 
+*dw_source_schemas_**x.y.z**.tar.gz*. Every build will provide the latest snapshot named as
+*dw_source_schemas_**branch_name**.tar.gz*. As a part of CI/CD process source schemas 
 (current version and latest snapshot) will be distributed to the build locker.
