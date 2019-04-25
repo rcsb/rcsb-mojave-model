@@ -52,8 +52,8 @@
                "type": "string",
                "enum": [
                   "author_defined_assembly",
-                  "author_and_software_defined_assembly",
-                  "software_defined_assembly"
+                  "software_defined_assembly",
+                  "author_and_software_defined_assembly"
                ],
                "examples": [
                   "author_and_software_defined_assembly"
@@ -82,22 +82,22 @@
                "experimental_support": {
                   "type": "string",
                   "enum": [
-                     "scanning transmission electron microscopy",
-                     "mass spectrometry",
-                     "cross-linking",
-                     "equilibrium centrifugation",
-                     "fluorescence resonance energy transfer",
-                     "isothermal titration calorimetry",
-                     "assay for oligomerization",
-                     "light scattering",
-                     "surface plasmon resonance",
-                     "SAXS",
                      "gel filtration",
-                     "native gel electrophoresis",
+                     "fluorescence resonance energy transfer",
+                     "scanning transmission electron microscopy",
+                     "isothermal titration calorimetry",
+                     "SAXS",
+                     "mass spectrometry",
                      "immunoprecipitation",
-                     "none",
+                     "cross-linking",
+                     "light scattering",
                      "microscopy",
-                     "homology"
+                     "none",
+                     "assay for oligomerization",
+                     "surface plasmon resonance",
+                     "homology",
+                     "native gel electrophoresis",
+                     "equilibrium centrifugation"
                   ],
                   "description": "Provides the experimental method to determine the state of this assembly"
                },
@@ -168,8 +168,8 @@
                   "type": "string",
                   "enum": [
                      "ABSA (A^2)",
-                     "MORE",
-                     "SSA (A^2)"
+                     "SSA (A^2)",
+                     "MORE"
                   ],
                   "description": "The property type for the assembly."
                },
@@ -251,21 +251,21 @@
                "type": {
                   "type": "string",
                   "enum": [
-                     "3D crystal symmetry operation",
-                     "2D crystal symmetry operation",
-                     "build point asymmetric unit",
-                     "transform to point frame",
-                     "build helical asymmetric unit",
-                     "helical symmetry operation",
-                     "transform to crystal frame",
-                     "build 2D crystal asymmetric unit",
-                     "transform to 2D crystal frame",
-                     "point symmetry operation",
-                     "crystal symmetry operation",
-                     "transform to 3D crystal frame",
-                     "build 3D crystal asymmetric unit",
                      "identity operation",
-                     "transform to helical frame"
+                     "helical symmetry operation",
+                     "transform to helical frame",
+                     "build 2D crystal asymmetric unit",
+                     "point symmetry operation",
+                     "2D crystal symmetry operation",
+                     "transform to crystal frame",
+                     "build helical asymmetric unit",
+                     "build 3D crystal asymmetric unit",
+                     "build point asymmetric unit",
+                     "transform to 2D crystal frame",
+                     "transform to 3D crystal frame",
+                     "transform to point frame",
+                     "3D crystal symmetry operation",
+                     "crystal symmetry operation"
                   ],
                   "description": "A code to indicate the type of operator."
                },

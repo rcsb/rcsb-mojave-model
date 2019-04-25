@@ -16,9 +16,9 @@
          "type": "string",
          "enum": [
             "HOLD FOR RELEASE",
+            "RELEASE NOW",
             "HOLD FOR PUBLICATION",
-            "RELEASE IMMEDIATELY",
-            "RELEASE NOW"
+            "RELEASE IMMEDIATELY"
          ],
          "description": "The prerelease status for the molecular sequences for the entry ."
       },
@@ -69,16 +69,16 @@
       "status_code": {
          "type": "string",
          "enum": [
-            "HPUB",
-            "POLC",
-            "AUCO",
-            "HOLD",
             "PROC",
-            "REPL",
-            "AUTH",
             "WAIT",
+            "WDRN",
+            "AUTH",
+            "HOLD",
+            "REPL",
+            "HPUB",
             "REFI",
-            "WDRN"
+            "AUCO",
+            "POLC"
          ],
          "description": "The release status for the entry."
       },

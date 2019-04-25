@@ -363,8 +363,8 @@
             "type": {
                "type": "string",
                "enum": [
-                  "P ATOMS ONLY",
-                  "CA ATOMS ONLY"
+                  "CA ATOMS ONLY",
+                  "P ATOMS ONLY"
                ],
                "examples": [
                   "CA ATOMS ONLY",
@@ -826,11 +826,11 @@
             "entity_type": {
                "type": "string",
                "enum": [
-                  "branched",
-                  "polymer",
                   "macrolide",
+                  "branched",
                   "water",
-                  "non-polymer"
+                  "non-polymer",
+                  "polymer"
                ],
                "description": "Defines the type of the entity."
             },
@@ -1126,8 +1126,8 @@
                   "type": "string",
                   "enum": [
                      "one",
-                     "both",
-                     "none"
+                     "none",
+                     "both"
                   ],
                   "description": "This data item identifies if the linkage has displaced leaving atoms\n on both, one or none of the connected atoms forming the linkage.\n Leaving atoms are defined within their chemical defintions of each\n connected component."
                },
@@ -1166,10 +1166,10 @@
                "pdbx_value_order": {
                   "type": "string",
                   "enum": [
-                     "doub",
-                     "trip",
                      "quad",
-                     "sing"
+                     "doub",
+                     "sing",
+                     "trip"
                   ],
                   "description": "The chemical bond order associated with the specified atoms in\n this contact."
                },

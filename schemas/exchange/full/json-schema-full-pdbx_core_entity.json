@@ -74,8 +74,8 @@
             "src_method": {
                "type": "string",
                "enum": [
-                  "syn",
                   "nat",
+                  "syn",
                   "man"
                ],
                "description": "The method by which the sample for the entity was produced.\n Entities isolated directly from natural sources (tissues, soil\n samples etc.) are expected to have further information in the\n ENTITY_SRC_NAT category. Entities isolated from genetically\n manipulated sources are expected to have further information in\n the ENTITY_SRC_GEN category."
@@ -83,11 +83,11 @@
             "type": {
                "type": "string",
                "enum": [
-                  "branched",
-                  "polymer",
                   "macrolide",
+                  "branched",
                   "water",
-                  "non-polymer"
+                  "non-polymer",
+                  "polymer"
                ],
                "description": "Defines the type of the entity.\n\n Polymer entities are expected to have corresponding\n ENTITY_POLY and associated entries.\n\n Non-polymer entities are expected to have corresponding\n CHEM_COMP and associated entries.\n\n Water entities are not expected to have corresponding\n entries in the ENTITY category."
             },
@@ -245,8 +245,8 @@
                "type": "string",
                "enum": [
                   "y",
-                  "no",
                   "n",
+                  "no",
                   "yes"
                ],
                "description": "A flag to indicate whether the polymer contains at least\n one monomer-to-monomer link different from that implied by\n _entity_poly.type."
@@ -255,8 +255,8 @@
                "type": "string",
                "enum": [
                   "y",
-                  "no",
                   "n",
+                  "no",
                   "yes"
                ],
                "description": "A flag to indicate whether the polymer contains at least\n one monomer that is not considered standard."
@@ -302,11 +302,11 @@
             "rcsb_entity_polymer_type": {
                "type": "string",
                "enum": [
+                  "NA-hybrid",
                   "RNA",
                   "DNA",
-                  "Protein",
-                  "NA-hybrid",
-                  "Other"
+                  "Other",
+                  "Protein"
                ],
                "description": "A coarse-grained polymer entity type."
             },
@@ -329,15 +329,15 @@
             "type": {
                "type": "string",
                "enum": [
-                  "polydeoxyribonucleotide/polyribonucleotide hybrid",
                   "polydeoxyribonucleotide",
-                  "polyribonucleotide",
                   "polypeptide(D)",
+                  "polysaccharide(L)",
+                  "polydeoxyribonucleotide/polyribonucleotide hybrid",
+                  "cyclic-pseudo-peptide",
                   "other",
                   "polypeptide(L)",
-                  "cyclic-pseudo-peptide",
-                  "polysaccharide(L)",
                   "peptide nucleic acid",
+                  "polyribonucleotide",
                   "polysaccharide(D)"
                ],
                "description": "The type of the polymer."
@@ -449,8 +449,8 @@
                "pdbx_alt_source_flag": {
                   "type": "string",
                   "enum": [
-                     "sample",
-                     "model"
+                     "model",
+                     "sample"
                   ],
                   "description": "This data item identifies cases in which an alternative source\n modeled."
                },
@@ -659,9 +659,9 @@
                "pdbx_seq_type": {
                   "type": "string",
                   "enum": [
-                     "Linker",
-                     "C-terminal tag",
                      "N-terminal tag",
+                     "C-terminal tag",
+                     "Linker",
                      "Biological sequence"
                   ],
                   "description": "This data item povides additional information about the sequence type."
@@ -726,8 +726,8 @@
                "pdbx_alt_source_flag": {
                   "type": "string",
                   "enum": [
-                     "sample",
-                     "model"
+                     "model",
+                     "sample"
                   ],
                   "description": "This data item identifies cases in which an alternative source\n modeled."
                },
@@ -939,8 +939,8 @@
                "pdbx_alt_source_flag": {
                   "type": "string",
                   "enum": [
-                     "sample",
-                     "model"
+                     "model",
+                     "sample"
                   ],
                   "description": "This data item identifies cases in which an alternative source\n modeled."
                },
@@ -1113,6 +1113,10 @@
                   "type": "string",
                   "description": "A unique identifer for the entity"
                },
+               "ncbi_parent_scientific_name": {
+                  "type": "string",
+                  "description": "The parent scientific name in the NCBI taxonomy hierarchy (depth=1) associated with this taxonomy code.\n"
+               },
                "ncbi_scientific_name": {
                   "type": "string",
                   "description": "The scientific name associated with this taxonomy code obtained from NCBI Taxonomy Database.\n\n This name corresponds to the taxonomy identifier assigned by the PDB depositor."
@@ -1197,6 +1201,10 @@
                   },
                   "uniqueItems": false
                },
+               "ncbi_parent_scientific_name": {
+                  "type": "string",
+                  "description": " The parent scientific name in the NCBI taxonomy hierarchy (depth=1) of the source organism assigned by the PDB depositor.\n\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21."
+               },
                "ncbi_scientific_name": {
                   "type": "string",
                   "description": " The scientific name associated with this taxonomy code aggregated by the NCBI Taxonomy Database.\n\n  This name corresponds to the taxonomy identifier assigned by the PDB depositor.\n\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21."
@@ -1223,9 +1231,9 @@
                "source_type": {
                   "type": "string",
                   "enum": [
-                     "synthetic",
+                     "natural",
                      "genetically engineered",
-                     "natural"
+                     "synthetic"
                   ],
                   "description": "The source type for the entity\n"
                },
@@ -1284,49 +1292,6 @@
             "locator"
          ],
          "additionalProperties": false
-      },
-      "struct_asym": {
-         "type": "array",
-         "items": {
-            "type": "object",
-            "properties": {
-               "entity_id": {
-                  "type": "string",
-                  "description": "This data item is a pointer to _entity.id in the ENTITY category."
-               },
-               "id": {
-                  "type": "string",
-                  "examples": [
-                     "1",
-                     "A",
-                     "2B3"
-                  ],
-                  "description": "The value of _struct_asym.id must uniquely identify a record in\n the STRUCT_ASYM list.\n\n Note that this item need not be a number; it can be any unique\n identifier."
-               },
-               "pdbx_blank_PDB_chainid_flag": {
-                  "type": "string",
-                  "enum": [
-                     "N",
-                     "Y"
-                  ],
-                  "description": "A flag indicating that this entity was originally labeled\n with a blank PDB chain id."
-               },
-               "pdbx_modified": {
-                  "type": "string",
-                  "examples": [
-                     "y"
-                  ],
-                  "description": "This data item indicates whether the structural elements are modified."
-               }
-            },
-            "required": [
-               "entity_id",
-               "id"
-            ],
-            "additionalProperties": false
-         },
-         "minItems": 1,
-         "uniqueItems": true
       },
       "struct_ref": {
          "type": "array",
@@ -1639,7 +1604,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entity version: 5.1.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 5.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 5.1.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entity version: 5.2.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 5.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 5.2.0"
 }

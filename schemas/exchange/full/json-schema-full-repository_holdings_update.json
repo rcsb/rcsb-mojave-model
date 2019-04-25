@@ -12,8 +12,8 @@
             "enum": [
                "NMR chemical shifts",
                "coordinates",
-               "NMR restraints",
-               "structure factors"
+               "structure factors",
+               "NMR restraints"
             ],
             "description": "The list of content types associated with this entry."
          },
@@ -27,9 +27,9 @@
          "type": "string",
          "enum": [
             "removed",
+            "obsolete",
             "modified",
-            "added",
-            "obsolete"
+            "added"
          ],
          "description": "The list of update types associated with this entry."
       },

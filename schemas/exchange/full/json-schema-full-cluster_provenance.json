@@ -40,8 +40,8 @@
                   "type": "string",
                   "enum": [
                      "y",
-                     "no",
                      "n",
+                     "no",
                      "yes"
                   ],
                   "description": "_citation.coordinate_linkage states whether this citation\n is concerned with precisely the set of coordinates given in the\n data block. If, for instance, the publication described the same\n structure, but the coordinates had undergone further refinement\n prior to the creation of the data block, the value of this data\n item would be 'no'."
@@ -329,28 +329,28 @@
                "language": {
                   "type": "string",
                   "enum": [
-                     "Fortran",
-                     "Fortran_77",
-                     "Other",
-                     "sh",
-                     "Fortran 77",
-                     "Python",
                      "Basic",
-                     "Tcl",
-                     "Awk",
-                     "assembler",
-                     "Fortran 90",
-                     "Pascal",
+                     "Other",
                      "ksh",
                      "Perl",
-                     "C",
-                     "Java",
-                     "Java & Fortran",
-                     "C/C++",
+                     "Fortran_77",
+                     "Python",
                      "Ada",
+                     "C",
+                     "sh",
+                     "Awk",
+                     "Tcl",
+                     "C/C++",
+                     "Fortran 77",
+                     "assembler",
+                     "Pascal",
                      "C++",
+                     "Fortran",
+                     "Python/C++",
+                     "Java",
                      "csh",
-                     "Python/C++"
+                     "Java & Fortran",
+                     "Fortran 90"
                   ],
                   "description": "The major computing language in which the software is\n coded."
                },
@@ -414,10 +414,10 @@
                   "enum": [
                      "jiffy",
                      "filter",
-                     "other",
                      "program",
-                     "library",
-                     "package"
+                     "other",
+                     "package",
+                     "library"
                   ],
                   "description": "The classification of the software according to the most\n common types."
                },

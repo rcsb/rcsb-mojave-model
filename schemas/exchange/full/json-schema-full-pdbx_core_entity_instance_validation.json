@@ -57,8 +57,8 @@
                "occupancy_flag": {
                   "type": "integer",
                   "enum": [
-                     0,
-                     1
+                     1,
+                     0
                   ],
                   "description": "The value of occupancy flag indicates whether the atom is\n either unobserved (=1) or has zero occupancy (=0)"
                },
@@ -130,8 +130,8 @@
                "occupancy_flag": {
                   "type": "integer",
                   "enum": [
-                     0,
-                     1
+                     1,
+                     0
                   ],
                   "description": "The value of occupancy flag indicates whether the residue\n is unobserved (= 1) or the coordinates have an occupancy of zero (=0)"
                },
@@ -507,8 +507,8 @@
                   "type": "string",
                   "enum": [
                      "MAIN CHAIN",
-                     "SIDE_CHAIN",
                      "SIDE CHAIN",
+                     "SIDE_CHAIN",
                      "MAIN_CHAIN"
                   ],
                   "description": "The type of plane - MAIN CHAIN or SIDE CHAIN atoms"
@@ -1360,9 +1360,9 @@
                   "type": "string",
                   "enum": [
                      "NotAvailable",
-                     "Rotameric",
                      "Triaged/NotBinned",
-                     "NonRotameric"
+                     "NonRotameric",
+                     "Rotameric"
                   ],
                   "description": "\nMolProbity RNA_suite conformation analysis.\nRNA specific produced by the molprobity step.\n"
                },
@@ -1534,9 +1534,9 @@
                "ramachandran_class": {
                   "type": "string",
                   "enum": [
-                     "OUTLIER",
+                     "Allowed",
                      "Favored",
-                     "Allowed"
+                     "OUTLIER"
                   ],
                   "description": "\nMolProbity Ramachandran plot classification for this residue one of \"Favored\", \"Allowed\" or \"OUTLIER\".\nExample:            Protein and polypeptide specific produced by the molprobity step.\n"
                },
@@ -1913,9 +1913,9 @@
                "type": {
                   "type": "string",
                   "enum": [
-                     "mainchain",
+                     "sidechain",
                      "peptide",
-                     "sidechain"
+                     "mainchain"
                   ],
                   "description": "\nThe type of chiral problem that the label_atom_id has. One of:\n(A) \"mainchain\": The N label_atom_id of an amino acid residue is expected to be in the same plane as the Calpha, \n    C, and O atoms of the previous residue. If the improper torsion angle of these atoms is more than 10 \n    degrees, this is flagged as a planarity deviation. From mmcif item \"_pdbx_validate_main_chain_plane\".\n(B) \"peptide\": A deviation is flagged if the omega torsion angle of a peptide group differs by more than 30 \n    degrees from the values expected for a proper cis or trans conformation (0 degrees and 180 degrees, \n    respectively). For mmcif item: \"_pdbx_validate_peptide_omega\".\n(C) \"sidechain\": Certain groups of atoms in protein sidechains and nucleotide bases are expected to be in \n    the same plane. An atom's deviation from planarity is calculated by fitting a plane through these atoms\n    and then calculating distance of individual label_atom_id from the plane. Expected value of such distances have\n    been pre-calculated from data analysis (wwPDB, 2012). If an label_atom_id is modelled to be more than six times \n    farther than the pre-calculated value, the residue is flagged to have a sidechain planarity deviation. \n    From mmcif item \"_pdbx_validate_planes\".\n"
                }
@@ -2086,11 +2086,11 @@
             "entity_type": {
                "type": "string",
                "enum": [
-                  "branched",
-                  "polymer",
                   "macrolide",
+                  "branched",
                   "water",
-                  "non-polymer"
+                  "non-polymer",
+                  "polymer"
                ],
                "description": "Defines the type of the entity."
             },
