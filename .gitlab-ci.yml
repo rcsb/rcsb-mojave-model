@@ -14,8 +14,8 @@ build:
     - hostname
     - pwd
 
-    - echo "Distribution file name ${FILENAME}"
-    - echo "The branch or tag name for which project is built ${VERSION}"
+    - echo "Distribution file name is '${FILENAME}'"
+    - echo "The branch or tag name for this project built is '${VERSION}'"
 
     - FILENAME_VERSION=${FILENAME}"_"${VERSION}"."${FILE_EXT}
     - echo "Latest versioned file name ${FILENAME_VERSION}"
