@@ -1,9 +1,8 @@
 {
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://example.com/root.json",
   "type": "object",
-  "title": "The Root Schema",
+  "description": "The Root Schema",
   "required": [
     "rcsb_ncbi_containers_identifiers",
     "rcsb_ncbi_metada",
@@ -13,114 +12,127 @@
   ],
   "properties": {
     "rcsb_ncbi_containers_identifiers": {
-      "$id": "#/properties/rcsb_ncbi_containers_identifiers",
       "type": "object",
-      "title": "The Rcsb_ncbi_containers_identifiers Schema",
+      "description": "The Rcsb_ncbi_containers_identifiers Schema",
       "required": [
         "gene_id",
         "rna_nucleotide_accession",
+        "rna_nucleotide_title",
         "rna_nucleotide_version",
         "rna_nucleotide_gi",
         "protein_accession",
+        "protein_title",
         "protein_version",
         "protein_gi",
         "symbol",
+        "gene_name",
         "uniprot_accession"
       ],
       "properties": {
         "gene_id": {
-          "$id": "#/properties/rcsb_ncbi_containers_identifiers/properties/gene_id",
           "type": "integer",
-          "title": "The Gene_id Schema",
+          "description": "The Gene_id Schema",
           "examples": [
             3265
           ]
         },
         "rna_nucleotide_accession": {
-          "$id": "#/properties/rcsb_ncbi_containers_identifiers/properties/rna_nucleotide_accession",
           "type": "string",
-          "title": "The Rna_nucleotide_accession Schema",
+          "description": "The Rna_nucleotide_accession Schema",
           "examples": [
             "NM_005343"
           ],
           "pattern": "^(.*)$"
         },
+        "rna_nucleotide_title": {
+          "type": "string",
+          "description": "The Rna_nucleotide_title Schema",
+          "examples": [
+            "Mus musculus structural maintenance of chromosomes 3 (Smc3), mRNA."
+          ],
+          "pattern": "^(.*)$"
+        },
         "rna_nucleotide_version": {
-          "$id": "#/properties/rcsb_ncbi_containers_identifiers/properties/rna_nucleotide_version",
           "type": "integer",
-          "title": "The Rna_nucleotide_version Schema",
+          "description": "The Rna_nucleotide_version Schema",
           "examples": [
             4
           ]
         },
         "rna_nucleotide_gi": {
-          "$id": "#/properties/rcsb_ncbi_containers_identifiers/properties/rna_nucleotide_gi",
           "type": "integer",
-          "title": "The Rna_nucleotide_gi Schema",
+          "description": "The Rna_nucleotide_gi Schema",
           "examples": [
             568815587
           ]
         },
         "protein_accession": {
-          "$id": "#/properties/rcsb_ncbi_containers_identifiers/properties/protein_accession",
           "type": "string",
-          "title": "The Protein_accession Schema",
+          "description": "The Protein_accession Schema",
           "examples": [
             "NP_005334"
           ],
           "pattern": "^(.*)$"
         },
+        "protein_title": {
+          "type": "string",
+          "description": "The Protein_title Schema",
+          "examples": [
+            "GTPase HRas isoform 1 [Homo sapiens]"
+          ],
+          "pattern": "^(.*)$"
+        },
         "protein_version": {
-          "$id": "#/properties/rcsb_ncbi_containers_identifiers/properties/protein_version",
           "type": "integer",
-          "title": "The Protein_version Schema",
+          "description": "The Protein_version Schema",
           "examples": [
             1
           ]
         },
         "protein_gi": {
-          "$id": "#/properties/rcsb_ncbi_containers_identifiers/properties/protein_gi",
           "type": "integer",
-          "title": "The Protein_gi Schema",
+          "description": "The Protein_gi Schema",
           "examples": [
             4885425
           ]
         },
         "symbol": {
-          "$id": "#/properties/rcsb_ncbi_containers_identifiers/properties/symbol",
           "type": "string",
-          "title": "The Symbol Schema",
+          "description": "The Symbol Schema",
           "examples": [
             "HRAS"
           ],
           "pattern": "^(.*)$"
         },
-        "uniprot_accession": {
-          "$id": "#/properties/rcsb_ncbi_containers_identifiers/properties/uniprot_accession",
+        "gene_name": {
+          "type": "string",
+          "description": "The Symbol Schema",
+          "examples": [
+            "GTPase HRAS human gene"
+          ],
+          "pattern": "^(.*)$"
+        },"uniprot_accession": {
           "type": "array",
-          "title": "The Uniprot_accession Schema",
+          "description": "The Uniprot_accession Schema",
           "items": {
-            "$id": "#/properties/rcsb_ncbi_containers_identifiers/properties/uniprot_accession/items",
             "type": "object",
-            "title": "The Items Schema",
+            "description": "The Items Schema",
             "required": [
               "accession_id",
               "isoform_id"
             ],
             "properties": {
               "accession_id": {
-                "$id": "#/properties/rcsb_ncbi_containers_identifiers/properties/uniprot_accession/items/properties/accession_id",
                 "type": "string",
-                "title": "The Accession_id Schema",
+                "description": "The Accession_id Schema",
                 "examples": [
                   "P01112"
                 ],
                 "pattern": "^(.*)$"
               },
               "isoform_id": {
-                "$id": "#/properties/rcsb_ncbi_containers_identifiers/properties/uniprot_accession/items/properties/isoform_id",
                 "type": "integer",
-                "title": "The Isoform_id Schema",
+                "description": "The Isoform_id Schema",
                 "examples": [
                   1
                 ]
@@ -131,17 +143,15 @@
       }
     },
     "rcsb_ncbi_metada": {
-      "$id": "#/properties/rcsb_ncbi_metada",
       "type": "object",
-      "title": "The Rcsb_ncbi_metada Schema",
+      "description": "The Rcsb_ncbi_metada Schema",
       "required": [
         "status"
       ],
       "properties": {
         "status": {
-          "$id": "#/properties/rcsb_ncbi_metada/properties/status",
           "type": "string",
-          "title": "The Status Schema",
+          "description": "The Status Schema",
           "examples": [
             "REVIEWED"
           ],
@@ -150,45 +160,57 @@
       }
     },
     "rcsb_ncbi_chromosome": {
-      "$id": "#/properties/rcsb_ncbi_chromosome",
       "type": "object",
-      "title": "The Rcsb_ncbi_chromosome Schema",
+      "description": "The Rcsb_ncbi_chromosome Schema",
       "required": [
         "genomic_nucleotide_accession",
         "genomic_nucleotide_version",
         "genomic_nucleotide_gi",
+        "assembly",
+        "genomic_nucleotide_name",
         "genomic_nucleotide_title"
       ],
       "properties": {
         "genomic_nucleotide_accession": {
-          "$id": "#/properties/rcsb_ncbi_chromosome/properties/genomic_nucleotide_accession",
           "type": "string",
-          "title": "The Genomic_nucleotide_accession Schema",
+          "description": "The Genomic_nucleotide_accession Schema",
           "examples": [
             "NC_000011"
           ],
           "pattern": "^(.*)$"
         },
         "genomic_nucleotide_version": {
-          "$id": "#/properties/rcsb_ncbi_chromosome/properties/genomic_nucleotide_version",
           "type": "integer",
-          "title": "The Genomic_nucleotide_version Schema",
+          "description": "The Genomic_nucleotide_version Schema",
           "examples": [
             10
           ]
         },
         "genomic_nucleotide_gi": {
-          "$id": "#/properties/rcsb_ncbi_chromosome/properties/genomic_nucleotide_gi",
           "type": "integer",
-          "title": "The Genomic_nucleotide_gi Schema",
+          "description": "The Genomic_nucleotide_gi Schema",
           "examples": [
             568815587
           ]
+        },"assembly": {
+          "type": "string",
+          "description": "The Genome Assembly Schema",
+          "examples": [
+            "GRCh38"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "genomic_nucleotide_name": {
+          "type": "string",
+          "description": "The Genomic_nucleotide_name Schema",
+          "examples": [
+            "11"
+          ],
+          "pattern": "^(.*)$"
         },
         "genomic_nucleotide_title": {
-          "$id": "#/properties/rcsb_ncbi_chromosome/properties/genomic_nucleotide_title",
           "type": "string",
-          "title": "The Genomic_nucleotide_title Schema",
+          "description": "The Genomic_nucleotide_title Schema",
           "examples": [
             "Homo sapiens chromosome 11, GRCh38.p12 Primary Assembly"
           ],
@@ -197,9 +219,8 @@
       }
     },
     "rcsb_ncbi_coordinates": {
-      "$id": "#/properties/rcsb_ncbi_coordinates",
       "type": "object",
-      "title": "The Rcsb_ncbi_coordinates Schema",
+      "description": "The Rcsb_ncbi_coordinates Schema",
       "required": [
         "strat_position_on_the_genomic_accession",
         "end_position_on_the_genomic_accession",
@@ -209,54 +230,47 @@
       ],
       "properties": {
         "strat_position_on_the_genomic_accession": {
-          "$id": "#/properties/rcsb_ncbi_coordinates/properties/strat_position_on_the_genomic_accession",
           "type": "integer",
-          "title": "The Strat_position_on_the_genomic_accession Schema",
+          "description": "The Strat_position_on_the_genomic_accession Schema",
           "examples": [
             532241
           ]
         },
         "end_position_on_the_genomic_accession": {
-          "$id": "#/properties/rcsb_ncbi_coordinates/properties/end_position_on_the_genomic_accession",
           "type": "integer",
-          "title": "The End_position_on_the_genomic_accession Schema",
+          "description": "The End_position_on_the_genomic_accession Schema",
           "examples": [
             535566
           ]
         },
         "orientation": {
-          "$id": "#/properties/rcsb_ncbi_coordinates/properties/orientation",
           "type": "integer",
-          "title": "The Orientation Schema",
+          "description": "The Orientation Schema",
           "examples": [
             2
           ]
         },
         "rna_coordinates": {
-          "$id": "#/properties/rcsb_ncbi_coordinates/properties/rna_coordinates",
           "type": "array",
-          "title": "The Rna_coordinates Schema",
+          "description": "The Rna_coordinates Schema",
           "items": {
-            "$id": "#/properties/rcsb_ncbi_coordinates/properties/rna_coordinates/items",
             "type": "object",
-            "title": "The Items Schema",
+            "description": "The Items Schema",
             "required": [
               "start_position_on_the_gene_sequence",
               "end_position_on_the_gene_sequence"
             ],
             "properties": {
               "start_position_on_the_gene_sequence": {
-                "$id": "#/properties/rcsb_ncbi_coordinates/properties/rna_coordinates/items/properties/start_position_on_the_gene_sequence",
                 "type": "integer",
-                "title": "The Start_position_on_the_gene_sequence Schema",
+                "description": "The Start_position_on_the_gene_sequence Schema",
                 "examples": [
                   1
                 ]
               },
               "end_position_on_the_gene_sequence": {
-                "$id": "#/properties/rcsb_ncbi_coordinates/properties/rna_coordinates/items/properties/end_position_on_the_gene_sequence",
                 "type": "integer",
-                "title": "The End_position_on_the_gene_sequence Schema",
+                "description": "The End_position_on_the_gene_sequence Schema",
                 "examples": [
                   152
                 ]
@@ -265,30 +279,26 @@
           }
         },
         "protein_coordinates": {
-          "$id": "#/properties/rcsb_ncbi_coordinates/properties/protein_coordinates",
           "type": "array",
-          "title": "The Protein_coordinates Schema",
+          "description": "The Protein_coordinates Schema",
           "items": {
-            "$id": "#/properties/rcsb_ncbi_coordinates/properties/protein_coordinates/items",
             "type": "object",
-            "title": "The Items Schema",
+            "description": "The Items Schema",
             "required": [
               "start_position_on_the_gene_sequence",
               "end_position_on_the_gene_sequence"
             ],
             "properties": {
               "start_position_on_the_gene_sequence": {
-                "$id": "#/properties/rcsb_ncbi_coordinates/properties/protein_coordinates/items/properties/start_position_on_the_gene_sequence",
                 "type": "integer",
-                "title": "The Start_position_on_the_gene_sequence Schema",
+                "description": "The Start_position_on_the_gene_sequence Schema",
                 "examples": [
                   1246
                 ]
               },
               "end_position_on_the_gene_sequence": {
-                "$id": "#/properties/rcsb_ncbi_coordinates/properties/protein_coordinates/items/properties/end_position_on_the_gene_sequence",
                 "type": "integer",
-                "title": "The End_position_on_the_gene_sequence Schema",
+                "description": "The End_position_on_the_gene_sequence Schema",
                 "examples": [
                   1356
                 ]
@@ -299,9 +309,8 @@
       }
     },
     "rcsb_ncbi_organism": {
-      "$id": "#/properties/rcsb_ncbi_organism",
       "type": "object",
-      "title": "The Rcsb_ncbi_organism Schema",
+      "description": "The Rcsb_ncbi_organism Schema",
       "required": [
         "tax_id",
         "scientific_name",
@@ -309,26 +318,23 @@
       ],
       "properties": {
         "tax_id": {
-          "$id": "#/properties/rcsb_ncbi_organism/properties/tax_id",
           "type": "integer",
-          "title": "The Tax_id Schema",
+          "description": "The Tax_id Schema",
           "examples": [
             9606
           ]
         },
         "scientific_name": {
-          "$id": "#/properties/rcsb_ncbi_organism/properties/scientific_name",
           "type": "string",
-          "title": "The Scientific_name Schema",
+          "description": "The Scientific_name Schema",
           "examples": [
             "Homo sapiens"
           ],
           "pattern": "^(.*)$"
         },
         "common_name": {
-          "$id": "#/properties/rcsb_ncbi_organism/properties/common_name",
           "type": "string",
-          "title": "The Common_name Schema",
+          "description": "The Common_name Schema",
           "examples": [
             "Human"
           ],
