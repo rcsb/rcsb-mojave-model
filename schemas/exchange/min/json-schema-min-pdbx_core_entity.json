@@ -61,8 +61,8 @@
             "rcsb_multiple_source_flag": {
                "type": "string",
                "enum": [
-                  "N",
-                  "Y"
+                  "Y",
+                  "N"
                ],
                "description": "A code indicating the entity has multiple biological sources.\n"
             },
@@ -83,10 +83,10 @@
                "type": "string",
                "enum": [
                   "macrolide",
-                  "branched",
                   "water",
+                  "polymer",
                   "non-polymer",
-                  "polymer"
+                  "branched"
                ],
                "description": "Defines the type of the entity.\n\n Polymer entities are expected to have corresponding\n ENTITY_POLY and associated entries.\n\n Non-polymer entities are expected to have corresponding\n CHEM_COMP and associated entries.\n\n Water entities are not expected to have corresponding\n entries in the ENTITY category."
             },
@@ -128,8 +128,8 @@
                      "provenance_source": {
                         "type": "string",
                         "enum": [
-                           "PDB Preferred Name",
-                           "PDB Synonym"
+                           "PDB Synonym",
+                           "PDB Preferred Name"
                         ],
                         "description": "Combined list of macromolecular names associated name source.\n"
                      }
@@ -243,20 +243,20 @@
             "nstd_linkage": {
                "type": "string",
                "enum": [
-                  "y",
+                  "yes",
                   "n",
-                  "no",
-                  "yes"
+                  "y",
+                  "no"
                ],
                "description": "A flag to indicate whether the polymer contains at least\n one monomer-to-monomer link different from that implied by\n _entity_poly.type."
             },
             "nstd_monomer": {
                "type": "string",
                "enum": [
-                  "y",
+                  "yes",
                   "n",
-                  "no",
-                  "yes"
+                  "y",
+                  "no"
                ],
                "description": "A flag to indicate whether the polymer contains at least\n one monomer that is not considered standard."
             },
@@ -301,11 +301,11 @@
             "rcsb_entity_polymer_type": {
                "type": "string",
                "enum": [
-                  "NA-hybrid",
-                  "RNA",
                   "DNA",
                   "Other",
-                  "Protein"
+                  "RNA",
+                  "Protein",
+                  "NA-hybrid"
                ],
                "description": "A coarse-grained polymer entity type."
             },
@@ -328,16 +328,16 @@
             "type": {
                "type": "string",
                "enum": [
+                  "polysaccharide(D)",
                   "polydeoxyribonucleotide",
+                  "cyclic-pseudo-peptide",
+                  "peptide nucleic acid",
+                  "polypeptide(L)",
                   "polypeptide(D)",
                   "polysaccharide(L)",
                   "polydeoxyribonucleotide/polyribonucleotide hybrid",
-                  "cyclic-pseudo-peptide",
                   "other",
-                  "polypeptide(L)",
-                  "peptide nucleic acid",
-                  "polyribonucleotide",
-                  "polysaccharide(D)"
+                  "polyribonucleotide"
                ],
                "description": "The type of the polymer."
             }
@@ -658,10 +658,10 @@
                "pdbx_seq_type": {
                   "type": "string",
                   "enum": [
-                     "N-terminal tag",
-                     "C-terminal tag",
+                     "Biological sequence",
                      "Linker",
-                     "Biological sequence"
+                     "C-terminal tag",
+                     "N-terminal tag"
                   ],
                   "description": "This data item povides additional information about the sequence type."
                },
@@ -1590,7 +1590,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entity version: 5.2.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 5.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 5.2.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entity version: 5.3.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 5.3.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 5.3.0"
 }

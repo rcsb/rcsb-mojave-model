@@ -827,10 +827,10 @@
                "type": "string",
                "enum": [
                   "macrolide",
-                  "branched",
                   "water",
+                  "polymer",
                   "non-polymer",
-                  "polymer"
+                  "branched"
                ],
                "description": "Defines the type of the entity."
             },
@@ -986,8 +986,8 @@
             "pdbx_blank_PDB_chainid_flag": {
                "type": "string",
                "enum": [
-                  "N",
-                  "Y"
+                  "Y",
+                  "N"
                ],
                "description": "A flag indicating that this entity was originally labeled\n with a blank PDB chain id."
             },
@@ -1168,8 +1168,8 @@
                   "enum": [
                      "quad",
                      "doub",
-                     "sing",
-                     "trip"
+                     "trip",
+                     "sing"
                   ],
                   "description": "The chemical bond order associated with the specified atoms in\n this contact."
                },
@@ -1603,7 +1603,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entity_instance version: 5.1.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity_instance version 5.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 5.1.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entity_instance version: 5.3.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity_instance version 5.3.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 5.3.0"
 }
