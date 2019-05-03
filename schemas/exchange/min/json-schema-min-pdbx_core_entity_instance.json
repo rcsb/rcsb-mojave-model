@@ -363,8 +363,8 @@
             "type": {
                "type": "string",
                "enum": [
-                  "CA ATOMS ONLY",
-                  "P ATOMS ONLY"
+                  "P ATOMS ONLY",
+                  "CA ATOMS ONLY"
                ],
                "examples": [
                   "CA ATOMS ONLY",
@@ -826,11 +826,11 @@
             "entity_type": {
                "type": "string",
                "enum": [
-                  "macrolide",
-                  "water",
-                  "polymer",
                   "non-polymer",
-                  "branched"
+                  "branched",
+                  "polymer",
+                  "water",
+                  "macrolide"
                ],
                "description": "Defines the type of the entity."
             },
@@ -845,7 +845,107 @@
          ],
          "additionalProperties": false
       },
-      "rcsb_entity_instance_domain": {
+      "rcsb_entity_instance_domain_cath": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "beg_auth_asym_id": {
+                  "type": "string",
+                  "description": "A component of the identifier for the monomer at which this\n segment of the domain begins.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "beg_auth_seq_id": {
+                  "type": "string",
+                  "description": "A component of the identifier for the monomer at which this\n segment of the domain begins.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "beg_label_asym_id": {
+                  "type": "string",
+                  "description": "A component of the identifier for the monomer at which this\n segment of the domain begins.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "beg_label_comp_id": {
+                  "type": "string",
+                  "description": "A component of the identifier for the monomer at which this\n segment of the domain begins.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category."
+               },
+               "domain_assigned_by": {
+                  "type": "string",
+                  "description": "Identifies the individual, organization or program that\n assigned the domain feature."
+               },
+               "domain_assigned_version": {
+                  "type": "string",
+                  "description": "Identifies the version of the domain assignment."
+               },
+               "domain_id": {
+                  "type": "string",
+                  "description": "An identifer for the domain."
+               },
+               "domain_name": {
+                  "type": "string",
+                  "description": "A name for the domain."
+               },
+               "end_auth_asym_id": {
+                  "type": "string",
+                  "description": "A component of the identifier for the monomer at which this\n segment of the domain ends.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
+               },
+               "end_auth_seq_id": {
+                  "type": "string",
+                  "description": "A component of the identifier for the monomer at which this\n segment of the domain ends.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
+               },
+               "end_label_asym_id": {
+                  "type": "string",
+                  "description": "A component of the identifier for the monomer at which this\n segment of the domain ends.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "end_label_comp_id": {
+                  "type": "string",
+                  "description": "A component of the identifier for the monomer at which this\n segment of the domain ends.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category."
+               },
+               "end_label_seq_id": {
+                  "type": "integer",
+                  "description": "A component of the identifier for the monomer at which this\n segment of the domain ends.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "The entity identifier for the polymer entity instance."
+               },
+               "entry_id": {
+                  "type": "string",
+                  "description": "Structure entry identifier."
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Ordinal identifier for this category"
+               },
+               "domain_class_lineage": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "depth": {
+                           "type": "integer",
+                           "description": "Members of the domain class lineage as parent lineage depth (1-N)"
+                        },
+                        "id": {
+                           "type": "string",
+                           "description": "Members of the domain class lineage as parent domain class identifiers."
+                        },
+                        "name": {
+                           "type": "string",
+                           "description": "Memebers of the domain class lineage as parent domain class names."
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "required": [
+               "ordinal"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_entity_instance_domain_scop": {
          "type": "array",
          "items": {
             "type": "object",
@@ -1166,10 +1266,10 @@
                "pdbx_value_order": {
                   "type": "string",
                   "enum": [
-                     "quad",
-                     "doub",
                      "trip",
-                     "sing"
+                     "sing",
+                     "quad",
+                     "doub"
                   ],
                   "description": "The chemical bond order associated with the specified atoms in\n this contact."
                },
@@ -1603,7 +1703,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entity_instance version: 5.3.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity_instance version 5.3.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 5.3.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entity_instance version: 5.3.1",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity_instance version 5.3.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 5.3.1"
 }
