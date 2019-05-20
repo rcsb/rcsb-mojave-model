@@ -62,6 +62,33 @@
       "additionalProperties": false,
       "description": "Ontologies that describe gene products in terms of their associated\n biological processes, cellular components and molecular functions in a species-independent manner.\n"
     },
+    "rcsb_genomic": {
+      "type": "object",
+      "properties": {
+        "lineage": {
+          "type" : "array",
+          "minItems" : 3,
+          "uniqueItems" : true,
+          "items" : {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "examples": ["9606", "568815441", "414325"],
+                "description": "ID that identify taxonomy, chromosome or gene.\n"
+              },
+              "name":{
+                "type": "string",
+                "examples": [ "Homo sapiens", "8", "defensin beta 103A"],
+                "description": "A human-readable term name.\n"
+              }
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "description": "Set of IDs that identify taxonomy, chromosome and gene.\n"
+    },
     "rcsb_gene": {
       "type": "object",
       "properties": {
