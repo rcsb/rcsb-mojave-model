@@ -40,8 +40,8 @@
             "rcsb_candidate_assembly": {
                "type": "string",
                "enum": [
-                  "N",
-                  "Y"
+                  "Y",
+                  "N"
                ],
                "examples": [
                   "Y"
@@ -52,8 +52,8 @@
                "type": "string",
                "enum": [
                   "author_defined_assembly",
-                  "software_defined_assembly",
-                  "author_and_software_defined_assembly"
+                  "author_and_software_defined_assembly",
+                  "software_defined_assembly"
                ],
                "examples": [
                   "author_and_software_defined_assembly"
@@ -82,22 +82,22 @@
                "experimental_support": {
                   "type": "string",
                   "enum": [
-                     "gel filtration",
-                     "fluorescence resonance energy transfer",
-                     "scanning transmission electron microscopy",
-                     "isothermal titration calorimetry",
-                     "SAXS",
-                     "mass spectrometry",
+                     "native gel electrophoresis",
+                     "equilibrium centrifugation",
+                     "surface plasmon resonance",
+                     "light scattering",
                      "immunoprecipitation",
                      "cross-linking",
-                     "light scattering",
-                     "microscopy",
-                     "none",
-                     "assay for oligomerization",
-                     "surface plasmon resonance",
                      "homology",
-                     "native gel electrophoresis",
-                     "equilibrium centrifugation"
+                     "scanning transmission electron microscopy",
+                     "gel filtration",
+                     "mass spectrometry",
+                     "assay for oligomerization",
+                     "fluorescence resonance energy transfer",
+                     "none",
+                     "SAXS",
+                     "microscopy",
+                     "isothermal titration calorimetry"
                   ],
                   "description": "Provides the experimental method to determine the state of this assembly"
                },
@@ -251,21 +251,21 @@
                "type": {
                   "type": "string",
                   "enum": [
-                     "identity operation",
-                     "helical symmetry operation",
-                     "transform to helical frame",
-                     "build 2D crystal asymmetric unit",
-                     "point symmetry operation",
-                     "2D crystal symmetry operation",
-                     "transform to crystal frame",
-                     "build helical asymmetric unit",
-                     "build 3D crystal asymmetric unit",
-                     "build point asymmetric unit",
-                     "transform to 2D crystal frame",
-                     "transform to 3D crystal frame",
-                     "transform to point frame",
                      "3D crystal symmetry operation",
-                     "crystal symmetry operation"
+                     "build helical asymmetric unit",
+                     "transform to 2D crystal frame",
+                     "transform to point frame",
+                     "transform to helical frame",
+                     "transform to crystal frame",
+                     "build 3D crystal asymmetric unit",
+                     "crystal symmetry operation",
+                     "2D crystal symmetry operation",
+                     "transform to 3D crystal frame",
+                     "identity operation",
+                     "point symmetry operation",
+                     "build 2D crystal asymmetric unit",
+                     "helical symmetry operation",
+                     "build point asymmetric unit"
                   ],
                   "description": "A code to indicate the type of operator."
                },
@@ -295,7 +295,7 @@
          "properties": {
             "assembly_id": {
                "type": "string",
-               "description": "Entiy identifier for the container."
+               "description": "Assembly identifier for the container."
             },
             "entry_id": {
                "type": "string",
@@ -307,6 +307,173 @@
             "entry_id"
          ],
          "additionalProperties": false
+      },
+      "rcsb_assembly_info": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "assembly_id": {
+                  "type": "string",
+                  "description": "Entity identifier for the container."
+               },
+               "atom_count": {
+                  "type": "integer",
+                  "description": "The assembly atomic coordinate count."
+               },
+               "branched_atom_count": {
+                  "type": "integer",
+                  "description": "The assembly branched entity atomic coordinate count."
+               },
+               "branched_entity_count": {
+                  "type": "integer",
+                  "description": "The number of distinct branched entities in the generated assembly."
+               },
+               "branched_entity_instance_count": {
+                  "type": "integer",
+                  "description": "The number of branched instances in the generated assembly data set.\n This is the total count of branched entity instances generated in the assembly coordinate data."
+               },
+               "entry_id": {
+                  "type": "string",
+                  "description": "The PDB entry accession code."
+               },
+               "modeled_polymer_monomer_count": {
+                  "type": "integer",
+                  "description": "The number of modeled polymer monomers in the assembly coordinate data.\n This is the total count of monomers with reported coordinate data for all polymer\n entity instances in the generated assembly coordinate data."
+               },
+               "na_polymer_entity_types": {
+                  "type": "string",
+                  "enum": [
+                     "RNA (only)",
+                     "DNA/RNA (only)",
+                     "NA-hybrid (only)",
+                     "Other",
+                     "DNA (only)"
+                  ],
+                  "description": "Nucleic acid polymer entity type categories describing the generated assembly."
+               },
+               "nonpolymer_atom_count": {
+                  "type": "integer",
+                  "description": "The assembly non-polymer entity atomic coordinate count."
+               },
+               "nonpolymer_entity_count": {
+                  "type": "integer",
+                  "description": "The number of distinct non-polymer entities in the generated assembly exclusive of solvent."
+               },
+               "nonpolymer_entity_instance_count": {
+                  "type": "integer",
+                  "description": "The number of non-polymer instances in the generated assembly data set exclusive of solvent.\n This is the total count of non-polymer entity instances generated in the assembly coordinate data."
+               },
+               "polymer_atom_count": {
+                  "type": "integer",
+                  "description": "The assembly polymer entity atomic coordinate count."
+               },
+               "polymer_composition": {
+                  "type": "string",
+                  "enum": [
+                     "protein/oligosaccharide",
+                     "DNA/RNA",
+                     "protein/NA/oligosaccharide",
+                     "RNA",
+                     "protein/NA",
+                     "NA-hybrid",
+                     "other type composition",
+                     "homomeric protein",
+                     "heteromeric protein",
+                     "other",
+                     "other type pair",
+                     "oligosaccharide",
+                     "DNA",
+                     "NA/oligosaccharide"
+                  ],
+                  "description": "Categories describing the polymer entity composition for the generated assembly."
+               },
+               "polymer_entity_count": {
+                  "type": "integer",
+                  "description": "The number of distinct polymer entities in the generated assembly."
+               },
+               "polymer_entity_count_DNA": {
+                  "type": "integer",
+                  "description": "The number of distinct DNA polymer entities in the generated assembly."
+               },
+               "polymer_entity_count_RNA": {
+                  "type": "integer",
+                  "description": "The number of distinct RNA polymer entities in the generated assembly."
+               },
+               "polymer_entity_count_nucleic_acid": {
+                  "type": "integer",
+                  "description": "The number of distinct nucleic acid polymer entities (DNA or RNA) in the generated assembly."
+               },
+               "polymer_entity_count_nucleic_acid_hybrid": {
+                  "type": "integer",
+                  "description": "The number of distinct hybrid nucleic acid polymer entities in the generated assembly."
+               },
+               "polymer_entity_count_protein": {
+                  "type": "integer",
+                  "description": "The number of distinct protein polymer entities in the generated assembly."
+               },
+               "polymer_entity_instance_count": {
+                  "type": "integer",
+                  "description": "The number of polymer instances in the generated assembly data set.\n This is the total count of polymer entity instances generated in the assembly coordinate data."
+               },
+               "polymer_entity_instance_count_DNA": {
+                  "type": "integer",
+                  "description": "The number of DNA polymer instances in the generated assembly data set.\n This is the total count of DNA polymer entity instances generated in the assembly coordinate data."
+               },
+               "polymer_entity_instance_count_RNA": {
+                  "type": "integer",
+                  "description": "The number of RNA polymer instances in the generated assembly data set.\n This is the total count of RNA polymer entity instances generated in the assembly coordinate data."
+               },
+               "polymer_entity_instance_count_nucleic_acid": {
+                  "type": "integer",
+                  "description": "The number of nucleic acid polymer instances in the generated assembly data set.\n This is the total count of nucleic acid polymer entity instances generated in the assembly coordinate data."
+               },
+               "polymer_entity_instance_count_nucleic_acid_hybrid": {
+                  "type": "integer",
+                  "description": "The number of hybrid nucleic acide polymer instances in the generated assembly data set.\n This is the total count of hybrid nucleic acid polymer entity instances generated in the assembly coordinate data."
+               },
+               "polymer_entity_instance_count_protein": {
+                  "type": "integer",
+                  "description": "The number of protein polymer instances in the generated assembly data set.\n This is the total count of protein polymer entity instances generated in the assembly coordinate data."
+               },
+               "polymer_monomer_count": {
+                  "type": "integer",
+                  "description": "The number of polymer monomers in sample entity instances comprising the assembly data set.\n This is the total count of monomers for all polymer entity instances\n in the generated assembly coordinate data."
+               },
+               "selected_polymer_entity_types": {
+                  "type": "string",
+                  "enum": [
+                     "Other",
+                     "Protein (only)",
+                     "Protein/NA",
+                     "Nucleic acid (only)"
+                  ],
+                  "description": "Selected polymer entity type categories describing the generated assembly."
+               },
+               "solvent_atom_count": {
+                  "type": "integer",
+                  "description": "The assembly solvent atomic coordinate count."
+               },
+               "solvent_entity_count": {
+                  "type": "integer",
+                  "description": "The number of distinct solvent entities in the generated assembly."
+               },
+               "solvent_entity_instance_count": {
+                  "type": "integer",
+                  "description": "The number of solvent instances in the generated assembly data set.\n This is the total count of solvent entity instances generated in the assembly coordinate data."
+               },
+               "unmodeled_polymer_monomer_count": {
+                  "type": "integer",
+                  "description": "The number of unmodeled polymer monomers in the assembly coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the generated assembly coordinate data."
+               }
+            },
+            "required": [
+               "entry_id"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
       },
       "rcsb_load_status": {
          "type": "object",
@@ -350,7 +517,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_assembly version: 5.1.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_assembly version 5.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 5.1.0"
+   "title": "schema: pdbx_core collection: pdbx_core_assembly version: 5.2.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_assembly version 5.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 5.2.0"
 }

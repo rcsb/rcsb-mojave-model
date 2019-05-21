@@ -378,304 +378,6 @@
          ],
          "additionalProperties": false
       },
-      "pdbx_distant_solvent_atoms": {
-         "type": "array",
-         "items": {
-            "type": "object",
-            "properties": {
-               "PDB_model_num": {
-                  "type": "integer",
-                  "description": " Part of the identifier for the distant solvent atom.\n\nThis data item is a pointer to _atom_site.pdbx_PDB_model_num in the\nATOM_SITE category."
-               },
-               "auth_asym_id": {
-                  "type": "string",
-                  "description": "Part of the identifier for the distant solvent atom.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
-               },
-               "auth_atom_id": {
-                  "type": "string",
-                  "description": "Part of the identifier for the distant solvent atom.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
-               },
-               "auth_comp_id": {
-                  "type": "string",
-                  "description": "Part of the identifier for the distant solvent atom.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
-               },
-               "auth_seq_id": {
-                  "type": "string",
-                  "description": "Part of the identifier for the distant solvent atom.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
-               },
-               "id": {
-                  "type": "integer",
-                  "description": "The value of _pdbx_distant_solvent_atoms.id must uniquely identify\n each item in the PDBX_DISTANT_SOLVENT_ATOMS list.\n\n This is an integer serial number."
-               },
-               "label_alt_id": {
-                  "type": "string",
-                  "description": "Part of the identifier for the distant solvent atom.\n\n This data item is a pointer to _atom_site.label_alt.id in the\n ATOM_SITE category."
-               },
-               "neighbor_ligand_distance": {
-                  "type": "number",
-                  "description": "Distance to closest neighboring ligand or solvent atom.\n"
-               },
-               "neighbor_macromolecule_distance": {
-                  "type": "number",
-                  "description": "Distance to closest neighboring macromolecule atom.\n"
-               }
-            },
-            "required": [
-               "id"
-            ],
-            "additionalProperties": false
-         },
-         "minItems": 1,
-         "uniqueItems": true
-      },
-      "pdbx_struct_conn_angle": {
-         "type": "array",
-         "items": {
-            "type": "object",
-            "properties": {
-               "id": {
-                  "type": "string",
-                  "description": "The value of _pdbx_struct_conn_angle.id must uniquely identify a record in\n the PDBX_STRUCT_CONN_ANGLE list.\n\n Note that this item need not be a number; it can be any unique\n identifier."
-               },
-               "ptnr1_PDB_ins_code": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 1 of the structure angle.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
-               },
-               "ptnr1_auth_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 1 of the structure angle.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
-               },
-               "ptnr1_auth_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 1 of the structure angle.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
-               },
-               "ptnr1_auth_seq_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 1 of the structure angle.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
-               },
-               "ptnr1_label_alt_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 1 of the structure\n angle.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category."
-               },
-               "ptnr1_label_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 1 of the structure angle.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
-               },
-               "ptnr1_label_atom_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 1 of the structure angle.\n This data item is a pointer to _atom_site.label_atom_id in the\n ATOM_SITE category."
-               },
-               "ptnr1_label_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 1 of the structure angle.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category."
-               },
-               "ptnr1_label_seq_id": {
-                  "type": "integer",
-                  "description": "A component of the identifier for partner 1 of the structure angle.\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
-               },
-               "ptnr1_symmetry": {
-                  "type": "string",
-                  "examples": [
-                     "7_645"
-                  ],
-                  "description": "Describes the symmetry operation that should be applied to the\n atom specified by _pdbx_struct_conn_angle.ptnr1_label* to generate the\n first partner in the structure angle."
-               },
-               "ptnr2_PDB_ins_code": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 1 of the structure angle.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in the\n ATOM_SITE category."
-               },
-               "ptnr2_auth_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 2 of the structure angle.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
-               },
-               "ptnr2_auth_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 2 of the structure angle.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
-               },
-               "ptnr2_auth_seq_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 2 of the structure angle.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
-               },
-               "ptnr2_label_alt_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 2 of the structure angle.\n This data item is a pointer to _atom_site.label_alt.id in the\n ATOM_SITE category."
-               },
-               "ptnr2_label_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 2 of the structure angle.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
-               },
-               "ptnr2_label_atom_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 2 of the structure angle.\n\n This data item is a pointer to _atom_site.label_atom_id in the\n ATOM_SITE category."
-               },
-               "ptnr2_label_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 2 of the structure angle.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category."
-               },
-               "ptnr2_label_seq_id": {
-                  "type": "integer",
-                  "description": "A component of the identifier for partner 2 of the structure angle.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
-               },
-               "ptnr2_symmetry": {
-                  "type": "string",
-                  "description": "Describes the symmetry operation that should be applied to the\n atom specified by _pdbx_struct_conn_angle.ptnr2_label* to generate the\n second partner in the structure angle."
-               },
-               "ptnr3_PDB_ins_code": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 3 of the structure angle.\n\n This data item is a pointer to _atom_site.pdbx_PDB_ins_code in\n the ATOM_SITE category."
-               },
-               "ptnr3_auth_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 3 of the structure angle.\n\n This data item is a pointer to _atom_site.auth_asym_id in\n the ATOM_SITE category."
-               },
-               "ptnr3_auth_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 3 of the structure angle.\n\n This data item is a pointer to _atom_site.auth_comp_id in\n the ATOM_SITE category."
-               },
-               "ptnr3_auth_seq_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 1 of the structure angle.\n\n This data item is a pointer to _atom_site.auth_seq_id in\n the ATOM_SITE category."
-               },
-               "ptnr3_label_alt_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 3 of the structure angle.\n\n This data item is a pointer to _atom_site.label_alt_id in\n the ATOM_SITE category."
-               },
-               "ptnr3_label_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 3 of the structure angle.\n\n This data item is a pointer to _atom_site.label_asym_id in\n the ATOM_SITE category."
-               },
-               "ptnr3_label_atom_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 3 of the structure angle.\n\n This data item is a pointer to _atom_site.label_atom_id in\n the ATOM_SITE category."
-               },
-               "ptnr3_label_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for partner 3 of the structure angle.\n\n This data item is a pointer to _atom_site.label_comp_id in\n the ATOM_SITE category."
-               },
-               "ptnr3_label_seq_id": {
-                  "type": "integer",
-                  "description": "A component of the identifier for partner 1 of the structure angle.\n\n This data item is a pointer to _atom_site.label_seq_id in\n the ATOM_SITE category."
-               },
-               "ptnr3_symmetry": {
-                  "type": "string",
-                  "examples": [
-                     "7_645"
-                  ],
-                  "description": "Describes the symmetry operation that should be applied to the\n atom specified by _pdbx_struct_conn_angle.ptnr3_label* to generate the\n first partner in the structure angle."
-               },
-               "value": {
-                  "type": "number",
-                  "description": "Angle in degrees defined by the three sites\n _pdbx_struct_conn_angle.ptnr1_label_atom_id,\n _pdbx_struct_conn_angle.ptnr2_label_atom_id\n _pdbx_struct_conn_angle.ptnr3_label_atom_id\n"
-               }
-            },
-            "required": [
-               "id"
-            ],
-            "additionalProperties": false
-         },
-         "minItems": 1,
-         "uniqueItems": true
-      },
-      "pdbx_struct_sheet_hbond": {
-         "type": "array",
-         "items": {
-            "type": "object",
-            "properties": {
-               "range_1_PDB_ins_code": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the first partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
-               },
-               "range_1_auth_asym_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the first partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
-               },
-               "range_1_auth_atom_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the first partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
-               },
-               "range_1_auth_comp_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the first partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
-               },
-               "range_1_auth_seq_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the first partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
-               },
-               "range_1_label_asym_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the first partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
-               },
-               "range_1_label_atom_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the first partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n    This data item is a pointer to _atom_site.label_atom_id in the\n    ATOM_SITE category."
-               },
-               "range_1_label_comp_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the first partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category."
-               },
-               "range_1_label_seq_id": {
-                  "type": "integer",
-                  "description": "A component of the residue identifier for the first partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
-               },
-               "range_2_PDB_ins_code": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the second partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
-               },
-               "range_2_auth_asym_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the second partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
-               },
-               "range_2_auth_atom_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the second partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.auth_atom_id in the\n ATOM_SITE category."
-               },
-               "range_2_auth_comp_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the second partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
-               },
-               "range_2_auth_seq_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the second partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
-               },
-               "range_2_label_asym_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the second partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
-               },
-               "range_2_label_atom_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the second partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.label_atom_id in the\n ATOM_SITE category."
-               },
-               "range_2_label_comp_id": {
-                  "type": "string",
-                  "description": "A component of the residue identifier for the second partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category."
-               },
-               "range_2_label_seq_id": {
-                  "type": "integer",
-                  "description": "A component of the residue identifier for the second partner of the\n registration hydrogen bond between two residue ranges in a sheet.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
-               },
-               "range_id_1": {
-                  "type": "string",
-                  "description": "This data item is a pointer to _struct_sheet_range.id in\n the STRUCT_SHEET_RANGE category."
-               },
-               "range_id_2": {
-                  "type": "string",
-                  "description": "This data item is a pointer to _struct_sheet_range.id in\n the STRUCT_SHEET_RANGE category."
-               },
-               "sheet_id": {
-                  "type": "string",
-                  "description": "This data item is a pointer to _struct_sheet.id in the\n STRUCT_SHEET category."
-               }
-            },
-            "required": [
-               "range_id_1",
-               "range_id_2",
-               "sheet_id"
-            ],
-            "additionalProperties": false
-         },
-         "minItems": 1,
-         "uniqueItems": true
-      },
       "pdbx_struct_special_symmetry": {
          "type": "array",
          "items": {
@@ -821,16 +523,16 @@
             },
             "entity_id": {
                "type": "string",
-               "description": "Entiy identifier for the container."
+               "description": "Entity identifier for the container."
             },
             "entity_type": {
                "type": "string",
                "enum": [
                   "non-polymer",
-                  "branched",
                   "polymer",
-                  "water",
-                  "macrolide"
+                  "macrolide",
+                  "branched",
+                  "water"
                ],
                "description": "Defines the type of the entity."
             },
@@ -876,7 +578,7 @@
                },
                "domain_id": {
                   "type": "string",
-                  "description": "An identifer for the domain."
+                  "description": "An identifier for the domain."
                },
                "domain_name": {
                   "type": "string",
@@ -976,7 +678,7 @@
                },
                "domain_id": {
                   "type": "string",
-                  "description": "An identifer for the domain."
+                  "description": "An identifier for the domain."
                },
                "domain_name": {
                   "type": "string",
@@ -1067,6 +769,105 @@
          ],
          "additionalProperties": false
       },
+      "rcsb_prot_sec_struct_info": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "beta_sheet_sense": {
+                  "type": "array",
+                  "items": {
+                     "type": "string",
+                     "enum": [
+                        "anti-parallel",
+                        "parallel",
+                        "mixed"
+                     ],
+                     "description": "The orientation sense for complete beta sheet for the contributing beta strands in the\n protein polymer instance.\n\n Protein secondary structure features calculated using the algorithms\n described in:\n\n Hutchinson, E.G. and Thornton, J.M., PROMOTIF--a program to identify\n and analyze structural motifs in proteins. Protein Sci., 1996, 5(2), pp 212-20;\n PubMed PMID: 8745398; PubMed Central PMCID: PMC2143354."
+                  },
+                  "uniqueItems": false
+               },
+               "beta_sheet_strand_count": {
+                  "type": "array",
+                  "items": {
+                     "type": "integer",
+                     "description": "The number beta strands in the complete beta sheet for the contributing beta strands in the\n protein polymer instance.\n\n Protein secondary structure features calculated using the algorithms\n described in:\n\n Hutchinson, E.G. and Thornton, J.M., PROMOTIF--a program to identify\n and analyze structural motifs in proteins. Protein Sci., 1996, 5(2), pp 212-20;\n PubMed PMID: 8745398; PubMed Central PMCID: PMC2143354."
+                  },
+                  "uniqueItems": false
+               },
+               "beta_strand_count": {
+                  "type": "integer",
+                  "description": "The number beta strand segments in the protein polymer instance.\n\n Protein secondary structure features calculated using the algorithms\n described in:\n\n Hutchinson, E.G. and Thornton, J.M., PROMOTIF--a program to identify\n and analyze structural motifs in proteins. Protein Sci., 1996, 5(2), pp 212-20;\n PubMed PMID: 8745398; PubMed Central PMCID: PMC2143354."
+               },
+               "beta_strand_coverage_percent": {
+                  "type": "number",
+                  "description": "The percent monomer coverage of beta strand segments in the protein polymer instance.\n\n Protein secondary structure features calculated using the algorithms\n described in:\n\n Hutchinson, E.G. and Thornton, J.M., PROMOTIF--a program to identify\n and analyze structural motifs in proteins. Protein Sci., 1996, 5(2), pp 212-20;\n PubMed PMID: 8745398; PubMed Central PMCID: PMC2143354."
+               },
+               "beta_strand_length": {
+                  "type": "array",
+                  "items": {
+                     "type": "integer",
+                     "description": "The monomer lengths of beta strand segments in the protein polymer instance.\n\n Protein secondary structure features calculated using the algorithms\n described in:\n\n Hutchinson, E.G. and Thornton, J.M., PROMOTIF--a program to identify\n and analyze structural motifs in proteins. Protein Sci., 1996, 5(2), pp 212-20;\n PubMed PMID: 8745398; PubMed Central PMCID: PMC2143354."
+                  },
+                  "uniqueItems": false
+               },
+               "entry_id": {
+                  "type": "string",
+                  "description": "The PDB entry accession code."
+               },
+               "feature_monomer_sequence": {
+                  "type": "string",
+                  "description": "The sequence of secondary structure features (e.g., H, S) assigned to each monomer in the\n protein polymer instance.\n\n Protein secondary structure features calculated using the algorithms\n described in:\n\n Hutchinson, E.G. and Thornton, J.M., PROMOTIF--a program to identify\n and analyze structural motifs in proteins. Protein Sci., 1996, 5(2), pp 212-20;\n PubMed PMID: 8745398; PubMed Central PMCID: PMC2143354."
+               },
+               "feature_sequence": {
+                  "type": "string",
+                  "description": "The sequence of secondary structure features (e.g., H, S) in the\n protein polymer instance.\n\n Protein secondary structure features calculated using the algorithms\n described in:\n\n Hutchinson, E.G. and Thornton, J.M., PROMOTIF--a program to identify\n and analyze structural motifs in proteins. Protein Sci., 1996, 5(2), pp 212-20;\n PubMed PMID: 8745398; PubMed Central PMCID: PMC2143354."
+               },
+               "helix_count": {
+                  "type": "integer",
+                  "description": "The number helical segments in the protein polymer instance.\n\n Protein secondary structure features calculated using the algorithms\n described in:\n\n Hutchinson, E.G. and Thornton, J.M., PROMOTIF--a program to identify\n and analyze structural motifs in proteins. Protein Sci., 1996, 5(2), pp 212-20;\n PubMed PMID: 8745398; PubMed Central PMCID: PMC2143354."
+               },
+               "helix_coverage_percent": {
+                  "type": "number",
+                  "description": "The percent monomer coverage of helical segments in the protein polymer instance.\n\n Protein secondary structure features calculated using the algorithms\n described in:\n\n Hutchinson, E.G. and Thornton, J.M., PROMOTIF--a program to identify\n and analyze structural motifs in proteins. Protein Sci., 1996, 5(2), pp 212-20;\n PubMed PMID: 8745398; PubMed Central PMCID: PMC2143354."
+               },
+               "helix_length": {
+                  "type": "array",
+                  "items": {
+                     "type": "integer",
+                     "description": "The monomer lengths of helical segments in the protein polymer instance.\n\n Protein secondary structure features calculated using the algorithms\n described in:\n\n Hutchinson, E.G. and Thornton, J.M., PROMOTIF--a program to identify\n and analyze structural motifs in proteins. Protein Sci., 1996, 5(2), pp 212-20;\n PubMed PMID: 8745398; PubMed Central PMCID: PMC2143354."
+                  },
+                  "uniqueItems": false
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "Protein polymer instance identifier.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
+               },
+               "unassigned_count": {
+                  "type": "integer",
+                  "description": "The number of unassigned segments (neither helix or beta strand) in the protein polymer instance.\n\n Protein secondary structure features calculated using the algorithms\n described in:\n\n Hutchinson, E.G. and Thornton, J.M., PROMOTIF--a program to identify\n and analyze structural motifs in proteins. Protein Sci., 1996, 5(2), pp 212-20;\n PubMed PMID: 8745398; PubMed Central PMCID: PMC2143354."
+               },
+               "unassigned_coverage_percent": {
+                  "type": "number",
+                  "description": "The percent monomer coverage of unassigned segments (neither helix or beta strand) in the protein polymer instance.\n\n Protein secondary structure features calculated using the algorithms\n described in:\n\n Hutchinson, E.G. and Thornton, J.M., PROMOTIF--a program to identify\n and analyze structural motifs in proteins. Protein Sci., 1996, 5(2), pp 212-20;\n PubMed PMID: 8745398; PubMed Central PMCID: PMC2143354."
+               },
+               "unassigned_length": {
+                  "type": "array",
+                  "items": {
+                     "type": "integer",
+                     "description": "The monomer lengths of unassigned segments (neither helix or beta strand) in the protein polymer instance.\n\n Protein secondary structure features calculated using the algorithms\n described in:\n\n Hutchinson, E.G. and Thornton, J.M., PROMOTIF--a program to identify\n and analyze structural motifs in proteins. Protein Sci., 1996, 5(2), pp 212-20;\n PubMed PMID: 8745398; PubMed Central PMCID: PMC2143354."
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "required": [
+               "entry_id"
+            ],
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "struct_asym": {
          "type": "object",
          "properties": {
@@ -1104,100 +905,6 @@
          ],
          "additionalProperties": false
       },
-      "struct_conf": {
-         "type": "array",
-         "items": {
-            "type": "object",
-            "properties": {
-               "beg_auth_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment begins.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
-               },
-               "beg_auth_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment begins.\n\n This data item is a pointer to _atom_site.auth_comp_id in\n the ATOM_SITE category."
-               },
-               "beg_auth_seq_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment begins.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
-               },
-               "beg_label_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment begins.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
-               },
-               "beg_label_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment begins.\n\n This data item is a pointer to _atom_site.label_comp_id in\n the ATOM_SITE category."
-               },
-               "beg_label_seq_id": {
-                  "type": "integer",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment begins.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
-               },
-               "conf_type_id": {
-                  "type": "string",
-                  "description": "This data item is a pointer to _struct_conf_type.id in the\n STRUCT_CONF_TYPE category."
-               },
-               "details": {
-                  "type": "string",
-                  "description": "A description of special aspects of the conformation assignment."
-               },
-               "end_auth_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment ends.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
-               },
-               "end_auth_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment ends.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
-               },
-               "end_auth_seq_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment ends.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
-               },
-               "end_label_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment ends.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
-               },
-               "end_label_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment ends.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category."
-               },
-               "end_label_seq_id": {
-                  "type": "integer",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment ends.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
-               },
-               "id": {
-                  "type": "string",
-                  "description": "The value of _struct_conf.id must uniquely identify a record in\n the STRUCT_CONF list.\n\n Note that this item need not be a number; it can be any unique\n identifier."
-               },
-               "pdbx_PDB_helix_class": {
-                  "type": "string",
-                  "description": "This item is a place holder for the helix class used in the PDB\n HELIX record."
-               },
-               "pdbx_PDB_helix_id": {
-                  "type": "string",
-                  "description": "\nA placeholder for the helix identifier of the PDB\nHELIX record."
-               },
-               "pdbx_PDB_helix_length": {
-                  "type": "integer",
-                  "description": "\nA placeholder for the lengths of the helix of the PDB\nHELIX record."
-               },
-               "pdbx_beg_PDB_ins_code": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment starts.\n"
-               },
-               "pdbx_end_PDB_ins_code": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n conformation segment ends.\n"
-               }
-            },
-            "required": [
-               "id"
-            ],
-            "additionalProperties": false
-         },
-         "minItems": 1,
-         "uniqueItems": true
-      },
       "struct_conn": {
          "type": "array",
          "items": {
@@ -1225,8 +932,8 @@
                "pdbx_leaving_atom_flag": {
                   "type": "string",
                   "enum": [
-                     "one",
                      "none",
+                     "one",
                      "both"
                   ],
                   "description": "This data item identifies if the linkage has displaced leaving atoms\n on both, one or none of the connected atoms forming the linkage.\n Leaving atoms are defined within their chemical defintions of each\n connected component."
@@ -1267,9 +974,9 @@
                   "type": "string",
                   "enum": [
                      "trip",
-                     "sing",
                      "quad",
-                     "doub"
+                     "doub",
+                     "sing"
                   ],
                   "description": "The chemical bond order associated with the specified atoms in\n this contact."
                },
@@ -1436,242 +1143,13 @@
          "minItems": 1,
          "uniqueItems": true
       },
-      "struct_sheet_hbond": {
-         "type": "array",
-         "items": {
-            "type": "object",
-            "properties": {
-               "pdbx_range_1_beg_PDB_ins_code": {
-                  "type": "string",
-                  "description": "Pointer to _atom_site.pdbx_PDB_ins_code."
-               },
-               "pdbx_range_1_beg_auth_asym_id": {
-                  "type": "string",
-                  "description": "Pointer to _atom_site.auth_asym_id."
-               },
-               "pdbx_range_1_beg_auth_comp_id": {
-                  "type": "string",
-                  "description": "Pointer to _atom_site.auth_comp_id"
-               },
-               "pdbx_range_1_beg_label_asym_id": {
-                  "type": "string",
-                  "description": "Pointer to _atom_site.label_asym_id."
-               },
-               "pdbx_range_1_beg_label_comp_id": {
-                  "type": "string",
-                  "description": "Pointer to _atom_site.label_comp_id"
-               },
-               "pdbx_range_1_end_auth_asym_id": {
-                  "type": "string",
-                  "description": "Pointer to _atom_site.auth_comp_id."
-               },
-               "pdbx_range_1_end_auth_comp_id": {
-                  "type": "string",
-                  "description": "Pointer to _atom_site.auth_comp_id."
-               },
-               "pdbx_range_1_end_label_asym_id": {
-                  "type": "string",
-                  "description": "Pointer to _atom_site.label_asym_id."
-               },
-               "pdbx_range_1_end_label_comp_id": {
-                  "type": "string",
-                  "description": "Pointer to _atom_site.label_comp_id."
-               },
-               "range_1_beg_auth_seq_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue for the first\n partner of the first hydrogen bond between two residue ranges\n in a sheet.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
-               },
-               "range_1_beg_label_atom_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue for the first\n partner of the first hydrogen bond between two residue ranges\n in a sheet.\n\n This data item is a pointer to _atom_site.label_atom_id in the\n ATOM_SITE category."
-               },
-               "range_1_beg_label_seq_id": {
-                  "type": "integer",
-                  "description": "A component of the identifier for the residue for the first\n partner of the first hydrogen bond between two residue ranges\n in a sheet.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
-               },
-               "range_1_end_auth_seq_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue for the first\n partner of the last hydrogen bond between two residue ranges in\n a sheet.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
-               },
-               "range_1_end_label_atom_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue for the first\n partner of the last hydrogen bond between two residue ranges in\n a sheet.\n\n This data item is a pointer to _atom_site.label_atom_id in the\n ATOM_SITE category."
-               },
-               "range_1_end_label_seq_id": {
-                  "type": "integer",
-                  "description": "A component of the identifier for the residue for the first\n partner of the last hydrogen bond between two residue ranges in\n a sheet.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
-               },
-               "range_2_end_label_atom_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue for the second\n partner of the last hydrogen bond between two residue ranges in\n a sheet.\n\n This data item is a pointer to _atom_site.label_atom_id in the\n ATOM_SITE category."
-               },
-               "range_id_1": {
-                  "type": "string",
-                  "description": "This data item is a pointer to _struct_sheet_range.id in\n the STRUCT_SHEET_RANGE category."
-               },
-               "sheet_id": {
-                  "type": "string",
-                  "description": "This data item is a pointer to _struct_sheet.id in the\n STRUCT_SHEET category."
-               }
-            },
-            "required": [
-               "range_id_1",
-               "sheet_id"
-            ],
-            "additionalProperties": false
-         },
-         "minItems": 1,
-         "uniqueItems": true
-      },
-      "struct_sheet_range": {
-         "type": "array",
-         "items": {
-            "type": "object",
-            "properties": {
-               "beg_auth_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n beta-sheet range begins.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
-               },
-               "beg_auth_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n beta-sheet range begins.\n\n This data item is a pointer to _atom_site.auth_comp_id in\n the ATOM_SITE category."
-               },
-               "beg_auth_seq_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n beta-sheet range begins.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
-               },
-               "beg_label_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n beta-sheet range begins.\n\n This data item is a pointer to _struct_asym.id in the\n STRUCT_ASYM category."
-               },
-               "beg_label_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n beta-sheet range begins.\n\n This data item is a pointer to _chem_comp.id in the CHEM_COMP\n category."
-               },
-               "beg_label_seq_id": {
-                  "type": "integer",
-                  "description": "A component of the identifier for the residue at which the\n beta-sheet range begins.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
-               },
-               "end_auth_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n beta-sheet range ends.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category.\n"
-               },
-               "end_auth_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n beta-sheet range ends.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
-               },
-               "end_auth_seq_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n beta-sheet range ends.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
-               },
-               "end_label_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n beta-sheet range ends.\n\n This data item is a pointer to _struct_asym.id in the\n STRUCT_ASYM category."
-               },
-               "end_label_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n beta-sheet range ends.\n\n This data item is a pointer to _chem_comp.id in the CHEM_COMP\n category."
-               },
-               "end_label_seq_id": {
-                  "type": "integer",
-                  "description": "A component of the identifier for the residue at which the\n beta-sheet range ends.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
-               },
-               "id": {
-                  "type": "string",
-                  "description": "The value of _struct_sheet_range.id must uniquely identify a\n range in a given sheet in the STRUCT_SHEET_RANGE list.\n\n Note that this item need not be a number; it can be any unique\n identifier."
-               },
-               "pdbx_beg_PDB_ins_code": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n beta sheet range begins.  Insertion code."
-               },
-               "pdbx_end_PDB_ins_code": {
-                  "type": "string",
-                  "description": "A component of the identifier for the residue at which the\n beta sheet range ends. Insertion code."
-               },
-               "sheet_id": {
-                  "type": "string",
-                  "description": "This data item is a pointer to _struct_sheet.id in the\n STRUCT_SHEET category."
-               }
-            },
-            "required": [
-               "id",
-               "sheet_id"
-            ],
-            "additionalProperties": false
-         },
-         "minItems": 1,
-         "uniqueItems": true
-      },
-      "struct_site_gen": {
-         "type": "array",
-         "items": {
-            "type": "object",
-            "properties": {
-               "auth_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for participants in the site.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category."
-               },
-               "auth_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for participants in the site.\n\n This data item is a pointer to _atom_site.auth_comp_id in the\n ATOM_SITE category."
-               },
-               "auth_seq_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for participants in the site.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category."
-               },
-               "id": {
-                  "type": "string",
-                  "description": "The value of _struct_site_gen.id must uniquely identify a record\n in the STRUCT_SITE_GEN list.\n\n Note that this item need not be a number; it can be any unique\n identifier."
-               },
-               "label_asym_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for participants in the site.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category."
-               },
-               "label_comp_id": {
-                  "type": "string",
-                  "description": "A component of the identifier for participants in the site.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category."
-               },
-               "label_seq_id": {
-                  "type": "integer",
-                  "description": "A component of the identifier for participants in the site.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category."
-               },
-               "pdbx_auth_ins_code": {
-                  "type": "string",
-                  "description": "PDB insertion code."
-               },
-               "pdbx_num_res": {
-                  "type": "integer",
-                  "description": "Number of residues in the site."
-               },
-               "site_id": {
-                  "type": "string",
-                  "description": "This data item is a pointer to _struct_site.id in the STRUCT_SITE\n category."
-               },
-               "symmetry": {
-                  "type": "string",
-                  "examples": [
-                     "4",
-                     "7_645"
-                  ],
-                  "description": "Describes the symmetry operation that should be applied to the\n atom set specified by _struct_site_gen.label* to generate a\n portion of the site."
-               }
-            },
-            "required": [
-               "id",
-               "site_id"
-            ],
-            "additionalProperties": false
-         },
-         "minItems": 1,
-         "uniqueItems": true
-      },
       "_entry_id": {
          "type": "string",
          "description": "Entry identifier for the container."
       },
       "_entity_id": {
          "type": "string",
-         "description": "Entiy identifier for the container."
+         "description": "Entity identifier for the container."
       },
       "_asym_id": {
          "type": "string",
@@ -1703,7 +1181,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entity_instance version: 5.3.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity_instance version 5.3.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 5.3.1"
+   "title": "schema: pdbx_core collection: pdbx_core_entity_instance version: 6.0.1",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity_instance version 6.0.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.0.1"
 }
