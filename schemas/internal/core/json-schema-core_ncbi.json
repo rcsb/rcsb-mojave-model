@@ -13,7 +13,7 @@
   "properties": {
     "rcsb_ncbi_containers_identifiers": {
       "type": "object",
-      "description": "RCSB NVBI entry identifiers",
+      "description": "RCSB NVBI entry identifiers.\n",
       "required": [
         "gene_id",
         "rna_nucleotide_accession",
@@ -31,14 +31,14 @@
       "properties": {
         "gene_id": {
           "type": "integer",
-          "description": "NCBI gene ID",
+          "description": "NCBI gene ID.\n",
           "examples": [
             3265
           ]
         },
         "rna_nucleotide_accession": {
           "type": "string",
-          "description": "NCBI transcript accession",
+          "description": "NCBI transcript accession.\n",
           "examples": [
             "NM_005343"
           ],
@@ -46,7 +46,7 @@
         },
         "rna_nucleotide_title": {
           "type": "string",
-          "description": "NCBI transcript title",
+          "description": "NCBI transcript title.\n",
           "examples": [
             "Mus musculus structural maintenance of chromosomes 3 (Smc3), mRNA."
           ],
@@ -54,21 +54,21 @@
         },
         "rna_nucleotide_version": {
           "type": "integer",
-          "description": "NCBI transcript accession version",
+          "description": "NCBI transcript accession version.\n",
           "examples": [
             4
           ]
         },
         "rna_nucleotide_gi": {
           "type": "integer",
-          "description": "NCBI transcript GI number",
+          "description": "NCBI transcript GI number.\n",
           "examples": [
             568815587
           ]
         },
         "protein_accession": {
           "type": "string",
-          "description": "NCBI protein accession",
+          "description": "NCBI protein accession.\n",
           "examples": [
             "NP_005334"
           ],
@@ -76,7 +76,7 @@
         },
         "protein_title": {
           "type": "string",
-          "description": "NCBI protein title",
+          "description": "NCBI protein title.\n",
           "examples": [
             "GTPase HRas isoform 1 [Homo sapiens]"
           ],
@@ -84,21 +84,21 @@
         },
         "protein_version": {
           "type": "integer",
-          "description": "NCBI protein accession title",
+          "description": "NCBI protein accession title.\n",
           "examples": [
             1
           ]
         },
         "protein_gi": {
           "type": "integer",
-          "description": "NCBI protein GI number",
+          "description": "NCBI protein GI number.\n",
           "examples": [
             4885425
           ]
         },
         "symbol": {
           "type": "string",
-          "description": "NCBI gene symbol",
+          "description": "NCBI gene symbol.\n",
           "examples": [
             "HRAS"
           ],
@@ -106,7 +106,7 @@
         },
         "gene_name": {
           "type": "string",
-          "description": "NCBI gene name",
+          "description": "NCBI gene name.\n",
           "examples": [
             "GTPase HRAS human gene"
           ],
@@ -114,7 +114,7 @@
         },
         "uniprot_accession": {
           "type": "array",
-          "description": "UniProt accession list",
+          "description": "UniProt accession list.\n",
           "items": {
             "type": "object",
             "required": [
@@ -124,7 +124,7 @@
             "properties": {
               "accession_id": {
                 "type": "string",
-                "description": "UniProt accesion",
+                "description": "UniProt accesion.\n",
                 "examples": [
                   "P01112"
                 ],
@@ -132,7 +132,7 @@
               },
               "isoform_id": {
                 "type": "integer",
-                "description": "UniProt isoform ID",
+                "description": "UniProt isoform ID.\n",
                 "examples": [
                   1
                 ]
@@ -146,14 +146,14 @@
     },
     "rcsb_ncbi_metada": {
       "type": "object",
-      "description": "NCBI metadata",
+      "description": "NCBI metadata.\n",
       "required": [
         "status"
       ],
       "properties": {
         "status": {
           "type": "string",
-          "description": "NCBI entry status",
+          "description": "NCBI entry status.\n",
           "examples": [
             "REVIEWED"
           ],
@@ -164,7 +164,7 @@
     },
     "rcsb_ncbi_chromosome": {
       "type": "object",
-      "description": "NCBI entry chromosome information",
+      "description": "NCBI entry chromosome information.\n",
       "required": [
         "genomic_nucleotide_accession",
         "genomic_nucleotide_version",
@@ -176,7 +176,7 @@
       "properties": {
         "genomic_nucleotide_accession": {
           "type": "string",
-          "description": "NCBI chromosome accession",
+          "description": "NCBI chromosome accession.\n",
           "examples": [
             "NC_000011"
           ],
@@ -184,21 +184,21 @@
         },
         "genomic_nucleotide_version": {
           "type": "integer",
-          "description": "NCBI chromosome accession version",
+          "description": "NCBI chromosome accession version.\n",
           "examples": [
             10
           ]
         },
         "genomic_nucleotide_gi": {
           "type": "integer",
-          "description": "NCBI chromosome GI number",
+          "description": "NCBI chromosome GI number.\n",
           "examples": [
             568815587
           ]
         },
         "assembly": {
           "type": "string",
-          "description": "Genome assembly name",
+          "description": "Genome assembly name.\n",
           "examples": [
             "GRCh38"
           ],
@@ -206,7 +206,7 @@
         },
         "genomic_nucleotide_name": {
           "type": "string",
-          "description": "NCBI chromosome name",
+          "description": "NCBI chromosome name.\n",
           "examples": [
             "11"
           ],
@@ -214,7 +214,7 @@
         },
         "genomic_nucleotide_title": {
           "type": "string",
-          "description": "NCBI chromosome title",
+          "description": "NCBI chromosome title.\n",
           "examples": [
             "Homo sapiens chromosome 11, GRCh38.p12 Primary Assembly"
           ],
@@ -225,7 +225,7 @@
     },
     "rcsb_ncbi_coordinates": {
       "type": "object",
-      "description": "NCBI coordinates",
+      "description": "NCBI coordinates.\n",
       "required": [
         "strat_position_on_the_genomic_accession",
         "end_position_on_the_genomic_accession",
@@ -236,28 +236,28 @@
       "properties": {
         "strat_position_on_the_genomic_accession": {
           "type": "integer",
-          "description": "NCBI gene start position",
+          "description": "NCBI gene start position.\n",
           "examples": [
             532241
           ]
         },
         "end_position_on_the_genomic_accession": {
           "type": "integer",
-          "description": "NCBI gene end position",
+          "description": "NCBI gene end position.\n",
           "examples": [
             535566
           ]
         },
         "orientation": {
           "type": "integer",
-          "description": "NCBI gene DNA strand",
+          "description": "NCBI gene DNA strand.\n",
           "examples": [
             2
           ]
         },
         "rna_coordinates": {
           "type": "array",
-          "description": "NCBI transcript coordinates list",
+          "description": "NCBI transcript coordinates list.\n",
           "items": {
             "type": "object",
             "required": [
@@ -267,14 +267,14 @@
             "properties": {
               "start_position_on_the_gene_sequence": {
                 "type": "integer",
-                "description": "NCBI exon start position on the gene",
+                "description": "NCBI exon start position on the gene.\n",
                 "examples": [
                   1
                 ]
               },
               "end_position_on_the_gene_sequence": {
                 "type": "integer",
-                "description": "NCBI exon end position on the gene",
+                "description": "NCBI exon end position on the gene.\n",
                 "examples": [
                   152
                 ]
@@ -285,7 +285,7 @@
         },
         "protein_coordinates": {
           "type": "array",
-          "description": "NCBI protein coordinates list",
+          "description": "NCBI protein coordinates list.\n",
           "items": {
             "type": "object",
             "required": [
@@ -295,14 +295,14 @@
             "properties": {
               "start_position_on_the_gene_sequence": {
                 "type": "integer",
-                "description": "NCBI CDS start position on the gene",
+                "description": "NCBI CDS start position on the gene.\n",
                 "examples": [
                   1246
                 ]
               },
               "end_position_on_the_gene_sequence": {
                 "type": "integer",
-                "description": "NCBI CDS end position on the gene",
+                "description": "NCBI CDS end position on the gene.\n",
                 "examples": [
                   1356
                 ]
@@ -316,7 +316,7 @@
     },
     "rcsb_ncbi_organism": {
       "type": "object",
-      "description": "NCBI organism information",
+      "description": "NCBI organism information.\n",
       "required": [
         "tax_id",
         "scientific_name",
@@ -325,14 +325,14 @@
       "properties": {
         "tax_id": {
           "type": "integer",
-          "description": "NCBI taxonomy ID",
+          "description": "NCBI taxonomy ID.\n",
           "examples": [
             9606
           ]
         },
         "scientific_name": {
           "type": "string",
-          "description": "NCBI organism scientific name",
+          "description": "NCBI organism scientific name.\n",
           "examples": [
             "Homo sapiens"
           ],
@@ -340,7 +340,7 @@
         },
         "common_name": {
           "type": "string",
-          "description": "NCBI organism common name",
+          "description": "NCBI organism common name.\n",
           "examples": [
             "Human"
           ],
@@ -351,14 +351,14 @@
     },
     "rcsb_ncbi_sequence": {
       "type": "object",
-      "description": "NCBI sequences",
+      "description": "NCBI sequences.\n",
       "required": [
         "protein"
       ],
       "properties": {
         "protein": {
           "type": "string",
-          "description": "NCBI protein sequence",
+          "description": "NCBI protein sequence.\n",
           "examples": [
             "MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAGQEEYSAMRDQYMRTGEGFLCVFAINNTKSFEDIHQYREQIKRVKDSDDVPMVLVGNKCDLAARTVESRQAQDLARSYGIPYIETSAKTRQGVEDAFYTLVREIRQHKLRKLNPPDESGPGCMSCKCVLS"
           ]
