@@ -2,6 +2,7 @@
   "type": "object",
   "$schema" : "http://json-schema.org/draft-04/schema#",
   "title" : "core_entry.json",
+  "description": "Combined JSON schema for RCSB Exchange Database: json-schema-min-pdbx_core_entry.json\n and manually curated schema for RCSB Data Warehouse: json-schema-core_entry.json\n",
   "required": [
     "rcsb_entry_container_identifiers",
     "rcsb_entry_info"
@@ -176,6 +177,5 @@
       }
     }
   },
-  "additionalProperties": false,
-  "description": "Combined JSON schema for RCSB Exchange Database: json-schema-min-pdbx_core_entry.json\n and manually curated schema for RCSB Data Warehouse: json-schema-core_entry.json\n"
+  "additionalProperties": false
 }

@@ -1,7 +1,8 @@
 {
-  "type" : "object",
+  "type": "object",
   "$schema" : "http://json-schema.org/draft-04/schema#",
   "title" : "removed_entries.json",
+  "description": "Combined JSON schema for RCSB Exchange Database: json-schema-min-repository_holdings_insilico_models.json,\n json-schema-min-repository_holdings_removed.json\n and manually curated schema for RCSB Data Warehouse: json-schema-removed_entries.json\n",
   "properties" : {
     "rcsb_remove_type" : {
       "type" : "string",
@@ -12,6 +13,5 @@
       "description" : "The release status for the entry."
     }
   },
-  "additionalProperties": false,
-  "description": "Combined JSON schema for RCSB Exchange Database: json-schema-min-repository_holdings_insilico_models.json,\n json-schema-min-repository_holdings_removed.json\n and manually curated schema for RCSB Data Warehouse: json-schema-removed_entries.json\n"
+  "additionalProperties": false
 }

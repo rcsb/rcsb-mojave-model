@@ -2,7 +2,10 @@
   "type": "object",
   "$schema" : "http://json-schema.org/draft-04/schema#",
   "title" : "rcsb_tree_node.json",
-  "required" : [ "id" ],
+  "description": "A tree node with a linkage to immediate parent(s) and all ancestors (node's lineage).\n",
+  "required" : [
+    "id"
+  ],
   "properties": {
     "id": {
       "type": "string",
@@ -39,6 +42,5 @@
       "description": "Terms or IDs related to the node.\n"
     }
   },
-  "additionalProperties": false,
-  "description": "A tree node with a linkage to immediate parent(s) and all ancestors (node's lineage).\n"
+  "additionalProperties": false
 }

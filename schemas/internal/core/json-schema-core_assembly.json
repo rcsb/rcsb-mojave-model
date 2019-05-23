@@ -2,6 +2,7 @@
   "type": "object",
   "$schema" : "http://json-schema.org/draft-04/schema#",
   "title" : "core_assembly.json",
+  "description": "Combined JSON schema for RCSB Exchange Database: json-schema-min-pdbx_core_assembly.json\n and manually curated schema for RCSB Data Warehouse: json-schema-core_assembly.json\n",
   "required": [
     "rcsb_assembly_container_identifiers"
   ],
@@ -182,6 +183,6 @@
       }
     }
   },
-  "additionalProperties": false,
-  "description": "Combined JSON schema for RCSB Exchange Database: json-schema-min-pdbx_core_assembly.json\n and manually curated schema for RCSB Data Warehouse: json-schema-core_assembly.json\n"
+  "additionalProperties": false
 }
+

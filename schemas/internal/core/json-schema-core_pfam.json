@@ -2,7 +2,11 @@
   "type": "object",
   "$schema" : "http://json-schema.org/draft-04/schema#",
   "title" : "core_pfam.json",
-  "required" : [ "rcsb_pfam_container_identifiers", "accession" ],
+  "description": "JSON schema for core Pfam collection in RCSB Data Warehouse.\n",
+  "required" : [
+    "rcsb_pfam_container_identifiers",
+    "accession"
+  ],
   "properties": {
     "rcsb_pfam_container_identifiers" : {
       "type" : "object",
@@ -61,6 +65,5 @@
       "description": "Pfam-A is the manually curated portion of the Pfam database.\n"
     }
   },
-  "additionalProperties": false,
-  "description": "JSON schema for core Pfam collection in RCSB Data Warehouse.\n"
+  "additionalProperties": false
 }

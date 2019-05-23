@@ -1,8 +1,8 @@
 {
-  "definitions": {},
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "description": "The Root Schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title" : "core_ncbi.json",
+  "description": "JSON schema for core NCBI collection in RCSB Data Warehouse.\n",
   "required": [
     "rcsb_ncbi_containers_identifiers",
     "rcsb_ncbi_metada",
@@ -111,7 +111,8 @@
             "GTPase HRAS human gene"
           ],
           "pattern": "^(.*)$"
-        },"uniprot_accession": {
+        },
+        "uniprot_accession": {
           "type": "array",
           "description": "UniProt accession list",
           "items": {
@@ -136,10 +137,12 @@
                   1
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "rcsb_ncbi_metada": {
       "type": "object",
@@ -156,7 +159,8 @@
           ],
           "pattern": "^(.*)$"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "rcsb_ncbi_chromosome": {
       "type": "object",
@@ -191,7 +195,8 @@
           "examples": [
             568815587
           ]
-        },"assembly": {
+        },
+        "assembly": {
           "type": "string",
           "description": "Genome assembly name",
           "examples": [
@@ -215,7 +220,8 @@
           ],
           "pattern": "^(.*)$"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "rcsb_ncbi_coordinates": {
       "type": "object",
@@ -273,7 +279,8 @@
                   152
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "protein_coordinates": {
@@ -300,10 +307,12 @@
                   1356
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "rcsb_ncbi_organism": {
       "type": "object",
@@ -337,7 +346,8 @@
           ],
           "pattern": "^(.*)$"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "rcsb_ncbi_sequence": {
       "type": "object",
@@ -353,7 +363,9 @@
             "MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAGQEEYSAMRDQYMRTGEGFLCVFAINNTKSFEDIHQYREQIKRVKDSDDVPMVLVGNKCDLAARTVESRQAQDLARSYGIPYIETSAKTRQGVEDAFYTLVREIRQHKLRKLNPPDESGPGCMSCKCVLS"
           ]
         }
-      }
+      },
+      "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }

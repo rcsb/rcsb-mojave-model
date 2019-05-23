@@ -2,6 +2,7 @@
   "type": "object",
   "$schema" : "http://json-schema.org/draft-04/schema#",
   "title" : "core_go.json",
+  "description": "JSON schema for core GO collection in RCSB Data Warehouse. Contains controlled vocabularies (ontologies)\n that describe gene products in terms of their associated\n biological processes, cellular components and molecular functions in a species-independent manner.\n",
   "required" : [
     "rcsb_go_container_identifiers",
     "aspect",
@@ -49,6 +50,5 @@
       }
     }
   },
-  "additionalProperties": false,
-  "description": "JSON schema for core GO collection in RCSB Data Warehouse. Contains controlled vocabularies (ontologies)\n that describe gene products in terms of their associated\n biological processes, cellular components and molecular functions in a species-independent manner.\n"
+  "additionalProperties": false
 }
