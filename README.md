@@ -3,7 +3,7 @@ The repository is a schema store that hosts [JSON Schemas](http://json-schema.or
 for RCSB data models!
 
 
-### Vesrsioning
+### Versioning
 Versioning of schema files is handled by adding a tag to a specific commit in the repository’s history referring 
 to a release point. Version numbers should follow [Semantic Versioning Specification](https://semver.org/#semantic-versioning-specification-semver) 
 (SemVer). Release version takes the **x.y.z** form, where **x** is the major version, **y** is the minor version, 
