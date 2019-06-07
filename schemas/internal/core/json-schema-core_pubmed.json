@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "title" : "core_pubmed.json",
+  "description": "JSON schema for core PubMed collection in RCSB Data Warehouse.\n",
+  "required" : [
+    "rcsb_pubmed_container_identifiers",
+    "_pubmed_id"
+  ],
+  "properties": {
+    "rcsb_pubmed_container_identifiers" : {
+      "type" : "object",
+      "properties": {
+        "pubmed_id": {
+          "type" : "string",
+          "description": "Accession number of Pfam entry.\n"
+        }
+      },
+      "additionalProperties": false
+    },
+    "_pubmed_id": {
+      "type": "integer",
+      "description": "Unique integer value assigned to each PubMed record.\n"
+    },
+    "pubmed_central_id": {
+      "type": "string",
+      "description": "Unique integer value assigned to each PubMed Central record.\n"
+    },
+    "doi": {
+      "type": "string",
+      "description": "Persistent identifier used to provide a link to an article location on the Internet.\n"
+    },
+    "abstract_text": {
+      "type": "string",
+      "description": "A concise, accurate and factual mini-version of the paper contents.\n"
+    },
+    "affiliation_info": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      },
+      "description": "The institution(s) that the author is affiliated with. Multiple affiliations per author are allowed.\n"
+    }
+  },
+  "additionalProperties": false
+}
