@@ -6,8 +6,7 @@
   "required": [
     "rcsb_ncbi_containers_identifiers",
     "rcsb_ncbi_metada",
-    "rcsb_ncbi_chromosome",
-    "rcsb_ncbi_coordinates",
+    "rcsb_ncbi_sequence",
     "rcsb_ncbi_organism"
   ],
   "properties": {
@@ -15,17 +14,10 @@
       "type": "object",
       "description": "RCSB NVBI entry identifiers.\n",
       "required": [
-        "gene_id",
-        "rna_nucleotide_accession",
-        "rna_nucleotide_title",
-        "rna_nucleotide_version",
-        "rna_nucleotide_gi",
         "protein_accession",
         "protein_title",
         "protein_version",
         "protein_gi",
-        "symbol",
-        "gene_name",
         "uniprot_accession"
       ],
       "properties": {
@@ -165,14 +157,6 @@
     "rcsb_ncbi_chromosome": {
       "type": "object",
       "description": "NCBI entry chromosome information.\n",
-      "required": [
-        "genomic_nucleotide_accession",
-        "genomic_nucleotide_version",
-        "genomic_nucleotide_gi",
-        "assembly",
-        "genomic_nucleotide_name",
-        "genomic_nucleotide_title"
-      ],
       "properties": {
         "genomic_nucleotide_accession": {
           "type": "string",
@@ -226,13 +210,6 @@
     "rcsb_ncbi_coordinates": {
       "type": "object",
       "description": "NCBI coordinates.\n",
-      "required": [
-        "strat_position_on_the_genomic_accession",
-        "end_position_on_the_genomic_accession",
-        "orientation",
-        "rna_coordinates",
-        "protein_coordinates"
-      ],
       "properties": {
         "strat_position_on_the_genomic_accession": {
           "type": "integer",
@@ -319,8 +296,7 @@
       "description": "NCBI organism information.\n",
       "required": [
         "tax_id",
-        "scientific_name",
-        "common_name"
+        "scientific_name"
       ],
       "properties": {
         "tax_id": {
