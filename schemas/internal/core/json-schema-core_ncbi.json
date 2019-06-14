@@ -325,6 +325,60 @@
       },
       "additionalProperties": false
     },
+    "rcsb_ncbi_aligments": {
+      "type": "object",
+      "description": "NCBI sequence aligments.\n",
+      "properties": {
+        "core_entity_alignments": {
+          "type": "array",
+          "description": "List of alignments with core_entity canonical sequences",
+          "items": {
+            "type": "object",
+            "description": "Alignment with a core_entity canonical sequence",
+            "required": ["rcsb_entity_container_identifiers","aligned_regions"],
+            "properties": {
+              "rcsb_entity_container_identifiers": {
+                "type": "object",
+                "description": "core_entity identifiers",
+                "required": ["entity_id","entry_id"],
+                "properties": {
+                  "entry_id": {
+                    "type": "string"
+                  },
+                  "entity_id": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "aligned_regions": {
+                "type": "array",
+                "description": "Aligned sequence regions",
+                "items": {
+                  "type": "object",
+                  "description": "Aligned region",
+                  "required": ["target_begin","query_begin","length"],
+                  "properties": {
+                    "target_begin":{
+                      "type": "integer",
+                      "description": "NCBI sequence start position"
+                    },
+                    "query_begin": {
+                      "type": "integer",
+                      "description": "Entity seqeunce start position"
+                    },
+                    "length": {
+                      "type": "integer",
+                      "description": "Aligned region length"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
     "rcsb_ncbi_sequence": {
       "type": "object",
       "description": "NCBI sequences.\n",
