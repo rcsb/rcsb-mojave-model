@@ -220,7 +220,7 @@
       "type": "object",
       "description": "NCBI coordinates.\n",
       "properties": {
-        "strat_position_on_the_genomic_accession": {
+        "start_position_on_the_genomic_accession": {
           "type": "integer",
           "description": "NCBI gene start position.\n",
           "examples": [
@@ -334,9 +334,9 @@
       },
       "additionalProperties": false
     },
-    "rcsb_ncbi_aligments": {
+    "rcsb_ncbi_alignments": {
       "type": "object",
-      "description": "NCBI sequence aligments.\n",
+      "description": "NCBI pairwise sequence alignments.\n",
       "properties": {
         "core_entity_alignments": {
           "type": "array",
