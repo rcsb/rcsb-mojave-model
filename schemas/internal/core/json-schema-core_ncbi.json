@@ -12,12 +12,13 @@
   "properties": {
     "rcsb_ncbi_containers_identifiers": {
       "type": "object",
-      "description": "RCSB NVBI entry identifiers.\n",
+      "description": "RCSB NCBI entry identifiers.\n",
       "required": [
         "protein_accession",
         "protein_title",
         "protein_version",
         "protein_gi",
+        "tax_id",
         "uniprot_accession"
       ],
       "properties": {
@@ -101,6 +102,14 @@
           "description": "NCBI gene name.\n",
           "examples": [
             "GTPase HRAS human gene"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "tax_id": {
+          "type": "string",
+          "description": "NCBI taxonomy ID (String).\n",
+          "examples": [
+            "NP_005334"
           ],
           "pattern": "^(.*)$"
         },
