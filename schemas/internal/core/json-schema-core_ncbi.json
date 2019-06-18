@@ -12,12 +12,13 @@
   "properties": {
     "rcsb_ncbi_containers_identifiers": {
       "type": "object",
-      "description": "RCSB NVBI entry identifiers.\n",
+      "description": "RCSB NCBI entry identifiers.\n",
       "required": [
         "protein_accession",
         "protein_title",
         "protein_version",
         "protein_gi",
+        "tax_id",
         "uniprot_accession"
       ],
       "properties": {
@@ -101,6 +102,14 @@
           "description": "NCBI gene name.\n",
           "examples": [
             "GTPase HRAS human gene"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "tax_id": {
+          "type": "string",
+          "description": "NCBI taxonomy ID (String).\n",
+          "examples": [
+            "NP_005334"
           ],
           "pattern": "^(.*)$"
         },
@@ -211,7 +220,7 @@
       "type": "object",
       "description": "NCBI coordinates.\n",
       "properties": {
-        "strat_position_on_the_genomic_accession": {
+        "start_position_on_the_genomic_accession": {
           "type": "integer",
           "description": "NCBI gene start position.\n",
           "examples": [
@@ -321,6 +330,73 @@
             "Human"
           ],
           "pattern": "^(.*)$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "rcsb_ncbi_alignments": {
+      "type": "object",
+      "description": "NCBI pairwise sequence alignments.\n",
+      "properties": {
+        "core_entity_alignments": {
+          "type": "array",
+          "description": "List of alignments with core_entity canonical sequences",
+          "items": {
+            "type": "object",
+            "description": "Alignment with a core_entity canonical sequence",
+            "required": ["rcsb_entity_container_identifiers","scores","aligned_regions"],
+            "properties": {
+              "rcsb_entity_container_identifiers": {
+                "type": "object",
+                "description": "core_entity identifiers",
+                "required": ["entity_id","entry_id"],
+                "properties": {
+                  "entry_id": {
+                    "type": "string"
+                  },
+                  "entity_id": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "scores": {
+                "type": "object",
+                "description": "Alignment scores",
+                "required": ["target_coverage","query_coverage"],
+                "properties": {
+                  "target_coverage": {
+                    "type": "integer"
+                  },
+                  "query_coverage": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "aligned_regions": {
+                "type": "array",
+                "description": "Aligned sequence regions",
+                "items": {
+                  "type": "object",
+                  "description": "Aligned region",
+                  "required": ["target_begin","query_begin","length"],
+                  "properties": {
+                    "target_begin":{
+                      "type": "integer",
+                      "description": "NCBI sequence start position"
+                    },
+                    "query_begin": {
+                      "type": "integer",
+                      "description": "Entity seqeunce start position"
+                    },
+                    "length": {
+                      "type": "integer",
+                      "description": "Aligned region length"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "additionalProperties": false
