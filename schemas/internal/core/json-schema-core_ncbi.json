@@ -359,6 +359,19 @@
                   }
                 }
               },
+              "scores": {
+                "type": "object",
+                "description": "Alignment scores",
+                "required": ["target_coverage","query_coverage"],
+                "properties": {
+                  "target_coverage": {
+                    "type": "integer"
+                  },
+                  "query_coverage": {
+                    "type": "integer"
+                  }
+                }
+              },
               "aligned_regions": {
                 "type": "array",
                 "description": "Aligned sequence regions",
