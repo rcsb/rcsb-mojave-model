@@ -346,7 +346,7 @@
             "description": "Alignment with a core_entity canonical sequence",
             "required": ["rcsb_entity_container_identifiers","scores","aligned_regions"],
             "properties": {
-              "rcsb_entity_container_identifiers": {
+              "core_entity_identifiers": {
                 "type": "object",
                 "description": "core_entity identifiers",
                 "required": ["entity_id","entry_id"],
@@ -355,7 +355,7 @@
                     "type": "string"
                   },
                   "entity_id": {
-                    "type": "integer"
+                    "type": "string"
                   }
                 }
               },
