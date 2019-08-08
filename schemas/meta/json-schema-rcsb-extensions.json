@@ -6,7 +6,9 @@
     "schemaArray": {
       "type": "array",
       "minItems": 1,
-      "items": { "$ref": "#" }
+      "items": {
+        "$ref": "#"
+      }
     },
     "nonNegativeInteger": {
       "type": "integer",
@@ -14,8 +16,12 @@
     },
     "nonNegativeIntegerDefault0": {
       "allOf": [
-        { "$ref": "#/definitions/nonNegativeInteger" },
-        { "default": 0 }
+        {
+          "$ref": "#/definitions/nonNegativeInteger"
+        },
+        {
+          "default": 0
+        }
       ]
     },
     "simpleTypes": {
@@ -31,27 +37,111 @@
     },
     "stringArray": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "uniqueItems": true,
       "default": []
     }
   },
-  "type": ["object", "boolean"],
+  "primitiveTypes": {
+    "enum": [
+      "boolean",
+      "integer",
+      "number",
+      "string"
+    ]
+  },
+  "type": [
+    "object",
+    "boolean"
+  ],
   "properties": {
-    "rcsb_maximum_value": {
+    "rcsb_current_maximum_value": {
       "anyOf": [
-        { "type": "integer" },
-        { "type": "number" }
+        {
+          "type": "integer"
+        },
+        {
+          "type": "number"
+        }
       ]
     },
-    "rcsb_minimum_value": {
+    "rcsb_current_minimum_value": {
       "anyOf": [
-        { "type": "integer" },
-        { "type": "number" }
+        {
+          "type": "integer"
+        },
+        {
+          "type": "number"
+        }
       ]
     },
-    "rcsb_distinct_values": {
+    "rcsb_current_distinct_values": {
       "$ref": "#/definitions/stringArray"
+    },
+    "rcsb_precision_digits": {
+      "description": "The number of digits of precision for the floating point value.",
+      "type": "integer"
+    },
+    "rcsb_units": {
+      "description": "The units of expression for the item.",
+      "type": "string"
+    },
+    "rcsb_search_context": {
+      "type": "array",
+      "items": {
+        "description": "A search type applied to the item.",
+        "type": "string",
+        "enum": [
+          "full-text",
+          "attribute",
+          "tree",
+          "faceted"
+        ]
+      }
+    },
+    "rcsb_description": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "description": "The text of the contextual description.",
+            "type": "string",
+            "enum": [
+              "dictionary",
+              "brief",
+              "deposition"
+            ]
+          }
+        },
+        "context": {
+          "description": "The context for the description.",
+          "type": "string"
+        }
+      }
+    },
+    "rcsb_enum_annotated": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "A value in the controlled vocabulary.",
+            "type": [
+              "string",
+              "integer",
+              "number",
+              "boolean"
+            ]
+          }
+        },
+        "detail": {
+          "description": "A description of the value in the controlled vocabulary.",
+          "type": "string"
+        }
+      }
     }
   },
   "default": true
