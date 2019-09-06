@@ -91,60 +91,15 @@
     "rcsb_search_context": {
       "type": "array",
       "items": {
-        "type": "object",
-        "properties": {
-          "search_type": {
-            "description": "A search type applied to the item.",
-            "type": "string",
-            "enum": [
-              "full-text",
-              "attribute",
-              "tree",
-              "faceted"
-            ]
-          },
-          "search_name": {
-            "description": "An optional name for a conditioned search.",
-            "type": "string"
-          },
-          "search_conditions": {
-            "description": "Additional selections conditions for the search",
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "object_name": {
-                  "description": "Attribute name within the object on which the condition is placed.",
-                  "type": "string"
-                },
-                "value": {
-                  "description": "Condition value.",
-                  "type": [
-                    "string",
-                    "integer",
-                    "number",
-                    "boolean"
-                  ]
-                },
-                "op": {
-                  "description": "Condition operation.",
-                  "type": "string",
-                  "enum": [
-                    "eq",
-                    "gt",
-                    "lt",
-                    "gte",
-                    "lte",
-                    "ne"
-                  ]
-                }
-              }
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "uniqueItems": true
+        "description": "A search type applied to the item.",
+        "type": "string",
+        "enum": [
+          "full-text",
+          "attribute",
+          "tree",
+          "faceted"
+        ]
+      }
     },
     "rcsb_description": {
       "type": "array",
