@@ -94,12 +94,23 @@
         "description": "A search type applied to the item.",
         "type": "string",
         "enum": [
+          "default-match",
           "full-text",
-          "attribute",
-          "tree",
-          "faceted"
+          "exact-match",
+          "suggest"
         ]
       }
+    },
+    "rcsb_full_text_priority": {
+      "type": "integer",
+      "description": "Relative priority among full-text search fields.",
+      "default": 1,
+      "minimum": 1,
+      "maximum": 100
+    },
+    "rcsb_nested_indexing": {
+      "type": "boolean",
+      "description": "Indicates that the nested data type instead of the object data type should be used to index the inner objects of array."
     },
     "rcsb_description": {
       "type": "array",
