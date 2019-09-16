@@ -119,16 +119,16 @@
         "properties": {
           "text": {
             "description": "The text of the contextual description.",
+            "type": "string"
+          },
+          "context": {
+            "description": "The context for the description.",
             "type": "string",
             "enum": [
               "dictionary",
               "brief",
               "deposition"
             ]
-          },
-          "context": {
-            "description": "The context for the description.",
-            "type": "string"
           }
         }
       }
