@@ -1,0 +1,83 @@
+{
+   "type": "object",
+   "properties": {
+      "database_name": {
+         "type": "string",
+         "description": "Name of the database container for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Name of the database container for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
+      },
+      "object_name": {
+         "type": "string",
+         "description": "Name of the database object for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Name of the database object for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
+      },
+      "update_begin_timestamp": {
+         "type": "string",
+         "format": "date-time",
+         "description": "Starting timestamp for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Starting timestamp for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
+      },
+      "update_end_timestamp": {
+         "type": "string",
+         "format": "date-time",
+         "description": "Ending timestamp for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Ending timestamp for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
+      },
+      "update_id": {
+         "type": "string",
+         "description": "Identifier for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Identifier for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
+      },
+      "update_status_flag": {
+         "type": "string",
+         "enum": [
+            "N",
+            "Y"
+         ],
+         "description": "Success status for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Success status for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "database_name",
+      "object_name",
+      "update_id",
+      "update_status_flag"
+   ],
+   "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-rcsb_data_exchange_status.json",
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "schema: data_exchange collection: rcsb_data_exchange_status version: 1.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the data_exchange content type schema. This schema supports collection rcsb_data_exchange_status version 1.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-rcsb_data_exchange_status.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 1.1.0"
+}

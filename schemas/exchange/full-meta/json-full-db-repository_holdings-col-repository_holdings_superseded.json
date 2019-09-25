@@ -1,0 +1,50 @@
+{
+   "type": "object",
+   "properties": {
+      "entry_id": {
+         "type": "string",
+         "description": "The PDB entry accession code of a superseding entry.",
+         "rcsb_description": [
+            {
+               "text": "The PDB entry accession code of a superseding entry.",
+               "context": "dictionary"
+            }
+         ]
+      },
+      "id_codes_superseded": {
+         "type": "array",
+         "items": {
+            "type": "string",
+            "description": "The PDB accesion codes supersed by this entry.",
+            "rcsb_description": [
+               {
+                  "text": "The PDB accesion codes supersed by this entry.",
+                  "context": "dictionary"
+               }
+            ]
+         },
+         "uniqueItems": false
+      },
+      "update_id": {
+         "type": "string",
+         "description": "Identifier for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Identifier for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "entry_id",
+      "id_codes_superseded",
+      "update_id"
+   ],
+   "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-repository_holdings_superseded.json",
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "schema: repository_holdings collection: repository_holdings_superseded version: 1.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_superseded version 1.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-repository_holdings_superseded.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 1.1.0"
+}
