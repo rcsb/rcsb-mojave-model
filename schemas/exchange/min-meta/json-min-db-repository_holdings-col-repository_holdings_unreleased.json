@@ -8,7 +8,13 @@
             "examples": [
                "Bleary, Percival R.; O'Neil, F.K."
             ],
-            "description": "Names of the authors of the entry."
+            "description": "Names of the authors of the entry.",
+            "rcsb_description": [
+               {
+                  "text": "Names of the authors of the entry.",
+                  "context": "dictionary"
+               }
+            ]
          },
          "uniqueItems": false
       },
@@ -20,51 +26,111 @@
             "RELEASE IMMEDIATELY",
             "RELEASE NOW"
          ],
-         "description": "The prerelease status for the molecular sequences for the entry ."
+         "description": "The prerelease status for the molecular sequences for the entry .",
+         "rcsb_description": [
+            {
+               "text": "The prerelease status for the molecular sequences for the entry .",
+               "context": "dictionary"
+            }
+         ]
       },
       "deposit_date": {
          "type": "string",
          "format": "date",
-         "description": "The entry deposition date."
+         "description": "The entry deposition date.",
+         "rcsb_description": [
+            {
+               "text": "The entry deposition date.",
+               "context": "dictionary"
+            }
+         ]
       },
       "deposit_date_coordinates": {
          "type": "string",
          "format": "date",
-         "description": "The deposition date of entry coordinate data."
+         "description": "The deposition date of entry coordinate data.",
+         "rcsb_description": [
+            {
+               "text": "The deposition date of entry coordinate data.",
+               "context": "dictionary"
+            }
+         ]
       },
       "deposit_date_nmr_restraints": {
          "type": "string",
          "format": "date",
-         "description": "The deposition date of entry NMR restraint data."
+         "description": "The deposition date of entry NMR restraint data.",
+         "rcsb_description": [
+            {
+               "text": "The deposition date of entry NMR restraint data.",
+               "context": "dictionary"
+            }
+         ]
       },
       "deposit_date_structure_factors": {
          "type": "string",
          "format": "date",
-         "description": "The deposition date of entry structure factor data."
+         "description": "The deposition date of entry structure factor data.",
+         "rcsb_description": [
+            {
+               "text": "The deposition date of entry structure factor data.",
+               "context": "dictionary"
+            }
+         ]
       },
       "entry_id": {
          "type": "string",
-         "description": "The PDB entry accession code."
+         "description": "The PDB entry accession code.",
+         "rcsb_description": [
+            {
+               "text": "The PDB entry accession code.",
+               "context": "dictionary"
+            }
+         ]
       },
       "hold_date_coordinates": {
          "type": "string",
          "format": "date",
-         "description": "The embargo date of entry coordinate data."
+         "description": "The embargo date of entry coordinate data.",
+         "rcsb_description": [
+            {
+               "text": "The embargo date of entry coordinate data.",
+               "context": "dictionary"
+            }
+         ]
       },
       "hold_date_nmr_restraints": {
          "type": "string",
          "format": "date",
-         "description": "The embargo date of entry NMR restraint data."
+         "description": "The embargo date of entry NMR restraint data.",
+         "rcsb_description": [
+            {
+               "text": "The embargo date of entry NMR restraint data.",
+               "context": "dictionary"
+            }
+         ]
       },
       "hold_date_structure_factors": {
          "type": "string",
          "format": "date",
-         "description": "The embargo date of entry structure factor data."
+         "description": "The embargo date of entry structure factor data.",
+         "rcsb_description": [
+            {
+               "text": "The embargo date of entry structure factor data.",
+               "context": "dictionary"
+            }
+         ]
       },
       "release_date": {
          "type": "string",
          "format": "date",
-         "description": "The release date for the entry."
+         "description": "The release date for the entry.",
+         "rcsb_description": [
+            {
+               "text": "The release date for the entry.",
+               "context": "dictionary"
+            }
+         ]
       },
       "status_code": {
          "type": "string",
@@ -80,15 +146,33 @@
             "WAIT",
             "WDRN"
          ],
-         "description": "The release status for the entry."
+         "description": "The release status for the entry.",
+         "rcsb_description": [
+            {
+               "text": "The release status for the entry.",
+               "context": "dictionary"
+            }
+         ]
       },
       "title": {
          "type": "string",
-         "description": "The entry title."
+         "description": "The entry title.",
+         "rcsb_description": [
+            {
+               "text": "The entry title.",
+               "context": "dictionary"
+            }
+         ]
       },
       "update_id": {
          "type": "string",
-         "description": "Identifier for the current data exchange status record."
+         "description": "Identifier for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Identifier for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
       }
    },
    "additionalProperties": false,

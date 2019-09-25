@@ -218,6 +218,16 @@
                      "context": "dictionary"
                   }
                ]
+            },
+            "rcsb_id": {
+               "type": "string",
+               "description": "A unique identifier for each object in this entity instance validation container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+               "rcsb_description": [
+                  {
+                     "text": "A unique identifier for each object in this entity instance validation container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+                     "context": "dictionary"
+                  }
+               ]
             }
          },
          "additionalProperties": false,
@@ -225,7 +235,8 @@
             "asym_id",
             "auth_asym_id",
             "entity_id",
-            "entry_id"
+            "entry_id",
+            "rcsb_id"
          ]
       },
       "rcsb_polymer_instance_validation_feature": {
@@ -328,7 +339,51 @@
                },
                "type": {
                   "type": "string",
+                  "enum": [
+                     "ANGLE_OUTLIER",
+                     "BOND_OUTLIER",
+                     "MOGUL_ANGLE_OUTLIER",
+                     "MOGUL_BOND_OUTLIER",
+                     "RAMACHANDRAN_OUTLIER",
+                     "ROTAMER_OUTLIER",
+                     "RSRCC_OUTLIER",
+                     "RSRZ_OUTLIER"
+                  ],
                   "description": "A type or category of the feature.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "ANGLE_OUTLIER",
+                        "detail": "Molprobity bond angle outlier"
+                     },
+                     {
+                        "value": "BOND_OUTLIER",
+                        "detail": "Molprobity bond distance outlier"
+                     },
+                     {
+                        "value": "MOGUL_ANGLE_OUTLIER",
+                        "detail": "Mogul bond angle outlier"
+                     },
+                     {
+                        "value": "MOGUL_BOND_OUTLIER",
+                        "detail": "Mogul bond distance outlier"
+                     },
+                     {
+                        "value": "RAMACHANDRAN_OUTLIER",
+                        "detail": "Molprobity Ramachandran outlier"
+                     },
+                     {
+                        "value": "ROTAMER_OUTLIER",
+                        "detail": "Molprobity rotamer outlier"
+                     },
+                     {
+                        "value": "RSRCC_OUTLIER",
+                        "detail": "Real space density correlation value < 0.65"
+                     },
+                     {
+                        "value": "RSRZ_OUTLIER",
+                        "detail": "Real space R-value Z score > 2"
+                     }
+                  ],
                   "rcsb_description": [
                      {
                         "text": "A type or category of the feature.",
@@ -499,7 +554,51 @@
                },
                "type": {
                   "type": "string",
+                  "enum": [
+                     "ANGLE_OUTLIER",
+                     "BOND_OUTLIER",
+                     "MOGUL_ANGLE_OUTLIER",
+                     "MOGUL_BOND_OUTLIER",
+                     "RAMACHANDRAN_OUTLIER",
+                     "ROTAMER_OUTLIER",
+                     "RSRCC_OUTLIER",
+                     "RSRZ_OUTLIER"
+                  ],
                   "description": "Type or category of the feature.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "ANGLE_OUTLIER",
+                        "detail": "Molprobity bond angle outlier"
+                     },
+                     {
+                        "value": "BOND_OUTLIER",
+                        "detail": "Molprobity bond distance outlier"
+                     },
+                     {
+                        "value": "MOGUL_ANGLE_OUTLIER",
+                        "detail": "Mogul bond angle outlier"
+                     },
+                     {
+                        "value": "MOGUL_BOND_OUTLIER",
+                        "detail": "Mogul bond distance outlier"
+                     },
+                     {
+                        "value": "RAMACHANDRAN_OUTLIER",
+                        "detail": "Molprobity Ramachandran outlier"
+                     },
+                     {
+                        "value": "ROTAMER_OUTLIER",
+                        "detail": "Molprobity rotamer outlier"
+                     },
+                     {
+                        "value": "RSRCC_OUTLIER",
+                        "detail": "Real space density correlation value < 0.65"
+                     },
+                     {
+                        "value": "RSRZ_OUTLIER",
+                        "detail": "Real space R-value Z score > 2"
+                     }
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Type or category of the feature.",
@@ -516,9 +615,22 @@
          "minItems": 1,
          "uniqueItems": true,
          "rcsb_nested_indexing": true
+      },
+      "rcsb_id": {
+         "type": "string",
+         "description": "A unique identifier for each object in this entity instance validation container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+         "rcsb_description": [
+            {
+               "text": "A unique identifier for each object in this entity instance validation container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+               "context": "dictionary"
+            }
+         ]
       }
    },
    "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity_instance_validation.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
    "title": "schema: pdbx_core collection: pdbx_core_entity_instance_validation version: 6.1.0",

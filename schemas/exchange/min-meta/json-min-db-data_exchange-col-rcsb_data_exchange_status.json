@@ -3,25 +3,55 @@
    "properties": {
       "database_name": {
          "type": "string",
-         "description": "Name of the database container for the current data exchange status record."
+         "description": "Name of the database container for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Name of the database container for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
       },
       "object_name": {
          "type": "string",
-         "description": "Name of the database object for the current data exchange status record."
+         "description": "Name of the database object for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Name of the database object for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
       },
       "update_begin_timestamp": {
          "type": "string",
          "format": "date-time",
-         "description": "Starting timestamp for the current data exchange status record."
+         "description": "Starting timestamp for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Starting timestamp for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
       },
       "update_end_timestamp": {
          "type": "string",
          "format": "date-time",
-         "description": "Ending timestamp for the current data exchange status record."
+         "description": "Ending timestamp for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Ending timestamp for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
       },
       "update_id": {
          "type": "string",
-         "description": "Identifier for the current data exchange status record."
+         "description": "Identifier for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Identifier for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
       },
       "update_status_flag": {
          "type": "string",
@@ -29,7 +59,13 @@
             "N",
             "Y"
          ],
-         "description": "Success status for the current data exchange status record."
+         "description": "Success status for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Success status for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
       }
    },
    "additionalProperties": false,

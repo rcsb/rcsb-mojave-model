@@ -8,36 +8,72 @@
             "examples": [
                "Bleary, Percival R.; O'Neil, F.K."
             ],
-            "description": "Names of the authors of the entry."
+            "description": "Names of the authors of the entry.",
+            "rcsb_description": [
+               {
+                  "text": "Names of the authors of the entry.",
+                  "context": "dictionary"
+               }
+            ]
          },
          "uniqueItems": false
       },
       "deposit_date": {
          "type": "string",
          "format": "date",
-         "description": "The entry deposition date."
+         "description": "The entry deposition date.",
+         "rcsb_description": [
+            {
+               "text": "The entry deposition date.",
+               "context": "dictionary"
+            }
+         ]
       },
       "entry_id": {
          "type": "string",
-         "description": "The PDB entry accession code."
+         "description": "The PDB entry accession code.",
+         "rcsb_description": [
+            {
+               "text": "The PDB entry accession code.",
+               "context": "dictionary"
+            }
+         ]
       },
       "id_codes_replaced_by": {
          "type": "array",
          "items": {
             "type": "string",
-            "description": "The list of superseding PDB accession codes for the removed insilico model entry."
+            "description": "The list of superseding PDB accession codes for the removed insilico model entry.",
+            "rcsb_description": [
+               {
+                  "text": "The list of superseding PDB accession codes for the removed insilico model entry.",
+                  "context": "dictionary"
+               }
+            ]
          },
          "uniqueItems": false
       },
       "release_date": {
          "type": "string",
          "format": "date",
-         "description": "The release date for the entry."
+         "description": "The release date for the entry.",
+         "rcsb_description": [
+            {
+               "text": "The release date for the entry.",
+               "context": "dictionary"
+            }
+         ]
       },
       "remove_date": {
          "type": "string",
          "format": "date",
-         "description": "The removal date for the entry."
+         "description": "The removal date for the entry.",
+         "rcsb_description": [
+            {
+               "text": "The removal date for the entry.",
+               "context": "dictionary"
+            }
+         ]
       },
       "status_code": {
          "type": "string",
@@ -46,15 +82,33 @@
             "TRSF",
             "WDRN"
          ],
-         "description": "The release status for the entry."
+         "description": "The release status for the entry.",
+         "rcsb_description": [
+            {
+               "text": "The release status for the entry.",
+               "context": "dictionary"
+            }
+         ]
       },
       "title": {
          "type": "string",
-         "description": "The entry title."
+         "description": "The entry title.",
+         "rcsb_description": [
+            {
+               "text": "The entry title.",
+               "context": "dictionary"
+            }
+         ]
       },
       "update_id": {
          "type": "string",
-         "description": "Identifier for the current data exchange status record."
+         "description": "Identifier for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Identifier for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
       }
    },
    "additionalProperties": false,

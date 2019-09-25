@@ -3,15 +3,33 @@
    "properties": {
       "cluster_id": {
          "type": "integer",
-         "description": "Identiier for a cluster at the specified level of sequence identity within the cluster data set."
+         "description": "Identiier for a cluster at the specified level of sequence identity within the cluster data set.",
+         "rcsb_description": [
+            {
+               "text": "Identiier for a cluster at the specified level of sequence identity within the cluster data set.",
+               "context": "dictionary"
+            }
+         ]
       },
       "data_set_id": {
          "type": "string",
-         "description": "Identifier for the cluster data set."
+         "description": "Identifier for the cluster data set.",
+         "rcsb_description": [
+            {
+               "text": "Identifier for the cluster data set.",
+               "context": "dictionary"
+            }
+         ]
       },
       "identity": {
          "type": "integer",
-         "description": "Sequence identity expressed as an integer percent value."
+         "description": "Sequence identity expressed as an integer percent value.",
+         "rcsb_description": [
+            {
+               "text": "Sequence identity expressed as an integer percent value.",
+               "context": "dictionary"
+            }
+         ]
       },
       "sequence_membership": {
          "type": "array",
@@ -20,11 +38,23 @@
             "properties": {
                "entity_id": {
                   "type": "string",
-                  "description": "Polymer entity identifier."
+                  "description": "Polymer entity identifier.",
+                  "rcsb_description": [
+                     {
+                        "text": "Polymer entity identifier.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "entry_id": {
                   "type": "string",
-                  "description": "Structure entry identifier."
+                  "description": "Structure entry identifier.",
+                  "rcsb_description": [
+                     {
+                        "text": "Structure entry identifier.",
+                        "context": "dictionary"
+                     }
+                  ]
                }
             },
             "additionalProperties": false

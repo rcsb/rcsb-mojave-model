@@ -542,12 +542,23 @@
                      "context": "dictionary"
                   }
                ]
+            },
+            "rcsb_id": {
+               "type": "string",
+               "description": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
+               "rcsb_description": [
+                  {
+                     "text": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
+                     "context": "dictionary"
+                  }
+               ]
             }
          },
          "additionalProperties": false,
          "required": [
             "assembly_id",
-            "entry_id"
+            "entry_id",
+            "rcsb_id"
          ]
       },
       "rcsb_assembly_info": {

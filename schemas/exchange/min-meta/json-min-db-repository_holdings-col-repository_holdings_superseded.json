@@ -3,19 +3,37 @@
    "properties": {
       "entry_id": {
          "type": "string",
-         "description": "The PDB entry accession code of a superseding entry."
+         "description": "The PDB entry accession code of a superseding entry.",
+         "rcsb_description": [
+            {
+               "text": "The PDB entry accession code of a superseding entry.",
+               "context": "dictionary"
+            }
+         ]
       },
       "id_codes_superseded": {
          "type": "array",
          "items": {
             "type": "string",
-            "description": "The PDB accesion codes supersed by this entry."
+            "description": "The PDB accesion codes supersed by this entry.",
+            "rcsb_description": [
+               {
+                  "text": "The PDB accesion codes supersed by this entry.",
+                  "context": "dictionary"
+               }
+            ]
          },
          "uniqueItems": false
       },
       "update_id": {
          "type": "string",
-         "description": "Identifier for the current data exchange status record."
+         "description": "Identifier for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Identifier for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
       }
    },
    "additionalProperties": false,

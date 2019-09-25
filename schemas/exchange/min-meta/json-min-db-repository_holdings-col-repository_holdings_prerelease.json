@@ -3,7 +3,13 @@
    "properties": {
       "entry_id": {
          "type": "string",
-         "description": "The PDB entry accession code."
+         "description": "The PDB entry accession code.",
+         "rcsb_description": [
+            {
+               "text": "The PDB entry accession code.",
+               "context": "dictionary"
+            }
+         ]
       },
       "seq_one_letter_code": {
          "type": "array",
@@ -14,13 +20,25 @@
                "AUCGGAAU...",
                "(DG}(DA)(DT)(DA)(DT)..."
             ],
-            "description": "Chemical sequence expressed as string of one-letter amino acid codes.\n Modifications and non-standard amino acids are represented parenthetically\n as 3-letter codes."
+            "description": "Chemical sequence expressed as string of one-letter amino acid codes.\n Modifications and non-standard amino acids are represented parenthetically\n as 3-letter codes.",
+            "rcsb_description": [
+               {
+                  "text": "Chemical sequence expressed as string of one-letter amino acid codes.\n Modifications and non-standard amino acids are represented parenthetically\n as 3-letter codes.",
+                  "context": "dictionary"
+               }
+            ]
          },
          "uniqueItems": false
       },
       "update_id": {
          "type": "string",
-         "description": "Identifier for the current data exchange status record."
+         "description": "Identifier for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Identifier for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
       }
    },
    "additionalProperties": false,

@@ -5,13 +5,25 @@
          "type": "array",
          "items": {
             "type": "string",
-            "description": "The assembly id codes."
+            "description": "The assembly id codes.",
+            "rcsb_description": [
+               {
+                  "text": "The assembly id codes.",
+                  "context": "dictionary"
+               }
+            ]
          },
          "uniqueItems": false
       },
       "entry_id": {
          "type": "string",
-         "description": "The PDB entry accession code."
+         "description": "The PDB entry accession code.",
+         "rcsb_description": [
+            {
+               "text": "The PDB entry accession code.",
+               "context": "dictionary"
+            }
+         ]
       },
       "repository_content_types": {
          "type": "array",
@@ -34,13 +46,25 @@
                "structure factors",
                "validation report"
             ],
-            "description": "The list of content types associated with this entry."
+            "description": "The list of content types associated with this entry.",
+            "rcsb_description": [
+               {
+                  "text": "The list of content types associated with this entry.",
+                  "context": "dictionary"
+               }
+            ]
          },
          "uniqueItems": false
       },
       "update_id": {
          "type": "string",
-         "description": "Identifier for the current data exchange status record."
+         "description": "Identifier for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Identifier for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
       }
    },
    "additionalProperties": false,

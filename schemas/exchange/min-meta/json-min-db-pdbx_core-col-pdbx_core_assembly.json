@@ -9,19 +9,47 @@
                "examples": [
                   "The icosahedral virus particle."
                ],
-               "description": "A description of special aspects of the macromolecular assembly."
+               "description": "A description of special aspects of the macromolecular assembly.",
+               "rcsb_search_context": [
+                  "full-text"
+               ],
+               "rcsb_full_text_priority": 1,
+               "rcsb_description": [
+                  {
+                     "text": "A description of special aspects of the macromolecular assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "id": {
                "type": "string",
-               "description": "The value of _pdbx_struct_assembly.id must uniquely identify a record in\n the PDBX_STRUCT_ASSEMBLY list."
+               "description": "The value of _pdbx_struct_assembly.id must uniquely identify a record in\n the PDBX_STRUCT_ASSEMBLY list.",
+               "rcsb_description": [
+                  {
+                     "text": "The value of _pdbx_struct_assembly.id must uniquely identify a record in\n the PDBX_STRUCT_ASSEMBLY list.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "method_details": {
                "type": "string",
-               "description": "Provides details of the method used to determine or \n compute the assembly."
+               "description": "Provides details of the method used to determine or \n compute the assembly.",
+               "rcsb_description": [
+                  {
+                     "text": "Provides details of the method used to determine or \n compute the assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "oligomeric_count": {
                "type": "integer",
-               "description": "The number of polymer molecules in the assembly."
+               "description": "The number of polymer molecules in the assembly.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of polymer molecules in the assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "oligomeric_details": {
                "type": "string",
@@ -35,7 +63,21 @@
                   "180-meric",
                   "helical"
                ],
-               "description": "Provides the details of the oligomeric state of the assembly."
+               "description": "Provides the details of the oligomeric state of the assembly.",
+               "rcsb_search_context": [
+                  "full-text"
+               ],
+               "rcsb_full_text_priority": 1,
+               "rcsb_description": [
+                  {
+                     "text": "Provides the details of the oligomeric state of the assembly.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Enter the oligomeric state of your system. You may select unknown if you have no biophysical evidence to support any choice.",
+                     "context": "deposition"
+                  }
+               ]
             },
             "rcsb_candidate_assembly": {
                "type": "string",
@@ -46,7 +88,13 @@
                "examples": [
                   "Y"
                ],
-               "description": "Candidate macromolecular assembly.\n\n Excludes the following cases classified in pdbx_struct_asembly.details:\n\n 'crystal asymmetric unit', 'crystal asymmetric unit, crystal frame', 'helical asymmetric unit',\n 'helical asymmetric unit, std helical frame','icosahedral 23 hexamer', 'icosahedral asymmetric unit',\n 'icosahedral asymmetric unit, std point frame','icosahedral pentamer', 'pentasymmetron capsid unit',\n 'point asymmetric unit', 'point asymmetric unit, std point frame','trisymmetron capsid unit',\n  and 'deposited_coordinates'."
+               "description": "Candidate macromolecular assembly.\n\n Excludes the following cases classified in pdbx_struct_asembly.details:\n\n 'crystal asymmetric unit', 'crystal asymmetric unit, crystal frame', 'helical asymmetric unit',\n 'helical asymmetric unit, std helical frame','icosahedral 23 hexamer', 'icosahedral asymmetric unit',\n 'icosahedral asymmetric unit, std point frame','icosahedral pentamer', 'pentasymmetron capsid unit',\n 'point asymmetric unit', 'point asymmetric unit, std point frame','trisymmetron capsid unit',\n  and 'deposited_coordinates'.",
+               "rcsb_description": [
+                  {
+                     "text": "Candidate macromolecular assembly.\n\n Excludes the following cases classified in pdbx_struct_asembly.details:\n\n 'crystal asymmetric unit', 'crystal asymmetric unit, crystal frame', 'helical asymmetric unit',\n 'helical asymmetric unit, std helical frame','icosahedral 23 hexamer', 'icosahedral asymmetric unit',\n 'icosahedral asymmetric unit, std point frame','icosahedral pentamer', 'pentasymmetron capsid unit',\n 'point asymmetric unit', 'point asymmetric unit, std point frame','trisymmetron capsid unit',\n  and 'deposited_coordinates'.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "rcsb_details": {
                "type": "string",
@@ -58,7 +106,17 @@
                "examples": [
                   "author_and_software_defined_assembly"
                ],
-               "description": "A filtered description of the macromolecular assembly."
+               "description": "A filtered description of the macromolecular assembly.",
+               "rcsb_search_context": [
+                  "full-text"
+               ],
+               "rcsb_full_text_priority": 1,
+               "rcsb_description": [
+                  {
+                     "text": "A filtered description of the macromolecular assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             }
          },
          "additionalProperties": false,
@@ -73,11 +131,23 @@
             "properties": {
                "assembly_id": {
                   "type": "string",
-                  "description": "This item references an assembly in pdbx_struct_assembly"
+                  "description": "This item references an assembly in pdbx_struct_assembly",
+                  "rcsb_description": [
+                     {
+                        "text": "This item references an assembly in pdbx_struct_assembly",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "details": {
                   "type": "string",
-                  "description": "Provides any additional information regarding the evidence of this assembly"
+                  "description": "Provides any additional information regarding the evidence of this assembly",
+                  "rcsb_description": [
+                     {
+                        "text": "Provides any additional information regarding the evidence of this assembly",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "experimental_support": {
                   "type": "string",
@@ -99,11 +169,23 @@
                      "scanning transmission electron microscopy",
                      "surface plasmon resonance"
                   ],
-                  "description": "Provides the experimental method to determine the state of this assembly"
+                  "description": "Provides the experimental method to determine the state of this assembly",
+                  "rcsb_description": [
+                     {
+                        "text": "Provides the experimental method to determine the state of this assembly",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "id": {
                   "type": "string",
-                  "description": "Identifies a unique record in pdbx_struct_assembly_auth_evidence."
+                  "description": "Identifies a unique record in pdbx_struct_assembly_auth_evidence.",
+                  "rcsb_description": [
+                     {
+                        "text": "Identifies a unique record in pdbx_struct_assembly_auth_evidence.",
+                        "context": "dictionary"
+                     }
+                  ]
                }
             },
             "additionalProperties": false,
@@ -113,7 +195,8 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true
+         "uniqueItems": true,
+         "rcsb_nested_indexing": false
       },
       "pdbx_struct_assembly_gen": {
          "type": "array",
@@ -122,13 +205,25 @@
             "properties": {
                "assembly_id": {
                   "type": "string",
-                  "description": "This data item is a pointer to _pdbx_struct_assembly.id in the \n PDBX_STRUCT_ASSEMBLY category."
+                  "description": "This data item is a pointer to _pdbx_struct_assembly.id in the \n PDBX_STRUCT_ASSEMBLY category.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is a pointer to _pdbx_struct_assembly.id in the \n PDBX_STRUCT_ASSEMBLY category.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "asym_id_list": {
                   "type": "array",
                   "items": {
                      "type": "string",
-                     "description": "This data item is a pointer to _struct_asym.id in \n the STRUCT_ASYM category.\n\n This item may be expressed as a comma separated list of identifiers."
+                     "description": "This data item is a pointer to _struct_asym.id in \n the STRUCT_ASYM category.\n\n This item may be expressed as a comma separated list of identifiers.",
+                     "rcsb_description": [
+                        {
+                           "text": "This data item is a pointer to _struct_asym.id in \n the STRUCT_ASYM category.\n\n This item may be expressed as a comma separated list of identifiers.",
+                           "context": "dictionary"
+                        }
+                     ]
                   },
                   "uniqueItems": false
                },
@@ -140,11 +235,23 @@
                      "(1-60)",
                      "(1-60)(61)"
                   ],
-                  "description": "Identifies the operation of collection of operations \n from category PDBX_STRUCT_OPER_LIST.  \n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)\n"
+                  "description": "Identifies the operation of collection of operations \n from category PDBX_STRUCT_OPER_LIST.  \n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)\n",
+                  "rcsb_description": [
+                     {
+                        "text": "Identifies the operation of collection of operations \n from category PDBX_STRUCT_OPER_LIST.  \n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)\n",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "ordinal": {
                   "type": "integer",
-                  "description": "This data item is an ordinal index for the\n PDBX_STRUCT_ASSEMBLY category."
+                  "description": "This data item is an ordinal index for the\n PDBX_STRUCT_ASSEMBLY category.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is an ordinal index for the\n PDBX_STRUCT_ASSEMBLY category.",
+                        "context": "dictionary"
+                     }
+                  ]
                }
             },
             "additionalProperties": false,
@@ -153,7 +260,8 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true
+         "uniqueItems": true,
+         "rcsb_nested_indexing": false
       },
       "pdbx_struct_assembly_prop": {
          "type": "array",
@@ -162,7 +270,13 @@
             "properties": {
                "biol_id": {
                   "type": "string",
-                  "description": "The identifier for the assembly used in category PDBX_STRUCT_ASSEMBLY."
+                  "description": "The identifier for the assembly used in category PDBX_STRUCT_ASSEMBLY.",
+                  "rcsb_description": [
+                     {
+                        "text": "The identifier for the assembly used in category PDBX_STRUCT_ASSEMBLY.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "type": {
                   "type": "string",
@@ -171,11 +285,23 @@
                      "MORE",
                      "SSA (A^2)"
                   ],
-                  "description": "The property type for the assembly."
+                  "description": "The property type for the assembly.",
+                  "rcsb_description": [
+                     {
+                        "text": "The property type for the assembly.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "value": {
                   "type": "string",
-                  "description": "The value of the assembly property."
+                  "description": "The value of the assembly property.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of the assembly property.",
+                        "context": "dictionary"
+                     }
+                  ]
                }
             },
             "additionalProperties": false,
@@ -185,7 +311,8 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true
+         "uniqueItems": true,
+         "rcsb_nested_indexing": false
       },
       "pdbx_struct_oper_list": {
          "type": "array",
@@ -194,43 +321,103 @@
             "properties": {
                "id": {
                   "type": "string",
-                  "description": "This identifier code must uniquely identify a\n record in the PDBX_STRUCT_OPER_LIST list."
+                  "description": "This identifier code must uniquely identify a\n record in the PDBX_STRUCT_OPER_LIST list.",
+                  "rcsb_description": [
+                     {
+                        "text": "This identifier code must uniquely identify a\n record in the PDBX_STRUCT_OPER_LIST list.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "matrix_1_1": {
                   "type": "number",
-                  "description": "The [1][1] element of the 3x3 matrix component of the\n transformation operation."
+                  "description": "The [1][1] element of the 3x3 matrix component of the\n transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "The [1][1] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "matrix_1_2": {
                   "type": "number",
-                  "description": "The [1][2] element of the 3x3 matrix component of the\n transformation operation."
+                  "description": "The [1][2] element of the 3x3 matrix component of the\n transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "The [1][2] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "matrix_1_3": {
                   "type": "number",
-                  "description": "The [1][3] element of the 3x3 matrix component of the\n transformation operation."
+                  "description": "The [1][3] element of the 3x3 matrix component of the\n transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "The [1][3] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "matrix_2_1": {
                   "type": "number",
-                  "description": "The [2][1] element of the 3x3 matrix component of the\n transformation operation."
+                  "description": "The [2][1] element of the 3x3 matrix component of the\n transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "The [2][1] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "matrix_2_2": {
                   "type": "number",
-                  "description": "The [2][2] element of the 3x3 matrix component of the\n transformation operation."
+                  "description": "The [2][2] element of the 3x3 matrix component of the\n transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "The [2][2] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "matrix_2_3": {
                   "type": "number",
-                  "description": "The [2][3] element of the 3x3 matrix component of the\n transformation operation."
+                  "description": "The [2][3] element of the 3x3 matrix component of the\n transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "The [2][3] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "matrix_3_1": {
                   "type": "number",
-                  "description": "The [3][1] element of the 3x3 matrix component of the\n transformation operation."
+                  "description": "The [3][1] element of the 3x3 matrix component of the\n transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "The [3][1] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "matrix_3_2": {
                   "type": "number",
-                  "description": "The [3][2] element of the 3x3 matrix component of the\n transformation operation."
+                  "description": "The [3][2] element of the 3x3 matrix component of the\n transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "The [3][2] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "matrix_3_3": {
                   "type": "number",
-                  "description": "The [3][3] element of the 3x3 matrix component of the\n transformation operation."
+                  "description": "The [3][3] element of the 3x3 matrix component of the\n transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "The [3][3] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "name": {
                   "type": "string",
@@ -238,7 +425,13 @@
                      "1_555",
                      "two-fold rotation"
                   ],
-                  "description": "A descriptive name for the transformation operation."
+                  "description": "A descriptive name for the transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "A descriptive name for the transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "symmetry_operation": {
                   "type": "string",
@@ -246,7 +439,13 @@
                      "x,y,z",
                      "x+1/2,y,-z"
                   ],
-                  "description": "The symmetry operation corresponding to the transformation operation."
+                  "description": "The symmetry operation corresponding to the transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "The symmetry operation corresponding to the transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "type": {
                   "type": "string",
@@ -267,19 +466,43 @@
                      "transform to helical frame",
                      "transform to point frame"
                   ],
-                  "description": "A code to indicate the type of operator."
+                  "description": "A code to indicate the type of operator.",
+                  "rcsb_description": [
+                     {
+                        "text": "A code to indicate the type of operator.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "vector_1": {
                   "type": "number",
-                  "description": "The [1] element of the three-element vector component of the\n transformation operation."
+                  "description": "The [1] element of the three-element vector component of the\n transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "The [1] element of the three-element vector component of the\n transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "vector_2": {
                   "type": "number",
-                  "description": "The [2] element of the three-element vector component of the\n transformation operation."
+                  "description": "The [2] element of the three-element vector component of the\n transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "The [2] element of the three-element vector component of the\n transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "vector_3": {
                   "type": "number",
-                  "description": "The [3] element of the three-element vector component of the\n transformation operation."
+                  "description": "The [3] element of the three-element vector component of the\n transformation operation.",
+                  "rcsb_description": [
+                     {
+                        "text": "The [3] element of the three-element vector component of the\n transformation operation.",
+                        "context": "dictionary"
+                     }
+                  ]
                }
             },
             "additionalProperties": false,
@@ -288,18 +511,41 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true
+         "uniqueItems": true,
+         "rcsb_nested_indexing": false
       },
       "rcsb_assembly_container_identifiers": {
          "type": "object",
          "properties": {
             "assembly_id": {
                "type": "string",
-               "description": "Assembly identifier for the container."
+               "description": "Assembly identifier for the container.",
+               "rcsb_description": [
+                  {
+                     "text": "Assembly identifier for the container.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "entry_id": {
                "type": "string",
-               "description": "Entry identifier for the container."
+               "description": "Entry identifier for the container.",
+               "rcsb_description": [
+                  {
+                     "text": "Entry identifier for the container.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "rcsb_id": {
+               "type": "string",
+               "description": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
+               "rcsb_description": [
+                  {
+                     "text": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
+                     "context": "dictionary"
+                  }
+               ]
             }
          },
          "additionalProperties": false,
@@ -313,31 +559,73 @@
          "properties": {
             "assembly_id": {
                "type": "string",
-               "description": "Entity identifier for the container."
+               "description": "Entity identifier for the container.",
+               "rcsb_description": [
+                  {
+                     "text": "Entity identifier for the container.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "atom_count": {
                "type": "integer",
-               "description": "The assembly atomic coordinate count."
+               "description": "The assembly atomic coordinate count.",
+               "rcsb_description": [
+                  {
+                     "text": "The assembly atomic coordinate count.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "branched_atom_count": {
                "type": "integer",
-               "description": "The assembly branched entity atomic coordinate count."
+               "description": "The assembly branched entity atomic coordinate count.",
+               "rcsb_description": [
+                  {
+                     "text": "The assembly branched entity atomic coordinate count.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "branched_entity_count": {
                "type": "integer",
-               "description": "The number of distinct branched entities in the generated assembly."
+               "description": "The number of distinct branched entities in the generated assembly.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of distinct branched entities in the generated assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "branched_entity_instance_count": {
                "type": "integer",
-               "description": "The number of branched instances in the generated assembly data set.\n This is the total count of branched entity instances generated in the assembly coordinate data."
+               "description": "The number of branched instances in the generated assembly data set.\n This is the total count of branched entity instances generated in the assembly coordinate data.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of branched instances in the generated assembly data set.\n This is the total count of branched entity instances generated in the assembly coordinate data.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "entry_id": {
                "type": "string",
-               "description": "The PDB entry accession code."
+               "description": "The PDB entry accession code.",
+               "rcsb_description": [
+                  {
+                     "text": "The PDB entry accession code.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "modeled_polymer_monomer_count": {
                "type": "integer",
-               "description": "The number of modeled polymer monomers in the assembly coordinate data.\n This is the total count of monomers with reported coordinate data for all polymer\n entity instances in the generated assembly coordinate data."
+               "description": "The number of modeled polymer monomers in the assembly coordinate data.\n This is the total count of monomers with reported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of modeled polymer monomers in the assembly coordinate data.\n This is the total count of monomers with reported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "na_polymer_entity_types": {
                "type": "string",
@@ -348,23 +636,75 @@
                   "Other",
                   "RNA (only)"
                ],
-               "description": "Nucleic acid polymer entity type categories describing the generated assembly."
+               "description": "Nucleic acid polymer entity type categories describing the generated assembly.",
+               "rcsb_enum_annotated": [
+                  {
+                     "value": "DNA (only)",
+                     "detail": "DNA entity/entities only"
+                  },
+                  {
+                     "value": "DNA/RNA (only)",
+                     "detail": "Both DNA and RNA polymer entities"
+                  },
+                  {
+                     "value": "NA-hybrid (only)",
+                     "detail": "NA-hybrid entity/entities only"
+                  },
+                  {
+                     "value": "Other",
+                     "detail": "Another polymer type composition"
+                  },
+                  {
+                     "value": "RNA (only)",
+                     "detail": "RNA entity/entities only"
+                  }
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "Nucleic acid polymer entity type categories describing the generated assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "nonpolymer_atom_count": {
                "type": "integer",
-               "description": "The assembly non-polymer entity atomic coordinate count."
+               "description": "The assembly non-polymer entity atomic coordinate count.",
+               "rcsb_description": [
+                  {
+                     "text": "The assembly non-polymer entity atomic coordinate count.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "nonpolymer_entity_count": {
                "type": "integer",
-               "description": "The number of distinct non-polymer entities in the generated assembly exclusive of solvent."
+               "description": "The number of distinct non-polymer entities in the generated assembly exclusive of solvent.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of distinct non-polymer entities in the generated assembly exclusive of solvent.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "nonpolymer_entity_instance_count": {
                "type": "integer",
-               "description": "The number of non-polymer instances in the generated assembly data set exclusive of solvent.\n This is the total count of non-polymer entity instances generated in the assembly coordinate data."
+               "description": "The number of non-polymer instances in the generated assembly data set exclusive of solvent.\n This is the total count of non-polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of non-polymer instances in the generated assembly data set exclusive of solvent.\n This is the total count of non-polymer entity instances generated in the assembly coordinate data.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_atom_count": {
                "type": "integer",
-               "description": "The assembly polymer entity atomic coordinate count."
+               "description": "The assembly polymer entity atomic coordinate count.",
+               "rcsb_description": [
+                  {
+                     "text": "The assembly polymer entity atomic coordinate count.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_composition": {
                "type": "string",
@@ -384,59 +724,201 @@
                   "protein/NA/oligosaccharide",
                   "protein/oligosaccharide"
                ],
-               "description": "Categories describing the polymer entity composition for the generated assembly."
+               "description": "Categories describing the polymer entity composition for the generated assembly.",
+               "rcsb_enum_annotated": [
+                  {
+                     "value": "DNA",
+                     "detail": "DNA entity/entities only"
+                  },
+                  {
+                     "value": "DNA/RNA",
+                     "detail": "Both DNA and RNA polymer entities"
+                  },
+                  {
+                     "value": "NA-hybrid",
+                     "detail": "DNA/RNA hybrid entity/entities only"
+                  },
+                  {
+                     "value": "NA/oligosaccharide",
+                     "detail": "Both NA and oligosaccharide entities"
+                  },
+                  {
+                     "value": "RNA",
+                     "detail": "RNA entity/entities only"
+                  },
+                  {
+                     "value": "heteromeric protein",
+                     "detail": "multiple protein entities"
+                  },
+                  {
+                     "value": "homomeric protein",
+                     "detail": "single protein entity"
+                  },
+                  {
+                     "value": "oligosaccharide",
+                     "detail": "One of more oligosaccharide entities"
+                  },
+                  {
+                     "value": "other",
+                     "detail": "Neither an individual protein, nucleic acid polymer nor oligosaccharide entity"
+                  },
+                  {
+                     "value": "other type composition",
+                     "detail": "Other combinations of 3 or more polymer types"
+                  },
+                  {
+                     "value": "other type pair",
+                     "detail": "Other combinations of 2 polymer types"
+                  },
+                  {
+                     "value": "protein/NA",
+                     "detail": "Both protein and nucleic acid polymer entities"
+                  },
+                  {
+                     "value": "protein/NA/oligosaccharide",
+                     "detail": "Protein, nucleic acid, and oligosaccharide entities"
+                  },
+                  {
+                     "value": "protein/oligosaccharide",
+                     "detail": "Both protein and oligosaccharide entities"
+                  }
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "Categories describing the polymer entity composition for the generated assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_entity_count": {
                "type": "integer",
-               "description": "The number of distinct polymer entities in the generated assembly."
+               "description": "The number of distinct polymer entities in the generated assembly.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of distinct polymer entities in the generated assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_entity_count_DNA": {
                "type": "integer",
-               "description": "The number of distinct DNA polymer entities in the generated assembly."
+               "description": "The number of distinct DNA polymer entities in the generated assembly.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of distinct DNA polymer entities in the generated assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_entity_count_RNA": {
                "type": "integer",
-               "description": "The number of distinct RNA polymer entities in the generated assembly."
+               "description": "The number of distinct RNA polymer entities in the generated assembly.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of distinct RNA polymer entities in the generated assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_entity_count_nucleic_acid": {
                "type": "integer",
-               "description": "The number of distinct nucleic acid polymer entities (DNA or RNA) in the generated assembly."
+               "description": "The number of distinct nucleic acid polymer entities (DNA or RNA) in the generated assembly.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of distinct nucleic acid polymer entities (DNA or RNA) in the generated assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_entity_count_nucleic_acid_hybrid": {
                "type": "integer",
-               "description": "The number of distinct hybrid nucleic acid polymer entities in the generated assembly."
+               "description": "The number of distinct hybrid nucleic acid polymer entities in the generated assembly.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of distinct hybrid nucleic acid polymer entities in the generated assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_entity_count_protein": {
                "type": "integer",
-               "description": "The number of distinct protein polymer entities in the generated assembly."
+               "description": "The number of distinct protein polymer entities in the generated assembly.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of distinct protein polymer entities in the generated assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_entity_instance_count": {
                "type": "integer",
-               "description": "The number of polymer instances in the generated assembly data set.\n This is the total count of polymer entity instances generated in the assembly coordinate data."
+               "description": "The number of polymer instances in the generated assembly data set.\n This is the total count of polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of polymer instances in the generated assembly data set.\n This is the total count of polymer entity instances generated in the assembly coordinate data.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_entity_instance_count_DNA": {
                "type": "integer",
-               "description": "The number of DNA polymer instances in the generated assembly data set.\n This is the total count of DNA polymer entity instances generated in the assembly coordinate data."
+               "description": "The number of DNA polymer instances in the generated assembly data set.\n This is the total count of DNA polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of DNA polymer instances in the generated assembly data set.\n This is the total count of DNA polymer entity instances generated in the assembly coordinate data.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_entity_instance_count_RNA": {
                "type": "integer",
-               "description": "The number of RNA polymer instances in the generated assembly data set.\n This is the total count of RNA polymer entity instances generated in the assembly coordinate data."
+               "description": "The number of RNA polymer instances in the generated assembly data set.\n This is the total count of RNA polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of RNA polymer instances in the generated assembly data set.\n This is the total count of RNA polymer entity instances generated in the assembly coordinate data.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_entity_instance_count_nucleic_acid": {
                "type": "integer",
-               "description": "The number of nucleic acid polymer instances in the generated assembly data set.\n This is the total count of nucleic acid polymer entity instances generated in the assembly coordinate data."
+               "description": "The number of nucleic acid polymer instances in the generated assembly data set.\n This is the total count of nucleic acid polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of nucleic acid polymer instances in the generated assembly data set.\n This is the total count of nucleic acid polymer entity instances generated in the assembly coordinate data.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_entity_instance_count_nucleic_acid_hybrid": {
                "type": "integer",
-               "description": "The number of hybrid nucleic acide polymer instances in the generated assembly data set.\n This is the total count of hybrid nucleic acid polymer entity instances generated in the assembly coordinate data."
+               "description": "The number of hybrid nucleic acide polymer instances in the generated assembly data set.\n This is the total count of hybrid nucleic acid polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of hybrid nucleic acide polymer instances in the generated assembly data set.\n This is the total count of hybrid nucleic acid polymer entity instances generated in the assembly coordinate data.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_entity_instance_count_protein": {
                "type": "integer",
-               "description": "The number of protein polymer instances in the generated assembly data set.\n This is the total count of protein polymer entity instances generated in the assembly coordinate data."
+               "description": "The number of protein polymer instances in the generated assembly data set.\n This is the total count of protein polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of protein polymer instances in the generated assembly data set.\n This is the total count of protein polymer entity instances generated in the assembly coordinate data.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "polymer_monomer_count": {
                "type": "integer",
-               "description": "The number of polymer monomers in sample entity instances comprising the assembly data set.\n This is the total count of monomers for all polymer entity instances\n in the generated assembly coordinate data."
+               "description": "The number of polymer monomers in sample entity instances comprising the assembly data set.\n This is the total count of monomers for all polymer entity instances\n in the generated assembly coordinate data.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of polymer monomers in sample entity instances comprising the assembly data set.\n This is the total count of monomers for all polymer entity instances\n in the generated assembly coordinate data.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "selected_polymer_entity_types": {
                "type": "string",
@@ -446,23 +928,71 @@
                   "Protein (only)",
                   "Protein/NA"
                ],
-               "description": "Selected polymer entity type categories describing the generated assembly."
+               "description": "Selected polymer entity type categories describing the generated assembly.",
+               "rcsb_enum_annotated": [
+                  {
+                     "value": "Nucleic acid (only)",
+                     "detail": "Nucleic acid (DNA, RNA, NA-hybrid entity/entities only"
+                  },
+                  {
+                     "value": "Other",
+                     "detail": "Another polymer type composition"
+                  },
+                  {
+                     "value": "Protein (only)",
+                     "detail": "protein entity/entities only"
+                  },
+                  {
+                     "value": "Protein/NA",
+                     "detail": "Both protein and nucleic acid (DNA or RNA) polymer entities"
+                  }
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "Selected polymer entity type categories describing the generated assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "solvent_atom_count": {
                "type": "integer",
-               "description": "The assembly solvent atomic coordinate count."
+               "description": "The assembly solvent atomic coordinate count.",
+               "rcsb_description": [
+                  {
+                     "text": "The assembly solvent atomic coordinate count.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "solvent_entity_count": {
                "type": "integer",
-               "description": "The number of distinct solvent entities in the generated assembly."
+               "description": "The number of distinct solvent entities in the generated assembly.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of distinct solvent entities in the generated assembly.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "solvent_entity_instance_count": {
                "type": "integer",
-               "description": "The number of solvent instances in the generated assembly data set.\n This is the total count of solvent entity instances generated in the assembly coordinate data."
+               "description": "The number of solvent instances in the generated assembly data set.\n This is the total count of solvent entity instances generated in the assembly coordinate data.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of solvent instances in the generated assembly data set.\n This is the total count of solvent entity instances generated in the assembly coordinate data.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "unmodeled_polymer_monomer_count": {
                "type": "integer",
-               "description": "The number of unmodeled polymer monomers in the assembly coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the generated assembly coordinate data."
+               "description": "The number of unmodeled polymer monomers in the assembly coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of unmodeled polymer monomers in the assembly coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
+                     "context": "dictionary"
+                  }
+               ]
             }
          },
          "additionalProperties": false,

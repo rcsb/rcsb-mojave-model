@@ -146,20 +146,6 @@
                   "syn"
                ],
                "description": "The method by which the sample for the entity was produced.\n Entities isolated directly from natural sources (tissues, soil\n samples etc.) are expected to have further information in the\n ENTITY_SRC_NAT category. Entities isolated from genetically\n manipulated sources are expected to have further information in\n the ENTITY_SRC_GEN category.",
-               "rcsb_enum_annotated": [
-                  {
-                     "value": "man",
-                     "detail": "."
-                  },
-                  {
-                     "value": "nat",
-                     "detail": "."
-                  },
-                  {
-                     "value": "syn",
-                     "detail": "."
-                  }
-               ],
                "rcsb_description": [
                   {
                      "text": "The method by which the sample for the entity was produced.\n Entities isolated directly from natural sources (tissues, soil\n samples etc.) are expected to have further information in the\n ENTITY_SRC_NAT category. Entities isolated from genetically\n manipulated sources are expected to have further information in\n the ENTITY_SRC_GEN category.",
@@ -181,28 +167,6 @@
                   "water"
                ],
                "description": "Defines the type of the entity.\n\n Polymer entities are expected to have corresponding\n ENTITY_POLY and associated entries.\n\n Non-polymer entities are expected to have corresponding\n CHEM_COMP and associated entries.\n\n Water entities are not expected to have corresponding\n entries in the ENTITY category.",
-               "rcsb_enum_annotated": [
-                  {
-                     "value": "branched",
-                     "detail": "."
-                  },
-                  {
-                     "value": "macrolide",
-                     "detail": "."
-                  },
-                  {
-                     "value": "non-polymer",
-                     "detail": "."
-                  },
-                  {
-                     "value": "polymer",
-                     "detail": "."
-                  },
-                  {
-                     "value": "water",
-                     "detail": "."
-                  }
-               ],
                "rcsb_description": [
                   {
                      "text": "Defines the type of the entity.\n\n Polymer entities are expected to have corresponding\n ENTITY_POLY and associated entries.\n\n Non-polymer entities are expected to have corresponding\n CHEM_COMP and associated entries.\n\n Water entities are not expected to have corresponding\n entries in the ENTITY category.",
@@ -714,36 +678,6 @@
                   "polyribonucleotide"
                ],
                "description": "The type of the polymer.",
-               "rcsb_enum_annotated": [
-                  {
-                     "value": "cyclic-pseudo-peptide",
-                     "detail": "."
-                  },
-                  {
-                     "value": "other",
-                     "detail": "."
-                  },
-                  {
-                     "value": "polydeoxyribonucleotide",
-                     "detail": "."
-                  },
-                  {
-                     "value": "polydeoxyribonucleotide/polyribonucleotide hybrid",
-                     "detail": "."
-                  },
-                  {
-                     "value": "polypeptide(D)",
-                     "detail": "."
-                  },
-                  {
-                     "value": "polypeptide(L)",
-                     "detail": "."
-                  },
-                  {
-                     "value": "polyribonucleotide",
-                     "detail": "."
-                  }
-               ],
                "rcsb_description": [
                   {
                      "text": "The type of the polymer.",
@@ -2165,6 +2099,16 @@
                   }
                ]
             },
+            "rcsb_id": {
+               "type": "string",
+               "description": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
+               "rcsb_description": [
+                  {
+                     "text": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
             "related_annotation_identifiers": {
                "type": "array",
                "items": {
@@ -2270,7 +2214,8 @@
             "asym_ids",
             "auth_asym_ids",
             "entity_id",
-            "entry_id"
+            "entry_id",
+            "rcsb_id"
          ]
       },
       "rcsb_entity_host_organism": {
@@ -3145,9 +3090,22 @@
          "minItems": 1,
          "uniqueItems": true,
          "rcsb_nested_indexing": false
+      },
+      "rcsb_id": {
+         "type": "string",
+         "description": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
+         "rcsb_description": [
+            {
+               "text": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
+               "context": "dictionary"
+            }
+         ]
       }
    },
    "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
    "title": "schema: pdbx_core collection: pdbx_core_entity version: 6.1.0",

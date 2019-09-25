@@ -8,48 +8,102 @@
             "examples": [
                "Bleary, Percival R.;O'Neil, F.K."
             ],
-            "description": "Names of the authors of the entry."
+            "description": "Names of the authors of the entry.",
+            "rcsb_description": [
+               {
+                  "text": "Names of the authors of the entry.",
+                  "context": "dictionary"
+               }
+            ]
          },
          "uniqueItems": false
       },
       "deposit_date": {
          "type": "string",
          "format": "date",
-         "description": "The entry deposition date."
+         "description": "The entry deposition date.",
+         "rcsb_description": [
+            {
+               "text": "The entry deposition date.",
+               "context": "dictionary"
+            }
+         ]
       },
       "details": {
          "type": "string",
-         "description": "The entry title."
+         "description": "The entry title.",
+         "rcsb_description": [
+            {
+               "text": "The entry title.",
+               "context": "dictionary"
+            }
+         ]
       },
       "entry_id": {
          "type": "string",
-         "description": "The PDB entry accession code."
+         "description": "The PDB entry accession code.",
+         "rcsb_description": [
+            {
+               "text": "The PDB entry accession code.",
+               "context": "dictionary"
+            }
+         ]
       },
       "id_codes_replaced_by": {
          "type": "array",
          "items": {
             "type": "string",
-            "description": "The list of superseding PDB accession codes for the removed entry."
+            "description": "The list of superseding PDB accession codes for the removed entry.",
+            "rcsb_description": [
+               {
+                  "text": "The list of superseding PDB accession codes for the removed entry.",
+                  "context": "dictionary"
+               }
+            ]
          },
          "uniqueItems": false
       },
       "release_date": {
          "type": "string",
          "format": "date",
-         "description": "The initial date the entry was released in the PDB repository."
+         "description": "The initial date the entry was released in the PDB repository.",
+         "rcsb_description": [
+            {
+               "text": "The initial date the entry was released in the PDB repository.",
+               "context": "dictionary"
+            }
+         ]
       },
       "remove_date": {
          "type": "string",
          "format": "date",
-         "description": "The date the entry was removed from the PDB repository."
+         "description": "The date the entry was removed from the PDB repository.",
+         "rcsb_description": [
+            {
+               "text": "The date the entry was removed from the PDB repository.",
+               "context": "dictionary"
+            }
+         ]
       },
       "title": {
          "type": "string",
-         "description": "The entry title."
+         "description": "The entry title.",
+         "rcsb_description": [
+            {
+               "text": "The entry title.",
+               "context": "dictionary"
+            }
+         ]
       },
       "update_id": {
          "type": "string",
-         "description": "Identifier for the current data exchange status record."
+         "description": "Identifier for the current data exchange status record.",
+         "rcsb_description": [
+            {
+               "text": "Identifier for the current data exchange status record.",
+               "context": "dictionary"
+            }
+         ]
       }
    },
    "additionalProperties": false,

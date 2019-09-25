@@ -3122,6 +3122,16 @@
                      "context": "dictionary"
                   }
                ]
+            },
+            "rcsb_id": {
+               "type": "string",
+               "description": "A unique identifier for the chemical definition in this container.",
+               "rcsb_description": [
+                  {
+                     "text": "A unique identifier for the chemical definition in this container.",
+                     "context": "dictionary"
+                  }
+               ]
             }
          },
          "additionalProperties": false,
@@ -3775,9 +3785,22 @@
          "minItems": 1,
          "uniqueItems": true,
          "rcsb_nested_indexing": false
+      },
+      "rcsb_id": {
+         "type": "string",
+         "description": "A unique identifier for the chemical definition in this container.",
+         "rcsb_description": [
+            {
+               "text": "A unique identifier for the chemical definition in this container.",
+               "context": "dictionary"
+            }
+         ]
       }
    },
    "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-bird_chem_comp_core.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
    "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.0.0",
