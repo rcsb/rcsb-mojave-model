@@ -1,27 +1,27 @@
 {
-  "type": "object",
   "$schema" : "http://json-schema.org/draft-04/schema#",
-  "title" : "rcsb_tree_node.json",
-  "description": "A tree node with a linkage to immediate parent(s) and all ancestors (node's lineage).\n",
+  "title" : "RCSB tree node",
+  "description": "A tree node with a linkage to immediate parent(s) and all ancestors (node's lineage).",
+  "type": "object",
   "required" : [
     "id"
   ],
   "properties": {
     "id": {
       "type": "string",
-      "description": "Unique node identifier.\n"
+      "description": "Unique node identifier."
     },
     "name": {
       "type": "string",
-      "description": "Human-readable term associated with the node.\n"
+      "description": "Human-readable term associated with the node."
     },
     "description": {
       "type": "string",
-      "description": "Node description.\n"
+      "description": "Node description."
     },
     "depth": {
       "type" : "integer",
-      "description" : "Hierarchy depth.\n"
+      "description" : "Hierarchy depth."
     },
     "parents": {
       "type" : "array",
@@ -30,7 +30,7 @@
       "items" : {
         "type": "string"
       },
-      "description": "ID(s) of the node’s immediate parents.\n"
+      "description": "ID(s) of the node’s immediate parents."
     },
     "related": {
       "type" : "array",
@@ -39,7 +39,7 @@
       "items" : {
         "type": "string"
       },
-      "description": "Terms or IDs related to the node.\n"
+      "description": "Terms or IDs related to the node."
     }
   },
   "additionalProperties": false

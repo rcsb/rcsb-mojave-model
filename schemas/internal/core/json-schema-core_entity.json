@@ -1,8 +1,8 @@
 {
-  "type": "object",
   "$schema" : "http://json-schema.org/draft-04/schema#",
-  "title" : "core_entity.json",
-  "description": "Combined JSON schema for RCSB Exchange Database: json-schema-min-pdbx_core_entity.json\n and manually curated schema for RCSB Data Warehouse: json-schema-core_entity.json\n",
+  "title" : "Core Entity",
+  "description": "JSON schema for entity level core data. Combines RCSB Exchange Database schema: json-schema-min-pdbx_core_entity.json and RCSB Data Warehouse schema: json-schema-core_entity.json",
+  "type": "object",
   "required": [
     "rcsb_entity_container_identifiers"
   ],
@@ -36,7 +36,7 @@
         }
       }
     },
-    "rcsb_go": {
+    "rcsb_go_terms": {
       "type": "object",
       "properties": {
         "lineage": {
@@ -48,22 +48,29 @@
             "properties": {
               "id": {
                 "type": "string",
-                "examples": ["GO:0005125", "GO:0060092"],
-                "description": "A unique seven digit identifier prefixed by GO:.\n"
+                "examples": [
+                  "GO:0005125",
+                  "GO:0060092"
+                ],
+                "description": "A unique seven digit identifier prefixed by GO:."
               },
               "name":{
                 "type": "string",
-                "examples": [ "response to muscle activity", "sulfur utilization", "cell killing"],
-                "description": "A human-readable term name.\n"
+                "examples": [
+                  "response to muscle activity",
+                  "sulfur utilization",
+                  "cell killing"
+                ],
+                "description": "A human-readable term name."
               }
             }
           }
         }
       },
       "additionalProperties": false,
-      "description": "Ontologies that describe gene products in terms of their associated\n biological processes, cellular components and molecular functions in a species-independent manner.\n"
+      "description": "Ontologies that describe gene products in terms of their associated biological processes, cellular components and molecular functions in a species-independent manner."
     },
-    "rcsb_genomic": {
+    "rcsb_genomic_terms": {
       "type": "object",
       "properties": {
         "lineage": {
@@ -75,179 +82,92 @@
             "properties": {
               "id": {
                 "type": "string",
-                "examples": ["9606", "568815441", "414325"],
-                "description": "ID that identify taxonomy, chromosome or gene.\n"
+                "examples": [
+                  "9606",
+                  "568815441",
+                  "414325"
+                ],
+                "rcsb_search_context": [
+                  "exact-match"
+                ],
+                "description": "ID that identify taxonomy, chromosome or gene."
               },
               "name":{
                 "type": "string",
-                "examples": [ "Homo sapiens", "8", "defensin beta 103A"],
-                "description": "A human-readable term name.\n"
+                "examples": [
+                  "Homo sapiens",
+                  "8",
+                  "defensin beta 103A"
+                ],
+                "rcsb_search_context": [
+                  "exact-match"
+                ],
+                "description": "A human-readable term name."
               },
               "depth": {
                 "type" : "integer",
-                "description" : "Classification hierarchy depth.\n"
+                "description" : "Classification hierarchy depth."
               }
             }
           }
         }
       },
       "additionalProperties": false,
-      "description": "Set of IDs that identify taxonomy, chromosome and gene.\n"
+      "description": "Set of IDs that identify taxonomy, chromosome and gene."
     },
-    "rcsb_gene": {
+    "rcsb_membrane_terms": {
       "type": "object",
       "properties": {
-        "name": {
-          "type":"array",
+        "lineage": {
+          "type" : "array",
+          "minItems" : 1,
+          "uniqueItems" : true,
           "items" : {
             "type": "object",
             "properties": {
-              "value": {
+              "id": {
                 "type": "string",
-                "description": "The official gene name.\n"
-              },
-              "type": {
-                "type": "string"
-              },
-              "approved": {
-                "type": "string",
-                "enum": [
-                  "Y",
-                  "N"
+                "rcsb_search_context": [
+                  "exact-match"
                 ],
-                "description": "Indicates if gene name is an HGNC-approved gene nomenclature.\n"
-              }
-            },
-            "additionalProperties": false
-          }
-        },
-        "provenance_code": {
-          "type": "string",
-          "enum": [
-            "UniProt",
-            "PDB Primary Data"
-          ]
-        }
-      },
-      "additionalProperties": false
-    },
-    "rcsb_enzyme": {
-      "type": "object",
-      "properties": {
-        "reference": {
-          "type" : "array",
-          "minItems" : 1,
-          "uniqueItems" : true,
-          "items" : {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string",
-                "description": "Enzyme assignment as classification code.\n"
+                "description": "Identifier for membrane classification term (system generated for internal purposes identifier)."
               },
               "name": {
                 "type": "string",
-                "description": "Enzyme assignment as classification name.\n"
-              }
-            },
-            "additionalProperties": false
-          },
-          "description": "Describes a type of characterized enzyme for which an EC (Enzyme Commission) number has been provided.\n"
-        },
-        "class": {
-          "type" : "array",
-          "minItems" : 1,
-          "uniqueItems" : true,
-          "items" : {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string",
-                "description": "Enzyme main class assignment as classification code.\n Main categories of enzymes are numbered 1-7."
-              },
-              "name": {
-                "type": "string",
-                "example": [ "Oxidoreductases", "Transferases", "Hydrolases", "Lyases", "Isomerases", "Ligases", "Translocases" ],
-                "description": "Enzyme main class assignment as classification name.\n"
-              }
-            },
-            "additionalProperties": false
-          },
-          "description": "International​ classification used for main categories of enzymes."
-        },
-        "lineage": {
-          "type" : "array",
-          "minItems" : 1,
-          "uniqueItems" : true,
-          "items" : {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string",
-                "description": "Member of the enzyme classification lineage as classification code.\n"
-              },
-              "name":{
-                "type": "string",
-                "description": "Member of the enzyme classification lineage as classification name.\n"
-              },
-              "depth": {
-                "type" : "integer",
-                "description" : "Classification hierarchy depth.\n"
-              }
-            },
-            "additionalProperties": false
-          },
-          "description" : "Members of the enzyme classification lineage.\n"
-        }
-      },
-      "provenance_code": {
-        "type": "string",
-        "enum": [
-          "PDB primary data"
-        ]
-      }
-    },
-    "rcsb_membrane": {
-      "type": "object",
-      "properties": {
-        "lineage": {
-          "type" : "array",
-          "minItems" : 1,
-          "uniqueItems" : true,
-          "items" : {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string",
-                "description": "Identifier for membrane classification term (system generated for internal purposes identifier).\n"
-              },
-              "name": {
-                "type": "string",
-                "description": "Membrane protein classification term.\n"
+                "rcsb_search_context": [
+                  "exact-match"
+                ],
+                "description": "Membrane protein classification term."
               },
               "depth": {
                 "type": "integer",
-                "description": "Hierarchy depth.\n"
+                "description": "Hierarchy depth."
               }
             },
             "additionalProperties": false
           },
-          "description" : "Members of the membrane protein classification lineage.\n"
+          "description" : "Members of the membrane protein classification lineage."
         },
         "class": {
           "type": "object",
           "properties": {
             "id": {
               "type": "string",
-              "description": "Identifier for membrane classification term (system generated for internal use).\n"
+              "rcsb_search_context": [
+                "exact-match"
+              ],
+              "description": "Identifier for membrane classification term (system generated for internal use)."
             },
             "name": {
               "type": "string",
-              "description": "Membrane protein classification term.\n"
+              "rcsb_search_context": [
+                "exact-match"
+              ],
+              "description": "Membrane protein classification term."
             }
           },
-          "additionalProperties": false,
-          "description" : "Members of the membrane protein classification used for main categories of membrane protein.\n"
+          "description" : "Members of the membrane protein classification used for main categories of membrane protein.",
+          "additionalProperties": false
         },
         "provenance_code": {
           "type": "string",
@@ -255,30 +175,30 @@
             "Mpstruc",
             "Homology"
           ],
-          "description": "Mpstruc keyword denotes original annotation, Homology keyword denotes annotation inferred by homology.\n"
+          "description": "Mpstruc keyword denotes original annotation, Homology keyword denotes annotation inferred by homology."
         }
       },
       "additionalProperties": false,
-      "description": "Information about integral membrane proteins whose crystallographic, or sometimes NMR or cryo-EM, structures \nhave been determined to a resolution sufficient to identify TM helices of helix-bundle membrane proteins (typically 4 - 4.5 A). \n\nMpstruc provides manually curated information about integral membrane proteins. These manual annotations are extended using sequence clusters and according to the following procedure:\nSingle chain transmembrane proteins:\n Any PDB chain sharing 90% sequence identity to this transmembrane \nprotein is assigned as a transmembrane protein as well, and shares the same transmembrane annotation.\n\nMulti-chain transmembrane proteins:\nIf the reference mpstruc entry contains multiple protein entities, it is necessary to identify \nwhich of the entities are presumed to be transmembrane chains. \nThis is done in conjunction with Uniprot annotations. Transmembrane protein entities are identified by \nchecking if their corresponding Uniprot sequence has annotations labeled <i>transmembrane</i> \nor <i>intramembrane region</i>. For transmembrane entities, all members of the sequence \ncluster (90% sequence identity) are programmatically infered to be members of the same class of \ntransmembrane proteins by applying the above procedure for single entity mpstruc entries. \nAnnotations are denoned with 'Homology' provenance code.\n"
+      "description": "Information about integral membrane proteins whose crystallographic, or sometimes NMR or cryo-EM, structures have been determined to a resolution sufficient to identify TM helices of helix-bundle membrane proteins (typically 4 - 4.5 A). Mpstruc provides manually curated information about integral membrane proteins. These manual annotations are extended using sequence clusters and according to the following procedure:Single chain transmembrane proteins: Any PDB chain sharing 90% sequence identity to this transmembrane protein is assigned as a transmembrane protein as well, and shares the same transmembrane annotation.Multi-chain transmembrane proteins:If the reference mpstruc entry contains multiple protein entities, it is necessary to identify which of the entities are presumed to be transmembrane chains. This is done in conjunction with Uniprot annotations. Transmembrane protein entities are identified by checking if their corresponding Uniprot sequence has annotations labeled <i>transmembrane</i> or <i>intramembrane region</i>. For transmembrane entities, all members of the sequence cluster (90% sequence identity) are programmatically infered to be members of the same class of transmembrane proteins by applying the above procedure for single entity mpstruc entries. Annotations are denoned with 'Homology' provenance code."
     },
     "rcsb_cluster_flexibility" : {
       "type" : "object",
       "properties" : {
         "link" : {
           "type" : "string",
-          "description" : "Link to the associated PDBFlex database entry.\n"
+          "description" : "Link to the associated PDBFlex database entry."
         },
         "label" : {
           "type" : "string",
-          "description" : "Structural flexibility in the cluster (95% sequence identity) where a given entity belongs.\n"
+          "description" : "Structural flexibility in the cluster (95% sequence identity) where a given entity belongs."
         },
         "avg_rmsd" : {
           "type" : "number",
-          "description" : "Average RMSD refer to average pairwise RMSD (Root Mean Square Deviation of C-alpha atoms)\n between structures in the cluster (95% sequence identity) where a given entity belongs.\n"
+          "description" : "Average RMSD refer to average pairwise RMSD (Root Mean Square Deviation of C-alpha atoms) between structures in the cluster (95% sequence identity) where a given entity belongs."
         },
         "max_rmsd" : {
           "type" : "number",
-          "description" : "Maximal RMSD refer to maximal pairwise RMSD (Root Mean Square Deviation of C-alpha atoms)\n between structures in the cluster (95% sequence identity) where a given entity belongs.\n"
+          "description" : "Maximal RMSD refer to maximal pairwise RMSD (Root Mean Square Deviation of C-alpha atoms) between structures in the cluster (95% sequence identity) where a given entity belongs."
         },
         "provenance_code": {
           "type": "string",
@@ -288,7 +208,7 @@
         }
       },
       "additionalProperties": false,
-      "description": "Indicates intrinsic flexibility of protein structures determined from structural variations\n between different depositions and chains in asymmetric units of the same protein in PDB (95% sequence identity).\n"
+      "description": "Indicates intrinsic flexibility of protein structures determined from structural variations between different depositions and chains in asymmetric units of the same protein in PDB (95% sequence identity)."
     }
   },
   "additionalProperties": false

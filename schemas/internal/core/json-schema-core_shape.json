@@ -1,8 +1,8 @@
 {
-  "type": "object",
   "$schema" : "http://json-schema.org/draft-04/schema#",
-  "title" : "core_shape.json",
+  "title" : "Core Shape",
   "description": "Schema for the shape service to contain the BioZernike descriptors data that describe PDB volumes at different granularities.",
+  "type": "object",
   "required": [
     "rcsb_shape_container_identifiers",
     "max_order_zernike",
@@ -75,4 +75,3 @@
   },
   "additionalProperties": false
 }
-
