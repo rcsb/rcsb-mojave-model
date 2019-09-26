@@ -3126,6 +3126,11 @@
             "rcsb_id": {
                "type": "string",
                "description": "A unique identifier for the chemical definition in this container.",
+               "rcsb_search_context": [
+                  "exact-match",
+                  "full-text"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "A unique identifier for the chemical definition in this container.",
@@ -3789,6 +3794,11 @@
       "rcsb_id": {
          "type": "string",
          "description": "A unique identifier for the chemical definition in this container.",
+         "rcsb_search_context": [
+            "exact-match",
+            "full-text"
+         ],
+         "rcsb_full_text_priority": 10,
          "rcsb_description": [
             {
                "text": "A unique identifier for the chemical definition in this container.",

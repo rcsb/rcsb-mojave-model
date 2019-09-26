@@ -936,6 +936,11 @@
             "rcsb_id": {
                "type": "string",
                "description": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+               "rcsb_search_context": [
+                  "exact-match",
+                  "full-text"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
@@ -1634,6 +1639,11 @@
       "rcsb_id": {
          "type": "string",
          "description": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+         "rcsb_search_context": [
+            "exact-match",
+            "full-text"
+         ],
+         "rcsb_full_text_priority": 10,
          "rcsb_description": [
             {
                "text": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",

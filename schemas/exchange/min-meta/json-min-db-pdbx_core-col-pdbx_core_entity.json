@@ -2101,6 +2101,11 @@
             "rcsb_id": {
                "type": "string",
                "description": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
+               "rcsb_search_context": [
+                  "exact-match",
+                  "full-text"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
@@ -3073,6 +3078,11 @@
       "rcsb_id": {
          "type": "string",
          "description": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
+         "rcsb_search_context": [
+            "exact-match",
+            "full-text"
+         ],
+         "rcsb_full_text_priority": 10,
          "rcsb_description": [
             {
                "text": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
