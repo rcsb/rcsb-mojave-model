@@ -800,6 +800,16 @@
                      }
                   ]
                },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_struct_special_symmetry.id must uniquely identify\n each item in the PDBX_STRUCT_SPECIAL_SYMMETRY list.\n\n This is an integer serial number.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_struct_special_symmetry.id must uniquely identify\n each item in the PDBX_STRUCT_SPECIAL_SYMMETRY list.\n\n This is an integer serial number.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "label_asym_id": {
                   "type": "string",
                   "description": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
@@ -824,7 +834,8 @@
             "additionalProperties": false,
             "required": [
                "PDB_model_num",
-               "auth_seq_id"
+               "auth_seq_id",
+               "id"
             ]
          },
          "minItems": 1,
@@ -1008,6 +1019,16 @@
                   "rcsb_description": [
                      {
                         "text": "A name for the feature.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Ordinal identifier for this category",
+                  "rcsb_description": [
+                     {
+                        "text": "Ordinal identifier for this category",
                         "context": "dictionary"
                      }
                   ]
@@ -1252,6 +1273,7 @@
             "additionalProperties": false,
             "required": [
                "feature_id",
+               "ordinal",
                "provenance_code",
                "reference_scheme",
                "type"
@@ -1419,6 +1441,16 @@
                   "rcsb_description": [
                      {
                         "text": "The value of _rcsb_struct_conn.id is an identifier for connection.\n\n Note that this item need not be a number; it can be any unique\n identifier.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ordinal_id": {
+                  "type": "integer",
+                  "description": "The value of _rcsb_struct_conn.id must uniquely identify a record in\n the rcsb_struct_conn list.\n",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _rcsb_struct_conn.id must uniquely identify a record in\n the rcsb_struct_conn list.\n",
                         "context": "dictionary"
                      }
                   ]
@@ -1629,7 +1661,8 @@
             "additionalProperties": false,
             "required": [
                "connect_type",
-               "id"
+               "id",
+               "ordinal_id"
             ]
          },
          "minItems": 1,
@@ -1658,7 +1691,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entity_instance version: 6.1.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity_instance version 6.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.1.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entity_instance version: 6.2.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity_instance version 6.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.2.0"
 }

@@ -1347,6 +1347,16 @@
                      }
                   ]
                },
+               "pdbx_src_id": {
+                  "type": "integer",
+                  "description": "This data item is an ordinal identifier for entity_src_gen data records.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is an ordinal identifier for entity_src_gen data records.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "plasmid_details": {
                   "type": "string",
                   "description": "A description of special aspects of the plasmid that produced the\n entity in the host organism. Where full details of the protein\n production are available it would be expected that this item\n would be derived from _pdbx_construct.details of the construct\n pointed to from _entity_src_gen_express.plasmid_id.",
@@ -1376,7 +1386,10 @@
                   ]
                }
             },
-            "additionalProperties": false
+            "additionalProperties": false,
+            "required": [
+               "pdbx_src_id"
+            ]
          },
          "minItems": 1,
          "uniqueItems": true,
@@ -1878,9 +1891,22 @@
                         "context": "dictionary"
                      }
                   ]
+               },
+               "pdbx_src_id": {
+                  "type": "integer",
+                  "description": "This data item is an ordinal identifier for pdbx_entity_src_syn data records.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is an ordinal identifier for pdbx_entity_src_syn data records.",
+                        "context": "dictionary"
+                     }
+                  ]
                }
             },
-            "additionalProperties": false
+            "additionalProperties": false,
+            "required": [
+               "pdbx_src_id"
+            ]
          },
          "minItems": 1,
          "uniqueItems": true,
@@ -2182,8 +2208,14 @@
                      "database_name": {
                         "type": "string",
                         "enum": [
+                           "EMBL",
                            "GenBank",
+                           "NDB",
+                           "NORINE",
                            "PDB",
+                           "PIR",
+                           "PRF",
+                           "RefSeq",
                            "UniProt"
                         ],
                         "description": "Reference database name\n",
@@ -2216,8 +2248,6 @@
          },
          "additionalProperties": false,
          "required": [
-            "asym_ids",
-            "auth_asym_ids",
             "entity_id",
             "entry_id",
             "rcsb_id"
@@ -2326,6 +2356,16 @@
                      }
                   ]
                },
+               "pdbx_src_id": {
+                  "type": "string",
+                  "description": "An identifier for an entity segment.",
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for an entity segment.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "provenance_code": {
                   "type": "string",
                   "enum": [
@@ -2405,7 +2445,10 @@
                   "uniqueItems": false
                }
             },
-            "additionalProperties": false
+            "additionalProperties": false,
+            "required": [
+               "pdbx_src_id"
+            ]
          },
          "minItems": 1,
          "uniqueItems": true,
@@ -2582,6 +2625,16 @@
                      }
                   ]
                },
+               "pdbx_src_id": {
+                  "type": "string",
+                  "description": "An identifier for the entity segment.",
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for the entity segment.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "provenance_code": {
                   "type": "string",
                   "enum": [
@@ -2684,7 +2737,10 @@
                   "uniqueItems": false
                }
             },
-            "additionalProperties": false
+            "additionalProperties": false,
+            "required": [
+               "pdbx_src_id"
+            ]
          },
          "minItems": 1,
          "uniqueItems": true,
@@ -2718,8 +2774,14 @@
                "reference_database_name": {
                   "type": "string",
                   "enum": [
+                     "EMBL",
                      "GenBank",
+                     "NDB",
+                     "NORINE",
                      "PDB",
+                     "PIR",
+                     "PRF",
+                     "RefSeq",
                      "UniProt"
                   ],
                   "description": "Reference sequence database name.",
@@ -3118,7 +3180,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entity version: 6.1.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 6.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.1.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entity version: 6.2.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 6.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.2.0"
 }

@@ -54,11 +54,27 @@
                         "context": "brief"
                      }
                   ]
+               },
+               "pdbx_ordinal": {
+                  "type": "integer",
+                  "examples": [
+                     "1",
+                     "2",
+                     "3"
+                  ],
+                  "description": "This data item defines the order of the author's name in the\n list of audit authors.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item defines the order of the author's name in the\n list of audit authors.",
+                        "context": "dictionary"
+                     }
+                  ]
                }
             },
             "additionalProperties": false,
             "required": [
-               "name"
+               "name",
+               "pdbx_ordinal"
             ]
          },
          "minItems": 1,
@@ -17623,7 +17639,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 6.1.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 6.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.1.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 6.2.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 6.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.2.0"
 }
