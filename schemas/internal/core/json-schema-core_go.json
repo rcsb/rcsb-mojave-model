@@ -12,7 +12,7 @@
   "properties": {
     "rcsb_id" : {
       "type" : "string",
-      "description" : "Unique GO identifier.",
+      "description" : "Unique identifier of an object in GO core collection.",
       "rcsb_search_context": [
         "exact-match"
       ]
@@ -22,14 +22,10 @@
       "properties": {
         "go_id": {
           "type" : "string",
-          "description": "Unique GO identifier."
+          "examples": ["GO:0005125", "GO:0060092"],
+          "description": "A unique seven digit identifier prefixed by 'GO:'."
         }
       }
-    },
-    "rcsb_go_id": {
-      "type": "string",
-      "examples": ["GO:0005125", "GO:0060092"],
-      "description": "A unique seven digit identifier prefixed by GO:."
     },
     "rcsb_go_aspect": {
       "type": "string",
