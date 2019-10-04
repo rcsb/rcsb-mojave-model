@@ -315,6 +315,14 @@
             9606
           ]
         },
+        "source": {
+          "type": "string",
+          "description": "Scientific name source: Data Warehouse (DW) or NCBI Web Services (WS).",
+          "enum": [
+            "DW",
+            "WS"
+          ]
+        },
         "scientific_name": {
           "type": "string",
           "description": "NCBI organism scientific name.",
