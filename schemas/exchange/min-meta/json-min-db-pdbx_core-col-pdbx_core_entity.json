@@ -2173,6 +2173,7 @@
                         "type": "string",
                         "enum": [
                            "PDB",
+                           "RCSB",
                            "SIFTS",
                            "UniProt"
                         ],
@@ -2229,6 +2230,7 @@
                         "type": "string",
                         "enum": [
                            "PDB",
+                           "RCSB",
                            "SIFTS"
                         ],
                         "description": "Source of the reference database assignment\n",
@@ -3003,19 +3005,6 @@
                      }
                   ]
                },
-               "value": {
-                  "type": "number",
-                  "description": "The value for the feature.",
-                  "rcsb_search_context": [
-                     "default-match"
-                  ],
-                  "rcsb_description": [
-                     {
-                        "text": "The value for the feature.",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
                "feature_ranges": {
                   "type": "array",
                   "items": {
@@ -3037,6 +3026,16 @@
                            "rcsb_description": [
                               {
                                  "text": "An identifier for the monomer at which this segment of the feature ends.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "value": {
+                           "type": "number",
+                           "description": "The value for the feature over this monomer segment.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The value for the feature over this monomer segment.",
                                  "context": "dictionary"
                               }
                            ]
@@ -3067,6 +3066,16 @@
                            "rcsb_description": [
                               {
                                  "text": "An identifier for the monomer at which this segment of the feature ends.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "value": {
+                           "type": "number",
+                           "description": "The value for the feature at this monomer.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The value for the feature at this monomer.",
                                  "context": "dictionary"
                               }
                            ]
@@ -3161,7 +3170,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entity version: 6.2.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 6.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.2.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entity version: 6.3.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 6.3.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.3.0"
 }
