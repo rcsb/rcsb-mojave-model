@@ -6,9 +6,23 @@
 
     <groupId>org.rcsb</groupId>
     <artifactId>rcsb-json-schema</artifactId>
-    <version>0.1.3</version>
+    <version>0.1.3-SNAPSHOT</version>
 
     <packaging>jar</packaging>
+
+    <distributionManagement>
+        <downloadUrl>http://nexus3.rcsb.org/repository/rcsb-super-proxy/</downloadUrl>
+        <repository>
+            <id>releases</id>
+            <name>RCSB PDB Maven Repository</name>
+            <url>http://nexus3.rcsb.org/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://nexus3.rcsb.org/repository/maven-snapshots/</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <!-- resources included for distribution -->
