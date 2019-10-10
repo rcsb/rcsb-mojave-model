@@ -24,13 +24,13 @@ build:
   - mvn --batch-mode --errors -U clean package
 
   #    Tar the built files (jar + dependencies)
-  - echo "We will build a tar file called [${FILENAME_VERSION}]"
-  - tar -cvzf ${FILENAME_VERSION} target/
+  - echo "We will build a tar file called ["${FILENAME_VERSION}"]"
+  - tar -cvzf ${FILENAME_VERSION} target/classes
   - ls -alh ${FILENAME_VERSION}
 
 #    Send artifacts to the build locker
   - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ../${FILENAME_VERSION}"
-  - echo "Sent ${FILENAME_VERSION} to the build locker"
+  - echo "Sent "${FILENAME_VERSION}" to the build locker"
 
   tags:
   - Java8-Nexus3
