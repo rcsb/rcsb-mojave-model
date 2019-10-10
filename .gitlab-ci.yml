@@ -29,7 +29,7 @@ build:
   - ls -alh ${FILENAME_VERSION}
 
 #    Send artifacts to the build locker
-  - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ../${FILENAME_VERSION}"
+  - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ${FILENAME_VERSION}"
   - echo "Sent "${FILENAME_VERSION}" to the build locker"
 
   tags:
