@@ -21,7 +21,7 @@ build:
   - mvn -v
 
   #    Build via maven
-  - mvn --batch-mode --errors -U clean package
+  - mvn --batch-mode --errors -U clean deploy
 
   #    Tar the built files (jar + dependencies)
   - echo "We will build a tar file called ["${FILENAME_VERSION}"]"
