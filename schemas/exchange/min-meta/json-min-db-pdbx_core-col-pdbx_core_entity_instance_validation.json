@@ -481,6 +481,9 @@
                         "value": {
                            "type": "number",
                            "description": "The value of the feature of the monomer segment.",
+                           "rcsb_search_context": [
+                              "default-match"
+                           ],
                            "rcsb_description": [
                               {
                                  "text": "The value of the feature of the monomer segment.",
@@ -521,6 +524,9 @@
                         "value": {
                            "type": "number",
                            "description": "The value of the feature at this monomer position.",
+                           "rcsb_search_context": [
+                              "default-match"
+                           ],
                            "rcsb_description": [
                               {
                                  "text": "The value of the feature at this monomer position.",
@@ -551,6 +557,9 @@
                "count": {
                   "type": "integer",
                   "description": "The feature count.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The feature count.",
@@ -561,6 +570,9 @@
                "coverage": {
                   "type": "number",
                   "description": "The fractional feature coverage relative to the full entity sequence.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The fractional feature coverage relative to the full entity sequence.",
@@ -581,6 +593,11 @@
                      "RSRZ_OUTLIER"
                   ],
                   "description": "Type or category of the feature.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "ANGLE_OUTLIER",
@@ -651,7 +668,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity_instance_validation.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entity_instance_validation version: 6.3.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity_instance_validation version 6.3.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity_instance_validation.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.3.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entity_instance_validation version: 6.4.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity_instance_validation version 6.4.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity_instance_validation.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.4.0"
 }

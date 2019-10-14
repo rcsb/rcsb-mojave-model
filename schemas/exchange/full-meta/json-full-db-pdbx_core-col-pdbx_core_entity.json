@@ -2199,9 +2199,30 @@
                      "database_accession": {
                         "type": "string",
                         "description": "Reference database accession code\n",
+                        "rcsb_search_context": [
+                           "exact-match",
+                           "full-text",
+                           "suggest"
+                        ],
+                        "rcsb_full_text_priority": 20,
                         "rcsb_description": [
                            {
                               "text": "Reference database accession code\n",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "database_isoform": {
+                        "type": "string",
+                        "description": "Reference database identifier for the sequence isoform\n",
+                        "rcsb_search_context": [
+                           "exact-match",
+                           "full-text"
+                        ],
+                        "rcsb_full_text_priority": 10,
+                        "rcsb_description": [
+                           {
+                              "text": "Reference database identifier for the sequence isoform\n",
                               "context": "dictionary"
                            }
                         ]
@@ -2220,6 +2241,11 @@
                            "UniProt"
                         ],
                         "description": "Reference database name\n",
+                        "rcsb_search_context": [
+                           "exact-match",
+                           "full-text"
+                        ],
+                        "rcsb_full_text_priority": 10,
                         "rcsb_description": [
                            {
                               "text": "Reference database name\n",
@@ -2773,6 +2799,16 @@
                      }
                   ]
                },
+               "reference_database_isoform": {
+                  "type": "string",
+                  "description": "Reference sequence isoform identifier.",
+                  "rcsb_description": [
+                     {
+                        "text": "Reference sequence isoform identifier.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "reference_database_name": {
                   "type": "string",
                   "enum": [
@@ -2930,6 +2966,11 @@
                "feature_id": {
                   "type": "string",
                   "description": "An identifier for the feature.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "An identifier for the feature.",
@@ -2998,6 +3039,11 @@
                      "mutation"
                   ],
                   "description": "A type or category of the feature.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "artifact",
@@ -3043,6 +3089,9 @@
                         "value": {
                            "type": "number",
                            "description": "The value for the feature over this monomer segment.",
+                           "rcsb_search_context": [
+                              "default-match"
+                           ],
                            "rcsb_description": [
                               {
                                  "text": "The value for the feature over this monomer segment.",
@@ -3083,6 +3132,9 @@
                         "value": {
                            "type": "number",
                            "description": "The value for the feature at this monomer.",
+                           "rcsb_search_context": [
+                              "default-match"
+                           ],
                            "rcsb_description": [
                               {
                                  "text": "The value for the feature at this monomer.",
@@ -3116,6 +3168,9 @@
                "count": {
                   "type": "integer",
                   "description": "The feature count.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The feature count.",
@@ -3126,6 +3181,9 @@
                "coverage": {
                   "type": "number",
                   "description": "The fractional feature coverage relative to the full entity sequence.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The fractional feature coverage relative to the full entity sequence.",
@@ -3140,6 +3198,11 @@
                      "mutation"
                   ],
                   "description": "Type or category of the feature.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "artifact",
@@ -3189,7 +3252,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entity version: 6.3.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 6.3.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.3.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entity version: 6.4.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 6.4.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.4.0"
 }
