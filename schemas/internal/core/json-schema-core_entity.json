@@ -58,7 +58,16 @@
               "sulfur utilization",
               "cell killing"
             ],
-            "description": "A human-readable term name."
+            "description": "A human-readable term name.",
+            "rcsb_search_context": [
+              "exact-match"
+            ],
+            "rcsb_description": [
+              {
+                "text": "GO Term",
+                "context": "brief"
+              }
+            ]
           }
         }
       },
@@ -122,11 +131,20 @@
             "rcsb_search_context": [
               "exact-match"
             ],
-            "description": "Membrane protein classification term."
+            "description": "Membrane protein classification term.",
+            "rcsb_description": [
+              {
+                "text": "Membrane Classification Name",
+                "context": "brief"
+              }
+            ]
           },
           "depth": {
             "type": "integer",
-            "description": "Hierarchy depth."
+            "description": "Hierarchy depth.",
+            "rcsb_search_context": [
+              "default-match"
+            ]
           }
         },
         "additionalProperties": false,
