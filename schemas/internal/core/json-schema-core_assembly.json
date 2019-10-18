@@ -242,11 +242,15 @@
           },
           "depth": {
             "type" : "integer",
-            "description" : "Hierarchy depth."
+            "description" : "Hierarchy depth.",
+            "rcsb_search_context": [
+              "default-match"
+            ]
           }
         },
         "additionalProperties": false
-      }
+      },
+      "rcsb_nested_indexing": true
     }
   },
   "additionalProperties": false

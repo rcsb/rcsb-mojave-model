@@ -49,6 +49,9 @@
               "GO:0005125",
               "GO:0060092"
             ],
+            "rcsb_search_context": [
+              "exact-match"
+            ],
             "description": "A unique seven digit identifier prefixed by GO:."
           },
           "name": {
@@ -60,7 +63,8 @@
             ],
             "description": "A human-readable term name.",
             "rcsb_search_context": [
-              "exact-match"
+              "exact-match",
+              "full-text"
             ],
             "rcsb_description": [
               {
@@ -71,6 +75,7 @@
           }
         }
       },
+      "rcsb_nested_indexing": true,
       "additionalProperties": false,
       "description": "Ontologies that describe gene products in terms of their associated biological processes, cellular components and molecular functions in a species-independent manner."
     },
@@ -107,10 +112,14 @@
           },
           "depth": {
             "type": "integer",
+            "rcsb_search_context": [
+              "default-match"
+            ],
             "description": "Classification hierarchy depth."
           }
         }
-      }
+      },
+      "rcsb_nested_indexing": true
     },
     "rcsb_membrane_lineage": {
       "type": "array",
