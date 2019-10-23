@@ -10,10 +10,6 @@
                   "C18 H19 N7 O8 S"
                ],
                "description": "The formula for the chemical component. Formulae are written\n according to the following rules:\n\n (1) Only recognized element symbols may be used.\n\n (2) Each element symbol is followed by a 'count' number. A count\n    of '1' may be omitted.\n\n (3) A space or parenthesis must separate each cluster of\n    (element symbol + count), but in general parentheses are\n    not used.\n\n (4) The order of elements depends on whether carbon is\n    present or not. If carbon is present, the order should be:\n    C, then H, then the other elements in alphabetical order\n    of their symbol. If carbon is not present, the elements\n    are listed purely in alphabetic order of their symbol. This\n    is the 'Hill' system used by Chemical Abstracts.",
-               "rcsb_search_context": [
-                  "full-text"
-               ],
-               "rcsb_full_text_priority": 1,
                "rcsb_description": [
                   {
                      "text": "The formula for the chemical component. Formulae are written\n according to the following rules:\n\n (1) Only recognized element symbols may be used.\n\n (2) Each element symbol is followed by a 'count' number. A count\n    of '1' may be omitted.\n\n (3) A space or parenthesis must separate each cluster of\n    (element symbol + count), but in general parentheses are\n    not used.\n\n (4) The order of elements depends on whether carbon is\n    present or not. If carbon is present, the order should be:\n    C, then H, then the other elements in alphabetical order\n    of their symbol. If carbon is not present, the elements\n    are listed purely in alphabetic order of their symbol. This\n    is the 'Hill' system used by Chemical Abstracts.",
@@ -470,6 +466,7 @@
             }
          },
          "additionalProperties": false,
+         "rcsb_nested_indexing": false,
          "required": [
             "id"
          ]
@@ -2473,6 +2470,7 @@
             }
          },
          "additionalProperties": false,
+         "rcsb_nested_indexing": false,
          "required": [
             "prd_id"
          ]
@@ -2707,6 +2705,7 @@
             }
          },
          "additionalProperties": false,
+         "rcsb_nested_indexing": false,
          "required": [
             "family_prd_id"
          ]
@@ -3129,6 +3128,7 @@
             }
          },
          "additionalProperties": false,
+         "rcsb_nested_indexing": false,
          "required": [
             "comp_id"
          ]
@@ -3139,10 +3139,6 @@
             "InChI": {
                "type": "string",
                "description": "Standard IUPAC International Chemical Identifier (InChI) descriptor for the chemical component.\n\n   InChI, the IUPAC International Chemical Identifier,\n   by Stephen R Heller, Alan McNaught, Igor Pletnev, Stephen Stein and Dmitrii Tchekhovskoi,\n   Journal of Cheminformatics, 2015, 7:23;",
-               "rcsb_search_context": [
-                  "full-text"
-               ],
-               "rcsb_full_text_priority": 1,
                "rcsb_description": [
                   {
                      "text": "Standard IUPAC International Chemical Identifier (InChI) descriptor for the chemical component.\n\n   InChI, the IUPAC International Chemical Identifier,\n   by Stephen R Heller, Alan McNaught, Igor Pletnev, Stephen Stein and Dmitrii Tchekhovskoi,\n   Journal of Cheminformatics, 2015, 7:23;",
@@ -3201,6 +3197,7 @@
             }
          },
          "additionalProperties": false,
+         "rcsb_nested_indexing": false,
          "required": [
             "comp_id"
          ]
@@ -3336,6 +3333,7 @@
             }
          },
          "additionalProperties": false,
+         "rcsb_nested_indexing": false,
          "required": [
             "comp_id"
          ]

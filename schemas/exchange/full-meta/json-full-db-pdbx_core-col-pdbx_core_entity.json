@@ -334,7 +334,8 @@
                "uniqueItems": false
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": true
       },
       "entity_keywords": {
          "type": "object",
@@ -359,7 +360,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "entity_name_com": {
          "type": "object",
@@ -381,7 +383,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "entity_name_sys": {
          "type": "object",
@@ -402,7 +405,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "entity_poly": {
          "type": "object",
@@ -699,7 +703,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "entity_src_gen": {
          "type": "array",
@@ -1810,7 +1815,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "pdbx_entity_src_syn": {
          "type": "array",
@@ -2288,6 +2294,7 @@
             }
          },
          "additionalProperties": false,
+         "rcsb_nested_indexing": true,
          "required": [
             "entity_id",
             "entry_id",
@@ -2893,7 +2900,7 @@
          },
          "minItems": 1,
          "uniqueItems": true,
-         "rcsb_nested_indexing": true
+         "rcsb_nested_indexing": false
       },
       "rcsb_polymer_entity_feature": {
          "type": "array",
@@ -3265,7 +3272,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entity version: 6.4.3",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 6.4.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.4.3"
+   "title": "schema: pdbx_core collection: pdbx_core_entity version: 6.4.4",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 6.4.4. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.4.4"
 }

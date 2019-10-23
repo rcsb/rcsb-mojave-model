@@ -233,7 +233,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "citation": {
          "type": "array",
@@ -4486,7 +4487,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "em_helical_entity": {
          "type": "array",
@@ -5855,6 +5857,7 @@
             }
          },
          "additionalProperties": false,
+         "rcsb_nested_indexing": false,
          "required": [
             "id"
          ]
@@ -8634,7 +8637,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "pdbx_deposit_group": {
          "type": "array",
@@ -8975,7 +8979,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "pdbx_nmr_ensemble": {
          "type": "object",
@@ -9183,7 +9188,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "pdbx_nmr_exptl": {
          "type": "array",
@@ -9736,7 +9742,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "pdbx_nmr_sample_details": {
          "type": "array",
@@ -12763,7 +12770,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "rcsb_accession_info": {
          "type": "object",
@@ -12866,7 +12874,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "rcsb_entry_container_identifiers": {
          "type": "object",
@@ -12964,6 +12973,7 @@
             }
          },
          "additionalProperties": false,
+         "rcsb_nested_indexing": false,
          "required": [
             "entry_id"
          ]
@@ -13484,11 +13494,8 @@
                   "type": "number",
                   "description": "Combined estimates of experimental resolution.",
                   "rcsb_search_context": [
-                     "default-match",
-                     "exact-match",
-                     "full-text"
+                     "default-match"
                   ],
-                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "Combined estimates of experimental resolution.",
@@ -13586,7 +13593,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "refine": {
          "type": "array",
@@ -17020,7 +17028,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "struct_keywords": {
          "type": "object",
@@ -17083,7 +17092,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "symmetry": {
          "type": "object",
@@ -17281,7 +17291,8 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "rcsb_nested_indexing": false
       },
       "rcsb_id": {
          "type": "string",
@@ -17305,7 +17316,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 6.4.2",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 6.4.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.4.2"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 6.4.3",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 6.4.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.4.3"
 }
