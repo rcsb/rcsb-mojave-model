@@ -84,16 +84,27 @@
             "type": "string",
             "description": "MeSH classification term.",
             "rcsb_search_context": [
+              "exact-match",
               "full-text"
+            ],
+            "rcsb_description": [
+              {
+                "text": "MeSH Descriptor",
+                "context": "brief"
+              }
             ]
           },
           "depth": {
             "type": "integer",
-            "description": "Hierarchy depth."
+            "description": "Hierarchy depth.",
+            "rcsb_search_context": [
+              "default-match"
+            ]
           }
         },
         "additionalProperties": false
       },
+      "rcsb_nested_indexing": true,
       "description" : "Members of the MeSH classification lineage."
     }
   },
