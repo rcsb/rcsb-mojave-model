@@ -232,7 +232,8 @@
                   },
                   "additionalProperties": false
                },
-               "uniqueItems": false
+               "uniqueItems": false,
+               "rcsb_nested_indexing": true
             },
             "rcsb_macromolecular_names_combined": {
                "type": "array",
@@ -284,7 +285,8 @@
                   },
                   "additionalProperties": false
                },
-               "uniqueItems": false
+               "uniqueItems": false,
+               "rcsb_nested_indexing": false
             },
             "rcsb_enzyme_class_combined": {
                "type": "array",
@@ -328,11 +330,11 @@
                   },
                   "additionalProperties": false
                },
-               "uniqueItems": false
+               "uniqueItems": false,
+               "rcsb_nested_indexing": false
             }
          },
-         "additionalProperties": false,
-         "rcsb_nested_indexing": true
+         "additionalProperties": false
       },
       "entity_keywords": {
          "type": "object",
@@ -357,8 +359,7 @@
                ]
             }
          },
-         "additionalProperties": false,
-         "rcsb_nested_indexing": false
+         "additionalProperties": false
       },
       "entity_name_com": {
          "type": "object",
@@ -380,8 +381,7 @@
                ]
             }
          },
-         "additionalProperties": false,
-         "rcsb_nested_indexing": false
+         "additionalProperties": false
       },
       "entity_name_sys": {
          "type": "object",
@@ -402,8 +402,7 @@
                ]
             }
          },
-         "additionalProperties": false,
-         "rcsb_nested_indexing": false
+         "additionalProperties": false
       },
       "entity_poly": {
          "type": "object",
@@ -699,8 +698,7 @@
                ]
             }
          },
-         "additionalProperties": false,
-         "rcsb_nested_indexing": false
+         "additionalProperties": false
       },
       "entity_src_gen": {
          "type": "array",
@@ -1811,8 +1809,7 @@
                ]
             }
          },
-         "additionalProperties": false,
-         "rcsb_nested_indexing": false
+         "additionalProperties": false
       },
       "pdbx_entity_src_syn": {
          "type": "array",
@@ -2202,7 +2199,8 @@
                   },
                   "additionalProperties": false
                },
-               "uniqueItems": false
+               "uniqueItems": false,
+               "rcsb_nested_indexing": true
             },
             "reference_sequence_identifiers": {
                "type": "array",
@@ -2281,11 +2279,11 @@
                   },
                   "additionalProperties": false
                },
-               "uniqueItems": false
+               "uniqueItems": false,
+               "rcsb_nested_indexing": true
             }
          },
          "additionalProperties": false,
-         "rcsb_nested_indexing": true,
          "required": [
             "entity_id",
             "entry_id"
@@ -2480,7 +2478,8 @@
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": true
                }
             },
             "additionalProperties": false,
@@ -2490,7 +2489,7 @@
          },
          "minItems": 1,
          "uniqueItems": true,
-         "rcsb_nested_indexing": true
+         "rcsb_nested_indexing": false
       },
       "rcsb_entity_poly_info": {
          "type": "array",
@@ -2769,7 +2768,8 @@
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": true
                }
             },
             "additionalProperties": false,
@@ -2779,7 +2779,7 @@
          },
          "minItems": 1,
          "uniqueItems": true,
-         "rcsb_nested_indexing": true
+         "rcsb_nested_indexing": false
       },
       "rcsb_polymer_entity_align": {
          "type": "array",
@@ -2875,7 +2875,8 @@
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": false
                }
             },
             "additionalProperties": false
@@ -3104,7 +3105,8 @@
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": false
                },
                "feature_positions": {
                   "type": "array",
@@ -3147,7 +3149,8 @@
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": false
                }
             },
             "additionalProperties": false
@@ -3244,7 +3247,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entity version: 6.4.4",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 6.4.4. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.4.4"
+   "title": "schema: pdbx_core collection: pdbx_core_entity version: 6.4.5",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entity version 6.4.5. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.4.5"
 }

@@ -465,7 +465,6 @@
             }
          },
          "additionalProperties": false,
-         "rcsb_nested_indexing": false,
          "required": [
             "id"
          ]
@@ -2468,7 +2467,6 @@
             }
          },
          "additionalProperties": false,
-         "rcsb_nested_indexing": false,
          "required": [
             "prd_id"
          ]
@@ -2703,7 +2701,6 @@
             }
          },
          "additionalProperties": false,
-         "rcsb_nested_indexing": false,
          "required": [
             "family_prd_id"
          ]
@@ -3124,7 +3121,6 @@
             }
          },
          "additionalProperties": false,
-         "rcsb_nested_indexing": false,
          "required": [
             "comp_id"
          ]
@@ -3192,7 +3188,6 @@
             }
          },
          "additionalProperties": false,
-         "rcsb_nested_indexing": false,
          "required": [
             "comp_id"
          ]
@@ -3328,7 +3323,6 @@
             }
          },
          "additionalProperties": false,
-         "rcsb_nested_indexing": false,
          "required": [
             "comp_id"
          ]
@@ -3498,7 +3492,8 @@
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": true
                }
             },
             "additionalProperties": false,
@@ -3771,7 +3766,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.2.0",
-   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.2.0"
+   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.2.1",
+   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.2.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.2.1"
 }

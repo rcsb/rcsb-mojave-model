@@ -120,7 +120,6 @@
             }
          },
          "additionalProperties": false,
-         "rcsb_nested_indexing": false,
          "required": [
             "id"
          ]
@@ -548,8 +547,7 @@
                "type": "string",
                "description": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
                "rcsb_search_context": [
-                  "exact-match",
-                  "full-text"
+                  "exact-match"
                ],
                "rcsb_full_text_priority": 10,
                "rcsb_description": [
@@ -561,7 +559,6 @@
             }
          },
          "additionalProperties": false,
-         "rcsb_nested_indexing": false,
          "required": [
             "assembly_id",
             "entry_id",
@@ -1010,7 +1007,6 @@
             }
          },
          "additionalProperties": false,
-         "rcsb_nested_indexing": false,
          "required": [
             "assembly_id",
             "entry_id"
@@ -1020,8 +1016,7 @@
          "type": "string",
          "description": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
          "rcsb_search_context": [
-            "exact-match",
-            "full-text"
+            "exact-match"
          ],
          "rcsb_full_text_priority": 10,
          "rcsb_description": [

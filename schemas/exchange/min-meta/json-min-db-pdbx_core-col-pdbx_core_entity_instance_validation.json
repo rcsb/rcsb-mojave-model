@@ -115,8 +115,7 @@
                ]
             }
          },
-         "additionalProperties": false,
-         "rcsb_nested_indexing": false
+         "additionalProperties": false
       },
       "rcsb_entity_instance_validation_container_identifiers": {
          "type": "object",
@@ -236,7 +235,6 @@
             }
          },
          "additionalProperties": false,
-         "rcsb_nested_indexing": false,
          "required": [
             "asym_id",
             "entry_id"
@@ -433,7 +431,8 @@
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": false
                },
                "feature_ranges": {
                   "type": "array",
@@ -473,7 +472,8 @@
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": false
                },
                "feature_positions": {
                   "type": "array",
@@ -513,7 +513,8 @@
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": false
                }
             },
             "additionalProperties": false,
