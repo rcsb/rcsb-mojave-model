@@ -371,12 +371,18 @@
               "scores": {
                 "type": "object",
                 "description": "Alignment scores",
-                "required": ["target_coverage","query_coverage"],
+                "required": ["target_coverage","query_coverage","target_length","query_length"],
                 "properties": {
                   "target_coverage": {
                     "type": "integer"
                   },
                   "query_coverage": {
+                    "type": "integer"
+                  },
+                  "target_length": {
+                    "type": "integer"
+                  },
+                  "query_length": {
                     "type": "integer"
                   }
                 }
@@ -421,12 +427,18 @@
               "scores": {
                 "type": "object",
                 "description": "Alignment scores",
-                "required": ["target_coverage","query_coverage"],
+                "required": ["target_coverage","query_coverage","target_length","query_length"],
                 "properties": {
                   "target_coverage": {
                     "type": "integer"
                   },
                   "query_coverage": {
+                    "type": "integer"
+                  },
+                  "target_length": {
+                    "type": "integer"
+                  },
+                  "query_length": {
                     "type": "integer"
                   }
                 }
