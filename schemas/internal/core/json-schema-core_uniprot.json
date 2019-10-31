@@ -379,19 +379,6 @@
               }
             ]
           },
-          "value": {
-            "type": "number",
-            "description": "The value for the feature.",
-            "rcsb_search_context": [
-              "default-match"
-            ],
-            "rcsb_description": [
-              {
-                "text": "The value for the feature.",
-                "context": "dictionary"
-              }
-            ]
-          },
           "feature_ranges": {
             "type": "array",
             "items": {
@@ -413,6 +400,19 @@
                   "rcsb_description": [
                     {
                       "text": "An identifier for the monomer at which this segment of the feature ends.",
+                      "context": "dictionary"
+                    }
+                  ]
+                },
+                "value": {
+                  "type": "number",
+                  "description": "The value of the feature over the monomer segment.",
+                  "rcsb_search_context": [
+                    "default-match"
+                  ],
+                  "rcsb_description": [
+                    {
+                      "text": "The value of the feature over the monomer segment.",
                       "context": "dictionary"
                     }
                   ]
@@ -443,6 +443,19 @@
                   "rcsb_description": [
                     {
                       "text": "An identifier for the monomer at which this segment of the feature ends.",
+                      "context": "dictionary"
+                    }
+                  ]
+                },
+                "value": {
+                  "type": "number",
+                  "description": "The value of the feature over the monomer segment.",
+                  "rcsb_search_context": [
+                    "default-match"
+                  ],
+                  "rcsb_description": [
+                    {
+                      "text": "The value of the feature over the monomer segment.",
                       "context": "dictionary"
                     }
                   ]
