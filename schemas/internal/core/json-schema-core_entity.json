@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Core Entity",
-  "description": "JSON schema for entity level core data. Combines RCSB Exchange Database schema: json-schema-min-pdbx_core_entity.json and RCSB Data Warehouse schema: json-schema-core_entity.json",
+  "description": "JSON schema for entity core.",
   "type": "object",
   "required": [
     "rcsb_entity_container_identifiers"
@@ -198,6 +198,24 @@
       },
       "additionalProperties": false,
       "description": "Indicates intrinsic flexibility of protein structures determined from structural variations between different depositions and chains in asymmetric units of the same protein in PDB (95% sequence identity)."
+    },
+    "rcsb_latest_revision": {
+      "type": "object",
+      "properties": {
+        "major_revision": {
+          "type": "integer",
+          "description": "The major version number of the latest revision."
+        },
+        "minor_revision": {
+          "type": "integer",
+          "description": "The minor version number of the latest revision."
+        },
+        "revision_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The release date of the latest revision item."
+        }
+      }
     }
   },
   "additionalProperties": false
