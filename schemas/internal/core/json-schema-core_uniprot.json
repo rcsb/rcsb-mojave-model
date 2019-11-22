@@ -234,57 +234,55 @@
               }
             ]
           },
-          "feature_class_lineage_depth": {
+          "feature_class_lineage": {
             "type": "array",
             "items": {
-              "type": "integer",
-              "description": "Members of the feature class lineage as parent lineage depth (1-N)",
-              "rcsb_description": [
-                {
-                  "text": "Members of the feature class lineage as parent lineage depth (1-N)",
-                  "context": "dictionary"
+              "type": "object",
+              "properties": {
+                "depth": {
+                  "type": "integer",
+                  "description": "Members of the feature class lineage as parent lineage depth (1-N)",
+                  "rcsb_description": [
+                    {
+                      "text": "Members of the feature class lineage as parent lineage depth (1-N)",
+                      "context": "dictionary"
+                    }
+                  ]
+                },
+                "id": {
+                  "type": "string",
+                  "description": "Members of the feature class lineage as parent class identifiers.",
+                  "rcsb_search_context": [
+                    "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                    {
+                      "text": "Members of the feature class lineage as parent class identifiers.",
+                      "context": "dictionary"
+                    }
+                  ]
+                },
+                "name": {
+                  "type": "string",
+                  "description": "Members of the feature class lineage as parent class names.",
+                  "rcsb_search_context": [
+                    "exact-match",
+                    "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                    {
+                      "text": "Members of the feature class lineage as parent class names.",
+                      "context": "dictionary"
+                    }
+                  ]
                 }
-              ]
+              },
+              "additionalProperties": false
             },
-            "uniqueItems": false
-          },
-          "feature_class_lineage_id": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "description": "Members of the feature class lineage as parent class identifiers.",
-              "rcsb_search_context": [
-                "exact-match",
-                "full-text"
-              ],
-              "rcsb_full_text_priority": 10,
-              "rcsb_description": [
-                {
-                  "text": "Members of the feature class lineage as parent class identifiers.",
-                  "context": "dictionary"
-                }
-              ]
-            },
-            "uniqueItems": false
-          },
-          "feature_class_lineage_name": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "description": "Members of the feature class lineage as parent class names.",
-              "rcsb_search_context": [
-                "exact-match",
-                "full-text"
-              ],
-              "rcsb_full_text_priority": 10,
-              "rcsb_description": [
-                {
-                  "text": "Members of the feature class lineage as parent class names.",
-                  "context": "dictionary"
-                }
-              ]
-            },
-            "uniqueItems": false
+            "uniqueItems": false,
+            "rcsb_nested_indexing": true
           },
           "feature_id": {
             "type": "string",
