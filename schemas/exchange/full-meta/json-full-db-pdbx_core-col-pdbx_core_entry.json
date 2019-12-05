@@ -604,6 +604,10 @@
                      "Y"
                   ],
                   "description": "Flag to indicate that this citation will not be published.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "Flag to indicate that this citation will not be published.",
@@ -654,6 +658,9 @@
                   "type": "number",
                   "minimum": 0.0,
                   "description": "The mean hydrostatic pressure in kilopascals at which the\n intensities were measured.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "kilopascals",
                   "rcsb_description": [
                      {
@@ -665,6 +672,8 @@
                "ambient_temp": {
                   "type": "number",
                   "minimum": 0.0,
+                  "maximum": 450.0,
+                  "exclusiveMaximum": true,
                   "description": "The mean temperature in kelvins at which the intensities were\n measured.",
                   "rcsb_search_context": [
                      "default-match"
@@ -846,6 +855,9 @@
                      "1996-12-25"
                   ],
                   "description": "The date of data collection.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The date of data collection.",
@@ -1038,6 +1050,14 @@
                      },
                      {
                         "value": "DECTRIS EIGER2 X 9M",
+                        "detail": "PIXEL"
+                     },
+                     {
+                        "value": "DECTRIS EIGER2 XE 16M",
+                        "detail": "PIXEL"
+                     },
+                     {
+                        "value": "DECTRIS EIGER2 XE 9M",
                         "detail": "PIXEL"
                      },
                      {
@@ -3084,6 +3104,9 @@
                   "maximum": 180.0,
                   "exclusiveMaximum": true,
                   "description": "Unit-cell angle gamma in degrees.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
@@ -3097,6 +3120,9 @@
                   "minimum": 0.0,
                   "exclusiveMinimum": true,
                   "description": "Length used to sample the reciprocal lattice lines in the c-direction.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -3130,6 +3156,9 @@
                   "minimum": 0.0,
                   "exclusiveMinimum": true,
                   "description": "Unit-cell length a in Angstroms.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -3143,6 +3172,9 @@
                   "minimum": 0.0,
                   "exclusiveMinimum": true,
                   "description": "Unit-cell length b in Angstroms.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -3156,6 +3188,9 @@
                   "minimum": 0.0,
                   "exclusiveMinimum": true,
                   "description": "Thickness of 2D crystal",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -3186,10 +3221,6 @@
                      "P 6 2 2"
                   ],
                   "description": "There are 17 plane groups classified as oblique, rectangular, square, and hexagonal.\n To describe the symmetry of 2D crystals of biological molecules,\n plane groups are expanded to equivalent noncentrosymmetric space groups.\n The 2D crystal plane corresponds to the 'ab' plane of the space group.\n\n Enumerated space group descriptions include the plane group number in parentheses,\n the H-M plane group symbol, and the plane group class.",
-                  "rcsb_search_context": [
-                     "exact-match"
-                  ],
-                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "C 1 2",
@@ -3295,6 +3326,9 @@
                   "maximum": 180.0,
                   "exclusiveMaximum": true,
                   "description": "Unit-cell angle alpha in degrees.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
@@ -3310,6 +3344,9 @@
                   "maximum": 180.0,
                   "exclusiveMaximum": true,
                   "description": "Unit-cell angle beta in degrees.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
@@ -3325,6 +3362,9 @@
                   "maximum": 180.0,
                   "exclusiveMaximum": true,
                   "description": "Unit-cell angle gamma in degrees.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
@@ -3358,6 +3398,9 @@
                   "minimum": 0.0,
                   "exclusiveMinimum": true,
                   "description": "Unit-cell length a in Angstroms.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -3371,6 +3414,9 @@
                   "minimum": 0.0,
                   "exclusiveMinimum": true,
                   "description": "Unit-cell length b in Angstroms.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -3384,6 +3430,9 @@
                   "minimum": 0.0,
                   "exclusiveMinimum": true,
                   "description": "Unit-cell length c in Angstroms.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -3417,6 +3466,9 @@
                   "minimum": 1,
                   "maximum": 230,
                   "description": "Space group number.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Space group number.",
@@ -3495,6 +3547,9 @@
                      "200"
                   ],
                   "description": "The overall B (temperature factor) value for the 3d-em volume.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The overall B (temperature factor) value for the 3d-em volume.",
@@ -3515,6 +3570,10 @@
                      "Local refinement, Flexible fitting"
                   ],
                   "description": "The refinement protocol used.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The refinement protocol used.",
@@ -3529,6 +3588,10 @@
                      "RECIPROCAL"
                   ],
                   "description": "A flag to indicate whether fitting was carried out in real\n or reciprocal refinement space.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "A flag to indicate whether fitting was carried out in real\n or reciprocal refinement space.",
@@ -3658,6 +3721,9 @@
                      "5.76"
                   ],
                   "description": "The actual pixel size of projection set of images.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The actual pixel size of projection set of images.",
@@ -3750,6 +3816,9 @@
                      "6.78"
                   ],
                   "description": "The nominal pixel size of the projection set of images.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The nominal pixel size of the projection set of images.",
@@ -3762,6 +3831,9 @@
                   "minimum": 0,
                   "exclusiveMinimum": true,
                   "description": "This item was correspondence to two type of em dataset\n processing_emDataSet_singleParticle.numClassAverages\n processing_emDataSet_icosahedral.numClassAverages",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "This item was correspondence to two type of em dataset\n processing_emDataSet_singleParticle.numClassAverages\n processing_emDataSet_icosahedral.numClassAverages",
@@ -3774,6 +3846,9 @@
                   "minimum": 0,
                   "exclusiveMinimum": true,
                   "description": "The number of 2D projections or 3D subtomograms used in the 3d reconstruction",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The number of 2D projections or 3D subtomograms used in the 3d reconstruction",
@@ -3795,9 +3870,10 @@
                   ],
                   "description": "type of refinement performed in order to determine map resolution",
                   "rcsb_search_context": [
+                     "exact-match",
                      "full-text"
                   ],
-                  "rcsb_full_text_priority": 1,
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "type of refinement performed in order to determine map resolution",
@@ -3812,6 +3888,9 @@
                      "10.0"
                   ],
                   "description": "The final resolution (in Angstroms)of the 3D reconstruction.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -3846,6 +3925,10 @@
                      "POINT"
                   ],
                   "description": "The type of symmetry applied to the reconstruction",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The type of symmetry applied to the reconstruction",
@@ -3943,6 +4026,9 @@
                      "800"
                   ],
                   "description": "TODO",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "millimetres",
                   "rcsb_description": [
                      {
@@ -4020,6 +4106,9 @@
                      "93.2"
                   ],
                   "description": "Completeness of the structure factor data within this resolution shell, in percent",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Completeness of the structure factor data within this resolution shell, in percent",
@@ -4035,6 +4124,9 @@
                      "3.0"
                   ],
                   "description": "High resolution limit for this shell (Angstroms)",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -4061,6 +4153,9 @@
                      "5.5"
                   ],
                   "description": "Low resolution limit for this shell (Angstroms)",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -4077,6 +4172,9 @@
                      "2.5"
                   ],
                   "description": "Multiplicity (average number of measurements) for the structure factors in this resolution shell",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Multiplicity (average number of measurements) for the structure factors in this resolution shell",
@@ -4090,6 +4188,9 @@
                      "244"
                   ],
                   "description": "Number of measured structure factors in this resolution shell",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Number of measured structure factors in this resolution shell",
@@ -4107,6 +4208,9 @@
                      "13.5"
                   ],
                   "description": "Phase residual for this resolution shell, in degrees",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
@@ -4158,6 +4262,9 @@
                      "89.3"
                   ],
                   "description": "Completeness of the structure factor data within the defined space group\n at the reported resolution (percent).",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Completeness of the structure factor data within the defined space group\n at the reported resolution (percent).",
@@ -4173,6 +4280,9 @@
                      "7.5"
                   ],
                   "description": "High resolution limit of the structure factor data, in Angstroms",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -4207,6 +4317,9 @@
                      "1590"
                   ],
                   "description": "Total number of diffraction intensities measured (before averaging)",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Total number of diffraction intensities measured (before averaging)",
@@ -4220,6 +4333,9 @@
                      "325"
                   ],
                   "description": "Number of structure factors obtained (merged amplitudes + phases)",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Number of structure factors obtained (merged amplitudes + phases)",
@@ -4236,6 +4352,9 @@
                      "17.5"
                   ],
                   "description": "Overall phase error in degrees",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
@@ -4254,6 +4373,9 @@
                      "17.5"
                   ],
                   "description": "Overall phase residual in degrees",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
@@ -4284,6 +4406,9 @@
                      "19.8"
                   ],
                   "description": "Rmerge value (percent)",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Rmerge value (percent)",
@@ -4300,6 +4425,9 @@
                      "24.4"
                   ],
                   "description": "Rsym value (percent)",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Rsym value (percent)",
@@ -4471,6 +4599,9 @@
                   "type": "integer",
                   "minimum": 0,
                   "description": "The parent of this assembly.\n This data item is an internal category pointer to _em_entity_assembly.id.\n By convention, the full assembly (top of hierarchy) is assigned parent id 0 (zero).",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The parent of this assembly.\n This data item is an internal category pointer to _em_entity_assembly.id.\n By convention, the full assembly (top of hierarchy) is assigned parent id 0 (zero).",
@@ -4486,6 +4617,10 @@
                      "RECOMBINANT"
                   ],
                   "description": "The assembly type.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The assembly type.",
@@ -4589,9 +4724,10 @@
                ],
                "description": "The reconstruction method used in the EM experiment.",
                "rcsb_search_context": [
+                  "exact-match",
                   "full-text"
                ],
-               "rcsb_full_text_priority": 1,
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "The reconstruction method used in the EM experiment.",
@@ -4622,6 +4758,9 @@
                      "-34.616000"
                   ],
                   "description": "The angular rotation per helical subunit in degrees.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
@@ -4638,6 +4777,9 @@
                      "17.400000"
                   ],
                   "description": "The axial rise per subunit in the helical assembly.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -4725,6 +4867,9 @@
                      "2.0"
                   ],
                   "description": "The average exposure time for each image.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "seconds",
                   "rcsb_description": [
                      {
@@ -4741,6 +4886,9 @@
                      "30.0"
                   ],
                   "description": "The electron dose received by the specimen per image (electrons per square angstrom).",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "electrons_angstrom_squared",
                   "rcsb_description": [
                      {
@@ -4771,6 +4919,10 @@
                      "SUPER-RESOLUTION"
                   ],
                   "description": "The detector mode used during image recording.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The detector mode used during image recording.",
@@ -4811,6 +4963,9 @@
                "num_diffraction_images": {
                   "type": "integer",
                   "description": "The number of diffraction images collected.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The number of diffraction images collected.",
@@ -4821,6 +4976,9 @@
                "num_grids_imaged": {
                   "type": "integer",
                   "description": "Number of grids in the microscopy session",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Number of grids in the microscopy session",
@@ -4831,6 +4989,9 @@
                "num_real_images": {
                   "type": "integer",
                   "description": "The number of micrograph images collected.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The number of micrograph images collected.",
@@ -4862,6 +5023,9 @@
                      "300"
                   ],
                   "description": "A value of accelerating voltage (in kV) used for imaging.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "kilovolts",
                   "rcsb_description": [
                      {
@@ -4880,6 +5044,10 @@
                      "ZEMLIN TABLEAU"
                   ],
                   "description": "microscope alignment procedure",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "microscope alignment procedure",
@@ -4902,6 +5070,9 @@
                   "minimum": 1,
                   "maximum": 150,
                   "description": "The open diameter of the c2 condenser lens,\n in microns.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "microns",
                   "rcsb_description": [
                      {
@@ -4918,6 +5089,9 @@
                      "5000"
                   ],
                   "description": "The maximum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "nanometers",
                   "rcsb_description": [
                      {
@@ -4932,6 +5106,9 @@
                      "1200"
                   ],
                   "description": "The minimum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "nanometers",
                   "rcsb_description": [
                      {
@@ -4948,6 +5125,9 @@
                      "61200"
                   ],
                   "description": "The magnification value obtained for a known standard just\n prior to, during or just after the imaging experiment.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The magnification value obtained for a known standard just\n prior to, during or just after the imaging experiment.",
@@ -4962,6 +5142,10 @@
                      "NITROGEN"
                   ],
                   "description": "Cryogen type used to maintain the specimen stage temperature during imaging\n in the microscope.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "Cryogen type used to maintain the specimen stage temperature during imaging\n in the microscope.",
@@ -4976,6 +5160,9 @@
                      "2001-05-08"
                   ],
                   "description": "Date (YYYY-MM-DD) of imaging experiment or the date at which\n a series of experiments began.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Date (YYYY-MM-DD) of imaging experiment or the date at which\n a series of experiments began.",
@@ -4999,6 +5186,9 @@
                "detector_distance": {
                   "type": "number",
                   "description": "The camera length (in millimeters). The camera length is the\n product of the objective focal length and the combined magnification\n of the intermediate and projector lenses when the microscope is\n operated in the diffraction mode.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "millimetres",
                   "rcsb_description": [
                      {
@@ -5046,9 +5236,10 @@
                   ],
                   "description": "The mode of illumination.",
                   "rcsb_search_context": [
+                     "exact-match",
                      "full-text"
                   ],
-                  "rcsb_full_text_priority": 1,
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The mode of illumination.",
@@ -5122,14 +5313,18 @@
                      "JEOL CRYO ARM 300",
                      "JEOL KYOTO-3000SFF",
                      "SIEMENS SULEIKA",
+                     "TFS GLACIOS",
+                     "TFS KRIOS",
+                     "TFS TALOS",
                      "ZEISS LEO912",
                      "ZEISS LIBRA120PLUS"
                   ],
                   "description": "The name of the model of microscope.",
                   "rcsb_search_context": [
+                     "exact-match",
                      "full-text"
                   ],
-                  "rcsb_full_text_priority": 1,
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The name of the model of microscope.",
@@ -5147,9 +5342,10 @@
                   ],
                   "description": "The mode of imaging.",
                   "rcsb_search_context": [
+                     "exact-match",
                      "full-text"
                   ],
-                  "rcsb_full_text_priority": 1,
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The mode of imaging.",
@@ -5165,6 +5361,9 @@
                      "2.0"
                   ],
                   "description": "The spherical aberration coefficient (Cs) in millimeters,\n of the objective lens.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "millimetres",
                   "rcsb_description": [
                      {
@@ -5179,6 +5378,9 @@
                      "5000"
                   ],
                   "description": "The maximum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "nanometers",
                   "rcsb_description": [
                      {
@@ -5193,6 +5395,9 @@
                      "1200"
                   ],
                   "description": "The minimum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "nanometers",
                   "rcsb_description": [
                      {
@@ -5211,6 +5416,9 @@
                      "60000"
                   ],
                   "description": "The magnification indicated by the microscope readout.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The magnification indicated by the microscope readout.",
@@ -5221,6 +5429,9 @@
                "recording_temperature_maximum": {
                   "type": "number",
                   "description": "The specimen temperature maximum (degrees Kelvin) for the duration\n of imaging.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
@@ -5232,6 +5443,9 @@
                "recording_temperature_minimum": {
                   "type": "number",
                   "description": "The specimen temperature minimum (degrees Kelvin) for the duration\n of imaging.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
@@ -5243,6 +5457,9 @@
                "residual_tilt": {
                   "type": "number",
                   "description": "residual tilt of the electron beam",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "milliradians",
                   "rcsb_description": [
                      {
@@ -5255,6 +5472,7 @@
                   "type": "string",
                   "enum": [
                      "FEI TITAN KRIOS AUTOGRID HOLDER",
+                     "FISCHIONE 2550",
                      "FISCHIONE INSTRUMENTS DUAL AXIS TOMOGRAPHY HOLDER",
                      "GATAN 626 SINGLE TILT LIQUID NITROGEN CRYO TRANSFER HOLDER",
                      "GATAN 910 MULTI-SPECIMEN SINGLE TILT CRYO TRANSFER HOLDER",
@@ -5263,6 +5481,7 @@
                      "GATAN CHDT 3504 DOUBLE TILT HIGH RESOLUTION NITROGEN COOLING HOLDER",
                      "GATAN CT3500 SINGLE TILT LIQUID NITROGEN CRYO TRANSFER HOLDER",
                      "GATAN CT3500TR SINGLE TILT ROTATION LIQUID NITROGEN CRYO TRANSFER HOLDER",
+                     "GATAN ELSA 698 SINGLE TILT LIQUID NITROGEN CRYO TRANSFER HOLDER",
                      "GATAN HC 3500 SINGLE TILT HEATING/NITROGEN COOLING HOLDER",
                      "GATAN HCHDT 3010 DOUBLE TILT HIGH RESOLUTION HELIUM COOLING HOLDER",
                      "GATAN HCHST 3008 SINGLE TILT HIGH RESOLUTION HELIUM COOLING HOLDER",
@@ -5280,6 +5499,10 @@
                      "SIDE ENTRY, EUCENTRIC"
                   ],
                   "description": "The name of the model of specimen holder used during imaging.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The name of the model of specimen holder used during imaging.",
@@ -5316,6 +5539,9 @@
                      "70"
                   ],
                   "description": "The mean specimen stage temperature (degrees Kelvin) during imaging\n in the microscope.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
@@ -5330,6 +5556,9 @@
                      "70"
                   ],
                   "description": "The maximum angle at which the specimen was tilted to obtain\n recorded images.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
@@ -5344,6 +5573,9 @@
                      "-70"
                   ],
                   "description": "The minimum angle at which the specimen was tilted to obtain\n recorded images.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
@@ -5410,6 +5642,9 @@
                      "840"
                   ],
                   "description": "The number of particles selected from the projection set of images.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The number of particles selected from the projection set of images.",
@@ -5503,6 +5738,10 @@
                      "VOLUME SELECTION"
                   ],
                   "description": "The purpose of the software.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The purpose of the software.",
@@ -5621,6 +5860,9 @@
                      "1.35"
                   ],
                   "description": "The concentration (in milligrams per milliliter, mg/ml)\n of the complex in the sample.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "mg_per_ml",
                   "rcsb_description": [
                      {
@@ -5687,6 +5929,10 @@
                      "YES"
                   ],
                   "description": "'YES' indicates that the specimen has been shadowed.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "'YES' indicates that the specimen has been shadowed.",
@@ -5701,6 +5947,10 @@
                      "YES"
                   ],
                   "description": "'YES' indicates that the specimen has been stained.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "'YES' indicates that the specimen has been stained.",
@@ -5715,6 +5965,10 @@
                      "YES"
                   ],
                   "description": "'YES' indicates that the specimen was vitrified by cryopreservation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "'YES' indicates that the specimen was vitrified by cryopreservation.",
@@ -5804,6 +6058,10 @@
                      "POSITIVE"
                   ],
                   "description": "type of staining",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "type of staining",
@@ -5835,6 +6093,9 @@
                      "298"
                   ],
                   "description": "The temperature (in degrees Kelvin) of the sample just prior to vitrification.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
@@ -5858,9 +6119,10 @@
                   ],
                   "description": "This is the name of the cryogen.",
                   "rcsb_search_context": [
+                     "exact-match",
                      "full-text"
                   ],
-                  "rcsb_full_text_priority": 1,
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "This is the name of the cryogen.",
@@ -5889,6 +6151,9 @@
                      "90"
                   ],
                   "description": "The humidity (%) in the vicinity of the vitrification process.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The humidity (%) in the vicinity of the vitrification process.",
@@ -5926,9 +6191,10 @@
                   ],
                   "description": "The type of instrument used in the vitrification process.",
                   "rcsb_search_context": [
+                     "exact-match",
                      "full-text"
                   ],
-                  "rcsb_full_text_priority": 1,
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The type of instrument used in the vitrification process.",
@@ -5969,6 +6235,9 @@
                      "90"
                   ],
                   "description": "The vitrification temperature (in degrees Kelvin), e.g.,\n  temperature of the plunge instrument cryogen bath.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
@@ -6029,6 +6298,9 @@
                   "type": "integer",
                   "minimum": 1,
                   "description": "The total number of crystals used in the  measurement of\n intensities.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The total number of crystals used in the  measurement of\n intensities.",
@@ -6216,6 +6488,9 @@
                   "type": "number",
                   "minimum": 0.0,
                   "description": "Density values measured using standard chemical and physical\n methods. The units are megagrams per cubic metre (grams per\n cubic centimetre).",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "megagrams_per_cubic_metre",
                   "rcsb_description": [
                      {
@@ -6269,6 +6544,9 @@
                "pdbx_mosaicity": {
                   "type": "number",
                   "description": "The of the distribution of mis-orientation angles specified in degrees\nof all the unit cells in the crystal. Lower mosaicity indicates better \nordered crystals.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
@@ -6280,6 +6558,9 @@
                "pdbx_mosaicity_esd": {
                   "type": "number",
                   "description": "The uncertainty in the mosaicity estimate for the crystal.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
@@ -6411,7 +6692,10 @@
                },
                "temp": {
                   "type": "number",
-                  "minimum": 0.0,
+                  "minimum": 150.0,
+                  "exclusiveMinimum": true,
+                  "maximum": 350.0,
+                  "exclusiveMaximum": true,
                   "description": "The temperature in kelvins at which the crystal was grown.\n If more than one temperature was employed during the\n crystallization process, the final temperature should be noted\n here and the protocol  involving multiple temperatures should be\n described in _exptl_crystal_grow.details.",
                   "rcsb_search_context": [
                      "default-match"
@@ -6726,7 +7010,7 @@
                      },
                      {
                         "value": "NMR restraints",
-                        "detail": "NMR chemical restraints file"
+                        "detail": "NMR restraints file"
                      },
                      {
                         "value": "NMR shifts",
@@ -6812,7 +7096,7 @@
                      },
                      {
                         "value": "NMR restraints",
-                        "detail": "NMR chemical restraints file"
+                        "detail": "NMR restraints file"
                      },
                      {
                         "value": "NMR shifts",
@@ -6932,7 +7216,7 @@
                      },
                      {
                         "value": "NMR restraints",
-                        "detail": "NMR chemical restraints file"
+                        "detail": "NMR restraints file"
                      },
                      {
                         "value": "NMR shifts",
@@ -7120,7 +7404,7 @@
                      },
                      {
                         "value": "NMR restraints",
-                        "detail": "NMR chemical restraints file"
+                        "detail": "NMR restraints file"
                      },
                      {
                         "value": "NMR shifts",
@@ -7234,7 +7518,7 @@
                      },
                      {
                         "value": "NMR restraints",
-                        "detail": "NMR chemical restraints file"
+                        "detail": "NMR restraints file"
                      },
                      {
                         "value": "NMR shifts",
@@ -7343,615 +7627,754 @@
                   "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
-                        "value": "Academia Sinica (Taiwan)"
+                        "value": "Academia Sinica (Taiwan)",
+                        "detail": "Taiwan"
                      },
                      {
-                        "value": "Academy of Finland"
+                        "value": "Academy of Finland",
+                        "detail": "Finland"
                      },
                      {
-                        "value": "Accelerated Early staGe drug dIScovery",
-                        "detail": "AEGIS"
+                        "value": "Accelerated Early staGe drug dIScovery (AEGIS)",
+                        "detail": "European Union"
                      },
                      {
-                        "value": "Agencia Nacional de Investigacion e Innovacion",
-                        "detail": "ANII"
+                        "value": "Agencia Nacional de Investigacion e Innovacion (ANII)",
+                        "detail": "Uruguay"
                      },
                      {
-                        "value": "Ake Wiberg Foundation"
+                        "value": "Ake Wiberg Foundation",
+                        "detail": "European Union"
                      },
                      {
-                        "value": "American Cancer Society"
+                        "value": "Alexander von Humboldt Foundation",
+                        "detail": "Germany"
                      },
                      {
-                        "value": "American Heart Association"
+                        "value": "American Cancer Society",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Amyloidosis Foundation"
+                        "value": "American Heart Association",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Australian Research Council",
-                        "detail": "ARC"
+                        "value": "Amyloidosis Foundation",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Australian Science and Industry Endowment Fund (SIEF)"
+                        "value": "Australian Research Council (ARC)",
+                        "detail": "Australia"
                      },
                      {
-                        "value": "Austrian Science Fund"
+                        "value": "Australian Science and Industry Endowment Fund (SIEF)",
+                        "detail": "Australia"
                      },
                      {
-                        "value": "Bavarian State Ministry for Education, Culture, Science and Arts"
+                        "value": "Austrian Science Fund",
+                        "detail": "Austria"
                      },
                      {
-                        "value": "Belgian Foundation against Cancer"
+                        "value": "Bavarian State Ministry for Education, Culture, Science and Arts",
+                        "detail": "Germany"
                      },
                      {
-                        "value": "Bill & Melinda Gates Foundation"
+                        "value": "Belgian Foundation against Cancer",
+                        "detail": "Netherlands"
                      },
                      {
-                        "value": "Biotechnology and Biological Sciences Research Council",
-                        "detail": "BBSRC"
+                        "value": "Bill & Melinda Gates Foundation",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Bloodwise"
+                        "value": "Biotechnology and Biological Sciences Research Council (BBSRC)",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Board of Research in Nuclear Sciences",
-                        "detail": "BRNS"
+                        "value": "Bloodwise",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Brazilian National Council for Scientific and Technological Development",
-                        "detail": "CNPq"
+                        "value": "Board of Research in Nuclear Sciences (BRNS)",
+                        "detail": "India"
                      },
                      {
-                        "value": "British Heart Foundation"
+                        "value": "Brazilian National Council for Scientific and Technological Development (CNPq)",
+                        "detail": "Brazil"
                      },
                      {
-                        "value": "Business Finland"
+                        "value": "British Heart Foundation",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "CAMS Innovation Fund for Medical Sciences",
-                        "detail": "CIFMS"
+                        "value": "Business Finland",
+                        "detail": "Finland"
                      },
                      {
-                        "value": "Canadian Institutes of Health Research",
-                        "detail": "CIHR"
+                        "value": "CAMS Innovation Fund for Medical Sciences (CIFMS)",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Cancer Council WA"
+                        "value": "Canada Excellence Research Chair Award",
+                        "detail": "Canada"
                      },
                      {
-                        "value": "Cancer Prevention and Research Institute of Texas",
-                        "detail": "CPRIT"
+                        "value": "Canadian Institutes of Health Research (CIHR)",
+                        "detail": "Canada"
                      },
                      {
-                        "value": "Cancer Research UK"
+                        "value": "Cancer Council WA",
+                        "detail": "Australia"
                      },
                      {
-                        "value": "Cancer and Polio Research Fund"
+                        "value": "Cancer Prevention and Research Institute of Texas (CPRIT)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "CancerGenomiCs.nl"
+                        "value": "Cancer Research UK",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Chinese Academy of Sciences"
+                        "value": "Cancer and Polio Research Fund",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Christian Doppler Forschungsgesellschaft"
+                        "value": "CancerGenomiCs.nl",
+                        "detail": "Netherlands"
                      },
                      {
-                        "value": "Comision Nacional Cientifica y Technologica",
-                        "detail": "CONICYT"
+                        "value": "Chinese Academy of Sciences",
+                        "detail": "China"
                      },
                      {
-                        "value": "Commonwealth Scholarship Commission (United Kingdom)"
+                        "value": "Christian Doppler Forschungsgesellschaft",
+                        "detail": "Austria"
                      },
                      {
-                        "value": "Coordination for the Improvement of Higher Education Personnel"
+                        "value": "Comision Nacional Cientifica y Technologica (CONICYT)",
+                        "detail": "Chile"
                      },
                      {
-                        "value": "Council of Scientific & Industrial Research",
-                        "detail": "CSIR"
+                        "value": "Commonwealth Scholarship Commission (United Kingdom)",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Croatian Science Foundation"
+                        "value": "Coordination for the Improvement of Higher Education Personnel",
+                        "detail": "Brazil"
                      },
                      {
-                        "value": "Czech Academy of Sciences"
+                        "value": "Council of Scientific & Industrial Research (CSIR)",
+                        "detail": "India"
                      },
                      {
-                        "value": "Czech Science Foundation"
+                        "value": "Croatian Science Foundation",
+                        "detail": "Croatia"
                      },
                      {
-                        "value": "Danish Agency for Science Technology and Innovation"
+                        "value": "Crohns and Colitis Foundation",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Danish Council for Independent Research"
+                        "value": "Cystic Fibrosis Foundation",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Danish National Research Foundation"
+                        "value": "Czech Academy of Sciences",
+                        "detail": "Czech Republic"
                      },
                      {
-                        "value": "David and Lucile Packard Foundation"
+                        "value": "Czech Science Foundation",
+                        "detail": "Czech Republic"
                      },
                      {
-                        "value": "Defense Threat Reduction Agency",
-                        "detail": "DTRA"
+                        "value": "Danish Agency for Science Technology and Innovation",
+                        "detail": "Denmark"
                      },
                      {
-                        "value": "Department of Biotechnology (India)",
-                        "detail": "DBT"
+                        "value": "Danish Council for Independent Research",
+                        "detail": "Denmark"
                      },
                      {
-                        "value": "Department of Defense (United States)",
-                        "detail": "DOD (United States)"
+                        "value": "Danish National Research Foundation",
+                        "detail": "Denmark"
                      },
                      {
-                        "value": "Department of Energy (United States)",
-                        "detail": "DOE (United States)"
+                        "value": "David and Lucile Packard Foundation",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Department of Health & Human Services",
-                        "detail": "HHS"
+                        "value": "Defense Threat Reduction Agency (DTRA)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Department of Science & Technology (India)",
-                        "detail": "DST"
+                        "value": "Department of Biotechnology (DBT, India)",
+                        "detail": "India"
                      },
                      {
-                        "value": "Dutch Kidney Foundation"
+                        "value": "Department of Defense (DOD, United States)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Engineering and Physical Sciences Research Council"
+                        "value": "Department of Energy (DOE, United States)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Estonian Research Council"
+                        "value": "Department of Health & Human Services (HHS)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "European Commission"
+                        "value": "Department of Science & Technology (DST, India)",
+                        "detail": "India"
                      },
                      {
-                        "value": "European Communitys Seventh Framework Programme"
+                        "value": "Dutch Kidney Foundation",
+                        "detail": "Netherlands"
                      },
                      {
-                        "value": "European Molecular Biology Organization",
-                        "detail": "EMBO"
+                        "value": "Engineering and Physical Sciences Research Council",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "European Regional Development Fund"
+                        "value": "Estonian Research Council",
+                        "detail": "Estonia"
                      },
                      {
-                        "value": "European Research Council",
-                        "detail": "ERC"
+                        "value": "European Commission",
+                        "detail": "European Union"
                      },
                      {
-                        "value": "European Union",
-                        "detail": "EU"
+                        "value": "European Communitys Seventh Framework Programme",
+                        "detail": "European Union"
                      },
                      {
-                        "value": "Finnish Cultural Foundation"
+                        "value": "European Molecular Biology Organization (EMBO)",
+                        "detail": "European Union"
                      },
                      {
-                        "value": "Fondation ARC"
+                        "value": "European Regional Development Fund",
+                        "detail": "European Union"
                      },
                      {
-                        "value": "Fondazione CARIPLO"
+                        "value": "European Research Council (ERC)",
+                        "detail": "European Union"
                      },
                      {
-                        "value": "Fonds de Recherche du Quebec - Nature et Technologies",
-                        "detail": "FRQNT"
+                        "value": "European Union (EU)",
+                        "detail": "European Union"
                      },
                      {
-                        "value": "Foundation for Medical Research (France)"
+                        "value": "Finnish Cultural Foundation",
+                        "detail": "Finland"
                      },
                      {
-                        "value": "Foundation for Science and Technology",
-                        "detail": "FCT"
+                        "value": "Fondation ARC",
+                        "detail": "France"
                      },
                      {
-                        "value": "French Infrastructure for Integrated Structural Biology",
-                        "detail": "FRISBI"
+                        "value": "Fondazione CARIPLO",
+                        "detail": "Italy"
                      },
                      {
-                        "value": "French League Against Cancer"
+                        "value": "Fonds de Recherche du Quebec - Nature et Technologies (FRQNT)",
+                        "detail": "Canada"
                      },
                      {
-                        "value": "French Ministry of Armed Forces"
+                        "value": "Foundation for Medical Research (France)",
+                        "detail": "France"
                      },
                      {
-                        "value": "French National Research Agency"
+                        "value": "Foundation for Polish Science",
+                        "detail": "Poland"
                      },
                      {
-                        "value": "Friedreichs Ataxia Research Alliance",
-                        "detail": "FARA"
+                        "value": "Foundation for Science and Technology (FCT)",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Fundacao para a Ciencia e a Tecnologia"
+                        "value": "French Infrastructure for Integrated Structural Biology (FRISBI)",
+                        "detail": "France"
                      },
                      {
-                        "value": "General Secretariat for Research and Technology",
-                        "detail": "GSRT"
+                        "value": "French League Against Cancer",
+                        "detail": "France"
                      },
                      {
-                        "value": "German Federal Ministry for Education and Research"
+                        "value": "French Ministry of Armed Forces",
+                        "detail": "France"
                      },
                      {
-                        "value": "German Research Foundation",
-                        "detail": "DFG"
+                        "value": "French National Research Agency",
+                        "detail": "France"
                      },
                      {
-                        "value": "Global Challenges Research Fund"
+                        "value": "Friedreichs Ataxia Research Alliance (FARA)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Grant Agency of the Czech Republic"
+                        "value": "Fundacao para a Ciencia e a Tecnologia",
+                        "detail": "Portugal"
                      },
                      {
-                        "value": "Grenoble Alliance for Integrated Structural Cell Biology",
-                        "detail": "GRAL"
+                        "value": "General Secretariat for Research and Technology (GSRT)",
+                        "detail": "European Union"
                      },
                      {
-                        "value": "Grenoble Instruct-ERIC Center",
-                        "detail": "ISBG"
+                        "value": "German Federal Ministry for Education and Research",
+                        "detail": "Germany"
                      },
                      {
-                        "value": "Health Research Council",
-                        "detail": "HRC"
+                        "value": "German Research Foundation (DFG)",
+                        "detail": "Germany"
                      },
                      {
-                        "value": "Hellenic Foundation for Research and Innovation",
-                        "detail": "HFRI"
+                        "value": "German-Israeli Foundation for Research and Development",
+                        "detail": "Germany"
                      },
                      {
-                        "value": "Herman Frasch Foundation"
+                        "value": "Global Challenges Research Fund",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Higher Education Funding Council for England"
+                        "value": "Global Health Innovative Technology Fund",
+                        "detail": "Japan"
                      },
                      {
-                        "value": "Howard Hughes Medical Institute",
-                        "detail": "HHMI"
+                        "value": "Grant Agency of the Czech Republic",
+                        "detail": "Czech Republic"
                      },
                      {
-                        "value": "Human Frontier Science Program",
-                        "detail": "HFSP"
+                        "value": "Grenoble Alliance for Integrated Structural Cell Biology (GRAL)",
+                        "detail": "France"
                      },
                      {
-                        "value": "Hungarian Academy of Sciences"
+                        "value": "Grenoble Instruct-ERIC Center (ISBG)",
+                        "detail": "France"
                      },
                      {
-                        "value": "Imperial College London"
+                        "value": "Health Research Council (HRC)",
+                        "detail": "New Zealand"
                      },
                      {
-                        "value": "Innovative Medicines Initiative"
+                        "value": "Hellenic Foundation for Research and Innovation (HFRI)",
+                        "detail": "Greece"
                      },
                      {
-                        "value": "Institute of Chemical Physics Russian Academy of Science"
+                        "value": "Herman Frasch Foundation",
+                        "detail": "United States"
                      },
                      {
-                        "value": "International AIDS Vaccine Initiative"
+                        "value": "Higher Education Funding Council for England",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Irish Research Council"
+                        "value": "Howard Hughes Medical Institute (HHMI)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Israel Science Foundation"
+                        "value": "Human Frontier Science Program (HFSP)",
+                        "detail": "France"
                      },
                      {
-                        "value": "Italian Association for Cancer Research"
+                        "value": "Hungarian Academy of Sciences",
+                        "detail": "Hungary"
                      },
                      {
-                        "value": "Italian Medicines Agency"
+                        "value": "Imperial College London",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Italian Ministry of Education"
+                        "value": "Innovative Medicines Initiative",
+                        "detail": "European Union"
                      },
                      {
-                        "value": "Italian Ministry of Health"
+                        "value": "Institute of Chemical Physics Russian Academy of Science",
+                        "detail": "Russian Federation"
                      },
                      {
-                        "value": "Jane and Aatos Erkko Foundation"
+                        "value": "International AIDS Vaccine Initiative",
+                        "detail": "United States"
+                     },
+                     {
+                        "value": "Irish Research Council",
+                        "detail": "Ireland"
+                     },
+                     {
+                        "value": "Israel Science Foundation",
+                        "detail": "Israel"
+                     },
+                     {
+                        "value": "Italian Association for Cancer Research",
+                        "detail": "Italy"
+                     },
+                     {
+                        "value": "Italian Medicines Agency",
+                        "detail": "Italy"
+                     },
+                     {
+                        "value": "Italian Ministry of Education",
+                        "detail": "Italy"
+                     },
+                     {
+                        "value": "Italian Ministry of Health",
+                        "detail": "Italy"
+                     },
+                     {
+                        "value": "Jane and Aatos Erkko Foundation",
+                        "detail": "Finland"
                      },
                      {
                         "value": "Japan Agency for Medical Research and Development (AMED)",
-                        "detail": "AMED"
+                        "detail": "Japan"
                      },
                      {
                         "value": "Japan Science and Technology",
-                        "detail": "JST"
+                        "detail": "Japan"
                      },
                      {
-                        "value": "Japan Society for the Promotion of Science",
-                        "detail": "JSPS"
+                        "value": "Japan Society for the Promotion of Science (JSPS)",
+                        "detail": "Japan"
                      },
                      {
-                        "value": "John Innes Foundation"
+                        "value": "Joachim Herz Siftung",
+                        "detail": "Germany"
                      },
                      {
-                        "value": "Joint Supercomputer Center of the Russian Academy of Sciences"
+                        "value": "John Innes Foundation",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "KU Leuven"
+                        "value": "Joint Supercomputer Center of the Russian Academy of Sciences",
+                        "detail": "Russian Federation"
                      },
                      {
-                        "value": "Knut and Alice Wallenberg Foundation"
+                        "value": "KU Leuven",
+                        "detail": "Belgium"
                      },
                      {
-                        "value": "LOreal-UNESCO"
+                        "value": "Kay Kendall Leukaemia Fund",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Leducq Foundation"
+                        "value": "Knut and Alice Wallenberg Foundation",
+                        "detail": "Sweden"
                      },
                      {
-                        "value": "Leukemia & Lymphoma Society"
+                        "value": "LOreal-UNESCO",
+                        "detail": "France"
                      },
                      {
-                        "value": "Leverhulme Trust"
+                        "value": "Leducq Foundation",
+                        "detail": "France"
                      },
                      {
-                        "value": "Louis-Jeantet Foundation"
+                        "value": "Leukemia & Lymphoma Society",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Lundbeckfonden"
+                        "value": "Leverhulme Trust",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Marie Sklodowska-Curie Actions, FragNET ITN"
+                        "value": "Louis-Jeantet Foundation",
+                        "detail": "Switzerland"
                      },
                      {
-                        "value": "Max Planck Society"
+                        "value": "Lundbeckfonden",
+                        "detail": "Denmark"
                      },
                      {
-                        "value": "Medical Research Council (Canada)",
-                        "detail": "MRC (Canada)"
+                        "value": "Lustgarten Foundation",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Medical Research Council (United Kingdom)",
-                        "detail": "MRC (United Kingdom)"
+                        "value": "Marie Sklodowska-Curie Actions, FragNET ITN",
+                        "detail": "European Union"
                      },
                      {
-                        "value": "Michael J. Fox Foundation"
+                        "value": "Marsden Fund",
+                        "detail": "New Zealand"
                      },
                      {
-                        "value": "Minas Gerais State Agency for Research and Development",
-                        "detail": "FAPEMIG"
+                        "value": "Max Planck Society",
+                        "detail": "Germany"
                      },
                      {
-                        "value": "Ministry of Business, Innovation and Employment (New Zealand)"
+                        "value": "Medical Research Council (MRC, Canada)",
+                        "detail": "Canada"
                      },
                      {
-                        "value": "Ministry of Economy and Competitiveness",
-                        "detail": "MINECO"
+                        "value": "Medical Research Council (MRC, United Kingdom)",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Ministry of Education (China)",
-                        "detail": "MoE (China)"
+                        "value": "Michael J. Fox Foundation",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Ministry of Education (Czech Republic)",
-                        "detail": "MoE (Czech Republic)"
+                        "value": "Minas Gerais State Agency for Research and Development (FAPEMIG)",
+                        "detail": "Brazil"
                      },
                      {
-                        "value": "Ministry of Education (Korea)",
-                        "detail": "MoE (Korea)"
+                        "value": "Ministry of Business, Innovation and Employment (New Zealand)",
+                        "detail": "New Zealand"
                      },
                      {
-                        "value": "Ministry of Education (Singapore)",
-                        "detail": "MoE (Singapore)"
+                        "value": "Ministry of Economy and Competitiveness (MINECO)",
+                        "detail": "Spain"
+                     },
+                     {
+                        "value": "Ministry of Education (MoE, China)",
+                        "detail": "China"
+                     },
+                     {
+                        "value": "Ministry of Education (MoE, Czech Republic)",
+                        "detail": "Czech Republic"
+                     },
+                     {
+                        "value": "Ministry of Education (MoE, Korea)",
+                        "detail": "Korea, Republic Of"
+                     },
+                     {
+                        "value": "Ministry of Education (MoE, Singapore)",
+                        "detail": "Singapore"
+                     },
+                     {
+                        "value": "Ministry of Education and Science of the Russian Federation",
+                        "detail": "Russian Federation"
                      },
                      {
                         "value": "Ministry of Education, Culture, Sports, Science and Technology (Japan)",
-                        "detail": "MEXT (Japan)"
+                        "detail": "Japan"
                      },
                      {
-                        "value": "Ministry of Education, Youth and Sports of the Czech Republic"
+                        "value": "Ministry of Education, Youth and Sports of the Czech Republic",
+                        "detail": "Czech Republic"
                      },
                      {
-                        "value": "Ministry of Human Capacities"
+                        "value": "Ministry of Human Capacities",
+                        "detail": "Hungary"
                      },
                      {
-                        "value": "Ministry of Science and Higher Education (Poland)"
+                        "value": "Ministry of Science and Higher Education (Poland)",
+                        "detail": "Poland"
                      },
                      {
-                        "value": "Ministry of Science and Technology (China)",
-                        "detail": "MoST (China)"
+                        "value": "Ministry of Science and Technology (MoST, China)",
+                        "detail": "China"
                      },
                      {
-                        "value": "Ministry of Science and Technology (Taiwan)",
-                        "detail": "MoST (Taiwan)"
+                        "value": "Ministry of Science and Technology (MoST, Taiwan)",
+                        "detail": "Taiwan"
                      },
                      {
-                        "value": "Ministry of Science, Education and Sports of the Republic of Croatia"
+                        "value": "Ministry of Science, Education and Sports of the Republic of Croatia",
+                        "detail": "Croatia"
                      },
                      {
-                        "value": "Ministry of Science, ICT and Future Planning",
-                        "detail": "MSIP"
+                        "value": "Ministry of Science, ICT and Future Planning (MSIP)",
+                        "detail": "Korea, Republic Of"
                      },
                      {
-                        "value": "Ministry of Science, Technology and Innovation (Malaysia)",
-                        "detail": "MOSTI (Malaysia)"
+                        "value": "Ministry of Science, Technology and Innovation (MOSTI, Malaysia)",
+                        "detail": "Malaysia"
                      },
                      {
-                        "value": "Molecular and Cell Biology and Postgenomic Technologies"
+                        "value": "Molecular and Cell Biology and Postgenomic Technologies",
+                        "detail": "Hungary"
                      },
                      {
-                        "value": "National Aeronautic Space Administration (United States)",
-                        "detail": "NASA (United States)"
+                        "value": "National Aeronautic Space Administration (NASA, United States)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Basic Research Program of China(973 Program)"
+                        "value": "National Basic Research Program of China (973 Program)",
+                        "detail": "China"
                      },
                      {
-                        "value": "National Center for Genetic Engineering and Biotechnology (Thailand)"
+                        "value": "National Center for Genetic Engineering and Biotechnology (Thailand)",
+                        "detail": "Thailand"
                      },
                      {
-                        "value": "National Center for Research and Development (Poland)"
+                        "value": "National Center for Research and Development (Poland)",
+                        "detail": "Poland"
                      },
                      {
-                        "value": "National Health and Medical Research Council (Australia)",
-                        "detail": "NHMRC (Australia)"
+                        "value": "National Health and Medical Research Council (NHMRC, Australia)",
+                        "detail": "Australia"
                      },
                      {
-                        "value": "National Institute of Food and Agriculture (United States)",
-                        "detail": "NIFA (United States)"
+                        "value": "National Institute of Food and Agriculture (NIFA, United States)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/Eunice Kennedy Shriver National Institute of Child Health & Human Development",
-                        "detail": "NIH/NICHD"
+                        "value": "National Institutes of Health/Eunice Kennedy Shriver National Institute of Child Health & Human Development (NIH/NICHD)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Cancer Institute",
-                        "detail": "NIH/NCI"
+                        "value": "National Institutes of Health/National Cancer Institute (NIH/NCI)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Center for Advancing Translational Sciences",
-                        "detail": "NIH/NCATS"
+                        "value": "National Institutes of Health/National Center for Advancing Translational Sciences (NIH/NCATS)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Center for Complementary and Integrative Health",
-                        "detail": "NIH/NCCIH"
+                        "value": "National Institutes of Health/National Center for Complementary and Integrative Health (NIH/NCCIH)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Center for Research Resources",
-                        "detail": "NIH/NCRR"
+                        "value": "National Institutes of Health/National Center for Research Resources (NIH/NCRR)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Eye Institute",
-                        "detail": "NIH/NEI"
+                        "value": "National Institutes of Health/National Eye Institute (NIH/NEI)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Heart, Lung, and Blood Institute",
-                        "detail": "NIH/NHLBI"
+                        "value": "National Institutes of Health/National Heart, Lung, and Blood Institute (NIH/NHLBI)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Human Genome Research Institute",
-                        "detail": "NIH/NHGRI"
+                        "value": "National Institutes of Health/National Human Genome Research Institute (NIH/NHGRI)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute Of Allergy and Infectious Diseases",
-                        "detail": "NIH/NIAID"
+                        "value": "National Institutes of Health/National Institute Of Allergy and Infectious Diseases (NIH/NIAID)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute of Arthritis and Musculoskeletal and Skin Diseases",
-                        "detail": "NIH/NIAMS"
+                        "value": "National Institutes of Health/National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIH/NIAMS)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute of Biomedical Imaging and Bioengineering",
-                        "detail": "NIH/NIBIB"
+                        "value": "National Institutes of Health/National Institute of Biomedical Imaging and Bioengineering (NIH/NIBIB)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute of Dental and Craniofacial Research",
-                        "detail": "NIH/NIDCR"
+                        "value": "National Institutes of Health/National Institute of Dental and Craniofacial Research (NIH/NIDCR)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute of Diabetes and Digestive and Kidney Disease",
-                        "detail": "NIH/NIDDK"
+                        "value": "National Institutes of Health/National Institute of Diabetes and Digestive and Kidney Disease (NIH/NIDDK)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute of Environmental Health Sciences",
-                        "detail": "NIH/NIEHS"
+                        "value": "National Institutes of Health/National Institute of Environmental Health Sciences (NIH/NIEHS)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute of General Medical Sciences",
-                        "detail": "NIH/NIGMS"
+                        "value": "National Institutes of Health/National Institute of General Medical Sciences (NIH/NIGMS)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute of Mental Health",
-                        "detail": "NIH/NIMH"
+                        "value": "National Institutes of Health/National Institute of Mental Health (NIH/NIMH)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute of Neurological Disorders and Stroke",
-                        "detail": "NIH/NINDS"
+                        "value": "National Institutes of Health/National Institute of Neurological Disorders and Stroke (NIH/NINDS)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute on Aging",
-                        "detail": "NIH/NIA"
+                        "value": "National Institutes of Health/National Institute on Aging (NIH/NIA)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute on Alcohol Abuse and Alcoholism",
-                        "detail": "NIH/NIAAA"
+                        "value": "National Institutes of Health/National Institute on Alcohol Abuse and Alcoholism (NIH/NIAAA)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute on Deafness and Other Communication Disorders",
-                        "detail": "NIH/NIDCD"
+                        "value": "National Institutes of Health/National Institute on Deafness and Other Communication Disorders (NIH/NIDCD)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute on Drug Abuse",
-                        "detail": "NIH/NIDA"
+                        "value": "National Institutes of Health/National Institute on Drug Abuse (NIH/NIDA)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Institute on Minority Health and Health Disparities",
-                        "detail": "NIH/NIMHD"
+                        "value": "National Institutes of Health/National Institute on Minority Health and Health Disparities (NIH/NIMHD)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/National Library of Medicine",
-                        "detail": "NIH/NLM"
+                        "value": "National Institutes of Health/National Library of Medicine (NIH/NLM)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Institutes of Health/Office of the Director"
+                        "value": "National Institutes of Health/Office of the Director",
+                        "detail": "United States"
                      },
                      {
-                        "value": "National Natural Science Foundation of China",
-                        "detail": "NSFC"
+                        "value": "National Natural Science Foundation of China (NSFC)",
+                        "detail": "China"
                      },
                      {
-                        "value": "National Research Council (Argentina)",
-                        "detail": "NRC (Argentina)"
+                        "value": "National Research Council (NRC, Argentina)",
+                        "detail": "Argentina"
                      },
                      {
-                        "value": "National Research Development and Innovation Office",
-                        "detail": "NKFIH"
+                        "value": "National Research Development and Innovation Office (NKFIH)",
+                        "detail": "Hungary"
                      },
                      {
-                        "value": "National Research Foundation (Korea)",
-                        "detail": "NRF (Korea)"
+                        "value": "National Research Foundation (NRF, Korea)",
+                        "detail": "Korea, Republic Of"
                      },
                      {
-                        "value": "National Research Foundation (Singapore)",
-                        "detail": "NRF (Singapore)"
+                        "value": "National Research Foundation (NRF, Singapore)",
+                        "detail": "Singapore"
                      },
                      {
-                        "value": "National Research Foundation in South Africa"
+                        "value": "National Research Foundation in South Africa",
+                        "detail": "South Africa"
                      },
                      {
-                        "value": "National Science Council (Taiwan)",
-                        "detail": "NSC (Taiwan)"
+                        "value": "National Science Council (NSC, Taiwan)",
+                        "detail": "Taiwan"
                      },
                      {
-                        "value": "National Science Foundation (China)",
-                        "detail": "NSF (China)"
+                        "value": "National Science Foundation (NSF, China)",
+                        "detail": "China"
                      },
                      {
-                        "value": "National Science Foundation (United States)",
-                        "detail": "NSF (United States)"
+                        "value": "National Science Foundation (NSF, United States)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Natural Environment Research Council",
-                        "detail": "NERC"
+                        "value": "Natural Environment Research Council (NERC)",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Natural Sciences and Engineering Research Council (Canada)",
-                        "detail": "NSERC (Canada)"
+                        "value": "Natural Sciences and Engineering Research Council (NSERC, Canada)",
+                        "detail": "Canada"
                      },
                      {
-                        "value": "Netherlands Organisation for Scientific Research",
-                        "detail": "NWO"
+                        "value": "Netherlands Organisation for Scientific Research (NWO)",
+                        "detail": "Netherlands"
                      },
                      {
                         "value": "New Energy and Industrial Technology Development Organization (NEDO)",
-                        "detail": "NEDO"
+                        "detail": "Japan"
                      },
                      {
-                        "value": "Norwegian Cancer Society"
+                        "value": "Norwegian Cancer Society",
+                        "detail": "Norway"
                      },
                      {
-                        "value": "Norwegian Research Council"
+                        "value": "Norwegian Research Council",
+                        "detail": "Norway"
+                     },
+                     {
+                        "value": "Not funded"
                      },
                      {
                         "value": "Novartis FreeNovation"
                      },
                      {
-                        "value": "Novo Nordisk Foundation"
+                        "value": "Novo Nordisk Foundation",
+                        "detail": "Denmark"
                      },
                      {
-                        "value": "Oncode Institute"
+                        "value": "Oncode Institute",
+                        "detail": "Netherlands"
                      },
                      {
                         "value": "Other government"
@@ -7960,128 +8383,188 @@
                         "value": "Other private"
                      },
                      {
-                        "value": "Partnership for Structural Biology",
-                        "detail": "PSB"
+                        "value": "Partnership for Structural Biology (PSB)",
+                        "detail": "France"
                      },
                      {
-                        "value": "Polish National Science Centre"
+                        "value": "Polish National Science Centre",
+                        "detail": "Poland"
                      },
                      {
-                        "value": "Promedica Siftung"
+                        "value": "Programa de Apoyo a Proyectos de Investigacion e Innovacion Tecnologica (PAPIIT)",
+                        "detail": "Mexico"
                      },
                      {
-                        "value": "Research Council of Norway"
+                        "value": "Promedica Siftung",
+                        "detail": "Switzerland"
                      },
                      {
-                        "value": "Research Foundation - Flanders",
-                        "detail": "FWO"
+                        "value": "Qatar Foundation",
+                        "detail": "Qatar"
                      },
                      {
-                        "value": "Robert A. Welch Foundation"
+                        "value": "Research Council of Norway",
+                        "detail": "Norway"
                      },
                      {
-                        "value": "Royal Society"
+                        "value": "Research Foundation - Flanders (FWO)",
+                        "detail": "Belgium"
                      },
                      {
-                        "value": "Royal Society of New Zealand"
+                        "value": "Robert A. Welch Foundation",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Rural Development Administration"
+                        "value": "Royal Society",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Russian Foundation for Basic Research"
+                        "value": "Royal Society of New Zealand",
+                        "detail": "New Zealand"
                      },
                      {
-                        "value": "Russian Science Foundation"
+                        "value": "Rural Development Administration",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Sao Paulo Research Foundation",
-                        "detail": "FAPESP"
+                        "value": "Russian Foundation for Basic Research",
+                        "detail": "Russian Federation"
                      },
                      {
-                        "value": "Science Foundation Ireland"
+                        "value": "Russian Science Foundation",
+                        "detail": "Russian Federation"
                      },
                      {
-                        "value": "Science and Engineering Research Board",
-                        "detail": "SERB"
+                        "value": "Sao Paulo Research Foundation (FAPESP)",
+                        "detail": "Brazil"
                      },
                      {
-                        "value": "Science and Technology Funding Council"
+                        "value": "Science Foundation Ireland",
+                        "detail": "Ireland"
                      },
                      {
-                        "value": "Seneca Foundation"
+                        "value": "Science and Engineering Research Board (SERB)",
+                        "detail": "India"
                      },
                      {
-                        "value": "Sigrid Juselius Foundation"
+                        "value": "Science and Technology Funding Council",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "Slovenian Research Agency"
+                        "value": "Seneca Foundation",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Spanish Ministry of Economy and Competitiveness"
+                        "value": "Sigrid Juselius Foundation",
+                        "detail": "Finland"
                      },
                      {
-                        "value": "Spanish Ministry of Science, Innovation, and Universities"
+                        "value": "Slovenian Research Agency",
+                        "detail": "Slovenia"
                      },
                      {
-                        "value": "Spanish National Research Council"
+                        "value": "Spanish Ministry of Economy and Competitiveness",
+                        "detail": "Spain"
                      },
                      {
-                        "value": "Swedish Energy Agency"
+                        "value": "Spanish Ministry of Science, Innovation, and Universities",
+                        "detail": "Spain"
                      },
                      {
-                        "value": "Swedish Research Council"
+                        "value": "Spanish National Research Council",
+                        "detail": "Spain"
                      },
                      {
-                        "value": "Swiss Nanoscience Institute"
+                        "value": "Swedish Energy Agency",
+                        "detail": "Sweden"
                      },
                      {
-                        "value": "Swiss National Science Foundation"
+                        "value": "Swedish Research Council",
+                        "detail": "Sweden"
                      },
                      {
-                        "value": "Synchrotron Light Research Institute",
-                        "detail": "SLRI"
+                        "value": "Swiss Nanoscience Institute",
+                        "detail": "Switzerland"
                      },
                      {
-                        "value": "The Francis Crick Institute"
+                        "value": "Swiss National Science Foundation",
+                        "detail": "Switzerland"
                      },
                      {
-                        "value": "The University Grants Committee, Research Grants Council (RGC)"
+                        "value": "Synchrotron Light Research Institute (SLRI)",
+                        "detail": "Thailand"
                      },
                      {
-                        "value": "The Yanmar Environmental Sustainability Support Association"
+                        "value": "The Carlsberg Foundation",
+                        "detail": "Denmark"
                      },
                      {
-                        "value": "United States - Israel Binational Science Foundation",
-                        "detail": "BSF"
+                        "value": "The Francis Crick Institute",
+                        "detail": "United Kingdom"
                      },
                      {
-                        "value": "University and Research - University of Milan"
+                        "value": "The University Grants Committee, Research Grants Council (RGC)",
+                        "detail": "Hong Kong"
                      },
                      {
-                        "value": "University of Zurich"
+                        "value": "The Yanmar Environmental Sustainability Support Association",
+                        "detail": "Japan"
                      },
                      {
-                        "value": "Volkswagen Foundation"
+                        "value": "Tuberous Sclerosis Association",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Walloon Excellence in Lifesciences & BIOtechnology",
-                        "detail": "WELBIO"
+                        "value": "United States - Israel Binational Science Foundation (BSF)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Welch Foundation"
+                        "value": "United States Department of Agriculture (USDA)",
+                        "detail": "United States"
                      },
                      {
-                        "value": "Wellcome Trust"
+                        "value": "University and Research - University of Milan",
+                        "detail": "Italy"
                      },
                      {
-                        "value": "Wenner-Gren Foundation"
+                        "value": "University of Zurich",
+                        "detail": "Switzerland"
                      },
                      {
-                        "value": "Wolfson Foundation"
+                        "value": "Vinnova",
+                        "detail": "Sweden"
                      },
                      {
-                        "value": "Yousef Jameel Scholarship"
+                        "value": "Volkswagen Foundation",
+                        "detail": "Germany"
+                     },
+                     {
+                        "value": "Walloon Excellence in Lifesciences & BIOtechnology (WELBIO)",
+                        "detail": "Belgium"
+                     },
+                     {
+                        "value": "Welch Foundation",
+                        "detail": "United States"
+                     },
+                     {
+                        "value": "Wellcome Trust",
+                        "detail": "United Kingdom"
+                     },
+                     {
+                        "value": "Wenner-Gren Foundation",
+                        "detail": "United States"
+                     },
+                     {
+                        "value": "Wolfson Foundation",
+                        "detail": "United Kingdom"
+                     },
+                     {
+                        "value": "Worldwide Cancer Research",
+                        "detail": "United Kingdom"
+                     },
+                     {
+                        "value": "Yousef Jameel Scholarship",
+                        "detail": "Egypt"
                      }
                   ],
                   "rcsb_description": [
@@ -10206,6 +10689,9 @@
                      "1000"
                   ],
                   "description": "Select the field strength for protons in MHz.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Select the field strength for protons in MHz.",
@@ -13093,6 +13579,38 @@
                },
                "uniqueItems": false
             },
+            "branched_entity_ids": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "description": "List of identifiers for the branched entity constituents for the entry.",
+                  "rcsb_description": [
+                     {
+                        "text": "List of identifiers for the branched entity constituents for the entry.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "uniqueItems": false
+            },
+            "emdb_ids": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "description": "List of EMDB identifiers for the 3D electron microscopy density maps\n used in the production of the structure model.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "List of EMDB identifiers for the 3D electron microscopy density maps\n used in the production of the structure model.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "uniqueItems": false
+            },
             "entity_ids": {
                "type": "array",
                "items": {
@@ -13167,6 +13685,38 @@
                      "context": "dictionary"
                   }
                ]
+            },
+            "related_emdb_ids": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "description": "List of EMDB identifiers for the 3D electron microscopy density maps\n related to the structure model.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "List of EMDB identifiers for the 3D electron microscopy density maps\n related to the structure model.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "uniqueItems": false
+            },
+            "water_entity_ids": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "description": "List of identifiers for the solvent/water entity constituents for the entry.",
+                  "rcsb_description": [
+                     {
+                        "text": "List of identifiers for the solvent/water entity constituents for the entry.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "uniqueItems": false
             }
          },
          "additionalProperties": false,
@@ -13182,6 +13732,9 @@
             "assembly_count": {
                "type": "integer",
                "description": "The number of assemblies defined for this entry including the deposited assembly.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of assemblies defined for this entry including the deposited assembly.",
@@ -13192,6 +13745,9 @@
             "branched_entity_count": {
                "type": "integer",
                "description": "The number of distinct branched entities in the structure entry.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of distinct branched entities in the structure entry.",
@@ -13199,9 +13755,38 @@
                   }
                ]
             },
+            "branched_molecular_weight_maximum": {
+               "type": "number",
+               "minimum": 0.0,
+               "exclusiveMinimum": true,
+               "description": "The maximum molecular mass (kilodaltons) of a branched entity in the deposited structure entry.",
+               "rcsb_units": "kilodaltons",
+               "rcsb_description": [
+                  {
+                     "text": "The maximum molecular mass (kilodaltons) of a branched entity in the deposited structure entry.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "branched_molecular_weight_minimum": {
+               "type": "number",
+               "minimum": 0.0,
+               "exclusiveMinimum": true,
+               "description": "The minimum molecular mass (kilodaltons) of a branched entity in the deposited structure entry.",
+               "rcsb_units": "kilodaltons",
+               "rcsb_description": [
+                  {
+                     "text": "The minimum molecular mass (kilodaltons) of a branched entity in the deposited structure entry.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
             "cis_peptide_count": {
                "type": "integer",
                "description": "The number of cis-peptide linkages.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of cis-peptide linkages.",
@@ -13246,6 +13831,9 @@
             "deposited_modeled_polymer_monomer_count": {
                "type": "integer",
                "description": "The number of modeled polymer monomers in the deposited coordinate data.\n This is the total count of monomers with reported coordinate data for all polymer\n entity instances in the deposited coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of modeled polymer monomers in the deposited coordinate data.\n This is the total count of monomers with reported coordinate data for all polymer\n entity instances in the deposited coordinate data.",
@@ -13256,6 +13844,9 @@
             "deposited_nonpolymer_entity_instance_count": {
                "type": "integer",
                "description": "The number of non-polymer instances in the deposited data set.\n This is the total count of non-polymer entity instances reported\n in the deposited coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of non-polymer instances in the deposited data set.\n This is the total count of non-polymer entity instances reported\n in the deposited coordinate data.",
@@ -13266,6 +13857,9 @@
             "deposited_polymer_entity_instance_count": {
                "type": "integer",
                "description": "The number of polymer instances in the deposited data set.\n This is the total count of polymer entity instances reported\n in the deposited coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of polymer instances in the deposited data set.\n This is the total count of polymer entity instances reported\n in the deposited coordinate data.",
@@ -13289,6 +13883,9 @@
             "deposited_unmodeled_polymer_monomer_count": {
                "type": "integer",
                "description": "The number of unmodeled polymer monomers in the deposited coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the deposited coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of unmodeled polymer monomers in the deposited coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the deposited coordinate data.",
@@ -13404,6 +14001,9 @@
             "inter_mol_covalent_bond_count": {
                "type": "integer",
                "description": "The number of intermolecular covalent bonds.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of intermolecular covalent bonds.",
@@ -13414,6 +14014,9 @@
             "inter_mol_metalic_bond_count": {
                "type": "integer",
                "description": "The number of intermolecular metalic bonds.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of intermolecular metalic bonds.",
@@ -13423,7 +14026,7 @@
             },
             "molecular_weight": {
                "type": "number",
-               "minimum": 1.0,
+               "minimum": 0.0,
                "description": "The molecular mass (kilodaltons) of polymer and non-polymer entities (exclusive of solvent) in the deposited structure entry.",
                "rcsb_search_context": [
                   "default-match"
@@ -13450,6 +14053,10 @@
                   "RNA (only)"
                ],
                "description": "Nucleic acid polymer entity type categories describing the entry.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_enum_annotated": [
                   {
                      "value": "DNA (only)",
@@ -13479,12 +14086,61 @@
                   }
                ]
             },
+            "nonpolymer_bound_components": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "description": "Bound nonpolymer components in this entry.",
+                  "rcsb_description": [
+                     {
+                        "text": "Bound nonpolymer components in this entry.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "uniqueItems": false
+            },
             "nonpolymer_entity_count": {
                "type": "integer",
                "description": "The number of distinct non-polymer entities in the structure entry exclusive of solvent.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of distinct non-polymer entities in the structure entry exclusive of solvent.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "nonpolymer_molecular_weight_maximum": {
+               "type": "number",
+               "minimum": 0.0,
+               "exclusiveMinimum": true,
+               "description": "The maximum molecular mass (kilodaltons) of a non-polymer entity in the deposited structure entry.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_units": "kilodaltons",
+               "rcsb_description": [
+                  {
+                     "text": "The maximum molecular mass (kilodaltons) of a non-polymer entity in the deposited structure entry.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "nonpolymer_molecular_weight_minimum": {
+               "type": "number",
+               "minimum": 0.0,
+               "exclusiveMinimum": true,
+               "description": "The minimum molecular mass (kilodaltons) of a non-polymer entity in the deposited structure entry.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_units": "kilodaltons",
+               "rcsb_description": [
+                  {
+                     "text": "The minimum molecular mass (kilodaltons) of a non-polymer entity in the deposited structure entry.",
                      "context": "dictionary"
                   }
                ]
@@ -13585,6 +14241,9 @@
             "polymer_entity_count": {
                "type": "integer",
                "description": "The number of distinct polymer entities in the structure entry.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of distinct polymer entities in the structure entry.",
@@ -13629,6 +14288,9 @@
             "polymer_entity_count_nucleic_acid": {
                "type": "integer",
                "description": "The number of distinct nucleic acid polymer entities (DNA or RNA).",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of distinct nucleic acid polymer entities (DNA or RNA).",
@@ -13684,6 +14346,64 @@
                   {
                      "text": "Polymer Entity Taxonomy Count",
                      "context": "brief"
+                  }
+               ]
+            },
+            "polymer_molecular_weight_maximum": {
+               "type": "number",
+               "minimum": 0.0,
+               "exclusiveMinimum": true,
+               "description": "The maximum molecular mass (kilodaltons) of a polymer entity in the deposited structure entry.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_units": "kilodaltons",
+               "rcsb_description": [
+                  {
+                     "text": "The maximum molecular mass (kilodaltons) of a polymer entity in the deposited structure entry.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "polymer_molecular_weight_minimum": {
+               "type": "number",
+               "minimum": 0.0,
+               "exclusiveMinimum": true,
+               "description": "The minimum molecular mass (kilodaltons) of a polymer entity in the deposited structure entry.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_units": "kilodaltons",
+               "rcsb_description": [
+                  {
+                     "text": "The minimum molecular mass (kilodaltons) of a polymer entity in the deposited structure entry.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "polymer_monomer_count_maximum": {
+               "type": "integer",
+               "description": "The maximum monomer count of a polymer entity in the structure entry.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "The maximum monomer count of a polymer entity in the structure entry.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "polymer_monomer_count_minimum": {
+               "type": "integer",
+               "description": "The minimum monomer count of a polymer entity in the structure entry.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "The minimum monomer count of a polymer entity in the structure entry.",
+                     "context": "dictionary"
                   }
                ]
             },
@@ -15579,7 +16299,8 @@
                },
                "pdbx_CC_half": {
                   "type": "number",
-                  "minimum": -1,
+                  "minimum": 0,
+                  "exclusiveMinimum": true,
                   "maximum": 1,
                   "description": "The Pearson's correlation coefficient expressed as a decimal value\n              between the average intensities from randomly selected \n              half-datasets.\n\n\t      Ref: Karplus & Diederichs (2012), Science 336, 1030-33\n",
                   "rcsb_description": [
@@ -15592,6 +16313,9 @@
                "pdbx_R_split": {
                   "type": "number",
                   "minimum": 0,
+                  "exclusiveMinimum": true,
+                  "maximum": 2,
+                  "exclusiveMaximum": true,
                   "description": "R split measures the agreement between the sets of intensities created by merging \n              odd- and even-numbered images  from the overall data.          \n\n\t      Ref: T. A. White, R. A. Kirian, A. V. Martin, A. Aquila, K. Nass, A. Barty \n              and H. N. Chapman (2012), J. Appl. Cryst. 45, 335-341\n",
                   "rcsb_description": [
                      {
@@ -15602,6 +16326,8 @@
                },
                "pdbx_Rmerge_I_obs": {
                   "type": "number",
+                  "minimum": 0.0,
+                  "exclusiveMinimum": true,
                   "description": "The R value for merging intensities satisfying the observed\n criteria in this data set.",
                   "rcsb_search_context": [
                      "default-match"
@@ -15647,6 +16373,8 @@
                },
                "pdbx_Rsym_value": {
                   "type": "number",
+                  "minimum": 0.0,
+                  "exclusiveMinimum": true,
                   "examples": [
                      "0.02"
                   ],
@@ -15849,6 +16577,7 @@
                "Rmerge_I_all": {
                   "type": "number",
                   "minimum": 0.0,
+                  "exclusiveMinimum": true,
                   "description": "The value of Rmerge(I) for all reflections in a given shell.\n\n             sum~i~(sum~j~|I~j~ - <I>|)\n Rmerge(I) = --------------------------\n                 sum~i~(sum~j~<I>)\n\n I~j~ = the intensity of the jth observation of reflection i\n <I>  = the mean of the intensities of all observations of\n        reflection i\n\n sum~i~ is taken over all reflections\n sum~j~ is taken over all observations of each reflection\n",
                   "rcsb_description": [
                      {
@@ -15860,6 +16589,7 @@
                "Rmerge_I_obs": {
                   "type": "number",
                   "minimum": 0.0,
+                  "exclusiveMinimum": true,
                   "description": "The value of Rmerge(I) for reflections classified as 'observed'\n (see _reflns.observed_criterion) in a given shell.\n\n             sum~i~(sum~j~|I~j~ - <I>|)\n Rmerge(I) = --------------------------\n                 sum~i~(sum~j~<I>)\n\n I~j~ = the intensity of the jth observation of reflection i\n <I>  = the mean of the intensities of all observations of\n        reflection i\n\n sum~i~ is taken over all reflections\n sum~j~ is taken over all observations of each reflection",
                   "rcsb_description": [
                      {
@@ -15991,7 +16721,8 @@
                },
                "pdbx_CC_half": {
                   "type": "number",
-                  "minimum": -1,
+                  "minimum": 0,
+                  "exclusiveMinimum": true,
                   "maximum": 1,
                   "description": "The Pearson's correlation coefficient expressed as a decimal value\n              between the average intensities from randomly selected\n              half-datasets within the resolution shell.\n\n\t      Ref: Karplus & Diederichs (2012), Science 336, 1030-33\n",
                   "rcsb_description": [
@@ -16004,6 +16735,9 @@
                "pdbx_R_split": {
                   "type": "number",
                   "minimum": 0,
+                  "exclusiveMinimum": true,
+                  "maximum": 10,
+                  "exclusiveMaximum": true,
                   "description": "R split measures the agreement between the sets of intensities created by merging \n              odd- and even-numbered images from the data within the resolution shell.\n\n\t      Ref: T. A. White, R. A. Kirian, A. V. Martin, A. Aquila, K. Nass, \n\t      A. Barty and H. N. Chapman (2012), J. Appl. Cryst. 45, 335-341\n",
                   "rcsb_description": [
                      {
@@ -16039,6 +16773,7 @@
                "pdbx_Rsym_value": {
                   "type": "number",
                   "minimum": 0.0,
+                  "exclusiveMinimum": true,
                   "description": "R sym value in percent.",
                   "rcsb_description": [
                      {
@@ -16180,6 +16915,10 @@
                      "other"
                   ],
                   "description": "The classification of the program according to its\n major function.",
+                  "rcsb_search_context": [
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 1,
                   "rcsb_description": [
                      {
                         "text": "The classification of the program according to its\n major function.",
@@ -16268,6 +17007,10 @@
                      "sh"
                   ],
                   "description": "The major computing language in which the software is\n coded.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The major computing language in which the software is\n coded.",
@@ -16298,6 +17041,10 @@
                      "X-plor"
                   ],
                   "description": "The name of the software.",
+                  "rcsb_search_context": [
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 1,
                   "rcsb_enum_annotated": [
                      {
                         "value": "ABS"
@@ -17110,6 +17857,10 @@
                      "program"
                   ],
                   "description": "The classification of the software according to the most\n common types.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "filter",
@@ -17188,6 +17939,10 @@
                   "Y"
                ],
                "description": "The item indicates whether the entry is a CASP target, a CASD-NMR target,\n or similar target participating in methods development experiments.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_enum_annotated": [
                   {
                      "value": "N",
@@ -17572,7 +18327,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 6.4.5",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 6.4.5. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.4.5"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 7.0.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 7.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 7.0.0"
 }

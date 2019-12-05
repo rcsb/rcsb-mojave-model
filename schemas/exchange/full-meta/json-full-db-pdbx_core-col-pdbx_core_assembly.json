@@ -581,6 +581,9 @@
             "atom_count": {
                "type": "integer",
                "description": "The assembly atomic coordinate count.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The assembly atomic coordinate count.",
@@ -591,6 +594,9 @@
             "branched_atom_count": {
                "type": "integer",
                "description": "The assembly branched entity atomic coordinate count.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The assembly branched entity atomic coordinate count.",
@@ -601,6 +607,9 @@
             "branched_entity_count": {
                "type": "integer",
                "description": "The number of distinct branched entities in the generated assembly.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of distinct branched entities in the generated assembly.",
@@ -611,6 +620,9 @@
             "branched_entity_instance_count": {
                "type": "integer",
                "description": "The number of branched instances in the generated assembly data set.\n This is the total count of branched entity instances generated in the assembly coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of branched instances in the generated assembly data set.\n This is the total count of branched entity instances generated in the assembly coordinate data.",
@@ -631,6 +643,9 @@
             "modeled_polymer_monomer_count": {
                "type": "integer",
                "description": "The number of modeled polymer monomers in the assembly coordinate data.\n This is the total count of monomers with reported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of modeled polymer monomers in the assembly coordinate data.\n This is the total count of monomers with reported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
@@ -648,6 +663,10 @@
                   "RNA (only)"
                ],
                "description": "Nucleic acid polymer entity type categories describing the generated assembly.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_enum_annotated": [
                   {
                      "value": "DNA (only)",
@@ -680,6 +699,9 @@
             "nonpolymer_atom_count": {
                "type": "integer",
                "description": "The assembly non-polymer entity atomic coordinate count.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The assembly non-polymer entity atomic coordinate count.",
@@ -690,6 +712,9 @@
             "nonpolymer_entity_count": {
                "type": "integer",
                "description": "The number of distinct non-polymer entities in the generated assembly exclusive of solvent.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of distinct non-polymer entities in the generated assembly exclusive of solvent.",
@@ -700,6 +725,9 @@
             "nonpolymer_entity_instance_count": {
                "type": "integer",
                "description": "The number of non-polymer instances in the generated assembly data set exclusive of solvent.\n This is the total count of non-polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of non-polymer instances in the generated assembly data set exclusive of solvent.\n This is the total count of non-polymer entity instances generated in the assembly coordinate data.",
@@ -710,6 +738,9 @@
             "polymer_atom_count": {
                "type": "integer",
                "description": "The assembly polymer entity atomic coordinate count.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The assembly polymer entity atomic coordinate count.",
@@ -736,6 +767,10 @@
                   "protein/oligosaccharide"
                ],
                "description": "Categories describing the polymer entity composition for the generated assembly.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_enum_annotated": [
                   {
                      "value": "DNA",
@@ -804,6 +839,9 @@
             "polymer_entity_count": {
                "type": "integer",
                "description": "The number of distinct polymer entities in the generated assembly.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of distinct polymer entities in the generated assembly.",
@@ -814,6 +852,9 @@
             "polymer_entity_count_DNA": {
                "type": "integer",
                "description": "The number of distinct DNA polymer entities in the generated assembly.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of distinct DNA polymer entities in the generated assembly.",
@@ -824,6 +865,9 @@
             "polymer_entity_count_RNA": {
                "type": "integer",
                "description": "The number of distinct RNA polymer entities in the generated assembly.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of distinct RNA polymer entities in the generated assembly.",
@@ -834,6 +878,9 @@
             "polymer_entity_count_nucleic_acid": {
                "type": "integer",
                "description": "The number of distinct nucleic acid polymer entities (DNA or RNA) in the generated assembly.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of distinct nucleic acid polymer entities (DNA or RNA) in the generated assembly.",
@@ -844,6 +891,9 @@
             "polymer_entity_count_nucleic_acid_hybrid": {
                "type": "integer",
                "description": "The number of distinct hybrid nucleic acid polymer entities in the generated assembly.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of distinct hybrid nucleic acid polymer entities in the generated assembly.",
@@ -854,6 +904,9 @@
             "polymer_entity_count_protein": {
                "type": "integer",
                "description": "The number of distinct protein polymer entities in the generated assembly.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of distinct protein polymer entities in the generated assembly.",
@@ -864,6 +917,9 @@
             "polymer_entity_instance_count": {
                "type": "integer",
                "description": "The number of polymer instances in the generated assembly data set.\n This is the total count of polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of polymer instances in the generated assembly data set.\n This is the total count of polymer entity instances generated in the assembly coordinate data.",
@@ -874,6 +930,9 @@
             "polymer_entity_instance_count_DNA": {
                "type": "integer",
                "description": "The number of DNA polymer instances in the generated assembly data set.\n This is the total count of DNA polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of DNA polymer instances in the generated assembly data set.\n This is the total count of DNA polymer entity instances generated in the assembly coordinate data.",
@@ -884,6 +943,9 @@
             "polymer_entity_instance_count_RNA": {
                "type": "integer",
                "description": "The number of RNA polymer instances in the generated assembly data set.\n This is the total count of RNA polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of RNA polymer instances in the generated assembly data set.\n This is the total count of RNA polymer entity instances generated in the assembly coordinate data.",
@@ -894,6 +956,9 @@
             "polymer_entity_instance_count_nucleic_acid": {
                "type": "integer",
                "description": "The number of nucleic acid polymer instances in the generated assembly data set.\n This is the total count of nucleic acid polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of nucleic acid polymer instances in the generated assembly data set.\n This is the total count of nucleic acid polymer entity instances generated in the assembly coordinate data.",
@@ -904,6 +969,9 @@
             "polymer_entity_instance_count_nucleic_acid_hybrid": {
                "type": "integer",
                "description": "The number of hybrid nucleic acide polymer instances in the generated assembly data set.\n This is the total count of hybrid nucleic acid polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of hybrid nucleic acide polymer instances in the generated assembly data set.\n This is the total count of hybrid nucleic acid polymer entity instances generated in the assembly coordinate data.",
@@ -914,6 +982,9 @@
             "polymer_entity_instance_count_protein": {
                "type": "integer",
                "description": "The number of protein polymer instances in the generated assembly data set.\n This is the total count of protein polymer entity instances generated in the assembly coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of protein polymer instances in the generated assembly data set.\n This is the total count of protein polymer entity instances generated in the assembly coordinate data.",
@@ -924,6 +995,9 @@
             "polymer_monomer_count": {
                "type": "integer",
                "description": "The number of polymer monomers in sample entity instances comprising the assembly data set.\n This is the total count of monomers for all polymer entity instances\n in the generated assembly coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of polymer monomers in sample entity instances comprising the assembly data set.\n This is the total count of monomers for all polymer entity instances\n in the generated assembly coordinate data.",
@@ -940,6 +1014,10 @@
                   "Protein/NA"
                ],
                "description": "Selected polymer entity type categories describing the generated assembly.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_enum_annotated": [
                   {
                      "value": "Nucleic acid (only)",
@@ -968,6 +1046,9 @@
             "solvent_atom_count": {
                "type": "integer",
                "description": "The assembly solvent atomic coordinate count.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The assembly solvent atomic coordinate count.",
@@ -978,6 +1059,9 @@
             "solvent_entity_count": {
                "type": "integer",
                "description": "The number of distinct solvent entities in the generated assembly.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of distinct solvent entities in the generated assembly.",
@@ -988,6 +1072,9 @@
             "solvent_entity_instance_count": {
                "type": "integer",
                "description": "The number of solvent instances in the generated assembly data set.\n This is the total count of solvent entity instances generated in the assembly coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of solvent instances in the generated assembly data set.\n This is the total count of solvent entity instances generated in the assembly coordinate data.",
@@ -998,6 +1085,9 @@
             "unmodeled_polymer_monomer_count": {
                "type": "integer",
                "description": "The number of unmodeled polymer monomers in the assembly coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of unmodeled polymer monomers in the assembly coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
@@ -1033,7 +1123,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_assembly.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_assembly version: 6.4.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_assembly version 6.4.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_assembly.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.4.1"
+   "title": "schema: pdbx_core collection: pdbx_core_assembly version: 7.0.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_assembly version 7.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_assembly.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 7.0.0"
 }

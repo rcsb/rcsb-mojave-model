@@ -9,6 +9,10 @@
                "Bleary, Percival R.; O'Neil, F.K."
             ],
             "description": "Names of the authors of the entry.",
+            "rcsb_search_context": [
+               "full-text"
+            ],
+            "rcsb_full_text_priority": 1,
             "rcsb_description": [
                {
                   "text": "Names of the authors of the entry.",
@@ -27,6 +31,10 @@
             "RELEASE NOW"
          ],
          "description": "The prerelease status for the molecular sequences for the entry .",
+         "rcsb_search_context": [
+            "exact-match"
+         ],
+         "rcsb_full_text_priority": 10,
          "rcsb_description": [
             {
                "text": "The prerelease status for the molecular sequences for the entry .",
@@ -38,6 +46,9 @@
          "type": "string",
          "format": "date",
          "description": "The entry deposition date.",
+         "rcsb_search_context": [
+            "default-match"
+         ],
          "rcsb_description": [
             {
                "text": "The entry deposition date.",
@@ -49,6 +60,9 @@
          "type": "string",
          "format": "date",
          "description": "The deposition date of entry coordinate data.",
+         "rcsb_search_context": [
+            "default-match"
+         ],
          "rcsb_description": [
             {
                "text": "The deposition date of entry coordinate data.",
@@ -60,6 +74,9 @@
          "type": "string",
          "format": "date",
          "description": "The deposition date of entry NMR restraint data.",
+         "rcsb_search_context": [
+            "default-match"
+         ],
          "rcsb_description": [
             {
                "text": "The deposition date of entry NMR restraint data.",
@@ -71,6 +88,9 @@
          "type": "string",
          "format": "date",
          "description": "The deposition date of entry structure factor data.",
+         "rcsb_search_context": [
+            "default-match"
+         ],
          "rcsb_description": [
             {
                "text": "The deposition date of entry structure factor data.",
@@ -81,6 +101,11 @@
       "entry_id": {
          "type": "string",
          "description": "The PDB entry accession code.",
+         "rcsb_search_context": [
+            "exact-match",
+            "suggest"
+         ],
+         "rcsb_full_text_priority": 20,
          "rcsb_description": [
             {
                "text": "The PDB entry accession code.",
@@ -92,6 +117,9 @@
          "type": "string",
          "format": "date",
          "description": "The embargo date of entry coordinate data.",
+         "rcsb_search_context": [
+            "default-match"
+         ],
          "rcsb_description": [
             {
                "text": "The embargo date of entry coordinate data.",
@@ -103,6 +131,9 @@
          "type": "string",
          "format": "date",
          "description": "The embargo date of entry NMR restraint data.",
+         "rcsb_search_context": [
+            "default-match"
+         ],
          "rcsb_description": [
             {
                "text": "The embargo date of entry NMR restraint data.",
@@ -114,6 +145,9 @@
          "type": "string",
          "format": "date",
          "description": "The embargo date of entry structure factor data.",
+         "rcsb_search_context": [
+            "default-match"
+         ],
          "rcsb_description": [
             {
                "text": "The embargo date of entry structure factor data.",
@@ -125,6 +159,9 @@
          "type": "string",
          "format": "date",
          "description": "The release date for the entry.",
+         "rcsb_search_context": [
+            "default-match"
+         ],
          "rcsb_description": [
             {
                "text": "The release date for the entry.",
@@ -147,6 +184,10 @@
             "WDRN"
          ],
          "description": "The release status for the entry.",
+         "rcsb_search_context": [
+            "exact-match"
+         ],
+         "rcsb_full_text_priority": 10,
          "rcsb_description": [
             {
                "text": "The release status for the entry.",
@@ -157,6 +198,10 @@
       "title": {
          "type": "string",
          "description": "The entry title.",
+         "rcsb_search_context": [
+            "full-text"
+         ],
+         "rcsb_full_text_priority": 1,
          "rcsb_description": [
             {
                "text": "The entry title.",
@@ -182,7 +227,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-repository_holdings_unreleased.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: repository_holdings collection: repository_holdings_unreleased version: 1.1.0",
-   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_unreleased version 1.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-repository_holdings_unreleased.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 1.1.0"
+   "title": "schema: repository_holdings collection: repository_holdings_unreleased version: 2.0.1",
+   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_unreleased version 2.0.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-repository_holdings_unreleased.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 2.0.1"
 }

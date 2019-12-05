@@ -1,0 +1,819 @@
+{
+   "type": "object",
+   "properties": {
+      "pdbx_struct_special_symmetry": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "Part of the identifier for the molecular component.\n\nThis data item is a pointer to _atom_site.pdbx_PDB_model_num in the\nATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "Part of the identifier for the molecular component.\n\nThis data item is a pointer to _atom_site.pdbx_PDB_model_num in the\nATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_struct_special_symmetry.id must uniquely identify\n each item in the PDBX_STRUCT_SPECIAL_SYMMETRY list.\n\n This is an integer serial number.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_struct_special_symmetry.id must uniquely identify\n each item in the PDBX_STRUCT_SPECIAL_SYMMETRY list.\n\n This is an integer serial number.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "PDB_model_num",
+               "auth_seq_id",
+               "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true,
+         "rcsb_nested_indexing": false
+      },
+      "rcsb_branched_entity_instance_container_identifiers": {
+         "type": "object",
+         "properties": {
+            "asym_id": {
+               "type": "string",
+               "description": "Instance identifier for this container.",
+               "rcsb_description": [
+                  {
+                     "text": "Instance identifier for this container.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "auth_asym_id": {
+               "type": "string",
+               "description": "Author instance identifier for this container.",
+               "rcsb_description": [
+                  {
+                     "text": "Author instance identifier for this container.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "entity_id": {
+               "type": "string",
+               "description": "Entity identifier for the container.",
+               "rcsb_description": [
+                  {
+                     "text": "Entity identifier for the container.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "entry_id": {
+               "type": "string",
+               "description": "Entry identifier for the container.",
+               "rcsb_description": [
+                  {
+                     "text": "Entry identifier for the container.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "rcsb_id": {
+               "type": "string",
+               "description": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+               "rcsb_description": [
+                  {
+                     "text": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+                     "context": "dictionary"
+                  }
+               ]
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "asym_id",
+            "auth_asym_id",
+            "entity_id",
+            "entry_id",
+            "rcsb_id"
+         ]
+      },
+      "rcsb_branched_instance_feature": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "assignment_version": {
+                  "type": "string",
+                  "description": "Identifies the version of the feature assignment.",
+                  "rcsb_description": [
+                     {
+                        "text": "Identifies the version of the feature assignment.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "description": {
+                  "type": "string",
+                  "description": "A description for the feature.",
+                  "rcsb_search_context": [
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 1,
+                  "rcsb_description": [
+                     {
+                        "text": "A description for the feature.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "feature_id": {
+                  "type": "string",
+                  "description": "An identifier for the feature.",
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for the feature.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "name": {
+                  "type": "string",
+                  "description": "A name for the feature.",
+                  "rcsb_search_context": [
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 1,
+                  "rcsb_description": [
+                     {
+                        "text": "A name for the feature.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Ordinal identifier for this category",
+                  "rcsb_description": [
+                     {
+                        "text": "Ordinal identifier for this category",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "provenance_code": {
+                  "type": "string",
+                  "description": "Code identifying the individual, organization or program that\n assigned the feature.",
+                  "rcsb_description": [
+                     {
+                        "text": "Code identifying the individual, organization or program that\n assigned the feature.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "reference_scheme": {
+                  "type": "string",
+                  "enum": [
+                     "PDB entity",
+                     "PDB entry"
+                  ],
+                  "description": "Code residue coordinate system for the assigned feature.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "PDB entity",
+                        "detail": "The reference branched entity in PDB entry"
+                     },
+                     {
+                        "value": "PDB entry",
+                        "detail": "The observed branched entity instance in PDB coordinate records"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "Code residue coordinate system for the assigned feature.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "BINDING_SITE",
+                     "CATH",
+                     "MOGUL_ANGLE_OUTLIER",
+                     "MOGUL_BOND_OUTLIER",
+                     "RSRCC_OUTLIER",
+                     "RSRZ_OUTLIER",
+                     "SCOP",
+                     "UNOBSERVED_ATOM_XYZ",
+                     "UNOBSERVED_RESIDUE_XYZ",
+                     "ZERO_OCCUPANCY_ATOM_XYZ",
+                     "ZERO_OCCUPANCY_RESIDUE_XYZ"
+                  ],
+                  "description": "A type or category of the feature.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "BINDING_SITE",
+                        "detail": "Macromolecular target for ligand binding"
+                     },
+                     {
+                        "value": "CATH",
+                        "detail": "CATH - Class, Architecture, Topology, and Homology Protein Structure Database"
+                     },
+                     {
+                        "value": "MOGUL_ANGLE_OUTLIER",
+                        "detail": "Mogul bond angle outlier"
+                     },
+                     {
+                        "value": "MOGUL_BOND_OUTLIER",
+                        "detail": "Mogul bond distance outlier"
+                     },
+                     {
+                        "value": "RSRCC_OUTLIER",
+                        "detail": "Real space density correlation value < 0.65"
+                     },
+                     {
+                        "value": "RSRZ_OUTLIER",
+                        "detail": "Real space R-value Z score > 2"
+                     },
+                     {
+                        "value": "SCOP",
+                        "detail": "SCOP - Structural Classification of Proteins"
+                     },
+                     {
+                        "value": "UNOBSERVED_ATOM_XYZ",
+                        "detail": "Unobserved atom coordinates"
+                     },
+                     {
+                        "value": "UNOBSERVED_RESIDUE_XYZ",
+                        "detail": "Unobserved residue coordinates"
+                     },
+                     {
+                        "value": "ZERO_OCCUPANCY_ATOM_XYZ",
+                        "detail": "Atom coordinates with zero occupancy"
+                     },
+                     {
+                        "value": "ZERO_OCCUPANCY_RESIDUE_XYZ",
+                        "detail": "Residue coordinates with zero occupancy"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "A type or category of the feature.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "feature_positions": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "comp_id": {
+                           "type": "string",
+                           "description": "An identifier for the monomer(s) corresponding to the feature assignment.",
+                           "rcsb_description": [
+                              {
+                                 "text": "An identifier for the monomer(s) corresponding to the feature assignment.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "num": {
+                           "type": "integer",
+                           "description": "An identifier for the monomer feature position.",
+                           "rcsb_description": [
+                              {
+                                 "text": "An identifier for the monomer feature position.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "value": {
+                           "type": "number",
+                           "description": "The value of the feature at the monomer position.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The value of the feature at the monomer position.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": true
+               },
+               "feature_class_lineage": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "depth": {
+                           "type": "integer",
+                           "description": "Members of the feature class lineage as parent lineage depth (1-N)",
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the feature class lineage as parent lineage depth (1-N)",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "id": {
+                           "type": "string",
+                           "description": "Members of the feature class lineage as parent class identifiers.",
+                           "rcsb_search_context": [
+                              "exact-match"
+                           ],
+                           "rcsb_full_text_priority": 10,
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the feature class lineage as parent class identifiers.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "name": {
+                           "type": "string",
+                           "description": "Members of the feature class lineage as parent class names.",
+                           "rcsb_search_context": [
+                              "exact-match"
+                           ],
+                           "rcsb_full_text_priority": 10,
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the feature class lineage as parent class names.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": true
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "feature_id",
+               "ordinal",
+               "provenance_code",
+               "reference_scheme",
+               "type"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true,
+         "rcsb_nested_indexing": true
+      },
+      "rcsb_branched_instance_feature_summary": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "count": {
+                  "type": "integer",
+                  "description": "The feature count.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The feature count.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "coverage": {
+                  "type": "number",
+                  "description": "The fractional feature coverage relative to the full entity sequence.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The fractional feature coverage relative to the full entity sequence.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "BINDING_SITE",
+                     "CATH",
+                     "MOGUL_ANGLE_OUTLIER",
+                     "MOGUL_BOND_OUTLIER",
+                     "RSRCC_OUTLIER",
+                     "RSRZ_OUTLIER",
+                     "SCOP",
+                     "UNOBSERVED_ATOM_XYZ",
+                     "UNOBSERVED_RESIDUE_XYZ",
+                     "ZERO_OCCUPANCY_ATOM_XYZ",
+                     "ZERO_OCCUPANCY_RESIDUE_XYZ"
+                  ],
+                  "description": "Type or category of the feature.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "BINDING_SITE",
+                        "detail": "Macromolecular target for ligand binding"
+                     },
+                     {
+                        "value": "CATH",
+                        "detail": "CATH - Class, Architecture, Topology, and Homology Protein Structure Database"
+                     },
+                     {
+                        "value": "MOGUL_ANGLE_OUTLIER",
+                        "detail": "Mogul bond angle outlier"
+                     },
+                     {
+                        "value": "MOGUL_BOND_OUTLIER",
+                        "detail": "Mogul bond distance outlier"
+                     },
+                     {
+                        "value": "RSRCC_OUTLIER",
+                        "detail": "Real space density correlation value < 0.65"
+                     },
+                     {
+                        "value": "RSRZ_OUTLIER",
+                        "detail": "Real space R-value Z score > 2"
+                     },
+                     {
+                        "value": "SCOP",
+                        "detail": "SCOP - Structural Classification of Proteins"
+                     },
+                     {
+                        "value": "UNOBSERVED_ATOM_XYZ",
+                        "detail": "Unobserved atom coordinates"
+                     },
+                     {
+                        "value": "UNOBSERVED_RESIDUE_XYZ",
+                        "detail": "Unobserved residue coordinates"
+                     },
+                     {
+                        "value": "ZERO_OCCUPANCY_ATOM_XYZ",
+                        "detail": "Atom coordinates with zero occupancy"
+                     },
+                     {
+                        "value": "ZERO_OCCUPANCY_RESIDUE_XYZ",
+                        "detail": "Residue coordinates with zero occupancy"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "Type or category of the feature.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "type"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true,
+         "rcsb_nested_indexing": true
+      },
+      "rcsb_branched_struct_conn": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "connect_type": {
+                  "type": "string",
+                  "enum": [
+                     "covalent bond",
+                     "hydrogen bond",
+                     "ionic interaction",
+                     "metal coordination",
+                     "mismatched base pairs"
+                  ],
+                  "description": "The connection type.",
+                  "rcsb_description": [
+                     {
+                        "text": "The connection type.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "description": {
+                  "type": "string",
+                  "description": "A description of special details of the connection.",
+                  "rcsb_description": [
+                     {
+                        "text": "A description of special details of the connection.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "dist_value": {
+                  "type": "number",
+                  "description": "Distance value for this contact.",
+                  "rcsb_units": "angstroms",
+                  "rcsb_description": [
+                     {
+                        "text": "Distance value for this contact.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "id": {
+                  "type": "string",
+                  "description": "The value of _rcsb_branched_struct_conn.id is an identifier for connection.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _rcsb_branched_struct_conn.id is an identifier for connection.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ordinal_id": {
+                  "type": "integer",
+                  "description": "The value of _rcsb_branched_struct_conn.id must uniquely identify a record in\n the rcsb_branched_struct_conn list.\n",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _rcsb_branched_struct_conn.id must uniquely identify a record in\n the rcsb_branched_struct_conn list.\n",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "value_order": {
+                  "type": "string",
+                  "enum": [
+                     "doub",
+                     "quad",
+                     "sing",
+                     "trip"
+                  ],
+                  "description": "The chemical bond order associated with the specified atoms in\n this contact.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "doub",
+                        "detail": "double bond"
+                     },
+                     {
+                        "value": "quad",
+                        "detail": "quadruple bond"
+                     },
+                     {
+                        "value": "sing",
+                        "detail": "single bond"
+                     },
+                     {
+                        "value": "trip",
+                        "detail": "triple bond"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The chemical bond order associated with the specified atoms in\n this contact.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "connect_target": {
+                  "type": "object",
+                  "properties": {
+                     "auth_asym_id": {
+                        "type": "string",
+                        "description": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category.",
+                        "rcsb_description": [
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "auth_seq_id": {
+                        "type": "string",
+                        "description": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category.",
+                        "rcsb_description": [
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "label_alt_id": {
+                        "type": "string",
+                        "description": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category.",
+                        "rcsb_description": [
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "label_asym_id": {
+                        "type": "string",
+                        "description": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
+                        "rcsb_description": [
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "label_atom_id": {
+                        "type": "string",
+                        "description": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_atom_id in the\n ATOM_SITE category.",
+                        "rcsb_description": [
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_atom_id in the\n ATOM_SITE category.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "label_comp_id": {
+                        "type": "string",
+                        "description": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
+                        "rcsb_description": [
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "label_seq_id": {
+                        "type": "integer",
+                        "description": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.connect_target_label_seq_id in the\n ATOM_SITE category.",
+                        "rcsb_description": [
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.connect_target_label_seq_id in the\n ATOM_SITE category.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "symmetry": {
+                        "type": "string",
+                        "examples": [
+                           "1_555",
+                           "7_645"
+                        ],
+                        "description": "Describes the symmetry operation that should be applied to the\n atom set specified by _rcsb_branched_struct_conn.label* to generate the\n target of the structure connection.",
+                        "rcsb_description": [
+                           {
+                              "text": "Describes the symmetry operation that should be applied to the\n atom set specified by _rcsb_branched_struct_conn.label* to generate the\n target of the structure connection.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     }
+                  },
+                  "additionalProperties": false,
+                  "required": [
+                     "label_asym_id",
+                     "label_comp_id"
+                  ]
+               },
+               "connect_partner": {
+                  "type": "object",
+                  "properties": {
+                     "label_alt_id": {
+                        "type": "string",
+                        "description": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category.",
+                        "rcsb_description": [
+                           {
+                              "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "label_asym_id": {
+                        "type": "string",
+                        "description": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
+                        "rcsb_description": [
+                           {
+                              "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "label_atom_id": {
+                        "type": "string",
+                        "description": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _chem_comp_atom.atom_id in the\n CHEM_COMP_ATOM category.",
+                        "rcsb_description": [
+                           {
+                              "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _chem_comp_atom.atom_id in the\n CHEM_COMP_ATOM category.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "label_comp_id": {
+                        "type": "string",
+                        "description": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
+                        "rcsb_description": [
+                           {
+                              "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "label_seq_id": {
+                        "type": "integer",
+                        "description": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category.",
+                        "rcsb_description": [
+                           {
+                              "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "symmetry": {
+                        "type": "string",
+                        "examples": [
+                           "1_555",
+                           "7_645"
+                        ],
+                        "description": "Describes the symmetry operation that should be applied to the\n atom set specified by _rcsb_branched_struct_conn.connect_partner_label* to generate the\n partner in the structure connection.",
+                        "rcsb_description": [
+                           {
+                              "text": "Describes the symmetry operation that should be applied to the\n atom set specified by _rcsb_branched_struct_conn.connect_partner_label* to generate the\n partner in the structure connection.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     }
+                  },
+                  "additionalProperties": false,
+                  "required": [
+                     "label_asym_id",
+                     "label_comp_id"
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "connect_type",
+               "id",
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true,
+         "rcsb_nested_indexing": false
+      },
+      "rcsb_id": {
+         "type": "string",
+         "description": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+         "rcsb_description": [
+            {
+               "text": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+               "context": "dictionary"
+            }
+         ]
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ],
+   "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_branched_entity_instance.json",
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "schema: pdbx_core collection: pdbx_core_branched_entity_instance version: 7.0.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity_instance version 7.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-pdbx_core_branched_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 7.0.0"
+}
