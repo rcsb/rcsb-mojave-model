@@ -1887,6 +1887,41 @@
                   },
                   "uniqueItems": false,
                   "rcsb_nested_indexing": true
+               },
+               "rcsb_gene_name": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "provenance_code": {
+                           "type": "string",
+                           "enum": [
+                              "PDB Primary Data",
+                              "UniProt"
+                           ],
+                           "description": "A code indicating the provenance of the source organism details for the entity\n",
+                           "rcsb_description": [
+                              {
+                                 "text": "A code indicating the provenance of the source organism details for the entity\n",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "value": {
+                           "type": "string",
+                           "description": "Gene name.",
+                           "rcsb_description": [
+                              {
+                                 "text": "Gene name.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": true
                }
             },
             "additionalProperties": false,
@@ -2402,6 +2437,10 @@
             "entry_id": {
                "type": "string",
                "description": "Entry identifier for the container.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Entry identifier for the container.",
@@ -2422,6 +2461,10 @@
             "rcsb_id": {
                "type": "string",
                "description": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
@@ -2434,31 +2477,6 @@
                "items": {
                   "type": "object",
                   "properties": {
-                     "database_identifier": {
-                        "type": "string",
-                        "description": "Related resource annotation identifier\n",
-                        "rcsb_description": [
-                           {
-                              "text": "Related resource annotation identifier\n",
-                              "context": "dictionary"
-                           }
-                        ]
-                     },
-                     "database_name": {
-                        "type": "string",
-                        "enum": [
-                           "GO",
-                           "InterPro",
-                           "Pfam"
-                        ],
-                        "description": "Related annotation resource name\n",
-                        "rcsb_description": [
-                           {
-                              "text": "Related annotation resource name\n",
-                              "context": "dictionary"
-                           }
-                        ]
-                     },
                      "provenance_source": {
                         "type": "string",
                         "enum": [
@@ -2471,6 +2489,39 @@
                         "rcsb_description": [
                            {
                               "text": "Source of the related annotation assignment\n",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "resource_identifier": {
+                        "type": "string",
+                        "description": "Related resource annotation identifier\n",
+                        "rcsb_search_context": [
+                           "exact-match"
+                        ],
+                        "rcsb_full_text_priority": 10,
+                        "rcsb_description": [
+                           {
+                              "text": "Related resource annotation identifier\n",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "resource_name": {
+                        "type": "string",
+                        "enum": [
+                           "GO",
+                           "InterPro",
+                           "Pfam"
+                        ],
+                        "description": "Related annotation resource name\n",
+                        "rcsb_search_context": [
+                           "exact-match"
+                        ],
+                        "rcsb_full_text_priority": 10,
+                        "rcsb_description": [
+                           {
+                              "text": "Related annotation resource name\n",
                               "context": "dictionary"
                            }
                         ]
@@ -2489,6 +2540,11 @@
                      "database_accession": {
                         "type": "string",
                         "description": "Reference database accession code\n",
+                        "rcsb_search_context": [
+                           "exact-match",
+                           "suggest"
+                        ],
+                        "rcsb_full_text_priority": 20,
                         "rcsb_description": [
                            {
                               "text": "Reference database accession code\n",
@@ -2499,6 +2555,10 @@
                      "database_isoform": {
                         "type": "string",
                         "description": "Reference database identifier for the sequence isoform\n",
+                        "rcsb_search_context": [
+                           "exact-match"
+                        ],
+                        "rcsb_full_text_priority": 10,
                         "rcsb_description": [
                            {
                               "text": "Reference database identifier for the sequence isoform\n",
@@ -2520,6 +2580,10 @@
                            "UniProt"
                         ],
                         "description": "Reference database name\n",
+                        "rcsb_search_context": [
+                           "exact-match"
+                        ],
+                        "rcsb_full_text_priority": 10,
                         "rcsb_description": [
                            {
                               "text": "Reference database name\n",
@@ -2538,6 +2602,68 @@
                         "rcsb_description": [
                            {
                               "text": "Source of the reference database assignment\n",
+                              "context": "dictionary"
+                           }
+                        ]
+                     }
+                  },
+                  "additionalProperties": false
+               },
+               "uniqueItems": false,
+               "rcsb_nested_indexing": true
+            },
+            "related_annotation_lineage": {
+               "type": "array",
+               "items": {
+                  "type": "object",
+                  "properties": {
+                     "depth": {
+                        "type": "integer",
+                        "description": "Members of the lineage as lineage depth (1-N)",
+                        "rcsb_description": [
+                           {
+                              "text": "Members of the lineage as lineage depth (1-N)",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "id": {
+                        "type": "string",
+                        "description": "Members of the lineage expressed as parent idcodes.",
+                        "rcsb_search_context": [
+                           "exact-match"
+                        ],
+                        "rcsb_full_text_priority": 10,
+                        "rcsb_description": [
+                           {
+                              "text": "Members of the lineage expressed as parent idcodes.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "name": {
+                        "type": "string",
+                        "description": "Members of the lineage expressed as parent annotation names.",
+                        "rcsb_search_context": [
+                           "exact-match"
+                        ],
+                        "rcsb_full_text_priority": 10,
+                        "rcsb_description": [
+                           {
+                              "text": "Members of the lineage expressed as parent annotation names.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "resource": {
+                        "type": "string",
+                        "enum": [
+                           "GO"
+                        ],
+                        "description": "The name of the related annotation resource.",
+                        "rcsb_description": [
+                           {
+                              "text": "The name of the related annotation resource.",
                               "context": "dictionary"
                            }
                         ]
@@ -3023,6 +3149,10 @@
       "rcsb_id": {
          "type": "string",
          "description": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
+         "rcsb_search_context": [
+            "exact-match"
+         ],
+         "rcsb_full_text_priority": 10,
          "rcsb_description": [
             {
                "text": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
@@ -3037,7 +3167,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 7.0.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 7.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 7.0.0"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 7.0.1",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 7.0.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 7.0.1"
 }
