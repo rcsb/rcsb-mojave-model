@@ -541,9 +541,10 @@
                      ],
                      "description": "Names of the authors of the citation; relevant for journal\n articles, books and book chapters.  Names are separated by vertical bars.\n\n The family name(s), followed by a comma and including any\n dynastic components, precedes the first name(s) or initial(s).\n",
                      "rcsb_search_context": [
-                        "full-text"
+                        "full-text",
+                        "suggest"
                      ],
-                     "rcsb_full_text_priority": 1,
+                     "rcsb_full_text_priority": 20,
                      "rcsb_description": [
                         {
                            "text": "Names of the authors of the citation; relevant for journal\n articles, books and book chapters.  Names are separated by vertical bars.\n\n The family name(s), followed by a comma and including any\n dynastic components, precedes the first name(s) or initial(s).\n",
@@ -881,8 +882,7 @@
                   "type": "string",
                   "description": "The make, model or name of the detector device used.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
@@ -1812,8 +1812,7 @@
                   "type": "string",
                   "description": "Synchrotron beamline.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
@@ -1835,8 +1834,7 @@
                   "type": "string",
                   "description": "Synchrotron site.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
@@ -3817,8 +3815,7 @@
                   ],
                   "description": "type of refinement performed in order to determine map resolution",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
@@ -4616,8 +4613,7 @@
                ],
                "description": "The reconstruction method used in the EM experiment.",
                "rcsb_search_context": [
-                  "exact-match",
-                  "full-text"
+                  "exact-match"
                ],
                "rcsb_full_text_priority": 10,
                "rcsb_description": [
@@ -5102,8 +5098,7 @@
                   ],
                   "description": "The mode of illumination.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
@@ -5187,8 +5182,7 @@
                   ],
                   "description": "The name of the model of microscope.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
@@ -5208,8 +5202,7 @@
                   ],
                   "description": "The mode of imaging.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
@@ -5966,8 +5959,7 @@
                   ],
                   "description": "This is the name of the cryogen.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
@@ -6036,8 +6028,7 @@
                   ],
                   "description": "The type of instrument used in the vitrification process.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
@@ -6201,7 +6192,6 @@
                   "description": "The method used in the experiment.",
                   "rcsb_search_context": [
                      "exact-match",
-                     "full-text",
                      "suggest"
                   ],
                   "rcsb_full_text_priority": 20,
@@ -6640,8 +6630,7 @@
                   ],
                   "description": "The value identifies the full name of center.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
@@ -6778,8 +6767,7 @@
                   ],
                   "description": "The value identifies the Structural Genomics project.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
@@ -7431,8 +7419,7 @@
                   "type": "string",
                   "description": "The country/region providing the funding support for the entry.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
@@ -7451,8 +7438,7 @@
                   ],
                   "description": "The name of the organization providing funding support for the \n entry.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
@@ -9179,8 +9165,7 @@
                   ],
                   "description": "Text to describe a grouping of entries in multiple collections",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
@@ -13652,7 +13637,6 @@
                "description": "The category of experimental method(s) used to determine the structure entry.",
                "rcsb_search_context": [
                   "exact-match",
-                  "full-text",
                   "suggest"
                ],
                "rcsb_full_text_priority": 20,
@@ -13872,8 +13856,7 @@
                ],
                "description": "Categories describing the polymer entity composition for the entry.",
                "rcsb_search_context": [
-                  "exact-match",
-                  "full-text"
+                  "exact-match"
                ],
                "rcsb_full_text_priority": 10,
                "rcsb_enum_annotated": [
@@ -14141,8 +14124,7 @@
                ],
                "description": "Selected polymer entity type categories describing the entry.",
                "rcsb_search_context": [
-                  "exact-match",
-                  "full-text"
+                  "exact-match"
                ],
                "rcsb_full_text_priority": 10,
                "rcsb_enum_annotated": [
@@ -14180,8 +14162,7 @@
                   "type": "string",
                   "description": "Combined list of software programs names reported in connection with the production of this entry.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
