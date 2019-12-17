@@ -4,13 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.8] - 
+## [0.1.8] - 2019-12-16 (alpha-6)
 
 ### Changed
+- various adjustments to search context
 
 ### Added
+- merged removed entries schema
+- UniProt data comes from Exchange DB
+- GO data comes from Exchange DB
 
 ### Removed
+- individual obsolete and in-silico schemas
 
 ## [0.1.7] - 2019-12-10
 
