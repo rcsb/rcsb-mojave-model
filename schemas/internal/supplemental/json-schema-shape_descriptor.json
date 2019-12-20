@@ -5,7 +5,7 @@
   "type": "object",
   "required": [
     "rcsb_shape_container_identifiers",
-    "max_order_zernike",
+    "max_order_zernike_invariants",
     "max_order_zernike_align",
     "zernike_invariants",
     "geom_invariants",
@@ -35,7 +35,7 @@
       ],
       "additionalProperties": false
     },
-    "max_order_zernike": {
+    "max_order_zernike_invariants": {
       "type": "integer",
       "description": "The maximum order of Zernike moments (the n index in Ω_nlm) that are stored in the zernike_invariants object."
     },
@@ -85,7 +85,7 @@
       "uniqueItems": false,
       "items": {
         "type": "number",
-        "description": "The value of the Ω_nlm original unscaled moment, used for alignment."
+        "description": "The value of the Ω_nlm original unscaled moment, used for alignment. The hierarchical list of complex numbers is stored as a flattened list of real and imaginary parts (doubles)."
       }
     },
     "volume_center": {
