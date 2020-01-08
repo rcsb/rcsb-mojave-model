@@ -16,5 +16,8 @@ build:
   - mvn -v
   - mvn --batch-mode --errors -U clean deploy
 
+  only:
+    - branches
+
   tags:
   - Java8-Nexus3
