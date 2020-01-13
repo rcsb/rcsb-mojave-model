@@ -11,7 +11,8 @@
     "geom_invariants",
     "zernike_align",
     "volume_center",
-    "shape_entity_type"
+    "shape_entity_type",
+    "rcsb_latest_revision"
   ],
   "properties": {
     "rcsb_shape_container_identifiers": {
@@ -105,6 +106,24 @@
         "domain"
       ],
       "description": "Type of the object represented by the descriptor, used for independent searches."
+    },
+    "rcsb_latest_revision": {
+      "type": "object",
+      "properties": {
+        "major_revision": {
+          "type": "integer",
+          "description": "The major version number of the latest revision."
+        },
+        "minor_revision": {
+          "type": "integer",
+          "description": "The minor version number of the latest revision."
+        },
+        "revision_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The release date of the latest revision item."
+        }
+      }
     }
   },
   "additionalProperties": false
