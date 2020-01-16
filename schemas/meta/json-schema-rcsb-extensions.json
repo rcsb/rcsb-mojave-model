@@ -109,7 +109,21 @@
       "maximum": 100
     },
     "rcsb_nested_indexing": {
-      "type": "boolean",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category_name": {
+            "type": "string",
+            "description": "Label that identifies the context."
+          },
+          "category_path": {
+            "type": "string",
+            "description": "The absolute path (from the document root) to the field that identifies the context."
+          }
+        },
+        "description": "The category context that allows for an association of one or more categories with a given field."
+      },
       "description": "Indicates that the nested data type instead of the object data type should be used to index the inner objects of array."
     },
     "rcsb_description": {
