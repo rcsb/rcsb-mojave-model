@@ -18,6 +18,10 @@
                   {
                      "text": "A description of special aspects of the macromolecular assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "A description of special aspects of the macromolecular assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -28,6 +32,10 @@
                   {
                      "text": "The value of _pdbx_struct_assembly.id must uniquely identify a record in\n the PDBX_STRUCT_ASSEMBLY list.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The value of _pdbx_struct_assembly.id must uniquely identify a record in\n the PDBX_STRUCT_ASSEMBLY list.",
+                     "context": "brief"
                   }
                ]
             },
@@ -38,6 +46,10 @@
                   {
                      "text": "Provides details of the method used to determine or \n compute the assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Provides details of the method used to determine or \n compute the assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -48,6 +60,10 @@
                   {
                      "text": "The number of polymer molecules in the assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of polymer molecules in the assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -76,6 +92,14 @@
                   {
                      "text": "Enter the oligomeric state of your system. You may select unknown if you have no biophysical evidence to support any choice.",
                      "context": "deposition"
+                  },
+                  {
+                     "text": "Provides the details of the oligomeric state of the assembly.",
+                     "context": "brief"
+                  },
+                  {
+                     "text": "Enter the oligomeric state of your system. You may select unknown if you have no biophysical evidence to support any choice.",
+                     "context": "brief"
                   }
                ]
             },
@@ -93,6 +117,10 @@
                   {
                      "text": "Candidate macromolecular assembly.\n\n Excludes the following cases classified in pdbx_struct_asembly.details:\n\n 'crystal asymmetric unit', 'crystal asymmetric unit, crystal frame', 'helical asymmetric unit',\n 'helical asymmetric unit, std helical frame','icosahedral 23 hexamer', 'icosahedral asymmetric unit',\n 'icosahedral asymmetric unit, std point frame','icosahedral pentamer', 'pentasymmetron capsid unit',\n 'point asymmetric unit', 'point asymmetric unit, std point frame','trisymmetron capsid unit',\n  and 'deposited_coordinates'.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Candidate macromolecular assembly.\n\n Excludes the following cases classified in pdbx_struct_asembly.details:\n\n 'crystal asymmetric unit', 'crystal asymmetric unit, crystal frame', 'helical asymmetric unit',\n 'helical asymmetric unit, std helical frame','icosahedral 23 hexamer', 'icosahedral asymmetric unit',\n 'icosahedral asymmetric unit, std point frame','icosahedral pentamer', 'pentasymmetron capsid unit',\n 'point asymmetric unit', 'point asymmetric unit, std point frame','trisymmetron capsid unit',\n  and 'deposited_coordinates'.",
+                     "context": "brief"
                   }
                ]
             },
@@ -115,6 +143,10 @@
                   {
                      "text": "A filtered description of the macromolecular assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "A filtered description of the macromolecular assembly.",
+                     "context": "brief"
                   }
                ]
             }
@@ -136,6 +168,10 @@
                      {
                         "text": "This item references an assembly in pdbx_struct_assembly",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "This item references an assembly in pdbx_struct_assembly",
+                        "context": "brief"
                      }
                   ]
                },
@@ -146,6 +182,10 @@
                      {
                         "text": "Provides any additional information regarding the evidence of this assembly",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Provides any additional information regarding the evidence of this assembly",
+                        "context": "brief"
                      }
                   ]
                },
@@ -174,6 +214,10 @@
                      {
                         "text": "Provides the experimental method to determine the state of this assembly",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Provides the experimental method to determine the state of this assembly",
+                        "context": "brief"
                      }
                   ]
                },
@@ -184,6 +228,10 @@
                      {
                         "text": "Identifies a unique record in pdbx_struct_assembly_auth_evidence.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Identifies a unique record in pdbx_struct_assembly_auth_evidence.",
+                        "context": "brief"
                      }
                   ]
                }
@@ -195,8 +243,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "pdbx_struct_assembly_gen": {
          "type": "array",
@@ -210,6 +257,10 @@
                      {
                         "text": "This data item is a pointer to _pdbx_struct_assembly.id in the \n PDBX_STRUCT_ASSEMBLY category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "This data item is a pointer to _pdbx_struct_assembly.id in the \n PDBX_STRUCT_ASSEMBLY category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -222,6 +273,10 @@
                         {
                            "text": "This data item is a pointer to _struct_asym.id in \n the STRUCT_ASYM category.\n\n This item may be expressed as a comma separated list of identifiers.",
                            "context": "dictionary"
+                        },
+                        {
+                           "text": "This data item is a pointer to _struct_asym.id in \n the STRUCT_ASYM category.\n\n This item may be expressed as a comma separated list of identifiers.",
+                           "context": "brief"
                         }
                      ]
                   },
@@ -235,11 +290,15 @@
                      "(1-60)",
                      "(1-60)(61)"
                   ],
-                  "description": "Identifies the operation of collection of operations \n from category PDBX_STRUCT_OPER_LIST.  \n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)\n",
+                  "description": "Identifies the operation of collection of operations \n from category PDBX_STRUCT_OPER_LIST.  \n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)",
                   "rcsb_description": [
                      {
-                        "text": "Identifies the operation of collection of operations \n from category PDBX_STRUCT_OPER_LIST.  \n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)\n",
+                        "text": "Identifies the operation of collection of operations \n from category PDBX_STRUCT_OPER_LIST.  \n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Identifies the operation of collection of operations \n from category PDBX_STRUCT_OPER_LIST.  \n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)",
+                        "context": "brief"
                      }
                   ]
                },
@@ -250,6 +309,10 @@
                      {
                         "text": "This data item is an ordinal index for the\n PDBX_STRUCT_ASSEMBLY category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "This data item is an ordinal index for the\n PDBX_STRUCT_ASSEMBLY category.",
+                        "context": "brief"
                      }
                   ]
                }
@@ -260,14 +323,27 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "pdbx_struct_assembly_prop": {
          "type": "array",
          "items": {
             "type": "object",
             "properties": {
+               "assembly_id": {
+                  "type": "string",
+                  "description": "The identifier for the assembly used in category PDBX_STRUCT_ASSEMBLY.",
+                  "rcsb_description": [
+                     {
+                        "text": "The identifier for the assembly used in category PDBX_STRUCT_ASSEMBLY.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "The identifier for the assembly used in category PDBX_STRUCT_ASSEMBLY.",
+                        "context": "brief"
+                     }
+                  ]
+               },
                "biol_id": {
                   "type": "string",
                   "description": "The identifier for the assembly used in category PDBX_STRUCT_ASSEMBLY.",
@@ -275,6 +351,10 @@
                      {
                         "text": "The identifier for the assembly used in category PDBX_STRUCT_ASSEMBLY.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The identifier for the assembly used in category PDBX_STRUCT_ASSEMBLY.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -290,6 +370,10 @@
                      {
                         "text": "The property type for the assembly.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The property type for the assembly.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -300,6 +384,10 @@
                      {
                         "text": "The value of the assembly property.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The value of the assembly property.",
+                        "context": "brief"
                      }
                   ]
                }
@@ -311,8 +399,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "pdbx_struct_oper_list": {
          "type": "array",
@@ -326,6 +413,10 @@
                      {
                         "text": "This identifier code must uniquely identify a\n record in the PDBX_STRUCT_OPER_LIST list.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "This identifier code must uniquely identify a\n record in the PDBX_STRUCT_OPER_LIST list.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -336,6 +427,10 @@
                      {
                         "text": "The [1][1] element of the 3x3 matrix component of the\n transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The [1][1] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -346,6 +441,10 @@
                      {
                         "text": "The [1][2] element of the 3x3 matrix component of the\n transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The [1][2] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -356,6 +455,10 @@
                      {
                         "text": "The [1][3] element of the 3x3 matrix component of the\n transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The [1][3] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -366,6 +469,10 @@
                      {
                         "text": "The [2][1] element of the 3x3 matrix component of the\n transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The [2][1] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -376,6 +483,10 @@
                      {
                         "text": "The [2][2] element of the 3x3 matrix component of the\n transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The [2][2] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -386,6 +497,10 @@
                      {
                         "text": "The [2][3] element of the 3x3 matrix component of the\n transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The [2][3] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -396,6 +511,10 @@
                      {
                         "text": "The [3][1] element of the 3x3 matrix component of the\n transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The [3][1] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -406,6 +525,10 @@
                      {
                         "text": "The [3][2] element of the 3x3 matrix component of the\n transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The [3][2] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -416,6 +539,10 @@
                      {
                         "text": "The [3][3] element of the 3x3 matrix component of the\n transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The [3][3] element of the 3x3 matrix component of the\n transformation operation.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -430,6 +557,10 @@
                      {
                         "text": "A descriptive name for the transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A descriptive name for the transformation operation.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -444,6 +575,10 @@
                      {
                         "text": "The symmetry operation corresponding to the transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The symmetry operation corresponding to the transformation operation.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -471,6 +606,10 @@
                      {
                         "text": "A code to indicate the type of operator.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A code to indicate the type of operator.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -481,6 +620,10 @@
                      {
                         "text": "The [1] element of the three-element vector component of the\n transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The [1] element of the three-element vector component of the\n transformation operation.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -491,6 +634,10 @@
                      {
                         "text": "The [2] element of the three-element vector component of the\n transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The [2] element of the three-element vector component of the\n transformation operation.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -501,6 +648,10 @@
                      {
                         "text": "The [3] element of the three-element vector component of the\n transformation operation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The [3] element of the three-element vector component of the\n transformation operation.",
+                        "context": "brief"
                      }
                   ]
                }
@@ -511,8 +662,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "rcsb_assembly_container_identifiers": {
          "type": "object",
@@ -528,6 +678,10 @@
                   {
                      "text": "Assembly identifier for the container.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Assembly identifier for the container.",
+                     "context": "brief"
                   }
                ]
             },
@@ -542,6 +696,10 @@
                   {
                      "text": "Entry identifier for the container.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Entry identifier for the container.",
+                     "context": "brief"
                   }
                ]
             },
@@ -556,6 +714,10 @@
                   {
                      "text": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
+                     "context": "brief"
                   }
                ]
             }
@@ -576,6 +738,10 @@
                   {
                      "text": "Entity identifier for the container.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Entity identifier for the container.",
+                     "context": "brief"
                   }
                ]
             },
@@ -589,6 +755,10 @@
                   {
                      "text": "The assembly atomic coordinate count.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The assembly atomic coordinate count.",
+                     "context": "brief"
                   }
                ]
             },
@@ -602,6 +772,10 @@
                   {
                      "text": "The assembly branched entity atomic coordinate count.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The assembly branched entity atomic coordinate count.",
+                     "context": "brief"
                   }
                ]
             },
@@ -615,6 +789,10 @@
                   {
                      "text": "The number of distinct branched entities in the generated assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of distinct branched entities in the generated assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -628,6 +806,10 @@
                   {
                      "text": "The number of branched instances in the generated assembly data set.\n This is the total count of branched entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of branched instances in the generated assembly data set.\n This is the total count of branched entity instances generated in the assembly coordinate data.",
+                     "context": "brief"
                   }
                ]
             },
@@ -638,6 +820,10 @@
                   {
                      "text": "The PDB entry accession code.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The PDB entry accession code.",
+                     "context": "brief"
                   }
                ]
             },
@@ -651,6 +837,10 @@
                   {
                      "text": "The number of modeled polymer monomers in the assembly coordinate data.\n This is the total count of monomers with reported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of modeled polymer monomers in the assembly coordinate data.\n This is the total count of monomers with reported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
+                     "context": "brief"
                   }
                ]
             },
@@ -694,6 +884,10 @@
                   {
                      "text": "Nucleic acid polymer entity type categories describing the generated assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Nucleic acid polymer entity type categories describing the generated assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -707,6 +901,10 @@
                   {
                      "text": "The assembly non-polymer entity atomic coordinate count.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The assembly non-polymer entity atomic coordinate count.",
+                     "context": "brief"
                   }
                ]
             },
@@ -720,6 +918,10 @@
                   {
                      "text": "The number of distinct non-polymer entities in the generated assembly exclusive of solvent.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of distinct non-polymer entities in the generated assembly exclusive of solvent.",
+                     "context": "brief"
                   }
                ]
             },
@@ -733,6 +935,10 @@
                   {
                      "text": "The number of non-polymer instances in the generated assembly data set exclusive of solvent.\n This is the total count of non-polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of non-polymer instances in the generated assembly data set exclusive of solvent.\n This is the total count of non-polymer entity instances generated in the assembly coordinate data.",
+                     "context": "brief"
                   }
                ]
             },
@@ -746,6 +952,10 @@
                   {
                      "text": "The assembly polymer entity atomic coordinate count.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The assembly polymer entity atomic coordinate count.",
+                     "context": "brief"
                   }
                ]
             },
@@ -834,6 +1044,10 @@
                   {
                      "text": "Categories describing the polymer entity composition for the generated assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Categories describing the polymer entity composition for the generated assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -847,6 +1061,10 @@
                   {
                      "text": "The number of distinct polymer entities in the generated assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of distinct polymer entities in the generated assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -860,6 +1078,10 @@
                   {
                      "text": "The number of distinct DNA polymer entities in the generated assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of distinct DNA polymer entities in the generated assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -873,6 +1095,10 @@
                   {
                      "text": "The number of distinct RNA polymer entities in the generated assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of distinct RNA polymer entities in the generated assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -886,6 +1112,10 @@
                   {
                      "text": "The number of distinct nucleic acid polymer entities (DNA or RNA) in the generated assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of distinct nucleic acid polymer entities (DNA or RNA) in the generated assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -899,6 +1129,10 @@
                   {
                      "text": "The number of distinct hybrid nucleic acid polymer entities in the generated assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of distinct hybrid nucleic acid polymer entities in the generated assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -912,6 +1146,10 @@
                   {
                      "text": "The number of distinct protein polymer entities in the generated assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of distinct protein polymer entities in the generated assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -925,6 +1163,10 @@
                   {
                      "text": "The number of polymer instances in the generated assembly data set.\n This is the total count of polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Number of entity instances (Chains)",
+                     "context": "brief"
                   }
                ]
             },
@@ -938,6 +1180,10 @@
                   {
                      "text": "The number of DNA polymer instances in the generated assembly data set.\n This is the total count of DNA polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of DNA polymer instances in the generated assembly data set.\n This is the total count of DNA polymer entity instances generated in the assembly coordinate data.",
+                     "context": "brief"
                   }
                ]
             },
@@ -951,6 +1197,10 @@
                   {
                      "text": "The number of RNA polymer instances in the generated assembly data set.\n This is the total count of RNA polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of RNA polymer instances in the generated assembly data set.\n This is the total count of RNA polymer entity instances generated in the assembly coordinate data.",
+                     "context": "brief"
                   }
                ]
             },
@@ -964,6 +1214,10 @@
                   {
                      "text": "The number of nucleic acid polymer instances in the generated assembly data set.\n This is the total count of nucleic acid polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of nucleic acid polymer instances in the generated assembly data set.\n This is the total count of nucleic acid polymer entity instances generated in the assembly coordinate data.",
+                     "context": "brief"
                   }
                ]
             },
@@ -977,6 +1231,10 @@
                   {
                      "text": "The number of hybrid nucleic acide polymer instances in the generated assembly data set.\n This is the total count of hybrid nucleic acid polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of hybrid nucleic acide polymer instances in the generated assembly data set.\n This is the total count of hybrid nucleic acid polymer entity instances generated in the assembly coordinate data.",
+                     "context": "brief"
                   }
                ]
             },
@@ -990,6 +1248,10 @@
                   {
                      "text": "The number of protein polymer instances in the generated assembly data set.\n This is the total count of protein polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of protein polymer instances in the generated assembly data set.\n This is the total count of protein polymer entity instances generated in the assembly coordinate data.",
+                     "context": "brief"
                   }
                ]
             },
@@ -1003,6 +1265,10 @@
                   {
                      "text": "The number of polymer monomers in sample entity instances comprising the assembly data set.\n This is the total count of monomers for all polymer entity instances\n in the generated assembly coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of polymer monomers in sample entity instances comprising the assembly data set.\n This is the total count of monomers for all polymer entity instances\n in the generated assembly coordinate data.",
+                     "context": "brief"
                   }
                ]
             },
@@ -1041,6 +1307,10 @@
                   {
                      "text": "Selected polymer entity type categories describing the generated assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Selected polymer entity type categories describing the generated assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -1054,6 +1324,10 @@
                   {
                      "text": "The assembly solvent atomic coordinate count.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The assembly solvent atomic coordinate count.",
+                     "context": "brief"
                   }
                ]
             },
@@ -1067,6 +1341,10 @@
                   {
                      "text": "The number of distinct solvent entities in the generated assembly.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of distinct solvent entities in the generated assembly.",
+                     "context": "brief"
                   }
                ]
             },
@@ -1080,6 +1358,10 @@
                   {
                      "text": "The number of solvent instances in the generated assembly data set.\n This is the total count of solvent entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of solvent instances in the generated assembly data set.\n This is the total count of solvent entity instances generated in the assembly coordinate data.",
+                     "context": "brief"
                   }
                ]
             },
@@ -1093,6 +1375,10 @@
                   {
                      "text": "The number of unmodeled polymer monomers in the assembly coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of unmodeled polymer monomers in the assembly coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
+                     "context": "brief"
                   }
                ]
             }
@@ -1113,6 +1399,10 @@
             {
                "text": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
                "context": "dictionary"
+            },
+            {
+               "text": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
+               "context": "brief"
             }
          ]
       }
@@ -1123,7 +1413,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_assembly version: 7.0.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_assembly version 7.0.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 7.0.1"
+   "title": "schema: pdbx_core collection: pdbx_core_assembly version: 8.0.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_assembly version 8.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.0.0"
 }

@@ -13,6 +13,10 @@
                      {
                         "text": "Part of the identifier for the molecular component.\n\nThis data item is a pointer to _atom_site.pdbx_PDB_model_num in the\nATOM_SITE category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Part of the identifier for the molecular component.\n\nThis data item is a pointer to _atom_site.pdbx_PDB_model_num in the\nATOM_SITE category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -23,6 +27,10 @@
                      {
                         "text": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -33,6 +41,10 @@
                      {
                         "text": "The value of _pdbx_struct_special_symmetry.id must uniquely identify\n each item in the PDBX_STRUCT_SPECIAL_SYMMETRY list.\n\n This is an integer serial number.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The value of _pdbx_struct_special_symmetry.id must uniquely identify\n each item in the PDBX_STRUCT_SPECIAL_SYMMETRY list.\n\n This is an integer serial number.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -43,6 +55,10 @@
                      {
                         "text": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -53,6 +69,10 @@
                      {
                         "text": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
+                        "context": "brief"
                      }
                   ]
                }
@@ -63,8 +83,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "rcsb_nonpolymer_entity_instance_container_identifiers": {
          "type": "object",
@@ -80,6 +99,10 @@
                   {
                      "text": "Instance identifier for this container.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Instance identifier for this container.",
+                     "context": "brief"
                   }
                ]
             },
@@ -94,6 +117,10 @@
                   {
                      "text": "Author instance identifier for this container.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Author instance identifier for this container.",
+                     "context": "brief"
                   }
                ]
             },
@@ -104,6 +131,10 @@
                   {
                      "text": "Residue number for non-polymer entity instance.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Residue number for non-polymer entity instance.",
+                     "context": "brief"
                   }
                ]
             },
@@ -118,6 +149,10 @@
                   {
                      "text": "Component identifier for non-polymer entity instance.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Component identifier for non-polymer entity instance.",
+                     "context": "brief"
                   }
                ]
             },
@@ -132,6 +167,10 @@
                   {
                      "text": "Entity identifier for the container.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Entity identifier for the container.",
+                     "context": "brief"
                   }
                ]
             },
@@ -146,6 +185,10 @@
                   {
                      "text": "Entry identifier for the container.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Entry identifier for the container.",
+                     "context": "brief"
                   }
                ]
             },
@@ -160,6 +203,10 @@
                   {
                      "text": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+                     "context": "brief"
                   }
                ]
             }
@@ -168,6 +215,253 @@
          "required": [
             "asym_id",
             "entry_id"
+         ]
+      },
+      "rcsb_nonpolymer_instance_annotation": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "annotation_id": {
+                  "type": "string",
+                  "description": "An identifier for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation identifier",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "assignment_version": {
+                  "type": "string",
+                  "description": "Identifies the version of the annotation assignment.",
+                  "rcsb_description": [
+                     {
+                        "text": "Identifies the version of the annotation assignment.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation version",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "comp_id": {
+                  "type": "string",
+                  "description": "Chemical component identifier.",
+                  "rcsb_description": [
+                     {
+                        "text": "Chemical component identifier.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Chemical component identifier.",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "description": {
+                  "type": "string",
+                  "description": "A description for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "A description for the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation description",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "name": {
+                  "type": "string",
+                  "description": "A name for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "A name for the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation name",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Ordinal identifier for this category",
+                  "rcsb_description": [
+                     {
+                        "text": "Ordinal identifier for this category",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Ordinal identifier for this category",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "provenance_source": {
+                  "type": "string",
+                  "description": "Code identifying the individual, organization or program that\n assigned the annotation.",
+                  "rcsb_description": [
+                     {
+                        "text": "Code identifying the individual, organization or program that\n assigned the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation source",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "BIRD_MOLECULE_CLASS",
+                     "BIRD_MOLECULE_TYPE",
+                     "artifact",
+                     "modified_monomer",
+                     "mutation"
+                  ],
+                  "description": "A type or category of the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "BIRD_MOLECULE_CLASS",
+                        "detail": "Defines the function of the molecule."
+                     },
+                     {
+                        "value": "BIRD_MOLECULE_TYPE",
+                        "detail": "Defines the structural classification of the molecule."
+                     },
+                     {
+                        "value": "artifact",
+                        "detail": "Cloning artifact, expression tag, linker"
+                     },
+                     {
+                        "value": "modified_monomer",
+                        "detail": "Modified chemical component"
+                     },
+                     {
+                        "value": "mutation",
+                        "detail": "Engineered mutations and chemical modifications"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "A type or category of the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation type",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "annotation_lineage": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "depth": {
+                           "type": "integer",
+                           "description": "Members of the annotation lineage as parent lineage depth (1-N)",
+                           "rcsb_search_context": [
+                              "default-match"
+                           ],
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the annotation lineage as parent lineage depth (1-N)",
+                                 "context": "dictionary"
+                              },
+                              {
+                                 "text": "Annotation lineage depth",
+                                 "context": "brief"
+                              }
+                           ]
+                        },
+                        "id": {
+                           "type": "string",
+                           "description": "Members of the annotation lineage as parent class identifiers.",
+                           "rcsb_search_context": [
+                              "exact-match"
+                           ],
+                           "rcsb_full_text_priority": 10,
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the annotation lineage as parent class identifiers.",
+                                 "context": "dictionary"
+                              },
+                              {
+                                 "text": "Annotation lineage identifier",
+                                 "context": "brief"
+                              }
+                           ]
+                        },
+                        "name": {
+                           "type": "string",
+                           "description": "Members of the annotation lineage as parent class names.",
+                           "rcsb_search_context": [
+                              "exact-match",
+                              "full-text"
+                           ],
+                           "rcsb_full_text_priority": 10,
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the annotation lineage as parent class names.",
+                                 "context": "dictionary"
+                              },
+                              {
+                                 "text": "Annotation lineage name",
+                                 "context": "brief"
+                              }
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": true
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true,
+         "rcsb_nested_indexing": true,
+         "rcsb_nested_indexing_context": [
+            {
+               "category_name": "annotation_type",
+               "category_path": [
+                  "rcsb_nonpolymer_instance_annotation.type"
+               ]
+            }
          ]
       },
       "rcsb_nonpolymer_instance_feature": {
@@ -182,6 +476,10 @@
                      {
                         "text": "Identifies the version of the feature assignment.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature version",
+                        "context": "brief"
                      }
                   ]
                },
@@ -192,6 +490,10 @@
                      {
                         "text": "Residue number for non-polymer entity instance.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Residue number for non-polymer entity instance.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -202,20 +504,24 @@
                      {
                         "text": "Component identifier for non-polymer entity instance.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Component identifier for non-polymer entity instance.",
+                        "context": "brief"
                      }
                   ]
                },
                "description": {
                   "type": "string",
                   "description": "A description for the feature.",
-                  "rcsb_search_context": [
-                     "full-text"
-                  ],
-                  "rcsb_full_text_priority": 1,
                   "rcsb_description": [
                      {
                         "text": "A description for the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature description",
+                        "context": "brief"
                      }
                   ]
                },
@@ -226,20 +532,24 @@
                      {
                         "text": "An identifier for the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "An identifier for the feature.",
+                        "context": "brief"
                      }
                   ]
                },
                "name": {
                   "type": "string",
                   "description": "A name for the feature.",
-                  "rcsb_search_context": [
-                     "full-text"
-                  ],
-                  "rcsb_full_text_priority": 1,
                   "rcsb_description": [
                      {
                         "text": "A name for the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature name",
+                        "context": "brief"
                      }
                   ]
                },
@@ -250,16 +560,24 @@
                      {
                         "text": "Ordinal identifier for this category",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Ordinal identifier for this category",
+                        "context": "brief"
                      }
                   ]
                },
-               "provenance_code": {
+               "provenance_source": {
                   "type": "string",
                   "description": "Code identifying the individual, organization or program that\n assigned the feature.",
                   "rcsb_description": [
                      {
                         "text": "Code identifying the individual, organization or program that\n assigned the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature source",
+                        "context": "brief"
                      }
                   ]
                },
@@ -274,10 +592,6 @@
                      "RSRZ_OUTLIER"
                   ],
                   "description": "A type or category of the feature.",
-                  "rcsb_search_context": [
-                     "exact-match"
-                  ],
-                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "HAS_COVALENT_LINKAGE",
@@ -308,6 +622,10 @@
                      {
                         "text": "A type or category of the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature type",
+                        "context": "brief"
                      }
                   ]
                },
@@ -323,6 +641,10 @@
                               {
                                  "text": "The chemical component identifier for the instance of the feature value.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "The chemical component identifier for the instance of the feature value.",
+                                 "context": "brief"
                               }
                            ]
                         },
@@ -333,32 +655,38 @@
                               {
                                  "text": "Specific details about the feature.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "Specific details about the feature.",
+                                 "context": "brief"
                               }
                            ]
                         },
                         "reference": {
                            "type": "number",
                            "description": "The reference value of the feature.",
-                           "rcsb_search_context": [
-                              "default-match"
-                           ],
                            "rcsb_description": [
                               {
                                  "text": "The reference value of the feature.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "The reference value of the feature.",
+                                 "context": "brief"
                               }
                            ]
                         },
                         "reported": {
                            "type": "number",
                            "description": "The reported value of the feature.",
-                           "rcsb_search_context": [
-                              "default-match"
-                           ],
                            "rcsb_description": [
                               {
                                  "text": "The reported value of the feature.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "The reported value of the feature.",
+                                 "context": "brief"
                               }
                            ]
                         },
@@ -369,6 +697,10 @@
                               {
                                  "text": "The estimated uncertainty of the reported feature value.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "The estimated uncertainty of the reported feature value.",
+                                 "context": "brief"
                               }
                            ]
                         },
@@ -388,63 +720,17 @@
                               {
                                  "text": "The type of estimated uncertainty for the reported feature value.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "The type of estimated uncertainty for the reported feature value.",
+                                 "context": "brief"
                               }
                            ]
                         }
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false,
-                  "rcsb_nested_indexing": true
-               },
-               "feature_class_lineage": {
-                  "type": "array",
-                  "items": {
-                     "type": "object",
-                     "properties": {
-                        "depth": {
-                           "type": "integer",
-                           "description": "Members of the feature class lineage as parent lineage depth (1-N)",
-                           "rcsb_description": [
-                              {
-                                 "text": "Members of the feature class lineage as parent lineage depth (1-N)",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        },
-                        "id": {
-                           "type": "string",
-                           "description": "Members of the feature class lineage as parent class identifiers.",
-                           "rcsb_search_context": [
-                              "exact-match"
-                           ],
-                           "rcsb_full_text_priority": 10,
-                           "rcsb_description": [
-                              {
-                                 "text": "Members of the feature class lineage as parent class identifiers.",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        },
-                        "name": {
-                           "type": "string",
-                           "description": "Members of the feature class lineage as parent class names.",
-                           "rcsb_search_context": [
-                              "exact-match"
-                           ],
-                           "rcsb_full_text_priority": 10,
-                           "rcsb_description": [
-                              {
-                                 "text": "Members of the feature class lineage as parent class names.",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        }
-                     },
-                     "additionalProperties": false
-                  },
-                  "uniqueItems": false,
-                  "rcsb_nested_indexing": true
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false,
@@ -453,8 +739,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": true
+         "uniqueItems": true
       },
       "rcsb_nonpolymer_instance_feature_summary": {
          "type": "array",
@@ -471,6 +756,66 @@
                      {
                         "text": "The feature count.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The feature count.",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "maximum_length": {
+                  "type": "integer",
+                  "description": "The maximum feature length.",
+                  "rcsb_description": [
+                     {
+                        "text": "The maximum feature length.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "The maximum feature length.",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "maximum_value": {
+                  "type": "number",
+                  "description": "The maximum feature value.",
+                  "rcsb_description": [
+                     {
+                        "text": "The maximum feature value.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "The maximum feature value.",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "minimum_length": {
+                  "type": "integer",
+                  "description": "The minimum feature length.",
+                  "rcsb_description": [
+                     {
+                        "text": "The minimum feature length.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "The minimum feature length.",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "minimum_value": {
+                  "type": "number",
+                  "description": "The minimum feature value.",
+                  "rcsb_description": [
+                     {
+                        "text": "The minimum feature value.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "The minimum feature value.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -519,6 +864,10 @@
                      {
                         "text": "Type or category of the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Type or category of the feature.",
+                        "context": "brief"
                      }
                   ]
                }
@@ -527,7 +876,15 @@
          },
          "minItems": 1,
          "uniqueItems": true,
-         "rcsb_nested_indexing": true
+         "rcsb_nested_indexing": true,
+         "rcsb_nested_indexing_context": [
+            {
+               "category_name": "feature_summary",
+               "category_path": [
+                  "rcsb_nonpolymer_instance_feature_summary.type"
+               ]
+            }
+         ]
       },
       "rcsb_nonpolymer_struct_conn": {
          "type": "array",
@@ -549,6 +906,10 @@
                      {
                         "text": "The connection type.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The connection type.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -559,6 +920,10 @@
                      {
                         "text": "A description of special details of the connection.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A description of special details of the connection.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -570,6 +935,10 @@
                      {
                         "text": "Distance value for this contact.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Distance value for this contact.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -580,16 +949,24 @@
                      {
                         "text": "The value of _rcsb_nonpolymer_struct_conn.id is an identifier for connection.\n\n Note that this item need not be a number; it can be any unique\n identifier.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The value of _rcsb_nonpolymer_struct_conn.id is an identifier for connection.\n\n Note that this item need not be a number; it can be any unique\n identifier.",
+                        "context": "brief"
                      }
                   ]
                },
                "ordinal_id": {
                   "type": "integer",
-                  "description": "The value of _rcsb_nonpolymer_struct_conn.id must uniquely identify a record in\n the rcsb_nonpolymer_struct_conn list.\n",
+                  "description": "The value of _rcsb_nonpolymer_struct_conn.id must uniquely identify a record in\n the rcsb_nonpolymer_struct_conn list.",
                   "rcsb_description": [
                      {
-                        "text": "The value of _rcsb_nonpolymer_struct_conn.id must uniquely identify a record in\n the rcsb_nonpolymer_struct_conn list.\n",
+                        "text": "The value of _rcsb_nonpolymer_struct_conn.id must uniquely identify a record in\n the rcsb_nonpolymer_struct_conn list.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The value of _rcsb_nonpolymer_struct_conn.id must uniquely identify a record in\n the rcsb_nonpolymer_struct_conn list.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -624,6 +1001,10 @@
                      {
                         "text": "The chemical bond order associated with the specified atoms in\n this contact.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The chemical bond order associated with the specified atoms in\n this contact.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -637,6 +1018,10 @@
                            {
                               "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.auth_asym_id in the\n ATOM_SITE category.",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -647,6 +1032,10 @@
                            {
                               "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category.",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -657,6 +1046,10 @@
                            {
                               "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category.",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -667,6 +1060,10 @@
                            {
                               "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -677,6 +1074,10 @@
                            {
                               "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_atom_id in the\n ATOM_SITE category.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_atom_id in the\n ATOM_SITE category.",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -687,6 +1088,10 @@
                            {
                               "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -697,6 +1102,10 @@
                            {
                               "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.connect_target_label_seq_id in the\n ATOM_SITE category.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "A component of the identifier for the target of the structure\n connection.\n\n This data item is a pointer to _atom_site.connect_target_label_seq_id in the\n ATOM_SITE category.",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -711,6 +1120,10 @@
                            {
                               "text": "Describes the symmetry operation that should be applied to the\n atom set specified by _rcsb_nonpolymer_struct_conn.label* to generate the\n target of the structure connection.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "Describes the symmetry operation that should be applied to the\n atom set specified by _rcsb_nonpolymer_struct_conn.label* to generate the\n target of the structure connection.",
+                              "context": "brief"
                            }
                         ]
                      }
@@ -727,6 +1140,10 @@
                            {
                               "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_alt_id in the\n ATOM_SITE category.",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -737,6 +1154,10 @@
                            {
                               "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -747,6 +1168,10 @@
                            {
                               "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _chem_comp_atom.atom_id in the\n CHEM_COMP_ATOM category.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _chem_comp_atom.atom_id in the\n CHEM_COMP_ATOM category.",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -757,6 +1182,10 @@
                            {
                               "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -767,6 +1196,10 @@
                            {
                               "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "A component of the identifier for the partner in the structure\n connection.\n\n This data item is a pointer to _atom_site.label_seq_id in the\n ATOM_SITE category.",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -781,6 +1214,10 @@
                            {
                               "text": "Describes the symmetry operation that should be applied to the\n atom set specified by _rcsb_nonpolymer_struct_conn.connect_partner_label* to generate the\n partner in the structure connection.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "Describes the symmetry operation that should be applied to the\n atom set specified by _rcsb_nonpolymer_struct_conn.connect_partner_label* to generate the\n partner in the structure connection.",
+                              "context": "brief"
                            }
                         ]
                      }
@@ -794,8 +1231,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "rcsb_id": {
          "type": "string",
@@ -808,6 +1244,10 @@
             {
                "text": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
                "context": "dictionary"
+            },
+            {
+               "text": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+               "context": "brief"
             }
          ]
       }
@@ -818,7 +1258,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 7.0.3",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 7.0.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 7.0.3"
+   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 8.0.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 8.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.0.0"
 }

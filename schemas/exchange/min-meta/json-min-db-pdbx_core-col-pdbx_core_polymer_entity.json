@@ -35,6 +35,10 @@
                   {
                      "text": "A flag to indicate whether the polymer contains at least\n one monomer-to-monomer link different from that implied by\n _entity_poly.type.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "A flag to indicate whether the polymer contains at least\n one monomer-to-monomer link different from that implied by\n _entity_poly.type.",
+                     "context": "brief"
                   }
                ]
             },
@@ -69,6 +73,10 @@
                   {
                      "text": "A flag to indicate whether the polymer contains at least\n one monomer that is not considered standard.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "A flag to indicate whether the polymer contains at least\n one monomer that is not considered standard.",
+                     "context": "brief"
                   }
                ]
             },
@@ -87,6 +95,14 @@
                   {
                      "text": "Chemical sequence expressed as string of one-letter amino acid codes. Modifications and non-standard amino acids should be input using the three letter code in parenthesis, e.g. (MSE)",
                      "context": "deposition"
+                  },
+                  {
+                     "text": "Chemical sequence expressed as string of one-letter\n amino acid codes. Modifications and non-standard\n amino acids are coded as X.",
+                     "context": "brief"
+                  },
+                  {
+                     "text": "Chemical sequence expressed as string of one-letter amino acid codes. Modifications and non-standard amino acids should be input using the three letter code in parenthesis, e.g. (MSE)",
+                     "context": "brief"
                   }
                ]
             },
@@ -100,6 +116,10 @@
                   {
                      "text": "Cannonical chemical sequence expressed as string of\n               one-letter amino acid codes. Modifications are coded\n               as the parent amino acid where possible.\n\nA  for alanine or adenine\nB  for ambiguous asparagine/aspartic-acid\nR  for arginine\nN  for asparagine\nD  for aspartic-acid\nC  for cysteine or cystine or cytosine\nQ  for glutamine\nE  for glutamic-acid\nZ  for ambiguous glutamine/glutamic acid\nG  for glycine or guanine\nH  for histidine\nI  for isoleucine\nL  for leucine\nK  for lysine\nM  for methionine\nF  for phenylalanine\nP  for proline\nS  for serine\nT  for threonine or thymine\nW  for tryptophan\nY  for tyrosine\nV  for valine\nU  for uracil",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Cannonical chemical sequence expressed as string of\n               one-letter amino acid codes. Modifications are coded\n               as the parent amino acid where possible.\n\nA  for alanine or adenine\nB  for ambiguous asparagine/aspartic-acid\nR  for arginine\nN  for asparagine\nD  for aspartic-acid\nC  for cysteine or cystine or cytosine\nQ  for glutamine\nE  for glutamic-acid\nZ  for ambiguous glutamine/glutamic acid\nG  for glycine or guanine\nH  for histidine\nI  for isoleucine\nL  for leucine\nK  for lysine\nM  for methionine\nF  for phenylalanine\nP  for proline\nS  for serine\nT  for threonine or thymine\nW  for tryptophan\nY  for tyrosine\nV  for valine\nU  for uracil",
+                     "context": "brief"
                   }
                ]
             },
@@ -116,6 +136,10 @@
                   {
                      "text": "The PDB strand/chain id(s) corresponding to this polymer entity.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The PDB strand/chain id(s) corresponding to this polymer entity.",
+                     "context": "brief"
                   }
                ]
             },
@@ -130,6 +154,10 @@
                   {
                      "text": "For Structural Genomics entries, the sequence's target identifier registered at the TargetTrack database.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "For Structural Genomics entries, the sequence's target identifier registered at the TargetTrack database.",
+                     "context": "brief"
                   }
                ]
             },
@@ -140,26 +168,38 @@
                   {
                      "text": "Number of regions in the sample sequence identified as expression tags, linkers, or\n cloning artifacts.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Number of regions in the sample sequence identified as expression tags, linkers, or\n cloning artifacts.",
+                     "context": "brief"
                   }
                ]
             },
             "rcsb_conflict_count": {
                "type": "integer",
-               "description": "Number of monomer conflicts relative to the reference sequence.\n",
+               "description": "Number of monomer conflicts relative to the reference sequence.",
                "rcsb_description": [
                   {
-                     "text": "Number of monomer conflicts relative to the reference sequence.\n",
+                     "text": "Number of monomer conflicts relative to the reference sequence.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Number of monomer conflicts relative to the reference sequence.",
+                     "context": "brief"
                   }
                ]
             },
             "rcsb_deletion_count": {
                "type": "integer",
-               "description": "Number of monomer deletions relative to the reference sequence.\n",
+               "description": "Number of monomer deletions relative to the reference sequence.",
                "rcsb_description": [
                   {
-                     "text": "Number of monomer deletions relative to the reference sequence.\n",
+                     "text": "Number of monomer deletions relative to the reference sequence.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Number of monomer deletions relative to the reference sequence.",
+                     "context": "brief"
                   }
                ]
             },
@@ -212,31 +252,43 @@
             },
             "rcsb_insertion_count": {
                "type": "integer",
-               "description": "Number of monomer insertions relative to the reference sequence.\n",
+               "description": "Number of monomer insertions relative to the reference sequence.",
                "rcsb_description": [
                   {
-                     "text": "Number of monomer insertions relative to the reference sequence.\n",
+                     "text": "Number of monomer insertions relative to the reference sequence.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Number of monomer insertions relative to the reference sequence.",
+                     "context": "brief"
                   }
                ]
             },
             "rcsb_mutation_count": {
                "type": "integer",
-               "description": "Number of engineered mutations engineered in the sample sequence.\n",
+               "description": "Number of engineered mutations engineered in the sample sequence.",
                "rcsb_description": [
                   {
-                     "text": "Number of engineered mutations engineered in the sample sequence.\n",
+                     "text": "Number of engineered mutations engineered in the sample sequence.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Number of engineered mutations engineered in the sample sequence.",
+                     "context": "brief"
                   }
                ]
             },
             "rcsb_non_std_monomer_count": {
                "type": "integer",
-               "description": "Number of non-standard monomers in the sample sequence.\n",
+               "description": "Number of non-standard monomers in the sample sequence.",
                "rcsb_description": [
                   {
-                     "text": "Number of non-standard monomers in the sample sequence.\n",
+                     "text": "Number of non-standard monomers in the sample sequence.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Number of non-standard monomers in the sample sequence.",
+                     "context": "brief"
                   }
                ]
             },
@@ -249,6 +301,10 @@
                      {
                         "text": "Unique list of non-standard monomer chemical component identifiers in the sample sequence.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Unique list of non-standard monomer chemical component identifiers in the sample sequence.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -256,21 +312,29 @@
             },
             "rcsb_prd_id": {
                "type": "string",
-               "description": "For polymer BIRD molecules the BIRD identifier for the entity.\n",
+               "description": "For polymer BIRD molecules the BIRD identifier for the entity.",
                "rcsb_description": [
                   {
-                     "text": "For polymer BIRD molecules the BIRD identifier for the entity.\n",
+                     "text": "For polymer BIRD molecules the BIRD identifier for the entity.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "For polymer BIRD molecules the BIRD identifier for the entity.",
+                     "context": "brief"
                   }
                ]
             },
             "rcsb_sample_sequence_length": {
                "type": "integer",
-               "description": "The monomer length of the sample sequence.\n",
+               "description": "The monomer length of the sample sequence.",
                "rcsb_description": [
                   {
-                     "text": "The monomer length of the sample sequence.\n",
+                     "text": "The monomer length of the sample sequence.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The monomer length of the sample sequence.",
+                     "context": "brief"
                   }
                ]
             },
@@ -291,6 +355,10 @@
                   {
                      "text": "The type of the polymer.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The type of the polymer.",
+                     "context": "brief"
                   }
                ]
             }
@@ -309,6 +377,10 @@
                      {
                         "text": "A unique identifier for the expression system. This\n should be extracted from a local list of expression\n systems.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A unique identifier for the expression system. This\n should be extracted from a local list of expression\n systems.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -324,6 +396,10 @@
                      {
                         "text": "The common name of the natural organism from which the gene was\n obtained.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The common name of the natural organism from which the gene was\n obtained.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -334,6 +410,10 @@
                      {
                         "text": "A description of special aspects of the natural organism from\n which the gene was obtained.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A description of special aspects of the natural organism from\n which the gene was obtained.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -349,6 +429,10 @@
                      {
                         "text": "The genus of the natural organism from which the gene was\n obtained.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The genus of the natural organism from which the gene was\n obtained.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -364,6 +448,10 @@
                      {
                         "text": "The species of the natural organism from which the gene was\n obtained.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The species of the natural organism from which the gene was\n obtained.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -378,6 +466,10 @@
                      {
                         "text": "The strain of the natural organism from which the gene was\n obtained, if relevant.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The strain of the natural organism from which the gene was\n obtained, if relevant.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -397,6 +489,10 @@
                      {
                         "text": "The tissue of the natural organism from which the gene was\n obtained.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The tissue of the natural organism from which the gene was\n obtained.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -412,6 +508,10 @@
                      {
                         "text": "The subcellular fraction of the tissue of the natural organism\n from which the gene was obtained.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The subcellular fraction of the tissue of the natural organism\n from which the gene was obtained.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -426,6 +526,10 @@
                      {
                         "text": "The common name of the organism that served as host for the\n production of the entity.  Where full details of the protein\n production are available it would be expected that this item\n be derived from _entity_src_gen_express.host_org_common_name\n or via _entity_src_gen_express.host_org_tax_id",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The common name of the organism that served as host for the\n production of the entity.  Where full details of the protein\n production are available it would be expected that this item\n be derived from _entity_src_gen_express.host_org_common_name\n or via _entity_src_gen_express.host_org_tax_id",
+                        "context": "brief"
                      }
                   ]
                },
@@ -436,6 +540,10 @@
                      {
                         "text": "A description of special aspects of the organism that served as\n host for the production of the entity. Where full details of\n the protein production are available it would be expected that\n this item would derived from _entity_src_gen_express.host_org_details",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A description of special aspects of the organism that served as\n host for the production of the entity. Where full details of\n the protein production are available it would be expected that\n this item would derived from _entity_src_gen_express.host_org_details",
+                        "context": "brief"
                      }
                   ]
                },
@@ -450,6 +558,10 @@
                      {
                         "text": "The genus of the organism that served as host for the production\n of the entity.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The genus of the organism that served as host for the production\n of the entity.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -464,6 +576,10 @@
                      {
                         "text": "The species of the organism that served as host for the\n production of the entity.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The species of the organism that served as host for the\n production of the entity.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -478,6 +594,10 @@
                      {
                         "text": "This data item identifies cases in which an alternative source\n modeled.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "This data item identifies cases in which an alternative source\n modeled.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -488,6 +608,10 @@
                      {
                         "text": "The beginning polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The beginning polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -502,6 +626,10 @@
                      {
                         "text": "Information on the source which is not given elsewhere.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Information on the source which is not given elsewhere.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -512,6 +640,10 @@
                      {
                         "text": "The ending polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The ending polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -529,6 +661,10 @@
                      {
                         "text": "American Type Culture Collection tissue culture number.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "American Type Culture Collection tissue culture number.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -546,6 +682,10 @@
                      {
                         "text": "Cell type.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Cell type.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -563,6 +703,10 @@
                      {
                         "text": "The specific line of cells.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The specific line of cells.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -581,6 +725,10 @@
                      {
                         "text": "Identifies the location inside (or outside) the cell.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Identifies the location inside (or outside) the cell.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -595,6 +743,10 @@
                      {
                         "text": "A domain or fragment of the molecule.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A domain or fragment of the molecule.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -605,20 +757,32 @@
                      {
                         "text": "Identifies the gene.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Identifies the gene.",
+                        "context": "brief"
                      }
                   ]
                },
                "pdbx_gene_src_ncbi_taxonomy_id": {
                   "type": "string",
-                  "description": "NCBI Taxonomy identifier for the gene source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.\n",
+                  "description": "NCBI Taxonomy identifier for the gene source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                   "rcsb_description": [
                      {
-                        "text": "NCBI Taxonomy identifier for the gene source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.\n",
+                        "text": "NCBI Taxonomy identifier for the gene source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                         "context": "dictionary"
                      },
                      {
                         "text": "NCBI Taxonomy identifier for the gene source organism if known",
                         "context": "deposition"
+                     },
+                     {
+                        "text": "NCBI Taxonomy identifier for the gene source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                        "context": "brief"
+                     },
+                     {
+                        "text": "NCBI Taxonomy identifier for the gene source organism if known",
+                        "context": "brief"
                      }
                   ]
                },
@@ -638,6 +802,10 @@
                      {
                         "text": "Organized group of tissues that carries on a specialized function.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Organized group of tissues that carries on a specialized function.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -655,6 +823,10 @@
                      {
                         "text": "Organized structure within cell.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Organized structure within cell.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -669,6 +841,10 @@
                      {
                         "text": "Scientific name of the organism.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Scientific name of the organism.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -682,6 +858,10 @@
                      {
                         "text": "Identifies the variant.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Identifies the variant.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -696,6 +876,10 @@
                      {
                         "text": "Americal Tissue Culture Collection of the expression system. Where\n full details of the protein production are available it would\n be expected that this item  would be derived from\n _entity_src_gen_express.host_org_culture_collection",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Americal Tissue Culture Collection of the expression system. Where\n full details of the protein production are available it would\n be expected that this item  would be derived from\n _entity_src_gen_express.host_org_culture_collection",
+                        "context": "brief"
                      }
                   ]
                },
@@ -713,6 +897,10 @@
                      {
                         "text": "Cell type from which the gene is derived. Where\n entity.target_id is provided this should be derived from\n details of the target.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Cell type from which the gene is derived. Where\n entity.target_id is provided this should be derived from\n details of the target.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -730,6 +918,10 @@
                      {
                         "text": "A specific line of cells used as the expression system. Where\n full details of the protein production are available it would\n be expected that this item would be derived from\n entity_src_gen_express.host_org_cell_line",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A specific line of cells used as the expression system. Where\n full details of the protein production are available it would\n be expected that this item would be derived from\n entity_src_gen_express.host_org_cell_line",
+                        "context": "brief"
                      }
                   ]
                },
@@ -748,6 +940,10 @@
                      {
                         "text": "Identifies the location inside (or outside) the cell which\n expressed the molecule.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Identifies the location inside (or outside) the cell which\n expressed the molecule.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -762,6 +958,10 @@
                      {
                         "text": "Culture collection of the expression system. Where\n full details of the protein production are available it would\n be expected that this item  would be derived somehwere, but\n exactly where is not clear.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Culture collection of the expression system. Where\n full details of the protein production are available it would\n be expected that this item  would be derived somehwere, but\n exactly where is not clear.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -777,16 +977,24 @@
                      {
                         "text": "Specific gene which expressed the molecule.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Specific gene which expressed the molecule.",
+                        "context": "brief"
                      }
                   ]
                },
                "pdbx_host_org_ncbi_taxonomy_id": {
                   "type": "string",
-                  "description": "NCBI Taxonomy identifier for the expression system organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.\n",
+                  "description": "NCBI Taxonomy identifier for the expression system organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                   "rcsb_description": [
                      {
-                        "text": "NCBI Taxonomy identifier for the expression system organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.\n",
+                        "text": "NCBI Taxonomy identifier for the expression system organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "NCBI Taxonomy identifier for the expression system organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -804,6 +1012,10 @@
                      {
                         "text": "Specific organ which expressed the molecule.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Specific organ which expressed the molecule.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -821,6 +1033,10 @@
                      {
                         "text": "Specific organelle which expressed the molecule.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Specific organelle which expressed the molecule.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -835,6 +1051,10 @@
                      {
                         "text": "The scientific name of the organism that served as host for the\n production of the entity. Where full details of the protein\n production are available it would be expected that this item\n would be derived from _entity_src_gen_express.host_org_scientific_name\n or via _entity_src_gen_express.host_org_tax_id",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The scientific name of the organism that served as host for the\n production of the entity. Where full details of the protein\n production are available it would be expected that this item\n would be derived from _entity_src_gen_express.host_org_scientific_name\n or via _entity_src_gen_express.host_org_tax_id",
+                        "context": "brief"
                      }
                   ]
                },
@@ -848,6 +1068,10 @@
                      {
                         "text": "The strain of the organism in which the entity was\nexpressed.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The strain of the organism in which the entity was\nexpressed.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -867,6 +1091,10 @@
                      {
                         "text": "The specific tissue which expressed the molecule. Where full details\n of the protein production are available it would be expected that this\n item would be derived from _entity_src_gen_express.host_org_tissue",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The specific tissue which expressed the molecule. Where full details\n of the protein production are available it would be expected that this\n item would be derived from _entity_src_gen_express.host_org_tissue",
+                        "context": "brief"
                      }
                   ]
                },
@@ -886,6 +1114,10 @@
                      {
                         "text": "The fraction of the tissue which expressed the\nmolecule.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The fraction of the tissue which expressed the\nmolecule.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -900,6 +1132,10 @@
                      {
                         "text": "Variant of the organism used as the expression system. Where\n full details of the protein production are available it would\n be expected that this item be derived from\n entity_src_gen_express.host_org_variant or via\n _entity_src_gen_express.host_org_tax_id",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Variant of the organism used as the expression system. Where\n full details of the protein production are available it would\n be expected that this item be derived from\n entity_src_gen_express.host_org_variant or via\n _entity_src_gen_express.host_org_tax_id",
+                        "context": "brief"
                      }
                   ]
                },
@@ -919,6 +1155,10 @@
                      {
                         "text": "Identifies the vector used. Where full details of the protein\n production are available it would be expected that this item\n would be derived from _entity_src_gen_clone.vector_name.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Identifies the vector used. Where full details of the protein\n production are available it would be expected that this item\n would be derived from _entity_src_gen_clone.vector_name.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -937,6 +1177,10 @@
                      {
                         "text": "Identifies the type of vector used (plasmid, virus, or cosmid).\n Where full details of the protein production are available it\n would be expected that this item would be derived from\n _entity_src_gen_express.vector_type.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Identifies the type of vector used (plasmid, virus, or cosmid).\n Where full details of the protein production are available it\n would be expected that this item would be derived from\n _entity_src_gen_express.vector_type.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -953,6 +1197,10 @@
                      {
                         "text": "This data item povides additional information about the sequence type.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "This data item povides additional information about the sequence type.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -963,6 +1211,10 @@
                      {
                         "text": "This data item is an ordinal identifier for entity_src_gen data records.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "This data item is an ordinal identifier for entity_src_gen data records.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -973,6 +1225,10 @@
                      {
                         "text": "A description of special aspects of the plasmid that produced the\n entity in the host organism. Where full details of the protein\n production are available it would be expected that this item\n would be derived from _pdbx_construct.details of the construct\n pointed to from _entity_src_gen_express.plasmid_id.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A description of special aspects of the plasmid that produced the\n entity in the host organism. Where full details of the protein\n production are available it would be expected that this item\n would be derived from _pdbx_construct.details of the construct\n pointed to from _entity_src_gen_express.plasmid_id.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -991,6 +1247,10 @@
                      {
                         "text": "The name of the plasmid that produced the entity in the host\n organism. Where full details of the protein production are available\n it would be expected that this item would be derived from\n _pdbx_construct.name of the construct pointed to from\n _entity_src_gen_express.plasmid_id.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The name of the plasmid that produced the entity in the host\n organism. Where full details of the protein production are available\n it would be expected that this item would be derived from\n _pdbx_construct.name of the construct pointed to from\n _entity_src_gen_express.plasmid_id.",
+                        "context": "brief"
                      }
                   ]
                }
@@ -1001,8 +1261,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "entity_src_nat": {
          "type": "array",
@@ -1021,6 +1280,10 @@
                      {
                         "text": "The common name of the organism from which the entity\n was isolated.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The common name of the organism from which the entity\n was isolated.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1035,6 +1298,10 @@
                      {
                         "text": "A description of special aspects of the organism from which the\n entity was isolated.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A description of special aspects of the organism from which the\n entity was isolated.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1050,6 +1317,10 @@
                      {
                         "text": "The genus of the organism from which the entity was isolated.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The genus of the organism from which the entity was isolated.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1064,6 +1335,10 @@
                      {
                         "text": "This data item identifies cases in which an alternative source\n modeled.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "This data item identifies cases in which an alternative source\n modeled.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1081,6 +1356,10 @@
                      {
                         "text": "Americal Tissue Culture Collection number.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Americal Tissue Culture Collection number.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1091,6 +1370,10 @@
                      {
                         "text": "The beginning polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The beginning polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1108,6 +1391,10 @@
                      {
                         "text": "A particular cell type.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A particular cell type.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1125,6 +1412,10 @@
                      {
                         "text": "The specific line of cells.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The specific line of cells.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1139,6 +1430,10 @@
                      {
                         "text": "Identifies the location inside (or outside) the cell.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Identifies the location inside (or outside) the cell.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1149,6 +1444,10 @@
                      {
                         "text": "The ending polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The ending polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1159,20 +1458,32 @@
                      {
                         "text": "A domain or fragment of the molecule.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A domain or fragment of the molecule.",
+                        "context": "brief"
                      }
                   ]
                },
                "pdbx_ncbi_taxonomy_id": {
                   "type": "string",
-                  "description": "NCBI Taxonomy identifier for the source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.\n",
+                  "description": "NCBI Taxonomy identifier for the source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                   "rcsb_description": [
                      {
-                        "text": "NCBI Taxonomy identifier for the source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.\n",
+                        "text": "NCBI Taxonomy identifier for the source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                         "context": "dictionary"
                      },
                      {
                         "text": "NCBI Taxonomy identifier for the source organism if known",
                         "context": "deposition"
+                     },
+                     {
+                        "text": "NCBI Taxonomy identifier for the source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                        "context": "brief"
+                     },
+                     {
+                        "text": "NCBI Taxonomy identifier for the source organism if known",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1190,6 +1501,10 @@
                      {
                         "text": "Organized group of tissues that carries on a specialized function.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Organized group of tissues that carries on a specialized function.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1207,6 +1522,10 @@
                      {
                         "text": "Organized structure within cell.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Organized structure within cell.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1223,6 +1542,10 @@
                      {
                         "text": "Scientific name of the organism of the natural source.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Scientific name of the organism of the natural source.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1240,6 +1563,10 @@
                      {
                         "text": "Details about the plasmid.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Details about the plasmid.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1257,6 +1584,10 @@
                      {
                         "text": "The plasmid containing the gene.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The plasmid containing the gene.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1272,6 +1603,10 @@
                      {
                         "text": "Identifies the secretion from which the molecule was isolated.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Identifies the secretion from which the molecule was isolated.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1282,6 +1617,10 @@
                      {
                         "text": "This data item is an ordinal identifier for entity_src_nat data records.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "This data item is an ordinal identifier for entity_src_nat data records.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1292,6 +1631,10 @@
                      {
                         "text": "Identifies the variant.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Identifies the variant.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1307,6 +1650,10 @@
                      {
                         "text": "The species of the organism from which the entity was isolated.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The species of the organism from which the entity was isolated.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1321,6 +1668,10 @@
                      {
                         "text": "The strain of the organism from which the entity was isolated.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The strain of the organism from which the entity was isolated.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1340,6 +1691,10 @@
                      {
                         "text": "The tissue of the organism from which the entity was isolated.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The tissue of the organism from which the entity was isolated.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1359,6 +1714,10 @@
                      {
                         "text": "The subcellular fraction of the tissue of the organism from\n which the entity was isolated.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The subcellular fraction of the tissue of the organism from\n which the entity was isolated.",
+                        "context": "brief"
                      }
                   ]
                }
@@ -1369,8 +1728,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "pdbx_entity_src_syn": {
          "type": "array",
@@ -1387,20 +1745,32 @@
                      {
                         "text": "A description of special aspects of the source for the\n synthetic entity.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A description of special aspects of the source for the\n synthetic entity.",
+                        "context": "brief"
                      }
                   ]
                },
                "ncbi_taxonomy_id": {
                   "type": "string",
-                  "description": "NCBI Taxonomy identifier of the organism from which the sequence of\n the synthetic entity was derived.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.\n",
+                  "description": "NCBI Taxonomy identifier of the organism from which the sequence of\n the synthetic entity was derived.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                   "rcsb_description": [
                      {
-                        "text": "NCBI Taxonomy identifier of the organism from which the sequence of\n the synthetic entity was derived.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.\n",
+                        "text": "NCBI Taxonomy identifier of the organism from which the sequence of\n the synthetic entity was derived.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                         "context": "dictionary"
                      },
                      {
                         "text": "NCBI Taxonomy identifier of the organism from which the sequence of the synthetic entity was derived",
                         "context": "deposition"
+                     },
+                     {
+                        "text": "NCBI Taxonomy identifier of the organism from which the sequence of\n the synthetic entity was derived.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                        "context": "brief"
+                     },
+                     {
+                        "text": "NCBI Taxonomy identifier of the organism from which the sequence of the synthetic entity was derived",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1414,6 +1784,10 @@
                      {
                         "text": "The common name of the organism from which the sequence of\n the synthetic entity was derived.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The common name of the organism from which the sequence of\n the synthetic entity was derived.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1428,6 +1802,10 @@
                      {
                         "text": "The scientific name of the organism from which the sequence of\n the synthetic entity was derived.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The scientific name of the organism from which the sequence of\n the synthetic entity was derived.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1442,6 +1820,10 @@
                      {
                         "text": "This data item identifies cases in which an alternative source\n modeled.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "This data item identifies cases in which an alternative source\n modeled.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1452,6 +1834,10 @@
                      {
                         "text": "The beginning polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The beginning polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1462,6 +1848,10 @@
                      {
                         "text": "The ending polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The ending polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1472,6 +1862,10 @@
                      {
                         "text": "This data item is an ordinal identifier for pdbx_entity_src_syn data records.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "This data item is an ordinal identifier for pdbx_entity_src_syn data records.",
+                        "context": "brief"
                      }
                   ]
                }
@@ -1482,8 +1876,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "rcsb_entity_host_organism": {
          "type": "array",
@@ -1497,6 +1890,10 @@
                      {
                         "text": "The beginning polymer sequence position for the polymer section corresponding\n to this host organism.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The beginning polymer sequence position for the polymer section corresponding\n to this host organism.\n\n A reference to the sequence position in the entity_poly category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1512,6 +1909,10 @@
                      {
                         "text": "The common name of the host organism",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The common name of the host organism",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1522,6 +1923,10 @@
                      {
                         "text": "The ending polymer sequence position for the polymer section corresponding\n to this host organism.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The ending polymer sequence position for the polymer section corresponding\n to this host organism.\n\n A reference to the sequence position in the entity_poly category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1540,6 +1945,10 @@
                         {
                            "text": "Common names associated with this taxonomy code obtained from NCBI Taxonomy Database.\n\n  These names correspond to the taxonomy identifier assigned by the PDB depositor.\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.",
                            "context": "dictionary"
+                        },
+                        {
+                           "text": "Common Name of Expression Organism",
+                           "context": "brief"
                         }
                      ]
                   },
@@ -1547,7 +1956,7 @@
                },
                "ncbi_parent_scientific_name": {
                   "type": "string",
-                  "description": "The parent scientific name in the NCBI taxonomy hierarchy (depth=1) associated with this taxonomy code.\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.\n",
+                  "description": "The parent scientific name in the NCBI taxonomy hierarchy (depth=1) associated with this taxonomy code.\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.",
                   "rcsb_search_context": [
                      "exact-match",
                      "full-text"
@@ -1555,8 +1964,12 @@
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
-                        "text": "The parent scientific name in the NCBI taxonomy hierarchy (depth=1) associated with this taxonomy code.\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.\n",
+                        "text": "The parent scientific name in the NCBI taxonomy hierarchy (depth=1) associated with this taxonomy code.\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The parent scientific name in the NCBI taxonomy hierarchy (depth=1) associated with this taxonomy code.\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1572,16 +1985,24 @@
                      {
                         "text": "The scientific name associated with this taxonomy code aggregated by the NCBI Taxonomy Database.\n\n  This name corresponds to the taxonomy identifier assigned by the PDB depositor.\n\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Expression Organism",
+                        "context": "brief"
                      }
                   ]
                },
                "ncbi_taxonomy_id": {
                   "type": "integer",
-                  "description": "NCBI Taxonomy identifier for the host organism.\n\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.\n",
+                  "description": "NCBI Taxonomy identifier for the host organism.\n\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                   "rcsb_description": [
                      {
-                        "text": "NCBI Taxonomy identifier for the host organism.\n\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.\n",
+                        "text": "NCBI Taxonomy identifier for the host organism.\n\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "NCBI Taxonomy identifier for the host organism.\n\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1592,19 +2013,27 @@
                      {
                         "text": "An identifier for an entity segment.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "An identifier for an entity segment.",
+                        "context": "brief"
                      }
                   ]
                },
-               "provenance_code": {
+               "provenance_source": {
                   "type": "string",
                   "enum": [
                      "PDB Primary Data"
                   ],
-                  "description": "A code indicating the provenance of the host organism.\n",
+                  "description": "A code indicating the provenance of the host organism.",
                   "rcsb_description": [
                      {
-                        "text": "A code indicating the provenance of the host organism.\n",
+                        "text": "A code indicating the provenance of the host organism.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A code indicating the provenance of the host organism.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1620,6 +2049,10 @@
                      {
                         "text": "The scientific name of the host organism",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The scientific name of the host organism",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1638,6 +2071,10 @@
                               {
                                  "text": "Members of the NCBI Taxonomy lineage as parent taxonomy lineage depth (1-N)",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "Members of the NCBI Taxonomy lineage as parent taxonomy lineage depth (1-N)",
+                                 "context": "brief"
                               }
                            ]
                         },
@@ -1652,6 +2089,10 @@
                               {
                                  "text": "Members of the NCBI Taxonomy lineage as parent taxonomy idcodes.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "Members of the NCBI Taxonomy lineage as parent taxonomy idcodes.",
+                                 "context": "brief"
                               }
                            ]
                         },
@@ -1666,6 +2107,10 @@
                               {
                                  "text": "Members of the NCBI Taxonomy lineage as parent taxonomy names.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "Members of the NCBI Taxonomy lineage as parent taxonomy names.",
+                                 "context": "brief"
                               }
                            ]
                         }
@@ -1682,8 +2127,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "rcsb_entity_source_organism": {
          "type": "array",
@@ -1697,6 +2141,10 @@
                      {
                         "text": "The beginning polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The beginning polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1712,6 +2160,10 @@
                      {
                         "text": "The common name for the source organism assigned by the PDB depositor.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The common name for the source organism assigned by the PDB depositor.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1722,6 +2174,10 @@
                      {
                         "text": "The ending polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The ending polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1739,6 +2195,10 @@
                         {
                            "text": "Common names associated with this taxonomy code aggregated by the NCBI Taxonomy Database.\n\n  These name correspond to the taxonomy identifier assigned by the PDB depositor.\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.",
                            "context": "dictionary"
+                        },
+                        {
+                           "text": "Common Name of Source Organism",
+                           "context": "brief"
                         }
                      ]
                   },
@@ -1756,6 +2216,10 @@
                      {
                         "text": "The parent scientific name in the NCBI taxonomy hierarchy (depth=1) of the source organism assigned by the PDB depositor.\n\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Taxonomy",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1772,16 +2236,24 @@
                      {
                         "text": "The scientific name associated with this taxonomy code aggregated by the NCBI Taxonomy Database.\n\n  This name corresponds to the taxonomy identifier assigned by the PDB depositor.\n\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Scientific Name of Source Organism",
+                        "context": "brief"
                      }
                   ]
                },
                "ncbi_taxonomy_id": {
                   "type": "integer",
-                  "description": "NCBI Taxonomy identifier for the gene source organism assigned by the PDB depositor.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.\n",
+                  "description": "NCBI Taxonomy identifier for the gene source organism assigned by the PDB depositor.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                   "rcsb_description": [
                      {
-                        "text": "NCBI Taxonomy identifier for the gene source organism assigned by the PDB depositor.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.\n",
+                        "text": "NCBI Taxonomy identifier for the gene source organism assigned by the PDB depositor.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "NCBI Taxonomy identifier for the gene source organism assigned by the PDB depositor.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1792,19 +2264,27 @@
                      {
                         "text": "An identifier for the entity segment.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "An identifier for the entity segment.",
+                        "context": "brief"
                      }
                   ]
                },
-               "provenance_code": {
+               "provenance_source": {
                   "type": "string",
                   "enum": [
                      "PDB Primary Data"
                   ],
-                  "description": "A code indicating the provenance of the source organism details for the entity\n",
+                  "description": "A code indicating the provenance of the source organism details for the entity",
                   "rcsb_description": [
                      {
-                        "text": "A code indicating the provenance of the source organism details for the entity\n",
+                        "text": "A code indicating the provenance of the source organism details for the entity",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A code indicating the provenance of the source organism details for the entity",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1819,6 +2299,10 @@
                      {
                         "text": "The scientific name of the source organism assigned by the PDB depositor.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The scientific name of the source organism assigned by the PDB depositor.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1829,11 +2313,15 @@
                      "natural",
                      "synthetic"
                   ],
-                  "description": "The source type for the entity\n",
+                  "description": "The source type for the entity",
                   "rcsb_description": [
                      {
-                        "text": "The source type for the entity\n",
+                        "text": "The source type for the entity",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The source type for the entity",
+                        "context": "brief"
                      }
                   ]
                },
@@ -1852,6 +2340,10 @@
                               {
                                  "text": "Members of the NCBI Taxonomy lineage as parent taxonomy lineage depth (1-N)",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "Members of the NCBI Taxonomy lineage as parent taxonomy lineage depth (1-N)",
+                                 "context": "brief"
                               }
                            ]
                         },
@@ -1866,6 +2358,10 @@
                               {
                                  "text": "Members of the NCBI Taxonomy lineage as parent taxonomy idcodes.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "Source Organism Taxonomy ID",
+                                 "context": "brief"
                               }
                            ]
                         },
@@ -1880,6 +2376,10 @@
                               {
                                  "text": "Memebers of the NCBI Taxonomy lineage as parent taxonomy names.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "Source Organism Taxonomy Name",
+                                 "context": "brief"
                               }
                            ]
                         }
@@ -1894,21 +2394,21 @@
                   "items": {
                      "type": "object",
                      "properties": {
-                        "provenance_code": {
+                        "provenance_source": {
                            "type": "string",
                            "enum": [
                               "PDB Primary Data",
                               "UniProt"
                            ],
-                           "description": "A code indicating the provenance of the source organism details for the entity\n",
-                           "rcsb_search_context": [
-                              "exact-match"
-                           ],
-                           "rcsb_full_text_priority": 10,
+                           "description": "A code indicating the provenance of the source organism details for the entity",
                            "rcsb_description": [
                               {
-                                 "text": "A code indicating the provenance of the source organism details for the entity\n",
+                                 "text": "A code indicating the provenance of the source organism details for the entity",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "A code indicating the provenance of the source organism details for the entity",
+                                 "context": "brief"
                               }
                            ]
                         },
@@ -1924,14 +2424,17 @@
                               {
                                  "text": "Gene name.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "Gene Name",
+                                 "context": "brief"
                               }
                            ]
                         }
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false,
-                  "rcsb_nested_indexing": true
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false,
@@ -1940,8 +2443,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "rcsb_polymer_entity": {
          "type": "object",
@@ -1953,6 +2455,10 @@
                   {
                      "text": "A description of special aspects of the entity.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "A description of special aspects of the entity.",
+                     "context": "brief"
                   }
                ]
             },
@@ -1993,7 +2499,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "A description of the polymer entity",
+                     "text": "Polymer Entity Description",
                      "context": "brief"
                   }
                ]
@@ -2008,6 +2514,10 @@
                   {
                      "text": "Enzyme Commission (EC) number(s)",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Enzyme Commission (EC) number(s)",
+                     "context": "brief"
                   }
                ]
             },
@@ -2023,6 +2533,10 @@
                   {
                      "text": "Polymer entity fragment description(s).",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Polymer entity fragment description(s).",
+                     "context": "brief"
                   }
                ]
             },
@@ -2037,6 +2551,10 @@
                   {
                      "text": "Details about any polymer entity mutation(s).",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Details about any polymer entity mutation(s).",
+                     "context": "brief"
                   }
                ]
             },
@@ -2052,6 +2570,10 @@
                   {
                      "text": "The number of molecules of the entity in the entry.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of molecules of the entity in the entry.",
+                     "context": "brief"
                   }
                ]
             },
@@ -2061,21 +2583,29 @@
                   "N",
                   "Y"
                ],
-               "description": "A code indicating the entity has multiple biological sources.\n",
+               "description": "A code indicating the entity has multiple biological sources.",
                "rcsb_description": [
                   {
-                     "text": "A code indicating the entity has multiple biological sources.\n",
+                     "text": "A code indicating the entity has multiple biological sources.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "A code indicating the entity has multiple biological sources.",
+                     "context": "brief"
                   }
                ]
             },
             "rcsb_source_part_count": {
                "type": "integer",
-               "description": "The number of biological sources for the polymer entity.\n",
+               "description": "The number of biological sources for the polymer entity.",
                "rcsb_description": [
                   {
-                     "text": "The number of biological sources for the polymer entity.\n",
+                     "text": "The number of biological sources for the polymer entity.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The number of biological sources for the polymer entity.",
+                     "context": "brief"
                   }
                ]
             },
@@ -2109,6 +2639,14 @@
                   {
                      "text": "The method by which the sample for the polymer entity was produced",
                      "context": "deposition"
+                  },
+                  {
+                     "text": "The method by which the sample for the polymer entity was produced.\n Entities isolated directly from natural sources (tissues, soil\n samples etc.) are expected to have further information in the\n ENTITY_SRC_NAT category. Entities isolated from genetically\n manipulated sources are expected to have further information in\n the ENTITY_SRC_GEN category.",
+                     "context": "brief"
+                  },
+                  {
+                     "text": "The method by which the sample for the polymer entity was produced",
+                     "context": "brief"
                   }
                ]
             },
@@ -2119,27 +2657,31 @@
                   "properties": {
                      "depth": {
                         "type": "integer",
-                        "description": "Members of the enzyme classification lineage as parent classification hierarchy depth (1-N).\n",
+                        "description": "Members of the enzyme classification lineage as parent classification hierarchy depth (1-N).",
                         "rcsb_search_context": [
                            "default-match"
                         ],
                         "rcsb_description": [
                            {
-                              "text": "Members of the enzyme classification lineage as parent classification hierarchy depth (1-N).\n",
+                              "text": "Members of the enzyme classification lineage as parent classification hierarchy depth (1-N).",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "Members of the enzyme classification lineage as parent classification hierarchy depth (1-N).",
+                              "context": "brief"
                            }
                         ]
                      },
                      "id": {
                         "type": "string",
-                        "description": "Members of the enzyme classification lineage as parent classification codes.\n",
+                        "description": "Members of the enzyme classification lineage as parent classification codes.",
                         "rcsb_search_context": [
                            "exact-match"
                         ],
                         "rcsb_full_text_priority": 10,
                         "rcsb_description": [
                            {
-                              "text": "Members of the enzyme classification lineage as parent classification codes.\n",
+                              "text": "Members of the enzyme classification lineage as parent classification codes.",
                               "context": "dictionary"
                            },
                            {
@@ -2150,14 +2692,14 @@
                      },
                      "name": {
                         "type": "string",
-                        "description": "Members of the enzyme classification lineage as parent classification names.\n",
+                        "description": "Members of the enzyme classification lineage as parent classification names.",
                         "rcsb_search_context": [
                            "exact-match"
                         ],
                         "rcsb_full_text_priority": 10,
                         "rcsb_description": [
                            {
-                              "text": "Members of the enzyme classification lineage as parent classification names.\n",
+                              "text": "Members of the enzyme classification lineage as parent classification names.",
                               "context": "dictionary"
                            },
                            {
@@ -2179,14 +2721,14 @@
                   "properties": {
                      "name": {
                         "type": "string",
-                        "description": "Combined list of macromolecular names.\n",
+                        "description": "Combined list of macromolecular names.",
                         "rcsb_search_context": [
                            "full-text"
                         ],
                         "rcsb_full_text_priority": 1,
                         "rcsb_description": [
                            {
-                              "text": "Combined list of macromolecular names.\n",
+                              "text": "Combined list of macromolecular names.",
                               "context": "dictionary"
                            },
                            {
@@ -2197,11 +2739,15 @@
                      },
                      "provenance_code": {
                         "type": "string",
-                        "description": "Combined list of macromolecular names associated provenance code.\n\n ECO (https://github.com/evidenceontology/evidenceontology)\n",
+                        "description": "Combined list of macromolecular names associated provenance code.\n\n ECO (https://github.com/evidenceontology/evidenceontology)",
                         "rcsb_description": [
                            {
-                              "text": "Combined list of macromolecular names associated provenance code.\n\n ECO (https://github.com/evidenceontology/evidenceontology)\n",
+                              "text": "Combined list of macromolecular names associated provenance code.\n\n ECO (https://github.com/evidenceontology/evidenceontology)",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "Combined list of macromolecular names associated provenance code.\n\n ECO (https://github.com/evidenceontology/evidenceontology)",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -2211,19 +2757,22 @@
                            "PDB Preferred Name",
                            "PDB Synonym"
                         ],
-                        "description": "Combined list of macromolecular names associated name source.\n",
+                        "description": "Combined list of macromolecular names associated name source.",
                         "rcsb_description": [
                            {
-                              "text": "Combined list of macromolecular names associated name source.\n",
+                              "text": "Combined list of macromolecular names associated name source.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "Combined list of macromolecular names associated name source.",
+                              "context": "brief"
                            }
                         ]
                      }
                   },
                   "additionalProperties": false
                },
-               "uniqueItems": false,
-               "rcsb_nested_indexing": true
+               "uniqueItems": false
             },
             "rcsb_enzyme_class_combined": {
                "type": "array",
@@ -2233,24 +2782,36 @@
                      "depth": {
                         "type": "integer",
                         "description": "The enzyme classification hierarchy depth (1-N).",
+                        "rcsb_search_context": [
+                           "default-match"
+                        ],
                         "rcsb_description": [
                            {
                               "text": "The enzyme classification hierarchy depth (1-N).",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "The enzyme classification hierarchy depth (1-N).",
+                              "context": "brief"
                            }
                         ]
                      },
                      "ec": {
                         "type": "string",
-                        "description": "Combined list of enzyme class assignments.\n",
+                        "description": "Combined list of enzyme class assignments.",
                         "rcsb_search_context": [
+                           "exact-match",
                            "full-text"
                         ],
-                        "rcsb_full_text_priority": 1,
+                        "rcsb_full_text_priority": 10,
                         "rcsb_description": [
                            {
-                              "text": "Combined list of enzyme class assignments.\n",
+                              "text": "Combined list of enzyme class assignments.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "Combined list of enzyme class assignments.",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -2260,11 +2821,19 @@
                            "PDB Primary Data",
                            "UniProt"
                         ],
-                        "description": "Combined list of enzyme class associated provenance sources.\n",
+                        "description": "Combined list of enzyme class associated provenance sources.",
+                        "rcsb_search_context": [
+                           "exact-match"
+                        ],
+                        "rcsb_full_text_priority": 10,
                         "rcsb_description": [
                            {
-                              "text": "Combined list of enzyme class associated provenance sources.\n",
+                              "text": "Combined list of enzyme class associated provenance sources.",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "Combined list of enzyme class associated provenance sources.",
+                              "context": "brief"
                            }
                         ]
                      }
@@ -2282,13 +2851,17 @@
          "items": {
             "type": "object",
             "properties": {
-               "provenance_code": {
+               "provenance_source": {
                   "type": "string",
                   "description": "Code identifying the individual, organization or program that\n assigned the reference sequence.",
                   "rcsb_description": [
                      {
                         "text": "Code identifying the individual, organization or program that\n assigned the reference sequence.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Code identifying the individual, organization or program that\n assigned the reference sequence.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -2299,6 +2872,10 @@
                      {
                         "text": "Reference sequence accession code.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Reference sequence accession code.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -2309,6 +2886,10 @@
                      {
                         "text": "Reference sequence isoform identifier.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Reference sequence isoform identifier.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -2330,6 +2911,10 @@
                      {
                         "text": "Reference sequence database name.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Reference sequence database name.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -2345,6 +2930,10 @@
                               {
                                  "text": "An identifier for the monomer in the entity sequence at which this segment of the alignment begins.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "An identifier for the monomer in the entity sequence at which this segment of the alignment begins.",
+                                 "context": "brief"
                               }
                            ]
                         },
@@ -2355,6 +2944,10 @@
                               {
                                  "text": "An length of the this segment of the alignment.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "An length of the this segment of the alignment.",
+                                 "context": "brief"
                               }
                            ]
                         },
@@ -2365,6 +2958,231 @@
                               {
                                  "text": "An identifier for the monomer in the reference sequence at which this segment of the alignment begins.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "An identifier for the monomer in the reference sequence at which this segment of the alignment begins.",
+                                 "context": "brief"
+                              }
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_polymer_entity_annotation": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "annotation_id": {
+                  "type": "string",
+                  "description": "An identifier for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation identifier",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "assignment_version": {
+                  "type": "string",
+                  "description": "Identifies the version of the annotation assignment.",
+                  "rcsb_description": [
+                     {
+                        "text": "Identifies the version of the annotation assignment.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation version",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "description": {
+                  "type": "string",
+                  "description": "A description for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "A description for the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation description",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "name": {
+                  "type": "string",
+                  "description": "A name for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "A name for the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation name",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "provenance_source": {
+                  "type": "string",
+                  "description": "Code identifying the individual, organization or program that\n assigned the annotation.",
+                  "rcsb_description": [
+                     {
+                        "text": "Code identifying the individual, organization or program that\n assigned the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation source",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "BIRD_MOLECULE_CLASS",
+                     "BIRD_MOLECULE_TYPE",
+                     "GO",
+                     "InterPro",
+                     "Pfam",
+                     "artifact",
+                     "modified_monomer",
+                     "mutation"
+                  ],
+                  "description": "A type or category of the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "BIRD_MOLECULE_CLASS",
+                        "detail": "Defines the function of the molecule."
+                     },
+                     {
+                        "value": "BIRD_MOLECULE_TYPE",
+                        "detail": "Defines the structural classification of the molecule."
+                     },
+                     {
+                        "value": "GO",
+                        "detail": "Gene Ontology"
+                     },
+                     {
+                        "value": "InterPro",
+                        "detail": "Classification of protein families"
+                     },
+                     {
+                        "value": "Pfam",
+                        "detail": "Protein Family Database (Pfam)"
+                     },
+                     {
+                        "value": "artifact",
+                        "detail": "Cloning artifact, expression tag, linker"
+                     },
+                     {
+                        "value": "modified_monomer",
+                        "detail": "Modified chemical component"
+                     },
+                     {
+                        "value": "mutation",
+                        "detail": "Engineered mutations and chemical modifications"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "A type or category of the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation type",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "annotation_lineage": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "depth": {
+                           "type": "integer",
+                           "description": "Members of the annotation lineage as parent lineage depth (1-N)",
+                           "rcsb_search_context": [
+                              "default-match"
+                           ],
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the annotation lineage as parent lineage depth (1-N)",
+                                 "context": "dictionary"
+                              },
+                              {
+                                 "text": "Annotation lineage depth",
+                                 "context": "brief"
+                              }
+                           ]
+                        },
+                        "id": {
+                           "type": "string",
+                           "description": "Members of the annotation lineage as parent class identifiers.",
+                           "rcsb_search_context": [
+                              "exact-match"
+                           ],
+                           "rcsb_full_text_priority": 10,
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the annotation lineage as parent class identifiers.",
+                                 "context": "dictionary"
+                              },
+                              {
+                                 "text": "Annotation lineage identifier",
+                                 "context": "brief"
+                              }
+                           ]
+                        },
+                        "name": {
+                           "type": "string",
+                           "description": "Members of the annotation lineage as parent class names.",
+                           "rcsb_search_context": [
+                              "exact-match",
+                              "full-text"
+                           ],
+                           "rcsb_full_text_priority": 10,
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the annotation lineage as parent class names.",
+                                 "context": "dictionary"
+                              },
+                              {
+                                 "text": "Annotation lineage name",
+                                 "context": "brief"
                               }
                            ]
                         }
@@ -2372,14 +3190,22 @@
                      "additionalProperties": false
                   },
                   "uniqueItems": false,
-                  "rcsb_nested_indexing": false
+                  "rcsb_nested_indexing": true
                }
             },
             "additionalProperties": false
          },
          "minItems": 1,
          "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "rcsb_nested_indexing": true,
+         "rcsb_nested_indexing_context": [
+            {
+               "category_name": "annotation_type",
+               "category_path": [
+                  "rcsb_polymer_entity_annotation.type"
+               ]
+            }
+         ]
       },
       "rcsb_polymer_entity_container_identifiers": {
          "type": "object",
@@ -2393,6 +3219,10 @@
                      {
                         "text": "Instance identifiers corresponding to copies of the entity in this container.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Instance identifiers corresponding to copies of the entity in this container.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -2407,6 +3237,10 @@
                      {
                         "text": "Author instance identifiers corresponding to copies of the entity in this container.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Author instance identifiers corresponding to copies of the entity in this container.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -2421,6 +3255,10 @@
                      {
                         "text": "Unique list of monomer chemical component identifiers in the polymer entity in this container.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Unique list of monomer chemical component identifiers in the polymer entity in this container.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -2435,6 +3273,10 @@
                      {
                         "text": "Unique list of non-standard monomer chemical component identifiers in the polymer entity in this container.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Unique list of non-standard monomer chemical component identifiers in the polymer entity in this container.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -2447,6 +3289,10 @@
                   {
                      "text": "Entity identifier for the container.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Entity identifier for the container.",
+                     "context": "brief"
                   }
                ]
             },
@@ -2461,6 +3307,10 @@
                   {
                      "text": "Entry identifier for the container.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Entry identifier for the container.",
+                     "context": "brief"
                   }
                ]
             },
@@ -2471,6 +3321,10 @@
                   {
                      "text": "The BIRD identifier for the entity in this container.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "The BIRD identifier for the entity in this container.",
+                     "context": "brief"
                   }
                ]
             },
@@ -2485,68 +3339,12 @@
                   {
                      "text": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
+                     "context": "brief"
                   }
                ]
-            },
-            "related_annotation_identifiers": {
-               "type": "array",
-               "items": {
-                  "type": "object",
-                  "properties": {
-                     "provenance_source": {
-                        "type": "string",
-                        "enum": [
-                           "PDB",
-                           "RCSB",
-                           "SIFTS",
-                           "UniProt"
-                        ],
-                        "description": "Source of the related annotation assignment\n",
-                        "rcsb_description": [
-                           {
-                              "text": "Source of the related annotation assignment\n",
-                              "context": "dictionary"
-                           }
-                        ]
-                     },
-                     "resource_identifier": {
-                        "type": "string",
-                        "description": "Related resource annotation identifier\n",
-                        "rcsb_search_context": [
-                           "exact-match"
-                        ],
-                        "rcsb_full_text_priority": 10,
-                        "rcsb_description": [
-                           {
-                              "text": "Related resource annotation identifier\n",
-                              "context": "dictionary"
-                           }
-                        ]
-                     },
-                     "resource_name": {
-                        "type": "string",
-                        "enum": [
-                           "GO",
-                           "InterPro",
-                           "Pfam"
-                        ],
-                        "description": "Related annotation resource name\n",
-                        "rcsb_search_context": [
-                           "exact-match"
-                        ],
-                        "rcsb_full_text_priority": 10,
-                        "rcsb_description": [
-                           {
-                              "text": "Related annotation resource name\n",
-                              "context": "dictionary"
-                           }
-                        ]
-                     }
-                  },
-                  "additionalProperties": false
-               },
-               "uniqueItems": false,
-               "rcsb_nested_indexing": true
             },
             "reference_sequence_identifiers": {
                "type": "array",
@@ -2555,7 +3353,7 @@
                   "properties": {
                      "database_accession": {
                         "type": "string",
-                        "description": "Reference database accession code\n",
+                        "description": "Reference database accession code",
                         "rcsb_search_context": [
                            "exact-match",
                            "suggest"
@@ -2563,22 +3361,30 @@
                         "rcsb_full_text_priority": 20,
                         "rcsb_description": [
                            {
-                              "text": "Reference database accession code\n",
+                              "text": "Reference database accession code",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "Reference database accession code",
+                              "context": "brief"
                            }
                         ]
                      },
                      "database_isoform": {
                         "type": "string",
-                        "description": "Reference database identifier for the sequence isoform\n",
+                        "description": "Reference database identifier for the sequence isoform",
                         "rcsb_search_context": [
                            "exact-match"
                         ],
                         "rcsb_full_text_priority": 10,
                         "rcsb_description": [
                            {
-                              "text": "Reference database identifier for the sequence isoform\n",
+                              "text": "Reference database identifier for the sequence isoform",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "Reference database identifier for the sequence isoform",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -2595,15 +3401,19 @@
                            "RefSeq",
                            "UniProt"
                         ],
-                        "description": "Reference database name\n",
+                        "description": "Reference database name",
                         "rcsb_search_context": [
                            "exact-match"
                         ],
                         "rcsb_full_text_priority": 10,
                         "rcsb_description": [
                            {
-                              "text": "Reference database name\n",
+                              "text": "Reference database name",
                               "context": "dictionary"
+                           },
+                           {
+                              "text": "Reference database name",
+                              "context": "brief"
                            }
                         ]
                      },
@@ -2614,77 +3424,15 @@
                            "RCSB",
                            "SIFTS"
                         ],
-                        "description": "Source of the reference database assignment\n",
+                        "description": "Source of the reference database assignment",
                         "rcsb_description": [
                            {
-                              "text": "Source of the reference database assignment\n",
+                              "text": "Source of the reference database assignment",
                               "context": "dictionary"
-                           }
-                        ]
-                     }
-                  },
-                  "additionalProperties": false
-               },
-               "uniqueItems": false,
-               "rcsb_nested_indexing": true
-            },
-            "related_annotation_lineage": {
-               "type": "array",
-               "items": {
-                  "type": "object",
-                  "properties": {
-                     "depth": {
-                        "type": "integer",
-                        "description": "Members of the lineage as lineage depth (1-N)",
-                        "rcsb_description": [
+                           },
                            {
-                              "text": "Members of the lineage as lineage depth (1-N)",
-                              "context": "dictionary"
-                           }
-                        ]
-                     },
-                     "id": {
-                        "type": "string",
-                        "description": "Members of the lineage expressed as parent idcodes.",
-                        "rcsb_search_context": [
-                           "exact-match"
-                        ],
-                        "rcsb_full_text_priority": 10,
-                        "rcsb_description": [
-                           {
-                              "text": "Members of the lineage expressed as parent idcodes.",
-                              "context": "dictionary"
-                           }
-                        ]
-                     },
-                     "name": {
-                        "type": "string",
-                        "description": "Members of the lineage expressed as parent annotation names.",
-                        "rcsb_search_context": [
-                           "exact-match"
-                        ],
-                        "rcsb_full_text_priority": 10,
-                        "rcsb_description": [
-                           {
-                              "text": "Members of the lineage expressed as parent annotation names.",
-                              "context": "dictionary"
-                           }
-                        ]
-                     },
-                     "resource": {
-                        "type": "string",
-                        "enum": [
-                           "GO"
-                        ],
-                        "description": "The name of the related annotation resource.",
-                        "rcsb_search_context": [
-                           "exact-match"
-                        ],
-                        "rcsb_full_text_priority": 10,
-                        "rcsb_description": [
-                           {
-                              "text": "The name of the related annotation resource.",
-                              "context": "dictionary"
+                              "text": "Source of the reference database assignment",
+                              "context": "brief"
                            }
                         ]
                      }
@@ -2713,58 +3461,66 @@
                      {
                         "text": "Identifies the version of the feature assignment.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature version",
+                        "context": "brief"
                      }
                   ]
                },
                "description": {
                   "type": "string",
                   "description": "A description for the feature.",
-                  "rcsb_search_context": [
-                     "full-text"
-                  ],
-                  "rcsb_full_text_priority": 1,
                   "rcsb_description": [
                      {
                         "text": "A description for the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature description",
+                        "context": "brief"
                      }
                   ]
                },
                "feature_id": {
                   "type": "string",
                   "description": "An identifier for the feature.",
-                  "rcsb_search_context": [
-                     "exact-match"
-                  ],
-                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "An identifier for the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "An identifier for the feature.",
+                        "context": "brief"
                      }
                   ]
                },
                "name": {
                   "type": "string",
                   "description": "A name for the feature.",
-                  "rcsb_search_context": [
-                     "exact-match"
-                  ],
-                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "A name for the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature name",
+                        "context": "brief"
                      }
                   ]
                },
-               "provenance_code": {
+               "provenance_source": {
                   "type": "string",
                   "description": "Code identifying the individual, organization or program that\n assigned the feature.",
                   "rcsb_description": [
                      {
                         "text": "Code identifying the individual, organization or program that\n assigned the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature source",
+                        "context": "brief"
                      }
                   ]
                },
@@ -2794,6 +3550,10 @@
                      {
                         "text": "Code residue coordinate system for the assigned feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Code residue coordinate system for the assigned feature.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -2807,10 +3567,6 @@
                      "mutation"
                   ],
                   "description": "A type or category of the feature.",
-                  "rcsb_search_context": [
-                     "exact-match"
-                  ],
-                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "BIRD_MOLECULE_CLASS",
@@ -2837,6 +3593,10 @@
                      {
                         "text": "A type or category of the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature type",
+                        "context": "brief"
                      }
                   ]
                },
@@ -2845,144 +3605,82 @@
                   "items": {
                      "type": "object",
                      "properties": {
-                        "beg_seq_id": {
+                        "feature_positions_beg_seq_id": {
                            "type": "integer",
                            "description": "An identifier for the monomer at which this segment of the feature begins.",
                            "rcsb_description": [
                               {
                                  "text": "An identifier for the monomer at which this segment of the feature begins.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "An identifier for the monomer at which this segment of the feature begins.",
+                                 "context": "brief"
                               }
                            ]
                         },
-                        "end_seq_id": {
+                        "feature_positions_end_seq_id": {
                            "type": "integer",
                            "description": "An identifier for the monomer at which this segment of the feature ends.",
                            "rcsb_description": [
                               {
                                  "text": "An identifier for the monomer at which this segment of the feature ends.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "An identifier for the monomer at which this segment of the feature ends.",
+                                 "context": "brief"
                               }
                            ]
                         },
-                        "value": {
+                        "feature_positions_value": {
                            "type": "number",
                            "description": "The value for the feature over this monomer segment.",
-                           "rcsb_search_context": [
-                              "default-match"
-                           ],
                            "rcsb_description": [
                               {
                                  "text": "The value for the feature over this monomer segment.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "The value for the feature over this monomer segment.",
+                                 "context": "brief"
                               }
                            ]
                         }
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false,
-                  "rcsb_nested_indexing": true
+                  "uniqueItems": false
                },
                "feature_positions": {
                   "type": "array",
                   "items": {
                      "type": "object",
                      "properties": {
-                        "comp_id": {
+                        "beg_comp_id": {
                            "type": "string",
                            "description": "An identifier for the monomer(s) corresponding to the feature assignment.",
                            "rcsb_description": [
                               {
                                  "text": "An identifier for the monomer(s) corresponding to the feature assignment.",
                                  "context": "dictionary"
-                              }
-                           ]
-                        },
-                        "seq_id": {
-                           "type": "integer",
-                           "description": "An identifier for the monomer at which this segment of the feature ends.",
-                           "rcsb_description": [
+                              },
                               {
-                                 "text": "An identifier for the monomer at which this segment of the feature ends.",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        },
-                        "value": {
-                           "type": "number",
-                           "description": "The value for the feature at this monomer.",
-                           "rcsb_search_context": [
-                              "default-match"
-                           ],
-                           "rcsb_description": [
-                              {
-                                 "text": "The value for the feature at this monomer.",
-                                 "context": "dictionary"
+                                 "text": "An identifier for the monomer(s) corresponding to the feature assignment.",
+                                 "context": "brief"
                               }
                            ]
                         }
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false,
-                  "rcsb_nested_indexing": false
-               },
-               "feature_class_lineage": {
-                  "type": "array",
-                  "items": {
-                     "type": "object",
-                     "properties": {
-                        "depth": {
-                           "type": "integer",
-                           "description": "Members of the feature class lineage as parent lineage depth (1-N)",
-                           "rcsb_description": [
-                              {
-                                 "text": "Members of the feature class lineage as parent lineage depth (1-N)",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        },
-                        "id": {
-                           "type": "string",
-                           "description": "Members of the feature class lineage as parent class identifiers.",
-                           "rcsb_search_context": [
-                              "exact-match"
-                           ],
-                           "rcsb_full_text_priority": 10,
-                           "rcsb_description": [
-                              {
-                                 "text": "Members of the feature class lineage as parent class identifiers.",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        },
-                        "name": {
-                           "type": "string",
-                           "description": "Members of the feature class lineage as parent class names.",
-                           "rcsb_search_context": [
-                              "exact-match"
-                           ],
-                           "rcsb_full_text_priority": 10,
-                           "rcsb_description": [
-                              {
-                                 "text": "Members of the feature class lineage as parent class names.",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        }
-                     },
-                     "additionalProperties": false
-                  },
-                  "uniqueItems": false,
-                  "rcsb_nested_indexing": true
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": true
+         "uniqueItems": true
       },
       "rcsb_polymer_entity_feature_summary": {
          "type": "array",
@@ -2999,6 +3697,10 @@
                      {
                         "text": "The feature count.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The feature count.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -3012,6 +3714,72 @@
                      {
                         "text": "The fractional feature coverage relative to the full entity sequence.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The fractional feature coverage relative to the full entity sequence.",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "maximum_length": {
+                  "type": "integer",
+                  "description": "The maximum feature length.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The maximum feature length.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "The maximum feature length.",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "maximum_value": {
+                  "type": "number",
+                  "description": "The maximum feature value.",
+                  "rcsb_description": [
+                     {
+                        "text": "The maximum feature value.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "The maximum feature value.",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "minimum_length": {
+                  "type": "integer",
+                  "description": "The minimum feature length.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The minimum feature length.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "The minimum feature length.",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "minimum_value": {
+                  "type": "number",
+                  "description": "The minimum feature value.",
+                  "rcsb_description": [
+                     {
+                        "text": "The minimum feature value.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "The minimum feature value.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -3055,6 +3823,10 @@
                      {
                         "text": "Type or category of the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Type or category of the feature.",
+                        "context": "brief"
                      }
                   ]
                }
@@ -3063,7 +3835,15 @@
          },
          "minItems": 1,
          "uniqueItems": true,
-         "rcsb_nested_indexing": true
+         "rcsb_nested_indexing": true,
+         "rcsb_nested_indexing_context": [
+            {
+               "category_name": "feature_summary",
+               "category_path": [
+                  "rcsb_polymer_entity_feature_summary.type"
+               ]
+            }
+         ]
       },
       "rcsb_polymer_entity_keywords": {
          "type": "object",
@@ -3079,6 +3859,10 @@
                   {
                      "text": "Keywords describing this polymer entity.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Keywords describing this polymer entity.",
+                     "context": "brief"
                   }
                ]
             }
@@ -3105,6 +3889,10 @@
                      {
                         "text": "A common name for the polymer entity.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "A common name for the polymer entity.",
+                        "context": "brief"
                      }
                   ]
                }
@@ -3115,8 +3903,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "rcsb_polymer_entity_name_sys": {
          "type": "array",
@@ -3134,6 +3921,10 @@
                      {
                         "text": "The systematic name for the polymer entity.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The systematic name for the polymer entity.",
+                        "context": "brief"
                      }
                   ]
                },
@@ -3147,6 +3938,10 @@
                      {
                         "text": "The system used to generate the systematic name of the polymer entity.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "The system used to generate the systematic name of the polymer entity.",
+                        "context": "brief"
                      }
                   ]
                }
@@ -3157,8 +3952,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "rcsb_id": {
          "type": "string",
@@ -3171,6 +3965,10 @@
             {
                "text": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
                "context": "dictionary"
+            },
+            {
+               "text": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
+               "context": "brief"
             }
          ]
       }
@@ -3181,7 +3979,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 7.0.7",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 7.0.7. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 7.0.7"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.0.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.0.0"
 }
