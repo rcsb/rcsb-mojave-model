@@ -663,6 +663,31 @@
                   },
                   "uniqueItems": false
                },
+               "rcsb_is_primary": {
+                  "type": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ],
+                  "examples": [
+                     "Y"
+                  ],
+                  "description": "Flag to indicate a primary citation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "Flag to indicate a primary citation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Flag to indicate a primary citation.",
+                        "context": "brief"
+                     }
+                  ]
+               },
                "rcsb_journal_abbrev": {
                   "type": "string",
                   "examples": [
