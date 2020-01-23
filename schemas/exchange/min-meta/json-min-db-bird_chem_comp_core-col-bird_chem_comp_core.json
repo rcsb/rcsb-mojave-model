@@ -51,10 +51,6 @@
                   {
                      "text": "The value of _chem_comp.id must uniquely identify each item in\n the CHEM_COMP list.\n\n For protein polymer entities, this is the three-letter code for\n the amino acid.\n\n For nucleic acid polymer entities, this is the one-letter code\n for the base.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The value of _chem_comp.id must uniquely identify each item in\n the CHEM_COMP list.\n\n For protein polymer entities, this is the three-letter code for\n the amino acid.\n\n For nucleic acid polymer entities, this is the one-letter code\n for the base.",
-                     "context": "brief"
                   }
                ]
             },
@@ -67,10 +63,6 @@
                      {
                         "text": "The identifier for the parent component of the nonstandard\n component. May be be a comma separated list if this component\n is derived from multiple components.\n\n Items in this indirectly point to _chem_comp.id in \n the CHEM_COMP category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The identifier for the parent component of the nonstandard\n component. May be be a comma separated list if this component\n is derived from multiple components.\n\n Items in this indirectly point to _chem_comp.id in \n the CHEM_COMP category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -134,10 +126,6 @@
                   {
                      "text": "For standard polymer components, the one-letter code for\n the component.   For non-standard polymer components, the \n one-letter code for parent component if this exists;\n otherwise, the one-letter code should be given as 'X'.\n\n Components that derived from multiple parents components \n are described by a sequence of one-letter-codes.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "For standard polymer components, the one-letter code for\n the component.   For non-standard polymer components, the \n one-letter code for parent component if this exists;\n otherwise, the one-letter code should be given as 'X'.\n\n Components that derived from multiple parents components \n are described by a sequence of one-letter-codes.",
-                     "context": "brief"
                   }
                ]
             },
@@ -148,10 +136,6 @@
                   {
                      "text": "A preliminary classification used by PDB to indicate\n that the chemistry of this component while described\n as clearly as possible is still ambiguous.  Software\n tools may not be able to process this component\n definition.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "A preliminary classification used by PDB to indicate\n that the chemistry of this component while described\n as clearly as possible is still ambiguous.  Software\n tools may not be able to process this component\n definition.",
-                     "context": "brief"
                   }
                ]
             },
@@ -162,10 +146,6 @@
                   {
                      "text": "The net integer charge assigned to this component. This is the\n formal charge assignment normally found in chemical diagrams.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The net integer charge assigned to this component. This is the\n formal charge assignment normally found in chemical diagrams.",
-                     "context": "brief"
                   }
                ]
             },
@@ -177,10 +157,6 @@
                   {
                      "text": "Date component was added to database.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Date component was added to database.",
-                     "context": "brief"
                   }
                ]
             },
@@ -192,10 +168,6 @@
                   {
                      "text": "Date component was last modified.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Date component was last modified.",
-                     "context": "brief"
                   }
                ]
             },
@@ -212,10 +184,6 @@
                   {
                      "text": "This data item identifies the deposition site that processed\n this chemical component defintion.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "This data item identifies the deposition site that processed\n this chemical component defintion.",
-                     "context": "brief"
                   }
                ]
             },
@@ -260,10 +228,6 @@
                   {
                      "text": "This data item holds the current release status for the component.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "This data item holds the current release status for the component.",
-                     "context": "brief"
                   }
                ]
             },
@@ -278,10 +242,6 @@
                   {
                      "text": "Identifies the _chem_comp.id of the component that\n has replaced this component.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Identifies the _chem_comp.id of the component that\n has replaced this component.",
-                     "context": "brief"
                   }
                ]
             },
@@ -296,10 +256,6 @@
                   {
                      "text": "Identifies the _chem_comp.id's of the components\n which have been replaced by this component.\n Multiple id codes should be separated by commas.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Identifies the _chem_comp.id's of the components\n which have been replaced by this component.\n Multiple id codes should be separated by commas.",
-                     "context": "brief"
                   }
                ]
             },
@@ -313,10 +269,6 @@
                   {
                      "text": "The list of subcomponents contained in this component.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The list of subcomponents contained in this component.",
-                     "context": "brief"
                   }
                ]
             },
@@ -366,10 +318,6 @@
                   {
                      "text": "For standard polymer components, the common three-letter code for\n the component.   Non-standard polymer components and non-polymer\n components are also assigned three-letter-codes.\n\n For ambiguous polymer components three-letter code should \n be given as 'UNK'.  Ambiguous ions are assigned the code 'UNX'.\n Ambiguous non-polymer components are assigned the code 'UNL'.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "For standard polymer components, the common three-letter code for\n the component.   Non-standard polymer components and non-polymer\n components are also assigned three-letter-codes.\n\n For ambiguous polymer components three-letter code should \n be given as 'UNK'.  Ambiguous ions are assigned the code 'UNX'.\n Ambiguous non-polymer components are assigned the code 'UNL'.",
-                     "context": "brief"
                   }
                ]
             },
@@ -560,10 +508,6 @@
                      {
                         "text": "The action associated with this audit record.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The action associated with this audit record.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -574,10 +518,6 @@
                      {
                         "text": "This data item is a pointer to _chem_comp.id in the CHEM_COMP\n category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item is a pointer to _chem_comp.id in the CHEM_COMP\n category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -589,10 +529,6 @@
                      {
                         "text": "The date associated with this audit record.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The date associated with this audit record.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -606,10 +542,6 @@
                      {
                         "text": "Additional details decribing this change.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Additional details decribing this change.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -620,10 +552,6 @@
                      {
                         "text": "This data item is an ordinal index for the\n PDBX_CHEM_COMP_AUDIT category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item is an ordinal index for the\n PDBX_CHEM_COMP_AUDIT category.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -648,10 +576,6 @@
                      {
                         "text": "This data item is a pointer to _chem_comp.id in the CHEM_COMP\n category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item is a pointer to _chem_comp.id in the CHEM_COMP\n category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -662,10 +586,6 @@
                      {
                         "text": "This data item contains the descriptor value for this \n component.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item contains the descriptor value for this \n component.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -682,10 +602,6 @@
                      {
                         "text": "This data item contains the name of the program\n or library used to compute the descriptor.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item contains the name of the program\n or library used to compute the descriptor.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -696,10 +612,6 @@
                      {
                         "text": "This data item contains the version of the program\n or library used to compute the descriptor.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item contains the version of the program\n or library used to compute the descriptor.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -784,10 +696,6 @@
                      {
                         "text": "This data item contains the descriptor type.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item contains the descriptor type.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -819,10 +727,6 @@
                      {
                         "text": "The component identifier for this feature.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The component identifier for this feature.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -839,10 +743,6 @@
                      {
                         "text": "The information source for the component feature.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The information source for the component feature.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -858,10 +758,6 @@
                      {
                         "text": "The component feature type.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The component feature type.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -872,10 +768,6 @@
                      {
                         "text": "The component feature value.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The component feature value.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -903,10 +795,6 @@
                      {
                         "text": "This data item is a pointer to _chem_comp.id in the CHEM_COMP\n category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item is a pointer to _chem_comp.id in the CHEM_COMP\n category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -917,10 +805,6 @@
                      {
                         "text": "This data item contains the identifier value for this \n component.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item contains the identifier value for this \n component.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -941,10 +825,6 @@
                      {
                         "text": "This data item contains the name of the program\n or library used to compute the identifier.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item contains the name of the program\n or library used to compute the identifier.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -955,10 +835,6 @@
                      {
                         "text": "This data item contains the version of the program\n or library used to compute the identifier.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item contains the version of the program\n or library used to compute the identifier.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1018,10 +894,6 @@
                      {
                         "text": "This data item contains the identifier type.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item contains the identifier type.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -1067,10 +939,6 @@
                      {
                         "text": "The action associated with this audit record.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The action associated with this audit record.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1086,10 +954,6 @@
                      {
                         "text": "The initials of the annotator creating of modifying the family.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The initials of the annotator creating of modifying the family.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1101,10 +965,6 @@
                      {
                         "text": "The date associated with this audit record.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The date associated with this audit record.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1118,10 +978,6 @@
                      {
                         "text": "Additional details decribing this change.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Additional details decribing this change.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1132,10 +988,6 @@
                      {
                         "text": "This data item is a pointer to _pdbx_reference_molecule_family.family_prd_id in the \n\t       pdbx_reference_molecule category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item is a pointer to _pdbx_reference_molecule_family.family_prd_id in the \n\t       pdbx_reference_molecule category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1152,10 +1004,6 @@
                      {
                         "text": "An identifier for the wwPDB site creating or modifying the family.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "An identifier for the wwPDB site creating or modifying the family.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -1196,10 +1044,6 @@
                      {
                         "text": "The action associated with this audit record.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The action associated with this audit record.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1215,10 +1059,6 @@
                      {
                         "text": "The initials of the annotator creating of modifying the molecule.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The initials of the annotator creating of modifying the molecule.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1230,10 +1070,6 @@
                      {
                         "text": "The date associated with this audit record.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The date associated with this audit record.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1247,10 +1083,6 @@
                      {
                         "text": "Additional details decribing this change.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Additional details decribing this change.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1261,10 +1093,6 @@
                      {
                         "text": "This data item is a pointer to _pdbx_reference_molecule.prd_id in the \n\t       pdbx_reference_molecule category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item is a pointer to _pdbx_reference_molecule.prd_id in the \n\t       pdbx_reference_molecule category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1287,10 +1115,6 @@
                      {
                         "text": "An identifier for the wwPDB site creating or modifying the molecule.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "An identifier for the wwPDB site creating or modifying the molecule.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -1317,10 +1141,6 @@
                      {
                         "text": "The component number of this entity within the molecule.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The component number of this entity within the molecule.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1331,10 +1151,6 @@
                      {
                         "text": "Additional details about this entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Additional details about this entity.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1345,10 +1161,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_list.prd_id is a reference\n _pdbx_reference_molecule.prd_id in the PDBX_REFERENCE_MOLECULE category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_list.prd_id is a reference\n _pdbx_reference_molecule.prd_id in the PDBX_REFERENCE_MOLECULE category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1359,10 +1171,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_list.ref_entity_id is a unique identifier \n the a constituent entity within this reference molecule.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_list.ref_entity_id is a unique identifier \n the a constituent entity within this reference molecule.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1378,10 +1186,6 @@
                      {
                         "text": "Defines the polymer characteristic of the entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Defines the polymer characteristic of the entity.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -1408,10 +1212,6 @@
                      {
                         "text": "The database code for this source information",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The database code for this source information",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1422,10 +1222,6 @@
                      {
                         "text": "The database name for this source information",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The database name for this source information",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1436,10 +1232,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_poly.prd_id is a reference\n\t       _pdbx_reference_entity_list.prd_id in the  PDBX_REFERENCE_ENTITY_LIST category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_poly.prd_id is a reference\n\t       _pdbx_reference_entity_list.prd_id in the  PDBX_REFERENCE_ENTITY_LIST category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1450,10 +1242,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_poly.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_poly.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1486,10 +1274,6 @@
                      {
                         "text": "The type of the polymer.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The type of the polymer.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -1515,10 +1299,6 @@
                      {
                         "text": "The atom identifier/name in the first of the two components making\n the linkage.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The atom identifier/name in the first of the two components making\n the linkage.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1529,10 +1309,6 @@
                      {
                         "text": "The atom identifier/name in the second of the two components making\n the linkage.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The atom identifier/name in the second of the two components making\n the linkage.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1543,10 +1319,6 @@
                      {
                         "text": "The component identifier in the first of the two components making the \n linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.mon_id \n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The component identifier in the first of the two components making the \n linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.mon_id \n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1557,10 +1329,6 @@
                      {
                         "text": "The component identifier in the second of the two components making the \n linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.mon_id \n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The component identifier in the second of the two components making the \n linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.mon_id \n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1571,10 +1339,6 @@
                      {
                         "text": "The entity component identifier entity containing the linkage.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The entity component identifier entity containing the linkage.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1585,10 +1349,6 @@
                      {
                         "text": "For a polymer entity, the sequence number in the first of \n the two components making the linkage. \n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.num \n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "For a polymer entity, the sequence number in the first of \n the two components making the linkage. \n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.num \n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1599,10 +1359,6 @@
                      {
                         "text": "For a polymer entity, the sequence number in the second of \n the two components making the linkage. \n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.num \n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "For a polymer entity, the sequence number in the second of \n the two components making the linkage. \n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.num \n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1613,10 +1369,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_poly_link.link_id uniquely identifies\n a linkage within a polymer entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_poly_link.link_id uniquely identifies\n a linkage within a polymer entity.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1627,10 +1379,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_poly_link.prd_id is a reference\n _pdbx_reference_entity_list.prd_id in the PDBX_REFERENCE_ENTITY_POLY category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_poly_link.prd_id is a reference\n _pdbx_reference_entity_list.prd_id in the PDBX_REFERENCE_ENTITY_POLY category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1641,10 +1389,6 @@
                      {
                         "text": "The reference entity id of the polymer entity containing the linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly.ref_entity_id \n in the PDBX_REFERENCE_ENTITY_POLY category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The reference entity id of the polymer entity containing the linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly.ref_entity_id \n in the PDBX_REFERENCE_ENTITY_POLY category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1699,10 +1443,6 @@
                      {
                         "text": "The bond order target for the non-standard linkage.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The bond order target for the non-standard linkage.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -1747,10 +1487,6 @@
                      {
                         "text": "A flag to indicate that sequence heterogeneity at this monomer position.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "A flag to indicate that sequence heterogeneity at this monomer position.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1761,10 +1497,6 @@
                      {
                         "text": "This data item is the chemical component identifier of monomer.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item is the chemical component identifier of monomer.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1775,10 +1507,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_poly_seq.num must uniquely and sequentially\n identify a record in the PDBX_REFERENCE_ENTITY_POLY_SEQ list.\n\n This value is conforms to author numbering conventions and does not map directly\n to the numbering conventions used for _entity_poly_seq.num.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_poly_seq.num must uniquely and sequentially\n identify a record in the PDBX_REFERENCE_ENTITY_POLY_SEQ list.\n\n This value is conforms to author numbering conventions and does not map directly\n to the numbering conventions used for _entity_poly_seq.num.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1806,10 +1534,6 @@
                      {
                         "text": "A flag to indicate that this monomer is observed in the instance example.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "A flag to indicate that this monomer is observed in the instance example.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1820,10 +1544,6 @@
                      {
                         "text": "This data item is the chemical component identifier for the parent component corresponding to this monomer.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item is the chemical component identifier for the parent component corresponding to this monomer.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1834,10 +1554,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_poly_seq.prd_id is a reference\n\t       _pdbx_reference_entity_poly.prd_id in the  PDBX_REFERENCE_ENTITY_POLY category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_poly_seq.prd_id is a reference\n\t       _pdbx_reference_entity_poly.prd_id in the  PDBX_REFERENCE_ENTITY_POLY category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1848,10 +1564,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_poly_seq.ref_entity_id is a reference\n to _pdbx_reference_entity_poly.ref_entity_id in PDBX_REFERENCE_ENTITY_POLY category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_poly_seq.ref_entity_id is a reference\n to _pdbx_reference_entity_poly.ref_entity_id in PDBX_REFERENCE_ENTITY_POLY category.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -1897,10 +1609,6 @@
                      {
                         "text": "A flag to indicate a non-ribosomal entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "A flag to indicate a non-ribosomal entity.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1911,10 +1619,6 @@
                      {
                         "text": "The one-letter-code sequence for this entity.  Non-standard monomers are represented as 'X'.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The one-letter-code sequence for this entity.  Non-standard monomers are represented as 'X'.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1925,10 +1629,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_sequence.prd_id is a reference\n\t       _pdbx_reference_entity_list.prd_id in the  PDBX_REFERENCE_ENTITY_LIST category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_sequence.prd_id is a reference\n\t       _pdbx_reference_entity_list.prd_id in the  PDBX_REFERENCE_ENTITY_LIST category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1939,10 +1639,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_sequence.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_sequence.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1957,10 +1653,6 @@
                      {
                         "text": "The monomer type for the sequence.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The monomer type for the sequence.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -1986,10 +1678,6 @@
                      {
                         "text": "The Americal Tissue Culture Collection code for organism from which the entity was isolated.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The Americal Tissue Culture Collection code for organism from which the entity was isolated.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2000,10 +1688,6 @@
                      {
                         "text": "The database code for this source information",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The database code for this source information",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2014,10 +1698,6 @@
                      {
                         "text": "The database name for this source information",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The database name for this source information",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2028,10 +1708,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_src_nat.ordinal distinguishes \n\t       source details for this entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_src_nat.ordinal distinguishes \n\t       source details for this entity.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2045,10 +1721,6 @@
                      {
                         "text": "The scientific name of the organism from which the entity was isolated.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The scientific name of the organism from which the entity was isolated.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2059,10 +1731,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_src_nat.prd_id is a reference\n\t       _pdbx_reference_entity_list.prd_id in the  PDBX_REFERENCE_ENTITY_LIST category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_src_nat.prd_id is a reference\n\t       _pdbx_reference_entity_list.prd_id in the  PDBX_REFERENCE_ENTITY_LIST category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2073,10 +1741,6 @@
                      {
                         "text": "The value of _pdbx_reference_entity_src_nat.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_entity_src_nat.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2087,10 +1751,6 @@
                      {
                         "text": "The data source for this information.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The data source for this information.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2101,10 +1761,6 @@
                      {
                         "text": "A identifier within the data source for this information.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "A identifier within the data source for this information.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2115,10 +1771,6 @@
                      {
                         "text": "The NCBI TaxId of the organism from which the entity was isolated.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The NCBI TaxId of the organism from which the entity was isolated.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -2147,10 +1799,6 @@
                   {
                      "text": "For entities represented as single molecules, the identifier\n corresponding to the chemical definition for the molecule.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "For entities represented as single molecules, the identifier\n corresponding to the chemical definition for the molecule.",
-                     "context": "brief"
                   }
                ]
             },
@@ -2223,10 +1871,6 @@
                   {
                      "text": "Evidence for the assignment of _pdbx_reference_molecule.class",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Evidence for the assignment of _pdbx_reference_molecule.class",
-                     "context": "brief"
                   }
                ]
             },
@@ -2237,10 +1881,6 @@
                   {
                      "text": "Special details about this molecule.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Special details about this molecule.",
-                     "context": "brief"
                   }
                ]
             },
@@ -2255,10 +1895,6 @@
                   {
                      "text": "Description of this molecule.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Description of this molecule.",
-                     "context": "brief"
                   }
                ]
             },
@@ -2272,10 +1908,6 @@
                   {
                      "text": "The formula for the reference entity. Formulae are written\n according to the rules:\n\n 1. Only recognised element symbols may be used.\n\n 2. Each element symbol is followed by a 'count' number. A count\n    of '1' may be omitted.\n\n 3. A space or parenthesis must separate each element symbol and\n    its count, but in general parentheses are not used.\n\n 4. The order of elements depends on whether or not carbon is\n    present. If carbon is present, the order should be: C, then\n    H, then the other elements in alphabetical order of their\n    symbol. If carbon is not present, the elements are listed\n    purely in alphabetic order of their symbol. This is the\n    'Hill' system used by Chemical Abstracts.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The formula for the reference entity. Formulae are written\n according to the rules:\n\n 1. Only recognised element symbols may be used.\n\n 2. Each element symbol is followed by a 'count' number. A count\n    of '1' may be omitted.\n\n 3. A space or parenthesis must separate each element symbol and\n    its count, but in general parentheses are not used.\n\n 4. The order of elements depends on whether or not carbon is\n    present. If carbon is present, the order should be: C, then\n    H, then the other elements in alphabetical order of their\n    symbol. If carbon is not present, the elements are listed\n    purely in alphabetic order of their symbol. This is the\n    'Hill' system used by Chemical Abstracts.",
-                     "context": "brief"
                   }
                ]
             },
@@ -2286,10 +1918,6 @@
                   {
                      "text": "Formula mass in daltons of the entity.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Formula mass in daltons of the entity.",
-                     "context": "brief"
                   }
                ]
             },
@@ -2345,10 +1973,6 @@
                   {
                      "text": "Defines the current PDB release status for this molecule definition.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Defines the current PDB release status for this molecule definition.",
-                     "context": "brief"
                   }
                ]
             },
@@ -2359,10 +1983,6 @@
                   {
                      "text": "Assigns the identifier of the reference molecule that has replaced this molecule.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Assigns the identifier of the reference molecule that has replaced this molecule.",
-                     "context": "brief"
                   }
                ]
             },
@@ -2373,10 +1993,6 @@
                   {
                      "text": "Assigns the identifier for the reference molecule which have been replaced \n by this reference molecule.\n Multiple molecule identifier codes should be separated by commas.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Assigns the identifier for the reference molecule which have been replaced \n by this reference molecule.\n Multiple molecule identifier codes should be separated by commas.",
-                     "context": "brief"
                   }
                ]
             },
@@ -2391,10 +2007,6 @@
                   {
                      "text": "Defines how this entity is represented in PDB data files.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Defines how this entity is represented in PDB data files.",
-                     "context": "brief"
                   }
                ]
             },
@@ -2405,10 +2017,6 @@
                   {
                      "text": "The PDB accession code for the entry containing a representative example of this molecule.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The PDB accession code for the entry containing a representative example of this molecule.",
-                     "context": "brief"
                   }
                ]
             },
@@ -2480,10 +2088,6 @@
                   {
                      "text": "Evidence for the assignment of _pdbx_reference_molecule.type",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Evidence for the assignment of _pdbx_reference_molecule.type",
-                     "context": "brief"
                   }
                ]
             }
@@ -2505,10 +2109,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_annotation.family_prd_id is a reference to \n _pdbx_reference_molecule_list.family_prd_id in category PDBX_REFERENCE_MOLECULE_FAMILY_LIST.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_annotation.family_prd_id is a reference to \n _pdbx_reference_molecule_list.family_prd_id in category PDBX_REFERENCE_MOLECULE_FAMILY_LIST.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2519,10 +2119,6 @@
                      {
                         "text": "This data item distinguishes anotations for this entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item distinguishes anotations for this entity.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2533,10 +2129,6 @@
                      {
                         "text": "This data item is a pointer to _pdbx_reference_molecule.prd_id in the \n PDB_REFERENCE_MOLECULE category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item is a pointer to _pdbx_reference_molecule.prd_id in the \n PDB_REFERENCE_MOLECULE category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2551,10 +2143,6 @@
                      {
                         "text": "The source of the annoation for this entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The source of the annoation for this entity.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2569,10 +2157,6 @@
                      {
                         "text": "Text describing the annotation for this entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Text describing the annotation for this entity.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2594,10 +2178,6 @@
                      {
                         "text": "Type of annotation for this entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Type of annotation for this entity.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -2623,10 +2203,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_details.family_prd_id is a reference to \n _pdbx_reference_molecule_list.family_prd_id' in category PDBX_REFERENCE_MOLECULE_FAMILY.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_details.family_prd_id is a reference to \n _pdbx_reference_molecule_list.family_prd_id' in category PDBX_REFERENCE_MOLECULE_FAMILY.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2637,10 +2213,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_details.ordinal is an ordinal that \n distinguishes each descriptive text for this entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_details.ordinal is an ordinal that \n distinguishes each descriptive text for this entity.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2651,10 +2223,6 @@
                      {
                         "text": "A data source of this information (e.g. PubMed, Merck Index)",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "A data source of this information (e.g. PubMed, Merck Index)",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2665,10 +2233,6 @@
                      {
                         "text": "A identifier within the data source for this information.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "A identifier within the data source for this information.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2679,10 +2243,6 @@
                      {
                         "text": "The text of the description of special aspects of the entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The text of the description of special aspects of the entity.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -2706,10 +2266,6 @@
                   {
                      "text": "The value of _pdbx_reference_entity.family_prd_id must uniquely identify a record in the\n PDBX_REFERENCE_MOLECULE_FAMILY list.\n\n By convention this ID uniquely identifies the reference family in \n in the PDB reference dictionary.  \n\n The ID has the template form FAM_dddddd (e.g. FAM_000001)",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The value of _pdbx_reference_entity.family_prd_id must uniquely identify a record in the\n PDBX_REFERENCE_MOLECULE_FAMILY list.\n\n By convention this ID uniquely identifies the reference family in \n in the PDB reference dictionary.  \n\n The ID has the template form FAM_dddddd (e.g. FAM_000001)",
-                     "context": "brief"
                   }
                ]
             },
@@ -2728,10 +2284,6 @@
                   {
                      "text": "The entity family name.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The entity family name.",
-                     "context": "brief"
                   }
                ]
             },
@@ -2748,10 +2300,6 @@
                   {
                      "text": "Assigns the current PDB release status for this family.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Assigns the current PDB release status for this family.",
-                     "context": "brief"
                   }
                ]
             },
@@ -2762,10 +2310,6 @@
                   {
                      "text": "Assigns the identifier of the family that has replaced this component.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Assigns the identifier of the family that has replaced this component.",
-                     "context": "brief"
                   }
                ]
             },
@@ -2776,10 +2320,6 @@
                   {
                      "text": "Assigns the identifier for the family which have been replaced by this family.\n Multiple family identifier codes should be separated by commas.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Assigns the identifier for the family which have been replaced by this family.\n Multiple family identifier codes should be separated by commas.",
-                     "context": "brief"
                   }
                ]
             }
@@ -2801,10 +2341,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_features.family_prd_id is a reference to \n _pdbx_reference_molecule_list.family_prd_id in category PDBX_REFERENCE_MOLECULE_FAMILY_LIST.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_features.family_prd_id is a reference to \n _pdbx_reference_molecule_list.family_prd_id in category PDBX_REFERENCE_MOLECULE_FAMILY_LIST.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2815,10 +2351,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_features.ordinal distinguishes \n\t       each feature for this entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_features.ordinal distinguishes \n\t       each feature for this entity.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2829,10 +2361,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_features.prd_id is a reference\n\t       _pdbx_reference_molecule.prd_id in the  PDBX_REFERENCE_MOLECULE category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_features.prd_id is a reference\n\t       _pdbx_reference_molecule.prd_id in the  PDBX_REFERENCE_MOLECULE category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2849,10 +2377,6 @@
                      {
                         "text": "The information source for the component feature.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The information source for the component feature.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2863,10 +2387,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_features.source_ordinal provides\n\t       the priority order of features from a particular source or database.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_features.source_ordinal provides\n\t       the priority order of features from a particular source or database.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2882,10 +2402,6 @@
                      {
                         "text": "The entity feature type.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The entity feature type.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2896,10 +2412,6 @@
                      {
                         "text": "The entity feature value.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The entity feature value.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -2926,10 +2438,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_list.family_prd_id is a reference to \n _pdbx_reference_molecule_family.family_prd_id' in category PDBX_REFERENCE_MOLECULE_FAMILY.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_list.family_prd_id is a reference to \n _pdbx_reference_molecule_family.family_prd_id' in category PDBX_REFERENCE_MOLECULE_FAMILY.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2940,10 +2448,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_list.prd_id is the unique identifier \n for the reference molecule in this family.  \n\n By convention this ID uniquely identifies the reference molecule in \n in the PDB reference dictionary.  \n\n The ID has the template form PRD_dddddd (e.g. PRD_000001)",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_list.prd_id is the unique identifier \n for the reference molecule in this family.  \n\n By convention this ID uniquely identifies the reference molecule in \n in the PDB reference dictionary.  \n\n The ID has the template form PRD_dddddd (e.g. PRD_000001)",
-                        "context": "brief"
                      }
                   ]
                }
@@ -2969,10 +2473,6 @@
                      {
                         "text": "A link to related reference information in the citation category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "A link to related reference information in the citation category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -2986,10 +2486,6 @@
                      {
                         "text": "The database accession code for the related structure reference.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The database accession code for the related structure reference.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3007,10 +2503,6 @@
                      {
                         "text": "The database identifier code for the related structure reference.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The database identifier code for the related structure reference.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3024,10 +2516,6 @@
                      {
                         "text": "The database name for the related structure reference.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The database name for the related structure reference.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3038,10 +2526,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_related_structures.family_prd_id is a reference to \n _pdbx_reference_molecule_list.family_prd_id in category PDBX_REFERENCE_MOLECULE_FAMILY_LIST.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_related_structures.family_prd_id is a reference to \n _pdbx_reference_molecule_list.family_prd_id in category PDBX_REFERENCE_MOLECULE_FAMILY_LIST.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3055,10 +2539,6 @@
                      {
                         "text": "The formula for the reference entity. Formulae are written\n according to the rules:\n\n 1. Only recognised element symbols may be used.\n\n 2. Each element symbol is followed by a 'count' number. A count\n    of '1' may be omitted.\n\n 3. A space or parenthesis must separate each element symbol and\n    its count, but in general parentheses are not used.\n\n 4. The order of elements depends on whether or not carbon is\n    present. If carbon is present, the order should be: C, then\n    H, then the other elements in alphabetical order of their\n    symbol. If carbon is not present, the elements are listed\n    purely in alphabetic order of their symbol. This is the\n    'Hill' system used by Chemical Abstracts.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The formula for the reference entity. Formulae are written\n according to the rules:\n\n 1. Only recognised element symbols may be used.\n\n 2. Each element symbol is followed by a 'count' number. A count\n    of '1' may be omitted.\n\n 3. A space or parenthesis must separate each element symbol and\n    its count, but in general parentheses are not used.\n\n 4. The order of elements depends on whether or not carbon is\n    present. If carbon is present, the order should be: C, then\n    H, then the other elements in alphabetical order of their\n    symbol. If carbon is not present, the elements are listed\n    purely in alphabetic order of their symbol. This is the\n    'Hill' system used by Chemical Abstracts.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3072,10 +2552,6 @@
                      {
                         "text": "The chemical name for the structure entry in the related database",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The chemical name for the structure entry in the related database",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3086,10 +2562,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_related_structures.ordinal distinguishes\n related structural data for each entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_related_structures.ordinal distinguishes\n related structural data for each entity.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -3115,10 +2587,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_synonyms.family_prd_id is a reference to \n _pdbx_reference_molecule_list.family_prd_id in category PDBX_REFERENCE_MOLECULE_FAMILY_LIST.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_synonyms.family_prd_id is a reference to \n _pdbx_reference_molecule_list.family_prd_id in category PDBX_REFERENCE_MOLECULE_FAMILY_LIST.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3136,10 +2604,6 @@
                      {
                         "text": "A synonym name for the entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "A synonym name for the entity.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3150,10 +2614,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_synonyms.ordinal is an ordinal\n\t       to distinguish synonyms for this entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_synonyms.ordinal is an ordinal\n\t       to distinguish synonyms for this entity.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3164,10 +2624,6 @@
                      {
                         "text": "The value of _pdbx_reference_molecule_synonyms.prd_id is a reference\n\t       _pdbx_reference_molecule.prd_id in the  PDBX_REFERENCE_MOLECULE category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _pdbx_reference_molecule_synonyms.prd_id is a reference\n\t       _pdbx_reference_molecule.prd_id in the  PDBX_REFERENCE_MOLECULE category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3181,10 +2637,6 @@
                      {
                         "text": "The source of this synonym name for the entity.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The source of this synonym name for the entity.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -3215,10 +2667,6 @@
                      {
                         "text": "The value of _rcsb_bird_citation.id must uniquely identify a record in the\n rcsb_bird_citation list.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _rcsb_bird_citation.id must uniquely identify a record in the\n rcsb_bird_citation list.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3237,14 +2685,6 @@
                      {
                         "text": "The PDB (i.e., the Chemical Abstracts) abbreviation for a journal. If you do not know the abbreviation, then give the complete  name of the journal and we will try and find it for you. If it is a book or other monographic work, state the full title.",
                         "context": "deposition"
-                     },
-                     {
-                        "text": "Abbreviated name of the cited journal as given in the\n Chemical Abstracts Service Source Index.",
-                        "context": "brief"
-                     },
-                     {
-                        "text": "The PDB (i.e., the Chemical Abstracts) abbreviation for a journal. If you do not know the abbreviation, then give the complete  name of the journal and we will try and find it for you. If it is a book or other monographic work, state the full title.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3262,14 +2702,6 @@
                      {
                         "text": "The volume number of the journal in which the article appeared. Example: 317",
                         "context": "deposition"
-                     },
-                     {
-                        "text": "Volume number of the journal cited; relevant for journal\n articles.",
-                        "context": "brief"
-                     },
-                     {
-                        "text": "The volume number of the journal in which the article appeared. Example: 317",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3284,14 +2716,6 @@
                      {
                         "text": "The starting page number of this article.",
                         "context": "deposition"
-                     },
-                     {
-                        "text": "The first page of the rcsb_bird_citation; relevant for journal\n articles, books and book chapters.",
-                        "context": "brief"
-                     },
-                     {
-                        "text": "The starting page number of this article.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3306,14 +2730,6 @@
                      {
                         "text": "The last page number of this article.",
                         "context": "deposition"
-                     },
-                     {
-                        "text": "The last page of the rcsb_bird_citation; relevant for journal\n articles, books and book chapters.",
-                        "context": "brief"
-                     },
-                     {
-                        "text": "The last page number of this article.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3331,14 +2747,6 @@
                      {
                         "text": "The document Object Identifier used by doi.org to uniquely specify bibliographic entry",
                         "context": "deposition"
-                     },
-                     {
-                        "text": "Document Object Identifier used by doi.org to uniquely\n specify bibliographic entry.",
-                        "context": "brief"
-                     },
-                     {
-                        "text": "The document Object Identifier used by doi.org to uniquely specify bibliographic entry",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3356,14 +2764,6 @@
                      {
                         "text": "The accession number used by PubMed to categorize a specific bibliographic entry",
                         "context": "deposition"
-                     },
-                     {
-                        "text": "Ascession number used by PubMed to categorize a specific\n bibliographic entry.",
-                        "context": "brief"
-                     },
-                     {
-                        "text": "The accession number used by PubMed to categorize a specific bibliographic entry",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3379,10 +2779,6 @@
                         {
                            "text": "Names of the authors of the citation; relevant for journal\n articles, books and book chapters.  Names are separated by vertical bars.\n\n The family name(s), followed by a comma and including any\n dynastic components, precedes the first name(s) or initial(s).",
                            "context": "dictionary"
-                        },
-                        {
-                           "text": "Names of the authors of the citation; relevant for journal\n articles, books and book chapters.  Names are separated by vertical bars.\n\n The family name(s), followed by a comma and including any\n dynastic components, precedes the first name(s) or initial(s).",
-                           "context": "brief"
                         }
                      ]
                   },
@@ -3402,14 +2798,6 @@
                      {
                         "text": "Title of the article or chapter or part of a book. This should be marked NULL if the author(s) listed wrote the entire book (or other work) and no sub-section of the book is being cited. Example: The Structure of Crystalline Profilin-Beta-Actin",
                         "context": "deposition"
-                     },
-                     {
-                        "text": "The title of the rcsb_bird_citation; relevant for journal articles, books\n and book chapters.",
-                        "context": "brief"
-                     },
-                     {
-                        "text": "Title of the article or chapter or part of a book. This should be marked NULL if the author(s) listed wrote the entire book (or other work) and no sub-section of the book is being cited. Example: The Structure of Crystalline Profilin-Beta-Actin",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3427,14 +2815,6 @@
                      {
                         "text": "The year of publication of the article. Example: 2002",
                         "context": "deposition"
-                     },
-                     {
-                        "text": "The year of the rcsb_bird_citation; relevant for journal articles, books\n and book chapters.",
-                        "context": "brief"
-                     },
-                     {
-                        "text": "The year of publication of the article. Example: 2002",
-                        "context": "brief"
                      }
                   ]
                }
@@ -3459,10 +2839,6 @@
                      {
                         "text": "The Anatomical Therapeutic Chemical (ATC) Classification System identifiers corresponding\n to the chemical component.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The Anatomical Therapeutic Chemical (ATC) Classification System identifiers corresponding\n to the chemical component.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3498,10 +2874,6 @@
                   {
                      "text": "The DrugBank identifier corresponding to the chemical component.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The DrugBank identifier corresponding to the chemical component.",
-                     "context": "brief"
                   }
                ]
             },
@@ -3517,10 +2889,6 @@
                   {
                      "text": "The BIRD definition identifier.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The BIRD definition identifier.",
-                     "context": "brief"
                   }
                ]
             },
@@ -3535,10 +2903,6 @@
                   {
                      "text": "A unique identifier for the chemical definition in this container.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "A unique identifier for the chemical definition in this container.",
-                     "context": "brief"
                   }
                ]
             },
@@ -3551,10 +2915,6 @@
                      {
                         "text": "The list of subcomponents contained in this component.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The list of subcomponents contained in this component.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3576,10 +2936,6 @@
                   {
                      "text": "Standard IUPAC International Chemical Identifier (InChI) descriptor for the chemical component.\n\n   InChI, the IUPAC International Chemical Identifier,\n   by Stephen R Heller, Alan McNaught, Igor Pletnev, Stephen Stein and Dmitrii Tchekhovskoi,\n   Journal of Cheminformatics, 2015, 7:23;",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Standard IUPAC International Chemical Identifier (InChI) descriptor for the chemical component.\n\n   InChI, the IUPAC International Chemical Identifier,\n   by Stephen R Heller, Alan McNaught, Igor Pletnev, Stephen Stein and Dmitrii Tchekhovskoi,\n   Journal of Cheminformatics, 2015, 7:23;",
-                     "context": "brief"
                   }
                ]
             },
@@ -3608,10 +2964,6 @@
                   {
                      "text": "Simplified molecular-input line-entry system (SMILES) descriptor for the chemical component.\n\n   Weininger D (February 1988). \"SMILES, a chemical language and information system. 1.\n   Introduction to methodology and encoding rules\". Journal of Chemical Information and Modeling. 28 (1): 31-6.\n\n   Weininger D, Weininger A, Weininger JL (May 1989).\n   \"SMILES. 2. Algorithm for generation of unique SMILES notation\",\n   Journal of Chemical Information and Modeling. 29 (2): 97-101.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Simplified molecular-input line-entry system (SMILES) descriptor for the chemical component.\n\n   Weininger D (February 1988). \"SMILES, a chemical language and information system. 1.\n   Introduction to methodology and encoding rules\". Journal of Chemical Information and Modeling. 28 (1): 31-6.\n\n   Weininger D, Weininger A, Weininger JL (May 1989).\n   \"SMILES. 2. Algorithm for generation of unique SMILES notation\",\n   Journal of Chemical Information and Modeling. 29 (2): 97-101.",
-                     "context": "brief"
                   }
                ]
             },
@@ -3622,10 +2974,6 @@
                   {
                      "text": "Simplified molecular-input line-entry system (SMILES) descriptor for the chemical\n component including stereochemical features.\n\n Weininger D (February 1988). \"SMILES, a chemical language and information system. 1.\n Introduction to methodology and encoding rules\".\n Journal of Chemical Information and Modeling. 28 (1): 31-6.\n\n Weininger D, Weininger A, Weininger JL (May 1989).\n \"SMILES. 2. Algorithm for generation of unique SMILES notation\".\n Journal of Chemical Information and Modeling. 29 (2): 97-101.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Simplified molecular-input line-entry system (SMILES) descriptor for the chemical\n component including stereochemical features.\n\n Weininger D (February 1988). \"SMILES, a chemical language and information system. 1.\n Introduction to methodology and encoding rules\".\n Journal of Chemical Information and Modeling. 28 (1): 31-6.\n\n Weininger D, Weininger A, Weininger JL (May 1989).\n \"SMILES. 2. Algorithm for generation of unique SMILES notation\".\n Journal of Chemical Information and Modeling. 29 (2): 97-101.",
-                     "context": "brief"
                   }
                ]
             },
@@ -3636,10 +2984,6 @@
                   {
                      "text": "The chemical component identifier.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The chemical component identifier.",
-                     "context": "brief"
                   }
                ]
             }
@@ -3659,10 +3003,6 @@
                   {
                      "text": "Chemical component total atom count",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Chemical component total atom count",
-                     "context": "brief"
                   }
                ]
             },
@@ -3673,10 +3013,6 @@
                   {
                      "text": "Chemical component chiral atom count",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Chemical component chiral atom count",
-                     "context": "brief"
                   }
                ]
             },
@@ -3687,10 +3023,6 @@
                   {
                      "text": "Chemical component heavy atom count",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Chemical component heavy atom count",
-                     "context": "brief"
                   }
                ]
             },
@@ -3701,10 +3033,6 @@
                   {
                      "text": "Chemical component total bond count",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Chemical component total bond count",
-                     "context": "brief"
                   }
                ]
             },
@@ -3715,10 +3043,6 @@
                   {
                      "text": "Chemical component aromatic bond count",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Chemical component aromatic bond count",
-                     "context": "brief"
                   }
                ]
             },
@@ -3729,10 +3053,6 @@
                   {
                      "text": "The chemical component identifier.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The chemical component identifier.",
-                     "context": "brief"
                   }
                ]
             },
@@ -3744,10 +3064,6 @@
                   {
                      "text": "The initial date the chemical definition was released in the PDB repository.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The initial date the chemical definition was released in the PDB repository.",
-                     "context": "brief"
                   }
                ]
             },
@@ -3792,10 +3108,6 @@
                   {
                      "text": "The release status of the chemical definition.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The release status of the chemical definition.",
-                     "context": "brief"
                   }
                ]
             },
@@ -3807,10 +3119,6 @@
                   {
                      "text": "The date of last revision of the chemical definition.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "The date of last revision of the chemical definition.",
-                     "context": "brief"
                   }
                ]
             }
@@ -3832,10 +3140,6 @@
                      {
                         "text": "The value of _rcsb_chem_comp_related.comp_id is a reference to\n a chemical component definition.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _rcsb_chem_comp_related.comp_id is a reference to\n a chemical component definition.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3846,10 +3150,6 @@
                      {
                         "text": "The value of _rcsb_chem_comp_related.ordinal distinguishes\n related examples for each chemical component.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _rcsb_chem_comp_related.ordinal distinguishes\n related examples for each chemical component.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3887,10 +3187,6 @@
                      {
                         "text": "The method used to establish the resource correspondence.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The method used to establish the resource correspondence.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3908,10 +3204,6 @@
                      {
                         "text": "The resource identifier code for the related chemical reference.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The resource identifier code for the related chemical reference.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3959,10 +3251,6 @@
                      {
                         "text": "The resource name for the related chemical reference.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The resource name for the related chemical reference.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -3978,10 +3266,6 @@
                               {
                                  "text": "Members of the resource lineage as parent classification hierarchy depth (1-N).",
                                  "context": "dictionary"
-                              },
-                              {
-                                 "text": "Members of the resource lineage as parent classification hierarchy depth (1-N).",
-                                 "context": "brief"
                               }
                            ]
                         },
@@ -3996,10 +3280,6 @@
                               {
                                  "text": "Members of the resource lineage as parent classification codes.",
                                  "context": "dictionary"
-                              },
-                              {
-                                 "text": "Members of the resource lineage as parent classification codes.",
-                                 "context": "brief"
                               }
                            ]
                         },
@@ -4014,10 +3294,6 @@
                               {
                                  "text": "Members of the resource lineage as parent classification names.",
                                  "context": "dictionary"
-                              },
-                              {
-                                 "text": "Members of the resource lineage as parent classification names.",
-                                 "context": "brief"
                               }
                            ]
                         }
@@ -4025,14 +3301,7 @@
                      "additionalProperties": false
                   },
                   "uniqueItems": false,
-                  "rcsb_nested_indexing_context": [
-                     {
-                        "category_name": "resource_lineage",
-                        "category_path": [
-                           "rcsb_chem_comp_related.resource_lineage_depth"
-                        ]
-                     }
-                  ]
+                  "rcsb_nested_indexing": true
                }
             },
             "additionalProperties": false,
@@ -4042,8 +3311,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": true
+         "uniqueItems": true
       },
       "rcsb_chem_comp_synonyms": {
          "type": "array",
@@ -4057,10 +3325,6 @@
                      {
                         "text": "The chemical component to which this synonym applies.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The chemical component to which this synonym applies.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -4089,10 +3353,6 @@
                      {
                         "text": "This data item is an ordinal index for the\n RCSB_CHEM_COMP_SYNONYMS category.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "This data item is an ordinal index for the\n RCSB_CHEM_COMP_SYNONYMS category.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -4115,10 +3375,6 @@
                      {
                         "text": "The provenance of this synonym.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The provenance of this synonym.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -4144,10 +3400,6 @@
                      {
                         "text": "The value of _rcsb_chem_comp_target.comp_id is a reference to\n a chemical component definition.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _rcsb_chem_comp_target.comp_id is a reference to\n a chemical component definition.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -4158,10 +3410,6 @@
                      {
                         "text": "The type of target interaction.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The type of target interaction.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -4176,10 +3424,6 @@
                      {
                         "text": "The target name.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The target name.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -4190,10 +3434,6 @@
                      {
                         "text": "The value of _rcsb_chem_comp_target.ordinal distinguishes\n related examples for each chemical component.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The value of _rcsb_chem_comp_target.ordinal distinguishes\n related examples for each chemical component.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -4208,10 +3448,6 @@
                      {
                         "text": "A code indicating the provenance of the target interaction assignment",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "A code indicating the provenance of the target interaction assignment",
-                        "context": "brief"
                      }
                   ]
                },
@@ -4225,10 +3461,6 @@
                      {
                         "text": "The reference identifier code for the target interaction reference.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The reference identifier code for the target interaction reference.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -4245,10 +3477,6 @@
                      {
                         "text": "The reference database name for the target interaction.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "The reference database name for the target interaction.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -4261,10 +3489,6 @@
                         {
                            "text": "The actions of the target interaction.",
                            "context": "dictionary"
-                        },
-                        {
-                           "text": "The actions of the target interaction.",
-                           "context": "brief"
                         }
                      ]
                   },
@@ -4292,10 +3516,6 @@
                      {
                         "text": "Collection name associated with the data in the container.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Collection name associated with the data in the container.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -4306,10 +3526,6 @@
                      {
                         "text": "Version string for the schema and collection.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Version string for the schema and collection.",
-                        "context": "brief"
                      }
                   ]
                },
@@ -4320,10 +3536,6 @@
                      {
                         "text": "Schema name associated with the data in the container.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Schema name associated with the data in the container.",
-                        "context": "brief"
                      }
                   ]
                }
@@ -4348,10 +3560,6 @@
             {
                "text": "A unique identifier for the chemical definition in this container.",
                "context": "dictionary"
-            },
-            {
-               "text": "A unique identifier for the chemical definition in this container.",
-               "context": "brief"
             }
          ]
       }
