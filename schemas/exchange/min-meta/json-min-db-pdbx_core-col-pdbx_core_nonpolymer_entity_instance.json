@@ -63,8 +63,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "rcsb_nonpolymer_entity_instance_container_identifiers": {
          "type": "object",
@@ -170,6 +169,245 @@
             "entry_id"
          ]
       },
+      "rcsb_nonpolymer_instance_annotation": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "annotation_id": {
+                  "type": "string",
+                  "description": "An identifier for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation identifier",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "assignment_version": {
+                  "type": "string",
+                  "description": "Identifies the version of the annotation assignment.",
+                  "rcsb_description": [
+                     {
+                        "text": "Identifies the version of the annotation assignment.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation version",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "comp_id": {
+                  "type": "string",
+                  "description": "Chemical component identifier.",
+                  "rcsb_description": [
+                     {
+                        "text": "Chemical component identifier.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "description": {
+                  "type": "string",
+                  "description": "A description for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "A description for the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation description",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "name": {
+                  "type": "string",
+                  "description": "A name for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "A name for the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation name",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Ordinal identifier for this category",
+                  "rcsb_description": [
+                     {
+                        "text": "Ordinal identifier for this category",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "provenance_source": {
+                  "type": "string",
+                  "description": "Code identifying the individual, organization or program that\n assigned the annotation.",
+                  "rcsb_description": [
+                     {
+                        "text": "Code identifying the individual, organization or program that\n assigned the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation source",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "BIRD_MOLECULE_CLASS",
+                     "BIRD_MOLECULE_TYPE",
+                     "artifact",
+                     "modified_monomer",
+                     "mutation"
+                  ],
+                  "description": "A type or category of the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "BIRD_MOLECULE_CLASS",
+                        "detail": "Defines the function of the molecule."
+                     },
+                     {
+                        "value": "BIRD_MOLECULE_TYPE",
+                        "detail": "Defines the structural classification of the molecule."
+                     },
+                     {
+                        "value": "artifact",
+                        "detail": "Cloning artifact, expression tag, linker"
+                     },
+                     {
+                        "value": "modified_monomer",
+                        "detail": "Modified chemical component"
+                     },
+                     {
+                        "value": "mutation",
+                        "detail": "Engineered mutations and chemical modifications"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "A type or category of the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation type",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "annotation_lineage": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "depth": {
+                           "type": "integer",
+                           "description": "Members of the annotation lineage as parent lineage depth (1-N)",
+                           "rcsb_search_context": [
+                              "default-match"
+                           ],
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the annotation lineage as parent lineage depth (1-N)",
+                                 "context": "dictionary"
+                              },
+                              {
+                                 "text": "Annotation lineage depth",
+                                 "context": "brief"
+                              }
+                           ]
+                        },
+                        "id": {
+                           "type": "string",
+                           "description": "Members of the annotation lineage as parent class identifiers.",
+                           "rcsb_search_context": [
+                              "exact-match"
+                           ],
+                           "rcsb_full_text_priority": 10,
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the annotation lineage as parent class identifiers.",
+                                 "context": "dictionary"
+                              },
+                              {
+                                 "text": "Annotation lineage identifier",
+                                 "context": "brief"
+                              }
+                           ]
+                        },
+                        "name": {
+                           "type": "string",
+                           "description": "Members of the annotation lineage as parent class names.",
+                           "rcsb_search_context": [
+                              "exact-match",
+                              "full-text"
+                           ],
+                           "rcsb_full_text_priority": 10,
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the annotation lineage as parent class names.",
+                                 "context": "dictionary"
+                              },
+                              {
+                                 "text": "Annotation lineage name",
+                                 "context": "brief"
+                              }
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": true
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true,
+         "rcsb_nested_indexing": true,
+         "rcsb_nested_indexing_context": [
+            {
+               "category_name": "annotation_type",
+               "category_path": [
+                  "rcsb_nonpolymer_instance_annotation.type"
+               ]
+            }
+         ]
+      },
       "rcsb_nonpolymer_instance_feature": {
          "type": "array",
          "items": {
@@ -182,6 +420,10 @@
                      {
                         "text": "Identifies the version of the feature assignment.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature version",
+                        "context": "brief"
                      }
                   ]
                },
@@ -208,14 +450,14 @@
                "description": {
                   "type": "string",
                   "description": "A description for the feature.",
-                  "rcsb_search_context": [
-                     "full-text"
-                  ],
-                  "rcsb_full_text_priority": 1,
                   "rcsb_description": [
                      {
                         "text": "A description for the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature description",
+                        "context": "brief"
                      }
                   ]
                },
@@ -232,14 +474,14 @@
                "name": {
                   "type": "string",
                   "description": "A name for the feature.",
-                  "rcsb_search_context": [
-                     "full-text"
-                  ],
-                  "rcsb_full_text_priority": 1,
                   "rcsb_description": [
                      {
                         "text": "A name for the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature name",
+                        "context": "brief"
                      }
                   ]
                },
@@ -253,13 +495,17 @@
                      }
                   ]
                },
-               "provenance_code": {
+               "provenance_source": {
                   "type": "string",
                   "description": "Code identifying the individual, organization or program that\n assigned the feature.",
                   "rcsb_description": [
                      {
                         "text": "Code identifying the individual, organization or program that\n assigned the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature source",
+                        "context": "brief"
                      }
                   ]
                },
@@ -274,10 +520,6 @@
                      "RSRZ_OUTLIER"
                   ],
                   "description": "A type or category of the feature.",
-                  "rcsb_search_context": [
-                     "exact-match"
-                  ],
-                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "HAS_COVALENT_LINKAGE",
@@ -308,6 +550,10 @@
                      {
                         "text": "A type or category of the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature type",
+                        "context": "brief"
                      }
                   ]
                },
@@ -339,9 +585,6 @@
                         "reference": {
                            "type": "number",
                            "description": "The reference value of the feature.",
-                           "rcsb_search_context": [
-                              "default-match"
-                           ],
                            "rcsb_description": [
                               {
                                  "text": "The reference value of the feature.",
@@ -352,9 +595,6 @@
                         "reported": {
                            "type": "number",
                            "description": "The reported value of the feature.",
-                           "rcsb_search_context": [
-                              "default-match"
-                           ],
                            "rcsb_description": [
                               {
                                  "text": "The reported value of the feature.",
@@ -394,57 +634,7 @@
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false,
-                  "rcsb_nested_indexing": true
-               },
-               "feature_class_lineage": {
-                  "type": "array",
-                  "items": {
-                     "type": "object",
-                     "properties": {
-                        "depth": {
-                           "type": "integer",
-                           "description": "Members of the feature class lineage as parent lineage depth (1-N)",
-                           "rcsb_description": [
-                              {
-                                 "text": "Members of the feature class lineage as parent lineage depth (1-N)",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        },
-                        "id": {
-                           "type": "string",
-                           "description": "Members of the feature class lineage as parent class identifiers.",
-                           "rcsb_search_context": [
-                              "exact-match"
-                           ],
-                           "rcsb_full_text_priority": 10,
-                           "rcsb_description": [
-                              {
-                                 "text": "Members of the feature class lineage as parent class identifiers.",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        },
-                        "name": {
-                           "type": "string",
-                           "description": "Members of the feature class lineage as parent class names.",
-                           "rcsb_search_context": [
-                              "exact-match"
-                           ],
-                           "rcsb_full_text_priority": 10,
-                           "rcsb_description": [
-                              {
-                                 "text": "Members of the feature class lineage as parent class names.",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        }
-                     },
-                     "additionalProperties": false
-                  },
-                  "uniqueItems": false,
-                  "rcsb_nested_indexing": true
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false,
@@ -453,8 +643,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": true
+         "uniqueItems": true
       },
       "rcsb_nonpolymer_instance_feature_summary": {
          "type": "array",
@@ -470,6 +659,46 @@
                   "rcsb_description": [
                      {
                         "text": "The feature count.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "maximum_length": {
+                  "type": "integer",
+                  "description": "The maximum feature length.",
+                  "rcsb_description": [
+                     {
+                        "text": "The maximum feature length.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "maximum_value": {
+                  "type": "number",
+                  "description": "The maximum feature value.",
+                  "rcsb_description": [
+                     {
+                        "text": "The maximum feature value.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "minimum_length": {
+                  "type": "integer",
+                  "description": "The minimum feature length.",
+                  "rcsb_description": [
+                     {
+                        "text": "The minimum feature length.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "minimum_value": {
+                  "type": "number",
+                  "description": "The minimum feature value.",
+                  "rcsb_description": [
+                     {
+                        "text": "The minimum feature value.",
                         "context": "dictionary"
                      }
                   ]
@@ -527,7 +756,15 @@
          },
          "minItems": 1,
          "uniqueItems": true,
-         "rcsb_nested_indexing": true
+         "rcsb_nested_indexing": true,
+         "rcsb_nested_indexing_context": [
+            {
+               "category_name": "feature_summary",
+               "category_path": [
+                  "rcsb_nonpolymer_instance_feature_summary.type"
+               ]
+            }
+         ]
       },
       "rcsb_nonpolymer_struct_conn": {
          "type": "array",
@@ -585,10 +822,10 @@
                },
                "ordinal_id": {
                   "type": "integer",
-                  "description": "The value of _rcsb_nonpolymer_struct_conn.id must uniquely identify a record in\n the rcsb_nonpolymer_struct_conn list.\n",
+                  "description": "The value of _rcsb_nonpolymer_struct_conn.id must uniquely identify a record in\n the rcsb_nonpolymer_struct_conn list.",
                   "rcsb_description": [
                      {
-                        "text": "The value of _rcsb_nonpolymer_struct_conn.id must uniquely identify a record in\n the rcsb_nonpolymer_struct_conn list.\n",
+                        "text": "The value of _rcsb_nonpolymer_struct_conn.id must uniquely identify a record in\n the rcsb_nonpolymer_struct_conn list.",
                         "context": "dictionary"
                      }
                   ]
@@ -794,8 +1031,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "rcsb_id": {
          "type": "string",
@@ -818,7 +1054,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 7.0.3",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 7.0.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 7.0.3"
+   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 8.0.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 8.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.0.0"
 }

@@ -356,10 +356,10 @@
                      "examples": [
                         "Bleary, Percival R."
                      ],
-                     "description": "Names of the authors of the citation; relevant for journal\n articles, books and book chapters.  Names are separated by vertical bars.\n\n The family name(s), followed by a comma and including any\n dynastic components, precedes the first name(s) or initial(s).\n",
+                     "description": "Names of the authors of the citation; relevant for journal\n articles, books and book chapters.  Names are separated by vertical bars.\n\n The family name(s), followed by a comma and including any\n dynastic components, precedes the first name(s) or initial(s).",
                      "rcsb_description": [
                         {
-                           "text": "Names of the authors of the citation; relevant for journal\n articles, books and book chapters.  Names are separated by vertical bars.\n\n The family name(s), followed by a comma and including any\n dynastic components, precedes the first name(s) or initial(s).\n",
+                           "text": "Names of the authors of the citation; relevant for journal\n articles, books and book chapters.  Names are separated by vertical bars.\n\n The family name(s), followed by a comma and including any\n dynastic components, precedes the first name(s) or initial(s).",
                            "context": "dictionary"
                         },
                         {
@@ -369,6 +369,23 @@
                      ]
                   },
                   "uniqueItems": false
+               },
+               "rcsb_is_primary": {
+                  "type": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ],
+                  "examples": [
+                     "Y"
+                  ],
+                  "description": "Flag to indicate a primary citation.",
+                  "rcsb_description": [
+                     {
+                        "text": "Flag to indicate a primary citation.",
+                        "context": "dictionary"
+                     }
+                  ]
                },
                "rcsb_journal_abbrev": {
                   "type": "string",
@@ -380,6 +397,10 @@
                      {
                         "text": "Normalized journal abbreviation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Journal Name (Abbreviated)",
+                        "context": "brief"
                      }
                   ]
                },
@@ -446,8 +467,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "citation_author": {
          "type": "array",
@@ -522,8 +542,7 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       },
       "software": {
          "type": "array",
@@ -1627,14 +1646,13 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": false
+         "uniqueItems": true
       }
    },
    "additionalProperties": false,
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-cluster_provenance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: sequence_clusters collection: cluster_provenance version: 1.1.0",
-   "description": "RCSB Exchange Database JSON schema derived from the sequence_clusters content type schema. This schema supports collection cluster_provenance version 1.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-cluster_provenance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 1.1.0"
+   "title": "schema: sequence_clusters collection: cluster_provenance version: 1.2.0",
+   "description": "RCSB Exchange Database JSON schema derived from the sequence_clusters content type schema. This schema supports collection cluster_provenance version 1.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-cluster_provenance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 1.2.0"
 }
