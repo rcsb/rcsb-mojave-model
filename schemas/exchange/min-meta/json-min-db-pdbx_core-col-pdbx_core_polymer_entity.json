@@ -2974,46 +2974,6 @@
                      }
                   ]
                },
-               "feature_ranges": {
-                  "type": "array",
-                  "items": {
-                     "type": "object",
-                     "properties": {
-                        "feature_positions_beg_seq_id": {
-                           "type": "integer",
-                           "description": "An identifier for the monomer at which this segment of the feature begins.",
-                           "rcsb_description": [
-                              {
-                                 "text": "An identifier for the monomer at which this segment of the feature begins.",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        },
-                        "feature_positions_end_seq_id": {
-                           "type": "integer",
-                           "description": "An identifier for the monomer at which this segment of the feature ends.",
-                           "rcsb_description": [
-                              {
-                                 "text": "An identifier for the monomer at which this segment of the feature ends.",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        },
-                        "feature_positions_value": {
-                           "type": "number",
-                           "description": "The value for the feature over this monomer segment.",
-                           "rcsb_description": [
-                              {
-                                 "text": "The value for the feature over this monomer segment.",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        }
-                     },
-                     "additionalProperties": false
-                  },
-                  "uniqueItems": false
-               },
                "feature_positions": {
                   "type": "array",
                   "items": {
@@ -3025,6 +2985,36 @@
                            "rcsb_description": [
                               {
                                  "text": "An identifier for the monomer(s) corresponding to the feature assignment.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "beg_seq_id": {
+                           "type": "integer",
+                           "description": "An identifier for the monomer at which this segment of the feature begins.",
+                           "rcsb_description": [
+                              {
+                                 "text": "An identifier for the monomer at which this segment of the feature begins.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "end_seq_id": {
+                           "type": "integer",
+                           "description": "An identifier for the monomer at which this segment of the feature ends.",
+                           "rcsb_description": [
+                              {
+                                 "text": "An identifier for the monomer at which this segment of the feature ends.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "value": {
+                           "type": "number",
+                           "description": "The value for the feature over this monomer segment.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The value for the feature over this monomer segment.",
                                  "context": "dictionary"
                               }
                            ]
@@ -3287,7 +3277,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.0.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.0.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.0.1"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.0.2",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.0.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.0.2"
 }
