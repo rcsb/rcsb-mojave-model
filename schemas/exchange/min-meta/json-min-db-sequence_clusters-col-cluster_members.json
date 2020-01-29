@@ -57,7 +57,11 @@
                   ]
                }
             },
-            "additionalProperties": false
+            "additionalProperties": false,
+            "required": [
+               "entity_id",
+               "entry_id"
+            ]
          },
          "uniqueItems": false
       }
