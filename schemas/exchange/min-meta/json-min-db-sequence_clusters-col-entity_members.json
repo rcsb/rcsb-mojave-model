@@ -57,7 +57,11 @@
                   ]
                }
             },
-            "additionalProperties": false
+            "additionalProperties": false,
+            "required": [
+               "cluster_id",
+               "identity"
+            ]
          },
          "uniqueItems": false
       }
