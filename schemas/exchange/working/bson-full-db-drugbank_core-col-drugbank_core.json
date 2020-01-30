@@ -1,0 +1,138 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "drugbank_container_identifiers": {
+         "bsonType": "object",
+         "properties": {
+            "drugbank_id": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "drugbank_id"
+         ]
+      },
+      "drugbank_info": {
+         "bsonType": "object",
+         "properties": {
+            "affected_organisms": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "atc_codes": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "brand_names": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "cas_number": {
+               "bsonType": "string"
+            },
+            "description": {
+               "bsonType": "string"
+            },
+            "drug_categories": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "drug_groups": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "drugbank_id": {
+               "bsonType": "string"
+            },
+            "indication": {
+               "bsonType": "string"
+            },
+            "mechanism_of_action": {
+               "bsonType": "string"
+            },
+            "name": {
+               "bsonType": "string"
+            },
+            "pharmacology": {
+               "bsonType": "string"
+            },
+            "synonyms": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "drugbank_id"
+         ]
+      },
+      "drugbank_target": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "interaction_type": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "ordinal": {
+                  "bsonType": "int"
+               },
+               "organism_common_name": {
+                  "bsonType": "string"
+               },
+               "reference_database_accession_code": {
+                  "bsonType": "string"
+               },
+               "reference_database_name": {
+                  "bsonType": "string",
+                  "enum": [
+                     "UniProt"
+                  ]
+               },
+               "seq_one_letter_code": {
+                  "bsonType": "string"
+               },
+               "target_actions": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "string"
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false
+}
