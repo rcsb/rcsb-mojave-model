@@ -1,0 +1,239 @@
+{
+   "NAME": "data_exchange",
+   "APP_NAME": "ANY",
+   "DATABASE_NAME": "data_exchange",
+   "DATABASE_VERSION": "5.2.0",
+   "SELECTION_FILTERS": {},
+   "SCHEMA_DICT": {
+      "RCSB_DATA_EXCHANGE_STATUS": {
+         "SCHEMA_ID": "RCSB_DATA_EXCHANGE_STATUS",
+         "SCHEMA_NAME": "rcsb_data_exchange_status",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "UPDATE_ID": "update_id",
+            "DATABASE_NAME": "database_name",
+            "OBJECT_NAME": "object_name",
+            "UPDATE_BEGIN_TIMESTAMP": "update_begin_timestamp",
+            "UPDATE_END_TIMESTAMP": "update_end_timestamp",
+            "UPDATE_STATUS_FLAG": "update_status_flag"
+         },
+         "ATTRIBUTE_MAP": {
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_data_exchange_status",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DATABASE_NAME": {
+               "CATEGORY": "rcsb_data_exchange_status",
+               "ATTRIBUTE": "database_name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "OBJECT_NAME": {
+               "CATEGORY": "rcsb_data_exchange_status",
+               "ATTRIBUTE": "object_name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_BEGIN_TIMESTAMP": {
+               "CATEGORY": "rcsb_data_exchange_status",
+               "ATTRIBUTE": "update_begin_timestamp",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_END_TIMESTAMP": {
+               "CATEGORY": "rcsb_data_exchange_status",
+               "ATTRIBUTE": "update_end_timestamp",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_STATUS_FLAG": {
+               "CATEGORY": "rcsb_data_exchange_status",
+               "ATTRIBUTE": "update_status_flag",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "UPDATE_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DATABASE_NAME": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "OBJECT_NAME": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_BEGIN_TIMESTAMP": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "datetime",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_END_TIMESTAMP": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "datetime",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_STATUS_FLAG": {
+               "ORDER": 6,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "N",
+                  "Y"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "UPDATE_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_data_exchange_status": {
+               "ATTRIBUTES": [
+                  "update_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {},
+         "SLICE_UNIT_CARDINALITY": {},
+         "SLICE_CATEGORY_EXTRAS": {}
+      }
+   },
+   "DOCUMENT_DICT": {
+      "CONTENT_TYPE_COLLECTION_INFO": [
+         {
+            "NAME": "rcsb_data_exchange_status",
+            "VERSION": "1.2.0"
+         }
+      ],
+      "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
+         "rcsb_data_exchange_status": [
+            "update_id",
+            "database_name",
+            "object_name"
+         ]
+      },
+      "COLLECTION_DOCUMENT_REPLACE_ATTRIBUTE_NAMES": {
+         "rcsb_data_exchange_status": [
+            "update_id",
+            "database_name",
+            "object_name"
+         ]
+      },
+      "COLLECTION_DOCUMENT_PRIVATE_KEYS": {
+         "rcsb_data_exchange_status": []
+      },
+      "COLLECTION_DOCUMENT_INDICES": {
+         "rcsb_data_exchange_status": [
+            {
+               "INDEX_NAME": "primary",
+               "ATTRIBUTE_NAMES": [
+                  "update_id",
+                  "database_name",
+                  "object_name"
+               ]
+            }
+         ]
+      },
+      "COLLECTION_CONTENT": {
+         "rcsb_data_exchange_status": {
+            "INCLUDE": [
+               "RCSB_DATA_EXCHANGE_STATUS"
+            ],
+            "EXCLUDE": [],
+            "SLICE_FILTER": null,
+            "EXCLUDED_ATTRIBUTES": {}
+         }
+      },
+      "COLLECTION_SUB_CATEGORY_AGGREGATES": {
+         "rcsb_data_exchange_status": []
+      }
+   },
+   "SLICE_PARENT_ITEMS": {},
+   "SLICE_PARENT_FILTERS": {}
+}

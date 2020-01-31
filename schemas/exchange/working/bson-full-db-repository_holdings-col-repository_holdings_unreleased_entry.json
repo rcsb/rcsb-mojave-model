@@ -1,0 +1,115 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "rcsb_repository_holdings_prerelease": {
+         "bsonType": "object",
+         "properties": {
+            "seq_one_letter_code": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            }
+         },
+         "additionalProperties": false
+      },
+      "rcsb_repository_holdings_unreleased": {
+         "bsonType": "object",
+         "properties": {
+            "audit_authors": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "author_prerelease_sequence_status": {
+               "bsonType": "string",
+               "enum": [
+                  "HOLD FOR PUBLICATION",
+                  "HOLD FOR RELEASE",
+                  "RELEASE IMMEDIATELY",
+                  "RELEASE NOW"
+               ]
+            },
+            "deposit_date": {
+               "bsonType": "date"
+            },
+            "deposit_date_coordinates": {
+               "bsonType": "date"
+            },
+            "deposit_date_nmr_restraints": {
+               "bsonType": "date"
+            },
+            "deposit_date_structure_factors": {
+               "bsonType": "date"
+            },
+            "hold_date_coordinates": {
+               "bsonType": "date"
+            },
+            "hold_date_nmr_restraints": {
+               "bsonType": "date"
+            },
+            "hold_date_structure_factors": {
+               "bsonType": "date"
+            },
+            "release_date": {
+               "bsonType": "date"
+            },
+            "status_code": {
+               "bsonType": "string",
+               "enum": [
+                  "AUCO",
+                  "AUTH",
+                  "HOLD",
+                  "HPUB",
+                  "POLC",
+                  "PROC",
+                  "REFI",
+                  "REPL",
+                  "WAIT",
+                  "WDRN"
+               ]
+            },
+            "title": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "status_code"
+         ]
+      },
+      "rcsb_repository_holdings_unreleased_entry_container_identifiers": {
+         "bsonType": "object",
+         "properties": {
+            "entry_id": {
+               "bsonType": "string"
+            },
+            "rcsb_id": {
+               "bsonType": "string"
+            },
+            "update_id": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "entry_id",
+            "rcsb_id",
+            "update_id"
+         ]
+      },
+      "rcsb_id": {
+         "bsonType": "string"
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ]
+}
