@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.12] - 2020-01-30 (pre-beta)
+### Changed
+- enumeration updates
+
+### Added
+- configuration and validation schema files
+
 ## [0.1.11] - 2020-01-29
 ### Changed
 - organisation of annotations
@@ -14,23 +21,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - feature ranges and positions are consolidated
 
-## [0.1.10] - 2020-01-07
-### Changed
 
+## [0.1.10] - 2020-01-07
 ### Added
 - EC combined (UniProt and PDB primary)
 - search context metadata for organism name and related annotations resource
 
-### Removed
 
 ## [0.1.9] - 2019-12-20
-
 ### Changed
 - shape descriptor schema
 
-### Added
-
-### Removed
 
 ## [0.1.8] - 2019-12-16 (alpha-6)
 
@@ -45,16 +46,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - individual obsolete and in-silico schemas
 
+
 ## [0.1.7] - 2019-12-10
 
 ### Changed
 - entity and entity instance cores are split into polymer, non-polymer, branched
 - fixed type mismatch for search metadata from "core_uniprot_container_identifiers.pubmed_id"
 
-### Added
-
 ### Removed
 - search metadata from "core_entry_container_identifiers.pubmed_id"
+
 
 ## [0.1.6] - 2019-11-05
 
@@ -74,6 +75,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [0.1.4] - 2019-10-15
+
 ### Added
 - Definitions for RCSB metadata extensions
 - JSON schema instances are populated with metadata extensions 
@@ -81,11 +83,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - __core_entity__ schema defines summary info for polymer monomers present in the sequence
 - Feature tables to entity, entity instance, uniprot and validation cores
 
-
 ### Changed
 - __chem_comp__ and  __bird__ schemas are combined in a single file
 - __core_uniprot__ has undergone major refactoring of attribute names 
-
 
 ### Removed
 - _rcsb_publication_ field from __core_entry__. Data is available in PubMed core
