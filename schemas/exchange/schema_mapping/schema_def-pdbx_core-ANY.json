@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "8.1.0",
+   "DATABASE_VERSION": "8.1.1",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -11238,6 +11238,7 @@
                   "HITACHI EF2000",
                   "HITACHI EF3000",
                   "HITACHI H-9500SD",
+                  "HITACHI H3000 UHVEM",
                   "HITACHI H7600",
                   "HITACHI HF2000",
                   "HITACHI HF3000",
@@ -98740,7 +98741,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "pdbx_core_entry",
-            "VERSION": "8.0.2"
+            "VERSION": "8.0.3"
          },
          {
             "NAME": "pdbx_core_assembly",
@@ -98812,13 +98813,16 @@
             "rcsb_assembly_container_identifiers.entry_id"
          ],
          "pdbx_core_polymer_entity": [
-            "rcsb_polymer_entity_container_identifiers.entry_id"
+            "rcsb_polymer_entity_container_identifiers.entry_id",
+            "rcsb_polymer_entity_container_identifiers.entity_id"
          ],
          "pdbx_core_nonpolymer_entity": [
-            "rcsb_nonpolymer_entity_container_identifiers.entry_id"
+            "rcsb_nonpolymer_entity_container_identifiers.entry_id",
+            "rcsb_nonpolymer_entity_container_identifiers.entity_id"
          ],
          "pdbx_core_branched_entity": [
-            "rcsb_branched_entity_container_identifiers.entry_id"
+            "rcsb_branched_entity_container_identifiers.entry_id",
+            "rcsb_branched_entity_container_identifiers.entity_id"
          ],
          "pdbx_core_polymer_entity_instance": [
             "rcsb_polymer_entity_instance_container_identifiers.entry_id"
@@ -98999,26 +99003,13 @@
             {
                "INDEX_NAME": "search_1",
                "ATTRIBUTE_NAMES": [
-                  "rcsb_polymer_entity_container_identifiers.entry_id",
-                  "rcsb_polymer_entity_container_identifiers.entry_id"
+                  "rcsb_polymer_entity_container_identifiers.rcsb_id"
                ]
             },
             {
                "INDEX_NAME": "search_2",
                "ATTRIBUTE_NAMES": [
-                  "rcsb_polymer_entity_container_identifiers.rcsb_id"
-               ]
-            },
-            {
-               "INDEX_NAME": "search_3",
-               "ATTRIBUTE_NAMES": [
                   "rcsb_id"
-               ]
-            },
-            {
-               "INDEX_NAME": "replace",
-               "ATTRIBUTE_NAMES": [
-                  "rcsb_polymer_entity_container_identifiers.entry_id"
                ]
             }
          ],
@@ -99033,26 +99024,13 @@
             {
                "INDEX_NAME": "search_1",
                "ATTRIBUTE_NAMES": [
-                  "rcsb_nonpolymer_entity_container_identifiers.entry_id",
-                  "rcsb_nonpolymer_entity_container_identifiers.entry_id"
-               ]
-            },
-            {
-               "INDEX_NAME": "search_4",
-               "ATTRIBUTE_NAMES": [
                   "rcsb_nonpolymer_entity_container_identifiers.rcsb_id"
                ]
             },
             {
-               "INDEX_NAME": "search_5",
+               "INDEX_NAME": "search_2",
                "ATTRIBUTE_NAMES": [
                   "rcsb_id"
-               ]
-            },
-            {
-               "INDEX_NAME": "replace",
-               "ATTRIBUTE_NAMES": [
-                  "rcsb_nonpolymer_entity_container_identifiers.entry_id"
                ]
             }
          ],
@@ -99067,26 +99045,13 @@
             {
                "INDEX_NAME": "search_1",
                "ATTRIBUTE_NAMES": [
-                  "rcsb_branched_entity_container_identifiers.entry_id",
-                  "rcsb_branched_entity_container_identifiers.entry_id"
+                  "rcsb_branched_entity_container_identifiers.rcsb_id"
                ]
             },
             {
                "INDEX_NAME": "search_2",
                "ATTRIBUTE_NAMES": [
-                  "rcsb_branched_entity_container_identifiers.rcsb_id"
-               ]
-            },
-            {
-               "INDEX_NAME": "search_3",
-               "ATTRIBUTE_NAMES": [
                   "rcsb_id"
-               ]
-            },
-            {
-               "INDEX_NAME": "replace",
-               "ATTRIBUTE_NAMES": [
-                  "rcsb_branched_entity_container_identifiers.entry_id"
                ]
             }
          ],
