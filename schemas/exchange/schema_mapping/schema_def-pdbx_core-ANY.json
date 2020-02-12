@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "8.1.1",
+   "DATABASE_VERSION": "8.1.2",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -69734,7 +69734,6 @@
             "ASSIGNMENT_VERSION": "assignment_version",
             "ASYM_ID": "asym_id",
             "AUTH_ASYM_ID": "auth_asym_id",
-            "COMP_ID": "comp_id",
             "DESCRIPTION": "description",
             "ENTITY_ID": "entity_id",
             "ENTRY_ID": "entry_id",
@@ -69776,12 +69775,6 @@
             "AUTH_ASYM_ID": {
                "CATEGORY": "rcsb_entity_instance_feature",
                "ATTRIBUTE": "auth_asym_id",
-               "METHOD_NAME": null,
-               "ARGUMENTS": null
-            },
-            "COMP_ID": {
-               "CATEGORY": "rcsb_entity_instance_feature",
-               "ATTRIBUTE": "comp_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -69959,7 +69952,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "COMP_ID": {
+            "DESCRIPTION": {
                "ORDER": 5,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -69975,24 +69968,8 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "DESCRIPTION": {
-               "ORDER": 6,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
             "ENTITY_ID": {
-               "ORDER": 7,
+               "ORDER": 6,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70008,7 +69985,7 @@
                "SUB_CATEGORIES": []
             },
             "ENTRY_ID": {
-               "ORDER": 8,
+               "ORDER": 7,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70024,7 +70001,7 @@
                "SUB_CATEGORIES": []
             },
             "FEATURE_ID": {
-               "ORDER": 9,
+               "ORDER": 8,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70040,7 +70017,7 @@
                "SUB_CATEGORIES": []
             },
             "FEATURE_POSITIONS_BEG_COMP_ID": {
-               "ORDER": 10,
+               "ORDER": 9,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70058,7 +70035,7 @@
                ]
             },
             "FEATURE_POSITIONS_BEG_SEQ_ID": {
-               "ORDER": 11,
+               "ORDER": 10,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70076,7 +70053,7 @@
                ]
             },
             "FEATURE_POSITIONS_END_SEQ_ID": {
-               "ORDER": 12,
+               "ORDER": 11,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70094,7 +70071,7 @@
                ]
             },
             "FEATURE_POSITIONS_VALUE": {
-               "ORDER": 13,
+               "ORDER": 12,
                "NULLABLE": true,
                "PRECISION": 3,
                "PRIMARY_KEY": false,
@@ -70112,7 +70089,7 @@
                ]
             },
             "FEATURE_VALUE_COMP_ID": {
-               "ORDER": 14,
+               "ORDER": 13,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70130,7 +70107,7 @@
                ]
             },
             "FEATURE_VALUE_DETAILS": {
-               "ORDER": 15,
+               "ORDER": 14,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70148,7 +70125,7 @@
                ]
             },
             "FEATURE_VALUE_REFERENCE": {
-               "ORDER": 16,
+               "ORDER": 15,
                "NULLABLE": true,
                "PRECISION": 3,
                "PRIMARY_KEY": false,
@@ -70166,7 +70143,7 @@
                ]
             },
             "FEATURE_VALUE_REPORTED": {
-               "ORDER": 17,
+               "ORDER": 16,
                "NULLABLE": true,
                "PRECISION": 3,
                "PRIMARY_KEY": false,
@@ -70184,7 +70161,7 @@
                ]
             },
             "FEATURE_VALUE_UNCERTAINTY_ESTIMATE": {
-               "ORDER": 18,
+               "ORDER": 17,
                "NULLABLE": true,
                "PRECISION": 3,
                "PRIMARY_KEY": false,
@@ -70202,7 +70179,7 @@
                ]
             },
             "FEATURE_VALUE_UNCERTAINTY_ESTIMATE_TYPE": {
-               "ORDER": 19,
+               "ORDER": 18,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70222,7 +70199,7 @@
                ]
             },
             "NAME": {
-               "ORDER": 20,
+               "ORDER": 19,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70238,7 +70215,7 @@
                "SUB_CATEGORIES": []
             },
             "PROVENANCE_SOURCE": {
-               "ORDER": 21,
+               "ORDER": 20,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70254,7 +70231,7 @@
                "SUB_CATEGORIES": []
             },
             "REFERENCE_SCHEME": {
-               "ORDER": 22,
+               "ORDER": 21,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70275,7 +70252,7 @@
                "SUB_CATEGORIES": []
             },
             "TYPE": {
-               "ORDER": 23,
+               "ORDER": 22,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70436,6 +70413,7 @@
             "ORDINAL": "ordinal",
             "ASYM_ID": "asym_id",
             "AUTH_ASYM_ID": "auth_asym_id",
+            "COMP_ID": "comp_id",
             "COUNT": "count",
             "COVERAGE": "coverage",
             "ENTITY_ID": "entity_id",
@@ -70462,6 +70440,12 @@
             "AUTH_ASYM_ID": {
                "CATEGORY": "rcsb_entity_instance_feature_summary",
                "ATTRIBUTE": "auth_asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "COMP_ID": {
+               "CATEGORY": "rcsb_entity_instance_feature_summary",
+               "ATTRIBUTE": "comp_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -70569,8 +70553,24 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "COUNT": {
+            "COMP_ID": {
                "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "COUNT": {
+               "ORDER": 5,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70586,7 +70586,7 @@
                "SUB_CATEGORIES": []
             },
             "COVERAGE": {
-               "ORDER": 5,
+               "ORDER": 6,
                "NULLABLE": true,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
@@ -70602,22 +70602,6 @@
                "SUB_CATEGORIES": []
             },
             "ENTITY_ID": {
-               "ORDER": 6,
-               "NULLABLE": false,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "ENTRY_ID": {
                "ORDER": 7,
                "NULLABLE": false,
                "PRECISION": 0,
@@ -70633,8 +70617,24 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "MAXIMUM_LENGTH": {
+            "ENTRY_ID": {
                "ORDER": 8,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MAXIMUM_LENGTH": {
+               "ORDER": 9,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70650,7 +70650,7 @@
                "SUB_CATEGORIES": []
             },
             "MAXIMUM_VALUE": {
-               "ORDER": 9,
+               "ORDER": 10,
                "NULLABLE": true,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
@@ -70666,7 +70666,7 @@
                "SUB_CATEGORIES": []
             },
             "MINIMUM_LENGTH": {
-               "ORDER": 10,
+               "ORDER": 11,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70682,7 +70682,7 @@
                "SUB_CATEGORIES": []
             },
             "MINIMUM_VALUE": {
-               "ORDER": 11,
+               "ORDER": 12,
                "NULLABLE": true,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
@@ -70698,7 +70698,7 @@
                "SUB_CATEGORIES": []
             },
             "TYPE": {
-               "ORDER": 12,
+               "ORDER": 13,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -98787,7 +98787,7 @@
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity",
-            "VERSION": "8.0.3"
+            "VERSION": "8.0.4"
          },
          {
             "NAME": "pdbx_core_branched_entity",
@@ -98799,7 +98799,7 @@
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity_instance",
-            "VERSION": "8.0.3"
+            "VERSION": "8.0.4"
          },
          {
             "NAME": "pdbx_core_branched_entity_instance",
@@ -99997,12 +99997,14 @@
                "rcsb_polymer_instance_annotation": [
                   "asym_id",
                   "auth_asym_id",
+                  "auth_seq_id",
                   "entity_id",
                   "entry_id"
                ],
                "rcsb_polymer_instance_feature_summary": [
                   "asym_id",
                   "auth_asym_id",
+                  "auth_seq_id",
                   "entity_id",
                   "entry_id",
                   "ordinal"
@@ -100119,6 +100121,7 @@
                "rcsb_nonpolymer_instance_feature": [
                   "asym_id",
                   "auth_asym_id",
+                  "auth_seq_id",
                   "entity_id",
                   "entry_id"
                ],
@@ -100131,6 +100134,7 @@
                "rcsb_nonpolymer_instance_feature_summary": [
                   "asym_id",
                   "auth_asym_id",
+                  "auth_seq_id",
                   "entity_id",
                   "entry_id",
                   "ordinal"
