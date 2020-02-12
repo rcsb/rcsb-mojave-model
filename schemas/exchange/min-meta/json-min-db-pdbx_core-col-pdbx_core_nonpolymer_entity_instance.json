@@ -209,10 +209,18 @@
                "comp_id": {
                   "type": "string",
                   "description": "Chemical component identifier.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "Chemical component identifier.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation component identifier",
+                        "context": "brief"
                      }
                   ]
                },
@@ -281,11 +289,8 @@
                "type": {
                   "type": "string",
                   "enum": [
-                     "BIRD_MOLECULE_CLASS",
-                     "BIRD_MOLECULE_TYPE",
-                     "artifact",
-                     "modified_monomer",
-                     "mutation"
+                     "HAS_COVALENT_LINKAGE",
+                     "HAS_METAL_COORDINATION_LINKAGE"
                   ],
                   "description": "A type or category of the annotation.",
                   "rcsb_search_context": [
@@ -294,24 +299,12 @@
                   "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
-                        "value": "BIRD_MOLECULE_CLASS",
-                        "detail": "Defines the function of the molecule."
+                        "value": "HAS_COVALENT_LINKAGE",
+                        "detail": "Has a covalent attachment"
                      },
                      {
-                        "value": "BIRD_MOLECULE_TYPE",
-                        "detail": "Defines the structural classification of the molecule."
-                     },
-                     {
-                        "value": "artifact",
-                        "detail": "Cloning artifact, expression tag, linker"
-                     },
-                     {
-                        "value": "modified_monomer",
-                        "detail": "Modified chemical component"
-                     },
-                     {
-                        "value": "mutation",
-                        "detail": "Engineered mutations and chemical modifications"
+                        "value": "HAS_METAL_COORDINATION_LINKAGE",
+                        "detail": "Has a metal coordination attachment"
                      }
                   ],
                   "rcsb_description": [
@@ -648,6 +641,30 @@
          "items": {
             "type": "object",
             "properties": {
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "Residue number for non-polymer entity instance.",
+                  "rcsb_description": [
+                     {
+                        "text": "Residue number for non-polymer entity instance.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "comp_id": {
+                  "type": "string",
+                  "description": "Component identifier for non-polymer entity instance.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "Component identifier for non-polymer entity instance.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "count": {
                   "type": "integer",
                   "description": "The feature count.",

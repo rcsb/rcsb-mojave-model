@@ -2,7 +2,7 @@
    "NAME": "bird_chem_comp_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "bird_chem_comp_core",
-   "DATABASE_VERSION": "6.3.0",
+   "DATABASE_VERSION": "6.3.1",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -3932,6 +3932,7 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "branched",
                   "polymer",
                   "single molecule"
                ],
@@ -6833,7 +6834,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "bird_chem_comp_core",
-            "VERSION": "6.5.2"
+            "VERSION": "6.5.3"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
@@ -6888,12 +6889,6 @@
                "INDEX_NAME": "search_4",
                "ATTRIBUTE_NAMES": [
                   "rcsb_id"
-               ]
-            },
-            {
-               "INDEX_NAME": "replace",
-               "ATTRIBUTE_NAMES": [
-                  "chem_comp.id"
                ]
             }
          ]

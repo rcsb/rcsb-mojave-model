@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "8.1.0",
+   "DATABASE_VERSION": "8.1.1",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -11238,6 +11238,7 @@
                   "HITACHI EF2000",
                   "HITACHI EF3000",
                   "HITACHI H-9500SD",
+                  "HITACHI H3000 UHVEM",
                   "HITACHI H7600",
                   "HITACHI HF2000",
                   "HITACHI HF3000",
@@ -67195,10 +67196,7 @@
                "ENUMERATION": [
                   "BIRD_MOLECULE_CLASS",
                   "BIRD_MOLECULE_TYPE",
-                  "SUBJECT_OF_INVESTIGATION",
-                  "artifact",
-                  "modified_monomer",
-                  "mutation"
+                  "SUBJECT_OF_INVESTIGATION"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -69275,13 +69273,10 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
-                  "BIRD_MOLECULE_CLASS",
-                  "BIRD_MOLECULE_TYPE",
                   "CATH",
-                  "SCOP",
-                  "artifact",
-                  "modified_monomer",
-                  "mutation"
+                  "HAS_COVALENT_LINKAGE",
+                  "HAS_METAL_COORDINATION_LINKAGE",
+                  "SCOP"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -74697,10 +74692,7 @@
                "ENUMERATION": [
                   "BIRD_MOLECULE_CLASS",
                   "BIRD_MOLECULE_TYPE",
-                  "SUBJECT_OF_INVESTIGATION",
-                  "artifact",
-                  "modified_monomer",
-                  "mutation"
+                  "SUBJECT_OF_INVESTIGATION"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -76872,11 +76864,8 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
-                  "BIRD_MOLECULE_CLASS",
-                  "BIRD_MOLECULE_TYPE",
-                  "artifact",
-                  "modified_monomer",
-                  "mutation"
+                  "HAS_COVALENT_LINKAGE",
+                  "HAS_METAL_COORDINATION_LINKAGE"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -77592,6 +77581,8 @@
             "ORDINAL": "ordinal",
             "ASYM_ID": "asym_id",
             "AUTH_ASYM_ID": "auth_asym_id",
+            "AUTH_SEQ_ID": "auth_seq_id",
+            "COMP_ID": "comp_id",
             "COUNT": "count",
             "ENTITY_ID": "entity_id",
             "ENTRY_ID": "entry_id",
@@ -77617,6 +77608,18 @@
             "AUTH_ASYM_ID": {
                "CATEGORY": "rcsb_nonpolymer_instance_feature_summary",
                "ATTRIBUTE": "auth_asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUTH_SEQ_ID": {
+               "CATEGORY": "rcsb_nonpolymer_instance_feature_summary",
+               "ATTRIBUTE": "auth_seq_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "COMP_ID": {
+               "CATEGORY": "rcsb_nonpolymer_instance_feature_summary",
+               "ATTRIBUTE": "comp_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -77718,23 +77721,23 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "COUNT": {
+            "AUTH_SEQ_ID": {
                "ORDER": 4,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
+               "APP_TYPE": "char",
                "WIDTH": 10,
                "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
+               "IS_CHAR_TYPE": true,
                "ENUMERATION": [],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
                ],
                "SUB_CATEGORIES": []
             },
-            "ENTITY_ID": {
+            "COMP_ID": {
                "ORDER": 5,
                "NULLABLE": false,
                "PRECISION": 0,
@@ -77750,8 +77753,40 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "ENTRY_ID": {
+            "COUNT": {
                "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTITY_ID": {
+               "ORDER": 7,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTRY_ID": {
+               "ORDER": 8,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -77767,38 +77802,6 @@
                "SUB_CATEGORIES": []
             },
             "MAXIMUM_LENGTH": {
-               "ORDER": 7,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "MAXIMUM_VALUE": {
-               "ORDER": 8,
-               "NULLABLE": true,
-               "PRECISION": 6,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "float",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "MINIMUM_LENGTH": {
                "ORDER": 9,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -77814,7 +77817,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "MINIMUM_VALUE": {
+            "MAXIMUM_VALUE": {
                "ORDER": 10,
                "NULLABLE": true,
                "PRECISION": 6,
@@ -77830,8 +77833,40 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "TYPE": {
+            "MINIMUM_LENGTH": {
                "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MINIMUM_VALUE": {
+               "ORDER": 12,
+               "NULLABLE": true,
+               "PRECISION": 6,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 13,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -98740,7 +98775,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "pdbx_core_entry",
-            "VERSION": "8.0.2"
+            "VERSION": "8.0.3"
          },
          {
             "NAME": "pdbx_core_assembly",
@@ -98812,13 +98847,16 @@
             "rcsb_assembly_container_identifiers.entry_id"
          ],
          "pdbx_core_polymer_entity": [
-            "rcsb_polymer_entity_container_identifiers.entry_id"
+            "rcsb_polymer_entity_container_identifiers.entry_id",
+            "rcsb_polymer_entity_container_identifiers.entity_id"
          ],
          "pdbx_core_nonpolymer_entity": [
-            "rcsb_nonpolymer_entity_container_identifiers.entry_id"
+            "rcsb_nonpolymer_entity_container_identifiers.entry_id",
+            "rcsb_nonpolymer_entity_container_identifiers.entity_id"
          ],
          "pdbx_core_branched_entity": [
-            "rcsb_branched_entity_container_identifiers.entry_id"
+            "rcsb_branched_entity_container_identifiers.entry_id",
+            "rcsb_branched_entity_container_identifiers.entity_id"
          ],
          "pdbx_core_polymer_entity_instance": [
             "rcsb_polymer_entity_instance_container_identifiers.entry_id"
@@ -98999,26 +99037,13 @@
             {
                "INDEX_NAME": "search_1",
                "ATTRIBUTE_NAMES": [
-                  "rcsb_polymer_entity_container_identifiers.entry_id",
-                  "rcsb_polymer_entity_container_identifiers.entry_id"
+                  "rcsb_polymer_entity_container_identifiers.rcsb_id"
                ]
             },
             {
                "INDEX_NAME": "search_2",
                "ATTRIBUTE_NAMES": [
-                  "rcsb_polymer_entity_container_identifiers.rcsb_id"
-               ]
-            },
-            {
-               "INDEX_NAME": "search_3",
-               "ATTRIBUTE_NAMES": [
                   "rcsb_id"
-               ]
-            },
-            {
-               "INDEX_NAME": "replace",
-               "ATTRIBUTE_NAMES": [
-                  "rcsb_polymer_entity_container_identifiers.entry_id"
                ]
             }
          ],
@@ -99033,26 +99058,13 @@
             {
                "INDEX_NAME": "search_1",
                "ATTRIBUTE_NAMES": [
-                  "rcsb_nonpolymer_entity_container_identifiers.entry_id",
-                  "rcsb_nonpolymer_entity_container_identifiers.entry_id"
-               ]
-            },
-            {
-               "INDEX_NAME": "search_4",
-               "ATTRIBUTE_NAMES": [
                   "rcsb_nonpolymer_entity_container_identifiers.rcsb_id"
                ]
             },
             {
-               "INDEX_NAME": "search_5",
+               "INDEX_NAME": "search_2",
                "ATTRIBUTE_NAMES": [
                   "rcsb_id"
-               ]
-            },
-            {
-               "INDEX_NAME": "replace",
-               "ATTRIBUTE_NAMES": [
-                  "rcsb_nonpolymer_entity_container_identifiers.entry_id"
                ]
             }
          ],
@@ -99067,26 +99079,13 @@
             {
                "INDEX_NAME": "search_1",
                "ATTRIBUTE_NAMES": [
-                  "rcsb_branched_entity_container_identifiers.entry_id",
-                  "rcsb_branched_entity_container_identifiers.entry_id"
+                  "rcsb_branched_entity_container_identifiers.rcsb_id"
                ]
             },
             {
                "INDEX_NAME": "search_2",
                "ATTRIBUTE_NAMES": [
-                  "rcsb_branched_entity_container_identifiers.rcsb_id"
-               ]
-            },
-            {
-               "INDEX_NAME": "search_3",
-               "ATTRIBUTE_NAMES": [
                   "rcsb_id"
-               ]
-            },
-            {
-               "INDEX_NAME": "replace",
-               "ATTRIBUTE_NAMES": [
-                  "rcsb_branched_entity_container_identifiers.entry_id"
                ]
             }
          ],
