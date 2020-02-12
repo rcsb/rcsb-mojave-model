@@ -67196,10 +67196,7 @@
                "ENUMERATION": [
                   "BIRD_MOLECULE_CLASS",
                   "BIRD_MOLECULE_TYPE",
-                  "SUBJECT_OF_INVESTIGATION",
-                  "artifact",
-                  "modified_monomer",
-                  "mutation"
+                  "SUBJECT_OF_INVESTIGATION"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -69276,13 +69273,10 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
-                  "BIRD_MOLECULE_CLASS",
-                  "BIRD_MOLECULE_TYPE",
                   "CATH",
-                  "SCOP",
-                  "artifact",
-                  "modified_monomer",
-                  "mutation"
+                  "HAS_COVALENT_LINKAGE",
+                  "HAS_METAL_COORDINATION_LINKAGE",
+                  "SCOP"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -74698,10 +74692,7 @@
                "ENUMERATION": [
                   "BIRD_MOLECULE_CLASS",
                   "BIRD_MOLECULE_TYPE",
-                  "SUBJECT_OF_INVESTIGATION",
-                  "artifact",
-                  "modified_monomer",
-                  "mutation"
+                  "SUBJECT_OF_INVESTIGATION"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -76873,11 +76864,8 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
-                  "BIRD_MOLECULE_CLASS",
-                  "BIRD_MOLECULE_TYPE",
-                  "artifact",
-                  "modified_monomer",
-                  "mutation"
+                  "HAS_COVALENT_LINKAGE",
+                  "HAS_METAL_COORDINATION_LINKAGE"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -77593,6 +77581,8 @@
             "ORDINAL": "ordinal",
             "ASYM_ID": "asym_id",
             "AUTH_ASYM_ID": "auth_asym_id",
+            "AUTH_SEQ_ID": "auth_seq_id",
+            "COMP_ID": "comp_id",
             "COUNT": "count",
             "ENTITY_ID": "entity_id",
             "ENTRY_ID": "entry_id",
@@ -77618,6 +77608,18 @@
             "AUTH_ASYM_ID": {
                "CATEGORY": "rcsb_nonpolymer_instance_feature_summary",
                "ATTRIBUTE": "auth_asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUTH_SEQ_ID": {
+               "CATEGORY": "rcsb_nonpolymer_instance_feature_summary",
+               "ATTRIBUTE": "auth_seq_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "COMP_ID": {
+               "CATEGORY": "rcsb_nonpolymer_instance_feature_summary",
+               "ATTRIBUTE": "comp_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -77719,23 +77721,23 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "COUNT": {
+            "AUTH_SEQ_ID": {
                "ORDER": 4,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
+               "APP_TYPE": "char",
                "WIDTH": 10,
                "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
+               "IS_CHAR_TYPE": true,
                "ENUMERATION": [],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
                ],
                "SUB_CATEGORIES": []
             },
-            "ENTITY_ID": {
+            "COMP_ID": {
                "ORDER": 5,
                "NULLABLE": false,
                "PRECISION": 0,
@@ -77751,8 +77753,40 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "ENTRY_ID": {
+            "COUNT": {
                "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTITY_ID": {
+               "ORDER": 7,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTRY_ID": {
+               "ORDER": 8,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -77768,38 +77802,6 @@
                "SUB_CATEGORIES": []
             },
             "MAXIMUM_LENGTH": {
-               "ORDER": 7,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "MAXIMUM_VALUE": {
-               "ORDER": 8,
-               "NULLABLE": true,
-               "PRECISION": 6,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "float",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "MINIMUM_LENGTH": {
                "ORDER": 9,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -77815,7 +77817,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "MINIMUM_VALUE": {
+            "MAXIMUM_VALUE": {
                "ORDER": 10,
                "NULLABLE": true,
                "PRECISION": 6,
@@ -77831,8 +77833,40 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "TYPE": {
+            "MINIMUM_LENGTH": {
                "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MINIMUM_VALUE": {
+               "ORDER": 12,
+               "NULLABLE": true,
+               "PRECISION": 6,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 13,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,

@@ -90,11 +90,8 @@
                "type": {
                   "bsonType": "string",
                   "enum": [
-                     "BIRD_MOLECULE_CLASS",
-                     "BIRD_MOLECULE_TYPE",
-                     "artifact",
-                     "modified_monomer",
-                     "mutation"
+                     "HAS_COVALENT_LINKAGE",
+                     "HAS_METAL_COORDINATION_LINKAGE"
                   ]
                },
                "annotation_lineage": {
@@ -210,6 +207,12 @@
          "items": {
             "bsonType": "object",
             "properties": {
+               "auth_seq_id": {
+                  "bsonType": "string"
+               },
+               "comp_id": {
+                  "bsonType": "string"
+               },
                "count": {
                   "bsonType": "int"
                },

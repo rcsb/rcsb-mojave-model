@@ -159,10 +159,18 @@
                "comp_id": {
                   "type": "string",
                   "description": "Non-polymer(ligand) chemical component identifier for the entity.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "Non-polymer(ligand) chemical component identifier for the entity.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation component identifier",
+                        "context": "brief"
                      }
                   ]
                },
@@ -223,10 +231,7 @@
                   "enum": [
                      "BIRD_MOLECULE_CLASS",
                      "BIRD_MOLECULE_TYPE",
-                     "SUBJECT_OF_INVESTIGATION",
-                     "artifact",
-                     "modified_monomer",
-                     "mutation"
+                     "SUBJECT_OF_INVESTIGATION"
                   ],
                   "description": "A type or category of the annotation.",
                   "rcsb_search_context": [
@@ -245,18 +250,6 @@
                      {
                         "value": "SUBJECT_OF_INVESTIGATION",
                         "detail": "Subject molecule of investigation"
-                     },
-                     {
-                        "value": "artifact",
-                        "detail": "Cloning artifact, expression tag, linker"
-                     },
-                     {
-                        "value": "modified_monomer",
-                        "detail": "Modified chemical component"
-                     },
-                     {
-                        "value": "mutation",
-                        "detail": "Engineered mutations and chemical modifications"
                      }
                   ],
                   "rcsb_description": [
