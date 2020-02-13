@@ -69734,6 +69734,7 @@
             "ASSIGNMENT_VERSION": "assignment_version",
             "ASYM_ID": "asym_id",
             "AUTH_ASYM_ID": "auth_asym_id",
+            "COMP_ID": "comp_id",
             "DESCRIPTION": "description",
             "ENTITY_ID": "entity_id",
             "ENTRY_ID": "entry_id",
@@ -69775,6 +69776,12 @@
             "AUTH_ASYM_ID": {
                "CATEGORY": "rcsb_entity_instance_feature",
                "ATTRIBUTE": "auth_asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "COMP_ID": {
+               "CATEGORY": "rcsb_entity_instance_feature",
+               "ATTRIBUTE": "comp_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -69952,7 +69959,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "DESCRIPTION": {
+            "COMP_ID": {
                "ORDER": 5,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -69968,9 +69975,9 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "ENTITY_ID": {
+            "DESCRIPTION": {
                "ORDER": 6,
-               "NULLABLE": false,
+               "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
                "APP_TYPE": "char",
@@ -69984,7 +69991,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "ENTRY_ID": {
+            "ENTITY_ID": {
                "ORDER": 7,
                "NULLABLE": false,
                "PRECISION": 0,
@@ -70000,7 +70007,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "FEATURE_ID": {
+            "ENTRY_ID": {
                "ORDER": 8,
                "NULLABLE": false,
                "PRECISION": 0,
@@ -70016,8 +70023,24 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "FEATURE_POSITIONS_BEG_COMP_ID": {
+            "FEATURE_ID": {
                "ORDER": 9,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "FEATURE_POSITIONS_BEG_COMP_ID": {
+               "ORDER": 10,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70035,7 +70058,7 @@
                ]
             },
             "FEATURE_POSITIONS_BEG_SEQ_ID": {
-               "ORDER": 10,
+               "ORDER": 11,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70053,7 +70076,7 @@
                ]
             },
             "FEATURE_POSITIONS_END_SEQ_ID": {
-               "ORDER": 11,
+               "ORDER": 12,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70071,7 +70094,7 @@
                ]
             },
             "FEATURE_POSITIONS_VALUE": {
-               "ORDER": 12,
+               "ORDER": 13,
                "NULLABLE": true,
                "PRECISION": 3,
                "PRIMARY_KEY": false,
@@ -70089,24 +70112,6 @@
                ]
             },
             "FEATURE_VALUE_COMP_ID": {
-               "ORDER": 13,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": ";",
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": [
-                  "feature_value"
-               ]
-            },
-            "FEATURE_VALUE_DETAILS": {
                "ORDER": 14,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -70124,16 +70129,16 @@
                   "feature_value"
                ]
             },
-            "FEATURE_VALUE_REFERENCE": {
+            "FEATURE_VALUE_DETAILS": {
                "ORDER": 15,
                "NULLABLE": true,
-               "PRECISION": 3,
+               "PRECISION": 0,
                "PRIMARY_KEY": false,
-               "APP_TYPE": "float",
+               "APP_TYPE": "char",
                "WIDTH": 10,
                "ITERABLE_DELIMITER": ";",
                "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
+               "IS_CHAR_TYPE": true,
                "ENUMERATION": [],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -70142,7 +70147,7 @@
                   "feature_value"
                ]
             },
-            "FEATURE_VALUE_REPORTED": {
+            "FEATURE_VALUE_REFERENCE": {
                "ORDER": 16,
                "NULLABLE": true,
                "PRECISION": 3,
@@ -70160,7 +70165,7 @@
                   "feature_value"
                ]
             },
-            "FEATURE_VALUE_UNCERTAINTY_ESTIMATE": {
+            "FEATURE_VALUE_REPORTED": {
                "ORDER": 17,
                "NULLABLE": true,
                "PRECISION": 3,
@@ -70178,8 +70183,26 @@
                   "feature_value"
                ]
             },
-            "FEATURE_VALUE_UNCERTAINTY_ESTIMATE_TYPE": {
+            "FEATURE_VALUE_UNCERTAINTY_ESTIMATE": {
                "ORDER": 18,
+               "NULLABLE": true,
+               "PRECISION": 3,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "feature_value"
+               ]
+            },
+            "FEATURE_VALUE_UNCERTAINTY_ESTIMATE_TYPE": {
+               "ORDER": 19,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70199,7 +70222,7 @@
                ]
             },
             "NAME": {
-               "ORDER": 19,
+               "ORDER": 20,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70215,7 +70238,7 @@
                "SUB_CATEGORIES": []
             },
             "PROVENANCE_SOURCE": {
-               "ORDER": 20,
+               "ORDER": 21,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70231,7 +70254,7 @@
                "SUB_CATEGORIES": []
             },
             "REFERENCE_SCHEME": {
-               "ORDER": 21,
+               "ORDER": 22,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70252,7 +70275,7 @@
                "SUB_CATEGORIES": []
             },
             "TYPE": {
-               "ORDER": 22,
+               "ORDER": 23,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -72856,6 +72879,7 @@
             "BRANCHED_ENTITY_IDS": "branched_entity_ids",
             "EMDB_IDS": "emdb_ids",
             "ENTITY_IDS": "entity_ids",
+            "MODEL_IDS": "model_ids",
             "NON_POLYMER_ENTITY_IDS": "non_polymer_entity_ids",
             "POLYMER_ENTITY_IDS": "polymer_entity_ids",
             "RCSB_ID": "rcsb_id",
@@ -72890,6 +72914,12 @@
             "ENTITY_IDS": {
                "CATEGORY": "rcsb_entry_container_identifiers",
                "ATTRIBUTE": "entity_ids",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODEL_IDS": {
+               "CATEGORY": "rcsb_entry_container_identifiers",
+               "ATTRIBUTE": "model_ids",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -73005,23 +73035,23 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "NON_POLYMER_ENTITY_IDS": {
+            "MODEL_IDS": {
                "ORDER": 6,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
+               "APP_TYPE": "int",
                "WIDTH": 10,
                "ITERABLE_DELIMITER": ",",
                "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
+               "IS_CHAR_TYPE": false,
                "ENUMERATION": [],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_ENTITY_IDS": {
+            "NON_POLYMER_ENTITY_IDS": {
                "ORDER": 7,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -73037,8 +73067,24 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RCSB_ID": {
+            "POLYMER_ENTITY_IDS": {
                "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 9,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -73054,7 +73100,7 @@
                "SUB_CATEGORIES": []
             },
             "RELATED_EMDB_IDS": {
-               "ORDER": 9,
+               "ORDER": 10,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -73070,7 +73116,7 @@
                "SUB_CATEGORIES": []
             },
             "WATER_ENTITY_IDS": {
-               "ORDER": 10,
+               "ORDER": 11,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -98775,7 +98821,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "pdbx_core_entry",
-            "VERSION": "8.0.3"
+            "VERSION": "8.0.4"
          },
          {
             "NAME": "pdbx_core_assembly",
