@@ -469,6 +469,21 @@
       "minItems": 1,
       "uniqueItems": true,
       "rcsb_nested_indexing": true
+    },
+    "rcsb_pharos_diseases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "disease_name": {
+            "type": "string"
+          },
+          "pharos_disease_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
     }
   },
   "additionalProperties" : false
