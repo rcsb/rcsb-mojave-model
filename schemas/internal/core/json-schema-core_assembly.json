@@ -212,12 +212,14 @@
         "properties": {
           "id": {
             "type": "string",
-            "examples": [
-              "2",
-              "546"
-            ],
             "rcsb_search_context": [
               "exact-match"
+            ],
+            "rcsb_description": [
+              {
+                "text": "Symmetry Lineage Id",
+                "context": "brief"
+              }
             ],
             "description": "A unique identifier automatically assigned to the symmetry term."
           },
@@ -232,13 +234,13 @@
             "rcsb_search_context": [
               "exact-match"
             ],
-            "description": "A human-readable term describing protein symmetry.",
             "rcsb_description": [
               {
                 "text": "Symmetry Name",
                 "context": "brief"
               }
-            ]
+            ],
+            "description": "A human-readable term describing protein symmetry."
           },
           "depth": {
             "type" : "integer",
