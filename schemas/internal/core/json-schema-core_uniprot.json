@@ -44,9 +44,15 @@
           "type" : "array",
           "items" : {
             "type" : "string",
-            "description" : "Unique Ensembl identifiers mapped to a given UniProtKB entry."
+            "description" : "Unique Ensembl transcript identifiers mapped to a given UniProtKB entry."
           },
           "uniqueItems" : true
+        },"ensembl_gene_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description" : "Unique Ensembl gene identifiers mapped to a given UniProtKB entry."
+          }
         }
       },
       "additionalProperties": false
