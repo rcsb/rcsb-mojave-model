@@ -24,30 +24,6 @@
             "full-text"
           ]
         },
-        "pfam_ids" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string",
-            "description" : "Unique Pfam identifiers mapped to a given UniProtKB entry."
-          },
-          "uniqueItems" : true
-        },
-        "go_ids" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string",
-            "description" : "Unique GO identifiers mapped to a given UniProtKB entry."
-          },
-          "uniqueItems" : true
-        },
-        "ensembl_ids" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string",
-            "description" : "Unique Ensembl transcript identifiers mapped to a given UniProtKB entry."
-          },
-          "uniqueItems" : true
-        },
         "reference_sequence_identifiers": {
           "type": "array",
           "items": {
@@ -534,7 +510,6 @@
       "uniqueItems": true,
       "rcsb_nested_indexing": true
     },
-
     "rcsb_uniprot_annotation": {
       "type": "array",
       "items": {
