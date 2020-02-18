@@ -40,7 +40,12 @@
                   "bsonType": "string"
                },
                "type": {
-                  "bsonType": "string"
+                  "bsonType": "string",
+                  "enum": [
+                     "BIRD_MOLECULE_CLASS",
+                     "BIRD_MOLECULE_NAME",
+                     "BIRD_MOLECULE_TYPE"
+                  ]
                },
                "annotation_lineage": {
                   "bsonType": "array",

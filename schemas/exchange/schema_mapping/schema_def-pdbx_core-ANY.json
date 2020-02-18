@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "8.1.2",
+   "DATABASE_VERSION": "8.1.3",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -14569,6 +14569,7 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "PDB BIRD Name",
                   "PDB Preferred Name",
                   "PDB Synonym"
                ],
@@ -62946,7 +62947,11 @@
                "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
+               "ENUMERATION": [
+                  "BIRD_MOLECULE_CLASS",
+                  "BIRD_MOLECULE_NAME",
+                  "BIRD_MOLECULE_TYPE"
+               ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
                ],
@@ -67195,6 +67200,7 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "BIRD_MOLECULE_CLASS",
+                  "BIRD_MOLECULE_NAME",
                   "BIRD_MOLECULE_TYPE",
                   "SUBJECT_OF_INVESTIGATION"
                ],
@@ -68069,6 +68075,7 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "BIRD_MOLECULE_CLASS",
+                  "BIRD_MOLECULE_NAME",
                   "BIRD_MOLECULE_TYPE",
                   "SUBJECT_OF_INVESTIGATION",
                   "artifact",
@@ -68395,6 +68402,7 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "BIRD_MOLECULE_CLASS",
+                  "BIRD_MOLECULE_NAME",
                   "BIRD_MOLECULE_TYPE",
                   "SUBJECT_OF_INVESTIGATION",
                   "artifact",
@@ -74737,6 +74745,7 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "BIRD_MOLECULE_CLASS",
+                  "BIRD_MOLECULE_NAME",
                   "BIRD_MOLECULE_TYPE",
                   "SUBJECT_OF_INVESTIGATION"
                ],
@@ -75412,6 +75421,7 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "BIRD_MOLECULE_CLASS",
+                  "BIRD_MOLECULE_NAME",
                   "BIRD_MOLECULE_TYPE",
                   "SUBJECT_OF_INVESTIGATION"
                ],
@@ -75752,6 +75762,7 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "BIRD_MOLECULE_CLASS",
+                  "BIRD_MOLECULE_NAME",
                   "BIRD_MOLECULE_TYPE",
                   "SUBJECT_OF_INVESTIGATION"
                ],
@@ -80007,6 +80018,7 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "BIRD_MOLECULE_CLASS",
+                  "BIRD_MOLECULE_NAME",
                   "BIRD_MOLECULE_TYPE",
                   "GO",
                   "InterPro",
@@ -80840,6 +80852,7 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "BIRD_MOLECULE_CLASS",
+                  "BIRD_MOLECULE_NAME",
                   "BIRD_MOLECULE_TYPE",
                   "artifact",
                   "modified_monomer",
@@ -81166,6 +81179,7 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "BIRD_MOLECULE_CLASS",
+                  "BIRD_MOLECULE_NAME",
                   "BIRD_MOLECULE_TYPE",
                   "artifact",
                   "modified_monomer",
@@ -98829,15 +98843,15 @@
          },
          {
             "NAME": "pdbx_core_polymer_entity",
-            "VERSION": "8.0.4"
+            "VERSION": "8.0.5"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity",
-            "VERSION": "8.0.4"
+            "VERSION": "8.0.5"
          },
          {
             "NAME": "pdbx_core_branched_entity",
-            "VERSION": "8.0.3"
+            "VERSION": "8.0.4"
          },
          {
             "NAME": "pdbx_core_polymer_entity_instance",

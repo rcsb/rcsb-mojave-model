@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.13] - 2020-02-13 (pre-beta)
+
+### Added
+- model numbers to "rcsb_entry_container_identifiers.model_ids"
+- brief description metadata for symmetry and mesh
+
 ## [0.1.12] - 2020-01-30 (pre-beta)
 ### Changed
 - enumeration updates
@@ -51,7 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - entity and entity instance cores are split into polymer, non-polymer, branched
-- fixed type mismatch for search metadata from "core_uniprot_container_identifiers.pubmed_id"
+- fixed type mismatch for search metadata from "rcsb_uniprot_container_identifiers.pubmed_id"
 
 ### Removed
 - search metadata from "core_entry_container_identifiers.pubmed_id"
