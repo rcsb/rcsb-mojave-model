@@ -700,6 +700,23 @@
           "category_path": "rcsb_uniprot_annotation.type"
         }
       ]
+    },
+    "rcsb_uniprot_external_reference": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "reference_id": {
+            "type": "string"
+          },
+          "reference_name": {
+            "type": "string"
+          },
+          "provenance_source": {
+            "type": "string"
+          }
+        }
+      }
     }
   },
   "additionalProperties" : false
