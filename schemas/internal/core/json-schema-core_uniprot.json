@@ -44,9 +44,73 @@
           "type" : "array",
           "items" : {
             "type" : "string",
-            "description" : "Unique Ensembl identifiers mapped to a given UniProtKB entry."
+            "description" : "Unique Ensembl transcript identifiers mapped to a given UniProtKB entry."
           },
           "uniqueItems" : true
+        },
+        "reference_sequence_identifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "database_accession": {
+                "type": "string",
+                "description": "Reference database accession code",
+                "rcsb_search_context": [
+                  "exact-match",
+                  "suggest"
+                ],
+                "rcsb_full_text_priority": 20,
+                "rcsb_description": [
+                  {
+                    "text": "Reference database accession code",
+                    "context": "dictionary"
+                  }
+                ]
+              },
+              "database_isoform": {
+                "type": "string",
+                "description": "Reference database identifier for the sequence isoform",
+                "rcsb_search_context": [
+                  "exact-match"
+                ],
+                "rcsb_full_text_priority": 10,
+                "rcsb_description": [
+                  {
+                    "text": "Reference database identifier for the sequence isoform",
+                    "context": "dictionary"
+                  }
+                ]
+              },
+              "database_name": {
+                "type": "string",
+                "description": "Reference database name",
+                "rcsb_search_context": [
+                  "exact-match"
+                ],
+                "rcsb_full_text_priority": 10,
+                "rcsb_description": [
+                  {
+                    "text": "Reference database name",
+                    "context": "dictionary"
+                  }
+                ]
+              },
+              "provenance_source": {
+                "type": "string",
+                "description": "Source of the reference database assignment",
+                "rcsb_description": [
+                  {
+                    "text": "Source of the reference database assignment",
+                    "context": "dictionary"
+                  }
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false,
+          "rcsb_nested_indexing": true
         }
       },
       "additionalProperties": false
@@ -469,6 +533,198 @@
       "minItems": 1,
       "uniqueItems": true,
       "rcsb_nested_indexing": true
+    },
+
+    "rcsb_uniprot_annotation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "annotation_id": {
+            "type": "string",
+            "description": "An identifier for the annotation.",
+            "rcsb_search_context": [
+              "exact-match"
+            ],
+            "rcsb_full_text_priority": 10,
+            "rcsb_description": [
+              {
+                "text": "An identifier for the annotation.",
+                "context": "dictionary"
+              },
+              {
+                "text": "Annotation identifier",
+                "context": "brief"
+              }
+            ]
+          },
+          "assignment_version": {
+            "type": "string",
+            "description": "Identifies the version of the annotation assignment.",
+            "rcsb_description": [
+              {
+                "text": "Identifies the version of the annotation assignment.",
+                "context": "dictionary"
+              },
+              {
+                "text": "Annotation version",
+                "context": "brief"
+              }
+            ]
+          },
+          "description": {
+            "type": "string",
+            "description": "A description for the annotation.",
+            "rcsb_search_context": [
+              "exact-match",
+              "full-text"
+            ],
+            "rcsb_full_text_priority": 10,
+            "rcsb_description": [
+              {
+                "text": "A description for the annotation.",
+                "context": "dictionary"
+              },
+              {
+                "text": "Annotation description",
+                "context": "brief"
+              }
+            ]
+          },
+          "name": {
+            "type": "string",
+            "description": "A name for the annotation.",
+            "rcsb_search_context": [
+              "exact-match",
+              "full-text"
+            ],
+            "rcsb_full_text_priority": 10,
+            "rcsb_description": [
+              {
+                "text": "A name for the annotation.",
+                "context": "dictionary"
+              },
+              {
+                "text": "Annotation name",
+                "context": "brief"
+              }
+            ]
+          },
+          "provenance_source": {
+            "type": "string",
+            "description": "Code identifying the individual, organization or program that\n assigned the annotation.",
+            "rcsb_description": [
+              {
+                "text": "Code identifying the individual, organization or program that\n assigned the annotation.",
+                "context": "dictionary"
+              },
+              {
+                "text": "Annotation source",
+                "context": "brief"
+              }
+            ]
+          },
+          "type": {
+            "type": "string",
+            "description": "A type or category of the annotation.",
+            "rcsb_search_context": [
+              "exact-match"
+            ],
+            "rcsb_full_text_priority": 10,
+            "rcsb_enum_annotated": [
+              {
+                "value": "value",
+                "detail": "detail"
+              }
+            ],
+            "rcsb_description": [
+              {
+                "text": "A type or category of the annotation.",
+                "context": "dictionary"
+              },
+              {
+                "text": "Annotation type",
+                "context": "brief"
+              }
+            ]
+          },
+          "annotation_lineage": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "depth": {
+                  "type": "integer",
+                  "description": "Members of the annotation lineage as parent lineage depth (1-N)",
+                  "rcsb_search_context": [
+                    "default-match"
+                  ],
+                  "rcsb_description": [
+                    {
+                      "text": "Members of the annotation lineage as parent lineage depth (1-N)",
+                      "context": "dictionary"
+                    },
+                    {
+                      "text": "Annotation lineage depth",
+                      "context": "brief"
+                    }
+                  ]
+                },
+                "id": {
+                  "type": "string",
+                  "description": "Members of the annotation lineage as parent class identifiers.",
+                  "rcsb_search_context": [
+                    "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                    {
+                      "text": "Members of the annotation lineage as parent class identifiers.",
+                      "context": "dictionary"
+                    },
+                    {
+                      "text": "Annotation lineage identifier",
+                      "context": "brief"
+                    }
+                  ]
+                },
+                "name": {
+                  "type": "string",
+                  "description": "Members of the annotation lineage as parent class names.",
+                  "rcsb_search_context": [
+                    "exact-match",
+                    "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                    {
+                      "text": "Members of the annotation lineage as parent class names.",
+                      "context": "dictionary"
+                    },
+                    {
+                      "text": "Annotation lineage name",
+                      "context": "brief"
+                    }
+                  ]
+                }
+              },
+              "additionalProperties": false
+            },
+            "uniqueItems": false,
+            "rcsb_nested_indexing": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "rcsb_nested_indexing": true,
+      "rcsb_nested_indexing_context": [
+        {
+          "category_name": "annotation_type",
+          "category_path": "rcsb_uniprot_annotation.type"
+        }
+      ]
     }
   },
   "additionalProperties" : false
