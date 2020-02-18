@@ -2501,6 +2501,7 @@
                   "type": "string",
                   "enum": [
                      "BIRD_MOLECULE_CLASS",
+                     "BIRD_MOLECULE_NAME",
                      "BIRD_MOLECULE_TYPE",
                      "GO",
                      "InterPro",
@@ -2518,6 +2519,10 @@
                      {
                         "value": "BIRD_MOLECULE_CLASS",
                         "detail": "Defines the function of the molecule."
+                     },
+                     {
+                        "value": "BIRD_MOLECULE_NAME",
+                        "detail": "Defines the name assigned to the molecule."
                      },
                      {
                         "value": "BIRD_MOLECULE_TYPE",
@@ -2935,6 +2940,7 @@
                   "type": "string",
                   "enum": [
                      "BIRD_MOLECULE_CLASS",
+                     "BIRD_MOLECULE_NAME",
                      "BIRD_MOLECULE_TYPE",
                      "artifact",
                      "modified_monomer",
@@ -2945,6 +2951,10 @@
                      {
                         "value": "BIRD_MOLECULE_CLASS",
                         "detail": "Defines the function of the molecule."
+                     },
+                     {
+                        "value": "BIRD_MOLECULE_NAME",
+                        "detail": "Defines the name assigned to the molecule."
                      },
                      {
                         "value": "BIRD_MOLECULE_TYPE",
@@ -3114,6 +3124,7 @@
                   "type": "string",
                   "enum": [
                      "BIRD_MOLECULE_CLASS",
+                     "BIRD_MOLECULE_NAME",
                      "BIRD_MOLECULE_TYPE",
                      "artifact",
                      "modified_monomer",
@@ -3128,6 +3139,10 @@
                      {
                         "value": "BIRD_MOLECULE_CLASS",
                         "detail": "Defines the function of the molecule."
+                     },
+                     {
+                        "value": "BIRD_MOLECULE_NAME",
+                        "detail": "Defines the name assigned to the molecule."
                      },
                      {
                         "value": "BIRD_MOLECULE_TYPE",
@@ -3280,7 +3295,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.0.4",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.0.4. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.0.4"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.0.5",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.0.5. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.0.5"
 }
