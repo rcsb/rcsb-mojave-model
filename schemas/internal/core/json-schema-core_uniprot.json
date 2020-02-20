@@ -18,11 +18,7 @@
       "properties" : {
         "uniprot_id" : {
           "type" : "string",
-          "description" : "Primary accession number of a given UniProtKB entry.",
-          "rcsb_search_context": [
-            "exact-match",
-            "full-text"
-          ]
+          "description" : "Primary accession number of a given UniProtKB entry."
         },
         "reference_sequence_identifiers": {
           "type": "array",
@@ -33,8 +29,7 @@
                 "type": "string",
                 "description": "Reference database accession code",
                 "rcsb_search_context": [
-                  "exact-match",
-                  "suggest"
+                  "exact-match"
                 ],
                 "rcsb_full_text_priority": 20,
                 "rcsb_description": [
