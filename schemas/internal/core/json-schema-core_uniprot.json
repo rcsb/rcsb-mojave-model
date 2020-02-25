@@ -143,7 +143,18 @@
           "properties" : {
             "value" : {
               "type" : "string",
-              "description" : "Name that allows to unambiguously identify a protein."
+              "description" : "Name that allows to unambiguously identify a protein.",
+              "rcsb_search_context": [
+                "exact-match",
+                "full-text"
+              ],
+              "rcsb_full_text_priority": 10,
+              "rcsb_description": [
+                {
+                  "text": "UniProt Protein Name",
+                  "context": "brief"
+                }
+              ]
             },
             "provenance_code" : {
               "type" : "string",
@@ -410,11 +421,7 @@
             "rcsb_full_text_priority": 10,
             "rcsb_description": [
               {
-                "text": "A name for the annotation.",
-                "context": "dictionary"
-              },
-              {
-                "text": "Annotation name",
+                "text": "UniProt Annotation Name",
                 "context": "brief"
               }
             ]
@@ -424,11 +431,7 @@
             "description": "Code identifying the individual, organization or program that\n assigned the annotation.",
             "rcsb_description": [
               {
-                "text": "Code identifying the individual, organization or program that\n assigned the annotation.",
-                "context": "dictionary"
-              },
-              {
-                "text": "Annotation source",
+                "text": "UniProt Annotation Source",
                 "context": "brief"
               }
             ]
@@ -440,19 +443,9 @@
               "exact-match"
             ],
             "rcsb_full_text_priority": 10,
-            "rcsb_enum_annotated": [
-              {
-                "value": "value",
-                "detail": "detail"
-              }
-            ],
             "rcsb_description": [
               {
-                "text": "A type or category of the annotation.",
-                "context": "dictionary"
-              },
-              {
-                "text": "Annotation type",
+                "text": "UniProt Annotation Type",
                 "context": "brief"
               }
             ]
@@ -470,11 +463,7 @@
                   ],
                   "rcsb_description": [
                     {
-                      "text": "Members of the annotation lineage as parent lineage depth (1-N)",
-                      "context": "dictionary"
-                    },
-                    {
-                      "text": "Annotation lineage depth",
+                      "text": "UniProt Annotation Lineage Depth",
                       "context": "brief"
                     }
                   ]
@@ -488,11 +477,7 @@
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                     {
-                      "text": "Members of the annotation lineage as parent class identifiers.",
-                      "context": "dictionary"
-                    },
-                    {
-                      "text": "Annotation lineage identifier",
+                      "text": "UniProt Annotation Lineage Identifier",
                       "context": "brief"
                     }
                   ]
@@ -507,11 +492,7 @@
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                     {
-                      "text": "Members of the annotation lineage as parent class names.",
-                      "context": "dictionary"
-                    },
-                    {
-                      "text": "Annotation lineage name",
+                      "text": "UniProt Annotation Lineage Name",
                       "context": "brief"
                     }
                   ]
