@@ -98,6 +98,25 @@
         ]
       }
     },
+    "rcsb_search_group": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "group_name": {
+            "type": "string",
+            "description": "Label for the search group."
+          },
+          "priority_order": {
+            "type": "integer",
+            "description": "Priority order of the attribute in the search group. (The value 1 identifies the highest order priority)",
+            "minimum": 1,
+            "default": 1
+          }
+        }
+      },
+      "description": "Specifies membership and priority order of an attribute in a group of searchable attributes."
+    },
     "rcsb_full_text_priority": {
       "type": "integer",
       "description": "Relative priority among full-text search fields.",
