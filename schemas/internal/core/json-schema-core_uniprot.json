@@ -439,6 +439,10 @@
           },
           "type": {
             "type": "string",
+            "enum": [
+              "disease",
+              "phenotype"
+            ],
             "description": "A type or category of the annotation.",
             "rcsb_search_context": [
               "exact-match"
