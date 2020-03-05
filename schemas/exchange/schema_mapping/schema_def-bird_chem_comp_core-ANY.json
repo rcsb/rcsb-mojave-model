@@ -2,7 +2,7 @@
    "NAME": "bird_chem_comp_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "bird_chem_comp_core",
-   "DATABASE_VERSION": "6.3.4",
+   "DATABASE_VERSION": "6.3.5",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -321,6 +321,7 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "EBI",
+                  "PDBC",
                   "PDBE",
                   "PDBJ",
                   "RCSB"
@@ -2227,6 +2228,7 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "BMRB",
+                  "PDBC",
                   "PDBJ",
                   "PDBe",
                   "RCSB"
@@ -2392,7 +2394,12 @@
                "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
+               "ENUMERATION": [
+                  "branched",
+                  "non-polymer",
+                  "polymer",
+                  "polymer-like"
+               ],
                "CONTENT_CLASSES": [
                   "CONSOLIDATED_BIRD_CONTENT"
                ],
@@ -3250,7 +3257,10 @@
                "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
+               "ENUMERATION": [
+                  "peptide-like",
+                  "saccharide"
+               ],
                "CONTENT_CLASSES": [
                   "CONSOLIDATED_BIRD_CONTENT"
                ],
@@ -6836,7 +6846,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "bird_chem_comp_core",
-            "VERSION": "6.5.4"
+            "VERSION": "6.5.5"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
