@@ -175,6 +175,7 @@
                "type": "string",
                "enum": [
                   "EBI",
+                  "PDBC",
                   "PDBE",
                   "PDBJ",
                   "RCSB"
@@ -1031,7 +1032,8 @@
                      "RCSB",
                      "PDBE",
                      "PDBJ",
-                     "BMRB"
+                     "BMRB",
+                     "PDBC"
                   ],
                   "description": "An identifier for the wwPDB site creating or modifying the family.",
                   "rcsb_description": [
@@ -1134,6 +1136,7 @@
                   "type": "string",
                   "enum": [
                      "BMRB",
+                     "PDBC",
                      "PDBJ",
                      "PDBe",
                      "RCSB"
@@ -1142,7 +1145,8 @@
                      "RCSB",
                      "PDBe",
                      "PDBJ",
-                     "BMRB"
+                     "BMRB",
+                     "PDBC"
                   ],
                   "description": "An identifier for the wwPDB site creating or modifying the molecule.",
                   "rcsb_description": [
@@ -1210,10 +1214,16 @@
                },
                "type": {
                   "type": "string",
+                  "enum": [
+                     "branched",
+                     "non-polymer",
+                     "polymer",
+                     "polymer-like"
+                  ],
                   "examples": [
                      "polymer",
                      "non-polymer",
-                     "polymer-like"
+                     "branched"
                   ],
                   "description": "Defines the polymer characteristic of the entity.",
                   "rcsb_description": [
@@ -1678,9 +1688,13 @@
                },
                "type": {
                   "type": "string",
+                  "enum": [
+                     "peptide-like",
+                     "saccharide"
+                  ],
                   "examples": [
-                     "amino acid",
-                     "nucleic acid"
+                     "peptide-like",
+                     "saccharide"
                   ],
                   "description": "The monomer type for the sequence.",
                   "rcsb_description": [
@@ -2925,6 +2939,10 @@
                   {
                      "text": "The BIRD definition identifier.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "PRD ID(s)",
+                     "context": "brief"
                   }
                ]
             },
@@ -3627,7 +3645,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.5.4",
-   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.5.4. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.5.4"
+   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.5.5",
+   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.5.5. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.5.5"
 }
