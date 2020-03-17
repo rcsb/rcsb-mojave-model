@@ -3621,6 +3621,91 @@
          },
          "additionalProperties": false
       },
+      "rcsb_primary_citation": {
+         "bsonType": "object",
+         "properties": {
+            "book_id_ISBN": {
+               "bsonType": "string"
+            },
+            "book_publisher": {
+               "bsonType": "string"
+            },
+            "book_publisher_city": {
+               "bsonType": "string"
+            },
+            "book_title": {
+               "bsonType": "string"
+            },
+            "coordinate_linkage": {
+               "bsonType": "string",
+               "enum": [
+                  "n",
+                  "no",
+                  "y",
+                  "yes"
+               ]
+            },
+            "country": {
+               "bsonType": "string"
+            },
+            "id": {
+               "bsonType": "string"
+            },
+            "journal_abbrev": {
+               "bsonType": "string"
+            },
+            "journal_id_ASTM": {
+               "bsonType": "string"
+            },
+            "journal_id_CSD": {
+               "bsonType": "string"
+            },
+            "journal_id_ISSN": {
+               "bsonType": "string"
+            },
+            "journal_issue": {
+               "bsonType": "string"
+            },
+            "journal_volume": {
+               "bsonType": "string"
+            },
+            "language": {
+               "bsonType": "string"
+            },
+            "page_first": {
+               "bsonType": "string"
+            },
+            "page_last": {
+               "bsonType": "string"
+            },
+            "pdbx_database_id_DOI": {
+               "bsonType": "string"
+            },
+            "pdbx_database_id_PubMed": {
+               "bsonType": "int"
+            },
+            "rcsb_authors": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "rcsb_journal_abbrev": {
+               "bsonType": "string"
+            },
+            "title": {
+               "bsonType": "string"
+            },
+            "year": {
+               "bsonType": "int"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "id"
+         ]
+      },
       "refine": {
          "bsonType": "array",
          "items": {

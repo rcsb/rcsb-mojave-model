@@ -62950,11 +62950,7 @@
                "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
-               "ENUMERATION": [
-                  "BIRD_MOLECULE_CLASS",
-                  "BIRD_MOLECULE_NAME",
-                  "BIRD_MOLECULE_TYPE"
-               ],
+               "ENUMERATION": [],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
                ],
@@ -67202,9 +67198,6 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
-                  "BIRD_MOLECULE_CLASS",
-                  "BIRD_MOLECULE_NAME",
-                  "BIRD_MOLECULE_TYPE",
                   "SUBJECT_OF_INVESTIGATION"
                ],
                "CONTENT_CLASSES": [
@@ -74739,9 +74732,6 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
-                  "BIRD_MOLECULE_CLASS",
-                  "BIRD_MOLECULE_NAME",
-                  "BIRD_MOLECULE_TYPE",
                   "SUBJECT_OF_INVESTIGATION"
                ],
                "CONTENT_CLASSES": [
@@ -80012,15 +80002,9 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
-                  "BIRD_MOLECULE_CLASS",
-                  "BIRD_MOLECULE_NAME",
-                  "BIRD_MOLECULE_TYPE",
                   "GO",
                   "InterPro",
-                  "Pfam",
-                  "artifact",
-                  "modified_monomer",
-                  "mutation"
+                  "Pfam"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -84084,6 +84068,622 @@
                }
             ]
          },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "RCSB_PRIMARY_CITATION": {
+         "SCHEMA_ID": "RCSB_PRIMARY_CITATION",
+         "SCHEMA_NAME": "rcsb_primary_citation",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": true,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ID": "id",
+            "BOOK_ID_ISBN": "book_id_ISBN",
+            "BOOK_PUBLISHER": "book_publisher",
+            "BOOK_PUBLISHER_CITY": "book_publisher_city",
+            "BOOK_TITLE": "book_title",
+            "COORDINATE_LINKAGE": "coordinate_linkage",
+            "COUNTRY": "country",
+            "JOURNAL_ABBREV": "journal_abbrev",
+            "JOURNAL_ID_ASTM": "journal_id_ASTM",
+            "JOURNAL_ID_CSD": "journal_id_CSD",
+            "JOURNAL_ID_ISSN": "journal_id_ISSN",
+            "JOURNAL_ISSUE": "journal_issue",
+            "JOURNAL_VOLUME": "journal_volume",
+            "LANGUAGE": "language",
+            "PAGE_FIRST": "page_first",
+            "PAGE_LAST": "page_last",
+            "PDBX_DATABASE_ID_DOI": "pdbx_database_id_DOI",
+            "PDBX_DATABASE_ID_PUBMED": "pdbx_database_id_PubMed",
+            "RCSB_AUTHORS": "rcsb_authors",
+            "RCSB_JOURNAL_ABBREV": "rcsb_journal_abbrev",
+            "TITLE": "title",
+            "YEAR": "year"
+         },
+         "ATTRIBUTE_MAP": {
+            "ID": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "BOOK_ID_ISBN": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "book_id_ISBN",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "BOOK_PUBLISHER": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "book_publisher",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "BOOK_PUBLISHER_CITY": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "book_publisher_city",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "BOOK_TITLE": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "book_title",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "COORDINATE_LINKAGE": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "coordinate_linkage",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "COUNTRY": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "country",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "JOURNAL_ABBREV": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "journal_abbrev",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "JOURNAL_ID_ASTM": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "journal_id_ASTM",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "JOURNAL_ID_CSD": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "journal_id_CSD",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "JOURNAL_ID_ISSN": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "journal_id_ISSN",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "JOURNAL_ISSUE": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "journal_issue",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "JOURNAL_VOLUME": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "journal_volume",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "LANGUAGE": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "language",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PAGE_FIRST": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "page_first",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PAGE_LAST": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "page_last",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PDBX_DATABASE_ID_DOI": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "pdbx_database_id_DOI",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PDBX_DATABASE_ID_PUBMED": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "pdbx_database_id_PubMed",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_AUTHORS": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "rcsb_authors",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_JOURNAL_ABBREV": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "rcsb_journal_abbrev",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TITLE": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "title",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "YEAR": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "year",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "BOOK_ID_ISBN": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "BOOK_PUBLISHER": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "BOOK_PUBLISHER_CITY": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "BOOK_TITLE": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "COORDINATE_LINKAGE": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "n",
+                  "no",
+                  "y",
+                  "yes"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "COUNTRY": {
+               "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "JOURNAL_ABBREV": {
+               "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "JOURNAL_ID_ASTM": {
+               "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "JOURNAL_ID_CSD": {
+               "ORDER": 10,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "JOURNAL_ID_ISSN": {
+               "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "JOURNAL_ISSUE": {
+               "ORDER": 12,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "JOURNAL_VOLUME": {
+               "ORDER": 13,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "LANGUAGE": {
+               "ORDER": 14,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PAGE_FIRST": {
+               "ORDER": 15,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PAGE_LAST": {
+               "ORDER": 16,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PDBX_DATABASE_ID_DOI": {
+               "ORDER": 17,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PDBX_DATABASE_ID_PUBMED": {
+               "ORDER": 18,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_AUTHORS": {
+               "ORDER": 19,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": "|",
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_JOURNAL_ABBREV": {
+               "ORDER": 20,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TITLE": {
+               "ORDER": 21,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "YEAR": {
+               "ORDER": 22,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_primary_citation": {
+               "ATTRIBUTES": [
+                  "id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {},
          "SLICE_UNIT_CARDINALITY": {
             "ENTITY": false,
             "ASSEMBLY": false,
@@ -99295,6 +99895,7 @@
                "AUDIT_AUTHOR",
                "CELL",
                "CITATION",
+               "RCSB_PRIMARY_CITATION",
                "DIFFRN",
                "DIFFRN_DETECTOR",
                "DIFFRN_RADIATION",

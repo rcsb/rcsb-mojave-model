@@ -14302,6 +14302,404 @@
          },
          "additionalProperties": false
       },
+      "rcsb_primary_citation": {
+         "type": "object",
+         "properties": {
+            "book_id_ISBN": {
+               "type": "string",
+               "description": "The International Standard Book Number (ISBN) code assigned to\n the book cited; relevant for books or book chapters.",
+               "rcsb_description": [
+                  {
+                     "text": "The International Standard Book Number (ISBN) code assigned to\n the book cited; relevant for books or book chapters.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "book_publisher": {
+               "type": "string",
+               "examples": [
+                  "John Wiley and Sons"
+               ],
+               "description": "The name of the publisher of the citation; relevant\n for books or book chapters.",
+               "rcsb_description": [
+                  {
+                     "text": "The name of the publisher of the citation; relevant\n for books or book chapters.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "book_publisher_city": {
+               "type": "string",
+               "examples": [
+                  "London"
+               ],
+               "description": "The location of the publisher of the citation; relevant\n for books or book chapters.",
+               "rcsb_description": [
+                  {
+                     "text": "The location of the publisher of the citation; relevant\n for books or book chapters.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "book_title": {
+               "type": "string",
+               "description": "The title of the book in which the citation appeared; relevant\n for books or book chapters.",
+               "rcsb_search_context": [
+                  "full-text"
+               ],
+               "rcsb_full_text_priority": 1,
+               "rcsb_description": [
+                  {
+                     "text": "The title of the book in which the citation appeared; relevant\n for books or book chapters.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "coordinate_linkage": {
+               "type": "string",
+               "enum": [
+                  "n",
+                  "no",
+                  "y",
+                  "yes"
+               ],
+               "description": "_rcsb_primary_citation.coordinate_linkage states whether this citation\n is concerned with precisely the set of coordinates given in the\n data block. If, for instance, the publication described the same\n structure, but the coordinates had undergone further refinement\n prior to the creation of the data block, the value of this data\n item would be 'no'.",
+               "rcsb_enum_annotated": [
+                  {
+                     "value": "n",
+                     "detail": "abbreviation for \"no\""
+                  },
+                  {
+                     "value": "no",
+                     "detail": "citation unrelated to current coordinates"
+                  },
+                  {
+                     "value": "y",
+                     "detail": "abbreviation for \"yes\""
+                  },
+                  {
+                     "value": "yes",
+                     "detail": "citation related to current coordinates"
+                  }
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "_rcsb_primary_citation.coordinate_linkage states whether this citation\n is concerned with precisely the set of coordinates given in the\n data block. If, for instance, the publication described the same\n structure, but the coordinates had undergone further refinement\n prior to the creation of the data block, the value of this data\n item would be 'no'.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "country": {
+               "type": "string",
+               "description": "The country/region of publication; relevant for books\n and book chapters.",
+               "rcsb_description": [
+                  {
+                     "text": "The country/region of publication; relevant for books\n and book chapters.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "id": {
+               "type": "string",
+               "examples": [
+                  "primary"
+               ],
+               "description": "The value of _rcsb_primary_citation.id must uniquely identify a record in the\n CITATION list.\n\n The _rcsb_primary_citation.id 'primary' should be used to indicate the\n citation that the author(s) consider to be the most pertinent to\n the contents of the data block.\n\n Note that this item need not be a number; it can be any unique\n identifier.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
+               "rcsb_description": [
+                  {
+                     "text": "The value of _rcsb_primary_citation.id must uniquely identify a record in the\n CITATION list.\n\n The _rcsb_primary_citation.id 'primary' should be used to indicate the\n citation that the author(s) consider to be the most pertinent to\n the contents of the data block.\n\n Note that this item need not be a number; it can be any unique\n identifier.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "journal_abbrev": {
+               "type": "string",
+               "examples": [
+                  "J.Mol.Biol.",
+                  "J. Mol. Biol."
+               ],
+               "description": "Abbreviated name of the cited journal as given in the\n Chemical Abstracts Service Source Index.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
+               "rcsb_description": [
+                  {
+                     "text": "Abbreviated name of the cited journal as given in the\n Chemical Abstracts Service Source Index.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "The PDB (i.e., the Chemical Abstracts) abbreviation for a journal. If you do not know the abbreviation, then give the complete  name of the journal and we will try and find it for you. If it is a book or other monographic work, state the full title.",
+                     "context": "deposition"
+                  },
+                  {
+                     "text": "Journal Name",
+                     "context": "brief"
+                  }
+               ]
+            },
+            "journal_id_ASTM": {
+               "type": "string",
+               "description": "The American Society for Testing and Materials (ASTM) code\n assigned to the journal cited (also referred to as the CODEN\n designator of the Chemical Abstracts Service); relevant for\n journal articles.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
+               "rcsb_description": [
+                  {
+                     "text": "The American Society for Testing and Materials (ASTM) code\n assigned to the journal cited (also referred to as the CODEN\n designator of the Chemical Abstracts Service); relevant for\n journal articles.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "journal_id_CSD": {
+               "type": "string",
+               "examples": [
+                  "0070"
+               ],
+               "description": "The Cambridge Structural Database (CSD) code assigned to the\n journal cited; relevant for journal articles. This is also the\n system used at the Protein Data Bank (PDB).",
+               "rcsb_description": [
+                  {
+                     "text": "The Cambridge Structural Database (CSD) code assigned to the\n journal cited; relevant for journal articles. This is also the\n system used at the Protein Data Bank (PDB).",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "journal_id_ISSN": {
+               "type": "string",
+               "description": "The International Standard Serial Number (ISSN) code assigned to\n the journal cited; relevant for journal articles.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
+               "rcsb_description": [
+                  {
+                     "text": "The International Standard Serial Number (ISSN) code assigned to\n the journal cited; relevant for journal articles.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "journal_issue": {
+               "type": "string",
+               "examples": [
+                  "2"
+               ],
+               "description": "Issue number of the journal cited; relevant for journal\n articles.",
+               "rcsb_description": [
+                  {
+                     "text": "Issue number of the journal cited; relevant for journal\n articles.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "journal_volume": {
+               "type": "string",
+               "examples": [
+                  "174"
+               ],
+               "description": "Volume number of the journal cited; relevant for journal\n articles.",
+               "rcsb_description": [
+                  {
+                     "text": "Volume number of the journal cited; relevant for journal\n articles.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "The volume number of the journal in which the article appeared. Example: 317",
+                     "context": "deposition"
+                  }
+               ]
+            },
+            "language": {
+               "type": "string",
+               "examples": [
+                  "German"
+               ],
+               "description": "Language in which the cited article is written.",
+               "rcsb_description": [
+                  {
+                     "text": "Language in which the cited article is written.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "page_first": {
+               "type": "string",
+               "description": "The first page of the citation; relevant for journal\n articles, books and book chapters.",
+               "rcsb_description": [
+                  {
+                     "text": "The first page of the citation; relevant for journal\n articles, books and book chapters.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "The starting page number of this article.",
+                     "context": "deposition"
+                  }
+               ]
+            },
+            "page_last": {
+               "type": "string",
+               "description": "The last page of the citation; relevant for journal\n articles, books and book chapters.",
+               "rcsb_description": [
+                  {
+                     "text": "The last page of the citation; relevant for journal\n articles, books and book chapters.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "The last page number of this article.",
+                     "context": "deposition"
+                  }
+               ]
+            },
+            "pdbx_database_id_DOI": {
+               "type": "string",
+               "examples": [
+                  "10.2345/S1384107697000225"
+               ],
+               "description": "Document Object Identifier used by doi.org to uniquely\n specify bibliographic entry.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
+               "rcsb_description": [
+                  {
+                     "text": "Document Object Identifier used by doi.org to uniquely\n specify bibliographic entry.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "The document Object Identifier used by doi.org to uniquely specify bibliographic entry",
+                     "context": "deposition"
+                  },
+                  {
+                     "text": "DOI",
+                     "context": "brief"
+                  }
+               ]
+            },
+            "pdbx_database_id_PubMed": {
+               "type": "integer",
+               "examples": [
+                  "12627512"
+               ],
+               "description": "Ascession number used by PubMed to categorize a specific\n bibliographic entry.",
+               "rcsb_description": [
+                  {
+                     "text": "Ascession number used by PubMed to categorize a specific\n bibliographic entry.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "The accession number used by PubMed to categorize a specific bibliographic entry",
+                     "context": "deposition"
+                  }
+               ]
+            },
+            "rcsb_authors": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "examples": [
+                     "Bleary, Percival R."
+                  ],
+                  "description": "Names of the authors of the citation; relevant for journal\n articles, books and book chapters.  Names are separated by vertical bars.\n\n The family name(s), followed by a comma and including any\n dynastic components, precedes the first name(s) or initial(s).",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text",
+                     "suggest"
+                  ],
+                  "rcsb_full_text_priority": 20,
+                  "rcsb_description": [
+                     {
+                        "text": "Names of the authors of the citation; relevant for journal\n articles, books and book chapters.  Names are separated by vertical bars.\n\n The family name(s), followed by a comma and including any\n dynastic components, precedes the first name(s) or initial(s).",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Primary Citation Author",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "uniqueItems": false
+            },
+            "rcsb_journal_abbrev": {
+               "type": "string",
+               "examples": [
+                  "Nat Struct Mol Biol"
+               ],
+               "description": "Normalized journal abbreviation.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
+               "rcsb_description": [
+                  {
+                     "text": "Normalized journal abbreviation.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Journal Name (Abbreviated)",
+                     "context": "brief"
+                  }
+               ]
+            },
+            "title": {
+               "type": "string",
+               "examples": [
+                  "Structure of diferric duck ovotransferrin\n                                  at 2.35 Angstroms resolution."
+               ],
+               "description": "The title of the citation; relevant for journal articles, books\n and book chapters.",
+               "rcsb_search_context": [
+                  "full-text",
+                  "suggest"
+               ],
+               "rcsb_full_text_priority": 20,
+               "rcsb_description": [
+                  {
+                     "text": "The title of the citation; relevant for journal articles, books\n and book chapters.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Title of the article or chapter or part of a book. This should be marked NULL if the author(s) listed wrote the entire book (or other work) and no sub-section of the book is being cited. Example: The Structure of Crystalline Profilin-Beta-Actin",
+                     "context": "deposition"
+                  },
+                  {
+                     "text": "Primary Citation Title",
+                     "context": "brief"
+                  }
+               ]
+            },
+            "year": {
+               "type": "integer",
+               "examples": [
+                  "1984"
+               ],
+               "description": "The year of the citation; relevant for journal articles, books\n and book chapters.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "The year of the citation; relevant for journal articles, books\n and book chapters.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "The year of publication of the article. Example: 2002",
+                     "context": "deposition"
+                  },
+                  {
+                     "text": "Publication Year",
+                     "context": "brief"
+                  }
+               ]
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "id"
+         ]
+      },
       "refine": {
          "type": "array",
          "items": {
