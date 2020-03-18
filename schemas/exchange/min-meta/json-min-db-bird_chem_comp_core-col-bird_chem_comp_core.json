@@ -2877,6 +2877,216 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "rcsb_chem_comp_annotation": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "annotation_id": {
+                  "type": "string",
+                  "description": "An identifier for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation Identifier",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "annotation_lineage_depth": {
+                  "type": "array",
+                  "items": {
+                     "type": "integer",
+                     "description": "Members of the annotation lineage as parent lineage depth (1-N)",
+                     "rcsb_search_context": [
+                        "default-match"
+                     ],
+                     "rcsb_description": [
+                        {
+                           "text": "Members of the annotation lineage as parent lineage depth (1-N)",
+                           "context": "dictionary"
+                        },
+                        {
+                           "text": "Annotation Lineage Depth",
+                           "context": "brief"
+                        }
+                     ]
+                  },
+                  "uniqueItems": false
+               },
+               "annotation_lineage_id": {
+                  "type": "array",
+                  "items": {
+                     "type": "string",
+                     "description": "Members of the annotation lineage as parent class identifiers.",
+                     "rcsb_search_context": [
+                        "exact-match"
+                     ],
+                     "rcsb_full_text_priority": 10,
+                     "rcsb_description": [
+                        {
+                           "text": "Members of the annotation lineage as parent class identifiers.",
+                           "context": "dictionary"
+                        },
+                        {
+                           "text": "Annotation Lineage Identifier",
+                           "context": "brief"
+                        }
+                     ]
+                  },
+                  "uniqueItems": false
+               },
+               "annotation_lineage_name": {
+                  "type": "array",
+                  "items": {
+                     "type": "string",
+                     "description": "Members of the annotation lineage as parent class names.",
+                     "rcsb_search_context": [
+                        "exact-match",
+                        "full-text"
+                     ],
+                     "rcsb_full_text_priority": 10,
+                     "rcsb_description": [
+                        {
+                           "text": "Members of the annotation lineage as parent class names.",
+                           "context": "dictionary"
+                        },
+                        {
+                           "text": "Annotation Lineage Name",
+                           "context": "brief"
+                        }
+                     ]
+                  },
+                  "uniqueItems": false
+               },
+               "assignment_version": {
+                  "type": "string",
+                  "description": "Identifies the version of the annotation assignment.",
+                  "rcsb_description": [
+                     {
+                        "text": "Identifies the version of the annotation assignment.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation Version",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "description": {
+                  "type": "string",
+                  "description": "A description for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "A description for the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation Description",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "name": {
+                  "type": "string",
+                  "description": "A name for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "A name for the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation Name",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "provenance_source": {
+                  "type": "string",
+                  "description": "Code identifying the individual, organization or program that\n assigned the annotation.",
+                  "rcsb_description": [
+                     {
+                        "text": "Code identifying the individual, organization or program that\n assigned the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation Source",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "GENERATING_ENZYME",
+                     "MODRES",
+                     "PSIMOD",
+                     "residue"
+                  ],
+                  "description": "A type or category of the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "GENERATING_ENZYME",
+                        "detail": "Generating enzyme"
+                     },
+                     {
+                        "value": "MODRES",
+                        "detail": "'Modified"
+                     },
+                     {
+                        "value": "PSIMOD",
+                        "detail": "Protein Modification Ontology"
+                     },
+                     {
+                        "value": "residue",
+                        "detail": "classification\""
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "A type or category of the annotation.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Annotation Type",
+                        "context": "brief"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true,
+         "rcsb_nested_indexing": true,
+         "rcsb_nested_indexing_context": [
+            {
+               "category_name": "annotation_type",
+               "category_path": "rcsb_chem_comp_annotation.type"
+            }
+         ]
+      },
       "rcsb_chem_comp_container_identifiers": {
          "type": "object",
          "properties": {
@@ -3213,7 +3423,8 @@
                      "assigned by DrugBank resource",
                      "assigned by PDB",
                      "matching InChIKey in DrugBank",
-                     "matching InChIKey-prefix in DrugBank"
+                     "matching InChIKey-prefix in DrugBank",
+                     "matching by RESID resource"
                   ],
                   "examples": [
                      "assigned by DrugBank resource"
@@ -3235,6 +3446,10 @@
                      {
                         "value": "matching InChIKey-prefix in DrugBank",
                         "detail": "Correspondence established by matching InChIKey prefix in DrugBank"
+                     },
+                     {
+                        "value": "matching by RESID resource",
+                        "detail": "Correspondence assigned by the RESID resource"
                      }
                   ],
                   "rcsb_description": [
@@ -3265,11 +3480,13 @@
                   "type": "string",
                   "enum": [
                      "ATC",
+                     "CAS",
                      "CCDC/CSD",
                      "ChEBI",
                      "ChEMBL",
                      "DrugBank",
-                     "PubChem"
+                     "PubChem",
+                     "RESID"
                   ],
                   "examples": [
                      "CCDC/CSD"
@@ -3283,6 +3500,10 @@
                      {
                         "value": "ATC",
                         "detail": "Anatomical Therapeutic Chemical Classification System (ATC) from the World Health Organization (WHO)"
+                     },
+                     {
+                        "value": "CAS",
+                        "detail": "Chemical Abstracts Service (CAS) Registry Number"
                      },
                      {
                         "value": "CCDC/CSD",
@@ -3303,6 +3524,10 @@
                      {
                         "value": "PubChem",
                         "detail": "NCBI PubChem Resource"
+                     },
+                     {
+                        "value": "RESID",
+                        "detail": "RESID Database of Protein Modifications"
                      }
                   ],
                   "rcsb_description": [
@@ -3435,7 +3660,8 @@
                      "OpenEye/Lexichem",
                      "PDB Reference Data",
                      "PDB-CARE",
-                     "PubChem"
+                     "PubChem",
+                     "RESID"
                   ],
                   "description": "The provenance of this synonym.",
                   "rcsb_search_context": [
@@ -3645,7 +3871,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.5.5",
-   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.5.5. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.5.5"
+   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.6.0",
+   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.6.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.6.0"
 }
