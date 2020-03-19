@@ -2900,72 +2900,6 @@
                      }
                   ]
                },
-               "annotation_lineage_depth": {
-                  "type": "array",
-                  "items": {
-                     "type": "integer",
-                     "description": "Members of the annotation lineage as parent lineage depth (1-N)",
-                     "rcsb_search_context": [
-                        "default-match"
-                     ],
-                     "rcsb_description": [
-                        {
-                           "text": "Members of the annotation lineage as parent lineage depth (1-N)",
-                           "context": "dictionary"
-                        },
-                        {
-                           "text": "Annotation Lineage Depth",
-                           "context": "brief"
-                        }
-                     ]
-                  },
-                  "uniqueItems": false
-               },
-               "annotation_lineage_id": {
-                  "type": "array",
-                  "items": {
-                     "type": "string",
-                     "description": "Members of the annotation lineage as parent class identifiers.",
-                     "rcsb_search_context": [
-                        "exact-match"
-                     ],
-                     "rcsb_full_text_priority": 10,
-                     "rcsb_description": [
-                        {
-                           "text": "Members of the annotation lineage as parent class identifiers.",
-                           "context": "dictionary"
-                        },
-                        {
-                           "text": "Annotation Lineage Identifier",
-                           "context": "brief"
-                        }
-                     ]
-                  },
-                  "uniqueItems": false
-               },
-               "annotation_lineage_name": {
-                  "type": "array",
-                  "items": {
-                     "type": "string",
-                     "description": "Members of the annotation lineage as parent class names.",
-                     "rcsb_search_context": [
-                        "exact-match",
-                        "full-text"
-                     ],
-                     "rcsb_full_text_priority": 10,
-                     "rcsb_description": [
-                        {
-                           "text": "Members of the annotation lineage as parent class names.",
-                           "context": "dictionary"
-                        },
-                        {
-                           "text": "Annotation Lineage Name",
-                           "context": "brief"
-                        }
-                     ]
-                  },
-                  "uniqueItems": false
-               },
                "assignment_version": {
                   "type": "string",
                   "description": "Identifies the version of the annotation assignment.",
@@ -3073,6 +3007,71 @@
                         "context": "brief"
                      }
                   ]
+               },
+               "annotation_lineage": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "depth": {
+                           "type": "integer",
+                           "description": "Members of the annotation lineage as parent lineage depth (1-N)",
+                           "rcsb_search_context": [
+                              "default-match"
+                           ],
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the annotation lineage as parent lineage depth (1-N)",
+                                 "context": "dictionary"
+                              },
+                              {
+                                 "text": "Annotation Lineage Depth",
+                                 "context": "brief"
+                              }
+                           ]
+                        },
+                        "id": {
+                           "type": "string",
+                           "description": "Members of the annotation lineage as parent class identifiers.",
+                           "rcsb_search_context": [
+                              "exact-match"
+                           ],
+                           "rcsb_full_text_priority": 10,
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the annotation lineage as parent class identifiers.",
+                                 "context": "dictionary"
+                              },
+                              {
+                                 "text": "Annotation Lineage Identifier",
+                                 "context": "brief"
+                              }
+                           ]
+                        },
+                        "name": {
+                           "type": "string",
+                           "description": "Members of the annotation lineage as parent class names.",
+                           "rcsb_search_context": [
+                              "exact-match",
+                              "full-text"
+                           ],
+                           "rcsb_full_text_priority": 10,
+                           "rcsb_description": [
+                              {
+                                 "text": "Members of the annotation lineage as parent class names.",
+                                 "context": "dictionary"
+                              },
+                              {
+                                 "text": "Annotation Lineage Name",
+                                 "context": "brief"
+                              }
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": true
                }
             },
             "additionalProperties": false

@@ -1087,27 +1087,6 @@
                "annotation_id": {
                   "bsonType": "string"
                },
-               "annotation_lineage_depth": {
-                  "bsonType": "array",
-                  "items": {
-                     "bsonType": "int"
-                  },
-                  "uniqueItems": false
-               },
-               "annotation_lineage_id": {
-                  "bsonType": "array",
-                  "items": {
-                     "bsonType": "string"
-                  },
-                  "uniqueItems": false
-               },
-               "annotation_lineage_name": {
-                  "bsonType": "array",
-                  "items": {
-                     "bsonType": "string"
-                  },
-                  "uniqueItems": false
-               },
                "assignment_version": {
                   "bsonType": "string"
                },
@@ -1128,6 +1107,25 @@
                      "PSIMOD",
                      "residue"
                   ]
+               },
+               "annotation_lineage": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "depth": {
+                           "bsonType": "int"
+                        },
+                        "id": {
+                           "bsonType": "string"
+                        },
+                        "name": {
+                           "bsonType": "string"
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false
