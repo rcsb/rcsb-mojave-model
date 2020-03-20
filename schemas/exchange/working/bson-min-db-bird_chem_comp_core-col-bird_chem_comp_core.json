@@ -1079,6 +1079,60 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "rcsb_chem_comp_annotation": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "annotation_id": {
+                  "bsonType": "string"
+               },
+               "assignment_version": {
+                  "bsonType": "string"
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "provenance_source": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "GENERATING_ENZYME",
+                     "MODRES",
+                     "PSIMOD",
+                     "residue"
+                  ]
+               },
+               "annotation_lineage": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "depth": {
+                           "bsonType": "int"
+                        },
+                        "id": {
+                           "bsonType": "string"
+                        },
+                        "name": {
+                           "bsonType": "string"
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_chem_comp_container_identifiers": {
          "bsonType": "object",
          "properties": {
@@ -1199,7 +1253,8 @@
                      "assigned by DrugBank resource",
                      "assigned by PDB",
                      "matching InChIKey in DrugBank",
-                     "matching InChIKey-prefix in DrugBank"
+                     "matching InChIKey-prefix in DrugBank",
+                     "matching by RESID resource"
                   ]
                },
                "resource_accession_code": {
@@ -1209,11 +1264,13 @@
                   "bsonType": "string",
                   "enum": [
                      "ATC",
+                     "CAS",
                      "CCDC/CSD",
                      "ChEBI",
                      "ChEMBL",
                      "DrugBank",
-                     "PubChem"
+                     "PubChem",
+                     "RESID"
                   ]
                },
                "resource_lineage": {
@@ -1273,7 +1330,8 @@
                      "OpenEye/Lexichem",
                      "PDB Reference Data",
                      "PDB-CARE",
-                     "PubChem"
+                     "PubChem",
+                     "RESID"
                   ]
                }
             },

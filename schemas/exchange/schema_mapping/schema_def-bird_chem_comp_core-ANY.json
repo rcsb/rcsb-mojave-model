@@ -2,7 +2,7 @@
    "NAME": "bird_chem_comp_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "bird_chem_comp_core",
-   "DATABASE_VERSION": "6.3.5",
+   "DATABASE_VERSION": "6.4.0",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -5512,6 +5512,332 @@
          "SLICE_UNIT_CARDINALITY": {},
          "SLICE_CATEGORY_EXTRAS": {}
       },
+      "RCSB_CHEM_COMP_ANNOTATION": {
+         "SCHEMA_ID": "RCSB_CHEM_COMP_ANNOTATION",
+         "SCHEMA_NAME": "rcsb_chem_comp_annotation",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [
+            "annotation_lineage"
+         ],
+         "ATTRIBUTES": {
+            "ORDINAL": "ordinal",
+            "ANNOTATION_ID": "annotation_id",
+            "ANNOTATION_LINEAGE_DEPTH": "annotation_lineage_depth",
+            "ANNOTATION_LINEAGE_ID": "annotation_lineage_id",
+            "ANNOTATION_LINEAGE_NAME": "annotation_lineage_name",
+            "ASSIGNMENT_VERSION": "assignment_version",
+            "COMP_ID": "comp_id",
+            "DESCRIPTION": "description",
+            "NAME": "name",
+            "PRD_ID": "prd_id",
+            "PROVENANCE_SOURCE": "provenance_source",
+            "TYPE": "type"
+         },
+         "ATTRIBUTE_MAP": {
+            "ORDINAL": {
+               "CATEGORY": "rcsb_chem_comp_annotation",
+               "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ANNOTATION_ID": {
+               "CATEGORY": "rcsb_chem_comp_annotation",
+               "ATTRIBUTE": "annotation_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ANNOTATION_LINEAGE_DEPTH": {
+               "CATEGORY": "rcsb_chem_comp_annotation",
+               "ATTRIBUTE": "annotation_lineage_depth",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ANNOTATION_LINEAGE_ID": {
+               "CATEGORY": "rcsb_chem_comp_annotation",
+               "ATTRIBUTE": "annotation_lineage_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ANNOTATION_LINEAGE_NAME": {
+               "CATEGORY": "rcsb_chem_comp_annotation",
+               "ATTRIBUTE": "annotation_lineage_name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ASSIGNMENT_VERSION": {
+               "CATEGORY": "rcsb_chem_comp_annotation",
+               "ATTRIBUTE": "assignment_version",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "COMP_ID": {
+               "CATEGORY": "rcsb_chem_comp_annotation",
+               "ATTRIBUTE": "comp_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DESCRIPTION": {
+               "CATEGORY": "rcsb_chem_comp_annotation",
+               "ATTRIBUTE": "description",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NAME": {
+               "CATEGORY": "rcsb_chem_comp_annotation",
+               "ATTRIBUTE": "name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PRD_ID": {
+               "CATEGORY": "rcsb_chem_comp_annotation",
+               "ATTRIBUTE": "prd_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PROVENANCE_SOURCE": {
+               "CATEGORY": "rcsb_chem_comp_annotation",
+               "ATTRIBUTE": "provenance_source",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TYPE": {
+               "CATEGORY": "rcsb_chem_comp_annotation",
+               "ATTRIBUTE": "type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ORDINAL": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ANNOTATION_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ANNOTATION_LINEAGE_DEPTH": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "annotation_lineage"
+               ]
+            },
+            "ANNOTATION_LINEAGE_ID": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "annotation_lineage"
+               ]
+            },
+            "ANNOTATION_LINEAGE_NAME": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "annotation_lineage"
+               ]
+            },
+            "ASSIGNMENT_VERSION": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "COMP_ID": {
+               "ORDER": 7,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DESCRIPTION": {
+               "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NAME": {
+               "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PRD_ID": {
+               "ORDER": 10,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PROVENANCE_SOURCE": {
+               "ORDER": 11,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 12,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "GENERATING_ENZYME",
+                  "MODRES",
+                  "PSIMOD",
+                  "residue"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ORDINAL"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_chem_comp_annotation": {
+               "ATTRIBUTES": [
+                  "ordinal"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {},
+         "SLICE_UNIT_CARDINALITY": {},
+         "SLICE_CATEGORY_EXTRAS": {}
+      },
       "RCSB_CHEM_COMP_CONTAINER_IDENTIFIERS": {
          "SCHEMA_ID": "RCSB_CHEM_COMP_CONTAINER_IDENTIFIERS",
          "SCHEMA_NAME": "rcsb_chem_comp_container_identifiers",
@@ -6209,7 +6535,8 @@
                   "assigned by DrugBank resource",
                   "assigned by PDB",
                   "matching InChIKey in DrugBank",
-                  "matching InChIKey-prefix in DrugBank"
+                  "matching InChIKey-prefix in DrugBank",
+                  "matching by RESID resource"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -6298,11 +6625,13 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "ATC",
+                  "CAS",
                   "CCDC/CSD",
                   "ChEBI",
                   "ChEMBL",
                   "DrugBank",
-                  "PubChem"
+                  "PubChem",
+                  "RESID"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -6452,7 +6781,8 @@
                   "OpenEye/Lexichem",
                   "PDB Reference Data",
                   "PDB-CARE",
-                  "PubChem"
+                  "PubChem",
+                  "RESID"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -6846,7 +7176,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "bird_chem_comp_core",
-            "VERSION": "6.5.5"
+            "VERSION": "6.6.0"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
@@ -6928,6 +7258,11 @@
                "pdbx_chem_comp_audit": [
                   "processing_site",
                   "annotator"
+               ],
+               "rcsb_chem_comp_annotation": [
+                  "comp_id",
+                  "prd_id",
+                  "ordinal"
                ]
             }
          }
@@ -6936,6 +7271,10 @@
          "bird_chem_comp_core": [
             {
                "NAME": "resource_lineage",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
+               "NAME": "annotation_lineage",
                "HAS_UNIT_CARDINALITY": false
             }
          ]
