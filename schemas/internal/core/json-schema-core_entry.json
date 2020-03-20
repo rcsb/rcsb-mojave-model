@@ -19,8 +19,6 @@
     },
     "rcsb_external_references": {
       "type": "array",
-      "minItems": 1,
-      "uniqueItems": true,
       "items": {
         "type": "object",
         "required": [
@@ -44,13 +42,24 @@
               "PROTEIN DIFFRACTION",
               "EM DATA RESOURCE"
             ],
-            "description": "Internal identifier for external resource."
+            "description": "Internal identifier for external resource.",
+            "rcsb_search_context": [
+              "exact-match"
+            ],
+            "rcsb_description": [
+              {
+                "text": "Linked External Resource",
+                "context": "brief"
+              }
+            ]
           },
           "link": {
             "type": "string",
             "description": "Link to this entry in external resource."
           }
         },
+        "minItems": 1,
+        "uniqueItems": true,
         "additionalProperties": false
       }
     },
