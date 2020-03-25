@@ -2969,6 +2969,7 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "ATC",
                      "Generating Enzyme",
                      "Modification Type",
                      "PSI-MOD",
@@ -2980,6 +2981,10 @@
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
+                     {
+                        "value": "ATC",
+                        "detail": "Anatomical Therapeutic Chemical Classification System (ATC) from the World Health Organization (WHO)"
+                     },
                      {
                         "value": "Generating Enzyme",
                         "detail": "Generating enzyme"
@@ -3478,7 +3483,6 @@
                "resource_name": {
                   "type": "string",
                   "enum": [
-                     "ATC",
                      "CAS",
                      "CCDC/CSD",
                      "ChEBI",
@@ -3496,10 +3500,6 @@
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
-                     {
-                        "value": "ATC",
-                        "detail": "Anatomical Therapeutic Chemical Classification System (ATC) from the World Health Organization (WHO)"
-                     },
                      {
                         "value": "CAS",
                         "detail": "Chemical Abstracts Service (CAS) Registry Number"
