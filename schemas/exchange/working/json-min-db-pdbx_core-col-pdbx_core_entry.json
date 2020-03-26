@@ -749,13 +749,7 @@
          },
          "minItems": 1,
          "uniqueItems": true,
-         "rcsb_nested_indexing": true,
-         "rcsb_nested_indexing_context": [
-            {
-               "category_name": "citation_primary",
-               "category_path": "citation.rcsb_is_primary"
-            }
-         ]
+         "rcsb_nested_indexing": true
       },
       "diffrn": {
          "type": "array",
@@ -15036,6 +15030,7 @@
             }
          },
          "additionalProperties": false,
+         "rcsb_nested_indexing": true,
          "required": [
             "id"
          ]
