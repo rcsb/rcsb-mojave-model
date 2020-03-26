@@ -331,6 +331,12 @@
                         "text": "DOI",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Publications All",
+                        "priority_order": 25
+                     }
                   ]
                },
                "pdbx_database_id_PubMed": {
@@ -368,6 +374,12 @@
                            "text": "Citation Author",
                            "context": "brief"
                         }
+                     ],
+                     "rcsb_search_group": [
+                        {
+                           "group_name": "Publications All",
+                           "priority_order": 5
+                        }
                      ]
                   },
                   "uniqueItems": false
@@ -404,6 +416,12 @@
                         "text": "Journal Name (Abbreviated)",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Publications All",
+                        "priority_order": 15
+                     }
                   ]
                },
                "title": {
@@ -424,6 +442,12 @@
                      {
                         "text": "Citation Title",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Publications All",
+                        "priority_order": 10
                      }
                   ]
                },
@@ -459,6 +483,12 @@
                      {
                         "text": "Publication Year",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Publications All",
+                        "priority_order": 20
                      }
                   ]
                }
@@ -1660,7 +1690,7 @@
    "additionalProperties": false,
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-cluster_provenance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: sequence_clusters collection: cluster_provenance version: 1.2.0",
-   "description": "RCSB Exchange Database JSON schema derived from the sequence_clusters content type schema. This schema supports collection cluster_provenance version 1.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-cluster_provenance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 1.2.0"
+   "title": "schema: sequence_clusters collection: cluster_provenance version: 1.2.1",
+   "description": "RCSB Exchange Database JSON schema derived from the sequence_clusters content type schema. This schema supports collection cluster_provenance version 1.2.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-cluster_provenance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 1.2.1"
 }
