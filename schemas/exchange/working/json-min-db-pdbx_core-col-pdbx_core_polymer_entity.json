@@ -208,6 +208,12 @@
                      "text": "Entity Polymer Type",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 5
+                  }
                ]
             },
             "rcsb_insertion_count": {
@@ -1657,6 +1663,16 @@
                               {
                                  "text": "Members of the NCBI Taxonomy lineage as parent taxonomy idcodes.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "Host Organism Taxonomy ID",
+                                 "context": "brief"
+                              }
+                           ],
+                           "rcsb_search_group": [
+                              {
+                                 "group_name": "Biology",
+                                 "priority_order": 25
                               }
                            ]
                         },
@@ -1671,6 +1687,16 @@
                               {
                                  "text": "Members of the NCBI Taxonomy lineage as parent taxonomy names.",
                                  "context": "dictionary"
+                              },
+                              {
+                                 "text": "Host Organism Taxonomy Name",
+                                 "context": "brief"
+                              }
+                           ],
+                           "rcsb_search_group": [
+                              {
+                                 "group_name": "Biology",
+                                 "priority_order": 20
                               }
                            ]
                         }
@@ -1891,6 +1917,12 @@
                                  "text": "Source Organism Taxonomy ID",
                                  "context": "brief"
                               }
+                           ],
+                           "rcsb_search_group": [
+                              {
+                                 "group_name": "Biology",
+                                 "priority_order": 10
+                              }
                            ]
                         },
                         "name": {
@@ -1908,6 +1940,12 @@
                               {
                                  "text": "Source Organism Taxonomy Name",
                                  "context": "brief"
+                              }
+                           ],
+                           "rcsb_search_group": [
+                              {
+                                 "group_name": "Biology",
+                                 "priority_order": 5
                               }
                            ]
                         }
@@ -1952,6 +1990,12 @@
                               {
                                  "text": "Gene Name",
                                  "context": "brief"
+                              }
+                           ],
+                           "rcsb_search_group": [
+                              {
+                                 "group_name": "ID(s) and Keywords",
+                                 "priority_order": 30
                               }
                            ]
                         }
@@ -1998,6 +2042,12 @@
                      "text": "Molecular Weight (Entity)",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 70
+                  }
                ]
             },
             "pdbx_description": {
@@ -2022,6 +2072,12 @@
                   {
                      "text": "Polymer Entity Description",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Annotation",
+                     "priority_order": 5
                   }
                ]
             },
@@ -2173,6 +2229,12 @@
                               "text": "Enzyme Classification Number",
                               "context": "brief"
                            }
+                        ],
+                        "rcsb_search_group": [
+                           {
+                              "group_name": "Biology",
+                              "priority_order": 30
+                           }
                         ]
                      },
                      "name": {
@@ -2190,6 +2252,12 @@
                            {
                               "text": "Enzyme Classification Name",
                               "context": "brief"
+                           }
+                        ],
+                        "rcsb_search_group": [
+                           {
+                              "group_name": "Biology",
+                              "priority_order": 35
                            }
                         ]
                      }
@@ -2219,6 +2287,12 @@
                            {
                               "text": "Macromolecule Name",
                               "context": "brief"
+                           }
+                        ],
+                        "rcsb_search_group": [
+                           {
+                              "group_name": "Structure Annotation",
+                              "priority_order": 10
                            }
                         ]
                      },
@@ -2434,6 +2508,12 @@
                         "text": "Annotation Identifier",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Structure Features",
+                        "priority_order": 75
+                     }
                   ]
                },
                "assignment_version": {
@@ -2485,6 +2565,12 @@
                      {
                         "text": "Annotation Name",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Structure Features",
+                        "priority_order": 80
                      }
                   ]
                },
@@ -2746,6 +2832,12 @@
                               "text": "Accession Code(s)",
                               "context": "brief"
                            }
+                        ],
+                        "rcsb_search_group": [
+                           {
+                              "group_name": "ID(s) and Keywords",
+                              "priority_order": 15
+                           }
                         ]
                      },
                      "database_isoform": {
@@ -2788,6 +2880,12 @@
                            {
                               "text": "Database Name",
                               "context": "brief"
+                           }
+                        ],
+                        "rcsb_search_group": [
+                           {
+                              "group_name": "ID(s) and Keywords",
+                              "priority_order": 20
                            }
                         ]
                      },
@@ -3278,7 +3376,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.0.9",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.0.9. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.0.9"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.1.0"
 }

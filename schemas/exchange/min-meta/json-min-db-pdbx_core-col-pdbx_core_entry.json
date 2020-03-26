@@ -53,6 +53,12 @@
                         "text": "Structure Author",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Deposition",
+                        "priority_order": 10
+                     }
                   ]
                },
                "pdbx_ordinal": {
@@ -108,6 +114,12 @@
                      "text": "Angle alpha (\u00b0)",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Cell Dimensions and Space Group",
+                     "priority_order": 20
+                  }
                ]
             },
             "angle_beta": {
@@ -126,6 +138,12 @@
                      "text": "Angle beta (\u00b0)",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Cell Dimensions and Space Group",
+                     "priority_order": 25
+                  }
                ]
             },
             "angle_gamma": {
@@ -143,6 +161,12 @@
                   {
                      "text": "Angle gamma (\u00b0)",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Cell Dimensions and Space Group",
+                     "priority_order": 30
                   }
                ]
             },
@@ -172,6 +196,12 @@
                      "text": "Length a (\u00c5)",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Cell Dimensions and Space Group",
+                     "priority_order": 5
+                  }
                ]
             },
             "length_b": {
@@ -190,6 +220,12 @@
                      "text": "Length b (\u00c5)",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Cell Dimensions and Space Group",
+                     "priority_order": 10
+                  }
                ]
             },
             "length_c": {
@@ -207,6 +243,12 @@
                   {
                      "text": "Length c (\u00c5)",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Cell Dimensions and Space Group",
+                     "priority_order": 15
                   }
                ]
             },
@@ -513,6 +555,12 @@
                         "text": "DOI",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Publications All",
+                        "priority_order": 25
+                     }
                   ]
                },
                "pdbx_database_id_PubMed": {
@@ -554,6 +602,12 @@
                         {
                            "text": "Citation Author",
                            "context": "brief"
+                        }
+                     ],
+                     "rcsb_search_group": [
+                        {
+                           "group_name": "Publications All",
+                           "priority_order": 5
                         }
                      ]
                   },
@@ -599,6 +653,12 @@
                         "text": "Journal Name (Abbreviated)",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Publications All",
+                        "priority_order": 15
+                     }
                   ]
                },
                "title": {
@@ -624,6 +684,12 @@
                      {
                         "text": "Citation Title",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Publications All",
+                        "priority_order": 10
                      }
                   ]
                },
@@ -666,6 +732,12 @@
                      {
                         "text": "Publication Year",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Publications All",
+                        "priority_order": 20
                      }
                   ]
                }
@@ -723,6 +795,12 @@
                      {
                         "text": "Diffraction Source Temperature",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Method Details",
+                        "priority_order": 40
                      }
                   ]
                },
@@ -1634,6 +1712,12 @@
                         "text": "Detector",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Method Details",
+                        "priority_order": 10
+                     }
                   ]
                }
             },
@@ -1869,6 +1953,12 @@
                         "text": "Diffraction Source Synchrotron Beamline",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Method Details",
+                        "priority_order": 50
+                     }
                   ]
                },
                "pdbx_synchrotron_site": {
@@ -1890,6 +1980,12 @@
                      {
                         "text": "Diffraction Source Synchrotron Site",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Method Details",
+                        "priority_order": 45
                      }
                   ]
                },
@@ -3876,6 +3972,16 @@
                      {
                         "text": "The final resolution (in Angstroms)of the 3D reconstruction.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Reconstruction Resolution (\u00c5)",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "EM Method Details",
+                        "priority_order": 5
                      }
                   ]
                },
@@ -4609,6 +4715,12 @@
                      "text": "EM Assembly",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "EM Method Details",
+                     "priority_order": 10
+                  }
                ]
             },
             "entity_assembly_id": {
@@ -4653,6 +4765,12 @@
                   {
                      "text": "EM Reconstruction Method",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "EM Method Details",
+                     "priority_order": 15
                   }
                ]
             }
@@ -6280,6 +6398,12 @@
                         "text": "Experimental Method",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Methods",
+                        "priority_order": 5
+                     }
                   ]
                },
                "method_details": {
@@ -6342,6 +6466,12 @@
                         "text": "Density (Matthews)",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Crystal Properties",
+                        "priority_order": 5
+                     }
                   ]
                },
                "density_meas": {
@@ -6376,6 +6506,12 @@
                      {
                         "text": "Density (% solvent)",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Crystal Properties",
+                        "priority_order": 10
                      }
                   ]
                },
@@ -6517,6 +6653,12 @@
                         "text": "pH",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Crystal Properties",
+                        "priority_order": 20
+                     }
                   ]
                },
                "pdbx_details": {
@@ -6560,6 +6702,12 @@
                      {
                         "text": "Temperature (K)",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Crystal Properties",
+                        "priority_order": 15
                      }
                   ]
                },
@@ -6670,6 +6818,12 @@
                         "text": "Structural Genomics Project Center Name",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Deposition",
+                        "priority_order": 40
+                     }
                   ]
                },
                "id": {
@@ -6775,6 +6929,12 @@
                         "text": "Structural Genomics Project Center Initials",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Deposition",
+                        "priority_order": 35
+                     }
                   ]
                },
                "project_name": {
@@ -6806,6 +6966,12 @@
                      {
                         "text": "Structural Genomics Project Name",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Deposition",
+                        "priority_order": 30
                      }
                   ]
                }
@@ -8908,6 +9074,12 @@
                      "text": "Compatible with PDB Format",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Annotation",
+                     "priority_order": 15
+                  }
                ]
             },
             "process_site": {
@@ -9238,6 +9410,12 @@
                      {
                         "text": "Deposit Group ID(s)",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "ID(s) and Keywords",
+                        "priority_order": 10
                      }
                   ]
                },
@@ -13267,6 +13445,12 @@
                      "text": "Deposit Date",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Deposition",
+                     "priority_order": 15
+                  }
                ]
             },
             "initial_release_date": {
@@ -13284,6 +13468,12 @@
                   {
                      "text": "Release Date",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Deposition",
+                     "priority_order": 20
                   }
                ]
             },
@@ -13322,6 +13512,12 @@
                   {
                      "text": "Revision Date",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Deposition",
+                     "priority_order": 25
                   }
                ]
             },
@@ -13430,6 +13626,12 @@
                   {
                      "text": "PDB ID(s)",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "ID(s) and Keywords",
+                     "priority_order": 5
                   }
                ]
             },
@@ -13606,6 +13808,12 @@
                      "text": "Number of Atoms",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 20
+                  }
                ]
             },
             "deposited_model_count": {
@@ -13622,6 +13830,12 @@
                   {
                      "text": "Deposited Model Count",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 60
                   }
                ]
             },
@@ -13679,6 +13893,12 @@
                      "text": "Number of Polymer Residues",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 25
+                  }
                ]
             },
             "deposited_unmodeled_polymer_monomer_count": {
@@ -13709,6 +13929,12 @@
                      "text": "Disulfide Bond Count",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 65
+                  }
                ]
             },
             "entity_count": {
@@ -13725,6 +13951,12 @@
                   {
                      "text": "Number of Entities",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 30
                   }
                ]
             },
@@ -13779,6 +14011,12 @@
                      "text": "Experimental Method (Simplified)",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Methods",
+                     "priority_order": 15
+                  }
                ]
             },
             "experimental_method_count": {
@@ -13795,6 +14033,12 @@
                   {
                      "text": "Number of Experimental Methods",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Methods",
+                     "priority_order": 10
                   }
                ]
             },
@@ -13839,6 +14083,12 @@
                   {
                      "text": "Molecular Weight (Structure)",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 85
                   }
                ]
             },
@@ -14030,6 +14280,12 @@
                      "text": "Polymer Composition",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 15
+                  }
                ]
             },
             "polymer_entity_count": {
@@ -14060,6 +14316,12 @@
                      "text": "Number of Entities (DNA)",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 45
+                  }
                ]
             },
             "polymer_entity_count_RNA": {
@@ -14076,6 +14338,12 @@
                   {
                      "text": "Number of Entities (RNA)",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 40
                   }
                ]
             },
@@ -14107,6 +14375,12 @@
                      "text": "Number of Entities (NA Hybrid)",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 50
+                  }
                ]
             },
             "polymer_entity_count_protein": {
@@ -14124,6 +14398,12 @@
                      "text": "Number of Entities (Protein)",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 35
+                  }
                ]
             },
             "polymer_entity_taxonomy_count": {
@@ -14140,6 +14420,12 @@
                   {
                      "text": "Polymer Entity Taxonomy Count",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Biology",
+                     "priority_order": 15
                   }
                ]
             },
@@ -14214,6 +14500,12 @@
                         "text": "Resolution (\u00c5)",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Methods",
+                        "priority_order": 20
+                     }
                   ]
                },
                "uniqueItems": false
@@ -14258,6 +14550,12 @@
                      "text": "Entity Polymer Type (Describe Entry)",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 10
+                  }
                ]
             },
             "software_programs_combined": {
@@ -14278,6 +14576,12 @@
                         "text": "Software",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Methods",
+                        "priority_order": 25
+                     }
                   ]
                },
                "uniqueItems": false
@@ -14296,6 +14600,12 @@
                   {
                      "text": "Number of Entities (Solvent)",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Features",
+                     "priority_order": 55
                   }
                ]
             }
@@ -14577,6 +14887,12 @@
                      "text": "DOI",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Publications Primary",
+                     "priority_order": 25
+                  }
                ]
             },
             "pdbx_database_id_PubMed": {
@@ -14619,6 +14935,12 @@
                         "text": "Primary Citation Author",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Publications Primary",
+                        "priority_order": 5
+                     }
                   ]
                },
                "uniqueItems": false
@@ -14641,6 +14963,12 @@
                   {
                      "text": "Journal Name (Abbreviated)",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Publications Primary",
+                     "priority_order": 15
                   }
                ]
             },
@@ -14668,6 +14996,12 @@
                      "text": "Primary Citation Title",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Publications Primary",
+                     "priority_order": 10
+                  }
                ]
             },
             "year": {
@@ -14691,6 +15025,12 @@
                   {
                      "text": "Publication Year",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Publications Primary",
+                     "priority_order": 20
                   }
                ]
             }
@@ -14735,6 +15075,12 @@
                      {
                         "text": "Average B Factor",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Method Details",
+                        "priority_order": 15
                      }
                   ]
                },
@@ -14892,6 +15238,12 @@
                         "text": "Refinement R Factors (R Free)",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Method Details",
+                        "priority_order": 35
+                     }
                   ]
                },
                "ls_R_factor_R_free_error": {
@@ -14937,6 +15289,12 @@
                         "text": "Refinement R Factors (R Work)",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Method Details",
+                        "priority_order": 30
+                     }
                   ]
                },
                "ls_R_factor_all": {
@@ -14953,6 +15311,12 @@
                      {
                         "text": "Refinement R Factors (All)",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Method Details",
+                        "priority_order": 25
                      }
                   ]
                },
@@ -14974,6 +15338,12 @@
                      {
                         "text": "Refinement R Factors (Observed)",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Method Details",
+                        "priority_order": 20
                      }
                   ]
                },
@@ -15507,6 +15877,12 @@
                      {
                         "text": "Structure Determination Method",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Method Details",
+                        "priority_order": 5
                      }
                   ]
                },
@@ -16160,6 +16536,12 @@
                         "text": "B Wilson Estimate",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Data Collection Statistics",
+                        "priority_order": 10
+                     }
                   ]
                },
                "R_free_details": {
@@ -16218,6 +16600,12 @@
                      {
                         "text": "Data Collection Resolution (\u00c5)",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Data Collection Statistics",
+                        "priority_order": 5
                      }
                   ]
                },
@@ -16484,6 +16872,12 @@
                         "text": "R Value for Merging Intensities (Observed)",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Data Collection Statistics",
+                        "priority_order": 25
+                     }
                   ]
                },
                "pdbx_Rpim_I_all": {
@@ -16614,6 +17008,12 @@
                         "text": "Overall Redundancy",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Data Collection Statistics",
+                        "priority_order": 15
+                     }
                   ]
                },
                "pdbx_scaling_rejects": {
@@ -16644,6 +17044,12 @@
                      {
                         "text": "Percentage of Possible Reflections",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Data Collection Statistics",
+                        "priority_order": 20
                      }
                   ]
                },
@@ -18150,6 +18556,12 @@
                      "text": "Structure Title",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Deposition",
+                     "priority_order": 5
+                  }
                ]
             }
          },
@@ -18187,6 +18599,12 @@
                   {
                      "text": "Stucture Keywords",
                      "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "ID(s) and Keywords",
+                     "priority_order": 25
                   }
                ]
             },
@@ -18388,6 +18806,12 @@
                      "text": "Space Group",
                      "context": "brief"
                   }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Cell Dimensions and Space Group",
+                     "priority_order": 35
+                  }
                ]
             },
             "space_group_name_Hall": {
@@ -18433,7 +18857,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.0.8",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.0.8. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.0.8"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.0.9",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.0.9. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.0.9"
 }
