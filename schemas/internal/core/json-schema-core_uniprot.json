@@ -536,7 +536,41 @@
             "type": "string"
           },
           "reference_name": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "IMPC",
+              "GTEX",
+              "PHAROS"
+            ],
+            "rcsb_search_context": [
+              "exact-match"
+            ],
+            "rcsb_enum_annotated": [
+              {
+                "value": "IMPC",
+                "detail": "Knockout Mouse Phenotyping Program (IMPC)"
+              },
+              {
+                "value": "GTEX",
+                "detail": "Genotype-Tissue Expression (GTEx) Project Portal"
+              },
+              {
+                "value": "PHAROS",
+                "detail": "PHAROS Portal to the Illuminating the Druggable Genome"
+              }
+            ],
+            "rcsb_description": [
+              {
+                "text": "Sequence Related Resource",
+                "context": "brief"
+              }
+            ],
+            "rcsb_search_group": [
+              {
+                "group_name": "Linked External Resources",
+                "priority_order": 10
+              }
+            ]
           },
           "provenance_source": {
             "type": "string"
