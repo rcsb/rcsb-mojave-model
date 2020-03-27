@@ -37,6 +37,18 @@
             "rcsb_search_context": [
               "exact-match"
             ],
+            "rcsb_description": [
+              {
+                "text": "Chromosomal Locus (Browser ID)",
+                "context": "brief"
+              }
+            ],
+            "rcsb_search_group": [
+              {
+                "group_name": "Sequence Annotations",
+                "priority_order": 50
+              }
+            ],
             "description": "ID that identify taxonomy, chromosome or gene."
           },
           "name": {
@@ -46,21 +58,14 @@
               "8",
               "defensin beta 103A"
             ],
-            "rcsb_search_context": [
-              "exact-match"
-            ],
             "description": "A human-readable term name."
           },
           "depth": {
             "type": "integer",
-            "rcsb_search_context": [
-              "default-match"
-            ],
             "description": "Classification hierarchy depth."
           }
         }
-      },
-      "rcsb_nested_indexing": true
+      }
     },
     "rcsb_membrane_lineage": {
       "type": "array",
@@ -74,6 +79,18 @@
             "rcsb_search_context": [
               "exact-match"
             ],
+            "rcsb_description": [
+              {
+                "text": "Membrane Protein (Browser ID)",
+                "context": "brief"
+              }
+            ],
+            "rcsb_search_group": [
+              {
+                "group_name": "Sequence Annotations",
+                "priority_order": 11
+              }
+            ],
             "description": "Identifier for membrane classification term (system generated for internal purposes identifier)."
           },
           "name": {
@@ -84,8 +101,14 @@
             "description": "Membrane protein classification term.",
             "rcsb_description": [
               {
-                "text": "Membrane Classification Name",
+                "text": "Membrane Protein Name",
                 "context": "brief"
+              }
+            ],
+            "rcsb_search_group": [
+              {
+                "group_name": "Sequence Annotations",
+                "priority_order": 10
               }
             ]
           },

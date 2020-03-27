@@ -33,6 +33,12 @@
                 "context": "brief"
               }
             ],
+            "rcsb_search_group": [
+              {
+                "group_name": "Structure Features",
+                "priority_order": 105
+              }
+            ],
             "description": "Symmetry symbol refers to point group or helical symmetry of identical polymeric subunits in Schönflies notation. Contains point group symbol (e.g., C2, C5, D2, T, O, I) or H for helical symmetry."
           },
           "type": {
@@ -53,6 +59,12 @@
               {
                 "text": "Symmetry Type",
                 "context": "brief"
+              }
+            ],
+            "rcsb_search_group": [
+              {
+                "group_name": "Structure Features",
+                "priority_order": 115
               }
             ],
             "description": "Symmetry type refers to point group or helical symmetry of identical polymeric subunits. Contains point group types (e.g. Cyclic, Dihedral) or Helical for helical symmetry."
@@ -76,6 +88,12 @@
               {
                 "text": "Oligomeric State",
                 "context": "brief"
+              }
+            ],
+            "rcsb_search_group": [
+              {
+                "group_name": "Structure Features",
+                "priority_order": 110
               }
             ],
             "description": "Oligomeric state refers to a composition of polymeric subunits in quaternary structure. Quaternary structure may be composed either exclusively of several copies of identical subunits, in which case they are termed homo-oligomers, or alternatively by at least one copy of different subunits (hetero-oligomers). Quaternary structure composed of a single subunit is demoted as 'Monomer'."
@@ -189,8 +207,14 @@
             ],
             "rcsb_description": [
               {
-                "text": "Symmetry Granularity",
+                "text": "Symmetry Class",
                 "context": "brief"
+              }
+            ],
+            "rcsb_search_group": [
+              {
+                "group_name": "Structure Features",
+                "priority_order": 120
               }
             ],
             "description": "The granularity at which the symmetry calculation is performed. In 'Global Symmetry' all polymeric subunits in assembly are used. In 'Local Symmetry' only a subset of polymeric subunits is considered. In 'Pseudo Symmetry' the threshold for subunits similarity is relaxed."
@@ -218,8 +242,14 @@
             ],
             "rcsb_description": [
               {
-                "text": "Symmetry Lineage Id",
+                "text": "Protein Symmetry (Browser ID)",
                 "context": "brief"
+              }
+            ],
+            "rcsb_search_group": [
+              {
+                "group_name": "Structure Features",
+                "priority_order": 125
               }
             ],
             "description": "A unique identifier automatically assigned to the symmetry term."
