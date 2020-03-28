@@ -73,6 +73,25 @@
             "remove_date": {
                "bsonType": "date"
             },
+            "repository_content_types": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string",
+                  "enum": [
+                     "NMR chemical shifts",
+                     "NMR restraints V1",
+                     "NMR restraints V2",
+                     "assembly PDB",
+                     "assembly mmCIF",
+                     "entry PDB",
+                     "entry PDB bundle",
+                     "entry PDBML",
+                     "entry mmCIF",
+                     "structure factors"
+                  ]
+               },
+               "uniqueItems": false
+            },
             "title": {
                "bsonType": "string"
             }
