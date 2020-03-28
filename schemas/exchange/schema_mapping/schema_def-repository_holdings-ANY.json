@@ -2,7 +2,7 @@
    "NAME": "repository_holdings",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "repository_holdings",
-   "DATABASE_VERSION": "7.2.0",
+   "DATABASE_VERSION": "7.2.1",
    "SELECTION_FILTERS": {},
    "SCHEMA_DICT": {
       "RCSB_REPOSITORY_HOLDINGS_CURRENT": {
@@ -725,6 +725,7 @@
             "ID_CODES_REPLACED_BY": "id_codes_replaced_by",
             "RELEASE_DATE": "release_date",
             "REMOVE_DATE": "remove_date",
+            "REPOSITORY_CONTENT_TYPES": "repository_content_types",
             "TITLE": "title"
          },
          "ATTRIBUTE_MAP": {
@@ -773,6 +774,12 @@
             "REMOVE_DATE": {
                "CATEGORY": "rcsb_repository_holdings_removed",
                "ATTRIBUTE": "remove_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REPOSITORY_CONTENT_TYPES": {
+               "CATEGORY": "rcsb_repository_holdings_removed",
+               "ATTRIBUTE": "repository_content_types",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -912,8 +919,35 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "TITLE": {
+            "REPOSITORY_CONTENT_TYPES": {
                "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "NMR chemical shifts",
+                  "NMR restraints V1",
+                  "NMR restraints V2",
+                  "assembly PDB",
+                  "assembly mmCIF",
+                  "entry PDB",
+                  "entry PDB bundle",
+                  "entry PDBML",
+                  "entry mmCIF",
+                  "structure factors"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TITLE": {
+               "ORDER": 10,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -2520,7 +2554,7 @@
          },
          {
             "NAME": "repository_holdings_removed_entry",
-            "VERSION": "3.2.0"
+            "VERSION": "3.2.1"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
