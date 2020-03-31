@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "8.1.9",
+   "DATABASE_VERSION": "8.2.0",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -20959,13 +20959,17 @@
          "SCHEMA_NAME": "pdbx_audit_revision_details",
          "SCHEMA_TYPE": "transactional",
          "SCHEMA_UNIT_CARDINALITY": false,
-         "SCHEMA_CONTENT_CLASSES": [],
+         "SCHEMA_CONTENT_CLASSES": [
+            "EVOLVING_CONTENT"
+         ],
          "SCHEMA_MANDATORY": false,
          "SCHEMA_SUB_CATEGORIES": [],
          "ATTRIBUTES": {
             "DATA_CONTENT_TYPE": "data_content_type",
             "ORDINAL": "ordinal",
             "REVISION_ORDINAL": "revision_ordinal",
+            "DESCRIPTION": "description",
+            "DETAILS": "details",
             "PROVIDER": "provider",
             "TYPE": "type"
          },
@@ -20985,6 +20989,18 @@
             "REVISION_ORDINAL": {
                "CATEGORY": "pdbx_audit_revision_details",
                "ATTRIBUTE": "revision_ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DESCRIPTION": {
+               "CATEGORY": "pdbx_audit_revision_details",
+               "ATTRIBUTE": "description",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DETAILS": {
+               "CATEGORY": "pdbx_audit_revision_details",
+               "ATTRIBUTE": "details",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -21019,7 +21035,9 @@
                   "Structure factors",
                   "Structure model"
                ],
-               "CONTENT_CLASSES": [],
+               "CONTENT_CLASSES": [
+                  "EVOLVING_CONTENT"
+               ],
                "SUB_CATEGORIES": []
             },
             "ORDINAL": {
@@ -21033,7 +21051,9 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": false,
                "ENUMERATION": [],
-               "CONTENT_CLASSES": [],
+               "CONTENT_CLASSES": [
+                  "EVOLVING_CONTENT"
+               ],
                "SUB_CATEGORIES": []
             },
             "REVISION_ORDINAL": {
@@ -21047,11 +21067,45 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": false,
                "ENUMERATION": [],
-               "CONTENT_CLASSES": [],
+               "CONTENT_CLASSES": [
+                  "EVOLVING_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DESCRIPTION": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "EVOLVING_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DETAILS": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "EVOLVING_CONTENT"
+               ],
                "SUB_CATEGORIES": []
             },
             "PROVIDER": {
-               "ORDER": 4,
+               "ORDER": 6,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -21064,11 +21118,13 @@
                   "author",
                   "repository"
                ],
-               "CONTENT_CLASSES": [],
+               "CONTENT_CLASSES": [
+                  "EVOLVING_CONTENT"
+               ],
                "SUB_CATEGORIES": []
             },
             "TYPE": {
-               "ORDER": 5,
+               "ORDER": 7,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -21082,7 +21138,9 @@
                   "Initial release",
                   "Obsolete"
                ],
-               "CONTENT_CLASSES": [],
+               "CONTENT_CLASSES": [
+                  "EVOLVING_CONTENT"
+               ],
                "SUB_CATEGORIES": []
             }
          },
@@ -99430,7 +99488,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "pdbx_core_entry",
-            "VERSION": "8.1.0"
+            "VERSION": "8.1.1"
          },
          {
             "NAME": "pdbx_core_assembly",
