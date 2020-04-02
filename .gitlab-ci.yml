@@ -14,7 +14,9 @@ build:
 
   #    Build via maven
   - mvn -v
-  - mvn --batch-mode --errors -U clean deploy
+  - VERSION_NAME=${VERSION}"-SNAPSHOT"
+  - echo "JSON schemas build version "${VERSION_NAME}
+  - mvn --batch-mode --errors -U -Drevision=${VERSION_NAME} clean deploy
 
   only:
     - branches
