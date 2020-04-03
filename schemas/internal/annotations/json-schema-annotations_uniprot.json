@@ -29,13 +29,10 @@
       "type": "array",
       "items": {
         "type": "object",
-        $re
-        },
-        "additionalProperties": false
+        "$ref": "common-schema-annotation.json#/definitions/annotation"
       },
       "minItems": 1,
-      "uniqueItems": true,
-      "rcsb_nested_indexing": true
+      "uniqueItems": true
     }
   },
   "additionalProperties": false

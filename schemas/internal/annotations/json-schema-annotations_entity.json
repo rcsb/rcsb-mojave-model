@@ -2,6 +2,7 @@
   "$schema" : "https://json-schema.org/draft-04/schema#",
   "title" : "Entity Annotations",
   "type" : "object",
+  "$id": "/internal/common/common-schema-annotation.json",
   "required" : [
     "annotations_entity_container_identifiers", "sequence"
   ],
@@ -28,118 +29,10 @@
       "type": "array",
       "items": {
         "type": "object",
-        "properties": {
-          "description": {
-            "type": "string",
-            "description": "A description for the feature.",
-            "rcsb_search_context": [
-              "full-text"
-            ],
-            "rcsb_full_text_priority": 1,
-            "rcsb_description": [
-              {
-                "text": "A description for the feature.",
-                "context": "dictionary"
-              }
-            ]
-          },
-          "feature_id": {
-            "type": "string",
-            "description": "An identifier for the feature.",
-            "rcsb_description": [
-              {
-                "text": "An identifier for the feature.",
-                "context": "dictionary"
-              }
-            ]
-          },
-          "name": {
-            "type": "string",
-            "description": "A name for the feature.",
-            "rcsb_search_context": [
-              "exact-match",
-              "full-text"
-            ],
-            "rcsb_full_text_priority": 10,
-            "rcsb_description": [
-              {
-                "text": "A name for the feature.",
-                "context": "dictionary"
-              }
-            ]
-          },
-          "type": {
-            "type": "string",
-            "description": "A type or category of the feature.",
-            "rcsb_description": [
-              {
-                "text": "A type or category of the feature.",
-                "context": "dictionary"
-              }
-            ]
-          },
-          "value": {
-            "type": "number",
-            "description": "The value for the feature.",
-            "rcsb_search_context": [
-              "default-match"
-            ],
-            "rcsb_description": [
-              {
-                "text": "The value for the feature.",
-                "context": "dictionary"
-              }
-            ]
-          },
-          "feature_positions": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "beg_seq_id": {
-                  "type": "integer",
-                  "description": "An identifier for the monomer at which this segment of the feature begins.",
-                  "rcsb_description": [
-                    {
-                      "text": "An identifier for the monomer at which this segment of the feature begins.",
-                      "context": "dictionary"
-                    }
-                  ]
-                },
-                "end_seq_id": {
-                  "type": "integer",
-                  "description": "An identifier for the monomer at which this segment of the feature ends.",
-                  "rcsb_description": [
-                    {
-                      "text": "An identifier for the monomer at which this segment of the feature ends.",
-                      "context": "dictionary"
-                    }
-                  ]
-                },
-                "value": {
-                  "type": "number",
-                  "description": "The value for the feature over this monomer segment.",
-                  "rcsb_search_context": [
-                    "default-match"
-                  ],
-                  "rcsb_description": [
-                    {
-                      "text": "The value for the feature over this monomer segment.",
-                      "context": "dictionary"
-                    }
-                  ]
-                }
-              },
-              "additionalProperties": false
-            },
-            "uniqueItems": false
-          }
-        },
-        "additionalProperties": false
+        "$ref": "common-schema-annotation.json#/definitions/annotation"
       },
       "minItems": 1,
-      "uniqueItems": true,
-      "rcsb_nested_indexing": true
+      "uniqueItems": true
     }
   },
   "additionalProperties": false
