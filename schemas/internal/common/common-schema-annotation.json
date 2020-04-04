@@ -47,12 +47,16 @@
         "type": {
           "type": "string",
           "description": "A type or category of the feature.",
-          "rcsb_description": [
-            {
-              "text": "A type or category of the feature.",
-              "context": "dictionary"
-            }
-          ]
+          "allOf": [{
+            "type": "string",
+            "$ref": "../../internal/core/json-schema-core_uniprot.json#/properties/rcsb_uniprot_feature/items/properties/type"
+          },{
+            "type": "string",
+            "$ref": "../../exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json#/properties/rcsb_polymer_entity_feature/items/properties/type"
+          },{
+            "type": "string",
+            "$ref": "../../exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity_instance.json#/properties/rcsb_polymer_instance_feature/items/properties/type"
+          }]
         },
         "value": {
           "type": "number",
