@@ -793,8 +793,8 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "X-ray Method Details",
-                        "priority_order": 40
+                        "group_name": "X-ray Data Collection Details",
+                        "priority_order": 45
                      }
                   ]
                },
@@ -1709,8 +1709,8 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "X-ray Method Details",
-                        "priority_order": 10
+                        "group_name": "X-ray Data Collection Details",
+                        "priority_order": 30
                      }
                   ]
                }
@@ -1950,8 +1950,8 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "X-ray Method Details",
-                        "priority_order": 50
+                        "group_name": "X-ray Data Collection Details",
+                        "priority_order": 40
                      }
                   ]
                },
@@ -1978,8 +1978,8 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "X-ray Method Details",
-                        "priority_order": 45
+                        "group_name": "X-ray Data Collection Details",
+                        "priority_order": 35
                      }
                   ]
                },
@@ -5994,6 +5994,16 @@
                      {
                         "text": "Staining procedure used in the specimen preparation.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "EM Staining Details",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "EM Method Details",
+                        "priority_order": 30
                      }
                   ]
                },
@@ -6021,6 +6031,16 @@
                      {
                         "text": "The staining  material.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "EM Staining Material",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "EM Method Details",
+                        "priority_order": 25
                      }
                   ]
                },
@@ -6050,6 +6070,16 @@
                      {
                         "text": "type of staining",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "EM Staining Type",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "EM Method Details",
+                        "priority_order": 20
                      }
                   ]
                }
@@ -10332,6 +10362,16 @@
                      {
                         "text": "The method used to determine the structure.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "NMR Method to Determination Structure",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "NMR Method Details",
+                        "priority_order": 20
                      }
                   ]
                },
@@ -10784,6 +10824,16 @@
                      {
                         "text": "Select the field strength for protons in MHz.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "NMR Spectrometer Field Strength (MHz)",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "NMR Method Details",
+                        "priority_order": 15
                      }
                   ]
                },
@@ -10840,6 +10890,16 @@
                      {
                         "text": "The name of the manufacturer of the spectrometer.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "NMR Spectrometer Manufacturer",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "NMR Method Details",
+                        "priority_order": 5
                      }
                   ]
                },
@@ -11024,6 +11084,16 @@
                      {
                         "text": "The model of the NMR spectrometer.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "NMR Spectrometer Model",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "NMR Method Details",
+                        "priority_order": 10
                      }
                   ]
                },
@@ -13928,6 +13998,54 @@
                   }
                ]
             },
+            "diffrn_radiation_wavelength_maximum": {
+               "type": "number",
+               "description": "The maximum radiation wavelength in angstroms.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_units": "angstroms",
+               "rcsb_description": [
+                  {
+                     "text": "The maximum radiation wavelength in angstroms.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Maximum Diffraction Wavelength (Å)",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "X-ray Data Collection Details",
+                     "priority_order": 55
+                  }
+               ]
+            },
+            "diffrn_radiation_wavelength_minimum": {
+               "type": "number",
+               "description": "The minimum radiation wavelength in angstroms.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_units": "angstroms",
+               "rcsb_description": [
+                  {
+                     "text": "The minimum radiation wavelength in angstroms.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Minimum Diffraction Wavelength (Å)",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "X-ray Data Collection Details",
+                     "priority_order": 50
+                  }
+               ]
+            },
             "disulfide_bond_count": {
                "type": "integer",
                "description": "The number of disulfide bonds.",
@@ -15094,7 +15212,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "X-ray Method Details",
-                        "priority_order": 15
+                        "priority_order": 10
                      }
                   ]
                },
@@ -15256,7 +15374,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "X-ray Method Details",
-                        "priority_order": 35
+                        "priority_order": 30
                      }
                   ]
                },
@@ -15307,7 +15425,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "X-ray Method Details",
-                        "priority_order": 30
+                        "priority_order": 25
                      }
                   ]
                },
@@ -15330,7 +15448,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "X-ray Method Details",
-                        "priority_order": 25
+                        "priority_order": 20
                      }
                   ]
                },
@@ -15357,7 +15475,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "X-ray Method Details",
-                        "priority_order": 20
+                        "priority_order": 15
                      }
                   ]
                },
@@ -16553,7 +16671,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "X-ray Data Collection Statistics",
+                        "group_name": "X-ray Data Collection Details",
                         "priority_order": 10
                      }
                   ]
@@ -16618,7 +16736,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "X-ray Data Collection Statistics",
+                        "group_name": "X-ray Data Collection Details",
                         "priority_order": 5
                      }
                   ]
@@ -16889,7 +17007,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "X-ray Data Collection Statistics",
+                        "group_name": "X-ray Data Collection Details",
                         "priority_order": 25
                      }
                   ]
@@ -17025,7 +17143,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "X-ray Data Collection Statistics",
+                        "group_name": "X-ray Data Collection Details",
                         "priority_order": 15
                      }
                   ]
@@ -17062,7 +17180,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "X-ray Data Collection Statistics",
+                        "group_name": "X-ray Data Collection Details",
                         "priority_order": 20
                      }
                   ]
@@ -18644,6 +18762,16 @@
                   {
                      "text": "Provide the list of keywords that describe your entry (functional class, metabolic role, biological or chemical activity, structural classification, etc.). These will be used to categorize your submission (assign header, function of the small molecule, etc.), and to search the entry within the archive. The keywords should not include long phrases or sentences",
                      "context": "deposition"
+                  },
+                  {
+                     "text": "Additional Structure Keywords",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "ID(s) and Keywords",
+                     "priority_order": 30
                   }
                ]
             }
@@ -18871,7 +18999,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.1.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.1.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.1.1"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.1.2",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.1.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.1.2"
 }
