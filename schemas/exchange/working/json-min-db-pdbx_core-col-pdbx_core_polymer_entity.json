@@ -2043,7 +2043,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Structure Features",
-                     "priority_order": 70
+                     "priority_order": 80
                   }
                ]
             },
@@ -2509,7 +2509,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Structure Features",
-                        "priority_order": 75
+                        "priority_order": 85
                      }
                   ]
                },
@@ -2567,7 +2567,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Structure Features",
-                        "priority_order": 80
+                        "priority_order": 90
                      }
                   ]
                },
@@ -2909,7 +2909,13 @@
                   "additionalProperties": false
                },
                "uniqueItems": false,
-               "rcsb_nested_indexing": true
+               "rcsb_nested_indexing": true,
+               "rcsb_nested_indexing_context": [
+                  {
+                     "category_name": "reference_sequence_identifiers",
+                     "category_path": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_name"
+                  }
+               ]
             }
          },
          "additionalProperties": false,
@@ -3377,7 +3383,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.1.3",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.1.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.1.3"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.1.5",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.1.5. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.1.5"
 }
