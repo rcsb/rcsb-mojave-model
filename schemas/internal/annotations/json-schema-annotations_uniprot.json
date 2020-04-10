@@ -12,11 +12,7 @@
       "properties" : {
         "uniprot_id" : {
           "type" : "string",
-          "description" : "Primary accession number of a given UniProtKB entry.",
-          "rcsb_search_context": [
-            "exact-match",
-            "full-text"
-          ]
+          "description" : "Primary accession number of a given UniProtKB entry."
         }
       },
       "additionalProperties": false
@@ -28,7 +24,6 @@
     "annotations": {
       "type": "array",
       "items": {
-        "type": "object",
         "$ref": "common-schema-annotation.json#/definitions/annotation"
       },
       "minItems": 1,

@@ -586,9 +586,9 @@
         "core_entity_alignments": {
           "type": "array",
           "description": "List of alignments with core_entity canonical sequences",
-          "required": ["core_entity_identifiers","scores","aligned_regions"],
           "items": {
             "type": "object",
+            "required": ["core_entity_identifiers","scores","aligned_regions"],
             "description": "Alignment with a core_entity canonical sequence",
             "allOf": [{
               "$ref": "common-schema-alignment.json#/definitions/alignment"

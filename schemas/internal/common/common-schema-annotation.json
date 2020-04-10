@@ -7,69 +7,30 @@
       "properties": {
         "description": {
           "type": "string",
-          "description": "A description for the feature.",
-          "rcsb_search_context": [
-            "full-text"
-          ],
-          "rcsb_full_text_priority": 1,
-          "rcsb_description": [
-            {
-              "text": "A description for the feature.",
-              "context": "dictionary"
-            }
-          ]
+          "description": "A description for the feature."
         },
         "feature_id": {
           "type": "string",
-          "description": "An identifier for the feature.",
-          "rcsb_description": [
-            {
-              "text": "An identifier for the feature.",
-              "context": "dictionary"
-            }
-          ]
+          "description": "An identifier for the feature."
         },
         "name": {
           "type": "string",
-          "description": "A name for the feature.",
-          "rcsb_search_context": [
-            "exact-match",
-            "full-text"
-          ],
-          "rcsb_full_text_priority": 10,
-          "rcsb_description": [
-            {
-              "text": "A name for the feature.",
-              "context": "dictionary"
-            }
-          ]
+          "description": "A name for the feature."
         },
         "type": {
           "type": "string",
           "description": "A type or category of the feature.",
           "allOf": [{
-            "type": "string",
             "$ref": "../../internal/core/json-schema-core_uniprot.json#/properties/rcsb_uniprot_feature/items/properties/type"
           },{
-            "type": "string",
             "$ref": "../../exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json#/properties/rcsb_polymer_entity_feature/items/properties/type"
           },{
-            "type": "string",
             "$ref": "../../exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity_instance.json#/properties/rcsb_polymer_instance_feature/items/properties/type"
           }]
         },
         "value": {
           "type": "number",
-          "description": "The value for the feature.",
-          "rcsb_search_context": [
-            "default-match"
-          ],
-          "rcsb_description": [
-            {
-              "text": "The value for the feature.",
-              "context": "dictionary"
-            }
-          ]
+          "description": "The value for the feature."
         },
         "feature_positions": {
           "type": "array",
@@ -78,36 +39,15 @@
             "properties": {
               "beg_seq_id": {
                 "type": "integer",
-                "description": "An identifier for the monomer at which this segment of the feature begins.",
-                "rcsb_description": [
-                  {
-                    "text": "An identifier for the monomer at which this segment of the feature begins.",
-                    "context": "dictionary"
-                  }
-                ]
+                "description": "An identifier for the monomer at which this segment of the feature begins."
               },
               "end_seq_id": {
                 "type": "integer",
-                "description": "An identifier for the monomer at which this segment of the feature ends.",
-                "rcsb_description": [
-                  {
-                    "text": "An identifier for the monomer at which this segment of the feature ends.",
-                    "context": "dictionary"
-                  }
-                ]
+                "description": "An identifier for the monomer at which this segment of the feature ends."
               },
               "value": {
                 "type": "number",
-                "description": "The value for the feature over this monomer segment.",
-                "rcsb_search_context": [
-                  "default-match"
-                ],
-                "rcsb_description": [
-                  {
-                    "text": "The value for the feature over this monomer segment.",
-                    "context": "dictionary"
-                  }
-                ]
+                "description": "The value for the feature over this monomer segment."
               }
             },
             "additionalProperties": false
