@@ -3,6 +3,7 @@
   "title" : "Core NCBI",
   "description": "JSON schema for core NCBI collection in RCSB Data Warehouse.",
   "type": "object",
+  "$id": "/internal/core/json-schema-core_ncbi.json",
   "required": [
     "rcsb_ncbi_containers_identifiers",
     "rcsb_ncbi_metadata",
@@ -350,123 +351,50 @@
         "core_entity_alignments": {
           "type": "array",
           "description": "List of alignments with core_entity canonical sequences",
+          "required": ["core_entity_identifiers","scores","aligned_regions"],
           "items": {
             "type": "object",
             "description": "Alignment with a core_entity canonical sequence",
-            "required": ["core_entity_identifiers","scores","aligned_regions"],
-            "properties": {
-              "core_entity_identifiers": {
-                "type": "object",
-                "description": "core_entity identifiers",
-                "required": ["entity_id","entry_id"],
-                "properties": {
-                  "entry_id": {
-                    "type": "string"
-                  },
-                  "entity_id": {
-                    "type": "string"
-                  }
-                }
-              },
-              "scores": {
-                "type": "object",
-                "description": "Alignment scores",
-                "required": ["target_coverage","query_coverage","target_length","query_length"],
-                "properties": {
-                  "target_coverage": {
-                    "type": "integer"
-                  },
-                  "query_coverage": {
-                    "type": "integer"
-                  },
-                  "target_length": {
-                    "type": "integer"
-                  },
-                  "query_length": {
-                    "type": "integer"
-                  }
-                }
-              },
-              "aligned_regions": {
-                "type": "array",
-                "description": "Aligned sequence regions",
-                "items": {
+            "allOf": [{
+              "$ref": "../common/common-schema-alignment.json#/definitions/alignment"
+            },{
+              "type": "object",
+              "properties": {
+                "core_entity_identifiers": {
                   "type": "object",
-                  "description": "Aligned region",
-                  "required": ["target_begin","query_begin","length"],
+                  "description": "core_entity identifiers",
+                  "required": ["entity_id","entry_id"],
                   "properties": {
-                    "target_begin":{
-                      "type": "integer",
-                      "description": "NCBI sequence start position"
+                    "entry_id": {
+                      "type": "string"
                     },
-                    "query_begin": {
-                      "type": "integer",
-                      "description": "Entity seqeunce start position"
-                    },
-                    "length": {
-                      "type": "integer",
-                      "description": "Aligned region length"
+                    "entity_id": {
+                      "type": "string"
                     }
                   }
                 }
               }
-            }
+            }]
           }
-        },"core_uniprot_alignments": {
+        },
+        "core_uniprot_alignments": {
           "type": "array",
           "description": "List of alignments with core_uniprot sequences",
           "items": {
             "type": "object",
             "description": "Alignment with a core_uniprot sequence",
             "required": ["uniprot_id","scores","aligned_regions"],
-            "properties": {
-              "uniprot_id": {
-                "type": "string",
-                "description": "UniProt accession"
-              },
-              "scores": {
-                "type": "object",
-                "description": "Alignment scores",
-                "required": ["target_coverage","query_coverage","target_length","query_length"],
-                "properties": {
-                  "target_coverage": {
-                    "type": "integer"
-                  },
-                  "query_coverage": {
-                    "type": "integer"
-                  },
-                  "target_length": {
-                    "type": "integer"
-                  },
-                  "query_length": {
-                    "type": "integer"
-                  }
-                }
-              },
-              "aligned_regions": {
-                "type": "array",
-                "description": "Aligned sequence regions",
-                "items": {
-                  "type": "object",
-                  "description": "Aligned region",
-                  "required": ["target_begin","query_begin","length"],
-                  "properties": {
-                    "target_begin":{
-                      "type": "integer",
-                      "description": "NCBI sequence start position"
-                    },
-                    "query_begin": {
-                      "type": "integer",
-                      "description": "Entity seqeunce start position"
-                    },
-                    "length": {
-                      "type": "integer",
-                      "description": "Aligned region length"
-                    }
-                  }
+            "allOf": [{
+              "$ref": "../common/common-schema-alignment.json#/definitions/alignment"
+            },{
+              "type": "object",
+              "properties": {
+                "uniprot_id": {
+                  "type": "string",
+                  "description": "UniProt accession"
                 }
               }
-            }
+            }]
           }
         }
       },
