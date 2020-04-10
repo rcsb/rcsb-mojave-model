@@ -3,7 +3,7 @@
   "title" : "Core NCBI",
   "description": "JSON schema for core NCBI collection in RCSB Data Warehouse.",
   "type": "object",
-  "$id": "/internal/common/common-schema-alignment.json",
+  "$id": "/internal/core/json-schema-core_ncbi.json",
   "required": [
     "rcsb_ncbi_containers_identifiers",
     "rcsb_ncbi_metadata",
@@ -356,7 +356,7 @@
             "type": "object",
             "description": "Alignment with a core_entity canonical sequence",
             "allOf": [{
-              "$ref": "common-schema-alignment.json#/definitions/alignment"
+              "$ref": "../common/common-schema-alignment.json#/definitions/alignment"
             },{
               "type": "object",
               "properties": {
@@ -385,7 +385,7 @@
             "description": "Alignment with a core_uniprot sequence",
             "required": ["uniprot_id","scores","aligned_regions"],
             "allOf": [{
-              "$ref": "common-schema-alignment.json#/definitions/alignment"
+              "$ref": "../common/common-schema-alignment.json#/definitions/alignment"
             },{
               "type": "object",
               "properties": {

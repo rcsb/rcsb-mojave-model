@@ -1,8 +1,8 @@
 {
-  "$schema" : "https://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "title" : "Entity Annotations",
   "type" : "object",
-  "$id": "/internal/common/common-schema-annotation.json",
+  "$id": "/internal/annotations/json-schema-annotations_polymer_entity.json",
   "required" : [
     "annotations_polymer_entity_container_identifiers", "sequence"
   ],
@@ -28,7 +28,7 @@
     "annotations": {
       "type": "array",
       "items": {
-        "$ref": "common-schema-annotation.json#/definitions/annotation"
+        "$ref": "../common/common-schema-annotation.json#/definitions/annotation"
       },
       "minItems": 1,
       "uniqueItems": true

@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title" : "Core UniProt",
   "type" : "object",
-  "$id": "/internal/common/common-schema-alignment.json",
+  "$id": "/internal/core/json-schema-core_uniprot.json",
   "required" : [
     "rcsb_uniprot_container_identifiers"
   ],
@@ -591,7 +591,7 @@
             "required": ["core_entity_identifiers","scores","aligned_regions"],
             "description": "Alignment with a core_entity canonical sequence",
             "allOf": [{
-              "$ref": "common-schema-alignment.json#/definitions/alignment"
+              "$ref": "../common/common-schema-alignment.json#/definitions/alignment"
             },{
               "type": "object",
               "properties": {

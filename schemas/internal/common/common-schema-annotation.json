@@ -1,5 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "/internal/common/common-schema-annotation.json",
   "type" : "object",
   "definitions": {
     "annotation": {
@@ -21,7 +22,7 @@
           "type": "string",
           "description": "A type or category of the feature.",
           "allOf": [{
-            "$ref": "../../internal/core/json-schema-core_uniprot.json#/properties/rcsb_uniprot_feature/items/properties/type"
+            "$ref": "../core/json-schema-core_uniprot.json#/properties/rcsb_uniprot_feature/items/properties/type"
           },{
             "$ref": "../../exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json#/properties/rcsb_polymer_entity_feature/items/properties/type"
           },{
