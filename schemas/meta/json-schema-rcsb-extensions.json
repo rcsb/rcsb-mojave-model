@@ -140,6 +140,26 @@
           "category_path": {
             "type": "string",
             "description": "The absolute path (from the document root) to the field that identifies the context."
+          },
+          "context_attributes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "context_value": {
+                  "type": "string",
+                  "description": "A value in the controlled vocabulary of the nested context field."
+                },
+                "search_paths": {
+                  "type": "array",
+                  "items": {
+                    "description": "Absolute path (from the document root) of a searchable attribute associated with the context value.",
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "description": "Specifies the paths of searchable attributes associated with values of the nested context field."
           }
         }
       },
