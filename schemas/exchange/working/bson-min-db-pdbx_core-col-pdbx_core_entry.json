@@ -3343,6 +3343,13 @@
             "deposit_date": {
                "bsonType": "date"
             },
+            "has_released_experimental_data": {
+               "bsonType": "string",
+               "enum": [
+                  "N",
+                  "Y"
+               ]
+            },
             "initial_release_date": {
                "bsonType": "date"
             },

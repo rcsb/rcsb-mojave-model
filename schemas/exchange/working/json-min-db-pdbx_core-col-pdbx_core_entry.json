@@ -2359,6 +2359,10 @@
                         "detail": "SYNCHROTRON"
                      },
                      {
+                        "value": "ELETTRA BEAMLINE XRD2",
+                        "detail": "SYNCHROTRON"
+                     },
+                     {
                         "value": "ELLIOTT GX-13",
                         "detail": "ROTATING ANODE"
                      },
@@ -7703,6 +7707,10 @@
                         "detail": "Germany"
                      },
                      {
+                        "value": "Alzheimer Forschung Initiative e.V.",
+                        "detail": "Germany"
+                     },
+                     {
                         "value": "Alzheimers Drug Discovery Foundation (ADDF)",
                         "detail": "United States"
                      },
@@ -8005,6 +8013,10 @@
                      {
                         "value": "General Secretariat for Research and Technology (GSRT)",
                         "detail": "European Union"
+                     },
+                     {
+                        "value": "German Federal Ministry for Economic Affairs and Energy",
+                        "detail": "Germany"
                      },
                      {
                         "value": "German Federal Ministry for Education and Research",
@@ -8481,6 +8493,10 @@
                         "detail": "Denmark"
                      },
                      {
+                        "value": "Obel Family Foundation",
+                        "detail": "Germany"
+                     },
+                     {
                         "value": "Oncode Institute",
                         "detail": "Netherlands"
                      },
@@ -8591,6 +8607,10 @@
                         "detail": "Spain"
                      },
                      {
+                        "value": "Spar Nord Foundation",
+                        "detail": "Germany"
+                     },
+                     {
                         "value": "Swedish Energy Agency",
                         "detail": "Sweden"
                      },
@@ -8611,12 +8631,20 @@
                         "detail": "Thailand"
                      },
                      {
+                        "value": "Technology Agency of the Czech Republic",
+                        "detail": "Czech Republic"
+                     },
+                     {
                         "value": "The Carlsberg Foundation",
                         "detail": "Denmark"
                      },
                      {
                         "value": "The Francis Crick Institute",
                         "detail": "United Kingdom"
+                     },
+                     {
+                        "value": "The Thailand Research Fund (TRF)",
+                        "detail": "Thailand"
                      },
                      {
                         "value": "The University Grants Committee, Research Grants Council (RGC)",
@@ -8649,6 +8677,10 @@
                      {
                         "value": "University of Zurich",
                         "detail": "Switzerland"
+                     },
+                     {
+                        "value": "Vidyasirimedhi Institute of Science and Technology (VISTEC)",
+                        "detail": "Thailand"
                      },
                      {
                         "value": "Vinnova",
@@ -13534,6 +13566,34 @@
                   {
                      "group_name": "Deposition",
                      "priority_order": 15
+                  }
+               ]
+            },
+            "has_released_experimental_data": {
+               "type": "string",
+               "enum": [
+                  "N",
+                  "Y"
+               ],
+               "description": "A code indicating the current availibility of experimental data in the repository.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
+               "rcsb_description": [
+                  {
+                     "text": "A code indicating the current availibility of experimental data in the repository.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Has experimental data",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Deposition",
+                     "priority_order": 45
                   }
                ]
             },
@@ -18999,7 +19059,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.1.4",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.1.4. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.1.4"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.1.5",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.1.5. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.1.5"
 }
