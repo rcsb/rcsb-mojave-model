@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "8.2.4",
+   "DATABASE_VERSION": "8.2.5",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -61335,6 +61335,7 @@
          "ATTRIBUTES": {
             "ENTRY_ID": "entry_id",
             "DEPOSIT_DATE": "deposit_date",
+            "HAS_RELEASED_EXPERIMENTAL_DATA": "has_released_experimental_data",
             "INITIAL_RELEASE_DATE": "initial_release_date",
             "MAJOR_REVISION": "major_revision",
             "MINOR_REVISION": "minor_revision",
@@ -61351,6 +61352,12 @@
             "DEPOSIT_DATE": {
                "CATEGORY": "rcsb_accession_info",
                "ATTRIBUTE": "deposit_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "HAS_RELEASED_EXPERIMENTAL_DATA": {
+               "CATEGORY": "rcsb_accession_info",
+               "ATTRIBUTE": "has_released_experimental_data",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -61418,8 +61425,27 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "INITIAL_RELEASE_DATE": {
+            "HAS_RELEASED_EXPERIMENTAL_DATA": {
                "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "N",
+                  "Y"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "INITIAL_RELEASE_DATE": {
+               "ORDER": 4,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -61435,22 +61461,6 @@
                "SUB_CATEGORIES": []
             },
             "MAJOR_REVISION": {
-               "ORDER": 4,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "MINOR_REVISION": {
                "ORDER": 5,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -61466,8 +61476,24 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "REVISION_DATE": {
+            "MINOR_REVISION": {
                "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REVISION_DATE": {
+               "ORDER": 7,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -61483,7 +61509,7 @@
                "SUB_CATEGORIES": []
             },
             "STATUS_CODE": {
-               "ORDER": 7,
+               "ORDER": 8,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -99534,7 +99560,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "pdbx_core_entry",
-            "VERSION": "8.1.4"
+            "VERSION": "8.1.5"
          },
          {
             "NAME": "pdbx_core_assembly",
