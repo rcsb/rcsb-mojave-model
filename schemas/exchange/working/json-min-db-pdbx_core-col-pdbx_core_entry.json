@@ -985,7 +985,8 @@
                   "type": "string",
                   "description": "The make, model or name of the detector device used.",
                   "rcsb_search_context": [
-                     "exact-match"
+                     "exact-match",
+                     "full-text"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
@@ -14034,7 +14035,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Polymer Residues",
+                     "text": "Total Number of Polymer Residues (All Deposited Polymer Chains)",
                      "context": "brief"
                   }
                ],
@@ -18796,7 +18797,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "ID(s) and Keywords",
-                     "priority_order": 25
+                     "priority_order": 20
                   }
                ]
             },
@@ -18831,7 +18832,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "ID(s) and Keywords",
-                     "priority_order": 30
+                     "priority_order": 25
                   }
                ]
             }
@@ -19059,7 +19060,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.1.5",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.1.5. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.1.5"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.1.6",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.1.6. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.1.6"
 }
