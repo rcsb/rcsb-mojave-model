@@ -597,6 +597,85 @@
                      ]
                   },
                   "uniqueItems": false
+               },
+               "feature_value": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "comp_id": {
+                           "type": "string",
+                           "description": "The chemical component identifier for the instance of the feature value.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The chemical component identifier for the instance of the feature value.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "details": {
+                           "type": "string",
+                           "description": "Specific details about the feature.",
+                           "rcsb_description": [
+                              {
+                                 "text": "Specific details about the feature.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "reference": {
+                           "type": "number",
+                           "description": "The reference value of the feature.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The reference value of the feature.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "reported": {
+                           "type": "number",
+                           "description": "The reported value of the feature.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The reported value of the feature.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "uncertainty_estimate": {
+                           "type": "number",
+                           "description": "The estimated uncertainty of the reported feature value.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The estimated uncertainty of the reported feature value.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "uncertainty_estimate_type": {
+                           "type": "string",
+                           "enum": [
+                              "Z-Score"
+                           ],
+                           "description": "The type of estimated uncertainty for the reported feature value.",
+                           "rcsb_enum_annotated": [
+                              {
+                                 "value": "Z-Score",
+                                 "detail": "Number of standard deviation units from the reference distribution mean"
+                              }
+                           ],
+                           "rcsb_description": [
+                              {
+                                 "text": "The type of estimated uncertainty for the reported feature value.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false,
@@ -829,6 +908,25 @@
                   "rcsb_description": [
                      {
                         "text": "The value of _rcsb_branched_struct_conn.id must uniquely identify a record in\n the rcsb_branched_struct_conn list.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "role": {
+                  "type": "string",
+                  "enum": [
+                     "C-Mannosylation",
+                     "N-Glycosylation",
+                     "O-Glycosylation"
+                  ],
+                  "examples": [
+                     "N-Glycosylation",
+                     "O-Glycosylation"
+                  ],
+                  "description": "The chemical or structural role of the interaction",
+                  "rcsb_description": [
+                     {
+                        "text": "The chemical or structural role of the interaction",
                         "context": "dictionary"
                      }
                   ]

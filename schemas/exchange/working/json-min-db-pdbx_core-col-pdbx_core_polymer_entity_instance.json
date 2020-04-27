@@ -934,6 +934,25 @@
                      }
                   ]
                },
+               "role": {
+                  "type": "string",
+                  "enum": [
+                     "C-Mannosylation",
+                     "N-Glycosylation",
+                     "O-Glycosylation"
+                  ],
+                  "examples": [
+                     "N-Glycosylation",
+                     "O-Glycosylation"
+                  ],
+                  "description": "The chemical or structural role of the interaction",
+                  "rcsb_description": [
+                     {
+                        "text": "The chemical or structural role of the interaction",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "value_order": {
                   "type": "string",
                   "enum": [

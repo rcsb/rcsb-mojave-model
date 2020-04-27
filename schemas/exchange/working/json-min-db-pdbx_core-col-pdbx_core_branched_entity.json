@@ -456,10 +456,25 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "BIRD_MOLECULE_CLASS",
+                     "BIRD_MOLECULE_NAME",
+                     "BIRD_MOLECULE_TYPE",
                      "mutation"
                   ],
                   "description": "A type or category of the feature.",
                   "rcsb_enum_annotated": [
+                     {
+                        "value": "BIRD_MOLECULE_CLASS",
+                        "detail": "Defines the function of the molecule."
+                     },
+                     {
+                        "value": "BIRD_MOLECULE_NAME",
+                        "detail": "Defines the name assigned to the molecule."
+                     },
+                     {
+                        "value": "BIRD_MOLECULE_TYPE",
+                        "detail": "Defines the structural classification of the molecule."
+                     },
                      {
                         "value": "mutation",
                         "detail": "Engineered mutations and chemical modifications"
@@ -615,6 +630,9 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "BIRD_MOLECULE_CLASS",
+                     "BIRD_MOLECULE_NAME",
+                     "BIRD_MOLECULE_TYPE",
                      "mutation"
                   ],
                   "description": "Type or category of the feature.",
@@ -623,6 +641,18 @@
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
+                     {
+                        "value": "BIRD_MOLECULE_CLASS",
+                        "detail": "Defines the function of the molecule."
+                     },
+                     {
+                        "value": "BIRD_MOLECULE_NAME",
+                        "detail": "Defines the name assigned to the molecule."
+                     },
+                     {
+                        "value": "BIRD_MOLECULE_TYPE",
+                        "detail": "Defines the structural classification of the molecule."
+                     },
                      {
                         "value": "mutation",
                         "detail": "Engineered mutations and chemical modifications"

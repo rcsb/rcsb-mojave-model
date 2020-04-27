@@ -288,6 +288,14 @@
                "ordinal_id": {
                   "bsonType": "int"
                },
+               "role": {
+                  "bsonType": "string",
+                  "enum": [
+                     "C-Mannosylation",
+                     "N-Glycosylation",
+                     "O-Glycosylation"
+                  ]
+               },
                "value_order": {
                   "bsonType": "string",
                   "enum": [
