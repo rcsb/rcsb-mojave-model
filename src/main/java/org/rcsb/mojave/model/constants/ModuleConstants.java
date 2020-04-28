@@ -1,4 +1,4 @@
-package org.rcsb.mojave.model;
+package org.rcsb.mojave.model.constants;
 
 public class ModuleConstants {
 

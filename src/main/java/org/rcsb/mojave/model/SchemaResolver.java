@@ -2,6 +2,7 @@ package org.rcsb.mojave.model;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FileUtils;
+import org.rcsb.mojave.model.constants.ModuleConstants;
 import org.rcsb.mojave.tools.utils.CommonUtils;
 
 import java.io.FileInputStream;

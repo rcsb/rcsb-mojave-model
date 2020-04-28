@@ -1,7 +1,7 @@
 import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.Test;
 import org.rcsb.mojave.meta.enums.TypeEnum;
-import org.rcsb.mojave.model.ModuleConstants;
+import org.rcsb.mojave.model.constants.ModuleConstants;
 import org.rcsb.mojave.tools.jsonschema.SchemaLoader;
 import org.rcsb.mojave.tools.jsonschema.model.JsonSchemaInstance;
 import org.rcsb.mojave.tools.utils.CommonUtils;

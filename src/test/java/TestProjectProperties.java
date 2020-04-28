@@ -1,5 +1,5 @@
 import org.junit.Test;
-import org.rcsb.mojave.model.ModuleConstants;
+import org.rcsb.mojave.model.constants.ModuleConstants;
 import org.rcsb.mojave.tools.utils.CommonUtils;
 
 import java.io.IOException;
