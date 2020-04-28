@@ -80,3 +80,8 @@ validation checks at the database level so that the data integrity is ensured.
  Due to [MongoDB’s implementation](https://docs.mongodb.com/manual/reference/operator/query/jsonSchema/#omissions) 
  of JSON Schema some of the specification-compliant definitions are not supported. BSON schemas compatible with validator 
  are generated and stored in `target/generated-sources/schema/validation`.
+
+## Versioning
+ Version numbers should follow [Semantic Versioning Specification](https://semver.org/#semantic-versioning-specification-semver) 
+(SemVer). Release version takes the **x.y.z** form, where **x** is the major version, **y** is the minor version, 
+and **z** is the patch version (e.g. 0.1.0).
