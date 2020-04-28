@@ -456,25 +456,10 @@
                "type": {
                   "type": "string",
                   "enum": [
-                     "BIRD_MOLECULE_CLASS",
-                     "BIRD_MOLECULE_NAME",
-                     "BIRD_MOLECULE_TYPE",
                      "mutation"
                   ],
                   "description": "A type or category of the feature.",
                   "rcsb_enum_annotated": [
-                     {
-                        "value": "BIRD_MOLECULE_CLASS",
-                        "detail": "Defines the function of the molecule."
-                     },
-                     {
-                        "value": "BIRD_MOLECULE_NAME",
-                        "detail": "Defines the name assigned to the molecule."
-                     },
-                     {
-                        "value": "BIRD_MOLECULE_TYPE",
-                        "detail": "Defines the structural classification of the molecule."
-                     },
                      {
                         "value": "mutation",
                         "detail": "Engineered mutations and chemical modifications"
@@ -630,9 +615,6 @@
                "type": {
                   "type": "string",
                   "enum": [
-                     "BIRD_MOLECULE_CLASS",
-                     "BIRD_MOLECULE_NAME",
-                     "BIRD_MOLECULE_TYPE",
                      "mutation"
                   ],
                   "description": "Type or category of the feature.",
@@ -641,18 +623,6 @@
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
-                     {
-                        "value": "BIRD_MOLECULE_CLASS",
-                        "detail": "Defines the function of the molecule."
-                     },
-                     {
-                        "value": "BIRD_MOLECULE_NAME",
-                        "detail": "Defines the name assigned to the molecule."
-                     },
-                     {
-                        "value": "BIRD_MOLECULE_TYPE",
-                        "detail": "Defines the structural classification of the molecule."
-                     },
                      {
                         "value": "mutation",
                         "detail": "Engineered mutations and chemical modifications"
@@ -781,7 +751,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_branched_entity version: 8.0.5",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity version 8.0.5. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.0.5"
+   "title": "schema: pdbx_core collection: pdbx_core_branched_entity version: 8.0.6",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity version 8.0.6. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.0.6"
 }
