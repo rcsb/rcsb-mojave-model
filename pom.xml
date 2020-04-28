@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
+
+    <groupId>org.rcsb</groupId>
+    <artifactId>rcsb-mojave-model</artifactId>
+    <version>1.2.2-SNAPSHOT</version>
+
+    <properties>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.targetEncoding>UTF-8</project.build.targetEncoding>
+
+        <jdk.version>1.8</jdk.version>
+        <junit.version>4.12</junit.version>
+
+        <project.auto.package>org.rcsb.mojave.auto</project.auto.package>
+        <project.enums.package>org.rcsb.mojave.enumeration</project.enums.package>
+
+        <!-- IMPORTANT: this property is used to access the version of models from the dependent projects.
+            It MUST be the full project version.-->
+        <json.schema.version>${project.version}</json.schema.version>
+
+        <!-- rcsb-json-schema project is built continuously for a branch -->
+        <rcsb-json-schema.version>master-SNAPSHOT</rcsb-json-schema.version>
+
+        <mojave.meta.version>1.1.1-SNAPSHOT</mojave.meta.version>
+        <mojave.tools.version>1.0.3-SNAPSHOT</mojave.tools.version>
+        <reflection.version>0.9.11</reflection.version>
+
+        <!-- ==================================== EXCHANGE DB JSON SCHEMAS ========================================= -->
+
+        <exch.json.schemas.location>/exchange/min-meta</exch.json.schemas.location>
+
+        <!-- schemas for core collections -->
+        <exch.core.entry.json.schema.name>json-min-db-pdbx_core-col-pdbx_core_entry.json</exch.core.entry.json.schema.name>
+
+        <exch.core.polymer.entity.json.schema.name>json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json</exch.core.polymer.entity.json.schema.name>
+        <exch.core.nonpolymer.entity.json.schema.name>json-min-db-pdbx_core-col-pdbx_core_nonpolymer_entity.json</exch.core.nonpolymer.entity.json.schema.name>
+        <exch.core.branched.entity.json.schema.name>json-min-db-pdbx_core-col-pdbx_core_branched_entity.json</exch.core.branched.entity.json.schema.name>
+
+        <exch.core.polymer.entity.instance.json.schema.name>json-min-db-pdbx_core-col-pdbx_core_polymer_entity_instance.json</exch.core.polymer.entity.instance.json.schema.name>
+        <exch.core.nonpolymer.entity.instance.json.schema.name>json-min-db-pdbx_core-col-pdbx_core_nonpolymer_entity_instance.json</exch.core.nonpolymer.entity.instance.json.schema.name>
+        <exch.core.branched.entity.instance.json.schema.name>json-min-db-pdbx_core-col-pdbx_core_branched_entity_instance.json</exch.core.branched.entity.instance.json.schema.name>
+
+        <exch.core.assembly.json.schema.name>json-min-db-pdbx_core-col-pdbx_core_assembly.json</exch.core.assembly.json.schema.name>
+        <exch.core.bird.chemcomp.json.schema.name>json-min-db-bird_chem_comp_core-col-bird_chem_comp_core.json</exch.core.bird.chemcomp.json.schema.name>
+        <exch.core.drugbank.json.schema.name>json-min-db-drugbank_core-col-drugbank_core.json</exch.core.drugbank.json.schema.name>
+
+        <!-- schema for sequence clusters collection -->
+        <exch.clusters.json.schema.name>json-min-db-sequence_clusters-col-entity_members.json</exch.clusters.json.schema.name>
+
+        <!-- schemas for repository holdings collections -->
+        <exch.holdings.current.entries.json.schema.name>json-min-db-repository_holdings-col-repository_holdings_current_entry.json</exch.holdings.current.entries.json.schema.name>
+        <exch.holdings.removed.entries.json.schema.name>json-min-db-repository_holdings-col-repository_holdings_removed_entry.json</exch.holdings.removed.entries.json.schema.name>
+        <exch.holdings.unreleased.entries.json.schema.name>json-min-db-repository_holdings-col-repository_holdings_unreleased_entry.json</exch.holdings.unreleased.entries.json.schema.name>
+
+        <!-- ==================================== INTERNAL DW JSON SCHEMAS ========================================= -->
+
+        <rcsb.core.json.schemas.location>/internal/core</rcsb.core.json.schemas.location>
+        <rcsb.supl.json.schemas.location>/internal/supplemental</rcsb.supl.json.schemas.location>
+        <rcsb.annotations.json.schemas.location>/internal/annotations</rcsb.annotations.json.schemas.location>
+
+
+        <!-- schemas for core collections -->
+        <rcsb.core.assembly.json.schema.name>json-schema-core_assembly.json</rcsb.core.assembly.json.schema.name>
+        <rcsb.core.entry.json.schema.name>json-schema-core_entry.json</rcsb.core.entry.json.schema.name>
+
+        <rcsb.core.polymer.entity.json.schema.name>json-schema-core_polymer_entity.json</rcsb.core.polymer.entity.json.schema.name>
+        <rcsb.core.nonpolymer.entity.json.schema.name>json-schema-core_nonpolymer_entity.json</rcsb.core.nonpolymer.entity.json.schema.name>
+        <rcsb.core.branched.entity.json.schema.name>json-schema-core_branched_entity.json</rcsb.core.branched.entity.json.schema.name>
+
+        <rcsb.core.polymer.entity.instance.json.schema.name>json-schema-core_polymer_entity_instance.json</rcsb.core.polymer.entity.instance.json.schema.name>
+        <rcsb.core.nonpolymer.entity.instance.json.schema.name>json-schema-core_nonpolymer_entity_instance.json</rcsb.core.nonpolymer.entity.instance.json.schema.name>
+        <rcsb.core.branched.entity.instance.json.schema.name>json-schema-core_branched_entity_instance.json</rcsb.core.branched.entity.instance.json.schema.name>
+
+        <rcsb.core.uniprot.json.schema.name>json-schema-core_uniprot.json</rcsb.core.uniprot.json.schema.name>
+        <rcsb.core.pubmed.json.schema.name>json-schema-core_pubmed.json</rcsb.core.pubmed.json.schema.name>
+        <rcsb.core.ncbi.json.schema.name>json-schema-core_ncbi.json</rcsb.core.ncbi.json.schema.name>
+        <rcsb.core.pfam.json.schema.name>json-schema-core_pfam.json</rcsb.core.pfam.json.schema.name>
+
+        <rcsb.tree.json.schema.name>json-schema-rcsb_tree_node.json</rcsb.tree.json.schema.name>
+        <rcsb.shape.json.schema.name>json-schema-shape_descriptor.json</rcsb.shape.json.schema.name>
+
+        <!-- schemas for annotations -->
+        <rcsb.annotations.uniprot.json.schema.name>json-schema-annotations_uniprot.json</rcsb.annotations.uniprot.json.schema.name>
+        <rcsb.annotations.polymer.entity.json.schema.name>json-schema-annotations_polymer_entity.json</rcsb.annotations.polymer.entity.json.schema.name>
+        <rcsb.annotations.polymer.entity.instance.json.schema.name>json-schema-annotations_polymer_entity_instance.json</rcsb.annotations.polymer.entity.instance.json.schema.name>
+
+        <!-- ================================= WHERE WE KEEP SCHEMAS PRODUCTS ====================================== -->
+
+        <!-- for schemas we create automatically or download -->
+        <generated.schema.location>generated-sources/schema</generated.schema.location>
+
+        <!-- for schemas we create as an intermediate product -->
+        <derived.schemas.location>${generated.schema.location}/derived</derived.schemas.location>
+        <!-- schemas automatically created for DW core collections in JSON -->
+        <core.schema.location>${generated.schema.location}/core</core.schema.location>
+        <!-- schemas automatically created for Java types generation in JSON -->
+        <auto.schema.location>${generated.schema.location}/auto</auto.schema.location>
+        <!-- schemas automatically created for validation of DW core collections in BSON -->
+        <validation.schema.location>${generated.schema.location}/validation</validation.schema.location>
+
+        <!-- intermediate schemas -->
+        <sequence.clusters.derived.json.schema.name>json-schema_sequence_clusters.json</sequence.clusters.derived.json.schema.name>
+        <current.holdings.derived.json.schema.name>json-schema_current_holdings.json</current.holdings.derived.json.schema.name>
+
+        <!-- ========================================= FINAL SCHEMA NAMES ========================================== -->
+
+        <!-- CORE SCHEMA NAMES -->
+        <core.assembly.json.schema.name>core_assembly.json</core.assembly.json.schema.name>
+        <core.entry.json.schema.name>core_entry.json</core.entry.json.schema.name>
+
+        <core.polymer.entity.json.schema.name>core_polymer_entity.json</core.polymer.entity.json.schema.name>
+        <core.nonpolymer.entity.json.schema.name>core_nonpolymer_entity.json</core.nonpolymer.entity.json.schema.name>
+        <core.branched.entity.json.schema.name>core_branched_entity.json</core.branched.entity.json.schema.name>
+
+        <core.polymer.entity.instance.json.schema.name>core_polymer_entity_instance.json</core.polymer.entity.instance.json.schema.name>
+        <core.nonpolymer.entity.instance.json.schema.name>core_nonpolymer_entity_instance.json</core.nonpolymer.entity.instance.json.schema.name>
+        <core.branched.entity.instance.json.schema.name>core_branched_entity_instance.json</core.branched.entity.instance.json.schema.name>
+
+        <core.bird.chemcomp.json.schema.name>core_chem_comp.json</core.bird.chemcomp.json.schema.name>
+        <core.drugbank.json.schema.name>core_drugbank.json</core.drugbank.json.schema.name>
+        <core.uniprot.json.schema.name>core_uniprot.json</core.uniprot.json.schema.name>
+        <core.pubmed.json.schema.name>core_pubmed.json</core.pubmed.json.schema.name>
+        <core.ncbi.json.schema.name>core_ncbi.json</core.ncbi.json.schema.name>
+        <core.pfam.json.schema.name>core_pfam.json</core.pfam.json.schema.name>
+
+        <holdings.current.entry.json.schema.name>current_entry.json</holdings.current.entry.json.schema.name>
+        <holdings.removed.entry.json.schema.name>removed_entry.json</holdings.removed.entry.json.schema.name>
+        <holdings.unreleased.entry.json.schema.name>unreleased_entry.json</holdings.unreleased.entry.json.schema.name>
+
+        <core.graph.json.schema.name>rcsb_graph_node.json</core.graph.json.schema.name>
+
+        <shape.json.schema.name>shape_descriptor.json</shape.json.schema.name>
+
+        <annotations.uniprot.json.schema.name>annotations_uniprot.json</annotations.uniprot.json.schema.name>
+        <annotations.polymer.entity.json.schema.name>annotations_polymer_entity.json</annotations.polymer.entity.json.schema.name>
+        <annotations.polymer.entity.instance.json.schema.name>annotations_polymer_entity_instance.json</annotations.polymer.entity.instance.json.schema.name>
+
+        <!-- VALIDATION SCHEMA NAMES -->
+        <validation.assembly.bson.schema.name>validation-core_assembly.json</validation.assembly.bson.schema.name>
+        <validation.entry.bson.schema.name>validation-core_entry.json</validation.entry.bson.schema.name>
+
+        <validation.polymer.entity.bson.schema.name>validation-core_polymer_entity.json</validation.polymer.entity.bson.schema.name>
+        <validation.nonpolymer.entity.bson.schema.name>validation-core_nonpolymer_entity.json</validation.nonpolymer.entity.bson.schema.name>
+        <validation.branched.entity.bson.schema.name>validation-core_branched_entity.json</validation.branched.entity.bson.schema.name>
+
+        <validation.polymer.entity.instance.bson.schema.name>validation-core_polymer_entity_instance.json</validation.polymer.entity.instance.bson.schema.name>
+        <validation.nonpolymer.entity.instance.bson.schema.name>validation-core_nonpolymer_entity_instance.json</validation.nonpolymer.entity.instance.bson.schema.name>
+        <validation.branched.entity.instance.bson.schema.name>validation-core_branched_entity_instance.json</validation.branched.entity.instance.bson.schema.name>
+
+        <validation.bird.chemcomp.bson.schema.name>validation-core_bird_chem_comp.json</validation.bird.chemcomp.bson.schema.name>
+        <validation.drugbank.bson.schema.name>validation-core_drugbank.json</validation.drugbank.bson.schema.name>
+        <validation.pfam.bson.schema.name>validation-core_pfam.json</validation.pfam.bson.schema.name>
+        <validation.uniprot.bson.schema.name>validation-core_uniprot.json</validation.uniprot.bson.schema.name>
+        <validation.pubmed.bson.schema.name>validation-core_pubmed.json</validation.pubmed.bson.schema.name>
+        <validation.ncbi.bson.schema.name>validation-core_ncbi.json</validation.ncbi.bson.schema.name>
+
+        <validation.graph.bson.schema.name>validation-rcsb_graph_node.json</validation.graph.bson.schema.name>
+
+        <validation.current.entry.bson.schema.name>validation-current_entry.json</validation.current.entry.bson.schema.name>
+        <validation.removed.entry.bson.schema.name>validation-removed_entry.json</validation.removed.entry.bson.schema.name>
+        <validation.unreleased.entry.bson.schema.name>validation-unreleased_entry.json</validation.unreleased.entry.bson.schema.name>
+
+        <validation.shape.bson.schema.name>validation-shape_descriptor.json</validation.shape.bson.schema.name>
+
+        <validation.annotations.uniprot.bson.schema.name>validation-annotations_uniprot.json</validation.annotations.uniprot.bson.schema.name>
+        <validation.annotations.polymer.entity.bson.schema.name>validation-annotations_polymer_entity.json</validation.annotations.polymer.entity.bson.schema.name>
+        <validation.annotations.polymer.entity.instance.bson.schema.name>validation-annotations_polymer_entity_instance.json</validation.annotations.polymer.entity.instance.bson.schema.name>
+
+    </properties>
+
+    <distributionManagement>
+        <downloadUrl>http://nexus3.rcsb.org/repository/rcsb-super-proxy/</downloadUrl>
+        <repository>
+            <id>releases</id>
+            <name>RCSB PDB Maven Repository</name>
+            <url>http://nexus3.rcsb.org/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://nexus3.rcsb.org/repository/maven-snapshots/</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <!-- Maven will use the information embedded in the scm configuration to determine the command
+        mapping for the scm command. -->
+    <scm>
+        <url>https://github.com/rcsb/rcsb-mojave-model</url>
+        <connection>scm:git:git://github.com/rcsb/rcsb-mojave-model.git</connection>
+    </scm>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.rcsb</groupId>
+            <artifactId>rcsb-json-schema</artifactId>
+            <version>${rcsb-json-schema.version}</version>
+        </dependency>
+
+        <!-- Dependency on mojave-meta project is needed to have a type safety in validation process.
+             The validation occurs  -->
+        <dependency>
+            <groupId>org.rcsb</groupId>
+            <artifactId>rcsb-mojave-meta</artifactId>
+            <version>${mojave.meta.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.rcsb</groupId>
+            <artifactId>rcsb-mojave-tools</artifactId>
+            <version>${mojave.tools.version}</version>
+        </dependency>
+
+        <!-- Testing dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>${reflection.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <!-- Additional resources included for distribution -->
+        <resources>
+            <resource>
+                <directory>target/generated-sources/schema/core</directory>
+            </resource>
+            <resource>
+                <directory>target/generated-sources/schema/validation</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>${project.build.directory}/generated-sources/classes/org/rcsb/mojave</directory>
+                <includes>
+                    <include>CoreConstants.java</include>
+                </includes>
+            </resource>
+        </resources>
+
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+
+            <!-- Write project properties file at build time -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>write-project-properties</goal>
+                        </goals>
+                        <configuration>
+                            <outputFile>${basedir}/src/main/resources/model.module.properties</outputFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Executes Java programs -->
+            <plugin>
+
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <configuration>
+                    <includeProjectDependencies>true</includeProjectDependencies>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                </configuration>
+
+                <!-- executes the supplied java class in the current VM with the enclosing project's dependencies as classpath -->
+                <executions>
+
+                    <!-- GENERATE INTERMEDIATE SEQUENCE CLUSTERS JSON SCHEMA -->
+                    <execution>
+                        <id>generate-derived-seq-clusters-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <includeProjectDependencies>true</includeProjectDependencies>
+                            <mainClass>org.rcsb.mojave.tools.derived.GenerateDerivedSchemaSeqClusters</mainClass>
+                            <arguments>
+                                <!-- where to get source schema -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.clusters.json.schema.name}</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${derived.schemas.location}/${sequence.clusters.derived.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                    <!-- GENERATE CORE SCHEMAS -->
+                    <execution>
+                        <id>build-core-assembly-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.assembly.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.core.assembly.json.schema.name}</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.assembly.json.schema.name}</argument>
+                            </arguments>
+                            <systemProperties>
+                                <!-- Identifies a resource by type -->
+                                <systemProperty>
+                                    <key>sourceScheme</key>
+                                    <value>resource</value>
+                                </systemProperty>
+                            </systemProperties>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-entry-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.entry.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.core.entry.json.schema.name}</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.entry.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-polymer-entity-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.polymer.entity.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>file://${project.build.directory}/${derived.schemas.location}/${sequence.clusters.derived.json.schema.name}</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.core.polymer.entity.json.schema.name}</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.polymer.entity.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-nonpolymer-entity-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.nonpolymer.entity.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.core.nonpolymer.entity.json.schema.name}</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.nonpolymer.entity.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-branched-entity-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.branched.entity.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.core.branched.entity.json.schema.name}</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.branched.entity.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-polymer-entity-instance-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.polymer.entity.instance.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.core.polymer.entity.instance.json.schema.name}</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.polymer.entity.instance.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-nonpolymer-entity-instance-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.nonpolymer.entity.instance.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.core.nonpolymer.entity.instance.json.schema.name}</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.nonpolymer.entity.instance.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-branched-entity-instance-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.branched.entity.instance.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.core.branched.entity.instance.json.schema.name}</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.branched.entity.instance.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-uniprot-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.uniprot.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.uniprot.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-pubmed-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.pubmed.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.pubmed.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-ncbi-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.ncbi.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.ncbi.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-bird-chem-comp-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.bird.chemcomp.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.core.bird.chemcomp.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-drugbank-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.drugbank.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.core.drugbank.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-current-entry-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${holdings.current.entry.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.holdings.current.entries.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-removed-entry-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${holdings.removed.entry.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.holdings.removed.entries.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-unreleased-entry-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${holdings.unreleased.entry.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.holdings.unreleased.entries.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-graph-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.graph.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.supl.json.schemas.location}/${rcsb.tree.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-pfam-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.pfam.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.pfam.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-shape-descriptor-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${shape.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.supl.json.schemas.location}/${rcsb.shape.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>build-uniprot-annotations-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${annotations.uniprot.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.annotations.json.schemas.location}/${rcsb.annotations.uniprot.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>build-entity-annotations-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${annotations.polymer.entity.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.annotations.json.schemas.location}/${rcsb.annotations.polymer.entity.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>build-instance-annotations-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${annotations.polymer.entity.instance.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.annotations.json.schemas.location}/${rcsb.annotations.polymer.entity.instance.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                    <!-- GENERATE VALIDATION SCHEMAS -->
+                    <execution>
+                        <id>generate-validation-schema-assembly</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.assembly.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.assembly.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-entry</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.entry.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.entry.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-polymer-entity</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.polymer.entity.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.polymer.entity.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-nonpolymer-entity</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.nonpolymer.entity.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.nonpolymer.entity.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-branched-entity</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.branched.entity.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.branched.entity.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-polymer-entity-instance</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.polymer.entity.instance.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.polymer.entity.instance.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-nonpolymer-entity-instance</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.nonpolymer.entity.instance.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.nonpolymer.entity.instance.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-branched-entity-instance</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.branched.entity.instance.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.branched.entity.instance.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-uniprot</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.uniprot.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.uniprot.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-pubmed</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.pubmed.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.pubmed.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-ncbi</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.ncbi.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.ncbi.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-chemcomp</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.bird.chemcomp.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.bird.chemcomp.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-drugbank</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.drugbank.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.drugbank.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-pfam</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.pfam.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.pfam.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-rcsb-graph</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.graph.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.graph.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-current-entry</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${holdings.current.entry.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.current.entry.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-removed-entry</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${holdings.removed.entry.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.removed.entry.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-unreleased-entry</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${holdings.unreleased.entry.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.unreleased.entry.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-shape</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${shape.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.shape.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-annotations_uniprot</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${annotations.uniprot.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.annotations.uniprot.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-annotations_polymer_entity</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${annotations.polymer.entity.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.annotations.polymer.entity.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-annotations_polymer_entity_instance</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${annotations.polymer.entity.instance.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.annotations.polymer.entity.instance.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                    <!-- GENERATE SCHEMAS USED TO CREATE JAVA TYPES -->
+                    <execution>
+                        <id>annotate-schemas-for-java-types</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateAutoJsonSchema</mainClass>
+                            <arguments>
+                                <!-- core schema location -->
+                                <argument>-i</argument>
+                                <argument>${project.build.directory}/${core.schema.location}</argument>
+                                <!-- auto schema location -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${auto.schema.location}</argument>
+                                <argument>-t</argument>
+                                <argument>${project.auto.package}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                    <!-- GENERATE CORE CONSTANTS -->
+                    <execution>
+                        <id>generate-core-constants</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateSchemaConstants</mainClass>
+                            <arguments>
+                                <!-- Location of the JSON Schema file(s). -->
+                                <argument>-i</argument>
+                                <argument>${project.build.directory}/${core.schema.location}</argument>
+                                <!-- Target directory for generated Java source files. -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/generated-sources/classes</argument>
+                                <!-- Target fully qualified class name used for generated Java class. -->
+                                <argument>-t</argument>
+                                <argument>org.rcsb.mojave.CoreConstants</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                    <!-- GENERATE CORE ENUMS -->
+                    <execution>
+                        <id>generate-schema-enums</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateSchemaEnums</mainClass>
+                            <arguments>
+                                <!-- Location of the JSON Schema file(s). -->
+                                <argument>-i</argument>
+                                <argument>${project.build.directory}/${core.schema.location}</argument>
+                                <!-- Target directory for generated Java source files. -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/generated-sources/classes</argument>
+                                <!-- Target fully qualified class name used for generated Java class. -->
+                                <argument>-t</argument>
+                                <argument>${project.enums.package}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
+
+            <!-- Generates Java types from JSON Schema (or example JSON) and can annotate those types for data-binding
+                with Jackson 1.x, Jackson 2.x or Gson -->
+            <plugin>
+
+                <groupId>org.jsonschema2pojo</groupId>
+                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+                <version>0.5.1</version>
+
+                <!-- Configuration of jsonschema2pojo is documented here:
+                http://joelittlejohn.github.io/jsonschema2pojo/site/0.5.1/generate-mojo.html-->
+                <configuration>
+                    <serializable>true</serializable>
+                    <annotationStyle>jackson2</annotationStyle>
+                    <inclusionLevel>NON_NULL</inclusionLevel>
+                    <includeJsr303Annotations>true</includeJsr303Annotations>
+                    <initializeCollections>false</initializeCollections>
+                    <includeToString>true</includeToString>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                    <groupId>org.rcsb</groupId>
+                    <artifactId>rcsb-mojave-tools</artifactId>
+                    <version>${mojave.tools.version}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>generate-pojo</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <sourceType>jsonschema</sourceType>
+                            <includeAdditionalProperties>false</includeAdditionalProperties>
+                            <sourceDirectory>${project.build.directory}/${auto.schema.location}</sourceDirectory>
+                            <outputDirectory>${project.build.directory}/generated-sources/classes</outputDirectory>
+                            <targetPackage>${project.auto.package}</targetPackage>
+                            <customRuleFactory>org.rcsb.mojave.tools.jsonschema2pojo.rules.CustomRuleFactory</customRuleFactory>
+                            <customAnnotator>org.rcsb.mojave.tools.jsonschema2pojo.annotations.CustomAnnotator</customAnnotator>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Build helper plugin so that generated sources can be used from tests.
+                See  https://stackoverflow.com/questions/8587353/maven-how-to-handle-generated-sources-for-testonly -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>add-test-sources</id>
+                        <phase>generate-test-sources</phase>
+                        <goals>
+                            <goal>add-test-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${project.build.directory}/generated-sources/classes</source>
+                                <source>${project.build.directory}/generated-sources/schema</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
