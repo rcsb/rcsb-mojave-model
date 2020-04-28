@@ -8,7 +8,7 @@ stages:
   - test
 
 # Build branches and tags
-distribute-job:
+build-locker-job:
   stage: build
   script:
     # Handy for debugging
@@ -25,7 +25,7 @@ distribute-job:
     - echo "Latest versioned file name "${FILENAME_VESTION}
 
     # Produce schema artifacts
-    - cd rcsb-mojave-model/target/generated-sources/schema
+    - cd target/generated-sources/schema
     - echo "Will create "${FILENAME_VERSION}
     - tar -cvzf ${FILENAME_VERSION} core/
 
