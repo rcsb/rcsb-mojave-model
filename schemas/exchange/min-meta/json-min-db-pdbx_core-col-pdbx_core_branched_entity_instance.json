@@ -597,6 +597,85 @@
                      ]
                   },
                   "uniqueItems": false
+               },
+               "feature_value": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "comp_id": {
+                           "type": "string",
+                           "description": "The chemical component identifier for the instance of the feature value.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The chemical component identifier for the instance of the feature value.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "details": {
+                           "type": "string",
+                           "description": "Specific details about the feature.",
+                           "rcsb_description": [
+                              {
+                                 "text": "Specific details about the feature.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "reference": {
+                           "type": "number",
+                           "description": "The reference value of the feature.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The reference value of the feature.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "reported": {
+                           "type": "number",
+                           "description": "The reported value of the feature.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The reported value of the feature.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "uncertainty_estimate": {
+                           "type": "number",
+                           "description": "The estimated uncertainty of the reported feature value.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The estimated uncertainty of the reported feature value.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "uncertainty_estimate_type": {
+                           "type": "string",
+                           "enum": [
+                              "Z-Score"
+                           ],
+                           "description": "The type of estimated uncertainty for the reported feature value.",
+                           "rcsb_enum_annotated": [
+                              {
+                                 "value": "Z-Score",
+                                 "detail": "Number of standard deviation units from the reference distribution mean"
+                              }
+                           ],
+                           "rcsb_description": [
+                              {
+                                 "text": "The type of estimated uncertainty for the reported feature value.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false,
@@ -833,6 +912,25 @@
                      }
                   ]
                },
+               "role": {
+                  "type": "string",
+                  "enum": [
+                     "C-Mannosylation",
+                     "N-Glycosylation",
+                     "O-Glycosylation"
+                  ],
+                  "examples": [
+                     "N-Glycosylation",
+                     "O-Glycosylation"
+                  ],
+                  "description": "The chemical or structural role of the interaction",
+                  "rcsb_description": [
+                     {
+                        "text": "The chemical or structural role of the interaction",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "value_order": {
                   "type": "string",
                   "enum": [
@@ -1065,7 +1163,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_branched_entity_instance version: 8.0.4",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity_instance version 8.0.4. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.0.4"
+   "title": "schema: pdbx_core collection: pdbx_core_branched_entity_instance version: 8.0.5",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity_instance version 8.0.5. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.0.5"
 }

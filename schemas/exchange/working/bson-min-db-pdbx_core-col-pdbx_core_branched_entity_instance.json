@@ -186,6 +186,37 @@
                      ]
                   },
                   "uniqueItems": false
+               },
+               "feature_value": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "comp_id": {
+                           "bsonType": "string"
+                        },
+                        "details": {
+                           "bsonType": "string"
+                        },
+                        "reference": {
+                           "bsonType": "double"
+                        },
+                        "reported": {
+                           "bsonType": "double"
+                        },
+                        "uncertainty_estimate": {
+                           "bsonType": "double"
+                        },
+                        "uncertainty_estimate_type": {
+                           "bsonType": "string",
+                           "enum": [
+                              "Z-Score"
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false,
@@ -267,6 +298,14 @@
                },
                "ordinal_id": {
                   "bsonType": "int"
+               },
+               "role": {
+                  "bsonType": "string",
+                  "enum": [
+                     "C-Mannosylation",
+                     "N-Glycosylation",
+                     "O-Glycosylation"
+                  ]
                },
                "value_order": {
                   "bsonType": "string",
