@@ -2,7 +2,7 @@
    "NAME": "repository_holdings",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "repository_holdings",
-   "DATABASE_VERSION": "7.2.1",
+   "DATABASE_VERSION": "7.2.2",
    "SELECTION_FILTERS": {},
    "SCHEMA_DICT": {
       "RCSB_REPOSITORY_HOLDINGS_CURRENT": {
@@ -85,6 +85,8 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "2fo-fc Map",
+                  "Combined NMR data (NEF)",
+                  "Combined NMR data (NMR-STAR)",
                   "FASTA sequence",
                   "Map Coefficients",
                   "NMR chemical shifts",
@@ -930,6 +932,8 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Combined NMR data (NEF)",
+                  "Combined NMR data (NMR-STAR)",
                   "NMR chemical shifts",
                   "NMR restraints V1",
                   "NMR restraints V2",
@@ -1631,6 +1635,8 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Combined NMR data (NEF)",
+                  "Combined NMR data (NMR-STAR)",
                   "NMR chemical shifts",
                   "NMR restraints",
                   "coordinates",
@@ -2334,6 +2340,8 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Combined NMR data (NEF)",
+                  "Combined NMR data (NMR-STAR)",
                   "NMR chemical shifts",
                   "NMR restraints",
                   "coordinates",
@@ -2542,11 +2550,11 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "repository_holdings_update_entry",
-            "VERSION": "3.2.0"
+            "VERSION": "3.2.1"
          },
          {
             "NAME": "repository_holdings_current_entry",
-            "VERSION": "3.2.0"
+            "VERSION": "3.2.1"
          },
          {
             "NAME": "repository_holdings_unreleased_entry",
@@ -2554,7 +2562,7 @@
          },
          {
             "NAME": "repository_holdings_removed_entry",
-            "VERSION": "3.2.1"
+            "VERSION": "3.2.2"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
