@@ -655,6 +655,10 @@
                      {
                         "text": "The feature count.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature Count",
+                        "context": "brief"
                      }
                   ]
                },
@@ -743,6 +747,10 @@
                      {
                         "text": "Type or category of the feature.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Feature Type",
+                        "context": "brief"
                      }
                   ]
                }
@@ -755,7 +763,45 @@
          "rcsb_nested_indexing_context": [
             {
                "category_name": "feature_summary",
-               "category_path": "rcsb_nonpolymer_instance_feature_summary.type"
+               "category_path": "rcsb_nonpolymer_instance_feature_summary.type",
+               "context_attributes": [
+                  {
+                     "context_value": "HAS_COVALENT_LINKAGE",
+                     "search_paths": [
+                        "rcsb_nonpolymer_instance_feature_summary.count"
+                     ]
+                  },
+                  {
+                     "context_value": "HAS_METAL_COORDINATION_LINKAGE",
+                     "search_paths": [
+                        "rcsb_nonpolymer_instance_feature_summary.count"
+                     ]
+                  },
+                  {
+                     "context_value": "MOGUL_ANGLE_OUTLIER",
+                     "search_paths": [
+                        "rcsb_nonpolymer_instance_feature_summary.count"
+                     ]
+                  },
+                  {
+                     "context_value": "MOGUL_BOND_OUTLIER",
+                     "search_paths": [
+                        "rcsb_nonpolymer_instance_feature_summary.count"
+                     ]
+                  },
+                  {
+                     "context_value": "RSRCC_OUTLIER",
+                     "search_paths": [
+                        "rcsb_nonpolymer_instance_feature_summary.count"
+                     ]
+                  },
+                  {
+                     "context_value": "RSRZ_OUTLIER",
+                     "search_paths": [
+                        "rcsb_nonpolymer_instance_feature_summary.count"
+                     ]
+                  }
+               ]
             }
          ]
       },
@@ -1074,7 +1120,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 8.0.6",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 8.0.6. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.0.6"
+   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 8.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 8.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.1.0"
 }

@@ -33,7 +33,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Molecular Weight (Chemical Component)",
+                     "text": "Molecular Weight (Chemical Component) (g/mol)",
                      "context": "brief"
                   }
                ],
@@ -2992,6 +2992,12 @@
                         "text": "Annotation Name",
                         "context": "brief"
                      }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Chemical Components",
+                        "priority_order": 45
+                     }
                   ]
                },
                "provenance_source": {
@@ -3014,8 +3020,7 @@
                      "ATC",
                      "Generating Enzyme",
                      "Modification Type",
-                     "PSI-MOD",
-                     "residue"
+                     "PSI-MOD"
                   ],
                   "description": "A type or category of the annotation.",
                   "rcsb_search_context": [
@@ -3029,19 +3034,15 @@
                      },
                      {
                         "value": "Generating Enzyme",
-                        "detail": "Generating enzyme"
+                        "detail": "Enzyme generating residue modification (RESID)"
                      },
                      {
                         "value": "Modification Type",
-                        "detail": "'Modified"
+                        "detail": "Modified residue classification (RESID)"
                      },
                      {
                         "value": "PSI-MOD",
                         "detail": "Protein Modification Ontology"
-                     },
-                     {
-                        "value": "residue",
-                        "detail": "classification\""
                      }
                   ],
                   "rcsb_description": [
@@ -3093,6 +3094,12 @@
                                  "text": "Annotation Lineage Identifier",
                                  "context": "brief"
                               }
+                           ],
+                           "rcsb_search_group": [
+                              {
+                                 "group_name": "Chemical Components",
+                                 "priority_order": 55
+                              }
                            ]
                         },
                         "name": {
@@ -3112,13 +3119,18 @@
                                  "text": "Annotation Lineage Name",
                                  "context": "brief"
                               }
+                           ],
+                           "rcsb_search_group": [
+                              {
+                                 "group_name": "Chemical Components",
+                                 "priority_order": 50
+                              }
                            ]
                         }
                      },
                      "additionalProperties": false
                   },
-                  "uniqueItems": false,
-                  "rcsb_nested_indexing": true
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false
@@ -3129,7 +3141,35 @@
          "rcsb_nested_indexing_context": [
             {
                "category_name": "annotation_type",
-               "category_path": "rcsb_chem_comp_annotation.type"
+               "category_path": "rcsb_chem_comp_annotation.type",
+               "context_attributes": [
+                  {
+                     "context_value": "ATC",
+                     "search_paths": [
+                        "rcsb_chem_comp_annotation.annotation_lineage.id",
+                        "rcsb_chem_comp_annotation.annotation_lineage.name"
+                     ]
+                  },
+                  {
+                     "context_value": "PSI-MOD",
+                     "search_paths": [
+                        "rcsb_chem_comp_annotation.annotation_lineage.id",
+                        "rcsb_chem_comp_annotation.annotation_lineage.name"
+                     ]
+                  },
+                  {
+                     "context_value": "Generating Enzyme",
+                     "search_paths": [
+                        "rcsb_chem_comp_annotation.name"
+                     ]
+                  },
+                  {
+                     "context_value": "Modification Type",
+                     "search_paths": [
+                        "rcsb_chem_comp_annotation.name"
+                     ]
+                  }
+               ]
             }
          ]
       },
@@ -3541,8 +3581,60 @@
                      {
                         "text": "The resource identifier code for the related chemical reference.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Related resource identifier codes",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Chemical Components",
+                        "priority_order": 40
                      }
                   ]
+               },
+               "resource_lineage_depth": {
+                  "type": "array",
+                  "items": {
+                     "type": "integer",
+                     "description": "Members of the resource lineage as parent classification hierarchy depth (1-N).",
+                     "rcsb_description": [
+                        {
+                           "text": "Members of the resource lineage as parent classification hierarchy depth (1-N).",
+                           "context": "dictionary"
+                        }
+                     ]
+                  },
+                  "uniqueItems": false
+               },
+               "resource_lineage_id": {
+                  "type": "array",
+                  "items": {
+                     "type": "string",
+                     "description": "Members of the resource lineage as parent classification codes.",
+                     "rcsb_description": [
+                        {
+                           "text": "Members of the resource lineage as parent classification codes.",
+                           "context": "dictionary"
+                        }
+                     ]
+                  },
+                  "uniqueItems": false
+               },
+               "resource_lineage_name": {
+                  "type": "array",
+                  "items": {
+                     "type": "string",
+                     "description": "Members of the resource lineage as parent classification names.",
+                     "rcsb_description": [
+                        {
+                           "text": "Members of the resource lineage as parent classification names.",
+                           "context": "dictionary"
+                        }
+                     ]
+                  },
+                  "uniqueItems": false
                },
                "resource_name": {
                   "type": "string",
@@ -3597,61 +3689,10 @@
                      {
                         "text": "The resource name for the related chemical reference.",
                         "context": "dictionary"
-                     }
-                  ]
-               },
-               "resource_lineage": {
-                  "type": "array",
-                  "items": {
-                     "type": "object",
-                     "properties": {
-                        "depth": {
-                           "type": "integer",
-                           "description": "Members of the resource lineage as parent classification hierarchy depth (1-N).",
-                           "rcsb_description": [
-                              {
-                                 "text": "Members of the resource lineage as parent classification hierarchy depth (1-N).",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        },
-                        "id": {
-                           "type": "string",
-                           "description": "Members of the resource lineage as parent classification codes.",
-                           "rcsb_search_context": [
-                              "exact-match"
-                           ],
-                           "rcsb_full_text_priority": 10,
-                           "rcsb_description": [
-                              {
-                                 "text": "Members of the resource lineage as parent classification codes.",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        },
-                        "name": {
-                           "type": "string",
-                           "description": "Members of the resource lineage as parent classification names.",
-                           "rcsb_search_context": [
-                              "exact-match"
-                           ],
-                           "rcsb_full_text_priority": 10,
-                           "rcsb_description": [
-                              {
-                                 "text": "Members of the resource lineage as parent classification names.",
-                                 "context": "dictionary"
-                              }
-                           ]
-                        }
                      },
-                     "additionalProperties": false
-                  },
-                  "uniqueItems": false,
-                  "rcsb_nested_indexing": true,
-                  "rcsb_nested_indexing_context": [
                      {
-                        "category_name": "resource_lineage",
-                        "category_path": "rcsb_chem_comp_related.resource_lineage.name"
+                        "text": "Related resource name",
+                        "context": "brief"
                      }
                   ]
                }
@@ -3946,7 +3987,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.6.4",
-   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.6.4. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.6.4"
+   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.7.0",
+   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.7.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.7.0"
 }

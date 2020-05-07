@@ -9154,8 +9154,8 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Annotation",
-                     "priority_order": 15
+                     "group_name": "Deposition",
+                     "priority_order": 50
                   }
                ]
             },
@@ -13950,14 +13950,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Atoms",
+                     "text": "Number of Atoms (Atoms/Entry)",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 20
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 70
                   }
                ]
             },
@@ -13973,14 +13973,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Deposited Model Count",
+                     "text": "Deposited Model Count (Models/Entry)",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 70
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 75
                   }
                ]
             },
@@ -14007,6 +14007,16 @@
                   {
                      "text": "The number of non-polymer instances in the deposited data set.\n This is the total count of non-polymer entity instances reported\n in the deposited coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Total Number of Non-polymer Structure Instances (Observed Ligands/Entry)",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 60
                   }
                ]
             },
@@ -14020,6 +14030,16 @@
                   {
                      "text": "The number of polymer instances in the deposited data set.\n This is the total count of polymer entity instances reported\n in the deposited coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Total Number of Polymer Structure Instances (Observed Polymers/Entry)",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 55
                   }
                ]
             },
@@ -14035,14 +14055,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Total Number of Polymer Residues (All Deposited Polymer Chains)",
+                     "text": "Total Number of Polymer Residues (Polymer Monomer Residues/Entry)",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 25
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 65
                   }
                ]
             },
@@ -14119,14 +14139,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Disulfide Bond Count",
+                     "text": "Disulfide Bond Count (Disulfides/Entry)",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 75
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 80
                   }
                ]
             },
@@ -14142,14 +14162,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Entities",
+                     "text": "Number of Entities (Distinct Molecules/Entry)",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 30
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 20
                   }
                ]
             },
@@ -14274,14 +14294,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Molecular Weight (Structure)",
+                     "text": "Molecular Weight (Entry) (Kilodaltons)",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 80
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 15
                   }
                ]
             },
@@ -14354,14 +14374,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Non-polymer Entities (Ligands)",
+                     "text": "Number of Non-polymer Entities (Distinct Ligand Molecules/Entry)",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 35
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 25
                   }
                ]
             },
@@ -14480,14 +14500,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Polymer Composition",
+                     "text": "Entry Polymer Composition",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 15
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 10
                   }
                ]
             },
@@ -14516,14 +14536,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Entities (DNA)",
+                     "text": "Number of DNA Entities (Distinct DNA Macromolecules/Entry)",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 55
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 40
                   }
                ]
             },
@@ -14539,14 +14559,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Entities (RNA)",
+                     "text": "Number of RNA Entities (Distinct RNA Macromolecules/Entry)",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 50
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 35
                   }
                ]
             },
@@ -14575,14 +14595,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Entities (NA Hybrid)",
+                     "text": "Number of NA Hybrid Entities (Distinct NA Hybrid Macromolecules/Entry)",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 60
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 45
                   }
                ]
             },
@@ -14598,14 +14618,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Entities (Protein)",
+                     "text": "Number of Protein Entities (Distinct Protein Macromolecules/Entry)",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 45
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 30
                   }
                ]
             },
@@ -14756,8 +14776,8 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 10
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 5
                   }
                ]
             },
@@ -14801,14 +14821,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Entities (Solvent)",
+                     "text": "Number of Solvent Entities (Solvent Molecules/Entry)",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 65
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 50
                   }
                ]
             }
@@ -19070,7 +19090,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.1.8",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.1.8. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.1.8"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.2.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.2.0"
 }
