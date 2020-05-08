@@ -317,7 +317,7 @@
                            ],
                            "rcsb_search_group": [
                               {
-                                 "group_name": "Polymer Structure Instance Features",
+                                 "group_name": "Polymer Instance (Chain) Features",
                                  "priority_order": 5
                               }
                            ]
@@ -342,7 +342,7 @@
                            ],
                            "rcsb_search_group": [
                               {
-                                 "group_name": "Polymer Structure Instance Features",
+                                 "group_name": "Polymer Instance (Chain) Features",
                                  "priority_order": 10
                               }
                            ]
@@ -878,23 +878,35 @@
                "context_attributes": [
                   {
                      "context_value": "CIS-PEPTIDE",
-                     "search_paths": "-rcsb_polymer_instance_feature_summary.count"
+                     "search_paths": [
+                        "rcsb_polymer_instance_feature_summary.count"
+                     ]
                   },
                   {
                      "context_value": "HELIX_P",
-                     "search_paths": "-rcsb_polymer_instance_feature_summary.count -rcsb_polymer_instance_feature_summary.coverage"
+                     "search_paths": [
+                        "rcsb_polymer_instance_feature_summary.count",
+                        "rcsb_polymer_instance_feature_summary.coverage"
+                     ]
                   },
                   {
                      "context_value": "SHEET",
-                     "search_paths": "-rcsb_polymer_instance_feature_summary.count -rcsb_polymer_instance_feature_summary.coverage"
+                     "search_paths": [
+                        "rcsb_polymer_instance_feature_summary.count",
+                        "rcsb_polymer_instance_feature_summary.coverage"
+                     ]
                   },
                   {
                      "context_value": "RSRCC_OUTLIER",
-                     "search_paths": "-rcsb_polymer_instance_feature_summary.count"
+                     "search_paths": [
+                        "rcsb_polymer_instance_feature_summary.count"
+                     ]
                   },
                   {
                      "context_value": "RSRZ_OUTLIER",
-                     "search_paths": "-rcsb_polymer_instance_feature_summary.count"
+                     "search_paths": [
+                        "rcsb_polymer_instance_feature_summary.count"
+                     ]
                   }
                ]
             }

@@ -23,13 +23,14 @@
             },
             "formula_weight": {
                "type": "number",
-               "description": "Formula mass in daltons of the chemical component.",
+               "description": "Formula mass (Da) of the chemical component.",
                "rcsb_search_context": [
                   "default-match"
                ],
+               "rcsb_units": "Da",
                "rcsb_description": [
                   {
-                     "text": "Formula mass in daltons of the chemical component.",
+                     "text": "Formula mass (Da) of the chemical component.",
                      "context": "dictionary"
                   },
                   {
@@ -3593,48 +3594,6 @@
                         "priority_order": 40
                      }
                   ]
-               },
-               "resource_lineage_depth": {
-                  "type": "array",
-                  "items": {
-                     "type": "integer",
-                     "description": "Members of the resource lineage as parent classification hierarchy depth (1-N).",
-                     "rcsb_description": [
-                        {
-                           "text": "Members of the resource lineage as parent classification hierarchy depth (1-N).",
-                           "context": "dictionary"
-                        }
-                     ]
-                  },
-                  "uniqueItems": false
-               },
-               "resource_lineage_id": {
-                  "type": "array",
-                  "items": {
-                     "type": "string",
-                     "description": "Members of the resource lineage as parent classification codes.",
-                     "rcsb_description": [
-                        {
-                           "text": "Members of the resource lineage as parent classification codes.",
-                           "context": "dictionary"
-                        }
-                     ]
-                  },
-                  "uniqueItems": false
-               },
-               "resource_lineage_name": {
-                  "type": "array",
-                  "items": {
-                     "type": "string",
-                     "description": "Members of the resource lineage as parent classification names.",
-                     "rcsb_description": [
-                        {
-                           "text": "Members of the resource lineage as parent classification names.",
-                           "context": "dictionary"
-                        }
-                     ]
-                  },
-                  "uniqueItems": false
                },
                "resource_name": {
                   "type": "string",
