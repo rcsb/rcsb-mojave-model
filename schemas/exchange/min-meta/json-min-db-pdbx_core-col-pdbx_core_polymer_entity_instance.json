@@ -166,12 +166,6 @@
                         "text": "Annotation Identifier",
                         "context": "brief"
                      }
-                  ],
-                  "rcsb_search_group": [
-                     {
-                        "group_name": "Structure Features",
-                        "priority_order": 100
-                     }
                   ]
                },
                "assignment_version": {
@@ -223,12 +217,6 @@
                      {
                         "text": "Annotation Name",
                         "context": "brief"
-                     }
-                  ],
-                  "rcsb_search_group": [
-                     {
-                        "group_name": "Structure Features",
-                        "priority_order": 105
                      }
                   ]
                },
@@ -326,6 +314,12 @@
                                  "text": "Annotation Lineage Identifier",
                                  "context": "brief"
                               }
+                           ],
+                           "rcsb_search_group": [
+                              {
+                                 "group_name": "Polymer Instance (Chain) Features",
+                                 "priority_order": 5
+                              }
                            ]
                         },
                         "name": {
@@ -344,6 +338,12 @@
                               {
                                  "text": "Annotation Lineage Name",
                                  "context": "brief"
+                              }
+                           ],
+                           "rcsb_search_group": [
+                              {
+                                 "group_name": "Polymer Instance (Chain) Features",
+                                 "priority_order": 10
                               }
                            ]
                         }
@@ -365,7 +365,23 @@
          "rcsb_nested_indexing_context": [
             {
                "category_name": "annotation_type",
-               "category_path": "rcsb_polymer_instance_annotation.type"
+               "category_path": "rcsb_polymer_instance_annotation.type",
+               "context_attributes": [
+                  {
+                     "context_value": "CATH",
+                     "search_paths": [
+                        "rcsb_polymer_instance_annotation.annotation_lineage.id",
+                        "rcsb_polymer_instance_annotation.annotation_lineage.name"
+                     ]
+                  },
+                  {
+                     "context_value": "SCOP",
+                     "search_paths": [
+                        "rcsb_polymer_instance_annotation.annotation_lineage.id",
+                        "rcsb_polymer_instance_annotation.annotation_lineage.name"
+                     ]
+                  }
+               ]
             }
          ]
       },
@@ -858,7 +874,41 @@
          "rcsb_nested_indexing_context": [
             {
                "category_name": "feature_summary",
-               "category_path": "rcsb_polymer_instance_feature_summary.type"
+               "category_path": "rcsb_polymer_instance_feature_summary.type",
+               "context_attributes": [
+                  {
+                     "context_value": "CIS-PEPTIDE",
+                     "search_paths": [
+                        "rcsb_polymer_instance_feature_summary.count"
+                     ]
+                  },
+                  {
+                     "context_value": "HELIX_P",
+                     "search_paths": [
+                        "rcsb_polymer_instance_feature_summary.count",
+                        "rcsb_polymer_instance_feature_summary.coverage"
+                     ]
+                  },
+                  {
+                     "context_value": "SHEET",
+                     "search_paths": [
+                        "rcsb_polymer_instance_feature_summary.count",
+                        "rcsb_polymer_instance_feature_summary.coverage"
+                     ]
+                  },
+                  {
+                     "context_value": "RSRCC_OUTLIER",
+                     "search_paths": [
+                        "rcsb_polymer_instance_feature_summary.count"
+                     ]
+                  },
+                  {
+                     "context_value": "RSRZ_OUTLIER",
+                     "search_paths": [
+                        "rcsb_polymer_instance_feature_summary.count"
+                     ]
+                  }
+               ]
             }
          ]
       },
@@ -1189,7 +1239,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 8.0.8",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 8.0.8. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.0.8"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 8.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 8.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.1.0"
 }

@@ -2,7 +2,7 @@
    "NAME": "bird_chem_comp_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "bird_chem_comp_core",
-   "DATABASE_VERSION": "6.4.2",
+   "DATABASE_VERSION": "6.4.3",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -5809,8 +5809,7 @@
                   "ATC",
                   "Generating Enzyme",
                   "Modification Type",
-                  "PSI-MOD",
-                  "residue"
+                  "PSI-MOD"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -6426,17 +6425,12 @@
             "GENERATED_CONTENT"
          ],
          "SCHEMA_MANDATORY": false,
-         "SCHEMA_SUB_CATEGORIES": [
-            "resource_lineage"
-         ],
+         "SCHEMA_SUB_CATEGORIES": [],
          "ATTRIBUTES": {
             "COMP_ID": "comp_id",
             "ORDINAL": "ordinal",
             "RELATED_MAPPING_METHOD": "related_mapping_method",
             "RESOURCE_ACCESSION_CODE": "resource_accession_code",
-            "RESOURCE_LINEAGE_DEPTH": "resource_lineage_depth",
-            "RESOURCE_LINEAGE_ID": "resource_lineage_id",
-            "RESOURCE_LINEAGE_NAME": "resource_lineage_name",
             "RESOURCE_NAME": "resource_name"
          },
          "ATTRIBUTE_MAP": {
@@ -6461,24 +6455,6 @@
             "RESOURCE_ACCESSION_CODE": {
                "CATEGORY": "rcsb_chem_comp_related",
                "ATTRIBUTE": "resource_accession_code",
-               "METHOD_NAME": null,
-               "ARGUMENTS": null
-            },
-            "RESOURCE_LINEAGE_DEPTH": {
-               "CATEGORY": "rcsb_chem_comp_related",
-               "ATTRIBUTE": "resource_lineage_depth",
-               "METHOD_NAME": null,
-               "ARGUMENTS": null
-            },
-            "RESOURCE_LINEAGE_ID": {
-               "CATEGORY": "rcsb_chem_comp_related",
-               "ATTRIBUTE": "resource_lineage_id",
-               "METHOD_NAME": null,
-               "ARGUMENTS": null
-            },
-            "RESOURCE_LINEAGE_NAME": {
-               "CATEGORY": "rcsb_chem_comp_related",
-               "ATTRIBUTE": "resource_lineage_name",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -6560,62 +6536,8 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RESOURCE_LINEAGE_DEPTH": {
-               "ORDER": 5,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": ";",
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": [
-                  "resource_lineage"
-               ]
-            },
-            "RESOURCE_LINEAGE_ID": {
-               "ORDER": 6,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": ";",
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": [
-                  "resource_lineage"
-               ]
-            },
-            "RESOURCE_LINEAGE_NAME": {
-               "ORDER": 7,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": ";",
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": [
-                  "resource_lineage"
-               ]
-            },
             "RESOURCE_NAME": {
-               "ORDER": 8,
+               "ORDER": 5,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -7176,7 +7098,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "bird_chem_comp_core",
-            "VERSION": "6.6.4"
+            "VERSION": "6.7.0"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
@@ -7269,10 +7191,6 @@
       },
       "COLLECTION_SUB_CATEGORY_AGGREGATES": {
          "bird_chem_comp_core": [
-            {
-               "NAME": "resource_lineage",
-               "HAS_UNIT_CARDINALITY": false
-            },
             {
                "NAME": "annotation_lineage",
                "HAS_UNIT_CARDINALITY": false

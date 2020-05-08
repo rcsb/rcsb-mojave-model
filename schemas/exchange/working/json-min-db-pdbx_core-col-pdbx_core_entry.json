@@ -9154,8 +9154,8 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Annotation",
-                     "priority_order": 15
+                     "group_name": "Deposition",
+                     "priority_order": 50
                   }
                ]
             },
@@ -13905,22 +13905,22 @@
             },
             "branched_molecular_weight_maximum": {
                "type": "number",
-               "description": "The maximum molecular mass (kilodaltons) of a branched entity in the deposited structure entry.",
-               "rcsb_units": "kilodaltons",
+               "description": "The maximum molecular mass (KDa) of a branched entity in the deposited structure entry.",
+               "rcsb_units": "KDa",
                "rcsb_description": [
                   {
-                     "text": "The maximum molecular mass (kilodaltons) of a branched entity in the deposited structure entry.",
+                     "text": "The maximum molecular mass (KDa) of a branched entity in the deposited structure entry.",
                      "context": "dictionary"
                   }
                ]
             },
             "branched_molecular_weight_minimum": {
                "type": "number",
-               "description": "The minimum molecular mass (kilodaltons) of a branched entity in the deposited structure entry.",
-               "rcsb_units": "kilodaltons",
+               "description": "The minimum molecular mass (KDa) of a branched entity in the deposited structure entry.",
+               "rcsb_units": "KDa",
                "rcsb_description": [
                   {
-                     "text": "The minimum molecular mass (kilodaltons) of a branched entity in the deposited structure entry.",
+                     "text": "The minimum molecular mass (KDa) of a branched entity in the deposited structure entry.",
                      "context": "dictionary"
                   }
                ]
@@ -13956,8 +13956,8 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 20
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 70
                   }
                ]
             },
@@ -13979,8 +13979,8 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 70
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 75
                   }
                ]
             },
@@ -14007,6 +14007,16 @@
                   {
                      "text": "The number of non-polymer instances in the deposited data set.\n This is the total count of non-polymer entity instances reported\n in the deposited coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Total Number of Non-polymer Instances",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 60
                   }
                ]
             },
@@ -14020,6 +14030,16 @@
                   {
                      "text": "The number of polymer instances in the deposited data set.\n This is the total count of polymer entity instances reported\n in the deposited coordinate data.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Total Number of Polymer Instances (Chains)",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 55
                   }
                ]
             },
@@ -14035,14 +14055,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Total Number of Polymer Residues (All Deposited Polymer Chains)",
+                     "text": "Total Number of Polymer Residues",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 25
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 65
                   }
                ]
             },
@@ -14125,8 +14145,8 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 75
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 80
                   }
                ]
             },
@@ -14142,14 +14162,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Entities",
+                     "text": "Number of Distinct Molecular Entities",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 30
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 20
                   }
                ]
             },
@@ -14263,25 +14283,25 @@
             },
             "molecular_weight": {
                "type": "number",
-               "description": "The molecular mass (kilodaltons) of polymer and non-polymer entities (exclusive of solvent) in the deposited structure entry.",
+               "description": "The molecular mass (KDa) of polymer and non-polymer entities (exclusive of solvent) in the deposited structure entry.",
                "rcsb_search_context": [
                   "default-match"
                ],
-               "rcsb_units": "kilodaltons",
+               "rcsb_units": "KDa",
                "rcsb_description": [
                   {
-                     "text": "The molecular mass (kilodaltons) of polymer and non-polymer entities (exclusive of solvent) in the deposited structure entry.",
+                     "text": "The molecular mass (KDa) of polymer and non-polymer entities (exclusive of solvent) in the deposited structure entry.",
                      "context": "dictionary"
                   },
                   {
-                     "text": "Molecular Weight (Structure)",
+                     "text": "Molecular Weight",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 80
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 15
                   }
                ]
             },
@@ -14354,41 +14374,41 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Non-polymer Entities (Ligands)",
+                     "text": "Number of Distinct Non-polymer Entities",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 35
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 25
                   }
                ]
             },
             "nonpolymer_molecular_weight_maximum": {
                "type": "number",
-               "description": "The maximum molecular mass (kilodaltons) of a non-polymer entity in the deposited structure entry.",
+               "description": "The maximum molecular mass (KDa) of a non-polymer entity in the deposited structure entry.",
                "rcsb_search_context": [
                   "default-match"
                ],
-               "rcsb_units": "kilodaltons",
+               "rcsb_units": "KDa",
                "rcsb_description": [
                   {
-                     "text": "The maximum molecular mass (kilodaltons) of a non-polymer entity in the deposited structure entry.",
+                     "text": "The maximum molecular mass (KDa) of a non-polymer entity in the deposited structure entry.",
                      "context": "dictionary"
                   }
                ]
             },
             "nonpolymer_molecular_weight_minimum": {
                "type": "number",
-               "description": "The minimum molecular mass (kilodaltons) of a non-polymer entity in the deposited structure entry.",
+               "description": "The minimum molecular mass (KDa) of a non-polymer entity in the deposited structure entry.",
                "rcsb_search_context": [
                   "default-match"
                ],
-               "rcsb_units": "kilodaltons",
+               "rcsb_units": "KDa",
                "rcsb_description": [
                   {
-                     "text": "The minimum molecular mass (kilodaltons) of a non-polymer entity in the deposited structure entry.",
+                     "text": "The minimum molecular mass (KDa) of a non-polymer entity in the deposited structure entry.",
                      "context": "dictionary"
                   }
                ]
@@ -14480,14 +14500,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Polymer Composition",
+                     "text": "Entry Polymer Composition",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 15
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 10
                   }
                ]
             },
@@ -14516,14 +14536,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Entities (DNA)",
+                     "text": "Number of Distinct DNA Entities",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 55
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 40
                   }
                ]
             },
@@ -14539,14 +14559,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Entities (RNA)",
+                     "text": "Number of Distinct RNA Entities",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 50
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 35
                   }
                ]
             },
@@ -14575,14 +14595,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Entities (NA Hybrid)",
+                     "text": "Number of Distinct NA Hybrid Entities",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 60
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 45
                   }
                ]
             },
@@ -14598,14 +14618,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Entities (Protein)",
+                     "text": "Number of Distinct Protein Entities",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 45
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 30
                   }
                ]
             },
@@ -14634,28 +14654,28 @@
             },
             "polymer_molecular_weight_maximum": {
                "type": "number",
-               "description": "The maximum molecular mass (kilodaltons) of a polymer entity in the deposited structure entry.",
+               "description": "The maximum molecular mass (KDa) of a polymer entity in the deposited structure entry.",
                "rcsb_search_context": [
                   "default-match"
                ],
-               "rcsb_units": "kilodaltons",
+               "rcsb_units": "KDa",
                "rcsb_description": [
                   {
-                     "text": "The maximum molecular mass (kilodaltons) of a polymer entity in the deposited structure entry.",
+                     "text": "The maximum molecular mass (KDa) of a polymer entity in the deposited structure entry.",
                      "context": "dictionary"
                   }
                ]
             },
             "polymer_molecular_weight_minimum": {
                "type": "number",
-               "description": "The minimum molecular mass (kilodaltons) of a polymer entity in the deposited structure entry.",
+               "description": "The minimum molecular mass (KDa) of a polymer entity in the deposited structure entry.",
                "rcsb_search_context": [
                   "default-match"
                ],
-               "rcsb_units": "kilodaltons",
+               "rcsb_units": "KDa",
                "rcsb_description": [
                   {
-                     "text": "The minimum molecular mass (kilodaltons) of a polymer entity in the deposited structure entry.",
+                     "text": "The minimum molecular mass (KDa) of a polymer entity in the deposited structure entry.",
                      "context": "dictionary"
                   }
                ]
@@ -14756,8 +14776,8 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 10
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 5
                   }
                ]
             },
@@ -14801,14 +14821,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Entities (Solvent)",
+                     "text": "Number of Distinct Solvent Entities",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Structure Features",
-                     "priority_order": 65
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 50
                   }
                ]
             }
@@ -19070,7 +19090,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.1.8",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.1.8. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.1.8"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.2.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.2.0"
 }
