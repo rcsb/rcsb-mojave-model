@@ -21,13 +21,8 @@
 
         <project.auto.package>org.rcsb.mojave.auto</project.auto.package>
         <project.enums.package>org.rcsb.mojave.enumeration</project.enums.package>
-
-        <!-- IMPORTANT: this property is used to access the version of models from the dependent projects.
-            It MUST be the full project version.-->
-        <json.schema.version>${project.version}</json.schema.version>
-
-        <!-- rcsb-json-schema project is built continuously for a branch -->
-        <rcsb-json-schema.version>master-SNAPSHOT</rcsb-json-schema.version>
+        
+        <rcsb-json-schema.version>1.2.5-SNAPSHOT</rcsb-json-schema.version>
 
         <mojave.meta.version>1.1.2</mojave.meta.version>
         <mojave.tools.version>1.1.0</mojave.tools.version>
