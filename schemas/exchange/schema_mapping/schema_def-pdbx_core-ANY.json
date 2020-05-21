@@ -99875,16 +99875,13 @@
             "rcsb_assembly_container_identifiers.entry_id"
          ],
          "pdbx_core_polymer_entity": [
-            "rcsb_polymer_entity_container_identifiers.entry_id",
-            "rcsb_polymer_entity_container_identifiers.entity_id"
+            "rcsb_polymer_entity_container_identifiers.entry_id"
          ],
          "pdbx_core_nonpolymer_entity": [
-            "rcsb_nonpolymer_entity_container_identifiers.entry_id",
-            "rcsb_nonpolymer_entity_container_identifiers.entity_id"
+            "rcsb_nonpolymer_entity_container_identifiers.entry_id"
          ],
          "pdbx_core_branched_entity": [
-            "rcsb_branched_entity_container_identifiers.entry_id",
-            "rcsb_branched_entity_container_identifiers.entity_id"
+            "rcsb_branched_entity_container_identifiers.entry_id"
          ],
          "pdbx_core_polymer_entity_instance": [
             "rcsb_polymer_entity_instance_container_identifiers.entry_id"
@@ -100073,6 +100070,12 @@
                "ATTRIBUTE_NAMES": [
                   "rcsb_id"
                ]
+            },
+            {
+               "INDEX_NAME": "replace",
+               "ATTRIBUTE_NAMES": [
+                  "rcsb_polymer_entity_container_identifiers.entry_id"
+               ]
             }
          ],
          "pdbx_core_nonpolymer_entity": [
@@ -100094,6 +100097,12 @@
                "ATTRIBUTE_NAMES": [
                   "rcsb_id"
                ]
+            },
+            {
+               "INDEX_NAME": "replace",
+               "ATTRIBUTE_NAMES": [
+                  "rcsb_nonpolymer_entity_container_identifiers.entry_id"
+               ]
             }
          ],
          "pdbx_core_branched_entity": [
@@ -100114,6 +100123,12 @@
                "INDEX_NAME": "search_2",
                "ATTRIBUTE_NAMES": [
                   "rcsb_id"
+               ]
+            },
+            {
+               "INDEX_NAME": "replace",
+               "ATTRIBUTE_NAMES": [
+                  "rcsb_branched_entity_container_identifiers.entry_id"
                ]
             }
          ],
