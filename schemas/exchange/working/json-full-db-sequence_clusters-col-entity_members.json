@@ -18,6 +18,10 @@
             {
                "text": "Polymer entity identifier.",
                "context": "dictionary"
+            },
+            {
+               "text": "Cluster Member Entity Identifier",
+               "context": "brief"
             }
          ]
       },
@@ -28,6 +32,10 @@
             {
                "text": "Structure entry identifier.",
                "context": "dictionary"
+            },
+            {
+               "text": "Cluster Member Entry Identifier",
+               "context": "brief"
             }
          ]
       },
@@ -39,6 +47,9 @@
                "cluster_id": {
                   "type": "integer",
                   "description": "Identifier for a cluster at the specified level of sequence identity within the cluster data set.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Identifier for a cluster at the specified level of sequence identity within the cluster data set.",
@@ -53,6 +64,9 @@
                "identity": {
                   "type": "integer",
                   "description": "Sequence identity expressed as an integer percent value.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Sequence identity expressed as an integer percent value.",
@@ -71,7 +85,8 @@
                "identity"
             ]
          },
-         "uniqueItems": false
+         "uniqueItems": false,
+         "rcsb_nested_indexing": true
       }
    },
    "additionalProperties": false,
@@ -82,7 +97,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-entity_members.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: sequence_clusters collection: entity_members version: 1.2.1",
-   "description": "RCSB Exchange Database JSON schema derived from the sequence_clusters content type schema. This schema supports collection entity_members version 1.2.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-entity_members.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 1.2.1"
+   "title": "schema: sequence_clusters collection: entity_members version: 1.2.2",
+   "description": "RCSB Exchange Database JSON schema derived from the sequence_clusters content type schema. This schema supports collection entity_members version 1.2.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-entity_members.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 1.2.2"
 }
