@@ -100,10 +100,10 @@
                "type": "array",
                "items": {
                   "type": "string",
-                  "description": "Residue index mappings between author provided and entity sequence positions.",
+                  "description": "Residue index mappings between author provided and entity polymer sequence positions.\n\n Author residue indices (auth_seq_num) include insertion codes when present.\n The array indices correspond to the indices (1-based) of the deposited sample\n sequence (entity_poly_seq). Unmodelled residues are represented with a \"?\" value.",
                   "rcsb_description": [
                      {
-                        "text": "Residue index mappings between author provided and entity sequence positions.",
+                        "text": "Residue index mappings between author provided and entity polymer sequence positions.\n\n Author residue indices (auth_seq_num) include insertion codes when present.\n The array indices correspond to the indices (1-based) of the deposited sample\n sequence (entity_poly_seq). Unmodelled residues are represented with a \"?\" value.",
                         "context": "dictionary"
                      }
                   ]
