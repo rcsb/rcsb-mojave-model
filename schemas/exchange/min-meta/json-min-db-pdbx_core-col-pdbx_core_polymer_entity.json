@@ -1685,7 +1685,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Biology",
-                                 "priority_order": 25
+                                 "priority_order": 30
                               }
                            ]
                         },
@@ -1710,7 +1710,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Biology",
-                                 "priority_order": 20
+                                 "priority_order": 25
                               }
                            ]
                         }
@@ -1934,7 +1934,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Biology",
-                                 "priority_order": 10
+                                 "priority_order": 15
                               }
                            ]
                         },
@@ -1959,7 +1959,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Biology",
-                                 "priority_order": 5
+                                 "priority_order": 10
                               }
                            ]
                         }
@@ -2007,8 +2007,8 @@
                            ],
                            "rcsb_search_group": [
                               {
-                                 "group_name": "ID(s) and Keywords",
-                                 "priority_order": 30
+                                 "group_name": "Biology",
+                                 "priority_order": 5
                               }
                            ]
                         }
@@ -2045,7 +2045,7 @@
                "rcsb_search_context": [
                   "default-match"
                ],
-               "rcsb_units": "KDa",
+               "rcsb_units": "kilodaltons",
                "rcsb_description": [
                   {
                      "text": "Formula mass (KDa) of the entity.",
@@ -2246,7 +2246,7 @@
                         "rcsb_search_group": [
                            {
                               "group_name": "Biology",
-                              "priority_order": 30
+                              "priority_order": 35
                            }
                         ]
                      },
@@ -2270,7 +2270,7 @@
                         "rcsb_search_group": [
                            {
                               "group_name": "Biology",
-                              "priority_order": 35
+                              "priority_order": 40
                            }
                         ]
                      }
@@ -2518,7 +2518,7 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Annotation Identifier",
+                        "text": "Identifier",
                         "context": "brief"
                      }
                   ],
@@ -2576,14 +2576,8 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Annotation Name",
+                        "text": "Name",
                         "context": "brief"
-                     }
-                  ],
-                  "rcsb_search_group": [
-                     {
-                        "group_name": "Polymer Molecular Features",
-                        "priority_order": 25
                      }
                   ]
                },
@@ -2620,11 +2614,11 @@
                      },
                      {
                         "value": "InterPro",
-                        "detail": "Classification of protein families"
+                        "detail": "InterPro Protein Family"
                      },
                      {
                         "value": "Pfam",
-                        "detail": "Protein Family Database (Pfam)"
+                        "detail": "Pfam Protein Family"
                      }
                   ],
                   "rcsb_description": [
@@ -2655,7 +2649,7 @@
                                  "context": "dictionary"
                               },
                               {
-                                 "text": "Annotation Lineage Depth",
+                                 "text": "Lineage Depth",
                                  "context": "brief"
                               }
                            ]
@@ -2673,8 +2667,14 @@
                                  "context": "dictionary"
                               },
                               {
-                                 "text": "Annotation Lineage Identifier",
+                                 "text": "Lineage Identifier",
                                  "context": "brief"
+                              }
+                           ],
+                           "rcsb_search_group": [
+                              {
+                                 "group_name": "Polymer Molecular Features",
+                                 "priority_order": 25
                               }
                            ]
                         },
@@ -2692,8 +2692,14 @@
                                  "context": "dictionary"
                               },
                               {
-                                 "text": "Annotation Lineage Name",
+                                 "text": "Lineage Name",
                                  "context": "brief"
+                              }
+                           ],
+                           "rcsb_search_group": [
+                              {
+                                 "group_name": "Polymer Molecular Features",
+                                 "priority_order": 30
                               }
                            ]
                         }
@@ -2874,7 +2880,7 @@
                         "rcsb_search_group": [
                            {
                               "group_name": "ID(s) and Keywords",
-                              "priority_order": 15
+                              "priority_order": 20
                            }
                         ]
                      },
@@ -2910,6 +2916,44 @@
                            "exact-match"
                         ],
                         "rcsb_full_text_priority": 10,
+                        "rcsb_enum_annotated": [
+                           {
+                              "value": "EMBL",
+                              "detail": "EMBL"
+                           },
+                           {
+                              "value": "GenBank",
+                              "detail": "GenBank"
+                           },
+                           {
+                              "value": "NDB",
+                              "detail": "NDB"
+                           },
+                           {
+                              "value": "NORINE",
+                              "detail": "NORINE"
+                           },
+                           {
+                              "value": "PDB",
+                              "detail": "PDB"
+                           },
+                           {
+                              "value": "PIR",
+                              "detail": "PIR"
+                           },
+                           {
+                              "value": "PRF",
+                              "detail": "PRF"
+                           },
+                           {
+                              "value": "RefSeq",
+                              "detail": "RefSeq"
+                           },
+                           {
+                              "value": "UniProt",
+                              "detail": "UniProt"
+                           }
+                        ],
                         "rcsb_description": [
                            {
                               "text": "Reference database name",
@@ -2944,7 +2988,27 @@
                "rcsb_nested_indexing_context": [
                   {
                      "category_name": "reference_sequence_identifiers",
-                     "category_path": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_name"
+                     "category_path": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_name",
+                     "context_attributes": [
+                        {
+                           "context_value": "UniProt",
+                           "search_paths": [
+                              "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession"
+                           ]
+                        },
+                        {
+                           "context_value": "GenBank",
+                           "search_paths": [
+                              "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession"
+                           ]
+                        },
+                        {
+                           "context_value": "NORINE",
+                           "search_paths": [
+                              "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession"
+                           ]
+                        }
+                     ]
                   }
                ]
             }
@@ -3007,7 +3071,7 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Feature Name",
+                        "text": "Name",
                         "context": "brief"
                      }
                   ]

@@ -111,7 +111,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Angle alpha (°)",
+                     "text": "Angle alpha",
                      "context": "brief"
                   }
                ],
@@ -135,7 +135,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Angle beta (°)",
+                     "text": "Angle beta",
                      "context": "brief"
                   }
                ],
@@ -159,7 +159,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Angle gamma (°)",
+                     "text": "Angle gamma",
                      "context": "brief"
                   }
                ],
@@ -193,7 +193,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Length a (Å)",
+                     "text": "Length a",
                      "context": "brief"
                   }
                ],
@@ -217,7 +217,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Length b (Å)",
+                     "text": "Length b",
                      "context": "brief"
                   }
                ],
@@ -241,7 +241,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Length c (Å)",
+                     "text": "Length c",
                      "context": "brief"
                   }
                ],
@@ -415,7 +415,7 @@
                         "context": "deposition"
                      },
                      {
-                        "text": "Journal Name",
+                        "text": "Citation Journal Name",
                         "context": "brief"
                      }
                   ]
@@ -552,7 +552,7 @@
                         "context": "deposition"
                      },
                      {
-                        "text": "DOI",
+                        "text": "Citation DOI",
                         "context": "brief"
                      }
                   ],
@@ -650,7 +650,7 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Journal Name (Abbreviated)",
+                        "text": "Citation Journal Name (Abbreviated)",
                         "context": "brief"
                      }
                   ],
@@ -730,7 +730,7 @@
                         "context": "deposition"
                      },
                      {
-                        "text": "Publication Year",
+                        "text": "Citation Publication Year",
                         "context": "brief"
                      }
                   ],
@@ -1704,7 +1704,7 @@
                         "context": "deposition"
                      },
                      {
-                        "text": "Detector",
+                        "text": "Diffraction Detector",
                         "context": "brief"
                      }
                   ],
@@ -3973,7 +3973,7 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Reconstruction Resolution (Å)",
+                        "text": "Reconstruction Resolution",
                         "context": "brief"
                      }
                   ],
@@ -6482,6 +6482,7 @@
                   "rcsb_search_context": [
                      "default-match"
                   ],
+                  "rcsb_units": "angstroms_cubed_per_dalton",
                   "rcsb_description": [
                      {
                         "text": "The density of the crystal, expressed as the ratio of the\n volume of the asymmetric unit to the molecular mass of a\n monomer of the structure, in units of angstroms^3^ per dalton.\n\n Ref: Matthews, B. W. (1968). J. Mol. Biol. 33, 491-497.",
@@ -6729,7 +6730,7 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Temperature (K)",
+                        "text": "Temperature",
                         "context": "brief"
                      }
                   ],
@@ -9485,7 +9486,7 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Deposit Group ID(s)",
+                        "text": "PDB Deposit Group ID(s)",
                         "context": "brief"
                      }
                   ],
@@ -10853,13 +10854,14 @@
                   "rcsb_search_context": [
                      "default-match"
                   ],
+                  "rcsb_units": "megahertz",
                   "rcsb_description": [
                      {
                         "text": "Select the field strength for protons in MHz.",
                         "context": "dictionary"
                      },
                      {
-                        "text": "NMR Spectrometer Field Strength (MHz)",
+                        "text": "NMR Spectrometer Field Strength",
                         "context": "brief"
                      }
                   ],
@@ -13587,7 +13589,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Has experimental data",
+                     "text": "Has Experimental Data",
                      "context": "brief"
                   }
                ],
@@ -13906,7 +13908,7 @@
             "branched_molecular_weight_maximum": {
                "type": "number",
                "description": "The maximum molecular mass (KDa) of a branched entity in the deposited structure entry.",
-               "rcsb_units": "KDa",
+               "rcsb_units": "kilodaltons",
                "rcsb_description": [
                   {
                      "text": "The maximum molecular mass (KDa) of a branched entity in the deposited structure entry.",
@@ -13917,7 +13919,7 @@
             "branched_molecular_weight_minimum": {
                "type": "number",
                "description": "The minimum molecular mass (KDa) of a branched entity in the deposited structure entry.",
-               "rcsb_units": "KDa",
+               "rcsb_units": "kilodaltons",
                "rcsb_description": [
                   {
                      "text": "The minimum molecular mass (KDa) of a branched entity in the deposited structure entry.",
@@ -13927,30 +13929,30 @@
             },
             "cis_peptide_count": {
                "type": "integer",
-               "description": "The number of cis-peptide linkages.",
+               "description": "The number of cis-peptide linkages per deposited structure model.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of cis-peptide linkages.",
+                     "text": "The number of cis-peptide linkages per deposited structure model.",
                      "context": "dictionary"
                   }
                ]
             },
             "deposited_atom_count": {
                "type": "integer",
-               "description": "The number of atomic coordinates deposited.",
+               "description": "The number of heavy atom coordinates records per deposited structure model.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of atomic coordinates deposited.",
+                     "text": "The number of heavy atom coordinates records per deposited structure model.",
                      "context": "dictionary"
                   },
                   {
-                     "text": "Number of Atoms",
+                     "text": "Number of Heavy Atoms per Deposited Model",
                      "context": "brief"
                   }
                ],
@@ -13999,13 +14001,13 @@
             },
             "deposited_nonpolymer_entity_instance_count": {
                "type": "integer",
-               "description": "The number of non-polymer instances in the deposited data set.\n This is the total count of non-polymer entity instances reported\n in the deposited coordinate data.",
+               "description": "The number of non-polymer instances in the deposited data set.\n This is the total count of non-polymer entity instances reported\n per deposited structure model.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of non-polymer instances in the deposited data set.\n This is the total count of non-polymer entity instances reported\n in the deposited coordinate data.",
+                     "text": "The number of non-polymer instances in the deposited data set.\n This is the total count of non-polymer entity instances reported\n per deposited structure model.",
                      "context": "dictionary"
                   },
                   {
@@ -14022,13 +14024,13 @@
             },
             "deposited_polymer_entity_instance_count": {
                "type": "integer",
-               "description": "The number of polymer instances in the deposited data set.\n This is the total count of polymer entity instances reported\n in the deposited coordinate data.",
+               "description": "The number of polymer instances in the deposited data set.\n This is the total count of polymer entity instances reported\n per deposited structure model.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of polymer instances in the deposited data set.\n This is the total count of polymer entity instances reported\n in the deposited coordinate data.",
+                     "text": "The number of polymer instances in the deposited data set.\n This is the total count of polymer entity instances reported\n per deposited structure model.",
                      "context": "dictionary"
                   },
                   {
@@ -14045,17 +14047,17 @@
             },
             "deposited_polymer_monomer_count": {
                "type": "integer",
-               "description": "The number of polymer monomers in sample entity instances in the deposited data set.\n This is the total count of monomers for all polymer entity instances reported\n in the deposited coordinate data.",
+               "description": "The number of polymer monomers in sample entity instances in the deposited data set.\n This is the total count of monomers for all polymer entity instances reported\n per deposited structure model.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of polymer monomers in sample entity instances in the deposited data set.\n This is the total count of monomers for all polymer entity instances reported\n in the deposited coordinate data.",
+                     "text": "The number of polymer monomers in sample entity instances in the deposited data set.\n This is the total count of monomers for all polymer entity instances reported\n per deposited structure model.",
                      "context": "dictionary"
                   },
                   {
-                     "text": "Total Number of Polymer Residues",
+                     "text": "Total Number of Polymer Residues per Deposited Model",
                      "context": "brief"
                   }
                ],
@@ -14068,13 +14070,13 @@
             },
             "deposited_unmodeled_polymer_monomer_count": {
                "type": "integer",
-               "description": "The number of unmodeled polymer monomers in the deposited coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the deposited coordinate data.",
+               "description": "The number of unmodeled polymer monomers in the deposited coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances per deposited structure model.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of unmodeled polymer monomers in the deposited coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the deposited coordinate data.",
+                     "text": "The number of unmodeled polymer monomers in the deposited coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances per deposited structure model.",
                      "context": "dictionary"
                   }
                ]
@@ -14092,7 +14094,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Maximum Diffraction Wavelength (Å)",
+                     "text": "Maximum Diffraction Wavelength",
                      "context": "brief"
                   }
                ],
@@ -14116,7 +14118,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Minimum Diffraction Wavelength (Å)",
+                     "text": "Minimum Diffraction Wavelength",
                      "context": "brief"
                   }
                ],
@@ -14129,17 +14131,17 @@
             },
             "disulfide_bond_count": {
                "type": "integer",
-               "description": "The number of disulfide bonds.",
+               "description": "The number of disulfide bonds per deposited structure model.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of disulfide bonds.",
+                     "text": "The number of disulfide bonds per deposited structure model.",
                      "context": "dictionary"
                   },
                   {
-                     "text": "Disulfide Bond Count",
+                     "text": "Disulfide Bond Count per Deposited Model",
                      "context": "brief"
                   }
                ],
@@ -14152,13 +14154,13 @@
             },
             "entity_count": {
                "type": "integer",
-               "description": "The number of distinct polymer, non-polymer, branched molecular, and solvent entities in the structure entry.",
+               "description": "The number of distinct polymer, non-polymer, branched molecular, and solvent entities per deposited structure model.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of distinct polymer, non-polymer, branched molecular, and solvent entities in the structure entry.",
+                     "text": "The number of distinct polymer, non-polymer, branched molecular, and solvent entities per deposited structure model.",
                      "context": "dictionary"
                   },
                   {
@@ -14221,14 +14223,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Experimental Method (Simplified)",
+                     "text": "Experimental Method (Broader Categories)",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
                      "group_name": "Methods",
-                     "priority_order": 15
+                     "priority_order": 10
                   }
                ]
             },
@@ -14251,7 +14253,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Methods",
-                     "priority_order": 10
+                     "priority_order": 15
                   }
                ]
             },
@@ -14287,14 +14289,14 @@
                "rcsb_search_context": [
                   "default-match"
                ],
-               "rcsb_units": "KDa",
+               "rcsb_units": "kilodaltons",
                "rcsb_description": [
                   {
                      "text": "The molecular mass (KDa) of polymer and non-polymer entities (exclusive of solvent) in the deposited structure entry.",
                      "context": "dictionary"
                   },
                   {
-                     "text": "Molecular Weight",
+                     "text": "Molecular Weight per Deposited Model",
                      "context": "brief"
                   }
                ],
@@ -14391,7 +14393,7 @@
                "rcsb_search_context": [
                   "default-match"
                ],
-               "rcsb_units": "KDa",
+               "rcsb_units": "kilodaltons",
                "rcsb_description": [
                   {
                      "text": "The maximum molecular mass (KDa) of a non-polymer entity in the deposited structure entry.",
@@ -14405,7 +14407,7 @@
                "rcsb_search_context": [
                   "default-match"
                ],
-               "rcsb_units": "KDa",
+               "rcsb_units": "kilodaltons",
                "rcsb_description": [
                   {
                      "text": "The minimum molecular mass (KDa) of a non-polymer entity in the deposited structure entry.",
@@ -14648,7 +14650,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Biology",
-                     "priority_order": 15
+                     "priority_order": 20
                   }
                ]
             },
@@ -14658,7 +14660,7 @@
                "rcsb_search_context": [
                   "default-match"
                ],
-               "rcsb_units": "KDa",
+               "rcsb_units": "kilodaltons",
                "rcsb_description": [
                   {
                      "text": "The maximum molecular mass (KDa) of a polymer entity in the deposited structure entry.",
@@ -14672,7 +14674,7 @@
                "rcsb_search_context": [
                   "default-match"
                ],
-               "rcsb_units": "KDa",
+               "rcsb_units": "kilodaltons",
                "rcsb_description": [
                   {
                      "text": "The minimum molecular mass (KDa) of a polymer entity in the deposited structure entry.",
@@ -14682,26 +14684,26 @@
             },
             "polymer_monomer_count_maximum": {
                "type": "integer",
-               "description": "The maximum monomer count of a polymer entity in the structure entry.",
+               "description": "The maximum monomer count of a polymer entity per deposited structure model.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The maximum monomer count of a polymer entity in the structure entry.",
+                     "text": "The maximum monomer count of a polymer entity per deposited structure model.",
                      "context": "dictionary"
                   }
                ]
             },
             "polymer_monomer_count_minimum": {
                "type": "integer",
-               "description": "The minimum monomer count of a polymer entity in the structure entry.",
+               "description": "The minimum monomer count of a polymer entity per deposited structure model.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The minimum monomer count of a polymer entity in the structure entry.",
+                     "text": "The minimum monomer count of a polymer entity per deposited structure model.",
                      "context": "dictionary"
                   }
                ]
@@ -14714,13 +14716,14 @@
                   "rcsb_search_context": [
                      "default-match"
                   ],
+                  "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
                         "text": "Combined estimates of experimental resolution.",
                         "context": "dictionary"
                      },
                      {
-                        "text": "Resolution (Å)",
+                        "text": "Resolution",
                         "context": "brief"
                      }
                   ],
@@ -14811,13 +14814,13 @@
             },
             "solvent_entity_count": {
                "type": "integer",
-               "description": "The number of distinct solvent entities in the structure entry.",
+               "description": "The number of distinct solvent entities per deposited structure model.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of distinct solvent entities in the structure entry.",
+                     "text": "The number of distinct solvent entities per deposited structure model.",
                      "context": "dictionary"
                   },
                   {
@@ -14970,7 +14973,7 @@
                      "context": "deposition"
                   },
                   {
-                     "text": "Journal Name",
+                     "text": "Primary Citation Journal Name",
                      "context": "brief"
                   }
                ]
@@ -15107,7 +15110,7 @@
                      "context": "deposition"
                   },
                   {
-                     "text": "DOI",
+                     "text": "Primary Citation DOI",
                      "context": "brief"
                   }
                ],
@@ -15184,7 +15187,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Journal Name (Abbreviated)",
+                     "text": "Primary Citation Journal Name (Abbreviated)",
                      "context": "brief"
                   }
                ],
@@ -15246,7 +15249,7 @@
                      "context": "deposition"
                   },
                   {
-                     "text": "Publication Year",
+                     "text": "Primary Citation Publication Year",
                      "context": "brief"
                   }
                ],
@@ -16821,7 +16824,7 @@
                         "context": "deposition"
                      },
                      {
-                        "text": "Data Collection Resolution (Å)",
+                        "text": "Data Collection Resolution",
                         "context": "brief"
                      }
                   ],
@@ -18820,14 +18823,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Stucture Keywords",
+                     "text": "Structure Keywords",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
                      "group_name": "ID(s) and Keywords",
-                     "priority_order": 20
+                     "priority_order": 25
                   }
                ]
             },
@@ -18862,7 +18865,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "ID(s) and Keywords",
-                     "priority_order": 25
+                     "priority_order": 30
                   }
                ]
             }
