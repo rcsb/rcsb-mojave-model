@@ -96,6 +96,20 @@
                   }
                ]
             },
+            "auth_to_entity_poly_seq_mapping": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "description": "Residue index mappings between author provided and entity sequence positions.",
+                  "rcsb_description": [
+                     {
+                        "text": "Residue index mappings between author provided and entity sequence positions.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "uniqueItems": false
+            },
             "entity_id": {
                "type": "string",
                "description": "Entity identifier for the container.",
