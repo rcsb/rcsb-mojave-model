@@ -41,8 +41,8 @@ build-locker-job:
 # This causes these problems:
 # - if building both branches and tags (and pushing of both are far apart in time), gitlab CI will build both but
 #   one of the 2 will fail because nexus will not accept a duplicate jar for a stable (not-SNAPSHOT) release
-# - if building branches only (and pushing tags and branches close in time), gitlab can miss building the branch
-#   and only build the tag (I think this is a bug in gitlab). This happened on 2020-05-15.
+# - if building branches only (and pushing the release commit and the next-dev-cycle commit close in time),
+#   gitlab can miss building the release commit in branch. This happened on 2020-05-15.
 #
 # By deploying TAGS only, we make sure that the stable releases are always published to nexus avoiding the 2 problems
 # described above. What we don't get is SNAPSHOT releases in nexus, but for this project that's a minor issue.
