@@ -22,7 +22,7 @@ build-locker-job:
 
     - echo "JSON schemas version "${VERSION}
     - FILENAME_VERSION=$FILENAME"_"$VERSION"."$FILE_EXT
-    - echo "Latest versioned file name "${FILENAME_VESTION}
+    - echo "Latest versioned file name "${FILENAME_VERSION}
 
     # Produce schema artifacts
     - cd target/generated-sources/schema
@@ -34,7 +34,19 @@ build-locker-job:
   tags:
     - Java8-Nexus3
 
-# Deploy branches only
+# Deploy BRANCHES only.
+# Problem: gitlab will not find the same commit to be duplicate if it comes in a tag and in
+# a branch (discussed here: https://gitlab.com/gitlab-org/gitlab-foss/-/issues/28979).
+#
+# This causes these problems:
+# - if building both branches and tags (and pushing of both are far apart in time), gitlab CI will build both but
+#   one of the 2 will fail because nexus will not accept a duplicate jar for a stable (not-SNAPSHOT) release
+# - if building branches only (and pushing the release commit and the next-dev-cycle commit close in time),
+#   gitlab can miss building the release commit in branch. To avoid this, release commit and next-dev-cycle
+#   commit must be in different branches.
+#
+# By deploying TAGS only, we make sure that the stable releases are always published to nexus avoiding the 2 problems
+# described above. What we don't get is SNAPSHOT releases in nexus, but for this project that's a minor issue.
 deploy-job:
   script:
     - whoami
@@ -47,3 +59,4 @@ deploy-job:
     - branches
   tags:
     - Java8-Nexus3
+
