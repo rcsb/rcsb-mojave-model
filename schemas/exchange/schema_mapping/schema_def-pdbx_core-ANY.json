@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "8.2.9",
+   "DATABASE_VERSION": "8.2.11",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -69670,6 +69670,7 @@
             "ENTRY_ID": "entry_id",
             "AUTH_ASYM_ID": "auth_asym_id",
             "AUTH_SEQ_ID": "auth_seq_id",
+            "AUTH_TO_ENTITY_POLY_SEQ_MAPPING": "auth_to_entity_poly_seq_mapping",
             "COMP_ID": "comp_id",
             "ENTITY_ID": "entity_id",
             "ENTITY_TYPE": "entity_type",
@@ -69697,6 +69698,12 @@
             "AUTH_SEQ_ID": {
                "CATEGORY": "rcsb_entity_instance_container_identifiers",
                "ATTRIBUTE": "auth_seq_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUTH_TO_ENTITY_POLY_SEQ_MAPPING": {
+               "CATEGORY": "rcsb_entity_instance_container_identifiers",
+               "ATTRIBUTE": "auth_to_entity_poly_seq_mapping",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -69790,8 +69797,24 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "COMP_ID": {
+            "AUTH_TO_ENTITY_POLY_SEQ_MAPPING": {
                "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "COMP_ID": {
+               "ORDER": 6,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -69807,7 +69830,7 @@
                "SUB_CATEGORIES": []
             },
             "ENTITY_ID": {
-               "ORDER": 6,
+               "ORDER": 7,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -69823,7 +69846,7 @@
                "SUB_CATEGORIES": []
             },
             "ENTITY_TYPE": {
-               "ORDER": 7,
+               "ORDER": 8,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -69845,7 +69868,7 @@
                "SUB_CATEGORIES": []
             },
             "RCSB_ID": {
-               "ORDER": 8,
+               "ORDER": 9,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -81577,6 +81600,7 @@
             "ASYM_ID": "asym_id",
             "ENTRY_ID": "entry_id",
             "AUTH_ASYM_ID": "auth_asym_id",
+            "AUTH_TO_ENTITY_POLY_SEQ_MAPPING": "auth_to_entity_poly_seq_mapping",
             "ENTITY_ID": "entity_id",
             "RCSB_ID": "rcsb_id"
          },
@@ -81596,6 +81620,12 @@
             "AUTH_ASYM_ID": {
                "CATEGORY": "rcsb_polymer_entity_instance_container_identifiers",
                "ATTRIBUTE": "auth_asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUTH_TO_ENTITY_POLY_SEQ_MAPPING": {
+               "CATEGORY": "rcsb_polymer_entity_instance_container_identifiers",
+               "ATTRIBUTE": "auth_to_entity_poly_seq_mapping",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -81661,8 +81691,24 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "ENTITY_ID": {
+            "AUTH_TO_ENTITY_POLY_SEQ_MAPPING": {
                "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTITY_ID": {
+               "ORDER": 5,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -81678,7 +81724,7 @@
                "SUB_CATEGORIES": []
             },
             "RCSB_ID": {
-               "ORDER": 5,
+               "ORDER": 6,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -99803,15 +99849,15 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "pdbx_core_entry",
-            "VERSION": "8.2.0"
+            "VERSION": "8.2.1"
          },
          {
             "NAME": "pdbx_core_assembly",
-            "VERSION": "8.1.0"
+            "VERSION": "8.1.1"
          },
          {
             "NAME": "pdbx_core_polymer_entity",
-            "VERSION": "8.2.0"
+            "VERSION": "8.2.1"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity",

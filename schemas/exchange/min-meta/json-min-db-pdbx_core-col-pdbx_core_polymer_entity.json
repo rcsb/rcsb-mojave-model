@@ -229,10 +229,23 @@
             "rcsb_mutation_count": {
                "type": "integer",
                "description": "Number of engineered mutations engineered in the sample sequence.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "Number of engineered mutations engineered in the sample sequence.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Polymer Entity Mutation Count",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Polymer Molecular Features",
+                     "priority_order": 15
                   }
                ]
             },
@@ -1678,14 +1691,14 @@
                                  "context": "dictionary"
                               },
                               {
-                                 "text": "Host Organism Taxonomy ID",
+                                 "text": "Expression System Organism Taxonomy ID",
                                  "context": "brief"
                               }
                            ],
                            "rcsb_search_group": [
                               {
-                                 "group_name": "Biology",
-                                 "priority_order": 30
+                                 "group_name": "Polymer Molecular Features",
+                                 "priority_order": 50
                               }
                            ]
                         },
@@ -1703,14 +1716,14 @@
                                  "context": "dictionary"
                               },
                               {
-                                 "text": "Host Organism Taxonomy Name",
+                                 "text": "Expression System Organism Taxonomy Name",
                                  "context": "brief"
                               }
                            ],
                            "rcsb_search_group": [
                               {
-                                 "group_name": "Biology",
-                                 "priority_order": 25
+                                 "group_name": "Polymer Molecular Features",
+                                 "priority_order": 45
                               }
                            ]
                         }
@@ -1933,8 +1946,8 @@
                            ],
                            "rcsb_search_group": [
                               {
-                                 "group_name": "Biology",
-                                 "priority_order": 15
+                                 "group_name": "Polymer Molecular Features",
+                                 "priority_order": 35
                               }
                            ]
                         },
@@ -1958,8 +1971,8 @@
                            ],
                            "rcsb_search_group": [
                               {
-                                 "group_name": "Biology",
-                                 "priority_order": 10
+                                 "group_name": "Polymer Molecular Features",
+                                 "priority_order": 30
                               }
                            ]
                         }
@@ -2007,8 +2020,8 @@
                            ],
                            "rcsb_search_group": [
                               {
-                                 "group_name": "Biology",
-                                 "priority_order": 5
+                                 "group_name": "Polymer Molecular Features",
+                                 "priority_order": 25
                               }
                            ]
                         }
@@ -2059,7 +2072,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Polymer Molecular Features",
-                     "priority_order": 15
+                     "priority_order": 20
                   }
                ]
             },
@@ -2172,6 +2185,10 @@
                   {
                      "text": "The number of biological sources for the polymer entity.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Polymer Entity Taxonomy Count",
+                     "context": "brief"
                   }
                ]
             },
@@ -2245,8 +2262,8 @@
                         ],
                         "rcsb_search_group": [
                            {
-                              "group_name": "Biology",
-                              "priority_order": 35
+                              "group_name": "Polymer Molecular Features",
+                              "priority_order": 55
                            }
                         ]
                      },
@@ -2269,8 +2286,8 @@
                         ],
                         "rcsb_search_group": [
                            {
-                              "group_name": "Biology",
-                              "priority_order": 40
+                              "group_name": "Polymer Molecular Features",
+                              "priority_order": 60
                            }
                         ]
                      }
@@ -2525,7 +2542,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Polymer Molecular Features",
-                        "priority_order": 20
+                        "priority_order": 65
                      }
                   ]
                },
@@ -2674,7 +2691,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Polymer Molecular Features",
-                                 "priority_order": 25
+                                 "priority_order": 70
                               }
                            ]
                         },
@@ -2699,7 +2716,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Polymer Molecular Features",
-                                 "priority_order": 30
+                                 "priority_order": 75
                               }
                            ]
                         }
@@ -3471,7 +3488,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.2.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.2.0"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.2.1",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.2.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.2.1"
 }
