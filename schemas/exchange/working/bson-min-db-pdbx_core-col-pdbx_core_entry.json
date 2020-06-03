@@ -2999,6 +2999,12 @@
             "EDS_resolution_low": {
                "bsonType": "double"
             },
+            "EMDB_deposition_date": {
+               "bsonType": "date"
+            },
+            "EMDB_resolution": {
+               "bsonType": "double"
+            },
             "Fo_Fc_correlation": {
                "bsonType": "double"
             },
@@ -3059,8 +3065,32 @@
             "angles_RMSZ": {
                "bsonType": "double"
             },
+            "atom_inclusion_all_atoms": {
+               "bsonType": "double"
+            },
+            "atom_inclusion_backbone": {
+               "bsonType": "double"
+            },
             "attempted_validation_steps": {
                "bsonType": "string"
+            },
+            "author_provided_fsc_resolution_by_cutoff_halfbit": {
+               "bsonType": "double"
+            },
+            "author_provided_fsc_resolution_by_cutoff_onebit": {
+               "bsonType": "double"
+            },
+            "author_provided_fsc_resolution_by_cutoff_pt_143": {
+               "bsonType": "double"
+            },
+            "author_provided_fsc_resolution_by_cutoff_pt_333": {
+               "bsonType": "double"
+            },
+            "author_provided_fsc_resolution_by_cutoff_pt_5": {
+               "bsonType": "double"
+            },
+            "author_provided_fsc_resolution_by_cutoff_threesigma": {
+               "bsonType": "double"
             },
             "bonds_RMSZ": {
                "bsonType": "double"
@@ -3069,6 +3099,24 @@
                "bsonType": "double"
             },
             "bulk_solvent_k": {
+               "bsonType": "double"
+            },
+            "calculated_fsc_resolution_by_cutoff_halfbit": {
+               "bsonType": "double"
+            },
+            "calculated_fsc_resolution_by_cutoff_onebit": {
+               "bsonType": "double"
+            },
+            "calculated_fsc_resolution_by_cutoff_pt_143": {
+               "bsonType": "double"
+            },
+            "calculated_fsc_resolution_by_cutoff_pt_333": {
+               "bsonType": "double"
+            },
+            "calculated_fsc_resolution_by_cutoff_pt_5": {
+               "bsonType": "double"
+            },
+            "calculated_fsc_resolution_by_cutoff_threesigma": {
                "bsonType": "double"
             },
             "ccp4version": {
@@ -3092,6 +3140,9 @@
             "clashscore_full_length": {
                "bsonType": "double"
             },
+            "contour_level_primary_map": {
+               "bsonType": "string"
+            },
             "coordinates_input_filename": {
                "bsonType": "string"
             },
@@ -3109,6 +3160,9 @@
             },
             "data_completeness": {
                "bsonType": "double"
+            },
+            "emdb_id": {
+               "bsonType": "string"
             },
             "high_resol_relative_percentile_DCC_Rfree": {
                "bsonType": "double"
