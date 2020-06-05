@@ -2,7 +2,7 @@
    "NAME": "repository_holdings",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "repository_holdings",
-   "DATABASE_VERSION": "7.2.2",
+   "DATABASE_VERSION": "7.3.0",
    "SELECTION_FILTERS": {},
    "SCHEMA_DICT": {
       "RCSB_REPOSITORY_HOLDINGS_CURRENT": {
@@ -1751,6 +1751,7 @@
             "HOLD_DATE_COORDINATES": "hold_date_coordinates",
             "HOLD_DATE_NMR_RESTRAINTS": "hold_date_nmr_restraints",
             "HOLD_DATE_STRUCTURE_FACTORS": "hold_date_structure_factors",
+            "PRERELEASE_SEQUENCE_AVAILABLE_FLAG": "prerelease_sequence_available_flag",
             "RELEASE_DATE": "release_date",
             "STATUS_CODE": "status_code",
             "TITLE": "title"
@@ -1819,6 +1820,12 @@
             "HOLD_DATE_STRUCTURE_FACTORS": {
                "CATEGORY": "rcsb_repository_holdings_unreleased",
                "ATTRIBUTE": "hold_date_structure_factors",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PRERELEASE_SEQUENCE_AVAILABLE_FLAG": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "prerelease_sequence_available_flag",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -2023,8 +2030,27 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RELEASE_DATE": {
+            "PRERELEASE_SEQUENCE_AVAILABLE_FLAG": {
                "ORDER": 12,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "N",
+                  "Y"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RELEASE_DATE": {
+               "ORDER": 13,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -2040,7 +2066,7 @@
                "SUB_CATEGORIES": []
             },
             "STATUS_CODE": {
-               "ORDER": 13,
+               "ORDER": 14,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -2067,7 +2093,7 @@
                "SUB_CATEGORIES": []
             },
             "TITLE": {
-               "ORDER": 14,
+               "ORDER": 15,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -2558,7 +2584,7 @@
          },
          {
             "NAME": "repository_holdings_unreleased_entry",
-            "VERSION": "3.2.2"
+            "VERSION": "3.3.0"
          },
          {
             "NAME": "repository_holdings_removed_entry",
