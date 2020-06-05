@@ -42,6 +42,43 @@
               "PROTEIN DIFFRACTION",
               "EM DATA RESOURCE"
             ],
+            "rcsb_enum_annotated": [
+              {
+                "value": "OLDERADO",
+                "name": "OLDERADO",
+                "detail": "OLDERADO provides analysis of clustering and domain composition for NMR structure ensembles"
+              },
+              {
+                "value": "BMRB",
+                "name": "BMRB",
+                "detail": "A Repository for data from NMR spectroscopy on proteins, peptides, nucleic acids, and other biomolecules"
+              },
+              {
+                "value": "EM DATA RESOURCE",
+                "name": "EMDataResource",
+                "detail": "Global resource for 3-dimensional Electron Microscopy (3DEM) structure data"
+              },
+              {
+                "value": "NDB",
+                "name": "NDB",
+                "detail": "Three-dimensional structural information about nucleic acids"
+              },
+              {
+                "value": "PROTEIN DIFFRACTION",
+                "name": "Protein Diffraction",
+                "detail": "Integrated resource for reproducibility in macromolecular crystallography"
+              },
+              {
+                "value": "SB GRID",
+                "name": "SBGrid",
+                "detail": "Supports publication of X-ray diffraction, MicroED, LLSM datasets, as well as structural models"
+              },
+              {
+                "value": "STORE SYNCHROTRON",
+                "name": "Store.Synchrotron",
+                "detail": "Store.Synchrotron Data Store"
+              }
+            ],
             "description": "Internal identifier for external resource.",
             "rcsb_search_context": [
               "exact-match"
@@ -109,35 +146,51 @@
             "rcsb_enum_annotated": [
               {
                 "value": "IC50",
-                "detail": "The concentration of ligand that reduces enzyme activity by 50%"
+                "name": "IC50",
+                "detail": "The concentration of ligand that reduces enzyme activity by 50%",
+                "units" : "nM"
               },
               {
                 "value": "EC50",
-                "detail": "The concentration of compound that generates a half-maximal response"
+                "name": "EC50",
+                "detail": "The concentration of compound that generates a half-maximal response",
+                "units" : "nM"
               },
               {
                 "value": "Kd",
-                "detail": "Dissociation constant"
+                "name": "Kd",
+                "detail": "Dissociation constant",
+                "units" : "nM"
               },
               {
                 "value": "Ka",
-                "detail": "Association constant"
+                "name": "Ka",
+                "detail": "Association constant",
+                "units" : "M^-1"
               },
               {
                 "value": "Ki",
-                "detail": "Enzyme inhibition constant"
+                "name": "Ki",
+                "detail": "Enzyme inhibition constant",
+                "units" : "nM"
               },
               {
                 "value": "&Delta;G",
-                "detail": "Gibbs free energy of binding (for association reaction)"
+                "name": "ΔG",
+                "detail": "Gibbs free energy of binding (for association reaction)",
+                "units" : "kJ/mol"
               },
               {
                 "value": "&Delta;H",
-                "detail": "Change in enthalpy associated with a chemical reaction"
+                "name": "ΔH",
+                "detail": "Change in enthalpy associated with a chemical reaction",
+                "units" : "kJ/mol"
               },
               {
                 "value": "-T&Delta;S",
-                "detail": "Change in entropy associated with a chemical reaction"
+                "name": "-ΔT",
+                "detail": "Change in entropy associated with a chemical reaction",
+                "units" : "kJ/mol"
               }
             ],
             "examples":[
