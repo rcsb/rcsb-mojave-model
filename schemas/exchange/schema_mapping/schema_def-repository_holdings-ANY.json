@@ -2,7 +2,7 @@
    "NAME": "repository_holdings",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "repository_holdings",
-   "DATABASE_VERSION": "7.3.0",
+   "DATABASE_VERSION": "7.4.0",
    "SELECTION_FILTERS": {},
    "SCHEMA_DICT": {
       "RCSB_REPOSITORY_HOLDINGS_CURRENT": {
@@ -587,11 +587,18 @@
          "SCHEMA_MANDATORY": false,
          "SCHEMA_SUB_CATEGORIES": [],
          "ATTRIBUTES": {
+            "ENTITY_ID": "entity_id",
             "ENTRY_ID": "entry_id",
             "UPDATE_ID": "update_id",
             "SEQ_ONE_LETTER_CODE": "seq_one_letter_code"
          },
          "ATTRIBUTE_MAP": {
+            "ENTITY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_prerelease",
+               "ATTRIBUTE": "entity_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
             "ENTRY_ID": {
                "CATEGORY": "rcsb_repository_holdings_prerelease",
                "ATTRIBUTE": "entry_id",
@@ -612,7 +619,7 @@
             }
          },
          "ATTRIBUTE_INFO": {
-            "ENTRY_ID": {
+            "ENTITY_ID": {
                "ORDER": 1,
                "NULLABLE": false,
                "PRECISION": 0,
@@ -628,7 +635,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "UPDATE_ID": {
+            "ENTRY_ID": {
                "ORDER": 2,
                "NULLABLE": false,
                "PRECISION": 0,
@@ -644,14 +651,30 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "SEQ_ONE_LETTER_CODE": {
+            "UPDATE_ID": {
                "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "SEQ_ONE_LETTER_CODE": {
+               "ORDER": 4,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
                "APP_TYPE": "char",
                "WIDTH": 10,
-               "ITERABLE_DELIMITER": ";",
+               "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [],
@@ -666,6 +689,7 @@
             "p1": {
                "TYPE": "UNIQUE",
                "ATTRIBUTES": [
+                  "ENTITY_ID",
                   "ENTRY_ID",
                   "UPDATE_ID"
                ]
@@ -680,6 +704,7 @@
          "MAP_MERGE_INDICES": {
             "rcsb_repository_holdings_prerelease": {
                "ATTRIBUTES": [
+                  "entity_id",
                   "entry_id",
                   "update_id"
                ],
@@ -699,7 +724,7 @@
             "SLICE_REPO_UPDATE_ENTRY": false,
             "SLICE_REPO_REMOVED_ENTRY": false,
             "SLICE_REPO_CURRENT_ENTRY": false,
-            "SLICE_REPO_UNRELEASED_ENTRY": true
+            "SLICE_REPO_UNRELEASED_ENTRY": false
          },
          "SLICE_CATEGORY_EXTRAS": {
             "SLICE_REPO_UPDATE_ENTRY": false,
@@ -2584,7 +2609,7 @@
          },
          {
             "NAME": "repository_holdings_unreleased_entry",
-            "VERSION": "3.3.0"
+            "VERSION": "3.4.0"
          },
          {
             "NAME": "repository_holdings_removed_entry",

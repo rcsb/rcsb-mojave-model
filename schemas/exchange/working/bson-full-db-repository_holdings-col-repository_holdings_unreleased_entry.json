@@ -2,17 +2,24 @@
    "bsonType": "object",
    "properties": {
       "rcsb_repository_holdings_prerelease": {
-         "bsonType": "object",
-         "properties": {
-            "seq_one_letter_code": {
-               "bsonType": "array",
-               "items": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "entity_id": {
                   "bsonType": "string"
                },
-               "uniqueItems": false
-            }
+               "seq_one_letter_code": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "entity_id"
+            ]
          },
-         "additionalProperties": false
+         "minItems": 1,
+         "uniqueItems": true
       },
       "rcsb_repository_holdings_unreleased": {
          "bsonType": "object",
