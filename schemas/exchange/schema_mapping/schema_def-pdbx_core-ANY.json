@@ -14167,6 +14167,7 @@
             "RCSB_MACROMOLECULAR_NAMES_COMBINED_PROVENANCE_SOURCE": "rcsb_macromolecular_names_combined_provenance_source",
             "RCSB_MULTIPLE_SOURCE_FLAG": "rcsb_multiple_source_flag",
             "RCSB_SOURCE_PART_COUNT": "rcsb_source_part_count",
+            "RCSB_SOURCE_TAXONOMY_COUNT": "rcsb_source_taxonomy_count",
             "SRC_METHOD": "src_method",
             "TYPE": "type"
          },
@@ -14282,6 +14283,12 @@
             "RCSB_SOURCE_PART_COUNT": {
                "CATEGORY": "entity",
                "ATTRIBUTE": "rcsb_source_part_count",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_SOURCE_TAXONOMY_COUNT": {
+               "CATEGORY": "entity",
+               "ATTRIBUTE": "rcsb_source_taxonomy_count",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -14615,8 +14622,24 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "SRC_METHOD": {
+            "RCSB_SOURCE_TAXONOMY_COUNT": {
                "ORDER": 20,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "SRC_METHOD": {
+               "ORDER": 21,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -14634,7 +14657,7 @@
                "SUB_CATEGORIES": []
             },
             "TYPE": {
-               "ORDER": 21,
+               "ORDER": 22,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -25671,6 +25694,7 @@
                   "Anticoagulant",
                   "Anticoagulant, Antithrombotic",
                   "Antifungal",
+                  "Antigen",
                   "Antiinflammatory",
                   "Antimicrobial",
                   "Antimicrobial, Antiparasitic, Antibiotic",
@@ -25684,21 +25708,27 @@
                   "Antiviral",
                   "CASPASE inhibitor",
                   "Chaperone binding",
+                  "Drug delivery",
                   "Enzyme inhibitor",
+                  "Glycan component",
                   "Growth factor",
                   "Immunosuppressant",
+                  "Inducer",
                   "Inhibitor",
                   "Lantibiotic",
                   "Metabolism",
                   "Metal transport",
+                  "Nutrient",
                   "Oxidation-reduction",
+                  "Protein binding",
                   "Receptor",
+                  "Substrate analog",
                   "Thrombin inhibitor",
                   "Thrombin inhibitor, Trypsin inhibitor",
                   "Toxin",
-                  "Transport activator",
                   "Trypsin inhibitor",
-                  "Unknown"
+                  "Unknown",
+                  "Water retention"
                ],
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
@@ -79509,6 +79539,7 @@
             "RCSB_MACROMOLECULAR_NAMES_COMBINED_PROVENANCE_SOURCE": "rcsb_macromolecular_names_combined_provenance_source",
             "RCSB_MULTIPLE_SOURCE_FLAG": "rcsb_multiple_source_flag",
             "RCSB_SOURCE_PART_COUNT": "rcsb_source_part_count",
+            "RCSB_SOURCE_TAXONOMY_COUNT": "rcsb_source_taxonomy_count",
             "SRC_METHOD": "src_method"
          },
          "ATTRIBUTE_MAP": {
@@ -79623,6 +79654,12 @@
             "RCSB_SOURCE_PART_COUNT": {
                "CATEGORY": "rcsb_polymer_entity",
                "ATTRIBUTE": "rcsb_source_part_count",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_SOURCE_TAXONOMY_COUNT": {
+               "CATEGORY": "rcsb_polymer_entity",
+               "ATTRIBUTE": "rcsb_source_taxonomy_count",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -79965,8 +80002,24 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "SRC_METHOD": {
+            "RCSB_SOURCE_TAXONOMY_COUNT": {
                "ORDER": 20,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "SRC_METHOD": {
+               "ORDER": 21,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -101019,6 +101072,7 @@
                   "rcsb_macromolecular_names_combined_provenance_source",
                   "rcsb_multiple_source_flag",
                   "rcsb_source_part_count",
+                  "rcsb_source_taxonomy_count",
                   "src_method",
                   "type"
                ]
@@ -101169,6 +101223,7 @@
                   "rcsb_macromolecular_names_combined_provenance_source",
                   "rcsb_multiple_source_flag",
                   "rcsb_source_part_count",
+                  "rcsb_source_taxonomy_count",
                   "src_method",
                   "type"
                ]
@@ -101319,6 +101374,7 @@
                   "rcsb_macromolecular_names_combined_provenance_source",
                   "rcsb_multiple_source_flag",
                   "rcsb_source_part_count",
+                  "rcsb_source_taxonomy_count",
                   "src_method",
                   "type"
                ]
