@@ -212,7 +212,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Polymer Molecular Features",
-                     "priority_order": 5
+                     "priority_order": 15
                   }
                ]
             },
@@ -245,7 +245,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Polymer Molecular Features",
-                     "priority_order": 15
+                     "priority_order": 25
                   }
                ]
             },
@@ -302,7 +302,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Polymer Molecular Features",
-                     "priority_order": 10
+                     "priority_order": 20
                   }
                ]
             },
@@ -1698,7 +1698,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Polymer Molecular Features",
-                                 "priority_order": 50
+                                 "priority_order": 65
                               }
                            ]
                         },
@@ -1723,7 +1723,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Polymer Molecular Features",
-                                 "priority_order": 45
+                                 "priority_order": 60
                               }
                            ]
                         }
@@ -1947,7 +1947,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Polymer Molecular Features",
-                                 "priority_order": 35
+                                 "priority_order": 45
                               }
                            ]
                         },
@@ -1972,7 +1972,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Polymer Molecular Features",
-                                 "priority_order": 30
+                                 "priority_order": 40
                               }
                            ]
                         }
@@ -2021,7 +2021,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Polymer Molecular Features",
-                                 "priority_order": 25
+                                 "priority_order": 35
                               }
                            ]
                         }
@@ -2072,7 +2072,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Polymer Molecular Features",
-                     "priority_order": 20
+                     "priority_order": 30
                   }
                ]
             },
@@ -2102,7 +2102,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Macromolecular Description",
+                     "group_name": "Polymer Molecular Features",
                      "priority_order": 5
                   }
                ]
@@ -2180,24 +2180,47 @@
             },
             "rcsb_source_part_count": {
                "type": "integer",
-               "description": "The number of biological sources for the polymer entity.",
+               "description": "The number of biological sources for the polymer entity. Multiple source contributions\n may come from the same organism (taxonomy).",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of biological sources for the polymer entity.",
+                     "text": "The number of biological sources for the polymer entity. Multiple source contributions\n may come from the same organism (taxonomy).",
                      "context": "dictionary"
                   },
                   {
-                     "text": "Polymer Entity Taxonomy Count",
+                     "text": "Polymer Entity Source Count",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
                      "group_name": "Polymer Molecular Features",
-                     "priority_order": 40
+                     "priority_order": 50
+                  }
+               ]
+            },
+            "rcsb_source_taxonomy_count": {
+               "type": "integer",
+               "description": "The number of distinct source taxonomies for the polymer entity.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "The number of distinct source taxonomies for the polymer entity.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Polymer Entity Distinct Taxonomy Count",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Polymer Molecular Features",
+                     "priority_order": 55
                   }
                ]
             },
@@ -2272,7 +2295,7 @@
                         "rcsb_search_group": [
                            {
                               "group_name": "Polymer Molecular Features",
-                              "priority_order": 55
+                              "priority_order": 70
                            }
                         ]
                      },
@@ -2296,7 +2319,7 @@
                         "rcsb_search_group": [
                            {
                               "group_name": "Polymer Molecular Features",
-                              "priority_order": 60
+                              "priority_order": 75
                            }
                         ]
                      }
@@ -2330,7 +2353,7 @@
                         ],
                         "rcsb_search_group": [
                            {
-                              "group_name": "Macromolecular Description",
+                              "group_name": "Polymer Molecular Features",
                               "priority_order": 10
                            }
                         ]
@@ -2551,7 +2574,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Polymer Molecular Features",
-                        "priority_order": 65
+                        "priority_order": 80
                      }
                   ]
                },
@@ -2703,7 +2726,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Polymer Molecular Features",
-                                 "priority_order": 70
+                                 "priority_order": 85
                               }
                            ]
                         },
@@ -2728,7 +2751,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Polymer Molecular Features",
-                                 "priority_order": 75
+                                 "priority_order": 90
                               }
                            ]
                         }
@@ -3255,6 +3278,16 @@
                      {
                         "text": "The feature count.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Count",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Polymer Molecular Features",
+                        "priority_order": 95
                      }
                   ]
                },
@@ -3268,6 +3301,16 @@
                      {
                         "text": "The fractional feature coverage relative to the full entity sequence.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Coverage",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Polymer Molecular Features",
+                        "priority_order": 100
                      }
                   ]
                },
