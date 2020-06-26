@@ -2031,9 +2031,10 @@
                "type": "string",
                "description": "The value of _pdbx_reference_molecule.prd_id is the unique identifier \n for the reference molecule in this family.  \n\n By convention this ID uniquely identifies the reference molecule in \n in the PDB reference dictionary.  \n\n The ID has the template form PRD_dddddd (e.g. PRD_000001)",
                "rcsb_search_context": [
-                  "exact-match"
+                  "exact-match",
+                  "suggest"
                ],
-               "rcsb_full_text_priority": 10,
+               "rcsb_full_text_priority": 20,
                "rcsb_description": [
                   {
                      "text": "The value of _pdbx_reference_molecule.prd_id is the unique identifier \n for the reference molecule in this family.  \n\n By convention this ID uniquely identifies the reference molecule in \n in the PDB reference dictionary.  \n\n The ID has the template form PRD_dddddd (e.g. PRD_000001)",
@@ -3253,10 +3254,9 @@
                "type": "string",
                "description": "The BIRD definition identifier.",
                "rcsb_search_context": [
-                  "exact-match",
-                  "suggest"
+                  "exact-match"
                ],
-               "rcsb_full_text_priority": 20,
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "The BIRD definition identifier.",
