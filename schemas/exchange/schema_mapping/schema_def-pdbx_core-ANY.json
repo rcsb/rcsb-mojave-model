@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "8.4.1",
+   "DATABASE_VERSION": "8.5.0",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -23841,6 +23841,348 @@
                   "PARENT_CATEGORY": "STRUCT_ASYM",
                   "PARENT_ATTRIBUTE": "ID",
                   "CHILD_ATTRIBUTE": "LABEL_ASYM_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "PDBX_ENTITY_BRANCH": {
+         "SCHEMA_ID": "PDBX_ENTITY_BRANCH",
+         "SCHEMA_NAME": "pdbx_entity_branch",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "RCSB_BRANCHED_COMPONENT_COUNT": "rcsb_branched_component_count"
+         },
+         "ATTRIBUTE_MAP": {
+            "RCSB_BRANCHED_COMPONENT_COUNT": {
+               "CATEGORY": "pdbx_entity_branch",
+               "ATTRIBUTE": "rcsb_branched_component_count",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "RCSB_BRANCHED_COMPONENT_COUNT": {
+               "ORDER": 1,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": []
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "pdbx_entity_branch": {
+               "ATTRIBUTES": [],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ENTITY": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": true,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": true,
+            "SLICE_ENTITY_NONPOLYMER": true,
+            "SLICE_ENTITY_BRANCHED": true,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "PDBX_ENTITY_BRANCH_DESCRIPTOR": {
+         "SCHEMA_ID": "PDBX_ENTITY_BRANCH_DESCRIPTOR",
+         "SCHEMA_NAME": "pdbx_entity_branch_descriptor",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ORDINAL": "ordinal",
+            "DESCRIPTOR": "descriptor",
+            "ENTITY_ID": "entity_id",
+            "PROGRAM": "program",
+            "PROGRAM_VERSION": "program_version",
+            "TYPE": "type"
+         },
+         "ATTRIBUTE_MAP": {
+            "ORDINAL": {
+               "CATEGORY": "pdbx_entity_branch_descriptor",
+               "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DESCRIPTOR": {
+               "CATEGORY": "pdbx_entity_branch_descriptor",
+               "ATTRIBUTE": "descriptor",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTITY_ID": {
+               "CATEGORY": "pdbx_entity_branch_descriptor",
+               "ATTRIBUTE": "entity_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PROGRAM": {
+               "CATEGORY": "pdbx_entity_branch_descriptor",
+               "ATTRIBUTE": "program",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PROGRAM_VERSION": {
+               "CATEGORY": "pdbx_entity_branch_descriptor",
+               "ATTRIBUTE": "program_version",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TYPE": {
+               "CATEGORY": "pdbx_entity_branch_descriptor",
+               "ATTRIBUTE": "type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ORDINAL": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DESCRIPTOR": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTITY_ID": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PROGRAM": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PROGRAM_VERSION": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 6,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "Glycam Condensed Core Sequence",
+                  "Glycam Condensed Sequence",
+                  "LINUCS",
+                  "WURCS"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ORDINAL"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "pdbx_entity_branch_descriptor": {
+               "ATTRIBUTES": [
+                  "ordinal"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ENTITY": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
                }
             ]
          },
@@ -100254,7 +100596,7 @@
          },
          {
             "NAME": "pdbx_core_polymer_entity",
-            "VERSION": "8.3.3"
+            "VERSION": "8.3.4"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity",
@@ -100262,7 +100604,7 @@
          },
          {
             "NAME": "pdbx_core_branched_entity",
-            "VERSION": "8.0.7"
+            "VERSION": "8.1.0"
          },
          {
             "NAME": "pdbx_core_polymer_entity_instance",
@@ -100911,6 +101253,8 @@
                "ENTITY_NAME_SYS",
                "ENTITY_POLY_SEQ",
                "PDBX_ENTITY_NONPOLY",
+               "PDBX_ENTITY_BRANCH",
+               "PDBX_ENTITY_BRANCH_DESCRIPTOR",
                "PDBX_MOLECULE",
                "PDBX_NONPOLY_SCHEME",
                "PDBX_POLY_SEQ_SCHEME",
@@ -101087,6 +101431,8 @@
                "ENTITY_NAME_COM",
                "ENTITY_NAME_SYS",
                "ENTITY_POLY",
+               "PDBX_ENTITY_BRANCH",
+               "PDBX_ENTITY_BRANCH_DESCRIPTOR",
                "ENTITY_POLY_SEQ",
                "ENTITY_POLY_SEQ",
                "ENTITY_SRC_GEN",
@@ -101356,6 +101702,13 @@
                   "entry_id",
                   "ordinal"
                ],
+               "pdbx_entity_branch_descriptor": [
+                  "entity_id",
+                  "ordinal"
+               ],
+               "pdbx_entity_branch": [
+                  "entity_id"
+               ],
                "entity": [
                   "id",
                   "details",
@@ -101462,7 +101815,9 @@
                "STRUCT_SHEET_ORDER",
                "STRUCT_SHEET_RANGE",
                "STRUCT_SITE",
-               "STRUCT_SITE_GEN"
+               "STRUCT_SITE_GEN",
+               "PDBX_ENTITY_BRANCH",
+               "PDBX_ENTITY_BRANCH_DESCRIPTOR"
             ],
             "SLICE_FILTER": "SLICE_ENTITY_INSTANCE_POLYMER",
             "EXCLUDED_ATTRIBUTES": {
@@ -101592,7 +101947,9 @@
                "STRUCT_SHEET_ORDER",
                "STRUCT_SHEET_RANGE",
                "STRUCT_SITE",
-               "STRUCT_SITE_GEN"
+               "STRUCT_SITE_GEN",
+               "PDBX_ENTITY_BRANCH",
+               "PDBX_ENTITY_BRANCH_DESCRIPTOR"
             ],
             "SLICE_FILTER": "SLICE_ENTITY_INSTANCE_NONPOLYMER",
             "EXCLUDED_ATTRIBUTES": {
@@ -101726,7 +102083,9 @@
                "STRUCT_SHEET_ORDER",
                "STRUCT_SHEET_RANGE",
                "STRUCT_SITE",
-               "STRUCT_SITE_GEN"
+               "STRUCT_SITE_GEN",
+               "PDBX_ENTITY_BRANCH",
+               "PDBX_ENTITY_BRANCH_DESCRIPTOR"
             ],
             "SLICE_FILTER": "SLICE_ENTITY_INSTANCE_BRANCHED",
             "EXCLUDED_ATTRIBUTES": {
