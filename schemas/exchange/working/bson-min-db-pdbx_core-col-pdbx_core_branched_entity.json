@@ -1,6 +1,44 @@
 {
    "bsonType": "object",
    "properties": {
+      "pdbx_entity_branch": {
+         "bsonType": "object",
+         "properties": {
+            "rcsb_branched_component_count": {
+               "bsonType": "int"
+            }
+         },
+         "additionalProperties": false
+      },
+      "pdbx_entity_branch_descriptor": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "descriptor": {
+                  "bsonType": "string"
+               },
+               "program": {
+                  "bsonType": "string"
+               },
+               "program_version": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Glycam Condensed Core Sequence",
+                     "Glycam Condensed Sequence",
+                     "LINUCS",
+                     "WURCS"
+                  ]
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_branched_entity": {
          "bsonType": "object",
          "properties": {
