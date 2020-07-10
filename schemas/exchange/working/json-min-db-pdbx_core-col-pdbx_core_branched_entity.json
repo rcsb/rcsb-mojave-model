@@ -1,6 +1,133 @@
 {
    "type": "object",
    "properties": {
+      "pdbx_entity_branch": {
+         "type": "object",
+         "properties": {
+            "rcsb_branched_component_count": {
+               "type": "integer",
+               "description": "Number of constituent chemical components  branched entity.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "Number of constituent chemical components  branched entity.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Branched Entity Component Count",
+                     "context": "brief"
+                  }
+               ]
+            }
+         },
+         "additionalProperties": false
+      },
+      "pdbx_entity_branch_descriptor": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "descriptor": {
+                  "type": "string",
+                  "description": "This data item contains the descriptor value for this \n entity.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "This data item contains the descriptor value for this \n entity.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Branched Entity Descriptor",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "program": {
+                  "type": "string",
+                  "examples": [
+                     "PDB-CARE",
+                     "OTHER",
+                     "GEMS"
+                  ],
+                  "description": "This data item contains the name of the program\n or library used to compute the descriptor.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item contains the name of the program\n or library used to compute the descriptor.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "program_version": {
+                  "type": "string",
+                  "description": "This data item contains the version of the program\n or library used to compute the descriptor.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item contains the version of the program\n or library used to compute the descriptor.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "Glycam Condensed Core Sequence",
+                     "Glycam Condensed Sequence",
+                     "LINUCS",
+                     "WURCS"
+                  ],
+                  "description": "This data item contains the descriptor type.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "Glycam Condensed Core Sequence",
+                        "detail": "Linear Notation for Unique description of oligosaccharide core structure"
+                     },
+                     {
+                        "value": "Glycam Condensed Sequence",
+                        "detail": "Linear Notation for unique description of an oligosaccharide entity"
+                     },
+                     {
+                        "value": "LINUCS",
+                        "detail": "Linear Notation for unique description of an oligosaccharide entity"
+                     },
+                     {
+                        "value": "WURCS",
+                        "detail": "Linear Notation for Web3 Unique Representation of Carbohydrate Structures"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "This data item contains the descriptor type.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Branched Entity Descriptor Type",
+                        "context": "brief"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true,
+         "rcsb_nested_indexing": true,
+         "rcsb_nested_indexing_context": [
+            {
+               "category_name": "descriptor_type",
+               "category_path": "pdbx_entity_branch_descriptor.type"
+            }
+         ]
+      },
       "rcsb_branched_entity": {
          "type": "object",
          "properties": {
@@ -752,7 +879,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_branched_entity version: 8.0.7",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity version 8.0.7. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.0.7"
+   "title": "schema: pdbx_core collection: pdbx_core_branched_entity version: 8.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity version 8.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.1.0"
 }
