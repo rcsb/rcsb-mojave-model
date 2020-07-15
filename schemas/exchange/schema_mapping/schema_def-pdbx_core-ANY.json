@@ -23882,19 +23882,49 @@
          "SCHEMA_MANDATORY": false,
          "SCHEMA_SUB_CATEGORIES": [],
          "ATTRIBUTES": {
-            "RCSB_BRANCHED_COMPONENT_COUNT": "rcsb_branched_component_count"
+            "ENTITY_ID": "entity_id",
+            "RCSB_BRANCHED_COMPONENT_COUNT": "rcsb_branched_component_count",
+            "TYPE": "type"
          },
          "ATTRIBUTE_MAP": {
+            "ENTITY_ID": {
+               "CATEGORY": "pdbx_entity_branch",
+               "ATTRIBUTE": "entity_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
             "RCSB_BRANCHED_COMPONENT_COUNT": {
                "CATEGORY": "pdbx_entity_branch",
                "ATTRIBUTE": "rcsb_branched_component_count",
                "METHOD_NAME": null,
                "ARGUMENTS": null
+            },
+            "TYPE": {
+               "CATEGORY": "pdbx_entity_branch",
+               "ATTRIBUTE": "type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
             }
          },
          "ATTRIBUTE_INFO": {
-            "RCSB_BRANCHED_COMPONENT_COUNT": {
+            "ENTITY_ID": {
                "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_BRANCHED_COMPONENT_COUNT": {
+               "ORDER": 2,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -23908,18 +23938,40 @@
                   "GENERATED_CONTENT"
                ],
                "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "oligosaccharide"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
             }
          },
          "SCHEMA_DELETE_ATTRIBUTE": null,
          "INDICES": {
             "p1": {
                "TYPE": "UNIQUE",
-               "ATTRIBUTES": []
+               "ATTRIBUTES": [
+                  "ENTITY_ID"
+               ]
             }
          },
          "MAP_MERGE_INDICES": {
             "pdbx_entity_branch": {
-               "ATTRIBUTES": [],
+               "ATTRIBUTES": [
+                  "entity_id"
+               ],
                "TYPE": "EQUI-JOIN"
             }
          },
@@ -100629,7 +100681,7 @@
          },
          {
             "NAME": "pdbx_core_branched_entity",
-            "VERSION": "8.1.0"
+            "VERSION": "8.2.0"
          },
          {
             "NAME": "pdbx_core_polymer_entity_instance",

@@ -6,17 +6,38 @@
          "properties": {
             "rcsb_branched_component_count": {
                "type": "integer",
-               "description": "Number of constituent chemical components  branched entity.",
+               "description": "Number of constituent chemical components in the branched entity.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "Number of constituent chemical components  branched entity.",
+                     "text": "Number of constituent chemical components in the branched entity.",
                      "context": "dictionary"
                   },
                   {
                      "text": "Branched Entity Component Count",
+                     "context": "brief"
+                  }
+               ]
+            },
+            "type": {
+               "type": "string",
+               "enum": [
+                  "oligosaccharide"
+               ],
+               "description": "The type of this branched oligosaccharide.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
+               "rcsb_description": [
+                  {
+                     "text": "The type of this branched oligosaccharide.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Branched Oligosaccharide Type",
                      "context": "brief"
                   }
                ]
@@ -879,7 +900,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_branched_entity version: 8.1.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity version 8.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.1.0"
+   "title": "schema: pdbx_core collection: pdbx_core_branched_entity version: 8.2.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity version 8.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.2.0"
 }
