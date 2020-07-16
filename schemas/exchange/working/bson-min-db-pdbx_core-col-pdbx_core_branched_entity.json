@@ -6,6 +6,12 @@
          "properties": {
             "rcsb_branched_component_count": {
                "bsonType": "int"
+            },
+            "type": {
+               "bsonType": "string",
+               "enum": [
+                  "oligosaccharide"
+               ]
             }
          },
          "additionalProperties": false
