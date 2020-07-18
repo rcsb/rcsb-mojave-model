@@ -1875,73 +1875,77 @@
                ]
             },
             "class": {
-               "type": "array",
-               "items": {
-                  "type": "string",
-                  "enum": [
-                     "Antagonist",
-                     "Anthelmintic",
-                     "Antibiotic",
-                     "Anticancer",
-                     "Anticoagulant",
-                     "Antifungal",
-                     "Antiinflammatory",
-                     "Antimicrobial",
-                     "Antineoplastic",
-                     "Antiparasitic",
-                     "Antiretroviral",
-                     "Antithrombotic",
-                     "Antitumor",
-                     "Antiviral",
-                     "CASPASE inhibitor",
-                     "Chaperone binding",
-                     "Enzyme inhibitor",
-                     "Growth factor",
-                     "Immunosuppressant",
-                     "Inhibitor",
-                     "Lantibiotic",
-                     "Metabolism",
-                     "Metal transport",
-                     "Oxidation-reduction",
-                     "RNA synthesis Inhibitor",
-                     "Receptor",
-                     "Synthetic opioid",
-                     "Thrombin inhibitor",
-                     "Toxin",
-                     "Transition state mimetic",
-                     "Transport activator",
-                     "Trypsin inhibitor",
-                     "Unknown"
-                  ],
-                  "examples": [
-                     "Anticancer",
-                     "Anticoagulant",
-                     "Antifungal"
-                  ],
-                  "description": "Broadly defines the function of the entity.",
-                  "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
-                  ],
-                  "rcsb_full_text_priority": 10,
-                  "rcsb_description": [
-                     {
-                        "text": "Broadly defines the function of the entity.",
-                        "context": "dictionary"
-                     },
-                     {
-                        "text": "BIRD Class",
-                        "context": "brief"
-                     }
-                  ],
-                  "rcsb_search_group": [
-                     {
-                        "group_name": "Biologically Interesting Molecules (BIRD)",
-                        "priority_order": 20
-                     }
-                  ]
-               },
-               "uniqueItems": false
+               "type": "string",
+               "enum": [
+                  "Antagonist",
+                  "Anthelmintic",
+                  "Antibiotic",
+                  "Antibiotic, Anthelmintic",
+                  "Antibiotic, Antimicrobial",
+                  "Antibiotic, Antineoplastic",
+                  "Anticancer",
+                  "Anticoagulant",
+                  "Anticoagulant, Antithrombotic",
+                  "Antifungal",
+                  "Antigen",
+                  "Antiinflammatory",
+                  "Antimicrobial",
+                  "Antimicrobial, Antiparasitic, Antibiotic",
+                  "Antimicrobial, Antiretroviral",
+                  "Antimicrobial, Antitumor",
+                  "Antineoplastic",
+                  "Antiparasitic",
+                  "Antiretroviral",
+                  "Antithrombotic",
+                  "Antitumor",
+                  "Antiviral",
+                  "CASPASE inhibitor",
+                  "Chaperone binding",
+                  "Drug delivery",
+                  "Enzyme inhibitor",
+                  "Glycan component",
+                  "Growth factor",
+                  "Immunosuppressant",
+                  "Inducer",
+                  "Inhibitor",
+                  "Lantibiotic",
+                  "Metabolism",
+                  "Metal transport",
+                  "Nutrient",
+                  "Oxidation-reduction",
+                  "Protein binding",
+                  "Receptor",
+                  "Substrate analog",
+                  "Thrombin inhibitor",
+                  "Thrombin inhibitor, Trypsin inhibitor",
+                  "Toxin",
+                  "Transport activator",
+                  "Trypsin inhibitor",
+                  "Unknown",
+                  "Water retention"
+               ],
+               "description": "Broadly defines the function of the entity.",
+               "rcsb_search_context": [
+                  "exact-match",
+                  "full-text"
+               ],
+               "rcsb_full_text_priority": 10,
+               "rcsb_description": [
+                  {
+                     "text": "Broadly defines the function of the entity.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "BIRD Class",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Biologically Interesting Molecules (BIRD)",
+                     "priority_order": 20
+                  }
+               ]
             },
             "class_evidence_code": {
                "type": "string",
@@ -2114,71 +2118,66 @@
                ]
             },
             "type": {
-               "type": "array",
-               "items": {
-                  "type": "string",
-                  "enum": [
-                     "Amino acid",
-                     "Aminoglycoside",
-                     "Ansamycin",
-                     "Anthracycline",
-                     "Anthraquinone",
-                     "Chalkophore",
-                     "Chalkophore, Polypeptide",
-                     "Chromophore",
-                     "Cyclic depsipeptide",
-                     "Cyclic lipopeptide",
-                     "Cyclic peptide",
-                     "Glycopeptide",
-                     "Heterocyclic",
-                     "Imino sugar",
-                     "Keto acid",
-                     "Lipoglycopeptide",
-                     "Lipopeptide",
-                     "Macrolide",
-                     "Non-polymer",
-                     "Nucleoside",
-                     "Oligopeptide",
-                     "Oligosaccharide",
-                     "Peptaibol",
-                     "Peptide-like",
-                     "Polycyclic",
-                     "Polypeptide",
-                     "Polysaccharide",
-                     "Quinolone",
-                     "Siderophore",
-                     "Thiolactone",
-                     "Thiopeptide",
-                     "Tricyclic pentaglycosidic antineoplastic antibiotic",
-                     "Unknown"
-                  ],
-                  "examples": [
-                     "Peptide-like",
-                     "Macrolide"
-                  ],
-                  "description": "Defines the structural classification of the entity.",
-                  "rcsb_search_context": [
-                     "exact-match"
-                  ],
-                  "rcsb_full_text_priority": 10,
-                  "rcsb_description": [
-                     {
-                        "text": "Defines the structural classification of the entity.",
-                        "context": "dictionary"
-                     },
-                     {
-                        "text": "BIRD Type",
-                        "context": "brief"
-                     }
-                  ],
-                  "rcsb_search_group": [
-                     {
-                        "group_name": "Biologically Interesting Molecules (BIRD)",
-                        "priority_order": 15
-                     }
-                  ]
-               },
-               "uniqueItems": false
+               "type": "string",
+               "enum": [
+                  "Amino acid",
+                  "Aminoglycoside",
+                  "Ansamycin",
+                  "Anthracycline",
+                  "Anthraquinone",
+                  "Chalkophore",
+                  "Chalkophore, Polypeptide",
+                  "Chromophore",
+                  "Cyclic depsipeptide",
+                  "Cyclic lipopeptide",
+                  "Cyclic peptide",
+                  "Glycopeptide",
+                  "Heterocyclic",
+                  "Imino sugar",
+                  "Keto acid",
+                  "Lipoglycopeptide",
+                  "Lipopeptide",
+                  "Macrolide",
+                  "Non-polymer",
+                  "Nucleoside",
+                  "Oligopeptide",
+                  "Oligosaccharide",
+                  "Peptaibol",
+                  "Peptide-like",
+                  "Polycyclic",
+                  "Polypeptide",
+                  "Polysaccharide",
+                  "Quinolone",
+                  "Siderophore",
+                  "Thiolactone",
+                  "Thiopeptide",
+                  "Unknown"
+               ],
+               "examples": [
+                  "Peptide-like",
+                  "Macrolide"
+               ],
+               "description": "Defines the structural classification of the entity.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
+               "rcsb_description": [
+                  {
+                     "text": "Defines the structural classification of the entity.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "BIRD Type",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Biologically Interesting Molecules (BIRD)",
+                     "priority_order": 15
+                  }
+               ]
             },
             "type_evidence_code": {
                "type": "string",
@@ -4034,7 +4033,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.7.2",
-   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.7.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.7.2"
+   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.7.3",
+   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.7.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.7.3"
 }
