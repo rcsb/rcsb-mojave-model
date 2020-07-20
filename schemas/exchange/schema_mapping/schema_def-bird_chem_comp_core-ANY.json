@@ -2,7 +2,7 @@
    "NAME": "bird_chem_comp_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "bird_chem_comp_core",
-   "DATABASE_VERSION": "6.4.5",
+   "DATABASE_VERSION": "6.4.6",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -3740,18 +3740,26 @@
                "PRIMARY_KEY": false,
                "APP_TYPE": "char",
                "WIDTH": 10,
-               "ITERABLE_DELIMITER": ",",
+               "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "Antagonist",
                   "Anthelmintic",
                   "Antibiotic",
+                  "Antibiotic, Anthelmintic",
+                  "Antibiotic, Antimicrobial",
+                  "Antibiotic, Antineoplastic",
                   "Anticancer",
                   "Anticoagulant",
+                  "Anticoagulant, Antithrombotic",
                   "Antifungal",
+                  "Antigen",
                   "Antiinflammatory",
                   "Antimicrobial",
+                  "Antimicrobial, Antiparasitic, Antibiotic",
+                  "Antimicrobial, Antiretroviral",
+                  "Antimicrobial, Antitumor",
                   "Antineoplastic",
                   "Antiparasitic",
                   "Antiretroviral",
@@ -3760,23 +3768,28 @@
                   "Antiviral",
                   "CASPASE inhibitor",
                   "Chaperone binding",
+                  "Drug delivery",
                   "Enzyme inhibitor",
+                  "Glycan component",
                   "Growth factor",
                   "Immunosuppressant",
+                  "Inducer",
                   "Inhibitor",
                   "Lantibiotic",
                   "Metabolism",
                   "Metal transport",
+                  "Nutrient",
                   "Oxidation-reduction",
-                  "RNA synthesis Inhibitor",
+                  "Protein binding",
                   "Receptor",
-                  "Synthetic opioid",
+                  "Substrate analog",
                   "Thrombin inhibitor",
+                  "Thrombin inhibitor, Trypsin inhibitor",
                   "Toxin",
-                  "Transition state mimetic",
                   "Transport activator",
                   "Trypsin inhibitor",
-                  "Unknown"
+                  "Unknown",
+                  "Water retention"
                ],
                "CONTENT_CLASSES": [
                   "CONSOLIDATED_BIRD_CONTENT"
@@ -3975,7 +3988,7 @@
                "PRIMARY_KEY": false,
                "APP_TYPE": "char",
                "WIDTH": 10,
-               "ITERABLE_DELIMITER": ",",
+               "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
@@ -4010,7 +4023,6 @@
                   "Siderophore",
                   "Thiolactone",
                   "Thiopeptide",
-                  "Tricyclic pentaglycosidic antineoplastic antibiotic",
                   "Unknown"
                ],
                "CONTENT_CLASSES": [
@@ -7099,7 +7111,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "bird_chem_comp_core",
-            "VERSION": "6.7.2"
+            "VERSION": "6.7.3"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
