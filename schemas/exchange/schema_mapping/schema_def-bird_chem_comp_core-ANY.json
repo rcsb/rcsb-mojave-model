@@ -2,7 +2,7 @@
    "NAME": "bird_chem_comp_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "bird_chem_comp_core",
-   "DATABASE_VERSION": "6.4.7",
+   "DATABASE_VERSION": "6.5.0",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -6526,7 +6526,10 @@
                "ENUMERATION": [
                   "assigned by DrugBank resource",
                   "assigned by PDB",
+                  "assigned by PubChem resource",
+                  "matching ChEMBL ID in Pharos",
                   "matching InChIKey in DrugBank",
+                  "matching InChIKey in PubChem",
                   "matching InChIKey-prefix in DrugBank",
                   "matching by RESID resource"
                ],
@@ -6567,6 +6570,7 @@
                   "ChEBI",
                   "ChEMBL",
                   "DrugBank",
+                  "Pharos",
                   "PubChem",
                   "RESID"
                ],
@@ -7113,7 +7117,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "bird_chem_comp_core",
-            "VERSION": "6.7.4"
+            "VERSION": "6.8.0"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
