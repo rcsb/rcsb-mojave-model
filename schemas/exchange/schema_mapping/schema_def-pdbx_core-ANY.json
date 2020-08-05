@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "8.5.4",
+   "DATABASE_VERSION": "8.6.0",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -37427,7 +37427,9 @@
          "SCHEMA_NAME": "pdbx_struct_assembly_auth_evidence",
          "SCHEMA_TYPE": "transactional",
          "SCHEMA_UNIT_CARDINALITY": false,
-         "SCHEMA_CONTENT_CLASSES": [],
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
          "SCHEMA_MANDATORY": false,
          "SCHEMA_SUB_CATEGORIES": [],
          "ATTRIBUTES": {
@@ -37474,7 +37476,9 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [],
-               "CONTENT_CLASSES": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
                "SUB_CATEGORIES": []
             },
             "ID": {
@@ -37488,7 +37492,9 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [],
-               "CONTENT_CLASSES": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
                "SUB_CATEGORIES": []
             },
             "DETAILS": {
@@ -37502,7 +37508,9 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [],
-               "CONTENT_CLASSES": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
                "SUB_CATEGORIES": []
             },
             "EXPERIMENTAL_SUPPORT": {
@@ -37533,7 +37541,9 @@
                   "scanning transmission electron microscopy",
                   "surface plasmon resonance"
                ],
-               "CONTENT_CLASSES": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
                "SUB_CATEGORIES": []
             }
          },
@@ -100671,7 +100681,7 @@
          },
          {
             "NAME": "pdbx_core_assembly",
-            "VERSION": "8.1.2"
+            "VERSION": "8.2.0"
          },
          {
             "NAME": "pdbx_core_polymer_entity",
@@ -100683,7 +100693,7 @@
          },
          {
             "NAME": "pdbx_core_branched_entity",
-            "VERSION": "8.2.0"
+            "VERSION": "8.3.0"
          },
          {
             "NAME": "pdbx_core_polymer_entity_instance",

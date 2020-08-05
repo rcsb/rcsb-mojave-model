@@ -142,10 +142,24 @@
                "details": {
                   "type": "string",
                   "description": "Provides any additional information regarding the evidence of this assembly",
+                  "rcsb_search_context": [
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 1,
                   "rcsb_description": [
                      {
                         "text": "Provides any additional information regarding the evidence of this assembly",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Experimental Support Details",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Assembly Features",
+                        "priority_order": 65
                      }
                   ]
                },
@@ -170,10 +184,24 @@
                      "surface plasmon resonance"
                   ],
                   "description": "Provides the experimental method to determine the state of this assembly",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "Provides the experimental method to determine the state of this assembly",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Experimental Support",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Assembly Features",
+                        "priority_order": 60
                      }
                   ]
                },
@@ -1249,7 +1277,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_assembly version: 8.1.2",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_assembly version 8.1.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.1.2"
+   "title": "schema: pdbx_core collection: pdbx_core_assembly version: 8.2.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_assembly version 8.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.2.0"
 }

@@ -3026,6 +3026,10 @@
                   "type": "string",
                   "enum": [
                      "ATC",
+                     "Carbohydrate Anomer",
+                     "Carbohydrate Isomer",
+                     "Carbohydrate Primary Carbonyl Group",
+                     "Carbohydrate Ring",
                      "Generating Enzyme",
                      "Modification Type",
                      "PSI-MOD"
@@ -3040,6 +3044,26 @@
                         "value": "ATC",
                         "detail": "Anatomical Therapeutic Chemical Classification System (ATC) from the World Health Organization (WHO)",
                         "name": "ATC (WHO)"
+                     },
+                     {
+                        "value": "Carbohydrate Anomer",
+                        "detail": "Carbohydrate Anomeric Form",
+                        "name": "Carbohydrate Anomer"
+                     },
+                     {
+                        "value": "Carbohydrate Isomer",
+                        "detail": "Carbohydrate Isomeric Form",
+                        "name": "Carbohydrate Isomer"
+                     },
+                     {
+                        "value": "Carbohydrate Primary Carbonyl Group",
+                        "detail": "Carbohydrate Primary Carbonyl Group",
+                        "name": "Carbohydrate Primary Carbonyl Group"
+                     },
+                     {
+                        "value": "Carbohydrate Ring",
+                        "detail": "Carbohydrate Ring Type",
+                        "name": "Carbohydrate Ring"
                      },
                      {
                         "value": "Generating Enzyme",
@@ -3874,6 +3898,7 @@
                      "OpenEye OEToolkits",
                      "OpenEye/Lexichem",
                      "PDB Reference Data",
+                     "PDB Reference Data (Preferred)",
                      "PDB-CARE",
                      "PubChem",
                      "RESID"
@@ -3890,6 +3915,73 @@
                      },
                      {
                         "text": "Synonym Provenance Source",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "Common Name",
+                     "Condensed IUPAC Carbohydrate Symbol",
+                     "IUPAC Carbohydrate Symbol",
+                     "Preferred Common Name",
+                     "Preferred Name",
+                     "Preferred Synonym",
+                     "SNFG Carbohydrate Symbol",
+                     "Synonym",
+                     "Systematic Name"
+                  ],
+                  "description": "This data item contains the synonym type.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "Common Name",
+                        "detail": "Common chemical name"
+                     },
+                     {
+                        "value": "Condensed IUPAC Carbohydrate Symbol",
+                        "detail": "Condensed IUPAC carbohydrate symbol"
+                     },
+                     {
+                        "value": "IUPAC Carbohydrate Symbol",
+                        "detail": "IUPAC carbohydrate symbol"
+                     },
+                     {
+                        "value": "Preferred Common Name",
+                        "detail": "Preferred common chemical name"
+                     },
+                     {
+                        "value": "Preferred Name",
+                        "detail": "Preferred chemical name"
+                     },
+                     {
+                        "value": "Preferred Synonym",
+                        "detail": "Preferred synonym chemical name"
+                     },
+                     {
+                        "value": "SNFG Carbohydrate Symbol",
+                        "detail": "3D-SNFG carbohydrate symbol"
+                     },
+                     {
+                        "value": "Synonym",
+                        "detail": "Synonym chemical name"
+                     },
+                     {
+                        "value": "Systematic Name",
+                        "detail": "Systematic chemical name"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "This data item contains the synonym type.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Synonym Type",
                         "context": "brief"
                      }
                   ]
@@ -4086,7 +4178,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.8.0",
-   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.8.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.8.0"
+   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.9.0",
+   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.9.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.9.0"
 }
