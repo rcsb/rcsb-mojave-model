@@ -2,7 +2,7 @@
    "NAME": "bird_chem_comp_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "bird_chem_comp_core",
-   "DATABASE_VERSION": "6.5.0",
+   "DATABASE_VERSION": "6.6.0",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -5822,6 +5822,10 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "ATC",
+                  "Carbohydrate Anomer",
+                  "Carbohydrate Isomer",
+                  "Carbohydrate Primary Carbonyl Group",
+                  "Carbohydrate Ring",
                   "Generating Enzyme",
                   "Modification Type",
                   "PSI-MOD"
@@ -6623,7 +6627,8 @@
             "COMP_ID": "comp_id",
             "ORDINAL": "ordinal",
             "NAME": "name",
-            "PROVENANCE_SOURCE": "provenance_source"
+            "PROVENANCE_SOURCE": "provenance_source",
+            "TYPE": "type"
          },
          "ATTRIBUTE_MAP": {
             "COMP_ID": {
@@ -6647,6 +6652,12 @@
             "PROVENANCE_SOURCE": {
                "CATEGORY": "rcsb_chem_comp_synonyms",
                "ATTRIBUTE": "provenance_source",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TYPE": {
+               "CATEGORY": "rcsb_chem_comp_synonyms",
+               "ATTRIBUTE": "type",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             }
@@ -6721,9 +6732,36 @@
                   "OpenEye OEToolkits",
                   "OpenEye/Lexichem",
                   "PDB Reference Data",
+                  "PDB Reference Data (Preferred)",
                   "PDB-CARE",
                   "PubChem",
                   "RESID"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 5,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "Common Name",
+                  "Condensed IUPAC Carbohydrate Symbol",
+                  "IUPAC Carbohydrate Symbol",
+                  "Preferred Common Name",
+                  "Preferred Name",
+                  "Preferred Synonym",
+                  "SNFG Carbohydrate Symbol",
+                  "Synonym",
+                  "Systematic Name"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -7117,7 +7155,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "bird_chem_comp_core",
-            "VERSION": "6.8.0"
+            "VERSION": "6.9.0"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
