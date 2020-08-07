@@ -6656,10 +6656,24 @@
                      "VAPOR DIFFUSION, HANGING DROP"
                   ],
                   "description": "The method used to grow the crystals.",
+                  "rcsb_search_context": [
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 1,
                   "rcsb_description": [
                      {
                         "text": "The method used to grow the crystals.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Crystallization Method",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Crystal Properties",
+                        "priority_order": 25
                      }
                   ]
                },
@@ -15729,6 +15743,16 @@
                      {
                         "text": "Description of special aspects of the refinement process",
                         "context": "deposition"
+                     },
+                     {
+                        "text": "Structure Refinement Details",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Method Details",
+                        "priority_order": 35
                      }
                   ]
                },
@@ -19386,7 +19410,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.5.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.5.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.5.1"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.5.3",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.5.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.5.3"
 }
