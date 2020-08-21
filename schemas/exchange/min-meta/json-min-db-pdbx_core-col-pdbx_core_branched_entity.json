@@ -16,14 +16,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Branched Entity Component Count",
+                     "text": "Oligosaccharide Component Count",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
                      "group_name": "Oligosaccharide/Branched Molecular Features",
-                     "priority_order": 15
+                     "priority_order": 30
                   }
                ]
             },
@@ -43,7 +43,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Branched Oligosaccharide Type",
+                     "text": "Branched Entity Type",
                      "context": "brief"
                   }
                ],
@@ -76,14 +76,14 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Branched Entity Descriptor",
+                        "text": "Oligosaccharide Linear Descriptor",
                         "context": "brief"
                      }
                   ],
                   "rcsb_search_group": [
                      {
                         "group_name": "Oligosaccharide/Branched Molecular Features",
-                        "priority_order": 20
+                        "priority_order": 25
                      }
                   ]
                },
@@ -149,7 +149,7 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Branched Entity Descriptor Type",
+                        "text": "Oligosaccharide Descriptor Type",
                         "context": "brief"
                      }
                   ]
@@ -197,14 +197,14 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "Formula Weight",
+                     "text": "Oligosaccharide Formula Weight",
                      "context": "brief"
                   }
                ],
                "rcsb_search_group": [
                   {
                      "group_name": "Oligosaccharide/Branched Molecular Features",
-                     "priority_order": 10
+                     "priority_order": 20
                   }
                ]
             },
@@ -212,9 +212,10 @@
                "type": "string",
                "description": "A description of the branched entity.",
                "rcsb_search_context": [
+                  "exact-match",
                   "full-text"
                ],
-               "rcsb_full_text_priority": 1,
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "A description of the branched entity.",
@@ -472,6 +473,16 @@
                      {
                         "text": "Unique list of monomer chemical component identifiers in the entity in this container.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Oligosaccharide Component List",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Oligosaccharide/Branched Molecular Features",
+                        "priority_order": 35
                      }
                   ]
                },
@@ -928,7 +939,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_branched_entity version: 8.3.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity version 8.3.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.3.0"
+   "title": "schema: pdbx_core collection: pdbx_core_branched_entity version: 8.4.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity version 8.4.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.4.0"
 }
