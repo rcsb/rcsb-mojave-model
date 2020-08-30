@@ -15019,14 +15019,14 @@
                "type": "array",
                "items": {
                   "type": "number",
-                  "description": "Combined estimates of experimental resolution.",
+                  "description": "Combined estimates of experimental resolution contributing to the refined structural model.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "Combined estimates of experimental resolution.",
+                        "text": "Combined estimates of experimental resolution contributing to the refined structural model.",
                         "context": "dictionary"
                      },
                      {
@@ -15135,6 +15135,65 @@
                      "context": "brief"
                   }
                ]
+            },
+            "diffrn_resolution_high": {
+               "type": "object",
+               "properties": {
+                  "provenance_source": {
+                     "type": "string",
+                     "enum": [
+                        "Depositor assigned",
+                        "From refinement resolution cutoff",
+                        "From the high resolution shell"
+                     ],
+                     "description": "The provenence source for the high resolution limit of data collection.",
+                     "rcsb_enum_annotated": [
+                        {
+                           "value": "Depositor assigned",
+                           "detail": "Depositor assigned resolution limit"
+                        },
+                        {
+                           "value": "From refinement resolution cutoff",
+                           "detail": "No data collection resolution limit specified, inferred from refinement cutoff"
+                        },
+                        {
+                           "value": "From the high resolution shell",
+                           "detail": "Depositor assigned resolution limit for high resolution shell"
+                        }
+                     ],
+                     "rcsb_description": [
+                        {
+                           "text": "The provenence source for the high resolution limit of data collection.",
+                           "context": "dictionary"
+                        }
+                     ]
+                  },
+                  "value": {
+                     "type": "number",
+                     "description": "The high resolution limit of data collection.",
+                     "rcsb_search_context": [
+                        "default-match"
+                     ],
+                     "rcsb_units": "angstroms",
+                     "rcsb_description": [
+                        {
+                           "text": "The high resolution limit of data collection.",
+                           "context": "dictionary"
+                        },
+                        {
+                           "text": "Data Collection Resolution",
+                           "context": "brief"
+                        }
+                     ],
+                     "rcsb_search_group": [
+                        {
+                           "group_name": "X-ray Data Collection Details",
+                           "priority_order": 5
+                        }
+                     ]
+                  }
+               },
+               "additionalProperties": false
             }
          },
          "additionalProperties": false
@@ -17137,12 +17196,6 @@
                      {
                         "text": "Data Collection Resolution",
                         "context": "brief"
-                     }
-                  ],
-                  "rcsb_search_group": [
-                     {
-                        "group_name": "X-ray Data Collection Details",
-                        "priority_order": 5
                      }
                   ]
                },
@@ -19410,7 +19463,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.5.4",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.5.4. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.5.4"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.6.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.6.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.6.0"
 }
