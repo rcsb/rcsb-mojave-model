@@ -344,8 +344,6 @@
                   "D-peptide NH3 amino terminus",
                   "D-peptide linking",
                   "D-saccharide",
-                  "D-saccharide 1,4 and 1,4 linking",
-                  "D-saccharide 1,4 and 1,6 linking",
                   "D-saccharide, alpha linking",
                   "D-saccharide, beta linking",
                   "DNA OH 3 prime terminus",
@@ -359,8 +357,6 @@
                   "L-peptide NH3 amino terminus",
                   "L-peptide linking",
                   "L-saccharide",
-                  "L-saccharide 1,4 and 1,4 linking",
-                  "L-saccharide 1,4 and 1,6 linking",
                   "L-saccharide, alpha linking",
                   "L-saccharide, beta linking",
                   "RNA OH 3 prime terminus",
@@ -397,12 +393,6 @@
                   },
                   {
                      "value": "D-saccharide"
-                  },
-                  {
-                     "value": "D-saccharide 1,4 and 1,4 linking"
-                  },
-                  {
-                     "value": "D-saccharide 1,4 and 1,6 linking"
                   },
                   {
                      "value": "D-saccharide, alpha linking"
@@ -444,12 +434,6 @@
                   },
                   {
                      "value": "L-saccharide"
-                  },
-                  {
-                     "value": "L-saccharide 1,4 and 1,4 linking"
-                  },
-                  {
-                     "value": "L-saccharide 1,4 and 1,6 linking"
                   },
                   {
                      "value": "L-saccharide, alpha linking"
@@ -784,10 +768,13 @@
                },
                "type": {
                   "type": "string",
+                  "enum": [
+                     "CARBOHYDRATE ANOMER",
+                     "CARBOHYDRATE ISOMER",
+                     "CARBOHYDRATE PRIMARY CARBONYL GROUP",
+                     "CARBOHYDRATE RING"
+                  ],
                   "examples": [
-                     "FUNCTION",
-                     "ENZYME INHIBITED",
-                     "STRUCTURE IMAGE URL",
                      "CARBOHYDRATE ANOMER",
                      "CARBOHYDRATE ISOMER",
                      "CARBOHYDRATE RING"
@@ -4196,7 +4183,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.10.0",
-   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.10.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 6.10.0"
+   "title": "schema: bird_chem_comp_core collection: bird_chem_comp_core version: 6.11.0",
+   "description": "RCSB Exchange Database JSON schema derived from the bird_chem_comp_core content type schema. This schema supports collection bird_chem_comp_core version 6.11.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird_chem_comp_core.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 6.11.0"
 }

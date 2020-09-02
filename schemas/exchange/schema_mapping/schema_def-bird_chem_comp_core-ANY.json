@@ -2,7 +2,7 @@
    "NAME": "bird_chem_comp_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "bird_chem_comp_core",
-   "DATABASE_VERSION": "6.6.1",
+   "DATABASE_VERSION": "6.7.0",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -435,8 +435,6 @@
                   "D-peptide NH3 amino terminus",
                   "D-peptide linking",
                   "D-saccharide",
-                  "D-saccharide 1,4 and 1,4 linking",
-                  "D-saccharide 1,4 and 1,6 linking",
                   "D-saccharide, alpha linking",
                   "D-saccharide, beta linking",
                   "DNA OH 3 prime terminus",
@@ -450,8 +448,6 @@
                   "L-peptide NH3 amino terminus",
                   "L-peptide linking",
                   "L-saccharide",
-                  "L-saccharide 1,4 and 1,4 linking",
-                  "L-saccharide 1,4 and 1,6 linking",
                   "L-saccharide, alpha linking",
                   "L-saccharide, beta linking",
                   "RNA OH 3 prime terminus",
@@ -1635,7 +1631,12 @@
                "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
+               "ENUMERATION": [
+                  "CARBOHYDRATE ANOMER",
+                  "CARBOHYDRATE ISOMER",
+                  "CARBOHYDRATE PRIMARY CARBONYL GROUP",
+                  "CARBOHYDRATE RING"
+               ],
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             },
@@ -7155,7 +7156,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "bird_chem_comp_core",
-            "VERSION": "6.10.0"
+            "VERSION": "6.11.0"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
