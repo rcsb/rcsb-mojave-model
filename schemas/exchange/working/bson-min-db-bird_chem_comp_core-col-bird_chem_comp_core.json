@@ -80,8 +80,6 @@
                   "D-peptide NH3 amino terminus",
                   "D-peptide linking",
                   "D-saccharide",
-                  "D-saccharide 1,4 and 1,4 linking",
-                  "D-saccharide 1,4 and 1,6 linking",
                   "D-saccharide, alpha linking",
                   "D-saccharide, beta linking",
                   "DNA OH 3 prime terminus",
@@ -95,8 +93,6 @@
                   "L-peptide NH3 amino terminus",
                   "L-peptide linking",
                   "L-saccharide",
-                  "L-saccharide 1,4 and 1,4 linking",
-                  "L-saccharide 1,4 and 1,6 linking",
                   "L-saccharide, alpha linking",
                   "L-saccharide, beta linking",
                   "RNA OH 3 prime terminus",
@@ -231,7 +227,13 @@
                   "bsonType": "string"
                },
                "type": {
-                  "bsonType": "string"
+                  "bsonType": "string",
+                  "enum": [
+                     "CARBOHYDRATE ANOMER",
+                     "CARBOHYDRATE ISOMER",
+                     "CARBOHYDRATE PRIMARY CARBONYL GROUP",
+                     "CARBOHYDRATE RING"
+                  ]
                },
                "value": {
                   "bsonType": "string"
