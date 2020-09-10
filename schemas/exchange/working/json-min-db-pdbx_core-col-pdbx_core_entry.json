@@ -6715,10 +6715,24 @@
                      "PEG 4000, potassium phosphate, magnesium chloride, cacodylate"
                   ],
                   "description": "Text description of crystal growth procedure.",
+                  "rcsb_search_context": [
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 1,
                   "rcsb_description": [
                      {
                         "text": "Text description of crystal growth procedure.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Crystallization Details",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Crystal Properties",
+                        "priority_order": 30
                      }
                   ]
                },
@@ -7712,6 +7726,10 @@
                         "detail": "European Union"
                      },
                      {
+                        "value": "Agence Nationale de la Recherche (ANR)",
+                        "detail": "France"
+                     },
+                     {
                         "value": "Agencia Nacional de Investigacion e Innovacion (ANII)",
                         "detail": "Uruguay"
                      },
@@ -7737,6 +7755,10 @@
                      },
                      {
                         "value": "American Cancer Society",
+                        "detail": "United States"
+                     },
+                     {
+                        "value": "American Epilepsy Society",
                         "detail": "United States"
                      },
                      {
@@ -8716,6 +8738,10 @@
                         "detail": "Thailand"
                      },
                      {
+                        "value": "TESS Research Foundation",
+                        "detail": "United States"
+                     },
+                     {
                         "value": "Technology Agency of the Czech Republic",
                         "detail": "Czech Republic"
                      },
@@ -8726,6 +8752,10 @@
                      {
                         "value": "The Francis Crick Institute",
                         "detail": "United Kingdom"
+                     },
+                     {
+                        "value": "The G. Harold and Leila Y. Mathers Foundation",
+                        "detail": "United States"
                      },
                      {
                         "value": "The Mark Foundation",
@@ -8772,6 +8802,14 @@
                         "detail": "Italy"
                      },
                      {
+                        "value": "University of Bologna",
+                        "detail": "Italy"
+                     },
+                     {
+                        "value": "University of Vienna Research Platform Comammox",
+                        "detail": "Austria"
+                     },
+                     {
                         "value": "University of Warwick",
                         "detail": "United Kingdom"
                      },
@@ -8782,6 +8820,10 @@
                      {
                         "value": "Vidyasirimedhi Institute of Science and Technology (VISTEC)",
                         "detail": "Thailand"
+                     },
+                     {
+                        "value": "Vienna Science and Technology Fund (WWTF)",
+                        "detail": "Austria"
                      },
                      {
                         "value": "Vinnova",
@@ -19487,7 +19529,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.7.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.7.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.7.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.8.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.8.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.8.0"
 }
