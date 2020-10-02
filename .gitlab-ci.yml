@@ -1,38 +1,6 @@
-variables:
-  VERSION: "${CI_BUILD_REF_NAME}"
-  FILENAME: "json-schema-dw-core"
-  FILE_EXT: "tar.gz"
-
 stages:
   - build
   - test
-
-# Build branches and tags
-build-locker-job:
-  stage: build
-  script:
-    # Handy for debugging
-    - whoami
-    - hostname
-    - pwd
-    - mvn -v
-
-    # Build via maven
-    - mvn --batch-mode --errors -U clean install
-
-    - echo "JSON schemas version "${VERSION}
-    - FILENAME_VERSION=$FILENAME"_"$VERSION"."$FILE_EXT
-    - echo "Latest versioned file name "${FILENAME_VERSION}
-
-    # Produce schema artifacts
-    - cd target/generated-sources/schema
-    - echo "Will create "${FILENAME_VERSION}
-    - tar -cvzf ${FILENAME_VERSION} core/
-
-    # Send artifacts to build locker
-    - sshpass -p 3ffd8b48e7ed9f sftp transporter@bl-receive.rcsb.org:5-schema <<< $"put ${FILENAME_VERSION}"
-  tags:
-    - Java8-Nexus3
 
 # Deploy BRANCHES only.
 # Problem: gitlab will not find the same commit to be duplicate if it comes in a tag and in
@@ -59,4 +27,3 @@ deploy-job:
     - branches
   tags:
     - Java8-Nexus3
-
