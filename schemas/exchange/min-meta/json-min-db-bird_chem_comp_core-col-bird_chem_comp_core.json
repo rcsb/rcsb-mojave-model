@@ -3172,6 +3172,22 @@
                      "search_paths": [
                         "rcsb_chem_comp_annotation.annotation_lineage.id",
                         "rcsb_chem_comp_annotation.annotation_lineage.name"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "G02CB02",
+                              "C03CC01"
+                           ],
+                           "path": "rcsb_chem_comp_annotation.annotation_lineage.id"
+                        },
+                        {
+                           "examples": [
+                              "lisuride",
+                              "etacrynic acid"
+                           ],
+                           "path": "rcsb_chem_comp_annotation.annotation_lineage.name"
+                        }
                      ]
                   },
                   {
@@ -3179,42 +3195,112 @@
                      "search_paths": [
                         "rcsb_chem_comp_annotation.annotation_lineage.id",
                         "rcsb_chem_comp_annotation.annotation_lineage.name"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "MOD:00599",
+                              "MOD:01680"
+                           ],
+                           "path": "rcsb_chem_comp_annotation.annotation_lineage.id"
+                        },
+                        {
+                           "examples": [
+                              "monomethylated residue",
+                              "alpha-amino monomethylated residue"
+                           ],
+                           "path": "rcsb_chem_comp_annotation.annotation_lineage.name"
+                        }
                      ]
                   },
                   {
                      "context_value": "Generating Enzyme",
                      "search_paths": [
                         "rcsb_chem_comp_annotation.name"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "protein N-terminal methyltransferase (EC 2.1.1.-)",
+                              "autocatalytic"
+                           ],
+                           "path": "rcsb_chem_comp_annotation.name"
+                        }
                      ]
                   },
                   {
                      "context_value": "Modification Type",
                      "search_paths": [
                         "rcsb_chem_comp_annotation.name"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "Thyroxine",
+                              "N4-methylasparagine"
+                           ],
+                           "path": "rcsb_chem_comp_annotation.name"
+                        }
                      ]
                   },
                   {
                      "context_value": "Carbohydrate Anomer",
                      "search_paths": [
                         "rcsb_chem_comp_annotation.name"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "alpha",
+                              "beta"
+                           ],
+                           "path": "rcsb_chem_comp_annotation.name"
+                        }
                      ]
                   },
                   {
                      "context_value": "Carbohydrate Isomer",
                      "search_paths": [
                         "rcsb_chem_comp_annotation.name"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "D",
+                              "L"
+                           ],
+                           "path": "rcsb_chem_comp_annotation.name"
+                        }
                      ]
                   },
                   {
                      "context_value": "Carbohydrate Ring",
                      "search_paths": [
                         "rcsb_chem_comp_annotation.name"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "pyranose",
+                              "furanose"
+                           ],
+                           "path": "rcsb_chem_comp_annotation.name"
+                        }
                      ]
                   },
                   {
                      "context_value": "Carbohydrate Primary Carbonyl Group",
                      "search_paths": [
                         "rcsb_chem_comp_annotation.name"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "aldose",
+                              "ketose"
+                           ],
+                           "path": "rcsb_chem_comp_annotation.name"
+                        }
                      ]
                   }
                ]
@@ -3794,48 +3880,120 @@
                      "context_value": "DrugBank",
                      "search_paths": [
                         "rcsb_chem_comp_related.resource_accession_code"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "DB06830",
+                              "DB07255"
+                           ],
+                           "path": "rcsb_chem_comp_related.resource_accession_code"
+                        }
                      ]
                   },
                   {
                      "context_value": "CCDC/CSD",
                      "search_paths": [
                         "rcsb_chem_comp_related.resource_accession_code"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "QAXDEZ",
+                              "XEGJEA"
+                           ],
+                           "path": "rcsb_chem_comp_related.resource_accession_code"
+                        }
                      ]
                   },
                   {
                      "context_value": "RESID",
                      "search_paths": [
                         "rcsb_chem_comp_related.resource_accession_code"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "AA0078",
+                              "AA0034"
+                           ],
+                           "path": "rcsb_chem_comp_related.resource_accession_code"
+                        }
                      ]
                   },
                   {
                      "context_value": "PubChem",
                      "search_paths": [
                         "rcsb_chem_comp_related.resource_accession_code"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              3082729,
+                              5289380
+                           ],
+                           "path": "rcsb_chem_comp_related.resource_accession_code"
+                        }
                      ]
                   },
                   {
                      "context_value": "ChEBI",
                      "search_paths": [
                         "rcsb_chem_comp_related.resource_accession_code"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "CHEBI:151557",
+                              "CHEBI:6198"
+                           ],
+                           "path": "rcsb_chem_comp_related.resource_accession_code"
+                        }
                      ]
                   },
                   {
                      "context_value": "ChEMBL",
                      "search_paths": [
                         "rcsb_chem_comp_related.resource_accession_code"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "CHEMBL1165239",
+                              "CHEMBL3330255"
+                           ],
+                           "path": "rcsb_chem_comp_related.resource_accession_code"
+                        }
                      ]
                   },
                   {
                      "context_value": "CAS",
                      "search_paths": [
                         "rcsb_chem_comp_related.resource_accession_code"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "2133-34-8",
+                              "30565-25-4"
+                           ],
+                           "path": "rcsb_chem_comp_related.resource_accession_code"
+                        }
                      ]
                   },
                   {
                      "context_value": "Pharos",
                      "search_paths": [
                         "rcsb_chem_comp_related.resource_accession_code"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "CHEMBL1165239",
+                              "CHEMBL3330255"
+                           ],
+                           "path": "rcsb_chem_comp_related.resource_accession_code"
+                        }
                      ]
                   }
                ]

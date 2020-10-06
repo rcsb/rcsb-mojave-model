@@ -2781,18 +2781,68 @@
                      "search_paths": [
                         "rcsb_polymer_entity_annotation.annotation_lineage.id",
                         "rcsb_polymer_entity_annotation.annotation_lineage.name"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "GO:0005575",
+                              "GO:0005622"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.annotation_lineage.id"
+                        },
+                        {
+                           "examples": [
+                              "cellular_component",
+                              "intracellular"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.annotation_lineage.name"
+                        }
                      ]
                   },
                   {
                      "context_value": "InterPro",
                      "search_paths": [
-                        "rcsb_polymer_entity_annotation.annotation_id"
+                        "rcsb_polymer_entity_annotation.annotation_id",
+                        "rcsb_polymer_entity_annotation.name"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "IPR022352",
+                              "IPR004825"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.annotation_id"
+                        },
+                        {
+                           "examples": [
+                              "Insulin family",
+                              "Insulin"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.name"
+                        }
                      ]
                   },
                   {
                      "context_value": "Pfam",
                      "search_paths": [
-                        "rcsb_polymer_entity_annotation.annotation_id"
+                        "rcsb_polymer_entity_annotation.annotation_id",
+                        "rcsb_polymer_entity_annotation.name"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "PF00049",
+                              "PF00441"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.annotation_id"
+                        },
+                        {
+                           "examples": [
+                              "Insulin/IGF/Relaxin family (Insulin)",
+                              "Acyl-CoA dehydrogenase, C-terminal domain (Acyl-CoA_dh_1)"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.name"
+                        }
                      ]
                   }
                ]
@@ -3050,18 +3100,45 @@
                            "context_value": "UniProt",
                            "search_paths": [
                               "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession"
+                           ],
+                           "attributes": [
+                              {
+                                 "examples": [
+                                    "P01308",
+                                    "P0CX43"
+                                 ],
+                                 "path": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession"
+                              }
                            ]
                         },
                         {
                            "context_value": "GenBank",
                            "search_paths": [
                               "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession"
+                           ],
+                           "attributes": [
+                              {
+                                 "examples": [
+                                    12057205,
+                                    1329886537
+                                 ],
+                                 "path": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession"
+                              }
                            ]
                         },
                         {
                            "context_value": "NORINE",
                            "search_paths": [
                               "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession"
+                           ],
+                           "attributes": [
+                              {
+                                 "examples": [
+                                    "NOR00033",
+                                    "NOR00972"
+                                 ],
+                                 "path": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession"
+                              }
                            ]
                         }
                      ]
@@ -3412,12 +3489,30 @@
                      "context_value": "artifact",
                      "search_paths": [
                         "rcsb_polymer_entity_feature_summary.count"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              1,
+                              10
+                           ],
+                           "path": "rcsb_polymer_entity_feature_summary.count"
+                        }
                      ]
                   },
                   {
                      "context_value": "modified_monomer",
                      "search_paths": [
                         "rcsb_polymer_entity_feature_summary.count"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              1,
+                              5
+                           ],
+                           "path": "rcsb_polymer_entity_feature_summary.count"
+                        }
                      ]
                   }
                ]
@@ -3538,7 +3633,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.4.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.4.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.4.1"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.4.2",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.4.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.4.2"
 }
