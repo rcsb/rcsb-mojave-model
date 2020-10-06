@@ -169,24 +169,45 @@
                      "context_value": "LINUCS",
                      "search_paths": [
                         "pdbx_entity_branch_descriptor.descriptor"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "[][a-D-Manp]{[(2+1)][a-D-Manp]{}}",
+                              "[]{[(4+1)][b-D-GlcpNAc]{[(4+1)][b-D-GlcpNAc]{}}}"
+                           ],
+                           "path": "pdbx_entity_branch_descriptor.descriptor"
+                        }
                      ]
                   },
                   {
                      "context_value": "Glycam Condensed Sequence",
                      "search_paths": [
                         "pdbx_entity_branch_descriptor.descriptor"
-                     ]
-                  },
-                  {
-                     "context_value": "Glycam Condensed Core Sequence",
-                     "search_paths": [
-                        "pdbx_entity_branch_descriptor.descriptor"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "DManpa1-2DManpa1-ROH",
+                              "DManpb1-4DGlcpNAcb1-4DGlcpNAcb1-"
+                           ],
+                           "path": "pdbx_entity_branch_descriptor.descriptor"
+                        }
                      ]
                   },
                   {
                      "context_value": "WURCS",
                      "search_paths": [
                         "pdbx_entity_branch_descriptor.descriptor"
+                     ],
+                     "attributes": [
+                        {
+                           "examples": [
+                              "WURCS=2.0/1,2,1/[a1122h-1a_1-5]/1-1/a2-b1",
+                              "WURCS=2.0/1,2,1/[a2122h-1b_1-5_2*NCC/3=O]/1-1/a4-b1"
+                           ],
+                           "path": "pdbx_entity_branch_descriptor.descriptor"
+                        }
                      ]
                   }
                ]
@@ -975,7 +996,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_branched_entity version: 8.4.3",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity version 8.4.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.4.3"
+   "title": "schema: pdbx_core collection: pdbx_core_branched_entity version: 8.4.4",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity version 8.4.4. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.4.4"
 }
