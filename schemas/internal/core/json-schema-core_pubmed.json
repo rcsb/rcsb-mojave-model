@@ -19,9 +19,12 @@
       "properties": {
         "pubmed_id": {
           "type" : "integer",
-          "description": "Unique integer value assigned to each PubMed record.",
+          "description": "UID assigned to each PubMed record.",
           "rcsb_search_context": [
             "default-match"
+          ],
+          "examples": [
+            15937111
           ],
           "rcsb_description": [
             {
@@ -82,7 +85,7 @@
       "items": {
         "type": "string"
       },
-      "description": "NLM controlled vocabulary, Medical Subject Headings (MeSH),  is used to characterize the content of the articles represented by MEDLINE citations."
+      "description": "NLM controlled vocabulary, Medical Subject Headings (MeSH), is used to characterize the content of the articles represented by MEDLINE citations."
     },
     "rcsb_pubmed_mesh_descriptors_lineage": {
       "type" : "array",
@@ -96,6 +99,10 @@
             "description": "Identifier for MeSH classification term.",
             "rcsb_search_context": [
               "exact-match"
+            ],
+            "examples": [
+              "E01.370.225.500.388",
+              "H01.181"
             ],
             "rcsb_description": [
               {
@@ -116,6 +123,11 @@
             "rcsb_search_context": [
               "exact-match",
               "full-text"
+            ],
+            "examples": [
+              "Chemistry",
+              "Mammals",
+              "Therapeutic Uses"
             ],
             "rcsb_description": [
               {
