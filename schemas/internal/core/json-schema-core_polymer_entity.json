@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Core Entity",
-  "description": "JSON schema for entity core.",
+  "title": "Core Polymer Entity",
+  "description": "JSON schema for polymer entity core.",
   "type": "object",
   "required": [
     "rcsb_polymer_entity_container_identifiers"
@@ -49,7 +49,7 @@
                 "priority_order": 110
               }
             ],
-            "description": "ID that identify taxonomy, chromosome or gene."
+            "description": "Automatically assigned ID that uniquely identifies taxonomy, chromosome or gene in the Genome Location Browser."
           },
           "name": {
             "type": "string",
@@ -79,6 +79,9 @@
             "rcsb_search_context": [
               "exact-match"
             ],
+            "examples": [
+              "MONOTOPIC MEMBRANE PROTEINS.Oxidases.Monoamine Oxidase A"
+            ],
             "rcsb_description": [
               {
                 "text": "Membrane Protein (Browser ID)",
@@ -91,7 +94,7 @@
                 "priority_order": 105
               }
             ],
-            "description": "Identifier for membrane classification term (system generated for internal purposes identifier)."
+            "description": "Automatically assigned ID for membrane classification term in the Membrane Protein Browser."
           },
           "name": {
             "type": "string",

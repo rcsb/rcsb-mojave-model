@@ -4715,7 +4715,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "EM Assembly",
+                     "text": "EM Specimen Aggregation State",
                      "context": "brief"
                   }
                ],
@@ -4956,10 +4956,24 @@
                "film_or_detector_model": {
                   "type": "string",
                   "description": "The detector type used for recording images.\n Usually film or CCD camera.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The detector type used for recording images.\n Usually film or CCD camera.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "EM Imaging Detector",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "EM Method Details",
+                        "priority_order": 40
                      }
                   ]
                },
@@ -5051,6 +5065,16 @@
                      {
                         "text": "A value of accelerating voltage (in kV) used for imaging.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "EM Accelerating Voltage",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "EM Method Details",
+                        "priority_order": 35
                      }
                   ]
                },
@@ -5344,6 +5368,16 @@
                      {
                         "text": "The name of the model of microscope.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "EM Microscope Model",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "EM Method Details",
+                        "priority_order": 30
                      }
                   ]
                },
@@ -5693,10 +5727,24 @@
                "point_symmetry": {
                   "type": "string",
                   "description": "Point symmetry symbol, either Cn, Dn, T, O, or I",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "Point symmetry symbol, either Cn, Dn, T, O, or I",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "EM Point Symmetry Imposed",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "EM Method Details",
+                        "priority_order": 45
                      }
                   ]
                }
@@ -5821,6 +5869,16 @@
                      {
                         "text": "The name of the software package used, e.g., RELION.  Depositors are strongly\n  encouraged to provide a value in this field.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "EM Reconstruction Software",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "EM Method Details",
+                        "priority_order": 20
                      }
                   ]
                },
@@ -6008,12 +6066,6 @@
                         "text": "EM Staining Details",
                         "context": "brief"
                      }
-                  ],
-                  "rcsb_search_group": [
-                     {
-                        "group_name": "EM Method Details",
-                        "priority_order": 30
-                     }
                   ]
                },
                "id": {
@@ -6049,7 +6101,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "EM Method Details",
-                        "priority_order": 25
+                        "priority_order": 50
                      }
                   ]
                },
@@ -6083,12 +6135,6 @@
                      {
                         "text": "EM Staining Type",
                         "context": "brief"
-                     }
-                  ],
-                  "rcsb_search_group": [
-                     {
-                        "group_name": "EM Method Details",
-                        "priority_order": 20
                      }
                   ]
                }
@@ -6214,6 +6260,16 @@
                      {
                         "text": "The type of instrument used in the vitrification process.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "EM Vitrification Instrument",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "EM Method Details",
+                        "priority_order": 25
                      }
                   ]
                },
@@ -9041,6 +9097,10 @@
                      "other"
                   ],
                   "description": "The identifying content type of the related entry.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The identifying content type of the related entry.",
@@ -9076,6 +9136,10 @@
                      "PDB  - Protein Databank\nNDB  - Nucleic Acid Database\nBMRB - BioMagResBank\nEMDB - Electron Microscopy Database\nBMCD - Biological Macromolecule Crystallization Database\nTargetTrack - Target Registration and Protocol Database\nSASBDB - Small Angle Scattering Biological Data Bank"
                   ],
                   "description": "The name of the database containing the related entry.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "BIOISIS",
@@ -9147,7 +9211,8 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true
+         "uniqueItems": true,
+         "rcsb_nested_indexing": true
       },
       "pdbx_database_status": {
          "type": "object",
@@ -9634,7 +9699,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "ID(s) and Keywords",
-                        "priority_order": 15
+                        "priority_order": 10
                      }
                   ]
                },
@@ -14079,7 +14144,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "ID(s) and Keywords",
-                        "priority_order": 25
+                        "priority_order": 20
                      }
                   ]
                },
@@ -14202,7 +14267,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "ID(s) and Keywords",
-                        "priority_order": 30
+                        "priority_order": 25
                      }
                   ]
                },
@@ -19266,7 +19331,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "ID(s) and Keywords",
-                     "priority_order": 40
+                     "priority_order": 35
                   }
                ]
             },
@@ -19301,7 +19366,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "ID(s) and Keywords",
-                     "priority_order": 45
+                     "priority_order": 40
                   }
                ]
             }
@@ -19529,7 +19594,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.8.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.8.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.8.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.9.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.9.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.9.0"
 }
