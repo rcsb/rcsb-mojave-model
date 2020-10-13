@@ -126,6 +126,9 @@
             },
             "rcsb_id": {
                "type": "string",
+               "examples": [
+                  "1KIP.A"
+               ],
                "description": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
                "rcsb_search_context": [
                   "exact-match"
@@ -170,6 +173,9 @@
                },
                "assignment_version": {
                   "type": "string",
+                  "examples": [
+                     "V4_0_2"
+                  ],
                   "description": "Identifies the version of the annotation assignment.",
                   "rcsb_description": [
                      {
@@ -184,6 +190,9 @@
                },
                "comp_id": {
                   "type": "string",
+                  "examples": [
+                     "ATP"
+                  ],
                   "description": "Chemical component identifier.",
                   "rcsb_description": [
                      {
@@ -242,6 +251,9 @@
                },
                "provenance_source": {
                   "type": "string",
+                  "examples": [
+                     "PDB"
+                  ],
                   "description": "Code identifying the individual, organization or program that\n assigned the annotation.",
                   "rcsb_description": [
                      {
@@ -257,6 +269,10 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "CATH",
+                     "SCOP"
+                  ],
+                  "examples": [
                      "CATH",
                      "SCOP"
                   ],
@@ -374,6 +390,9 @@
             "properties": {
                "assignment_version": {
                   "type": "string",
+                  "examples": [
+                     "V4_0_2"
+                  ],
                   "description": "Identifies the version of the feature assignment.",
                   "rcsb_description": [
                      {
@@ -436,6 +455,9 @@
                },
                "provenance_source": {
                   "type": "string",
+                  "examples": [
+                     "PDB"
+                  ],
                   "description": "Code identifying the individual, organization or program that\n assigned the feature.",
                   "rcsb_description": [
                      {
@@ -453,6 +475,9 @@
                   "enum": [
                      "PDB entity",
                      "PDB entry"
+                  ],
+                  "examples": [
+                     "PDB entity"
                   ],
                   "description": "Code residue coordinate system for the assigned feature.",
                   "rcsb_enum_annotated": [
@@ -485,6 +510,10 @@
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
                      "ZERO_OCCUPANCY_ATOM_XYZ",
+                     "ZERO_OCCUPANCY_RESIDUE_XYZ"
+                  ],
+                  "examples": [
+                     "UNOBSERVED_ATOM_XYZ",
                      "ZERO_OCCUPANCY_RESIDUE_XYZ"
                   ],
                   "description": "A type or category of the feature.",
@@ -552,6 +581,10 @@
                      "properties": {
                         "beg_comp_id": {
                            "type": "string",
+                           "examples": [
+                              "NAG",
+                              "MAN"
+                           ],
                            "description": "An identifier for the monomer(s) corresponding to the feature assignment.",
                            "rcsb_description": [
                               {
@@ -562,6 +595,10 @@
                         },
                         "beg_seq_id": {
                            "type": "integer",
+                           "examples": [
+                              "2",
+                              "100"
+                           ],
                            "description": "An identifier for the leading monomer feature position.",
                            "rcsb_description": [
                               {
@@ -572,6 +609,10 @@
                         },
                         "end_seq_id": {
                            "type": "integer",
+                           "examples": [
+                              "2",
+                              "100"
+                           ],
                            "description": "An identifier for the terminal monomer feature position.",
                            "rcsb_description": [
                               {
@@ -582,6 +623,10 @@
                         },
                         "value": {
                            "type": "number",
+                           "examples": [
+                              "1.5",
+                              "0.25"
+                           ],
                            "description": "The value of the feature at the monomer position.",
                            "rcsb_description": [
                               {
@@ -605,6 +650,10 @@
                      "properties": {
                         "comp_id": {
                            "type": "string",
+                           "examples": [
+                              "ATP,",
+                              "STN"
+                           ],
                            "description": "The chemical component identifier for the instance of the feature value.",
                            "rcsb_description": [
                               {
@@ -615,6 +664,10 @@
                         },
                         "details": {
                            "type": "string",
+                           "examples": [
+                              "C1,C2",
+                              "C1,C2,C3"
+                           ],
                            "description": "Specific details about the feature.",
                            "rcsb_description": [
                               {
@@ -625,6 +678,10 @@
                         },
                         "reference": {
                            "type": "number",
+                           "examples": [
+                              "5.0",
+                              "0.25"
+                           ],
                            "description": "The reference value of the feature.",
                            "rcsb_description": [
                               {
@@ -635,6 +692,10 @@
                         },
                         "reported": {
                            "type": "number",
+                           "examples": [
+                              "5.0",
+                              "0.25"
+                           ],
                            "description": "The reported value of the feature.",
                            "rcsb_description": [
                               {
@@ -645,6 +706,10 @@
                         },
                         "uncertainty_estimate": {
                            "type": "number",
+                           "examples": [
+                              "1.0",
+                              "-1.5"
+                           ],
                            "description": "The estimated uncertainty of the reported feature value.",
                            "rcsb_description": [
                               {
@@ -657,6 +722,9 @@
                            "type": "string",
                            "enum": [
                               "Z-Score"
+                           ],
+                           "examples": [
+                              "Z-score"
                            ],
                            "description": "The type of estimated uncertainty for the reported feature value.",
                            "rcsb_enum_annotated": [
@@ -693,6 +761,10 @@
             "properties": {
                "count": {
                   "type": "integer",
+                  "examples": [
+                     "1",
+                     "20"
+                  ],
                   "description": "The feature count.",
                   "rcsb_search_context": [
                      "default-match"
@@ -706,6 +778,10 @@
                },
                "coverage": {
                   "type": "number",
+                  "examples": [
+                     "0.50",
+                     "0.95"
+                  ],
                   "description": "The fractional feature coverage relative to the full branched entity.",
                   "rcsb_search_context": [
                      "default-match"
@@ -719,6 +795,10 @@
                },
                "maximum_length": {
                   "type": "integer",
+                  "examples": [
+                     "120",
+                     "2048"
+                  ],
                   "description": "The maximum feature length.",
                   "rcsb_search_context": [
                      "default-match"
@@ -732,6 +812,10 @@
                },
                "maximum_value": {
                   "type": "number",
+                  "examples": [
+                     "1.012",
+                     ".813"
+                  ],
                   "description": "The maximum feature value.",
                   "rcsb_description": [
                      {
@@ -742,6 +826,10 @@
                },
                "minimum_length": {
                   "type": "integer",
+                  "examples": [
+                     "12",
+                     "2"
+                  ],
                   "description": "The minimum feature length.",
                   "rcsb_search_context": [
                      "default-match"
@@ -755,6 +843,10 @@
                },
                "minimum_value": {
                   "type": "number",
+                  "examples": [
+                     "0.012",
+                     "0.00132"
+                  ],
                   "description": "The minimum feature value.",
                   "rcsb_description": [
                      {
@@ -777,6 +869,10 @@
                      "UNOBSERVED_RESIDUE_XYZ",
                      "ZERO_OCCUPANCY_ATOM_XYZ",
                      "ZERO_OCCUPANCY_RESIDUE_XYZ"
+                  ],
+                  "examples": [
+                     "ZERO_OCCUPANCY_RESIDUE_XYZ",
+                     "UNOBSERVED_RESIDUE_XYZ"
                   ],
                   "description": "Type or category of the feature.",
                   "rcsb_search_context": [
@@ -873,6 +969,9 @@
                },
                "description": {
                   "type": "string",
+                  "examples": [
+                     "Watson-Crick base pair"
+                  ],
                   "description": "A description of special details of the connection.",
                   "rcsb_description": [
                      {
@@ -1144,6 +1243,9 @@
       },
       "rcsb_id": {
          "type": "string",
+         "examples": [
+            "1KIP.A"
+         ],
          "description": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
          "rcsb_search_context": [
             "exact-match"
@@ -1163,7 +1265,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_branched_entity_instance version: 8.2.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity_instance version 8.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.2.0"
+   "title": "schema: pdbx_core collection: pdbx_core_branched_entity_instance version: 8.3.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity_instance version 8.3.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.3.0"
 }

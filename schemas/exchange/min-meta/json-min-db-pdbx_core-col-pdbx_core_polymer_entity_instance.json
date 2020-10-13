@@ -140,6 +140,9 @@
             },
             "rcsb_id": {
                "type": "string",
+               "examples": [
+                  "1KIP.A"
+               ],
                "description": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
                "rcsb_search_context": [
                   "exact-match"
@@ -184,6 +187,9 @@
                },
                "assignment_version": {
                   "type": "string",
+                  "examples": [
+                     "V4_0_2"
+                  ],
                   "description": "Identifies the version of the annotation assignment.",
                   "rcsb_description": [
                      {
@@ -246,6 +252,9 @@
                },
                "provenance_source": {
                   "type": "string",
+                  "examples": [
+                     "PDB"
+                  ],
                   "description": "Code identifying the individual, organization or program that\n assigned the annotation.",
                   "rcsb_description": [
                      {
@@ -261,6 +270,10 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "CATH",
+                     "SCOP"
+                  ],
+                  "examples": [
                      "CATH",
                      "SCOP"
                   ],
@@ -440,6 +453,9 @@
             "properties": {
                "assignment_version": {
                   "type": "string",
+                  "examples": [
+                     "V4_0_2"
+                  ],
                   "description": "Identifies the version of the feature assignment.",
                   "rcsb_description": [
                      {
@@ -502,6 +518,10 @@
                },
                "provenance_source": {
                   "type": "string",
+                  "examples": [
+                     "CATH",
+                     "SCOP"
+                  ],
                   "description": "Code identifying the individual, organization or program that\n assigned the feature.",
                   "rcsb_description": [
                      {
@@ -521,6 +541,11 @@
                      "PDB entity",
                      "PDB entry",
                      "UniProt"
+                  ],
+                  "examples": [
+                     "PDB entity",
+                     "UniProt",
+                     "NCBI"
                   ],
                   "description": "Code residue coordinate system for the assigned feature.",
                   "rcsb_enum_annotated": [
@@ -570,6 +595,10 @@
                      "UNOBSERVED_RESIDUE_XYZ",
                      "ZERO_OCCUPANCY_ATOM_XYZ",
                      "ZERO_OCCUPANCY_RESIDUE_XYZ"
+                  ],
+                  "examples": [
+                     "CATH",
+                     "SCOP"
                   ],
                   "description": "A type or category of the feature.",
                   "rcsb_enum_annotated": [
@@ -668,6 +697,10 @@
                      "properties": {
                         "beg_comp_id": {
                            "type": "string",
+                           "examples": [
+                              "TRP",
+                              "VAL"
+                           ],
                            "description": "An identifier for the monomer(s) corresponding to the feature assignment.",
                            "rcsb_description": [
                               {
@@ -678,6 +711,10 @@
                         },
                         "beg_seq_id": {
                            "type": "integer",
+                           "examples": [
+                              "2",
+                              "100"
+                           ],
                            "description": "An identifier for the monomer at which this segment of the feature begins.",
                            "rcsb_description": [
                               {
@@ -688,6 +725,10 @@
                         },
                         "end_seq_id": {
                            "type": "integer",
+                           "examples": [
+                              "50",
+                              "150"
+                           ],
                            "description": "An identifier for the monomer at which this segment of the feature ends.",
                            "rcsb_description": [
                               {
@@ -698,6 +739,10 @@
                         },
                         "value": {
                            "type": "number",
+                           "examples": [
+                              "1.5",
+                              "0.25"
+                           ],
                            "description": "The value of the feature over the monomer segment.",
                            "rcsb_description": [
                               {
@@ -730,6 +775,10 @@
             "properties": {
                "count": {
                   "type": "integer",
+                  "examples": [
+                     "1",
+                     "20"
+                  ],
                   "description": "The feature count.",
                   "rcsb_search_context": [
                      "default-match"
@@ -743,6 +792,10 @@
                },
                "coverage": {
                   "type": "number",
+                  "examples": [
+                     "0.50",
+                     "0.95"
+                  ],
                   "description": "The fractional feature coverage relative to the full entity sequence.",
                   "rcsb_search_context": [
                      "default-match"
@@ -756,6 +809,10 @@
                },
                "maximum_length": {
                   "type": "integer",
+                  "examples": [
+                     "120",
+                     "2048"
+                  ],
                   "description": "The maximum feature length.",
                   "rcsb_search_context": [
                      "default-match"
@@ -769,6 +826,10 @@
                },
                "maximum_value": {
                   "type": "number",
+                  "examples": [
+                     "1.012",
+                     ".813"
+                  ],
                   "description": "The maximum feature value.",
                   "rcsb_description": [
                      {
@@ -779,6 +840,10 @@
                },
                "minimum_length": {
                   "type": "integer",
+                  "examples": [
+                     "12",
+                     "2"
+                  ],
                   "description": "The minimum feature length.",
                   "rcsb_search_context": [
                      "default-match"
@@ -792,6 +857,10 @@
                },
                "minimum_value": {
                   "type": "number",
+                  "examples": [
+                     "0.012",
+                     "0.00132"
+                  ],
                   "description": "The minimum feature value.",
                   "rcsb_description": [
                      {
@@ -822,6 +891,10 @@
                      "UNOBSERVED_RESIDUE_XYZ",
                      "ZERO_OCCUPANCY_ATOM_XYZ",
                      "ZERO_OCCUPANCY_RESIDUE_XYZ"
+                  ],
+                  "examples": [
+                     "CATH",
+                     "SCOP"
                   ],
                   "description": "Type or category of the feature.",
                   "rcsb_search_context": [
@@ -1052,6 +1125,9 @@
                },
                "description": {
                   "type": "string",
+                  "examples": [
+                     "Watson-Crick base pair"
+                  ],
                   "description": "A description of special details of the connection.",
                   "rcsb_description": [
                      {
@@ -1343,6 +1419,9 @@
       },
       "rcsb_id": {
          "type": "string",
+         "examples": [
+            "1KIP.A"
+         ],
          "description": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
          "rcsb_search_context": [
             "exact-match"
@@ -1362,7 +1441,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 8.2.2",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 8.2.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.2.2"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 8.3.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 8.3.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.3.0"
 }

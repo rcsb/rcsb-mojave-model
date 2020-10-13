@@ -8,6 +8,9 @@
             "properties": {
                "entity_id": {
                   "type": "string",
+                  "examples": [
+                     "1"
+                  ],
                   "description": "The polymer entity identifier.",
                   "rcsb_description": [
                      {
@@ -73,6 +76,9 @@
                   "RELEASE IMMEDIATELY",
                   "RELEASE NOW"
                ],
+               "examples": [
+                  "RELEASE IMMEDIATELY"
+               ],
                "description": "The prerelease status for the molecular sequences for the entry .",
                "rcsb_description": [
                   {
@@ -84,6 +90,9 @@
             "deposit_date": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-07-11"
+               ],
                "description": "The entry deposition date.",
                "rcsb_search_context": [
                   "default-match"
@@ -98,6 +107,9 @@
             "deposit_date_coordinates": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-07-11"
+               ],
                "description": "The deposition date of entry coordinate data.",
                "rcsb_search_context": [
                   "default-match"
@@ -112,6 +124,9 @@
             "deposit_date_nmr_restraints": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-07-11"
+               ],
                "description": "The deposition date of entry NMR restraint data.",
                "rcsb_search_context": [
                   "default-match"
@@ -126,6 +141,9 @@
             "deposit_date_structure_factors": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-07-11"
+               ],
                "description": "The deposition date of entry structure factor data.",
                "rcsb_search_context": [
                   "default-match"
@@ -140,6 +158,9 @@
             "hold_date_coordinates": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-07-11"
+               ],
                "description": "The embargo date of entry coordinate data.",
                "rcsb_search_context": [
                   "default-match"
@@ -154,6 +175,9 @@
             "hold_date_nmr_restraints": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-07-11"
+               ],
                "description": "The embargo date of entry NMR restraint data.",
                "rcsb_search_context": [
                   "default-match"
@@ -168,6 +192,9 @@
             "hold_date_structure_factors": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-07-11"
+               ],
                "description": "The embargo date of entry structure factor data.",
                "rcsb_search_context": [
                   "default-match"
@@ -183,6 +210,9 @@
                "type": "string",
                "enum": [
                   "N",
+                  "Y"
+               ],
+               "examples": [
                   "Y"
                ],
                "description": "A flag to indicate the molecular sequences for an unreleased entry are available.",
@@ -204,6 +234,9 @@
             "release_date": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-09-11"
+               ],
                "description": "The release date for the entry.",
                "rcsb_search_context": [
                   "default-match"
@@ -229,6 +262,9 @@
                   "WAIT",
                   "WDRN"
                ],
+               "examples": [
+                  "HPUB"
+               ],
                "description": "The release status for the entry.",
                "rcsb_search_context": [
                   "exact-match"
@@ -243,6 +279,9 @@
             },
             "title": {
                "type": "string",
+               "examples": [
+                  "The structure of this interesting pathogen molecule"
+               ],
                "description": "The entry title.",
                "rcsb_search_context": [
                   "exact-match",
@@ -264,6 +303,9 @@
          "properties": {
             "entry_id": {
                "type": "string",
+               "examples": [
+                  "1KIP"
+               ],
                "description": "The PDB entry accession code.",
                "rcsb_search_context": [
                   "exact-match",
@@ -283,6 +325,9 @@
             },
             "rcsb_id": {
                "type": "string",
+               "examples": [
+                  "1KIP"
+               ],
                "description": "The RCSB entry identifier.",
                "rcsb_search_context": [
                   "exact-match"
@@ -297,6 +342,9 @@
             },
             "update_id": {
                "type": "string",
+               "examples": [
+                  "2019_24"
+               ],
                "description": "Identifier for the data exchange status record.",
                "rcsb_description": [
                   {
@@ -313,6 +361,9 @@
       },
       "rcsb_id": {
          "type": "string",
+         "examples": [
+            "1KIP"
+         ],
          "description": "The RCSB entry identifier.",
          "rcsb_search_context": [
             "exact-match"
@@ -332,7 +383,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-repository_holdings_unreleased_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: repository_holdings collection: repository_holdings_unreleased_entry version: 3.4.0",
-   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_unreleased_entry version 3.4.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-repository_holdings_unreleased_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 3.4.0"
+   "title": "schema: repository_holdings collection: repository_holdings_unreleased_entry version: 3.5.0",
+   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_unreleased_entry version 3.5.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-repository_holdings_unreleased_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 3.5.0"
 }

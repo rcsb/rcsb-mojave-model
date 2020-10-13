@@ -27,6 +27,9 @@
                      "structure factors",
                      "validation report"
                   ],
+                  "examples": [
+                     "entry mmCIF"
+                  ],
                   "description": "The list of content types associated with this entry.",
                   "rcsb_description": [
                      {
@@ -50,6 +53,9 @@
                "type": "array",
                "items": {
                   "type": "string",
+                  "examples": [
+                     "1,2,3"
+                  ],
                   "description": "The assembly id codes.",
                   "rcsb_description": [
                      {
@@ -62,6 +68,9 @@
             },
             "entry_id": {
                "type": "string",
+               "examples": [
+                  "1KIP"
+               ],
                "description": "The PDB entry accession code.",
                "rcsb_description": [
                   {
@@ -72,6 +81,9 @@
             },
             "rcsb_id": {
                "type": "string",
+               "examples": [
+                  "1KIP"
+               ],
                "description": "The RCSB entry identifier.",
                "rcsb_description": [
                   {
@@ -82,6 +94,9 @@
             },
             "update_id": {
                "type": "string",
+               "examples": [
+                  "2018_23"
+               ],
                "description": "Identifier for the current data exchange status record.",
                "rcsb_description": [
                   {
@@ -100,6 +115,9 @@
       },
       "rcsb_id": {
          "type": "string",
+         "examples": [
+            "1KIP"
+         ],
          "description": "The RCSB entry identifier.",
          "rcsb_description": [
             {
@@ -115,7 +133,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-repository_holdings_current_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: repository_holdings collection: repository_holdings_current_entry version: 3.2.1",
-   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_current_entry version 3.2.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-repository_holdings_current_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 3.2.1"
+   "title": "schema: repository_holdings collection: repository_holdings_current_entry version: 3.3.0",
+   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_current_entry version 3.3.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-repository_holdings_current_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 3.3.0"
 }

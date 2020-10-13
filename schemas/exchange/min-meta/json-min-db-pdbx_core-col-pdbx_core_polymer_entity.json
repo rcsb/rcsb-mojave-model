@@ -228,6 +228,10 @@
             },
             "rcsb_mutation_count": {
                "type": "integer",
+               "examples": [
+                  "2",
+                  "5"
+               ],
                "description": "Number of engineered mutations engineered in the sample sequence.",
                "rcsb_search_context": [
                   "default-match"
@@ -515,10 +519,10 @@
                },
                "pdbx_beg_seq_num": {
                   "type": "integer",
-                  "description": "The beginning polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                  "description": "The beginning polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                   "rcsb_description": [
                      {
-                        "text": "The beginning polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "text": "The beginning polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
                      }
                   ]
@@ -539,10 +543,10 @@
                },
                "pdbx_end_seq_num": {
                   "type": "integer",
-                  "description": "The ending polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                  "description": "The ending polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                   "rcsb_description": [
                      {
-                        "text": "The ending polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "text": "The ending polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
                      }
                   ]
@@ -642,10 +646,10 @@
                },
                "pdbx_gene_src_ncbi_taxonomy_id": {
                   "type": "string",
-                  "description": "NCBI Taxonomy identifier for the gene source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                  "description": "NCBI Taxonomy identifier for the gene source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                   "rcsb_description": [
                      {
-                        "text": "NCBI Taxonomy identifier for the gene source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                        "text": "NCBI Taxonomy identifier for the gene source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                         "context": "dictionary"
                      },
                      {
@@ -814,10 +818,10 @@
                },
                "pdbx_host_org_ncbi_taxonomy_id": {
                   "type": "string",
-                  "description": "NCBI Taxonomy identifier for the expression system organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                  "description": "NCBI Taxonomy identifier for the expression system organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                   "rcsb_description": [
                      {
-                        "text": "NCBI Taxonomy identifier for the expression system organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                        "text": "NCBI Taxonomy identifier for the expression system organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                         "context": "dictionary"
                      }
                   ]
@@ -1117,10 +1121,10 @@
                },
                "pdbx_beg_seq_num": {
                   "type": "integer",
-                  "description": "The beginning polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                  "description": "The beginning polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                   "rcsb_description": [
                      {
-                        "text": "The beginning polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "text": "The beginning polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
                      }
                   ]
@@ -1175,10 +1179,10 @@
                },
                "pdbx_end_seq_num": {
                   "type": "integer",
-                  "description": "The ending polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                  "description": "The ending polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                   "rcsb_description": [
                      {
-                        "text": "The ending polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "text": "The ending polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
                      }
                   ]
@@ -1195,10 +1199,10 @@
                },
                "pdbx_ncbi_taxonomy_id": {
                   "type": "string",
-                  "description": "NCBI Taxonomy identifier for the source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                  "description": "NCBI Taxonomy identifier for the source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                   "rcsb_description": [
                      {
-                        "text": "NCBI Taxonomy identifier for the source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4 \n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                        "text": "NCBI Taxonomy identifier for the source organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
                         "context": "dictionary"
                      },
                      {
@@ -1477,20 +1481,20 @@
                },
                "pdbx_beg_seq_num": {
                   "type": "integer",
-                  "description": "The beginning polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                  "description": "The beginning polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                   "rcsb_description": [
                      {
-                        "text": "The beginning polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "text": "The beginning polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
                      }
                   ]
                },
                "pdbx_end_seq_num": {
                   "type": "integer",
-                  "description": "The ending polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                  "description": "The ending polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                   "rcsb_description": [
                      {
-                        "text": "The ending polymer sequence position for the polymer section corresponding  \n to this source.\n\n A reference to the sequence position in the entity_poly category.",
+                        "text": "The ending polymer sequence position for the polymer section corresponding\n to this source.\n\n A reference to the sequence position in the entity_poly category.",
                         "context": "dictionary"
                      }
                   ]
@@ -1679,6 +1683,10 @@
                         },
                         "id": {
                            "type": "string",
+                           "examples": [
+                              "469008",
+                              "10469"
+                           ],
                            "description": "Members of the NCBI Taxonomy lineage as parent taxonomy idcodes.",
                            "rcsb_search_context": [
                               "exact-match"
@@ -1703,6 +1711,10 @@
                         },
                         "name": {
                            "type": "string",
+                           "examples": [
+                              "Escherichia coli BL21(DE3)",
+                              "Baculovirus"
+                           ],
                            "description": "Members of the NCBI Taxonomy lineage as parent taxonomy names.",
                            "rcsb_search_context": [
                               "exact-match",
@@ -1915,6 +1927,10 @@
                      "properties": {
                         "depth": {
                            "type": "integer",
+                           "examples": [
+                              "1",
+                              "10"
+                           ],
                            "description": "Members of the NCBI Taxonomy lineage as parent taxonomy lineage depth (1-N)",
                            "rcsb_search_context": [
                               "default-match"
@@ -1928,6 +1944,10 @@
                         },
                         "id": {
                            "type": "string",
+                           "examples": [
+                              "9606",
+                              "10090"
+                           ],
                            "description": "Members of the NCBI Taxonomy lineage as parent taxonomy idcodes.",
                            "rcsb_search_context": [
                               "exact-match"
@@ -1952,6 +1972,11 @@
                         },
                         "name": {
                            "type": "string",
+                           "examples": [
+                              "Homo",
+                              "sapiens\"",
+                              "Mus musculus"
+                           ],
                            "description": "Memebers of the NCBI Taxonomy lineage as parent taxonomy names.",
                            "rcsb_search_context": [
                               "exact-match",
@@ -2002,6 +2027,10 @@
                         },
                         "value": {
                            "type": "string",
+                           "examples": [
+                              "lacA",
+                              "hemH"
+                           ],
                            "description": "Gene name.",
                            "rcsb_search_context": [
                               "exact-match",
@@ -2054,6 +2083,10 @@
             },
             "formula_weight": {
                "type": "number",
+               "examples": [
+                  "40.",
+                  "105."
+               ],
                "description": "Formula mass (KDa) of the entity.",
                "rcsb_search_context": [
                   "default-match"
@@ -2080,9 +2113,8 @@
                "type": "string",
                "examples": [
                   "Green fluorescent protein",
-                  "DNA (5'-D(*GP*(CH3)CP*GP*(CH3)CP*GP*C)-3')",
-                  "PROFLAVINE",
-                  "PROTEIN (DEOXYRIBONUCLEASE I (E.C.3.1.21.1))"
+                  "23S ribosomal RNA",
+                  "NAD-dependent protein deacylase sirtuin-5, mitochondrial"
                ],
                "description": "A description of the polymer entity.",
                "rcsb_search_context": [
@@ -2180,6 +2212,10 @@
             },
             "rcsb_source_part_count": {
                "type": "integer",
+               "examples": [
+                  "1",
+                  "2"
+               ],
                "description": "The number of biological sources for the polymer entity. Multiple source contributions\n may come from the same organism (taxonomy).",
                "rcsb_search_context": [
                   "default-match"
@@ -2203,6 +2239,10 @@
             },
             "rcsb_source_taxonomy_count": {
                "type": "integer",
+               "examples": [
+                  "1",
+                  "2"
+               ],
                "description": "The number of distinct source taxonomies for the polymer entity. Commonly used to identify chimeric polymers.",
                "rcsb_search_context": [
                   "default-match"
@@ -2264,6 +2304,10 @@
                   "properties": {
                      "depth": {
                         "type": "integer",
+                        "examples": [
+                           "1",
+                           "4"
+                        ],
                         "description": "Members of the enzyme classification lineage as parent classification hierarchy depth (1-N).",
                         "rcsb_search_context": [
                            "default-match"
@@ -2277,6 +2321,10 @@
                      },
                      "id": {
                         "type": "string",
+                        "examples": [
+                           "2",
+                           "2.7.1.153"
+                        ],
                         "description": "Members of the enzyme classification lineage as parent classification codes.",
                         "rcsb_search_context": [
                            "exact-match"
@@ -2301,6 +2349,10 @@
                      },
                      "name": {
                         "type": "string",
+                        "examples": [
+                           "Transferases",
+                           "phosphatidylinositol-4,5-bisphosphate 3-kinase"
+                        ],
                         "description": "Members of the enzyme classification lineage as parent classification names.",
                         "rcsb_search_context": [
                            "exact-match"
@@ -2336,6 +2388,11 @@
                   "properties": {
                      "name": {
                         "type": "string",
+                        "examples": [
+                           "Lysozyme C",
+                           "Plasmid recombination enzyme",
+                           "Pyruvate carboxylase"
+                        ],
                         "description": "Combined list of macromolecular names.",
                         "rcsb_search_context": [
                            "full-text"
@@ -2354,10 +2411,6 @@
                         "rcsb_search_group": [
                            {
                               "group_name": "Polymer Molecular Features",
-                              "priority_order": 10
-                           },
-                           {
-                              "group_name": "Oligosaccharide/Branched Molecular Features",
                               "priority_order": 10
                            }
                         ]
@@ -2458,6 +2511,11 @@
             "properties": {
                "provenance_source": {
                   "type": "string",
+                  "examples": [
+                     "PDB",
+                     "SIFTS",
+                     "RCSB"
+                  ],
                   "description": "Code identifying the individual, organization or program that\n assigned the reference sequence.",
                   "rcsb_description": [
                      {
@@ -2468,6 +2526,9 @@
                },
                "reference_database_accession": {
                   "type": "string",
+                  "examples": [
+                     "Q9HD40"
+                  ],
                   "description": "Reference sequence accession code.",
                   "rcsb_description": [
                      {
@@ -2478,6 +2539,9 @@
                },
                "reference_database_isoform": {
                   "type": "string",
+                  "examples": [
+                     "P01116-2"
+                  ],
                   "description": "Reference sequence isoform identifier.",
                   "rcsb_description": [
                      {
@@ -2499,6 +2563,11 @@
                      "RefSeq",
                      "UniProt"
                   ],
+                  "examples": [
+                     "UniProt",
+                     "GenBank",
+                     "PDB"
+                  ],
                   "description": "Reference sequence database name.",
                   "rcsb_description": [
                      {
@@ -2514,6 +2583,10 @@
                      "properties": {
                         "entity_beg_seq_id": {
                            "type": "integer",
+                           "examples": [
+                              "50",
+                              "150"
+                           ],
                            "description": "An identifier for the monomer in the entity sequence at which this segment of the alignment begins.",
                            "rcsb_description": [
                               {
@@ -2524,6 +2597,10 @@
                         },
                         "length": {
                            "type": "integer",
+                           "examples": [
+                              "150",
+                              "250"
+                           ],
                            "description": "An length of the this segment of the alignment.",
                            "rcsb_description": [
                               {
@@ -2534,6 +2611,10 @@
                         },
                         "ref_beg_seq_id": {
                            "type": "integer",
+                           "examples": [
+                              "2",
+                              "100"
+                           ],
                            "description": "An identifier for the monomer in the reference sequence at which this segment of the alignment begins.",
                            "rcsb_description": [
                               {
@@ -2584,6 +2665,9 @@
                },
                "assignment_version": {
                   "type": "string",
+                  "examples": [
+                     "V4_0_2"
+                  ],
                   "description": "Identifies the version of the annotation assignment.",
                   "rcsb_description": [
                      {
@@ -2636,6 +2720,10 @@
                },
                "provenance_source": {
                   "type": "string",
+                  "examples": [
+                     "PDB",
+                     "UniProt"
+                  ],
                   "description": "Code identifying the individual, organization or program that\n assigned the annotation.",
                   "rcsb_description": [
                      {
@@ -2653,6 +2741,10 @@
                   "enum": [
                      "GO",
                      "InterPro",
+                     "Pfam"
+                  ],
+                  "examples": [
+                     "GO",
                      "Pfam"
                   ],
                   "description": "A type or category of the annotation.",
@@ -2856,6 +2948,10 @@
                "type": "array",
                "items": {
                   "type": "string",
+                  "examples": [
+                     "A",
+                     "B"
+                  ],
                   "description": "Instance identifiers corresponding to copies of the entity in this container.",
                   "rcsb_description": [
                      {
@@ -2870,6 +2966,10 @@
                "type": "array",
                "items": {
                   "type": "string",
+                  "examples": [
+                     "A",
+                     "B"
+                  ],
                   "description": "Author instance identifiers corresponding to copies of the entity in this container.",
                   "rcsb_description": [
                      {
@@ -2884,6 +2984,10 @@
                "type": "array",
                "items": {
                   "type": "string",
+                  "examples": [
+                     "GLY",
+                     "TRP"
+                  ],
                   "description": "Unique list of monomer chemical component identifiers in the polymer entity in this container.",
                   "rcsb_search_context": [
                      "exact-match"
@@ -2902,6 +3006,10 @@
                "type": "array",
                "items": {
                   "type": "string",
+                  "examples": [
+                     "033",
+                     "02K"
+                  ],
                   "description": "Unique list of non-standard monomer chemical component identifiers in the polymer entity in this container.",
                   "rcsb_description": [
                      {
@@ -2914,6 +3022,10 @@
             },
             "entity_id": {
                "type": "string",
+               "examples": [
+                  "1",
+                  "2"
+               ],
                "description": "Entity identifier for the container.",
                "rcsb_description": [
                   {
@@ -2924,6 +3036,10 @@
             },
             "entry_id": {
                "type": "string",
+               "examples": [
+                  "4HHB",
+                  "1KIP"
+               ],
                "description": "Entry identifier for the container.",
                "rcsb_search_context": [
                   "exact-match"
@@ -2938,6 +3054,9 @@
             },
             "prd_id": {
                "type": "string",
+               "examples": [
+                  "PRD_000010"
+               ],
                "description": "The BIRD identifier for the entity in this container.",
                "rcsb_description": [
                   {
@@ -2948,6 +3067,9 @@
             },
             "rcsb_id": {
                "type": "string",
+               "examples": [
+                  "6EL3_1"
+               ],
                "description": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
                "rcsb_search_context": [
                   "exact-match"
@@ -2967,6 +3089,10 @@
                   "properties": {
                      "database_accession": {
                         "type": "string",
+                        "examples": [
+                           "P01116",
+                           "55771382"
+                        ],
                         "description": "Reference database accession code",
                         "rcsb_search_context": [
                            "exact-match",
@@ -2992,6 +3118,9 @@
                      },
                      "database_isoform": {
                         "type": "string",
+                        "examples": [
+                           "P01116-2"
+                        ],
                         "description": "Reference database identifier for the sequence isoform",
                         "rcsb_search_context": [
                            "exact-match"
@@ -3016,6 +3145,10 @@
                            "PRF",
                            "RefSeq",
                            "UniProt"
+                        ],
+                        "examples": [
+                           "UniProt",
+                           "GenBank"
                         ],
                         "description": "Reference database name",
                         "rcsb_search_context": [
@@ -3076,6 +3209,10 @@
                         "enum": [
                            "PDB",
                            "RCSB",
+                           "SIFTS"
+                        ],
+                        "examples": [
+                           "PDB",
                            "SIFTS"
                         ],
                         "description": "Source of the reference database assignment",
@@ -3159,6 +3296,9 @@
             "properties": {
                "assignment_version": {
                   "type": "string",
+                  "examples": [
+                     "V4_0_2"
+                  ],
                   "description": "Identifies the version of the feature assignment.",
                   "rcsb_description": [
                      {
@@ -3211,6 +3351,9 @@
                },
                "provenance_source": {
                   "type": "string",
+                  "examples": [
+                     "PDB"
+                  ],
                   "description": "Code identifying the individual, organization or program that\n assigned the feature.",
                   "rcsb_description": [
                      {
@@ -3229,6 +3372,11 @@
                      "NCBI",
                      "PDB entity",
                      "UniProt"
+                  ],
+                  "examples": [
+                     "PDB entity",
+                     "UniProt",
+                     "NCBI"
                   ],
                   "description": "Code residue coordinate system for the assigned feature.",
                   "rcsb_enum_annotated": [
@@ -3258,6 +3406,10 @@
                      "artifact",
                      "modified_monomer",
                      "mutation"
+                  ],
+                  "examples": [
+                     "mutation",
+                     "artifact"
                   ],
                   "description": "A type or category of the feature.",
                   "rcsb_enum_annotated": [
@@ -3292,6 +3444,10 @@
                      "properties": {
                         "beg_comp_id": {
                            "type": "string",
+                           "examples": [
+                              "TRP",
+                              "VAL"
+                           ],
                            "description": "An identifier for the monomer(s) corresponding to the feature assignment.",
                            "rcsb_description": [
                               {
@@ -3302,6 +3458,10 @@
                         },
                         "beg_seq_id": {
                            "type": "integer",
+                           "examples": [
+                              "2",
+                              "100"
+                           ],
                            "description": "An identifier for the monomer at which this segment of the feature begins.",
                            "rcsb_description": [
                               {
@@ -3312,6 +3472,10 @@
                         },
                         "end_seq_id": {
                            "type": "integer",
+                           "examples": [
+                              "50",
+                              "150"
+                           ],
                            "description": "An identifier for the monomer at which this segment of the feature ends.",
                            "rcsb_description": [
                               {
@@ -3322,6 +3486,10 @@
                         },
                         "value": {
                            "type": "number",
+                           "examples": [
+                              "5.0",
+                              "0.25"
+                           ],
                            "description": "The value for the feature over this monomer segment.",
                            "rcsb_description": [
                               {
@@ -3351,6 +3519,10 @@
             "properties": {
                "count": {
                   "type": "integer",
+                  "examples": [
+                     "1",
+                     "20"
+                  ],
                   "description": "The feature count.",
                   "rcsb_search_context": [
                      "default-match"
@@ -3374,6 +3546,10 @@
                },
                "coverage": {
                   "type": "number",
+                  "examples": [
+                     "0.012",
+                     "0.00132"
+                  ],
                   "description": "The fractional feature coverage relative to the full entity sequence.",
                   "rcsb_search_context": [
                      "default-match"
@@ -3397,6 +3573,10 @@
                },
                "maximum_length": {
                   "type": "integer",
+                  "examples": [
+                     "120",
+                     "2048"
+                  ],
                   "description": "The maximum feature length.",
                   "rcsb_search_context": [
                      "default-match"
@@ -3410,6 +3590,10 @@
                },
                "maximum_value": {
                   "type": "number",
+                  "examples": [
+                     "1.012",
+                     ".813"
+                  ],
                   "description": "The maximum feature value.",
                   "rcsb_description": [
                      {
@@ -3420,6 +3604,10 @@
                },
                "minimum_length": {
                   "type": "integer",
+                  "examples": [
+                     "12",
+                     "2"
+                  ],
                   "description": "The minimum feature length.",
                   "rcsb_search_context": [
                      "default-match"
@@ -3433,6 +3621,10 @@
                },
                "minimum_value": {
                   "type": "number",
+                  "examples": [
+                     "0.012",
+                     "0.00132"
+                  ],
                   "description": "The minimum feature value.",
                   "rcsb_description": [
                      {
@@ -3447,6 +3639,10 @@
                      "artifact",
                      "modified_monomer",
                      "mutation"
+                  ],
+                  "examples": [
+                     "mutation",
+                     "artifact"
                   ],
                   "description": "Type or category of the feature.",
                   "rcsb_search_context": [
@@ -3614,6 +3810,9 @@
       },
       "rcsb_id": {
          "type": "string",
+         "examples": [
+            "6EL3_1"
+         ],
          "description": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
          "rcsb_search_context": [
             "exact-match"
@@ -3633,7 +3832,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.4.3",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.4.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.4.3"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 8.5.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 8.5.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.5.0"
 }

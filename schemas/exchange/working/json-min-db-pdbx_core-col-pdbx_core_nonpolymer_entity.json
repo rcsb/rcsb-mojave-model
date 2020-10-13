@@ -145,6 +145,9 @@
                },
                "assignment_version": {
                   "type": "string",
+                  "examples": [
+                     "V4_0_2"
+                  ],
                   "description": "Identifies the version of the annotation assignment.",
                   "rcsb_description": [
                      {
@@ -159,6 +162,10 @@
                },
                "comp_id": {
                   "type": "string",
+                  "examples": [
+                     "GTP",
+                     "STN"
+                  ],
                   "description": "Non-polymer(ligand) chemical component identifier for the entity.",
                   "rcsb_search_context": [
                      "exact-match"
@@ -221,6 +228,9 @@
                },
                "provenance_source": {
                   "type": "string",
+                  "examples": [
+                     "PDB"
+                  ],
                   "description": "Code identifying the individual, organization or program that\n assigned the annotation.",
                   "rcsb_description": [
                      {
@@ -236,6 +246,9 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "SUBJECT_OF_INVESTIGATION"
+                  ],
+                  "examples": [
                      "SUBJECT_OF_INVESTIGATION"
                   ],
                   "description": "A type or category of the annotation.",
@@ -363,6 +376,10 @@
                "type": "array",
                "items": {
                   "type": "string",
+                  "examples": [
+                     "A",
+                     "B"
+                  ],
                   "description": "Instance identifiers corresponding to copies of the entity in this container.",
                   "rcsb_description": [
                      {
@@ -377,6 +394,10 @@
                "type": "array",
                "items": {
                   "type": "string",
+                  "examples": [
+                     "A",
+                     "B"
+                  ],
                   "description": "Author instance identifiers corresponding to copies of the entity in this container.",
                   "rcsb_description": [
                      {
@@ -389,6 +410,10 @@
             },
             "entity_id": {
                "type": "string",
+               "examples": [
+                  "1",
+                  "2"
+               ],
                "description": "Entity identifier for the container.",
                "rcsb_description": [
                   {
@@ -399,6 +424,10 @@
             },
             "entry_id": {
                "type": "string",
+               "examples": [
+                  "4HHB",
+                  "1KIP"
+               ],
                "description": "Entry identifier for the container.",
                "rcsb_description": [
                   {
@@ -409,6 +438,10 @@
             },
             "nonpolymer_comp_id": {
                "type": "string",
+               "examples": [
+                  "GTP",
+                  "STN"
+               ],
                "description": "Non-polymer(ligand) chemical component identifier for the entity in this container.",
                "rcsb_search_context": [
                   "exact-match"
@@ -423,6 +456,9 @@
             },
             "prd_id": {
                "type": "string",
+               "examples": [
+                  "PRD_000010"
+               ],
                "description": "The BIRD identifier for the entity in this container.",
                "rcsb_search_context": [
                   "exact-match"
@@ -437,6 +473,9 @@
             },
             "rcsb_id": {
                "type": "string",
+               "examples": [
+                  "6EL3_1"
+               ],
                "description": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
                "rcsb_search_context": [
                   "exact-match"
@@ -457,6 +496,9 @@
                      "PDB",
                      "RCSB"
                   ],
+                  "examples": [
+                     "PDB"
+                  ],
                   "description": "Source of the reference database assignment",
                   "rcsb_description": [
                      {
@@ -471,6 +513,10 @@
                "type": "array",
                "items": {
                   "type": "string",
+                  "examples": [
+                     "5957",
+                     "CHEMBL14249"
+                  ],
                   "description": "Reference resource accession code",
                   "rcsb_description": [
                      {
@@ -490,6 +536,10 @@
                      "ChEMBL",
                      "DrugBank",
                      "PubChem"
+                  ],
+                  "examples": [
+                     "PubChem",
+                     "ChEBI"
                   ],
                   "description": "Reference resource name",
                   "rcsb_description": [
@@ -515,6 +565,9 @@
             "properties": {
                "assignment_version": {
                   "type": "string",
+                  "examples": [
+                     "V4_0_2"
+                  ],
                   "description": "Identifies the version of the feature assignment.",
                   "rcsb_description": [
                      {
@@ -529,6 +582,10 @@
                },
                "comp_id": {
                   "type": "string",
+                  "examples": [
+                     "GTP",
+                     "STN"
+                  ],
                   "description": "Non-polymer(ligand) chemical component identifier for the entity.",
                   "rcsb_description": [
                      {
@@ -577,6 +634,9 @@
                },
                "provenance_source": {
                   "type": "string",
+                  "examples": [
+                     "PDB"
+                  ],
                   "description": "Code identifying the individual, organization or program that\n assigned the feature.",
                   "rcsb_description": [
                      {
@@ -592,6 +652,9 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "SUBJECT_OF_INVESTIGATION"
+                  ],
+                  "examples": [
                      "SUBJECT_OF_INVESTIGATION"
                   ],
                   "description": "A type or category of the feature.",
@@ -639,6 +702,10 @@
             "properties": {
                "comp_id": {
                   "type": "string",
+                  "examples": [
+                     "GTP",
+                     "STN"
+                  ],
                   "description": "Non-polymer(ligand) chemical component identifier for the entity.",
                   "rcsb_description": [
                      {
@@ -649,6 +716,10 @@
                },
                "count": {
                   "type": "integer",
+                  "examples": [
+                     "1",
+                     "20"
+                  ],
                   "description": "The feature count.",
                   "rcsb_search_context": [
                      "default-match"
@@ -662,6 +733,10 @@
                },
                "maximum_length": {
                   "type": "integer",
+                  "examples": [
+                     "120",
+                     "2048"
+                  ],
                   "description": "The maximum feature length.",
                   "rcsb_description": [
                      {
@@ -672,6 +747,10 @@
                },
                "maximum_value": {
                   "type": "number",
+                  "examples": [
+                     "1.012",
+                     ".813"
+                  ],
                   "description": "The maximum feature value.",
                   "rcsb_description": [
                      {
@@ -682,6 +761,10 @@
                },
                "minimum_length": {
                   "type": "integer",
+                  "examples": [
+                     "12",
+                     "2"
+                  ],
                   "description": "The minimum feature length.",
                   "rcsb_description": [
                      {
@@ -692,6 +775,10 @@
                },
                "minimum_value": {
                   "type": "number",
+                  "examples": [
+                     "0.012",
+                     "0.00132"
+                  ],
                   "description": "The minimum feature value.",
                   "rcsb_description": [
                      {
@@ -703,6 +790,9 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "SUBJECT_OF_INVESTIGATION"
+                  ],
+                  "examples": [
                      "SUBJECT_OF_INVESTIGATION"
                   ],
                   "description": "Type or category of the feature.",
@@ -786,6 +876,9 @@
       },
       "rcsb_id": {
          "type": "string",
+         "examples": [
+            "6EL3_1"
+         ],
          "description": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
          "rcsb_search_context": [
             "exact-match"
@@ -805,7 +898,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity version: 8.1.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity version 8.1.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.1.1"
+   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity version: 8.2.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity version 8.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.2.0"
 }
