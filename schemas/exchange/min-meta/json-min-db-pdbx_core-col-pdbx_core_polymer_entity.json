@@ -228,10 +228,6 @@
             },
             "rcsb_mutation_count": {
                "type": "integer",
-               "examples": [
-                  "2",
-                  "5"
-               ],
                "description": "Number of engineered mutations engineered in the sample sequence.",
                "rcsb_search_context": [
                   "default-match"
@@ -1927,10 +1923,6 @@
                      "properties": {
                         "depth": {
                            "type": "integer",
-                           "examples": [
-                              "1",
-                              "10"
-                           ],
                            "description": "Members of the NCBI Taxonomy lineage as parent taxonomy lineage depth (1-N)",
                            "rcsb_search_context": [
                               "default-match"
@@ -2084,8 +2076,8 @@
             "formula_weight": {
                "type": "number",
                "examples": [
-                  "40.",
-                  "105."
+                  40.0,
+                  105.0
                ],
                "description": "Formula mass (KDa) of the entity.",
                "rcsb_search_context": [
@@ -2183,11 +2175,6 @@
             },
             "pdbx_number_of_molecules": {
                "type": "integer",
-               "examples": [
-                  "1",
-                  "2",
-                  "3"
-               ],
                "description": "The number of molecules of the entity in the entry.",
                "rcsb_description": [
                   {
@@ -2212,10 +2199,6 @@
             },
             "rcsb_source_part_count": {
                "type": "integer",
-               "examples": [
-                  "1",
-                  "2"
-               ],
                "description": "The number of biological sources for the polymer entity. Multiple source contributions\n may come from the same organism (taxonomy).",
                "rcsb_search_context": [
                   "default-match"
@@ -2239,10 +2222,6 @@
             },
             "rcsb_source_taxonomy_count": {
                "type": "integer",
-               "examples": [
-                  "1",
-                  "2"
-               ],
                "description": "The number of distinct source taxonomies for the polymer entity. Commonly used to identify chimeric polymers.",
                "rcsb_search_context": [
                   "default-match"
@@ -2304,10 +2283,6 @@
                   "properties": {
                      "depth": {
                         "type": "integer",
-                        "examples": [
-                           "1",
-                           "4"
-                        ],
                         "description": "Members of the enzyme classification lineage as parent classification hierarchy depth (1-N).",
                         "rcsb_search_context": [
                            "default-match"
@@ -2583,10 +2558,6 @@
                      "properties": {
                         "entity_beg_seq_id": {
                            "type": "integer",
-                           "examples": [
-                              "50",
-                              "150"
-                           ],
                            "description": "An identifier for the monomer in the entity sequence at which this segment of the alignment begins.",
                            "rcsb_description": [
                               {
@@ -2597,10 +2568,6 @@
                         },
                         "length": {
                            "type": "integer",
-                           "examples": [
-                              "150",
-                              "250"
-                           ],
                            "description": "An length of the this segment of the alignment.",
                            "rcsb_description": [
                               {
@@ -2611,10 +2578,6 @@
                         },
                         "ref_beg_seq_id": {
                            "type": "integer",
-                           "examples": [
-                              "2",
-                              "100"
-                           ],
                            "description": "An identifier for the monomer in the reference sequence at which this segment of the alignment begins.",
                            "rcsb_description": [
                               {
@@ -3458,10 +3421,6 @@
                         },
                         "beg_seq_id": {
                            "type": "integer",
-                           "examples": [
-                              "2",
-                              "100"
-                           ],
                            "description": "An identifier for the monomer at which this segment of the feature begins.",
                            "rcsb_description": [
                               {
@@ -3472,10 +3431,6 @@
                         },
                         "end_seq_id": {
                            "type": "integer",
-                           "examples": [
-                              "50",
-                              "150"
-                           ],
                            "description": "An identifier for the monomer at which this segment of the feature ends.",
                            "rcsb_description": [
                               {
@@ -3487,8 +3442,8 @@
                         "value": {
                            "type": "number",
                            "examples": [
-                              "5.0",
-                              "0.25"
+                              5.0,
+                              0.25
                            ],
                            "description": "The value for the feature over this monomer segment.",
                            "rcsb_description": [
@@ -3519,10 +3474,6 @@
             "properties": {
                "count": {
                   "type": "integer",
-                  "examples": [
-                     "1",
-                     "20"
-                  ],
                   "description": "The feature count.",
                   "rcsb_search_context": [
                      "default-match"
@@ -3547,8 +3498,8 @@
                "coverage": {
                   "type": "number",
                   "examples": [
-                     "0.012",
-                     "0.00132"
+                     0.012,
+                     0.00132
                   ],
                   "description": "The fractional feature coverage relative to the full entity sequence.",
                   "rcsb_search_context": [
@@ -3573,10 +3524,6 @@
                },
                "maximum_length": {
                   "type": "integer",
-                  "examples": [
-                     "120",
-                     "2048"
-                  ],
                   "description": "The maximum feature length.",
                   "rcsb_search_context": [
                      "default-match"
@@ -3591,8 +3538,8 @@
                "maximum_value": {
                   "type": "number",
                   "examples": [
-                     "1.012",
-                     ".813"
+                     1.012,
+                     0.813
                   ],
                   "description": "The maximum feature value.",
                   "rcsb_description": [
@@ -3604,10 +3551,6 @@
                },
                "minimum_length": {
                   "type": "integer",
-                  "examples": [
-                     "12",
-                     "2"
-                  ],
                   "description": "The minimum feature length.",
                   "rcsb_search_context": [
                      "default-match"
@@ -3622,8 +3565,8 @@
                "minimum_value": {
                   "type": "number",
                   "examples": [
-                     "0.012",
-                     "0.00132"
+                     0.012,
+                     0.00132
                   ],
                   "description": "The minimum feature value.",
                   "rcsb_description": [

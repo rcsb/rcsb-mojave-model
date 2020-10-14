@@ -101,11 +101,6 @@
             },
             "pdbx_number_of_molecules": {
                "type": "integer",
-               "examples": [
-                  "1",
-                  "2",
-                  "3"
-               ],
                "description": "The number of molecules of the nonpolymer entity in the entry.",
                "rcsb_search_context": [
                   "default-match"
@@ -716,10 +711,6 @@
                },
                "count": {
                   "type": "integer",
-                  "examples": [
-                     "1",
-                     "20"
-                  ],
                   "description": "The feature count.",
                   "rcsb_search_context": [
                      "default-match"
@@ -733,10 +724,6 @@
                },
                "maximum_length": {
                   "type": "integer",
-                  "examples": [
-                     "120",
-                     "2048"
-                  ],
                   "description": "The maximum feature length.",
                   "rcsb_description": [
                      {
@@ -748,8 +735,8 @@
                "maximum_value": {
                   "type": "number",
                   "examples": [
-                     "1.012",
-                     ".813"
+                     1.012,
+                     0.813
                   ],
                   "description": "The maximum feature value.",
                   "rcsb_description": [
@@ -761,10 +748,6 @@
                },
                "minimum_length": {
                   "type": "integer",
-                  "examples": [
-                     "12",
-                     "2"
-                  ],
                   "description": "The minimum feature length.",
                   "rcsb_description": [
                      {
@@ -776,8 +759,8 @@
                "minimum_value": {
                   "type": "number",
                   "examples": [
-                     "0.012",
-                     "0.00132"
+                     0.012,
+                     0.00132
                   ],
                   "description": "The minimum feature value.",
                   "rcsb_description": [

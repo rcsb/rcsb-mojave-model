@@ -24,8 +24,8 @@
             "formula_weight": {
                "type": "number",
                "examples": [
-                  "120.12",
-                  "450.10"
+                  120.12,
+                  450.1
                ],
                "description": "Formula mass of the chemical component.",
                "rcsb_search_context": [
@@ -2848,9 +2848,6 @@
                },
                "pdbx_database_id_PubMed": {
                   "type": "integer",
-                  "examples": [
-                     "12627512"
-                  ],
                   "description": "Ascession number used by PubMed to categorize a specific\n bibliographic entry.",
                   "rcsb_description": [
                      {
@@ -2899,9 +2896,6 @@
                },
                "year": {
                   "type": "integer",
-                  "examples": [
-                     "1984"
-                  ],
                   "description": "The year of the rcsb_bird_citation; relevant for journal articles, books\n and book chapters.",
                   "rcsb_description": [
                      {
@@ -3335,7 +3329,11 @@
                   "type": "string",
                   "examples": [
                      "G03FA02",
-                     "S02AA11, S03AA03, J01XB02, A07AA05', S01AA18"
+                     "S02AA11",
+                     "S03AA03",
+                     "J01XB02",
+                     "A07AA05",
+                     "S01AA18"
                   ],
                   "description": "The Anatomical Therapeutic Chemical (ATC) Classification System identifiers corresponding\n to the chemical component.",
                   "rcsb_description": [
@@ -3547,10 +3545,6 @@
          "properties": {
             "atom_count": {
                "type": "integer",
-               "examples": [
-                  "22",
-                  "81"
-               ],
                "description": "Chemical component total atom count",
                "rcsb_description": [
                   {
@@ -3561,10 +3555,6 @@
             },
             "atom_count_chiral": {
                "type": "integer",
-               "examples": [
-                  "2",
-                  "5"
-               ],
                "description": "Chemical component chiral atom count",
                "rcsb_search_context": [
                   "default-match"
@@ -3588,10 +3578,6 @@
             },
             "atom_count_heavy": {
                "type": "integer",
-               "examples": [
-                  "26",
-                  "54"
-               ],
                "description": "Chemical component heavy atom count",
                "rcsb_search_context": [
                   "default-match"
@@ -3615,10 +3601,6 @@
             },
             "bond_count": {
                "type": "integer",
-               "examples": [
-                  "16",
-                  "34"
-               ],
                "description": "Chemical component total bond count",
                "rcsb_search_context": [
                   "default-match"
@@ -3642,10 +3624,6 @@
             },
             "bond_count_aromatic": {
                "type": "integer",
-               "examples": [
-                  "6",
-                  "24"
-               ],
                "description": "Chemical component aromatic bond count",
                "rcsb_search_context": [
                   "default-match"
