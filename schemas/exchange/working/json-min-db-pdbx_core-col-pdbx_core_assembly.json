@@ -33,10 +33,10 @@
             },
             "method_details": {
                "type": "string",
-               "description": "Provides details of the method used to determine or \n compute the assembly.",
+               "description": "Provides details of the method used to determine or\n compute the assembly.",
                "rcsb_description": [
                   {
-                     "text": "Provides details of the method used to determine or \n compute the assembly.",
+                     "text": "Provides details of the method used to determine or\n compute the assembly.",
                      "context": "dictionary"
                   }
                ]
@@ -141,6 +141,10 @@
                },
                "details": {
                   "type": "string",
+                  "examples": [
+                     "Homology to bacteriorhodopsin",
+                     "Helical filament was observed by negative staining and Cryo-EM"
+                  ],
                   "description": "Provides any additional information regarding the evidence of this assembly",
                   "rcsb_search_context": [
                      "full-text"
@@ -233,10 +237,10 @@
             "properties": {
                "assembly_id": {
                   "type": "string",
-                  "description": "This data item is a pointer to _pdbx_struct_assembly.id in the \n PDBX_STRUCT_ASSEMBLY category.",
+                  "description": "This data item is a pointer to _pdbx_struct_assembly.id in the\n PDBX_STRUCT_ASSEMBLY category.",
                   "rcsb_description": [
                      {
-                        "text": "This data item is a pointer to _pdbx_struct_assembly.id in the \n PDBX_STRUCT_ASSEMBLY category.",
+                        "text": "This data item is a pointer to _pdbx_struct_assembly.id in the\n PDBX_STRUCT_ASSEMBLY category.",
                         "context": "dictionary"
                      }
                   ]
@@ -245,10 +249,10 @@
                   "type": "array",
                   "items": {
                      "type": "string",
-                     "description": "This data item is a pointer to _struct_asym.id in \n the STRUCT_ASYM category.\n\n This item may be expressed as a comma separated list of identifiers.",
+                     "description": "This data item is a pointer to _struct_asym.id in\n the STRUCT_ASYM category.\n\n This item may be expressed as a comma separated list of identifiers.",
                      "rcsb_description": [
                         {
-                           "text": "This data item is a pointer to _struct_asym.id in \n the STRUCT_ASYM category.\n\n This item may be expressed as a comma separated list of identifiers.",
+                           "text": "This data item is a pointer to _struct_asym.id in\n the STRUCT_ASYM category.\n\n This item may be expressed as a comma separated list of identifiers.",
                            "context": "dictionary"
                         }
                      ]
@@ -263,10 +267,10 @@
                      "(1-60)",
                      "(1-60)(61)"
                   ],
-                  "description": "Identifies the operation of collection of operations \n from category PDBX_STRUCT_OPER_LIST.  \n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)",
+                  "description": "Identifies the operation of collection of operations\n from category PDBX_STRUCT_OPER_LIST.\n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)",
                   "rcsb_description": [
                      {
-                        "text": "Identifies the operation of collection of operations \n from category PDBX_STRUCT_OPER_LIST.  \n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)",
+                        "text": "Identifies the operation of collection of operations\n from category PDBX_STRUCT_OPER_LIST.\n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)",
                         "context": "dictionary"
                      }
                   ]
@@ -554,6 +558,10 @@
          "properties": {
             "assembly_id": {
                "type": "string",
+               "examples": [
+                  "1",
+                  "5"
+               ],
                "description": "Assembly identifier for the container.",
                "rcsb_search_context": [
                   "exact-match"
@@ -592,6 +600,9 @@
             },
             "rcsb_id": {
                "type": "string",
+               "examples": [
+                  "1KIP-1"
+               ],
                "description": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
                "rcsb_search_context": [
                   "exact-match"
@@ -688,6 +699,9 @@
             },
             "entry_id": {
                "type": "string",
+               "examples": [
+                  "1KIP"
+               ],
                "description": "The PDB entry accession code.",
                "rcsb_description": [
                   {
@@ -727,6 +741,9 @@
                   "NA-hybrid (only)",
                   "Other",
                   "RNA (only)"
+               ],
+               "examples": [
+                  "DNA (only)"
                ],
                "description": "Nucleic acid polymer entity type categories describing the generated assembly.",
                "rcsb_search_context": [
@@ -841,6 +858,9 @@
                   "protein/NA",
                   "protein/NA/oligosaccharide",
                   "protein/oligosaccharide"
+               ],
+               "examples": [
+                  "homomeric protein"
                ],
                "description": "Categories describing the polymer entity composition for the generated assembly.",
                "rcsb_search_context": [
@@ -1149,6 +1169,9 @@
                   "Protein (only)",
                   "Protein/NA"
                ],
+               "examples": [
+                  "Protein (only)"
+               ],
                "description": "Selected polymer entity type categories describing the generated assembly.",
                "rcsb_search_context": [
                   "exact-match"
@@ -1259,6 +1282,9 @@
       },
       "rcsb_id": {
          "type": "string",
+         "examples": [
+            "1KIP-1"
+         ],
          "description": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
          "rcsb_search_context": [
             "exact-match"
@@ -1278,7 +1304,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_assembly version: 8.3.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_assembly version 8.3.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.3.1"
+   "title": "schema: pdbx_core collection: pdbx_core_assembly version: 8.4.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_assembly version 8.4.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_assembly.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.4.0"
 }
