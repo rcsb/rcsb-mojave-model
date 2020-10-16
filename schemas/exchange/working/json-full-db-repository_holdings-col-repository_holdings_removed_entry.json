@@ -28,6 +28,9 @@
             "deposit_date": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-07-11"
+               ],
                "description": "The entry deposition date.",
                "rcsb_search_context": [
                   "default-match"
@@ -43,6 +46,10 @@
                "type": "array",
                "items": {
                   "type": "string",
+                  "examples": [
+                     "4ABC",
+                     "3ABC"
+                  ],
                   "description": "The list of superseding PDB accession codes for the removed insilico model entry.",
                   "rcsb_search_context": [
                      "exact-match"
@@ -60,6 +67,9 @@
             "release_date": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-09-11"
+               ],
                "description": "The release date for the entry.",
                "rcsb_search_context": [
                   "default-match"
@@ -74,6 +84,9 @@
             "remove_date": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2017-09-11"
+               ],
                "description": "The removal date for the entry.",
                "rcsb_search_context": [
                   "default-match"
@@ -92,6 +105,9 @@
                   "TRSF",
                   "WDRN"
                ],
+               "examples": [
+                  "HPUB"
+               ],
                "description": "The release status for the entry.",
                "rcsb_search_context": [
                   "exact-match"
@@ -106,6 +122,9 @@
             },
             "title": {
                "type": "string",
+               "examples": [
+                  "The structure of this interesting pathogen molecule"
+               ],
                "description": "The entry title.",
                "rcsb_search_context": [
                   "full-text"
@@ -151,6 +170,9 @@
             "deposit_date": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-07-11"
+               ],
                "description": "The entry deposition date.",
                "rcsb_search_context": [
                   "default-match"
@@ -164,6 +186,9 @@
             },
             "details": {
                "type": "string",
+               "examples": [
+                  "An improved ligand starting model was found to significantly improve the model\nand refinement statistics for this entry."
+               ],
                "description": "The entry title.",
                "rcsb_search_context": [
                   "full-text"
@@ -180,6 +205,10 @@
                "type": "array",
                "items": {
                   "type": "string",
+                  "examples": [
+                     "4ABC",
+                     "3ABC"
+                  ],
                   "description": "The list of superseding PDB accession codes for the removed entry.",
                   "rcsb_search_context": [
                      "exact-match"
@@ -197,6 +226,9 @@
             "release_date": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-09-11"
+               ],
                "description": "The initial date the entry was released in the PDB repository.",
                "rcsb_search_context": [
                   "default-match"
@@ -211,6 +243,9 @@
             "remove_date": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2018-07-11"
+               ],
                "description": "The date the entry was removed from the PDB repository.",
                "rcsb_search_context": [
                   "default-match"
@@ -240,6 +275,9 @@
                      "entry mmCIF",
                      "structure factors"
                   ],
+                  "examples": [
+                     "entry mmCIF"
+                  ],
                   "description": "The list of content types associated with this removed entry.",
                   "rcsb_search_context": [
                      "exact-match"
@@ -256,6 +294,9 @@
             },
             "title": {
                "type": "string",
+               "examples": [
+                  "The structure of this interesting pathogen molecule"
+               ],
                "description": "The entry title.",
                "rcsb_search_context": [
                   "full-text"
@@ -313,6 +354,9 @@
          "properties": {
             "entry_id": {
                "type": "string",
+               "examples": [
+                  "1KIP"
+               ],
                "description": "The PDB entry accession code.",
                "rcsb_search_context": [
                   "exact-match",
@@ -332,6 +376,9 @@
             },
             "rcsb_id": {
                "type": "string",
+               "examples": [
+                  "1KIP"
+               ],
                "description": "The RCSB entry identifier.",
                "rcsb_description": [
                   {
@@ -342,6 +389,9 @@
             },
             "update_id": {
                "type": "string",
+               "examples": [
+                  "2019_24"
+               ],
                "description": "Identifier for the data exchange status record.",
                "rcsb_description": [
                   {
@@ -365,6 +415,9 @@
                "type": "array",
                "items": {
                   "type": "string",
+                  "examples": [
+                     "1KIP"
+                  ],
                   "description": "The PDB accesion codes supersed by this entry.",
                   "rcsb_description": [
                      {
@@ -408,6 +461,9 @@
             "deposit_date": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-07-11"
+               ],
                "description": "The entry deposition date.",
                "rcsb_search_context": [
                   "default-match"
@@ -422,6 +478,9 @@
             "release_date": {
                "type": "string",
                "format": "date",
+               "examples": [
+                  "2016-09-11"
+               ],
                "description": "The release date for the entry.",
                "rcsb_search_context": [
                   "default-match"
@@ -435,6 +494,9 @@
             },
             "remote_accession_code": {
                "type": "string",
+               "examples": [
+                  "ma-czyyf"
+               ],
                "description": "The prerelease status for the molecular sequences for the entry .",
                "rcsb_search_context": [
                   "exact-match"
@@ -449,6 +511,9 @@
             },
             "remote_repository_name": {
                "type": "string",
+               "examples": [
+                  "Model Archive"
+               ],
                "description": "For the transferred content, the remote repository name.",
                "rcsb_search_context": [
                   "exact-match"
@@ -473,6 +538,9 @@
                      "coordinates",
                      "structure factors"
                   ],
+                  "examples": [
+                     "coordinates"
+                  ],
                   "description": "The types of transferred content.",
                   "rcsb_search_context": [
                      "exact-match"
@@ -492,6 +560,9 @@
                "enum": [
                   "TRSF"
                ],
+               "examples": [
+                  "HPUB"
+               ],
                "description": "The release status for the entry.",
                "rcsb_search_context": [
                   "exact-match"
@@ -506,6 +577,9 @@
             },
             "title": {
                "type": "string",
+               "examples": [
+                  "The structure of this interesting pathogen molecule"
+               ],
                "description": "The entry title.",
                "rcsb_search_context": [
                   "full-text"
@@ -526,6 +600,9 @@
       },
       "rcsb_id": {
          "type": "string",
+         "examples": [
+            "1KIP"
+         ],
          "description": "The RCSB entry identifier.",
          "rcsb_description": [
             {
@@ -541,7 +618,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-repository_holdings_removed_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: repository_holdings collection: repository_holdings_removed_entry version: 3.2.2",
-   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_removed_entry version 3.2.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-repository_holdings_removed_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 3.2.2"
+   "title": "schema: repository_holdings collection: repository_holdings_removed_entry version: 3.3.0",
+   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_removed_entry version 3.3.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-repository_holdings_removed_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 3.3.0"
 }
