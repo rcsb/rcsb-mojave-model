@@ -1,0 +1,75 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "rcsb_repository_holdings_combined": {
+         "bsonType": "object",
+         "properties": {
+            "id_code_replaced_by_latest": {
+               "bsonType": "string"
+            },
+            "status": {
+               "bsonType": "string",
+               "enum": [
+                  "CURRENT",
+                  "REMOVED",
+                  "UNRELEASED"
+               ]
+            },
+            "status_code": {
+               "bsonType": "string",
+               "enum": [
+                  "AUCO",
+                  "AUTH",
+                  "HOLD",
+                  "HPUB",
+                  "OBS",
+                  "POLC",
+                  "PROC",
+                  "REFI",
+                  "REL",
+                  "REPL",
+                  "RMVD",
+                  "TRSF",
+                  "WAIT",
+                  "WDRN"
+               ]
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "status",
+            "status_code"
+         ]
+      },
+      "rcsb_repository_holdings_combined_entry_container_identifiers": {
+         "bsonType": "object",
+         "properties": {
+            "entry_id": {
+               "bsonType": "string"
+            },
+            "rcsb_id": {
+               "bsonType": "string"
+            },
+            "update_id": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "entry_id",
+            "rcsb_id",
+            "update_id"
+         ]
+      },
+      "rcsb_id": {
+         "bsonType": "string"
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ]
+}
