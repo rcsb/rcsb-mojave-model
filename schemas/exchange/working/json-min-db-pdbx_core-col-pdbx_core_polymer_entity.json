@@ -76,12 +76,12 @@
                "type": "string",
                "examples": [
                   "HHHH(MSE)AKQRSG or AUCGGAAU",
-                  "A  for alanine or adenine\nB  for ambiguous asparagine/aspartic-acid\nR  for arginine\nN  for asparagine\nD  for aspartic-acid\nC  for cysteine or cystine or cytosine\nQ  for glutamine\nE  for glutamic-acid\nZ  for ambiguous glutamine/glutamic acid\nG  for glycine or guanine\nH  for histidine\nI  for isoleucine\nL  for leucine\nK  for lysine\nM  for methionine\nF  for phenylalanine\nP  for proline\nS  for serine\nT  for threonine or thymine\nW  for tryptophan\nY  for tyrosine\nV  for valine\nU  for uracil\nO  for water\nX  for other"
+                  "A     for alanine or adenine\nB     for ambiguous asparagine/aspartic-acid\nR     for arginine\nN     for asparagine\nD     for aspartic-acid\nC     for cysteine or cystine or cytosine\nQ     for glutamine\nE     for glutamic-acid\nZ     for ambiguous glutamine/glutamic acid\nG     for glycine or guanine\nH     for histidine\nI     for isoleucine\nL     for leucine\nK     for lysine\nM     for methionine\nF     for phenylalanine\nP     for proline\nS     for serine\nT     for threonine or thymine\nW     for tryptophan\nY     for tyrosine\nV     for valine\nU     for uracil\nO     for water\nX     for other\n(MSE) for selenomethionine"
                ],
-               "description": "Chemical sequence expressed as string of one-letter\n amino acid codes. Modifications and non-standard\n amino acids are coded as X.",
+               "description": "Chemical sequence expressed as string of one-letter\n amino acid codes. Non-standard amino acids and\n nucleotides are coded in parenthesis.",
                "rcsb_description": [
                   {
-                     "text": "Chemical sequence expressed as string of one-letter\n amino acid codes. Modifications and non-standard\n amino acids are coded as X.",
+                     "text": "Chemical sequence expressed as string of one-letter\n amino acid codes. Non-standard amino acids and\n nucleotides are coded in parenthesis.",
                      "context": "dictionary"
                   },
                   {
@@ -95,10 +95,10 @@
                "examples": [
                   "MSHHWGYGKHNGPEHWHKDFPIAKGERQSPVDIDTHTAKYDPSLKPLSVSYDQATSLRILNNGAAFNVEFD"
                ],
-               "description": "Cannonical chemical sequence expressed as string of\n               one-letter amino acid codes. Modifications are coded\n               as the parent amino acid where possible.\n\nA  for alanine or adenine\nB  for ambiguous asparagine/aspartic-acid\nR  for arginine\nN  for asparagine\nD  for aspartic-acid\nC  for cysteine or cystine or cytosine\nQ  for glutamine\nE  for glutamic-acid\nZ  for ambiguous glutamine/glutamic acid\nG  for glycine or guanine\nH  for histidine\nI  for isoleucine\nL  for leucine\nK  for lysine\nM  for methionine\nF  for phenylalanine\nP  for proline\nS  for serine\nT  for threonine or thymine\nW  for tryptophan\nY  for tyrosine\nV  for valine\nU  for uracil",
+               "description": "Cannonical chemical sequence expressed as string of\n               one-letter amino acid codes. Modifications are coded\n               as the parent amino acid where possible or coded as X otherwise.\n\nA  for alanine or adenine\nB  for ambiguous asparagine/aspartic-acid\nR  for arginine\nN  for asparagine\nD  for aspartic-acid\nC  for cysteine or cystine or cytosine\nQ  for glutamine\nE  for glutamic-acid\nZ  for ambiguous glutamine/glutamic acid\nG  for glycine or guanine\nH  for histidine\nI  for isoleucine\nL  for leucine\nK  for lysine\nM  for methionine\nF  for phenylalanine\nP  for proline\nS  for serine\nT  for threonine or thymine\nW  for tryptophan\nY  for tyrosine\nV  for valine\nU  for uracil",
                "rcsb_description": [
                   {
-                     "text": "Cannonical chemical sequence expressed as string of\n               one-letter amino acid codes. Modifications are coded\n               as the parent amino acid where possible.\n\nA  for alanine or adenine\nB  for ambiguous asparagine/aspartic-acid\nR  for arginine\nN  for asparagine\nD  for aspartic-acid\nC  for cysteine or cystine or cytosine\nQ  for glutamine\nE  for glutamic-acid\nZ  for ambiguous glutamine/glutamic acid\nG  for glycine or guanine\nH  for histidine\nI  for isoleucine\nL  for leucine\nK  for lysine\nM  for methionine\nF  for phenylalanine\nP  for proline\nS  for serine\nT  for threonine or thymine\nW  for tryptophan\nY  for tyrosine\nV  for valine\nU  for uracil",
+                     "text": "Cannonical chemical sequence expressed as string of\n               one-letter amino acid codes. Modifications are coded\n               as the parent amino acid where possible or coded as X otherwise.\n\nA  for alanine or adenine\nB  for ambiguous asparagine/aspartic-acid\nR  for arginine\nN  for asparagine\nD  for aspartic-acid\nC  for cysteine or cystine or cytosine\nQ  for glutamine\nE  for glutamic-acid\nZ  for ambiguous glutamine/glutamic acid\nG  for glycine or guanine\nH  for histidine\nI  for isoleucine\nL  for leucine\nK  for lysine\nM  for methionine\nF  for phenylalanine\nP  for proline\nS  for serine\nT  for threonine or thymine\nW  for tryptophan\nY  for tyrosine\nV  for valine\nU  for uracil",
                      "context": "dictionary"
                   }
                ]
