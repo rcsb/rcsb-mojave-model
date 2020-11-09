@@ -71,6 +71,9 @@ public enum SchemaRegistry {
     UNRELEASED_ENTRIES_JSON("holdings.unreleased.entry.json.schema.name"),
     UNRELEASED_ENTRIES_BSON("validation.unreleased.entry.bson.schema.name"),
 
+    COMBINED_ENTRIES_JSON("holdings.combined.entry.json.schema.name"),
+    COMBINED_ENTRIES_BSON("validation.combined.entry.bson.schema.name"),
+
     SHAPE_DESCRIPTOR_JSON("shape.json.schema.name"),
     SHAPE_DESCRIPTOR_BSON("validation.shape.bson.schema.name"),
 
