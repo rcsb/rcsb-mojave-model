@@ -9,7 +9,7 @@
 
     <groupId>org.rcsb</groupId>
     <artifactId>rcsb-mojave-model</artifactId>
-    <version>1.13.0</version>
+    <version>1.13.1-SNAPSHOT</version>
 
     <properties>
 
@@ -22,7 +22,7 @@
         <project.auto.package>org.rcsb.mojave.auto</project.auto.package>
         <project.enums.package>org.rcsb.mojave.enumeration</project.enums.package>
         
-        <rcsb-json-schema.version>1.13.0</rcsb-json-schema.version>
+        <rcsb-json-schema.version>1.13.1</rcsb-json-schema.version>
 
         <mojave.meta.version>1.1.2</mojave.meta.version>
         <mojave.tools.version>1.2.1</mojave.tools.version>
@@ -54,6 +54,7 @@
         <exch.holdings.current.entries.json.schema.name>json-min-db-repository_holdings-col-repository_holdings_current_entry.json</exch.holdings.current.entries.json.schema.name>
         <exch.holdings.removed.entries.json.schema.name>json-min-db-repository_holdings-col-repository_holdings_removed_entry.json</exch.holdings.removed.entries.json.schema.name>
         <exch.holdings.unreleased.entries.json.schema.name>json-min-db-repository_holdings-col-repository_holdings_unreleased_entry.json</exch.holdings.unreleased.entries.json.schema.name>
+        <exch.holdings.combined.entries.json.schema.name>json-min-db-repository_holdings-col-repository_holdings_combined_entry.json</exch.holdings.combined.entries.json.schema.name>
 
         <!-- ==================================== INTERNAL DW JSON SCHEMAS ========================================= -->
 
@@ -129,6 +130,7 @@
         <holdings.current.entry.json.schema.name>current_entry.json</holdings.current.entry.json.schema.name>
         <holdings.removed.entry.json.schema.name>removed_entry.json</holdings.removed.entry.json.schema.name>
         <holdings.unreleased.entry.json.schema.name>unreleased_entry.json</holdings.unreleased.entry.json.schema.name>
+        <holdings.combined.entry.json.schema.name>combined_entry.json</holdings.combined.entry.json.schema.name>
 
         <core.graph.json.schema.name>rcsb_graph_node.json</core.graph.json.schema.name>
 
@@ -162,6 +164,7 @@
         <validation.current.entry.bson.schema.name>validation-current_entry.json</validation.current.entry.bson.schema.name>
         <validation.removed.entry.bson.schema.name>validation-removed_entry.json</validation.removed.entry.bson.schema.name>
         <validation.unreleased.entry.bson.schema.name>validation-unreleased_entry.json</validation.unreleased.entry.bson.schema.name>
+        <validation.combined.entry.bson.schema.name>validation-combined_entry.json</validation.combined.entry.bson.schema.name>
 
         <validation.shape.bson.schema.name>validation-shape_descriptor.json</validation.shape.bson.schema.name>
 
@@ -644,6 +647,25 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <id>build-combined-entry-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${holdings.combined.entry.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.holdings.combined.entries.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>build-graph-schema</id>
                         <phase>generate-sources</phase>
                         <goals>
@@ -1017,6 +1039,20 @@
                             <arguments>
                                 <argument>${project.build.directory}/${core.schema.location}/${holdings.unreleased.entry.json.schema.name}</argument>
                                 <argument>${project.build.directory}/${validation.schema.location}/${validation.unreleased.entry.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-combined-entry</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${holdings.combined.entry.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.combined.entry.bson.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
