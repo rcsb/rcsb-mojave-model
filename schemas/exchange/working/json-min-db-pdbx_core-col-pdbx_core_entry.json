@@ -20,6 +20,16 @@
                      {
                         "text": "The Open Researcher and Contributor ID (ORCID).",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Structure Author ORCID",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Deposition",
+                        "priority_order": 20
                      }
                   ]
                },
@@ -5264,7 +5274,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Deposition",
-                        "priority_order": 45
+                        "priority_order": 50
                      }
                   ]
                },
@@ -5602,7 +5612,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Deposition",
-                        "priority_order": 40
+                        "priority_order": 45
                      }
                   ]
                },
@@ -5640,7 +5650,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Deposition",
-                        "priority_order": 35
+                        "priority_order": 40
                      }
                   ]
                }
@@ -6657,7 +6667,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Deposition",
-                     "priority_order": 55
+                     "priority_order": 60
                   }
                ]
             },
@@ -11074,7 +11084,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Deposition",
-                     "priority_order": 20
+                     "priority_order": 25
                   }
                ]
             },
@@ -11106,7 +11116,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Deposition",
-                     "priority_order": 50
+                     "priority_order": 55
                   }
                ]
             },
@@ -11134,7 +11144,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Deposition",
-                     "priority_order": 25
+                     "priority_order": 30
                   }
                ]
             },
@@ -11182,7 +11192,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Deposition",
-                     "priority_order": 30
+                     "priority_order": 35
                   }
                ]
             },
@@ -11527,6 +11537,29 @@
                   }
                ]
             },
+            "deposited_hydrogen_atom_count": {
+               "type": "integer",
+               "description": "The number of hydrogen atom coordinates records per deposited structure model.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "The number of hydrogen atom coordinates records per deposited structure model.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Number of Hydrogen Atoms per Deposited Model",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Deposited Entry Features",
+                     "priority_order": 70
+                  }
+               ]
+            },
             "deposited_model_count": {
                "type": "integer",
                "description": "The number of model structures deposited.",
@@ -11546,7 +11579,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Deposited Entry Features",
-                     "priority_order": 75
+                     "priority_order": 80
                   }
                ]
             },
@@ -11651,7 +11684,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Deposited Entry Features",
-                     "priority_order": 70
+                     "priority_order": 75
                   }
                ]
             },
@@ -11735,7 +11768,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Deposited Entry Features",
-                     "priority_order": 80
+                     "priority_order": 85
                   }
                ]
             },
@@ -16009,7 +16042,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.11.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.11.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.11.1"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.11.2",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.11.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.11.2"
 }
