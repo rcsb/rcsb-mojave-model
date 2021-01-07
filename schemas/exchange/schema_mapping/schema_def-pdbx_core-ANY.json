@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "8.12.2",
+   "DATABASE_VERSION": "8.12.3",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -75355,9 +75355,11 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "Nucleic acid (only)",
+                  "Oligosaccharide (only)",
                   "Other",
                   "Protein (only)",
-                  "Protein/NA"
+                  "Protein/NA",
+                  "Protein/Oligosaccharide"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -100782,7 +100784,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "pdbx_core_entry",
-            "VERSION": "8.11.2"
+            "VERSION": "8.11.3"
          },
          {
             "NAME": "pdbx_core_assembly",
