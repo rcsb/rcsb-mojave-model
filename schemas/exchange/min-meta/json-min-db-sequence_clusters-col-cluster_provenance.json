@@ -349,6 +349,23 @@
                      }
                   ]
                },
+               "rcsb_ORCID_identifiers": {
+                  "type": "array",
+                  "items": {
+                     "type": "string",
+                     "examples": [
+                        "0000-0002-6681-547X"
+                     ],
+                     "description": "The Open Researcher and Contributor ID (ORCID) identifiers for the citation authors.",
+                     "rcsb_description": [
+                        {
+                           "text": "The Open Researcher and Contributor ID (ORCID) identifiers for the citation authors.",
+                           "context": "dictionary"
+                        }
+                     ]
+                  },
+                  "uniqueItems": false
+               },
                "rcsb_authors": {
                   "type": "array",
                   "items": {
@@ -913,7 +930,7 @@
    "additionalProperties": false,
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-cluster_provenance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: sequence_clusters collection: cluster_provenance version: 1.4.0",
-   "description": "RCSB Exchange Database JSON schema derived from the sequence_clusters content type schema. This schema supports collection cluster_provenance version 1.4.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-cluster_provenance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 1.4.0"
+   "title": "schema: sequence_clusters collection: cluster_provenance version: 1.5.0",
+   "description": "RCSB Exchange Database JSON schema derived from the sequence_clusters content type schema. This schema supports collection cluster_provenance version 1.5.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-cluster_provenance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 1.5.0"
 }
