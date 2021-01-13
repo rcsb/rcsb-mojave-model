@@ -3796,6 +3796,13 @@
             "pdbx_database_id_PubMed": {
                "bsonType": "int"
             },
+            "rcsb_ORCID_identifiers": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
             "rcsb_authors": {
                "bsonType": "array",
                "items": {

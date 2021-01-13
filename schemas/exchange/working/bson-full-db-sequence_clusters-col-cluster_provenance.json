@@ -86,6 +86,13 @@
                   "bsonType": "int",
                   "minimum": -1
                },
+               "rcsb_ORCID_identifiers": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "string"
+                  },
+                  "uniqueItems": false
+               },
                "rcsb_authors": {
                   "bsonType": "array",
                   "items": {

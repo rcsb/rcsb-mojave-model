@@ -12853,6 +12853,37 @@
                   }
                ]
             },
+            "rcsb_ORCID_identifiers": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "examples": [
+                     "0000-0002-6681-547X"
+                  ],
+                  "description": "The Open Researcher and Contributor ID (ORCID) identifiers for the citation authors.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "The Open Researcher and Contributor ID (ORCID) identifiers for the citation authors.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Primary Citation Author ORCID",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Publications Primary",
+                        "priority_order": 30
+                     }
+                  ]
+               },
+               "uniqueItems": false
+            },
             "rcsb_authors": {
                "type": "array",
                "items": {
@@ -16052,7 +16083,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.11.3",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.11.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.11.3"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.12.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.12.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.12.0"
 }
