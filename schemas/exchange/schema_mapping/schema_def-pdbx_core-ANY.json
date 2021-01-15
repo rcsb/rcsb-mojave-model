@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "8.12.3",
+   "DATABASE_VERSION": "8.13.0",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -85448,6 +85448,7 @@
             "PAGE_LAST": "page_last",
             "PDBX_DATABASE_ID_DOI": "pdbx_database_id_DOI",
             "PDBX_DATABASE_ID_PUBMED": "pdbx_database_id_PubMed",
+            "RCSB_ORCID_IDENTIFIERS": "rcsb_ORCID_identifiers",
             "RCSB_AUTHORS": "rcsb_authors",
             "RCSB_JOURNAL_ABBREV": "rcsb_journal_abbrev",
             "TITLE": "title",
@@ -85559,6 +85560,12 @@
             "PDBX_DATABASE_ID_PUBMED": {
                "CATEGORY": "rcsb_primary_citation",
                "ATTRIBUTE": "pdbx_database_id_PubMed",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_ORCID_IDENTIFIERS": {
+               "CATEGORY": "rcsb_primary_citation",
+               "ATTRIBUTE": "rcsb_ORCID_identifiers",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -85917,8 +85924,26 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RCSB_AUTHORS": {
+            "RCSB_ORCID_IDENTIFIERS": {
                "ORDER": 19,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_AUTHORS": {
+               "ORDER": 20,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -85936,24 +85961,6 @@
                "SUB_CATEGORIES": []
             },
             "RCSB_JOURNAL_ABBREV": {
-               "ORDER": 20,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [
-                  "TRANSLATE_XMLCHARREFS"
-               ],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "TITLE": {
                "ORDER": 21,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -85971,8 +85978,26 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "YEAR": {
+            "TITLE": {
                "ORDER": 22,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "YEAR": {
+               "ORDER": 23,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -100784,7 +100809,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "pdbx_core_entry",
-            "VERSION": "8.11.3"
+            "VERSION": "8.12.0"
          },
          {
             "NAME": "pdbx_core_assembly",
@@ -100804,7 +100829,7 @@
          },
          {
             "NAME": "pdbx_core_polymer_entity_instance",
-            "VERSION": "8.4.0"
+            "VERSION": "8.5.0"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity_instance",
