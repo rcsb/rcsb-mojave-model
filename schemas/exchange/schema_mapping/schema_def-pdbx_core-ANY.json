@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "8.13.0",
+   "DATABASE_VERSION": "8.14.0",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -8414,7 +8414,7 @@
             },
             "OVERALL_PHASE_ERROR": {
                "ORDER": 8,
-               "NULLABLE": false,
+               "NULLABLE": true,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -8428,7 +8428,7 @@
             },
             "OVERALL_PHASE_RESIDUAL": {
                "ORDER": 9,
-               "NULLABLE": false,
+               "NULLABLE": true,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -8470,7 +8470,7 @@
             },
             "R_SYM": {
                "ORDER": 12,
-               "NULLABLE": false,
+               "NULLABLE": true,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -11239,6 +11239,7 @@
                   "HITACHI H7600",
                   "HITACHI HF2000",
                   "HITACHI HF3000",
+                  "JEOL 1000EES",
                   "JEOL 100B",
                   "JEOL 100CX",
                   "JEOL 1010",
@@ -25339,7 +25340,22 @@
                "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
+               "ENUMERATION": [
+                  "g/l",
+                  "mg/ml",
+                  "micromolar",
+                  "millimolar",
+                  "molar",
+                  "nanomolar",
+                  "ng/ul",
+                  "percent",
+                  "percent_volume_by_volume",
+                  "percent_volume_by_weight",
+                  "percent_weight_by_volume",
+                  "percent_weight_by_weight",
+                  "ug/ml",
+                  "ug/ul"
+               ],
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             },
@@ -25529,7 +25545,11 @@
                "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
+               "ENUMERATION": [
+                  "microliter",
+                  "milliliter",
+                  "nanoliter"
+               ],
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             }
@@ -66641,7 +66661,7 @@
                   "CATH",
                   "MOGUL_ANGLE_OUTLIER",
                   "MOGUL_BOND_OUTLIER",
-                  "RSRCC_OUTLIER",
+                  "RSCC_OUTLIER",
                   "RSRZ_OUTLIER",
                   "SCOP",
                   "UNOBSERVED_ATOM_XYZ",
@@ -67054,7 +67074,7 @@
                   "CATH",
                   "MOGUL_ANGLE_OUTLIER",
                   "MOGUL_BOND_OUTLIER",
-                  "RSRCC_OUTLIER",
+                  "RSCC_OUTLIER",
                   "RSRZ_OUTLIER",
                   "SCOP",
                   "UNOBSERVED_ATOM_XYZ",
@@ -71823,7 +71843,7 @@
                   "MOGUL_BOND_OUTLIER",
                   "RAMACHANDRAN_OUTLIER",
                   "ROTAMER_OUTLIER",
-                  "RSRCC_OUTLIER",
+                  "RSCC_OUTLIER",
                   "RSRZ_OUTLIER",
                   "SCOP",
                   "SHEET",
@@ -72523,7 +72543,7 @@
                   "MOGUL_BOND_OUTLIER",
                   "RAMACHANDRAN_OUTLIER",
                   "ROTAMER_OUTLIER",
-                  "RSRCC_OUTLIER",
+                  "RSCC_OUTLIER",
                   "RSRZ_OUTLIER"
                ],
                "CONTENT_CLASSES": [
@@ -72864,7 +72884,7 @@
                   "MOGUL_BOND_OUTLIER",
                   "RAMACHANDRAN_OUTLIER",
                   "ROTAMER_OUTLIER",
-                  "RSRCC_OUTLIER",
+                  "RSCC_OUTLIER",
                   "RSRZ_OUTLIER"
                ],
                "CONTENT_CLASSES": [
@@ -78719,7 +78739,7 @@
                   "HAS_METAL_COORDINATION_LINKAGE",
                   "MOGUL_ANGLE_OUTLIER",
                   "MOGUL_BOND_OUTLIER",
-                  "RSRCC_OUTLIER",
+                  "RSCC_OUTLIER",
                   "RSRZ_OUTLIER"
                ],
                "CONTENT_CLASSES": [
@@ -79150,7 +79170,7 @@
                   "HAS_METAL_COORDINATION_LINKAGE",
                   "MOGUL_ANGLE_OUTLIER",
                   "MOGUL_BOND_OUTLIER",
-                  "RSRCC_OUTLIER",
+                  "RSCC_OUTLIER",
                   "RSRZ_OUTLIER"
                ],
                "CONTENT_CLASSES": [
@@ -84096,7 +84116,7 @@
                   "MOGUL_BOND_OUTLIER",
                   "RAMACHANDRAN_OUTLIER",
                   "ROTAMER_OUTLIER",
-                  "RSRCC_OUTLIER",
+                  "RSCC_OUTLIER",
                   "RSRZ_OUTLIER",
                   "SCOP",
                   "SHEET",
@@ -84517,7 +84537,7 @@
                   "MOGUL_BOND_OUTLIER",
                   "RAMACHANDRAN_OUTLIER",
                   "ROTAMER_OUTLIER",
-                  "RSRCC_OUTLIER",
+                  "RSCC_OUTLIER",
                   "RSRZ_OUTLIER",
                   "SCOP",
                   "SHEET",
@@ -100809,7 +100829,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "pdbx_core_entry",
-            "VERSION": "8.12.0"
+            "VERSION": "8.13.0"
          },
          {
             "NAME": "pdbx_core_assembly",
@@ -100829,15 +100849,15 @@
          },
          {
             "NAME": "pdbx_core_polymer_entity_instance",
-            "VERSION": "8.5.0"
+            "VERSION": "8.6.0"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity_instance",
-            "VERSION": "8.3.0"
+            "VERSION": "8.4.0"
          },
          {
             "NAME": "pdbx_core_branched_entity_instance",
-            "VERSION": "8.4.0"
+            "VERSION": "8.5.0"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {

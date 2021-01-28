@@ -2,7 +2,7 @@
    "NAME": "sequence_clusters",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "sequence_clusters",
-   "DATABASE_VERSION": "5.5.0",
+   "DATABASE_VERSION": "5.5.1",
    "SELECTION_FILTERS": {},
    "SCHEMA_DICT": {
       "CITATION": {
@@ -38,6 +38,7 @@
             "PAGE_LAST": "page_last",
             "PDBX_DATABASE_ID_DOI": "pdbx_database_id_DOI",
             "PDBX_DATABASE_ID_PUBMED": "pdbx_database_id_PubMed",
+            "PDBX_DATABASE_ID_PATENT": "pdbx_database_id_patent",
             "RCSB_ORCID_IDENTIFIERS": "rcsb_ORCID_identifiers",
             "RCSB_AUTHORS": "rcsb_authors",
             "RCSB_IS_PRIMARY": "rcsb_is_primary",
@@ -188,6 +189,12 @@
             "PDBX_DATABASE_ID_PUBMED": {
                "CATEGORY": "citation",
                "ATTRIBUTE": "pdbx_database_id_PubMed",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PDBX_DATABASE_ID_PATENT": {
+               "CATEGORY": "citation",
+               "ATTRIBUTE": "pdbx_database_id_patent",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -624,8 +631,24 @@
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             },
-            "RCSB_ORCID_IDENTIFIERS": {
+            "PDBX_DATABASE_ID_PATENT": {
                "ORDER": 25,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ORCID_IDENTIFIERS": {
+               "ORDER": 26,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -641,7 +664,7 @@
                "SUB_CATEGORIES": []
             },
             "RCSB_AUTHORS": {
-               "ORDER": 26,
+               "ORDER": 27,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -657,7 +680,7 @@
                "SUB_CATEGORIES": []
             },
             "RCSB_IS_PRIMARY": {
-               "ORDER": 27,
+               "ORDER": 28,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -676,22 +699,6 @@
                "SUB_CATEGORIES": []
             },
             "RCSB_JOURNAL_ABBREV": {
-               "ORDER": 28,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [
-                  "TRANSLATE_XMLCHARREFS"
-               ],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [],
-               "SUB_CATEGORIES": []
-            },
-            "TITLE": {
                "ORDER": 29,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -707,8 +714,24 @@
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             },
-            "UNPUBLISHED_FLAG": {
+            "TITLE": {
                "ORDER": 30,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "UNPUBLISHED_FLAG": {
+               "ORDER": 31,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -727,7 +750,7 @@
                "SUB_CATEGORIES": []
             },
             "YEAR": {
-               "ORDER": 31,
+               "ORDER": 32,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -1726,7 +1749,7 @@
          },
          {
             "NAME": "cluster_provenance",
-            "VERSION": "1.5.0"
+            "VERSION": "1.6.0"
          },
          {
             "NAME": "entity_members",
