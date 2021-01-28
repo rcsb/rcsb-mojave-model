@@ -3440,6 +3440,7 @@
                      "HITACHI H7600",
                      "HITACHI HF2000",
                      "HITACHI HF3000",
+                     "JEOL 1000EES",
                      "JEOL 100B",
                      "JEOL 100CX",
                      "JEOL 1010",
@@ -9412,10 +9413,10 @@
                },
                "protein_length": {
                   "type": "string",
-                  "description": "The length (or range) of the protein sample under study.\nIf the solution structure is approximated as an elongated elliptical\ncyclinder the the length L is determined from,\n\n  L = sqrt [12( (R_G)^2  -  (R_XS)^2 ) ]\n\nThe length should also be given by\n\n  L = pi I(0) / [ I(Q).Q]_Q->0",
+                  "description": "The length (or range) of the protein sample under study.\nIf the solution structure is approximated as an elongated elliptical\ncyclinder the length L is determined from,\n\n  L = sqrt [12( (R_G)^2  -  (R_XS)^2 ) ]\n\nThe length should also be given by\n\n  L = pi I(0) / [ I(Q).Q]_Q->0",
                   "rcsb_description": [
                      {
-                        "text": "The length (or range) of the protein sample under study.\nIf the solution structure is approximated as an elongated elliptical\ncyclinder the the length L is determined from,\n\n  L = sqrt [12( (R_G)^2  -  (R_XS)^2 ) ]\n\nThe length should also be given by\n\n  L = pi I(0) / [ I(Q).Q]_Q->0",
+                        "text": "The length (or range) of the protein sample under study.\nIf the solution structure is approximated as an elongated elliptical\ncyclinder the length L is determined from,\n\n  L = sqrt [12( (R_G)^2  -  (R_XS)^2 ) ]\n\nThe length should also be given by\n\n  L = pi I(0) / [ I(Q).Q]_Q->0",
                         "context": "dictionary"
                      }
                   ]
@@ -14562,18 +14563,18 @@
                },
                "d_resolution_high": {
                   "type": "number",
-                  "description": "The smallest value for the interplanar spacings for\n the reflection data. This is called the highest resolution.",
+                  "description": "The smallest value in angstroms for the interplanar spacings\n for the reflection data. This is called the highest resolution.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "The smallest value for the interplanar spacings for\n the reflection data. This is called the highest resolution.",
+                        "text": "The smallest value in angstroms for the interplanar spacings\n for the reflection data. This is called the highest resolution.",
                         "context": "dictionary"
                      },
                      {
-                        "text": "The high resolution limit of data collection.  This high resolution limit used for data refinement might be less than this",
+                        "text": "The high resolution limit used for data processing.  The high resolution limit actually used for structure solution or model refinement might be lower than this.",
                         "context": "deposition"
                      },
                      {
@@ -14584,15 +14585,15 @@
                },
                "d_resolution_low": {
                   "type": "number",
-                  "description": "The largest value for the interplanar spacings for the\n reflection data. This is called the lowest resolution.",
+                  "description": "The largest value in angstroms for the interplanar spacings\n for the reflection data. This is called the lowest resolution.",
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "The largest value for the interplanar spacings for the\n reflection data. This is called the lowest resolution.",
+                        "text": "The largest value in angstroms for the interplanar spacings\n for the reflection data. This is called the lowest resolution.",
                         "context": "dictionary"
                      },
                      {
-                        "text": "The low resolution limit used for data collection",
+                        "text": "The low resolution limit used for data processing.  The low resolution limit actually used for structure solution or model refinement might be higher than this.\"",
                         "context": "deposition"
                      }
                   ]
@@ -15109,7 +15110,7 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "For this resolution shell, the high resolution limit collected",
+                        "text": "For this resolution shell, the high resolution limit processed.",
                         "context": "deposition"
                      }
                   ]
@@ -15124,7 +15125,7 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "For this resolution shell, the low resolution limit",
+                        "text": "For this resolution shell, the low resolution limit processed.",
                         "context": "deposition"
                      }
                   ]
@@ -16083,7 +16084,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.12.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.12.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.12.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.13.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.13.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.13.0"
 }
