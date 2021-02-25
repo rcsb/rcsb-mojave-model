@@ -47,6 +47,9 @@ public enum SchemaRegistry {
     CORE_NCBI_JSON("core.ncbi.json.schema.name"),
     CORE_NCBI_BSON("validation.ncbi.bson.schema.name"),
 
+    CORE_TCGA_JSON("core.tcga.json.schema.name"),
+    CORE_TCGA_BSON("validation.tcga.bson.schema.name"),
+
     CORE_BIRD_CHEMCOMP_JSON("core.bird.chemcomp.json.schema.name"),
     CORE_BIRD_CHEMCOMP_BSON("validation.bird.chemcomp.bson.schema.name"),
 

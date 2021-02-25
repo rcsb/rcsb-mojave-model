@@ -9,7 +9,7 @@
 
     <groupId>org.rcsb</groupId>
     <artifactId>rcsb-mojave-model</artifactId>
-    <version>1.17.1-SNAPSHOT</version>
+    <version>1.17.1-TCGA-SNAPSHOT</version>
 
     <properties>
 
@@ -21,8 +21,8 @@
 
         <project.auto.package>org.rcsb.mojave.auto</project.auto.package>
         <project.enums.package>org.rcsb.mojave.enumeration</project.enums.package>
-        
-        <rcsb-json-schema.version>1.17.0</rcsb-json-schema.version>
+
+        <rcsb-json-schema.version>1.17.1-TCGA-SNAPSHOT</rcsb-json-schema.version>
 
         <mojave.meta.version>1.1.2</mojave.meta.version>
         <mojave.tools.version>1.2.1</mojave.tools.version>
@@ -78,6 +78,7 @@
         <rcsb.core.uniprot.json.schema.name>json-schema-core_uniprot.json</rcsb.core.uniprot.json.schema.name>
         <rcsb.core.pubmed.json.schema.name>json-schema-core_pubmed.json</rcsb.core.pubmed.json.schema.name>
         <rcsb.core.ncbi.json.schema.name>json-schema-core_ncbi.json</rcsb.core.ncbi.json.schema.name>
+        <rcsb.core.tcga.json.schema.name>json-schema-core_tcga.json</rcsb.core.tcga.json.schema.name>
         <rcsb.core.pfam.json.schema.name>json-schema-core_pfam.json</rcsb.core.pfam.json.schema.name>
 
         <rcsb.tree.json.schema.name>json-schema-rcsb_tree_node.json</rcsb.tree.json.schema.name>
@@ -125,6 +126,7 @@
         <core.uniprot.json.schema.name>core_uniprot.json</core.uniprot.json.schema.name>
         <core.pubmed.json.schema.name>core_pubmed.json</core.pubmed.json.schema.name>
         <core.ncbi.json.schema.name>core_ncbi.json</core.ncbi.json.schema.name>
+        <core.tcga.json.schema.name>core_tcga.json</core.tcga.json.schema.name>
         <core.pfam.json.schema.name>core_pfam.json</core.pfam.json.schema.name>
 
         <holdings.current.entry.json.schema.name>current_entry.json</holdings.current.entry.json.schema.name>
@@ -158,6 +160,7 @@
         <validation.uniprot.bson.schema.name>validation-core_uniprot.json</validation.uniprot.bson.schema.name>
         <validation.pubmed.bson.schema.name>validation-core_pubmed.json</validation.pubmed.bson.schema.name>
         <validation.ncbi.bson.schema.name>validation-core_ncbi.json</validation.ncbi.bson.schema.name>
+        <validation.tcga.bson.schema.name>validation-core_tcga.json</validation.tcga.bson.schema.name>
 
         <validation.graph.bson.schema.name>validation-rcsb_graph_node.json</validation.graph.bson.schema.name>
 
@@ -552,6 +555,27 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <id>build-core-tcga-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.tcga.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.tcga.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>build-core-bird-chem-comp-schema</id>
                         <phase>generate-sources</phase>
                         <goals>
@@ -941,6 +965,20 @@
                             <arguments>
                                 <argument>${project.build.directory}/${core.schema.location}/${core.ncbi.json.schema.name}</argument>
                                 <argument>${project.build.directory}/${validation.schema.location}/${validation.ncbi.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-tcga</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.tcga.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.tcga.bson.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
