@@ -30,6 +30,57 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "rcsb_ligand_neighbors": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "alt_id": {
+                  "bsonType": "string"
+               },
+               "atom_id": {
+                  "bsonType": "string"
+               },
+               "comp_id": {
+                  "bsonType": "string"
+               },
+               "distance": {
+                  "bsonType": "double"
+               },
+               "ligand_alt_id": {
+                  "bsonType": "string"
+               },
+               "ligand_asym_id": {
+                  "bsonType": "string"
+               },
+               "ligand_atom_id": {
+                  "bsonType": "string"
+               },
+               "ligand_comp_id": {
+                  "bsonType": "string"
+               },
+               "ligand_entity_id": {
+                  "bsonType": "string"
+               },
+               "ligand_is_bound": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "ligand_model_id": {
+                  "bsonType": "int"
+               },
+               "seq_id": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_polymer_entity_instance_container_identifiers": {
          "bsonType": "object",
          "properties": {
@@ -169,6 +220,7 @@
                      "RSRZ_OUTLIER",
                      "SCOP",
                      "SHEET",
+                     "STEREO_OUTLIER",
                      "UNASSIGNED_SEC_STRUCT",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
@@ -250,6 +302,7 @@
                      "RSRZ_OUTLIER",
                      "SCOP",
                      "SHEET",
+                     "STEREO_OUTLIER",
                      "UNASSIGNED_SEC_STRUCT",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
