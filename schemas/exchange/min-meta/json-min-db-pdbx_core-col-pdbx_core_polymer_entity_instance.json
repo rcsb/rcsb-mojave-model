@@ -65,6 +65,218 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "rcsb_ligand_neighbors": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "alt_id": {
+                  "type": "string",
+                  "description": "Alternate conformer identifier for the target instance.",
+                  "rcsb_description": [
+                     {
+                        "text": "Alternate conformer identifier for the target instance.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "atom_id": {
+                  "type": "string",
+                  "examples": [
+                     "O1",
+                     "N1",
+                     "C1"
+                  ],
+                  "description": "The atom identifier for the target instance.",
+                  "rcsb_description": [
+                     {
+                        "text": "The atom identifier for the target instance.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "comp_id": {
+                  "type": "string",
+                  "description": "Component identifier for the target instance.",
+                  "rcsb_description": [
+                     {
+                        "text": "Component identifier for the target instance.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "distance": {
+                  "type": "number",
+                  "description": "Distance value for this ligand interaction.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
+                  "rcsb_units": "angstroms",
+                  "rcsb_description": [
+                     {
+                        "text": "Distance value for this ligand interaction.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Ligand Neighbor Distance",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "ligand_alt_id": {
+                  "type": "string",
+                  "description": "Alternate conformer identifier for the ligand interaction.",
+                  "rcsb_description": [
+                     {
+                        "text": "Alternate conformer identifier for the ligand interaction.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ligand_asym_id": {
+                  "type": "string",
+                  "examples": [
+                     "A",
+                     "B"
+                  ],
+                  "description": "The entity instance identifier for the ligand interaction.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "The entity instance identifier for the ligand interaction.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Ligand Entity Instance Identifer",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "ligand_atom_id": {
+                  "type": "string",
+                  "examples": [
+                     "OG",
+                     "OE1",
+                     "CD1"
+                  ],
+                  "description": "The atom identifier for the ligand interaction.",
+                  "rcsb_description": [
+                     {
+                        "text": "The atom identifier for the ligand interaction.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ligand_comp_id": {
+                  "type": "string",
+                  "examples": [
+                     "ASN",
+                     "TRP",
+                     "SER"
+                  ],
+                  "description": "The chemical component identifier for the ligand interaction.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "The chemical component identifier for the ligand interaction.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Ligand Component Identifier",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "ligand_entity_id": {
+                  "type": "string",
+                  "examples": [
+                     "1",
+                     "2"
+                  ],
+                  "description": "The entity identifier for the ligand of interaction.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "The entity identifier for the ligand of interaction.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Ligand Entity Identifier",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "ligand_is_bound": {
+                  "type": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ],
+                  "examples": [
+                     "Y",
+                     "N"
+                  ],
+                  "description": "A flag to indicate the nature of the ligand interaction is covalent or metal-coordination.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "N",
+                        "detail": "The target is not bound"
+                     },
+                     {
+                        "value": "Y",
+                        "detail": "The target is bound through a covalent or metal-coordination interaction"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "A flag to indicate the nature of the ligand interaction is covalent or metal-coordination.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Ligand is Bound to Ligand",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "ligand_model_id": {
+                  "type": "integer",
+                  "description": "Model identifier for the ligand interaction.",
+                  "rcsb_description": [
+                     {
+                        "text": "Model identifier for the ligand interaction.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "seq_id": {
+                  "type": "integer",
+                  "description": "The sequence position for the target instance.",
+                  "rcsb_description": [
+                     {
+                        "text": "The sequence position for the target instance.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_polymer_entity_instance_container_identifiers": {
          "type": "object",
          "properties": {
@@ -590,6 +802,7 @@
                      "RSRZ_OUTLIER",
                      "SCOP",
                      "SHEET",
+                     "STEREO_OUTLIER",
                      "UNASSIGNED_SEC_STRUCT",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
@@ -657,6 +870,10 @@
                      {
                         "value": "SHEET",
                         "detail": "Beta-sheets"
+                     },
+                     {
+                        "value": "STEREO_OUTLIER",
+                        "detail": "Stereochemical/chirality outlier"
                      },
                      {
                         "value": "UNASSIGNED_SEC_STRUCT",
@@ -886,6 +1103,7 @@
                      "RSRZ_OUTLIER",
                      "SCOP",
                      "SHEET",
+                     "STEREO_OUTLIER",
                      "UNASSIGNED_SEC_STRUCT",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
@@ -957,6 +1175,10 @@
                      {
                         "value": "SHEET",
                         "detail": "Beta-sheets"
+                     },
+                     {
+                        "value": "STEREO_OUTLIER",
+                        "detail": "Stereochemical/chirality outlier"
                      },
                      {
                         "value": "UNASSIGNED_SEC_STRUCT",
@@ -1441,7 +1663,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 8.6.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 8.6.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.6.0"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 8.7.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 8.7.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.7.0"
 }

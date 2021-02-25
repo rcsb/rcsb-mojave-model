@@ -156,7 +156,8 @@
                      "MOGUL_ANGLE_OUTLIER",
                      "MOGUL_BOND_OUTLIER",
                      "RSCC_OUTLIER",
-                     "RSRZ_OUTLIER"
+                     "RSRZ_OUTLIER",
+                     "STEREO_OUTLIER"
                   ]
                },
                "feature_value": {
@@ -230,7 +231,81 @@
                      "MOGUL_ANGLE_OUTLIER",
                      "MOGUL_BOND_OUTLIER",
                      "RSCC_OUTLIER",
-                     "RSRZ_OUTLIER"
+                     "RSRZ_OUTLIER",
+                     "STEREO_OUTLIER"
+                  ]
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_nonpolymer_instance_validation_score": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "RSCC": {
+                  "bsonType": "double"
+               },
+               "RSR": {
+                  "bsonType": "double"
+               },
+               "alt_id": {
+                  "bsonType": "string"
+               },
+               "completeness": {
+                  "bsonType": "double"
+               },
+               "intermolecular_clashes": {
+                  "bsonType": "int"
+               },
+               "is_best_instance": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "is_subject_of_investigation": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "mogul_angle_outliers": {
+                  "bsonType": "int"
+               },
+               "mogul_angles_RMSZ": {
+                  "bsonType": "double"
+               },
+               "mogul_bond_outliers": {
+                  "bsonType": "int"
+               },
+               "mogul_bonds_RMSZ": {
+                  "bsonType": "double"
+               },
+               "ranking_model_fit": {
+                  "bsonType": "double"
+               },
+               "ranking_model_geometry": {
+                  "bsonType": "double"
+               },
+               "score_model_fit": {
+                  "bsonType": "double"
+               },
+               "score_model_geometry": {
+                  "bsonType": "double"
+               },
+               "stereo_outliers": {
+                  "bsonType": "int"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "RCSB_LIGAND_QUALITY_SCORE_2021"
                   ]
                }
             },
@@ -352,6 +427,57 @@
             "required": [
                "ordinal_id"
             ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_target_neighbors": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "alt_id": {
+                  "bsonType": "string"
+               },
+               "atom_id": {
+                  "bsonType": "string"
+               },
+               "comp_id": {
+                  "bsonType": "string"
+               },
+               "distance": {
+                  "bsonType": "double"
+               },
+               "target_asym_id": {
+                  "bsonType": "string"
+               },
+               "target_atom_id": {
+                  "bsonType": "string"
+               },
+               "target_auth_seq_id": {
+                  "bsonType": "int"
+               },
+               "target_comp_id": {
+                  "bsonType": "string"
+               },
+               "target_entity_id": {
+                  "bsonType": "string"
+               },
+               "target_is_bound": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "target_model_id": {
+                  "bsonType": "int"
+               },
+               "target_seq_id": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false
          },
          "minItems": 1,
          "uniqueItems": true
