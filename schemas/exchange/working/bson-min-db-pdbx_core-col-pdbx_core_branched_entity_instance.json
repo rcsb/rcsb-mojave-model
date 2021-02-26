@@ -156,6 +156,7 @@
                      "RSCC_OUTLIER",
                      "RSRZ_OUTLIER",
                      "SCOP",
+                     "STEREO_OUTLIER",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
                      "ZERO_OCCUPANCY_ATOM_XYZ",
@@ -260,6 +261,7 @@
                      "RSCC_OUTLIER",
                      "RSRZ_OUTLIER",
                      "SCOP",
+                     "STEREO_OUTLIER",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
                      "ZERO_OCCUPANCY_ATOM_XYZ",
@@ -383,6 +385,60 @@
             "required": [
                "ordinal_id"
             ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_ligand_neighbors": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "alt_id": {
+                  "bsonType": "string"
+               },
+               "atom_id": {
+                  "bsonType": "string"
+               },
+               "auth_seq_id": {
+                  "bsonType": "int"
+               },
+               "comp_id": {
+                  "bsonType": "string"
+               },
+               "distance": {
+                  "bsonType": "double"
+               },
+               "ligand_alt_id": {
+                  "bsonType": "string"
+               },
+               "ligand_asym_id": {
+                  "bsonType": "string"
+               },
+               "ligand_atom_id": {
+                  "bsonType": "string"
+               },
+               "ligand_comp_id": {
+                  "bsonType": "string"
+               },
+               "ligand_entity_id": {
+                  "bsonType": "string"
+               },
+               "ligand_is_bound": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "ligand_model_id": {
+                  "bsonType": "int"
+               },
+               "seq_id": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false
          },
          "minItems": 1,
          "uniqueItems": true

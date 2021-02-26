@@ -8551,6 +8551,67 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "pdbx_related_exp_data_set": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "data_reference": {
+                  "type": "string",
+                  "examples": [
+                     "10.000/10002/image_data/cif"
+                  ],
+                  "description": "A DOI reference to the related data set.",
+                  "rcsb_description": [
+                     {
+                        "text": "A DOI reference to the related data set.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "data_set_type": {
+                  "type": "string",
+                  "examples": [
+                     "diffraction image data",
+                     "NMR free induction decay data"
+                  ],
+                  "description": "The type of the experimenatal data set.",
+                  "rcsb_description": [
+                     {
+                        "text": "The type of the experimenatal data set.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "details": {
+                  "type": "string",
+                  "description": "Additional details describing the content of the related data set and its application to\n the current investigation.",
+                  "rcsb_description": [
+                     {
+                        "text": "Additional details describing the content of the related data set and its application to\n the current investigation.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "metadata_reference": {
+                  "type": "string",
+                  "examples": [
+                     "10.000/10002/image_data/txt"
+                  ],
+                  "description": "A DOI reference to the metadata decribing the related data set.",
+                  "rcsb_description": [
+                     {
+                        "text": "A DOI reference to the metadata decribing the related data set.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_serial_crystallography_data_reduction": {
          "type": "array",
          "items": {
@@ -16084,7 +16145,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.13.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.13.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.13.0"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.14.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.14.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.14.0"
 }
