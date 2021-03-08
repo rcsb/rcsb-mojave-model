@@ -86,6 +86,7 @@
 
         <!-- schemas for annotations -->
         <rcsb.annotations.uniprot.json.schema.name>json-schema-annotations_uniprot.json</rcsb.annotations.uniprot.json.schema.name>
+        <rcsb.annotations.tcga.json.schema.name>json-schema-annotations_tcga.json</rcsb.annotations.tcga.json.schema.name>
         <rcsb.annotations.polymer.entity.json.schema.name>json-schema-annotations_polymer_entity.json</rcsb.annotations.polymer.entity.json.schema.name>
         <rcsb.annotations.polymer.entity.instance.json.schema.name>json-schema-annotations_polymer_entity_instance.json</rcsb.annotations.polymer.entity.instance.json.schema.name>
 
@@ -139,6 +140,7 @@
         <shape.json.schema.name>shape_descriptor.json</shape.json.schema.name>
 
         <annotations.uniprot.json.schema.name>annotations_uniprot.json</annotations.uniprot.json.schema.name>
+        <annotations.tcga.json.schema.name>annotations_tcga.json</annotations.tcga.json.schema.name>
         <annotations.polymer.entity.json.schema.name>annotations_polymer_entity.json</annotations.polymer.entity.json.schema.name>
         <annotations.polymer.entity.instance.json.schema.name>annotations_polymer_entity_instance.json</annotations.polymer.entity.instance.json.schema.name>
 
@@ -172,6 +174,7 @@
         <validation.shape.bson.schema.name>validation-shape_descriptor.json</validation.shape.bson.schema.name>
 
         <validation.annotations.uniprot.bson.schema.name>validation-annotations_uniprot.json</validation.annotations.uniprot.bson.schema.name>
+        <validation.annotations.tcga.bson.schema.name>validation-annotations_tcga.json</validation.annotations.tcga.bson.schema.name>
         <validation.annotations.polymer.entity.bson.schema.name>validation-annotations_polymer_entity.json</validation.annotations.polymer.entity.bson.schema.name>
         <validation.annotations.polymer.entity.instance.bson.schema.name>validation-annotations_polymer_entity_instance.json</validation.annotations.polymer.entity.instance.bson.schema.name>
 
@@ -770,6 +773,28 @@
                     </execution>
 
                     <execution>
+                        <id>build-tcga-annotations-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${annotations.tcga.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.annotations.json.schemas.location}/${rcsb.annotations.tcga.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                    <execution>
                         <id>build-entity-annotations-schema</id>
                         <phase>generate-sources</phase>
                         <goals>
@@ -1119,6 +1144,20 @@
                             <arguments>
                                 <argument>${project.build.directory}/${core.schema.location}/${annotations.uniprot.json.schema.name}</argument>
                                 <argument>${project.build.directory}/${validation.schema.location}/${validation.annotations.uniprot.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-annotations_tcga</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${annotations.tcga.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.annotations.tcga.bson.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>

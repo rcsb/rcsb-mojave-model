@@ -83,6 +83,9 @@ public enum SchemaRegistry {
     ANNOTATIONS_UNIPROT_DESCRIPTOR_JSON("annotations.uniprot.json.schema.name"),
     ANNOTATIONS_UNIPROT_DESCRIPTOR_BSON("validation.annotations.uniprot.bson.schema.name"),
 
+    ANNOTATIONS_TCGA_DESCRIPTOR_JSON("annotations.tcga.json.schema.name"),
+    ANNOTATIONS_TCGA_DESCRIPTOR_BSON("validation.annotations.tcga.bson.schema.name"),
+
     ANNOTATIONS_POLYMER_ENTITY_DESCRIPTOR_JSON("annotations.polymer.entity.json.schema.name"),
     ANNOTATIONS_POLYMER_ENTITY_DESCRIPTOR_BSON("validation.annotations.polymer.entity.bson.schema.name"),
 
