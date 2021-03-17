@@ -195,6 +195,35 @@
                },
                "value": {
                   "bsonType": "double"
+               },
+               "additional_properties": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "name": {
+                           "bsonType": "string"
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "anyOf": [
+                                 {
+                                    "bsonType": "string"
+                                 },
+                                 {
+                                    "bsonType": "int"
+                                 },
+                                 {
+                                    "bsonType": "double"
+                                 }
+                              ]
+                           }
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false
