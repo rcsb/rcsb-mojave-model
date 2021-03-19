@@ -255,6 +255,47 @@
                      ]
                   },
                   "uniqueItems": false
+               },
+               "additional_properties": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "name": {
+                           "bsonType": "string",
+                           "enum": [
+                              "CATH_DOMAIN_ID",
+                              "CATH_NAME",
+                              "OMEGA_ANGLE",
+                              "PARTNER_ASYM_ID",
+                              "PARTNER_BOND_DISTANCE",
+                              "PARTNER_COMP_ID",
+                              "SCOP_DOMAIN_ID",
+                              "SCOP_NAME",
+                              "SCOP_SUN_ID",
+                              "SHEET_SENSE"
+                           ]
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "anyOf": [
+                                 {
+                                    "bsonType": "string"
+                                 },
+                                 {
+                                    "bsonType": "int"
+                                 },
+                                 {
+                                    "bsonType": "double"
+                                 }
+                              ]
+                           }
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false,

@@ -683,6 +683,53 @@
                         "context": "dictionary"
                      }
                   ]
+               },
+               "additional_properties": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "name": {
+                           "type": "string",
+                           "description": "The additional property name.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The additional property name.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "values": {
+                           "type": "array",
+                           "items": {
+                              "anyOf": [
+                                 {
+                                    "type": "string"
+                                 },
+                                 {
+                                    "type": "integer"
+                                 },
+                                 {
+                                    "type": "number"
+                                 }
+                              ]
+                           },
+                           "examples": [
+                              "2.54",
+                              "300"
+                           ],
+                           "description": "The value(s) of the additional property.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The value(s) of the additional property.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false
@@ -881,7 +928,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity version: 8.2.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity version 8.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.2.0"
+   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity version: 8.3.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity version 8.3.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.3.0"
 }
