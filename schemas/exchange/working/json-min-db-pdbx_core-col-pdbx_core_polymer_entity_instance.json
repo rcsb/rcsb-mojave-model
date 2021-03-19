@@ -977,6 +977,112 @@
                      ]
                   },
                   "uniqueItems": false
+               },
+               "additional_properties": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "name": {
+                           "type": "string",
+                           "enum": [
+                              "CATH_DOMAIN_ID",
+                              "CATH_NAME",
+                              "OMEGA_ANGLE",
+                              "PARTNER_ASYM_ID",
+                              "PARTNER_BOND_DISTANCE",
+                              "PARTNER_COMP_ID",
+                              "SCOP_DOMAIN_ID",
+                              "SCOP_NAME",
+                              "SCOP_SUN_ID",
+                              "SHEET_SENSE"
+                           ],
+                           "examples": [
+                              "CATH_NAME",
+                              "PARTNER_BOND_DISTANCE"
+                           ],
+                           "description": "The additional property name.",
+                           "rcsb_enum_annotated": [
+                              {
+                                 "value": "CATH_DOMAIN_ID",
+                                 "detail": "CATH Domain Identifier"
+                              },
+                              {
+                                 "value": "CATH_NAME",
+                                 "detail": "CATH Classification Name"
+                              },
+                              {
+                                 "value": "OMEGA_ANGLE",
+                                 "detail": "Cis-Peptide Omega Angle"
+                              },
+                              {
+                                 "value": "PARTNER_ASYM_ID",
+                                 "detail": "Binding Partner Instance Identifier"
+                              },
+                              {
+                                 "value": "PARTNER_BOND_DISTANCE",
+                                 "detail": "Binding Bond Distance"
+                              },
+                              {
+                                 "value": "PARTNER_COMP_ID",
+                                 "detail": "Binding Partner Chemical Component Identifier"
+                              },
+                              {
+                                 "value": "SCOP_DOMAIN_ID",
+                                 "detail": "SCOP Domain Identifier"
+                              },
+                              {
+                                 "value": "SCOP_NAME",
+                                 "detail": "SCOP Classification Name"
+                              },
+                              {
+                                 "value": "SCOP_SUN_ID",
+                                 "detail": "SCOP Unique Identifier"
+                              },
+                              {
+                                 "value": "SHEET_SENSE",
+                                 "detail": "Secondary Structure Sheet Sense"
+                              }
+                           ],
+                           "rcsb_description": [
+                              {
+                                 "text": "The additional property name.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "values": {
+                           "type": "array",
+                           "items": {
+                              "anyOf": [
+                                 {
+                                    "type": "string"
+                                 },
+                                 {
+                                    "type": "integer"
+                                 },
+                                 {
+                                    "type": "number"
+                                 }
+                              ]
+                           },
+                           "examples": [
+                              "globin-like",
+                              "2.54",
+                              "300"
+                           ],
+                           "description": "The value(s) of the additional property.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The value(s) of the additional property.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false,
@@ -1673,7 +1779,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 8.7.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 8.7.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.7.1"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 8.8.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 8.8.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.8.0"
 }
