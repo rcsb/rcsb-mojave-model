@@ -6,6 +6,8 @@ import org.rcsb.mojave.tools.jsonschema.SchemaLoader;
 import org.rcsb.mojave.tools.jsonschema.model.JsonSchemaInstance;
 import org.rcsb.mojave.tools.utils.CommonUtils;
 import org.rcsb.mojave.tools.utils.ConfigurableMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,6 +24,8 @@ import static org.junit.Assert.assertTrue;
  */
 public class TestTypeDuplicates {
 
+    private static final Logger logger = LoggerFactory.getLogger(TestTypeDuplicates.class);
+
     private void checkEqualType(String name, JsonSchemaInstance registered, JsonSchemaInstance duplicated) {
 
         if (registered.getType().equals(TypeEnum.ARRAY.value())
@@ -33,7 +37,7 @@ public class TestTypeDuplicates {
             if (!registered.equals(duplicated))
                 throw new RuntimeException("Different definitions have the same name.");
             else
-                System.out.println("Type '"+name+"' has a duplicate");
+                logger.info("Type [ "+name+" ] has a duplicate with equivalent definition");
         }
     }
 
@@ -73,9 +77,9 @@ public class TestTypeDuplicates {
                         checkEqualType(name, registered, duplicated);
                     } catch (Exception ex) {
                         String msg = ex.getMessage();
-                        msg += String.format(" Type %s has different definitions. Second duplicate is found in %s",
+                        msg += String.format("Type %s has different definitions. Second duplicate is found in %s",
                                 name, f.getName());
-                        System.out.println(msg);
+                        logger.error(msg);
                         errors.add(msg);
                     }
                 }
