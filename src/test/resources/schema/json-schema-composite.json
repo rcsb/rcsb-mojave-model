@@ -1,0 +1,75 @@
+{
+  "type": "object",
+  "properties": {
+    "field1": {
+      "type": "string",
+      "rcsb_search_context": [
+        "exact-match"
+      ]
+    },
+    "field2": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "field3": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    },
+    "field4": {
+      "anyOf": [
+        {
+          "type": "string",
+          "rcsb_search_context": [
+            "exact-match"
+          ]
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "field5": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      },
+      "rcsb_search_context": [
+        "exact-match"
+      ]
+    }
+  }
+}
