@@ -1,0 +1,159 @@
+{
+  "type": "object",
+  "required": [
+    "rcsb_id",
+    "rcsb_group_container_identifiers",
+    "rcsb_group_info",
+    "rcsb_group_statistics"
+  ],
+  "properties": {
+    "rcsb_id": {
+      "type": "string",
+      "description": "A unique textual identifier for a group"
+    },
+    "rcsb_group_container_identifiers": {
+      "type": "object",
+      "required": [
+        "group_id",
+        "group_members"
+      ],
+      "properties": {
+        "group_id": {
+          "type": "string",
+          "description": "A unique textual identifier for a group"
+        },
+        "group_provenance_id": {
+          "type": {
+            "type": "string"
+          }
+        },
+        "group_parents": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "parent_id": {
+                "type": "string"
+              }
+            }
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "Identifiers referring to a higher level in the members groping hierarchy"
+        },
+        "group_members": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "member_id",
+              "rank"
+            ],
+            "properties": {
+              "member_id": {
+                "type": "string"
+              },
+              "rank": {
+                "type": "integer",
+                "description": "Position of a group member in an orderly arrangement such that, for any two items, the first is either 'ranked higher than', 'ranked lower than' or 'ranked equal to' the second."
+              },
+              "distance": {
+                "type": "number",
+                "description": "Quantifies the criteria used for ranking"
+              }
+            },
+            "additionalProperties": false,
+            "description": "A list of members belonging to a group"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "rcsb_group_info": {
+      "required": [
+        "group_name",
+        "group_description",
+        "group_members_granularity",
+        "group_members_count"
+      ],
+      "group_name": {
+        "type": "string"
+      },
+      "group_description": {
+        "type": "string"
+      },
+      "group_members_granularity": {
+        "type": "string",
+        "enum": [
+          "assembly",
+          "polymer_entity",
+          "polymer_entity_instance"
+        ],
+        "description": "Granularity of group members"
+      },
+      "group_members_count": {
+        "type": "integer"
+      }
+    },
+    "rcsb_group_aggregation_details": {
+      "type": "object",
+      "properties": {
+        "parent_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "parent_id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "examples": [
+                  "CATH",
+                  "UniProt"
+                ]
+              }
+            }
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "Identifiers referring to a higher level in the members groping hierarchy"
+        }
+      }
+    },
+    "rcsb_group_accession_info": {
+      "type": "object",
+      "required": [
+        "version"
+      ],
+      "properties": {
+        "version": {
+          "type": "integer",
+          "description": ""
+        }
+      },
+      "additionalProperties": false
+    },
+    "rcsb_group_statistics": {
+      "type": "object",
+      "properties": {
+        "similarity_score_min": {
+          "type": "number",
+          "description": ""
+        },
+        "similarity_score_max": {
+          "type": "number",
+          "description": ""
+        },
+        "group_centroid": {
+          "type": "string",
+          "description": "Central member of the group that optimizes similarity function, e.g. minimizes the sum distances to all members"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
