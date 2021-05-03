@@ -1,0 +1,167 @@
+{
+  "type": "object",
+  "properties": {
+    "rcsb_id": {
+      "type": "string",
+      "description": "A unique group provenance identifier"
+    },
+    "rcsb_group_provenance_container_identifiers": {
+      "type": "object",
+      "required": [
+        "group_provenance_id"
+      ],
+      "properties": {
+        "group_provenance_id": {
+          "type": {
+            "type": "string",
+            "description": "A unique group provenance identifier"
+          }
+        }
+      }
+    },
+    "rcsb_group_aggregation_type": {
+      "type": "object",
+      "required": [
+        "type",
+        "method"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "structure similarity",
+            "sequence similarity",
+            "reference identity"
+          ],
+          "description": "Specifies similarity criteria used to aggregate members into higher levels in the hierarchy"
+        },
+        "method": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "enum": [
+                  "mmseqs2",
+                  "matching UniProt accession",
+                  "matching UniProt accession list"
+                ],
+                "examples": [
+                  "mmseqs2"
+                ],
+                "description": "The name of the software or the method used to calculate cluster solutions"
+              },
+              "version": {
+                "type": "string",
+                "examples": [
+                  "v1.0",
+                  "3.1-2",
+                  "unknown"
+                ],
+                "description": "The version of the software."
+              },
+              "similarity_criteria": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "similarity_function": {
+                      "type": "string",
+                      "enum": [
+                        "RMSD",
+                        "sequence identity"
+                      ],
+                      "examples": [
+                        "RMSD"
+                      ],
+                      "description": "A function or similarity measure that quantifies the similarity between two members",
+                      "rcsb_enum_annotated": [
+                        {
+                          "value": "RMSD",
+                          "detail": "",
+                          "units": "Å"
+                        },
+                        {
+                          "value": "sequence identity",
+                          "units": "%"
+                        }
+                      ]
+                    },
+                    "similarity_threshold": {
+                      "type": "number",
+                      "description": "The desired lower limit for the similarity between two members that belong to the same group"
+                    }
+                  }
+                }
+              },
+              "clustering_strategy": {
+                "type": "object",
+                "properties": {
+                  "name": {},
+                  "parameters": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {},
+                        "value": {},
+                        "description": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "details": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {},
+                    "name": {},
+                    "value": {},
+                    "description": {}
+                  }
+                }
+              }
+            },
+            "additionalProperties": false
+          },
+          "description": "The details on a method used to calculate cluster solutions"
+        }
+      },
+      "additionalProperties": false
+    },
+    "rcsb_group_representative_criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "representative_criteria_id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "description": ""
+          }
+        }
+      }
+    },
+    "rcsb_group_ranking_criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ranking_criteria_id": {},
+          "description": {
+            "type": "string",
+            "description": ""
+          }
+        }
+      }
+    }
+  }
+}

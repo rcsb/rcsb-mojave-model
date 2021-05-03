@@ -15,6 +15,7 @@
       "type": "object",
       "required": [
         "group_id",
+        "group_provenance_id",
         "group_members"
       ],
       "properties": {
@@ -24,10 +25,11 @@
         },
         "group_provenance_id": {
           "type": {
-            "type": "string"
+            "type": "string",
+            "description": "This data item is a pointer to a group provenance definition"
           }
         },
-        "group_parents": {
+        "parent_members": {
           "type": "array",
           "items": {
             "type": "object",
@@ -39,34 +41,43 @@
           },
           "minItems": 1,
           "uniqueItems": true,
-          "description": "Identifiers referring to a higher level in the members groping hierarchy"
+          "description": "Member identifiers representing a higher level in the groping hierarchy that has parent-child relationship"
         },
         "group_members": {
           "type": "array",
           "items": {
             "type": "object",
             "required": [
-              "member_id",
-              "rank"
+              "member_id"
             ],
             "properties": {
               "member_id": {
                 "type": "string"
               },
-              "rank": {
-                "type": "integer",
-                "description": "Position of a group member in an orderly arrangement such that, for any two items, the first is either 'ranked higher than', 'ranked lower than' or 'ranked equal to' the second."
+              "ranking": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "ranking_criteria_id": {
+                      "type": "string"
+                    },
+                    "representative_criteria_id": {
+                      "type": "string"
+                    },
+                    "ranking_score": {
+                      "type": "number",
+                      "description": "Quantifies the criteria used for ranking"
+                    }
+                  }
+                }
               },
-              "distance": {
-                "type": "number",
-                "description": "Quantifies the criteria used for ranking"
-              }
+              "additionalProperties": false,
+              "description": "A list of members belonging to a group"
             },
-            "additionalProperties": false,
-            "description": "A list of members belonging to a group"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+            "minItems": 1,
+            "uniqueItems": true
+          }
         }
       },
       "additionalProperties": false
@@ -97,31 +108,19 @@
         "type": "integer"
       }
     },
-    "rcsb_group_aggregation_details": {
+    "rcsb_group_statistics": {
       "type": "object",
       "properties": {
-        "parent_groups": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "parent_id": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string",
-                "examples": [
-                  "CATH",
-                  "UniProt"
-                ]
-              }
-            }
-          },
-          "minItems": 1,
-          "uniqueItems": true,
-          "description": "Identifiers referring to a higher level in the members groping hierarchy"
+        "similarity_score_min": {
+          "type": "number",
+          "description": ""
+        },
+        "similarity_score_max": {
+          "type": "number",
+          "description": ""
         }
-      }
+      },
+      "additionalProperties": false
     },
     "rcsb_group_accession_info": {
       "type": "object",
@@ -136,23 +135,45 @@
       },
       "additionalProperties": false
     },
-    "rcsb_group_statistics": {
+    "rcsb_group_aggregation_details": {
       "type": "object",
       "properties": {
-        "similarity_score_min": {
-          "type": "number",
-          "description": ""
+        "group_reference": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "group_reference_id": {
+                "type": "string",
+                "description": "A unique label assigned to a reference that identifies the group"
+              },
+              "type": {
+                "type": "string",
+                "examples": [
+                  "CATH number",
+                  "UniProt accession"
+                ],
+                "description": ""
+              }
+            }
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "Identifiers referring to a higher level in the members groping hierarchy"
+        }
+      }
+    },
+    "rcsb_group_representatives": {
+      "type": "array",
+      "items": {
+        "representative_criteria_id": {
+          "type": "string"
         },
-        "similarity_score_max": {
-          "type": "number",
-          "description": ""
-        },
-        "group_centroid": {
-          "type": "string",
-          "description": "Central member of the group that optimizes similarity function, e.g. minimizes the sum distances to all members"
+        "member_id": {
+          "type": "string"
         }
       },
-      "additionalProperties": false
+      "description": "Representatives of the group (e.g. a member that minimizes the sum distances to all members)"
     }
   },
   "additionalProperties": false

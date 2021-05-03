@@ -2,27 +2,23 @@
   "rcsb_id": "UPT00001",
   "rcsb_group_container_identifiers": {
     "group_id": "UPT00001",
-    "group_parents": ["P69905", "P68871"],
+    "group_provenance_id": "GP0002",
     "group_members": [
       {
-        "member_id": "6BWU-1",
-        "distance": 0.8,
-        "rank": 1
+        "member_id": "6BWU.1",
+        "distance": 0.8
       },
       {
         "member_id": "5X2U.1",
-        "distance": 0.6,
-        "rank": 2
+        "distance": 0.6
       },
       {
         "member_id": "5X2U.2",
-        "distance": 0.6,
-        "rank": 2
+        "distance": 0.6
       },
       {
         "member_id": "5X2U.3",
-        "distance": 0.5,
-        "rank": 3
+        "distance": 0.5
       }
     ]
   },
@@ -32,8 +28,17 @@
     "group_members_granularity": "assembly",
     "group_members_count": 4
   },
-  "rcsb_group_method": {
-    "grouped_by": "UniProt accession list"
+  "rcsb_group_aggregation_details": {
+    "group_reference": [
+      {
+        "group_reference_id": "P69905",
+        "type": "UniProt accession"
+      },
+      {
+        "group_reference_id": "P68871",
+        "type": "UniProt accession"
+      }
+    ]
   },
   "rcsb_group_accession_info": {
     "version": 1
