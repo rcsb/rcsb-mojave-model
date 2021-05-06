@@ -19,7 +19,7 @@
         }
       }
     },
-    "rcsb_group_aggregation_type": {
+    "rcsb_group_aggregation_method": {
       "type": "object",
       "required": [
         "type",
@@ -33,7 +33,7 @@
             "sequence similarity",
             "reference identity"
           ],
-          "description": "Specifies similarity criteria used to aggregate members into higher levels in the hierarchy"
+          "description": "Specifies the type of similarity criteria used to aggregate members into higher levels in the hierarchy"
         },
         "method": {
           "type": "array",
@@ -82,11 +82,12 @@
                       "rcsb_enum_annotated": [
                         {
                           "value": "RMSD",
-                          "detail": "",
+                          "detail": "The lower the RMSD, the higher the similarity between two group members",
                           "units": "Å"
                         },
                         {
                           "value": "sequence identity",
+                          "detail": "The higher the sequence identity, the higher the similarity between two group members",
                           "units": "%"
                         }
                       ]
@@ -98,34 +99,30 @@
                   }
                 }
               },
-              "clustering_strategy": {
-                "type": "object",
-                "properties": {
-                  "name": {},
-                  "parameters": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "name": {},
-                        "value": {},
-                        "description": {}
-                      }
-                    }
-                  }
-                }
-              },
               "details": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "properties": {
-                    "type": {},
-                    "name": {},
-                    "value": {},
-                    "description": {}
+                    "type": {
+                      "type": "string",
+                      "description": "Defines the type of the description associated with the clustering process"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "Defines the name of the description associated with the clustering process"
+                    },
+                    "value": {
+                      "type": "number",
+                      "description": "Defines the value associated with the clustering process"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "A description of special aspects of the clustering process"
+                    }
                   }
-                }
+                },
+                "description": "Additional details describing the clustering process"
               }
             },
             "additionalProperties": false
@@ -141,11 +138,12 @@
         "type": "object",
         "properties": {
           "representative_criteria_id": {
-            "type": "string"
+            "type": "string",
+            "description": "Uniquely identifies the criteria incorporated into selecting a representative group member"
           },
           "description": {
             "type": "string",
-            "description": ""
+            "description": "Describes the criteria incorporated into selecting a representative group member"
           }
         }
       }
@@ -154,14 +152,26 @@
       "type": "array",
       "items": {
         "type": "object",
+        "required": [
+          "ranking_criteria_type"
+        ],
         "properties": {
-          "ranking_criteria_id": {},
-          "description": {
+          "ranking_criteria_type": {
             "type": "string",
-            "description": ""
+            "enum": [
+              "RMSD"
+            ],
+            "rcsb_enum_annotated": [
+              {
+                "value": "RMSD",
+                "detail": ""
+              }
+            ]
           }
         }
-      }
+      },
+      "description": "Defines ranking options applicable to group members"
     }
-  }
+  },
+  "additionalProperties": false
 }

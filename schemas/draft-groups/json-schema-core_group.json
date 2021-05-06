@@ -59,11 +59,13 @@
                 "items": {
                   "type": "object",
                   "properties": {
-                    "ranking_criteria_id": {
-                      "type": "string"
+                    "ranking_criteria_type": {
+                      "type": "string",
+                      "description": "This data item is a pointer to a ranking criteria definition"
                     },
                     "representative_criteria_id": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "This data item is a pointer to a representative selection criteria definition"
                     },
                     "ranking_score": {
                       "type": "number",
@@ -130,7 +132,7 @@
       "properties": {
         "version": {
           "type": "integer",
-          "description": ""
+          "description": "Identifies the version of the groups solution"
         }
       },
       "additionalProperties": false
@@ -143,23 +145,24 @@
           "items": {
             "type": "object",
             "properties": {
-              "group_reference_id": {
-                "type": "string",
-                "description": "A unique label assigned to a reference that identifies the group"
-              },
-              "type": {
+              "reference_id": {
                 "type": "string",
                 "examples": [
-                  "CATH number",
+                  "P69905"
+                ],
+                "description": "A unique label assigned to a reference that identifies the group"
+              },
+              "reference_type": {
+                "type": "string",
+                "examples": [
                   "UniProt accession"
                 ],
-                "description": ""
+                "description": "Defines a type of the reference identifier"
               }
             }
           },
           "minItems": 1,
-          "uniqueItems": true,
-          "description": "Identifiers referring to a higher level in the members groping hierarchy"
+          "uniqueItems": true
         }
       }
     },
@@ -167,10 +170,12 @@
       "type": "array",
       "items": {
         "representative_criteria_id": {
-          "type": "string"
+          "type": "string",
+          "description": "This data item is a pointer to a representative selection criteria definition"
         },
         "member_id": {
-          "type": "string"
+          "type": "string",
+          "description": "Identifies a group member selected as a representative based on a given representative selection criteria"
         }
       },
       "description": "Representatives of the group (e.g. a member that minimizes the sum distances to all members)"
