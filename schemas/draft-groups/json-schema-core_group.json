@@ -54,22 +54,52 @@
               "member_id": {
                 "type": "string"
               },
-              "ranking": {
+              "rankings": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "properties": {
-                    "ranking_criteria_type": {
+                    "representative_criteria_type": {
                       "type": "string",
-                      "description": "This data item is a pointer to a ranking criteria definition"
+                      "enum": [
+                        "best resolution"
+                      ],
+                      "rcsb_enum_annotated": [
+                        {
+                          "value": "best resolution",
+                          "detail": "The lower the resolution value, the better"
+                        }
+                      ],
+                      "description": "Uniquely identifies the criteria incorporated into selecting a representative group member"
                     },
-                    "representative_criteria_id": {
-                      "type": "string",
-                      "description": "This data item is a pointer to a representative selection criteria definition"
-                    },
-                    "ranking_score": {
-                      "type": "number",
-                      "description": "Quantifies the criteria used for ranking"
+                    "ranking_options": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "ranking_criteria_type": {
+                            "type": "string",
+                            "enum": [
+                              "RMSD"
+                            ],
+                            "rcsb_enum_annotated": [
+                              {
+                                "value": "RMSD",
+                                "detail": "The lower the RMSD, the better the structural similarity"
+                              }
+                            ],
+                            "description": "Defines ranking option applicable to group members"
+                          },
+                          "rank": {
+                            "type": "integer",
+                            "description": "Reflects a relationship between group members such that, for any two members the first is ranked higher (smaller rank value) than the second"
+                          },
+                          "original_score": {
+                            "type": "number",
+                            "description": "Quantifies the criteria used for ranking"
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -104,7 +134,7 @@
           "polymer_entity",
           "polymer_entity_instance"
         ],
-        "description": "Granularity of group members"
+        "description": "Granularity of group members identifiers"
       },
       "group_members_count": {
         "type": "integer"
@@ -115,11 +145,11 @@
       "properties": {
         "similarity_score_min": {
           "type": "number",
-          "description": ""
+          "description": "Similarity score between two least similar group members"
         },
         "similarity_score_max": {
           "type": "number",
-          "description": ""
+          "description": "Similarity score between two most similar group members"
         }
       },
       "additionalProperties": false
@@ -137,48 +167,29 @@
       },
       "additionalProperties": false
     },
-    "rcsb_group_aggregation_details": {
-      "type": "object",
-      "properties": {
-        "group_reference": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "reference_id": {
-                "type": "string",
-                "examples": [
-                  "P69905"
-                ],
-                "description": "A unique label assigned to a reference that identifies the group"
-              },
-              "reference_type": {
-                "type": "string",
-                "examples": [
-                  "UniProt accession"
-                ],
-                "description": "Defines a type of the reference identifier"
-              }
-            }
-          },
-          "minItems": 1,
-          "uniqueItems": true
-        }
-      }
-    },
-    "rcsb_group_representatives": {
+    "rcsb_group_related": {
       "type": "array",
       "items": {
-        "representative_criteria_id": {
-          "type": "string",
-          "description": "This data item is a pointer to a representative selection criteria definition"
-        },
-        "member_id": {
-          "type": "string",
-          "description": "Identifies a group member selected as a representative based on a given representative selection criteria"
+        "type": "object",
+        "properties": {
+          "resource_accession_code": {
+            "type": "string",
+            "examples": [
+              "P69905"
+            ],
+            "description": "A unique code assigned to a reference related the group"
+          },
+          "resource_name": {
+            "type": "string",
+            "examples": [
+              "UniProt"
+            ],
+            "description": "Defines the type of the resource describing related references"
+          }
         }
       },
-      "description": "Representatives of the group (e.g. a member that minimizes the sum distances to all members)"
+      "minItems": 1,
+      "uniqueItems": true
     }
   },
   "additionalProperties": false

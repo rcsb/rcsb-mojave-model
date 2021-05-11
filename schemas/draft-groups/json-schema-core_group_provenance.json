@@ -92,7 +92,7 @@
                         }
                       ]
                     },
-                    "similarity_threshold": {
+                    "similarity_cutoff": {
                       "type": "number",
                       "description": "The desired lower limit for the similarity between two members that belong to the same group"
                     }
@@ -131,46 +131,6 @@
         }
       },
       "additionalProperties": false
-    },
-    "rcsb_group_representative_criteria": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "representative_criteria_id": {
-            "type": "string",
-            "description": "Uniquely identifies the criteria incorporated into selecting a representative group member"
-          },
-          "description": {
-            "type": "string",
-            "description": "Describes the criteria incorporated into selecting a representative group member"
-          }
-        }
-      }
-    },
-    "rcsb_group_ranking_criteria": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": [
-          "ranking_criteria_type"
-        ],
-        "properties": {
-          "ranking_criteria_type": {
-            "type": "string",
-            "enum": [
-              "RMSD"
-            ],
-            "rcsb_enum_annotated": [
-              {
-                "value": "RMSD",
-                "detail": ""
-              }
-            ]
-          }
-        }
-      },
-      "description": "Defines ranking options applicable to group members"
     }
   },
   "additionalProperties": false
