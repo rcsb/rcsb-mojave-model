@@ -3,8 +3,7 @@
   "required": [
     "rcsb_id",
     "rcsb_group_container_identifiers",
-    "rcsb_group_info",
-    "rcsb_group_statistics"
+    "rcsb_group_info"
   ],
   "properties": {
     "rcsb_id": {
@@ -16,7 +15,7 @@
       "required": [
         "group_id",
         "group_provenance_id",
-        "group_members"
+        "group_members_rankings"
       ],
       "properties": {
         "group_id": {
@@ -43,52 +42,63 @@
           "uniqueItems": true,
           "description": "Member identifiers representing a higher level in the groping hierarchy that has parent-child relationship"
         },
-        "group_members": {
+        "group_members_rankings": {
           "type": "array",
           "items": {
             "type": "object",
             "required": [
-              "member_id"
+              "representative_criteria_type",
+              "ranking_options"
             ],
             "properties": {
-              "member_id": {
-                "type": "string"
+              "representative_criteria_type": {
+                "type": "string",
+                "enum": [
+                  "best resolution"
+                ],
+                "rcsb_enum_annotated": [
+                  {
+                    "value": "best resolution",
+                    "detail": "The lower the resolution value, the better"
+                  }
+                ],
+                "description": "Uniquely identifies the criteria incorporated into selecting a representative group member"
               },
-              "rankings": {
+              "ranking_options": {
                 "type": "array",
                 "items": {
                   "type": "object",
+                  "required": [
+                    "ranking_criteria_type",
+                    "group_members"
+                  ],
                   "properties": {
-                    "representative_criteria_type": {
+                    "ranking_criteria_type": {
                       "type": "string",
                       "enum": [
-                        "best resolution"
+                        "RMSD",
+                        "data quality",
+                        "number of modified residues"
                       ],
                       "rcsb_enum_annotated": [
                         {
-                          "value": "best resolution",
-                          "detail": "The lower the resolution value, the better"
+                          "value": "RMSD",
+                          "detail": "The lower the RMSD, the better the structural similarity"
                         }
                       ],
-                      "description": "Uniquely identifies the criteria incorporated into selecting a representative group member"
+                      "description": "Defines ranking option applicable to group members"
                     },
-                    "ranking_options": {
+                    "group_members": {
                       "type": "array",
                       "items": {
                         "type": "object",
+                        "required": [
+                          "member_id",
+                          "rank"
+                        ],
                         "properties": {
-                          "ranking_criteria_type": {
-                            "type": "string",
-                            "enum": [
-                              "RMSD"
-                            ],
-                            "rcsb_enum_annotated": [
-                              {
-                                "value": "RMSD",
-                                "detail": "The lower the RMSD, the better the structural similarity"
-                              }
-                            ],
-                            "description": "Defines ranking option applicable to group members"
+                          "member_id": {
+                            "type": "string"
                           },
                           "rank": {
                             "type": "integer",
@@ -98,18 +108,23 @@
                             "type": "number",
                             "description": "Quantifies the criteria used for ranking"
                           }
-                        }
-                      }
+                        },
+                        "additionalProperties": false
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
                     }
-                  }
-                }
-              },
-              "additionalProperties": false,
-              "description": "A list of members belonging to a group"
+                  },
+                  "additionalProperties": false
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
             },
-            "minItems": 1,
-            "uniqueItems": true
-          }
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "uniqueItems": true
         }
       },
       "additionalProperties": false
