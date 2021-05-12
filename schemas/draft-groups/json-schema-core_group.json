@@ -15,7 +15,7 @@
       "required": [
         "group_id",
         "group_provenance_id",
-        "group_members_rankings"
+        "group_member_ids"
       ],
       "properties": {
         "group_id": {
@@ -28,103 +28,23 @@
             "description": "This data item is a pointer to a group provenance definition"
           }
         },
-        "parent_members": {
+        "parent_member_ids": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "parent_id": {
-                "type": "string"
-              }
-            }
+            "type": "string"
           },
           "minItems": 1,
           "uniqueItems": true,
           "description": "Member identifiers representing a higher level in the groping hierarchy that has parent-child relationship"
         },
-        "group_members_rankings": {
+        "group_member_ids": {
           "type": "array",
           "items": {
-            "type": "object",
-            "required": [
-              "representative_criteria_type",
-              "ranking_options"
-            ],
-            "properties": {
-              "representative_criteria_type": {
-                "type": "string",
-                "enum": [
-                  "best resolution"
-                ],
-                "rcsb_enum_annotated": [
-                  {
-                    "value": "best resolution",
-                    "detail": "The lower the resolution value, the better"
-                  }
-                ],
-                "description": "Uniquely identifies the criteria incorporated into selecting a representative group member"
-              },
-              "ranking_options": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "ranking_criteria_type",
-                    "group_members"
-                  ],
-                  "properties": {
-                    "ranking_criteria_type": {
-                      "type": "string",
-                      "enum": [
-                        "RMSD",
-                        "data quality",
-                        "number of modified residues"
-                      ],
-                      "rcsb_enum_annotated": [
-                        {
-                          "value": "RMSD",
-                          "detail": "The lower the RMSD, the better the structural similarity"
-                        }
-                      ],
-                      "description": "Defines ranking option applicable to group members"
-                    },
-                    "group_members": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "member_id",
-                          "rank"
-                        ],
-                        "properties": {
-                          "member_id": {
-                            "type": "string"
-                          },
-                          "rank": {
-                            "type": "integer",
-                            "description": "Reflects a relationship between group members such that, for any two members the first is ranked higher (smaller rank value) than the second"
-                          },
-                          "original_score": {
-                            "type": "number",
-                            "description": "Quantifies the criteria used for ranking"
-                          }
-                        },
-                        "additionalProperties": false
-                      },
-                      "minItems": 1,
-                      "uniqueItems": true
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                "minItems": 1,
-                "uniqueItems": true
-              }
-            },
-            "additionalProperties": false
+            "type": "string"
           },
           "minItems": 1,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "Member identifiers representing a group"
         }
       },
       "additionalProperties": false
@@ -202,6 +122,90 @@
             "description": "Defines the type of the resource describing related references"
           }
         }
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "rcsb_group_members_rankings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "representative_criteria_type",
+          "ranking_options"
+        ],
+        "properties": {
+          "representative_criteria_type": {
+            "type": "string",
+            "enum": [
+              "best resolution"
+            ],
+            "rcsb_enum_annotated": [
+              {
+                "value": "best resolution",
+                "detail": "The lower the resolution value, the better"
+              }
+            ],
+            "description": "Uniquely identifies the criteria incorporated into selecting a representative group member"
+          },
+          "ranking_options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "ranking_criteria_type",
+                "group_members"
+              ],
+              "properties": {
+                "ranking_criteria_type": {
+                  "type": "string",
+                  "enum": [
+                    "RMSD",
+                    "data quality",
+                    "number of modified residues"
+                  ],
+                  "rcsb_enum_annotated": [
+                    {
+                      "value": "RMSD",
+                      "detail": "The lower the RMSD, the better the structural similarity"
+                    }
+                  ],
+                  "description": "Defines ranking option applicable to group members"
+                },
+                "group_members": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "member_id",
+                      "rank"
+                    ],
+                    "properties": {
+                      "member_id": {
+                        "type": "string"
+                      },
+                      "rank": {
+                        "type": "integer",
+                        "description": "Reflects a relationship between group members such that, for any two members the first is ranked higher (smaller rank value) than the second"
+                      },
+                      "original_score": {
+                        "type": "number",
+                        "description": "Quantifies the criteria used for ranking"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true
+                }
+              },
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
       },
       "minItems": 1,
       "uniqueItems": true
