@@ -13,11 +13,11 @@
         "property_name": {
           "type": "string",
           "allOf": [{
-              "$ref" : "jar:/internal/common/common-schema-annotation-additional-properties.json#/definitions/uniprot_additional_property_names"
+              "$ref" : "#/definitions/uniprot_additional_property_names"
             },{
-              "$ref": "jar:/exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json#/properties/rcsb_polymer_entity_feature/items/properties/additional_properties/items/properties/name"
+              "$ref": "../../exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json#/properties/rcsb_polymer_entity_feature/items/properties/additional_properties/items/properties/name"
             },{
-              "$ref": "jar:/exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity_instance.json#/properties/rcsb_polymer_instance_feature/items/properties/additional_properties/items/properties/name"
+              "$ref": "../../exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity_instance.json#/properties/rcsb_polymer_instance_feature/items/properties/additional_properties/items/properties/name"
           }]
         },
         "property_value": {
