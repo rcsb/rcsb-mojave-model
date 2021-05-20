@@ -356,7 +356,7 @@
             "type": "object",
             "description": "Alignment with a core_entity canonical sequence",
             "allOf": [{
-              "$ref": "jar:/internal/common/common-schema-alignment.json#/definitions/alignment"
+              "$ref": "../common/common-schema-alignment.json#/definitions/alignment"
             },{
               "type": "object",
               "properties": {
@@ -385,7 +385,7 @@
             "description": "Alignment with a core_uniprot sequence",
             "required": ["uniprot_id","scores","aligned_regions"],
             "allOf": [{
-              "$ref": "jar:/internal/common/common-schema-alignment.json#/definitions/alignment"
+              "$ref": "../common/common-schema-alignment.json#/definitions/alignment"
             },{
               "type": "object",
               "properties": {

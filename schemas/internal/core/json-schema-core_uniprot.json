@@ -769,7 +769,7 @@
             "required": ["core_entity_identifiers","scores","aligned_regions"],
             "description": "Alignment with a core_entity canonical sequence",
             "allOf": [{
-              "$ref": "jar:/internal/common/common-schema-alignment.json#/definitions/alignment"
+              "$ref": "../common/common-schema-alignment.json#/definitions/alignment"
             },{
               "type": "object",
               "properties": {
