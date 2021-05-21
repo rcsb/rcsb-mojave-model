@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "9.0.1",
+   "DATABASE_VERSION": "9.0.2",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -65794,6 +65794,7 @@
             "ASYM_IDS": "asym_ids",
             "AUTH_ASYM_IDS": "auth_asym_ids",
             "CHEM_COMP_MONOMERS": "chem_comp_monomers",
+            "CHEM_REF_DEF_ID": "chem_ref_def_id",
             "PRD_ID": "prd_id",
             "RCSB_ID": "rcsb_id"
          },
@@ -65825,6 +65826,12 @@
             "CHEM_COMP_MONOMERS": {
                "CATEGORY": "rcsb_branched_entity_container_identifiers",
                "ATTRIBUTE": "chem_comp_monomers",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "CHEM_REF_DEF_ID": {
+               "CATEGORY": "rcsb_branched_entity_container_identifiers",
+               "ATTRIBUTE": "chem_ref_def_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -65925,7 +65932,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "PRD_ID": {
+            "CHEM_REF_DEF_ID": {
                "ORDER": 6,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -65942,8 +65949,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RCSB_ID": {
+            "PRD_ID": {
                "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 8,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -79135,6 +79159,7 @@
             "ENTRY_ID": "entry_id",
             "ASYM_IDS": "asym_ids",
             "AUTH_ASYM_IDS": "auth_asym_ids",
+            "CHEM_REF_DEF_ID": "chem_ref_def_id",
             "NONPOLYMER_COMP_ID": "nonpolymer_comp_id",
             "PRD_ID": "prd_id",
             "RCSB_ID": "rcsb_id",
@@ -79164,6 +79189,12 @@
             "AUTH_ASYM_IDS": {
                "CATEGORY": "rcsb_nonpolymer_entity_container_identifiers",
                "ATTRIBUTE": "auth_asym_ids",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "CHEM_REF_DEF_ID": {
+               "CATEGORY": "rcsb_nonpolymer_entity_container_identifiers",
+               "ATTRIBUTE": "chem_ref_def_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -79271,7 +79302,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "NONPOLYMER_COMP_ID": {
+            "CHEM_REF_DEF_ID": {
                "ORDER": 5,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -79288,7 +79319,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "PRD_ID": {
+            "NONPOLYMER_COMP_ID": {
                "ORDER": 6,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -79305,8 +79336,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RCSB_ID": {
+            "PRD_ID": {
                "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 8,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -79323,7 +79371,7 @@
                "SUB_CATEGORIES": []
             },
             "REFERENCE_CHEMICAL_IDENTIFIERS_PROVENANCE_SOURCE": {
-               "ORDER": 8,
+               "ORDER": 9,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -79345,7 +79393,7 @@
                ]
             },
             "REFERENCE_CHEMICAL_IDENTIFIERS_RESOURCE_ACCESSION": {
-               "ORDER": 9,
+               "ORDER": 10,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -79364,7 +79412,7 @@
                ]
             },
             "REFERENCE_CHEMICAL_IDENTIFIERS_RESOURCE_NAME": {
-               "ORDER": 10,
+               "ORDER": 11,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -85417,6 +85465,7 @@
             "AUTH_ASYM_IDS": "auth_asym_ids",
             "CHEM_COMP_MONOMERS": "chem_comp_monomers",
             "CHEM_COMP_NSTD_MONOMERS": "chem_comp_nstd_monomers",
+            "CHEM_REF_DEF_ID": "chem_ref_def_id",
             "PRD_ID": "prd_id",
             "RCSB_ID": "rcsb_id",
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ACCESSION": "reference_sequence_identifiers_database_accession",
@@ -85458,6 +85507,12 @@
             "CHEM_COMP_NSTD_MONOMERS": {
                "CATEGORY": "rcsb_polymer_entity_container_identifiers",
                "ATTRIBUTE": "chem_comp_nstd_monomers",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "CHEM_REF_DEF_ID": {
+               "CATEGORY": "rcsb_polymer_entity_container_identifiers",
+               "ATTRIBUTE": "chem_ref_def_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -85599,7 +85654,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "PRD_ID": {
+            "CHEM_REF_DEF_ID": {
                "ORDER": 7,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -85616,8 +85671,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RCSB_ID": {
+            "PRD_ID": {
                "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 9,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -85634,25 +85706,6 @@
                "SUB_CATEGORIES": []
             },
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ACCESSION": {
-               "ORDER": 9,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": ",",
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": [
-                  "reference_sequence_identifiers"
-               ]
-            },
-            "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ISOFORM": {
                "ORDER": 10,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -85671,8 +85724,27 @@
                   "reference_sequence_identifiers"
                ]
             },
-            "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_NAME": {
+            "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ISOFORM": {
                "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "reference_sequence_identifiers"
+               ]
+            },
+            "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_NAME": {
+               "ORDER": 12,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -85701,7 +85773,7 @@
                ]
             },
             "REFERENCE_SEQUENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
-               "ORDER": 12,
+               "ORDER": 13,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -106120,7 +106192,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "pdbx_core_entry",
-            "VERSION": "8.15.0"
+            "VERSION": "8.15.1"
          },
          {
             "NAME": "pdbx_core_assembly",
@@ -106128,15 +106200,15 @@
          },
          {
             "NAME": "pdbx_core_polymer_entity",
-            "VERSION": "9.0.1"
+            "VERSION": "9.0.2"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity",
-            "VERSION": "9.0.0"
+            "VERSION": "9.0.1"
          },
          {
             "NAME": "pdbx_core_branched_entity",
-            "VERSION": "9.0.0"
+            "VERSION": "9.0.1"
          },
          {
             "NAME": "pdbx_core_polymer_entity_instance",

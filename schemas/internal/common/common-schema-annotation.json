@@ -39,6 +39,14 @@
           "type": "number",
           "description": "The value for the feature."
         },
+        "additional_properties":{
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "Additional properties of the feature.",
+            "$ref": "common-schema-annotation-additional-properties.json#/definitions/additional_property"
+          }
+        },
         "feature_positions": {
           "type": "array",
           "items": {
