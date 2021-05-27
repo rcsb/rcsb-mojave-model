@@ -644,6 +644,82 @@
                      "context": "dictionary"
                   }
                ]
+            },
+            "reference_identifiers_provenance_source": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "enum": [
+                     "PDB",
+                     "RCSB"
+                  ],
+                  "examples": [
+                     "RCSB"
+                  ],
+                  "description": "Source of the reference resource assignment",
+                  "rcsb_description": [
+                     {
+                        "text": "Source of the reference resource assignment",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "uniqueItems": false
+            },
+            "reference_identifiers_resource_accession": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "examples": [
+                     "G07411ON",
+                     "G42666HT"
+                  ],
+                  "description": "Reference resource accession code",
+                  "rcsb_description": [
+                     {
+                        "text": "Reference resource accession code",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "uniqueItems": false
+            },
+            "reference_identifiers_resource_name": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "enum": [
+                     "GlyCosmos",
+                     "GlyGen",
+                     "GlyTouCan"
+                  ],
+                  "examples": [
+                     "GlyTouCan",
+                     "GlyCosmos"
+                  ],
+                  "description": "Reference resource name",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "GlyCosmos",
+                        "detail": "GlyCosmos"
+                     },
+                     {
+                        "value": "GlyGen",
+                        "detail": "GlyGen"
+                     },
+                     {
+                        "value": "GlyTouCan",
+                        "detail": "GlyTouCan"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "Reference resource name",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "uniqueItems": false
             }
          },
          "additionalProperties": false,
@@ -1125,7 +1201,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_branched_entity version: 9.0.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity version 9.0.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 9.0.1"
+   "title": "schema: pdbx_core collection: pdbx_core_branched_entity version: 9.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity version 9.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 9.1.0"
 }
