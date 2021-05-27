@@ -65788,7 +65788,7 @@
          ],
          "SCHEMA_MANDATORY": false,
          "SCHEMA_SUB_CATEGORIES": [
-            "reference_resource_identifiers"
+            "reference_identifiers"
          ],
          "ATTRIBUTES": {
             "ENTITY_ID": "entity_id",
@@ -66025,7 +66025,7 @@
                   "GENERATED_CONTENT"
                ],
                "SUB_CATEGORIES": [
-                  "reference_resource_identifiers"
+                  "reference_identifiers"
                ]
             },
             "REFERENCE_IDENTIFIERS_RESOURCE_ACCESSION": {
@@ -66044,7 +66044,7 @@
                   "GENERATED_CONTENT"
                ],
                "SUB_CATEGORIES": [
-                  "reference_resource_identifiers"
+                  "reference_identifiers"
                ]
             },
             "REFERENCE_IDENTIFIERS_RESOURCE_NAME": {
@@ -66067,7 +66067,7 @@
                   "GENERATED_CONTENT"
                ],
                "SUB_CATEGORIES": [
-                  "reference_resource_identifiers"
+                  "reference_identifiers"
                ]
             }
          },
@@ -70551,6 +70551,7 @@
          ],
          "SCHEMA_MANDATORY": false,
          "SCHEMA_SUB_CATEGORIES": [
+            "reference_identifiers",
             "reference_sequence_identifiers"
          ],
          "ATTRIBUTES": {
@@ -70564,6 +70565,9 @@
             "NONPOLYMER_COMP_ID": "nonpolymer_comp_id",
             "PRD_ID": "prd_id",
             "RCSB_ID": "rcsb_id",
+            "REFERENCE_IDENTIFIERS_PROVENANCE_SOURCE": "reference_identifiers_provenance_source",
+            "REFERENCE_IDENTIFIERS_RESOURCE_ACCESSION": "reference_identifiers_resource_accession",
+            "REFERENCE_IDENTIFIERS_RESOURCE_NAME": "reference_identifiers_resource_name",
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ACCESSION": "reference_sequence_identifiers_database_accession",
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ISOFORM": "reference_sequence_identifiers_database_isoform",
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_NAME": "reference_sequence_identifiers_database_name",
@@ -70627,6 +70631,24 @@
             "RCSB_ID": {
                "CATEGORY": "rcsb_entity_container_identifiers",
                "ATTRIBUTE": "rcsb_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REFERENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
+               "CATEGORY": "rcsb_entity_container_identifiers",
+               "ATTRIBUTE": "reference_identifiers_provenance_source",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REFERENCE_IDENTIFIERS_RESOURCE_ACCESSION": {
+               "CATEGORY": "rcsb_entity_container_identifiers",
+               "ATTRIBUTE": "reference_identifiers_resource_accession",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REFERENCE_IDENTIFIERS_RESOURCE_NAME": {
+               "CATEGORY": "rcsb_entity_container_identifiers",
+               "ATTRIBUTE": "reference_identifiers_resource_name",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -70824,8 +70846,72 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ACCESSION": {
+            "REFERENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
                "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "PDB",
+                  "RCSB"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "reference_identifiers"
+               ]
+            },
+            "REFERENCE_IDENTIFIERS_RESOURCE_ACCESSION": {
+               "ORDER": 12,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "reference_identifiers"
+               ]
+            },
+            "REFERENCE_IDENTIFIERS_RESOURCE_NAME": {
+               "ORDER": 13,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "GlyCosmos",
+                  "GlyGen",
+                  "GlyTouCan"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "reference_identifiers"
+               ]
+            },
+            "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ACCESSION": {
+               "ORDER": 14,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70844,7 +70930,7 @@
                ]
             },
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ISOFORM": {
-               "ORDER": 12,
+               "ORDER": 15,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70863,7 +70949,7 @@
                ]
             },
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_NAME": {
-               "ORDER": 13,
+               "ORDER": 16,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70892,7 +70978,7 @@
                ]
             },
             "REFERENCE_SEQUENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
-               "ORDER": 14,
+               "ORDER": 17,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -107973,6 +108059,10 @@
                "HAS_UNIT_CARDINALITY": false
             },
             {
+               "NAME": "reference_identifiers",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
                "NAME": "feature_class_lineage",
                "HAS_UNIT_CARDINALITY": false
             },
@@ -108032,6 +108122,10 @@
             },
             {
                "NAME": "reference_sequence_identifiers",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
+               "NAME": "reference_identifiers",
                "HAS_UNIT_CARDINALITY": false
             },
             {
@@ -108097,6 +108191,10 @@
                "HAS_UNIT_CARDINALITY": false
             },
             {
+               "NAME": "reference_identifiers",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
                "NAME": "feature_class_lineage",
                "HAS_UNIT_CARDINALITY": false
             },
@@ -108159,6 +108257,10 @@
                "HAS_UNIT_CARDINALITY": false
             },
             {
+               "NAME": "reference_identifiers",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
                "NAME": "feature_class_lineage",
                "HAS_UNIT_CARDINALITY": false
             },
@@ -108217,6 +108319,10 @@
                "HAS_UNIT_CARDINALITY": false
             },
             {
+               "NAME": "reference_identifiers",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
                "NAME": "feature_class_lineage",
                "HAS_UNIT_CARDINALITY": false
             },
@@ -108272,6 +108378,10 @@
             },
             {
                "NAME": "reference_sequence_identifiers",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
+               "NAME": "reference_identifiers",
                "HAS_UNIT_CARDINALITY": false
             },
             {

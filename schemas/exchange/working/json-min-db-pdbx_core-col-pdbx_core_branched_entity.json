@@ -645,81 +645,83 @@
                   }
                ]
             },
-            "reference_identifiers_provenance_source": {
+            "reference_identifiers": {
                "type": "array",
                "items": {
-                  "type": "string",
-                  "enum": [
-                     "PDB",
-                     "RCSB"
-                  ],
-                  "examples": [
-                     "RCSB"
-                  ],
-                  "description": "Source of the reference resource assignment",
-                  "rcsb_description": [
-                     {
-                        "text": "Source of the reference resource assignment",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "uniqueItems": false
-            },
-            "reference_identifiers_resource_accession": {
-               "type": "array",
-               "items": {
-                  "type": "string",
-                  "examples": [
-                     "G07411ON",
-                     "G42666HT"
-                  ],
-                  "description": "Reference resource accession code",
-                  "rcsb_description": [
-                     {
-                        "text": "Reference resource accession code",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "uniqueItems": false
-            },
-            "reference_identifiers_resource_name": {
-               "type": "array",
-               "items": {
-                  "type": "string",
-                  "enum": [
-                     "GlyCosmos",
-                     "GlyGen",
-                     "GlyTouCan"
-                  ],
-                  "examples": [
-                     "GlyTouCan",
-                     "GlyCosmos"
-                  ],
-                  "description": "Reference resource name",
-                  "rcsb_enum_annotated": [
-                     {
-                        "value": "GlyCosmos",
-                        "detail": "GlyCosmos"
+                  "type": "object",
+                  "properties": {
+                     "provenance_source": {
+                        "type": "string",
+                        "enum": [
+                           "PDB",
+                           "RCSB"
+                        ],
+                        "examples": [
+                           "RCSB"
+                        ],
+                        "description": "Source of the reference resource assignment",
+                        "rcsb_description": [
+                           {
+                              "text": "Source of the reference resource assignment",
+                              "context": "dictionary"
+                           }
+                        ]
                      },
-                     {
-                        "value": "GlyGen",
-                        "detail": "GlyGen"
+                     "resource_accession": {
+                        "type": "string",
+                        "examples": [
+                           "G07411ON",
+                           "G42666HT"
+                        ],
+                        "description": "Reference resource accession code",
+                        "rcsb_description": [
+                           {
+                              "text": "Reference resource accession code",
+                              "context": "dictionary"
+                           }
+                        ]
                      },
-                     {
-                        "value": "GlyTouCan",
-                        "detail": "GlyTouCan"
+                     "resource_name": {
+                        "type": "string",
+                        "enum": [
+                           "GlyCosmos",
+                           "GlyGen",
+                           "GlyTouCan"
+                        ],
+                        "examples": [
+                           "GlyTouCan",
+                           "GlyCosmos"
+                        ],
+                        "description": "Reference resource name",
+                        "rcsb_enum_annotated": [
+                           {
+                              "value": "GlyCosmos",
+                              "detail": "Web portal integrating glycosciences with the life sciences",
+                              "name": "Web portal integrating glycosciences with the life sciences"
+                           },
+                           {
+                              "value": "GlyGen",
+                              "detail": "Computational and Informatics Resources for Glycoscience",
+                              "name": "Computational and Informatics Resources for Glycoscience"
+                           },
+                           {
+                              "value": "GlyTouCan",
+                              "detail": "International glycan structure repository",
+                              "name": "International glycan structure repository"
+                           }
+                        ],
+                        "rcsb_description": [
+                           {
+                              "text": "Reference resource name",
+                              "context": "dictionary"
+                           }
+                        ]
                      }
-                  ],
-                  "rcsb_description": [
-                     {
-                        "text": "Reference resource name",
-                        "context": "dictionary"
-                     }
-                  ]
+                  },
+                  "additionalProperties": false
                },
-               "uniqueItems": false
+               "uniqueItems": false,
+               "rcsb_nested_indexing": true
             }
          },
          "additionalProperties": false,

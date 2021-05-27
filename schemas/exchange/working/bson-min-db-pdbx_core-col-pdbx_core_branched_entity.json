@@ -150,33 +150,31 @@
             "rcsb_id": {
                "bsonType": "string"
             },
-            "reference_identifiers_provenance_source": {
+            "reference_identifiers": {
                "bsonType": "array",
                "items": {
-                  "bsonType": "string",
-                  "enum": [
-                     "PDB",
-                     "RCSB"
-                  ]
-               },
-               "uniqueItems": false
-            },
-            "reference_identifiers_resource_accession": {
-               "bsonType": "array",
-               "items": {
-                  "bsonType": "string"
-               },
-               "uniqueItems": false
-            },
-            "reference_identifiers_resource_name": {
-               "bsonType": "array",
-               "items": {
-                  "bsonType": "string",
-                  "enum": [
-                     "GlyCosmos",
-                     "GlyGen",
-                     "GlyTouCan"
-                  ]
+                  "bsonType": "object",
+                  "properties": {
+                     "provenance_source": {
+                        "bsonType": "string",
+                        "enum": [
+                           "PDB",
+                           "RCSB"
+                        ]
+                     },
+                     "resource_accession": {
+                        "bsonType": "string"
+                     },
+                     "resource_name": {
+                        "bsonType": "string",
+                        "enum": [
+                           "GlyCosmos",
+                           "GlyGen",
+                           "GlyTouCan"
+                        ]
+                     }
+                  },
+                  "additionalProperties": false
                },
                "uniqueItems": false
             }
