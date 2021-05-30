@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "9.1.0",
+   "DATABASE_VERSION": "9.1.1",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -70459,7 +70459,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
-                  "SUBJECT_OF_INVESTIGATION"
+                  "GO",
+                  "GlyCosmos",
+                  "GlyGen",
+                  "InterPro",
+                  "MemProtMD",
+                  "OPM",
+                  "PDBTM",
+                  "Pfam",
+                  "SUBJECT_OF_INVESTIGATION",
+                  "mpstruc"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -71523,8 +71532,10 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Pfam",
                   "SUBJECT_OF_INVESTIGATION",
                   "artifact",
+                  "modified_monomer",
                   "mutation"
                ],
                "CONTENT_CLASSES": [
@@ -71856,8 +71867,10 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Pfam",
                   "SUBJECT_OF_INVESTIGATION",
                   "artifact",
+                  "modified_monomer",
                   "mutation"
                ],
                "CONTENT_CLASSES": [
@@ -106420,15 +106433,15 @@
          },
          {
             "NAME": "pdbx_core_polymer_entity",
-            "VERSION": "9.0.3"
+            "VERSION": "9.0.4"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity",
-            "VERSION": "9.0.1"
+            "VERSION": "9.0.2"
          },
          {
             "NAME": "pdbx_core_branched_entity",
-            "VERSION": "9.1.0"
+            "VERSION": "9.1.1"
          },
          {
             "NAME": "pdbx_core_polymer_entity_instance",
