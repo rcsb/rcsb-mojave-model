@@ -746,9 +746,12 @@
                   "bsonType": "string",
                   "enum": [
                      "GO",
+                     "GlyCosmos",
+                     "GlyGen",
                      "InterPro",
                      "MemProtMD",
                      "OPM",
+                     "PDBTM",
                      "Pfam",
                      "mpstruc"
                   ]
@@ -808,6 +811,9 @@
                   "bsonType": "string"
                },
                "uniqueItems": false
+            },
+            "chem_ref_def_id": {
+               "bsonType": "string"
             },
             "entity_id": {
                "bsonType": "string"
@@ -897,6 +903,7 @@
                "type": {
                   "bsonType": "string",
                   "enum": [
+                     "Pfam",
                      "artifact",
                      "modified_monomer",
                      "mutation"
@@ -991,6 +998,7 @@
                "type": {
                   "bsonType": "string",
                   "enum": [
+                     "Pfam",
                      "artifact",
                      "modified_monomer",
                      "mutation"

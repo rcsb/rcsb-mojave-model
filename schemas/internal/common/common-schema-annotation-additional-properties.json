@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "/internal/common/common-schema-annotation-additional-properties.json",
+  "type" : "object",
+  "definitions": {
+    "uniprot_additional_property_names": {
+      "type": "string",
+      "enum": ["LINK", "WILD_TYPE", "MUTATED_TYPE", "CONSEQUENCE_TYPE", "PREDICTED_IMPACT", "CLINICAL_SIGNIFICANCE", "EVIDENCE", "DISEASE_TYPE", "STRAIN_ID", "MODIFICATION_TYPE"]
+    },
+    "additional_property": {
+      "type": "object",
+      "properties": {
+        "property_name": {
+          "type": "string",
+          "allOf": [{
+              "$ref" : "#/definitions/uniprot_additional_property_names"
+            },{
+              "$ref": "../../exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json#/properties/rcsb_polymer_entity_feature/items/properties/additional_properties/items/properties/name"
+            },{
+              "$ref": "../../exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity_instance.json#/properties/rcsb_polymer_instance_feature/items/properties/additional_properties/items/properties/name"
+          }]
+        },
+        "property_value": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

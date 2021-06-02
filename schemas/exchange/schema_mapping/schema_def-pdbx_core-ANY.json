@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "9.0.0",
+   "DATABASE_VERSION": "9.1.1",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -65787,15 +65787,21 @@
             "GENERATED_CONTENT"
          ],
          "SCHEMA_MANDATORY": false,
-         "SCHEMA_SUB_CATEGORIES": [],
+         "SCHEMA_SUB_CATEGORIES": [
+            "reference_identifiers"
+         ],
          "ATTRIBUTES": {
             "ENTITY_ID": "entity_id",
             "ENTRY_ID": "entry_id",
             "ASYM_IDS": "asym_ids",
             "AUTH_ASYM_IDS": "auth_asym_ids",
             "CHEM_COMP_MONOMERS": "chem_comp_monomers",
+            "CHEM_REF_DEF_ID": "chem_ref_def_id",
             "PRD_ID": "prd_id",
-            "RCSB_ID": "rcsb_id"
+            "RCSB_ID": "rcsb_id",
+            "REFERENCE_IDENTIFIERS_PROVENANCE_SOURCE": "reference_identifiers_provenance_source",
+            "REFERENCE_IDENTIFIERS_RESOURCE_ACCESSION": "reference_identifiers_resource_accession",
+            "REFERENCE_IDENTIFIERS_RESOURCE_NAME": "reference_identifiers_resource_name"
          },
          "ATTRIBUTE_MAP": {
             "ENTITY_ID": {
@@ -65828,6 +65834,12 @@
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
+            "CHEM_REF_DEF_ID": {
+               "CATEGORY": "rcsb_branched_entity_container_identifiers",
+               "ATTRIBUTE": "chem_ref_def_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
             "PRD_ID": {
                "CATEGORY": "rcsb_branched_entity_container_identifiers",
                "ATTRIBUTE": "prd_id",
@@ -65837,6 +65849,24 @@
             "RCSB_ID": {
                "CATEGORY": "rcsb_branched_entity_container_identifiers",
                "ATTRIBUTE": "rcsb_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REFERENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
+               "CATEGORY": "rcsb_branched_entity_container_identifiers",
+               "ATTRIBUTE": "reference_identifiers_provenance_source",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REFERENCE_IDENTIFIERS_RESOURCE_ACCESSION": {
+               "CATEGORY": "rcsb_branched_entity_container_identifiers",
+               "ATTRIBUTE": "reference_identifiers_resource_accession",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REFERENCE_IDENTIFIERS_RESOURCE_NAME": {
+               "CATEGORY": "rcsb_branched_entity_container_identifiers",
+               "ATTRIBUTE": "reference_identifiers_resource_name",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             }
@@ -65925,7 +65955,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "PRD_ID": {
+            "CHEM_REF_DEF_ID": {
                "ORDER": 6,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -65942,8 +65972,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RCSB_ID": {
+            "PRD_ID": {
                "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 8,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -65958,6 +66005,70 @@
                   "GENERATED_CONTENT"
                ],
                "SUB_CATEGORIES": []
+            },
+            "REFERENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
+               "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "PDB",
+                  "RCSB"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "reference_identifiers"
+               ]
+            },
+            "REFERENCE_IDENTIFIERS_RESOURCE_ACCESSION": {
+               "ORDER": 10,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "reference_identifiers"
+               ]
+            },
+            "REFERENCE_IDENTIFIERS_RESOURCE_NAME": {
+               "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "GlyCosmos",
+                  "GlyGen",
+                  "GlyTouCan"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "reference_identifiers"
+               ]
             }
          },
          "SCHEMA_DELETE_ATTRIBUTE": null,
@@ -70348,7 +70459,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
-                  "SUBJECT_OF_INVESTIGATION"
+                  "GO",
+                  "GlyCosmos",
+                  "GlyGen",
+                  "InterPro",
+                  "MemProtMD",
+                  "OPM",
+                  "PDBTM",
+                  "Pfam",
+                  "SUBJECT_OF_INVESTIGATION",
+                  "mpstruc"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -70440,6 +70560,7 @@
          ],
          "SCHEMA_MANDATORY": false,
          "SCHEMA_SUB_CATEGORIES": [
+            "reference_identifiers",
             "reference_sequence_identifiers"
          ],
          "ATTRIBUTES": {
@@ -70449,9 +70570,13 @@
             "AUTH_ASYM_IDS": "auth_asym_ids",
             "CHEM_COMP_MONOMERS": "chem_comp_monomers",
             "CHEM_COMP_NSTD_MONOMERS": "chem_comp_nstd_monomers",
+            "CHEM_REF_DEF_ID": "chem_ref_def_id",
             "NONPOLYMER_COMP_ID": "nonpolymer_comp_id",
             "PRD_ID": "prd_id",
             "RCSB_ID": "rcsb_id",
+            "REFERENCE_IDENTIFIERS_PROVENANCE_SOURCE": "reference_identifiers_provenance_source",
+            "REFERENCE_IDENTIFIERS_RESOURCE_ACCESSION": "reference_identifiers_resource_accession",
+            "REFERENCE_IDENTIFIERS_RESOURCE_NAME": "reference_identifiers_resource_name",
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ACCESSION": "reference_sequence_identifiers_database_accession",
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ISOFORM": "reference_sequence_identifiers_database_isoform",
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_NAME": "reference_sequence_identifiers_database_name",
@@ -70494,6 +70619,12 @@
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
+            "CHEM_REF_DEF_ID": {
+               "CATEGORY": "rcsb_entity_container_identifiers",
+               "ATTRIBUTE": "chem_ref_def_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
             "NONPOLYMER_COMP_ID": {
                "CATEGORY": "rcsb_entity_container_identifiers",
                "ATTRIBUTE": "nonpolymer_comp_id",
@@ -70509,6 +70640,24 @@
             "RCSB_ID": {
                "CATEGORY": "rcsb_entity_container_identifiers",
                "ATTRIBUTE": "rcsb_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REFERENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
+               "CATEGORY": "rcsb_entity_container_identifiers",
+               "ATTRIBUTE": "reference_identifiers_provenance_source",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REFERENCE_IDENTIFIERS_RESOURCE_ACCESSION": {
+               "CATEGORY": "rcsb_entity_container_identifiers",
+               "ATTRIBUTE": "reference_identifiers_resource_accession",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REFERENCE_IDENTIFIERS_RESOURCE_NAME": {
+               "CATEGORY": "rcsb_entity_container_identifiers",
+               "ATTRIBUTE": "reference_identifiers_resource_name",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -70638,8 +70787,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "NONPOLYMER_COMP_ID": {
+            "CHEM_REF_DEF_ID": {
                "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NONPOLYMER_COMP_ID": {
+               "ORDER": 8,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70656,7 +70822,7 @@
                "SUB_CATEGORIES": []
             },
             "PRD_ID": {
-               "ORDER": 8,
+               "ORDER": 9,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70673,7 +70839,7 @@
                "SUB_CATEGORIES": []
             },
             "RCSB_ID": {
-               "ORDER": 9,
+               "ORDER": 10,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70689,8 +70855,72 @@
                ],
                "SUB_CATEGORIES": []
             },
+            "REFERENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
+               "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "PDB",
+                  "RCSB"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "reference_identifiers"
+               ]
+            },
+            "REFERENCE_IDENTIFIERS_RESOURCE_ACCESSION": {
+               "ORDER": 12,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "reference_identifiers"
+               ]
+            },
+            "REFERENCE_IDENTIFIERS_RESOURCE_NAME": {
+               "ORDER": 13,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "GlyCosmos",
+                  "GlyGen",
+                  "GlyTouCan"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "reference_identifiers"
+               ]
+            },
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ACCESSION": {
-               "ORDER": 10,
+               "ORDER": 14,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70709,7 +70939,7 @@
                ]
             },
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ISOFORM": {
-               "ORDER": 11,
+               "ORDER": 15,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70728,7 +70958,7 @@
                ]
             },
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_NAME": {
-               "ORDER": 12,
+               "ORDER": 16,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -70757,7 +70987,7 @@
                ]
             },
             "REFERENCE_SEQUENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
-               "ORDER": 13,
+               "ORDER": 17,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -71302,8 +71532,10 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Pfam",
                   "SUBJECT_OF_INVESTIGATION",
                   "artifact",
+                  "modified_monomer",
                   "mutation"
                ],
                "CONTENT_CLASSES": [
@@ -71635,8 +71867,10 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Pfam",
                   "SUBJECT_OF_INVESTIGATION",
                   "artifact",
+                  "modified_monomer",
                   "mutation"
                ],
                "CONTENT_CLASSES": [
@@ -72538,9 +72772,13 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "C-MANNOSYLATION_SITE",
                   "CATH",
                   "HAS_COVALENT_LINKAGE",
                   "HAS_METAL_COORDINATION_LINKAGE",
+                  "N-GLYCOSYLATION_SITE",
+                  "O-GLYCOSYLATION_SITE",
+                  "S-GLYCOSYLATION_SITE",
                   "SCOP"
                ],
                "CONTENT_CLASSES": [
@@ -73667,11 +73905,16 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "BINDING_SITE",
+                  "C-MANNOSYLATION_SITE",
                   "CATH",
                   "CIS-PEPTIDE",
                   "HAS_COVALENT_LINKAGE",
                   "HAS_METAL_COORDINATION_LINKAGE",
                   "HELIX_P",
+                  "MEMBRANE_SEGMENT",
+                  "N-GLYCOSYLATION_SITE",
+                  "O-GLYCOSYLATION_SITE",
+                  "S-GLYCOSYLATION_SITE",
                   "SCOP",
                   "SHEET",
                   "UNASSIGNED_SEC_STRUCT",
@@ -74119,6 +74362,7 @@
                   "ANGLE_OUTLIER",
                   "BINDING_SITE",
                   "BOND_OUTLIER",
+                  "C-MANNOSYLATION_SITE",
                   "CATH",
                   "CIS-PEPTIDE",
                   "HAS_COVALENT_LINKAGE",
@@ -74126,10 +74370,13 @@
                   "HELIX_P",
                   "MOGUL_ANGLE_OUTLIER",
                   "MOGUL_BOND_OUTLIER",
+                  "N-GLYCOSYLATION_SITE",
+                  "O-GLYCOSYLATION_SITE",
                   "RAMACHANDRAN_OUTLIER",
                   "ROTAMER_OUTLIER",
                   "RSCC_OUTLIER",
                   "RSRZ_OUTLIER",
+                  "S-GLYCOSYLATION_SITE",
                   "SCOP",
                   "SHEET",
                   "STEREO_OUTLIER",
@@ -79135,6 +79382,7 @@
             "ENTRY_ID": "entry_id",
             "ASYM_IDS": "asym_ids",
             "AUTH_ASYM_IDS": "auth_asym_ids",
+            "CHEM_REF_DEF_ID": "chem_ref_def_id",
             "NONPOLYMER_COMP_ID": "nonpolymer_comp_id",
             "PRD_ID": "prd_id",
             "RCSB_ID": "rcsb_id",
@@ -79164,6 +79412,12 @@
             "AUTH_ASYM_IDS": {
                "CATEGORY": "rcsb_nonpolymer_entity_container_identifiers",
                "ATTRIBUTE": "auth_asym_ids",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "CHEM_REF_DEF_ID": {
+               "CATEGORY": "rcsb_nonpolymer_entity_container_identifiers",
+               "ATTRIBUTE": "chem_ref_def_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -79271,7 +79525,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "NONPOLYMER_COMP_ID": {
+            "CHEM_REF_DEF_ID": {
                "ORDER": 5,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -79288,7 +79542,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "PRD_ID": {
+            "NONPOLYMER_COMP_ID": {
                "ORDER": 6,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -79305,8 +79559,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RCSB_ID": {
+            "PRD_ID": {
                "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 8,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -79323,7 +79594,7 @@
                "SUB_CATEGORIES": []
             },
             "REFERENCE_CHEMICAL_IDENTIFIERS_PROVENANCE_SOURCE": {
-               "ORDER": 8,
+               "ORDER": 9,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -79345,7 +79616,7 @@
                ]
             },
             "REFERENCE_CHEMICAL_IDENTIFIERS_RESOURCE_ACCESSION": {
-               "ORDER": 9,
+               "ORDER": 10,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -79364,7 +79635,7 @@
                ]
             },
             "REFERENCE_CHEMICAL_IDENTIFIERS_RESOURCE_NAME": {
-               "ORDER": 10,
+               "ORDER": 11,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -85311,9 +85582,12 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "GO",
+                  "GlyCosmos",
+                  "GlyGen",
                   "InterPro",
                   "MemProtMD",
                   "OPM",
+                  "PDBTM",
                   "Pfam",
                   "mpstruc"
                ],
@@ -85416,6 +85690,7 @@
             "AUTH_ASYM_IDS": "auth_asym_ids",
             "CHEM_COMP_MONOMERS": "chem_comp_monomers",
             "CHEM_COMP_NSTD_MONOMERS": "chem_comp_nstd_monomers",
+            "CHEM_REF_DEF_ID": "chem_ref_def_id",
             "PRD_ID": "prd_id",
             "RCSB_ID": "rcsb_id",
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ACCESSION": "reference_sequence_identifiers_database_accession",
@@ -85457,6 +85732,12 @@
             "CHEM_COMP_NSTD_MONOMERS": {
                "CATEGORY": "rcsb_polymer_entity_container_identifiers",
                "ATTRIBUTE": "chem_comp_nstd_monomers",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "CHEM_REF_DEF_ID": {
+               "CATEGORY": "rcsb_polymer_entity_container_identifiers",
+               "ATTRIBUTE": "chem_ref_def_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -85598,7 +85879,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "PRD_ID": {
+            "CHEM_REF_DEF_ID": {
                "ORDER": 7,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -85615,8 +85896,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RCSB_ID": {
+            "PRD_ID": {
                "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 9,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -85633,25 +85931,6 @@
                "SUB_CATEGORIES": []
             },
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ACCESSION": {
-               "ORDER": 9,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": ",",
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": [
-                  "reference_sequence_identifiers"
-               ]
-            },
-            "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ISOFORM": {
                "ORDER": 10,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -85670,8 +85949,27 @@
                   "reference_sequence_identifiers"
                ]
             },
-            "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_NAME": {
+            "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ISOFORM": {
                "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "reference_sequence_identifiers"
+               ]
+            },
+            "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_NAME": {
+               "ORDER": 12,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -85700,7 +85998,7 @@
                ]
             },
             "REFERENCE_SEQUENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
-               "ORDER": 12,
+               "ORDER": 13,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -86219,6 +86517,7 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Pfam",
                   "artifact",
                   "modified_monomer",
                   "mutation"
@@ -86552,6 +86851,7 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Pfam",
                   "artifact",
                   "modified_monomer",
                   "mutation"
@@ -88306,15 +88606,20 @@
                   "ANGLE_OUTLIER",
                   "BINDING_SITE",
                   "BOND_OUTLIER",
+                  "C-MANNOSYLATION_SITE",
                   "CATH",
                   "CIS-PEPTIDE",
                   "HELIX_P",
+                  "MEMBRANE_SEGMENT",
                   "MOGUL_ANGLE_OUTLIER",
                   "MOGUL_BOND_OUTLIER",
+                  "N-GLYCOSYLATION_SITE",
+                  "O-GLYCOSYLATION_SITE",
                   "RAMACHANDRAN_OUTLIER",
                   "ROTAMER_OUTLIER",
                   "RSCC_OUTLIER",
                   "RSRZ_OUTLIER",
+                  "S-GLYCOSYLATION_SITE",
                   "SCOP",
                   "SHEET",
                   "STEREO_OUTLIER",
@@ -88739,15 +89044,20 @@
                   "ANGLE_OUTLIER",
                   "BINDING_SITE",
                   "BOND_OUTLIER",
+                  "C-MANNOSYLATION_SITE",
                   "CATH",
                   "CIS-PEPTIDE",
                   "HELIX_P",
+                  "MEMBRANE_SEGMENT",
                   "MOGUL_ANGLE_OUTLIER",
                   "MOGUL_BOND_OUTLIER",
+                  "N-GLYCOSYLATION_SITE",
+                  "O-GLYCOSYLATION_SITE",
                   "RAMACHANDRAN_OUTLIER",
                   "ROTAMER_OUTLIER",
                   "RSCC_OUTLIER",
                   "RSRZ_OUTLIER",
+                  "S-GLYCOSYLATION_SITE",
                   "SCOP",
                   "SHEET",
                   "STEREO_OUTLIER",
@@ -106117,7 +106427,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "pdbx_core_entry",
-            "VERSION": "8.15.0"
+            "VERSION": "8.15.1"
          },
          {
             "NAME": "pdbx_core_assembly",
@@ -106125,19 +106435,19 @@
          },
          {
             "NAME": "pdbx_core_polymer_entity",
-            "VERSION": "9.0.0"
+            "VERSION": "9.0.4"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity",
-            "VERSION": "9.0.0"
+            "VERSION": "9.0.2"
          },
          {
             "NAME": "pdbx_core_branched_entity",
-            "VERSION": "9.0.0"
+            "VERSION": "9.1.1"
          },
          {
             "NAME": "pdbx_core_polymer_entity_instance",
-            "VERSION": "9.0.0"
+            "VERSION": "9.0.2"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity_instance",
@@ -107764,6 +108074,10 @@
                "HAS_UNIT_CARDINALITY": false
             },
             {
+               "NAME": "reference_identifiers",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
                "NAME": "feature_class_lineage",
                "HAS_UNIT_CARDINALITY": false
             },
@@ -107823,6 +108137,10 @@
             },
             {
                "NAME": "reference_sequence_identifiers",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
+               "NAME": "reference_identifiers",
                "HAS_UNIT_CARDINALITY": false
             },
             {
@@ -107888,6 +108206,10 @@
                "HAS_UNIT_CARDINALITY": false
             },
             {
+               "NAME": "reference_identifiers",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
                "NAME": "feature_class_lineage",
                "HAS_UNIT_CARDINALITY": false
             },
@@ -107950,6 +108272,10 @@
                "HAS_UNIT_CARDINALITY": false
             },
             {
+               "NAME": "reference_identifiers",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
                "NAME": "feature_class_lineage",
                "HAS_UNIT_CARDINALITY": false
             },
@@ -108008,6 +108334,10 @@
                "HAS_UNIT_CARDINALITY": false
             },
             {
+               "NAME": "reference_identifiers",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
                "NAME": "feature_class_lineage",
                "HAS_UNIT_CARDINALITY": false
             },
@@ -108063,6 +108393,10 @@
             },
             {
                "NAME": "reference_sequence_identifiers",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
+               "NAME": "reference_identifiers",
                "HAS_UNIT_CARDINALITY": false
             },
             {
