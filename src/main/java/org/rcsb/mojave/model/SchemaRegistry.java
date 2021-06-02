@@ -17,6 +17,12 @@ import java.util.Map;
  */
 public enum SchemaRegistry {
 
+    CORE_GROUP_JSON("core.group.json.schema.name"),
+    CORE_GROUP_BSON("validation.group.bson.schema.name"),
+
+    CORE_GROUP_PROVENANCE_JSON("core.group.provenance.json.schema.name"),
+    CORE_GROUP_PROVENANCE_BSON("validation.group.provenance.bson.schema.name"),
+
     CORE_ASSEMBLY_JSON("core.assembly.json.schema.name"),
     CORE_ASSEMBLY_BSON("validation.assembly.bson.schema.name"),
 
