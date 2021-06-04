@@ -3404,6 +3404,7 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "Pfam",
                      "artifact",
                      "modified_monomer",
                      "mutation"
@@ -3415,16 +3416,24 @@
                   "description": "A type or category of the feature.",
                   "rcsb_enum_annotated": [
                      {
+                        "value": "Pfam",
+                        "detail": "Pfam Protein Family",
+                        "name": "Pfam Protein Family"
+                     },
+                     {
                         "value": "artifact",
-                        "detail": "Cloning artifact, expression tag, linker"
+                        "detail": "Cloning artifact, expression tag, linker",
+                        "name": "Cloning artifact, expression tag, linker"
                      },
                      {
                         "value": "modified_monomer",
-                        "detail": "Modified chemical component"
+                        "detail": "Modified chemical component",
+                        "name": "Modified chemical component"
                      },
                      {
                         "value": "mutation",
-                        "detail": "Engineered mutations and chemical modifications"
+                        "detail": "Engineered mutations and chemical modifications",
+                        "name": "Engineered mutations and chemical modifications"
                      }
                   ],
                   "rcsb_description": [
@@ -3677,6 +3686,7 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "Pfam",
                      "artifact",
                      "modified_monomer",
                      "mutation"
@@ -3692,16 +3702,24 @@
                   "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
+                        "value": "Pfam",
+                        "detail": "Pfam Protein Family",
+                        "name": "Pfam Protein Family"
+                     },
+                     {
                         "value": "artifact",
-                        "detail": "Cloning artifact, expression tag, linker"
+                        "detail": "Cloning artifact, expression tag, linker",
+                        "name": "Cloning artifact, expression tag, linker"
                      },
                      {
                         "value": "modified_monomer",
-                        "detail": "Modified chemical component"
+                        "detail": "Modified chemical component",
+                        "name": "Modified chemical component"
                      },
                      {
                         "value": "mutation",
-                        "detail": "Engineered mutations and chemical modifications"
+                        "detail": "Engineered mutations and chemical modifications",
+                        "name": "Engineered mutations and chemical modifications"
                      }
                   ],
                   "rcsb_description": [
@@ -3881,7 +3899,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 9.0.3",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 9.0.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 9.0.3"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 9.0.4",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 9.0.4. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 9.0.4"
 }
