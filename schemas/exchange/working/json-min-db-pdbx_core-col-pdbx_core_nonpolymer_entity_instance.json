@@ -1019,6 +1019,20 @@
                      }
                   ]
                },
+               "average_occupancy": {
+                  "type": "number",
+                  "examples": [
+                     1.0,
+                     0.83
+                  ],
+                  "description": "The average heavy atom occupancy for coordinate records for the non-polymer entity instance.",
+                  "rcsb_description": [
+                     {
+                        "text": "The average heavy atom occupancy for coordinate records for the non-polymer entity instance.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "completeness": {
                   "type": "number",
                   "examples": [
@@ -1843,7 +1857,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 9.0.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 9.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 9.0.0"
+   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 9.0.1",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 9.0.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 9.0.1"
 }
