@@ -168,12 +168,17 @@
                   "enum": [
                     "RMSD",
                     "data quality",
-                    "number of modified residues"
+                    "number of modified residues",
+                    "coverage"
                   ],
                   "rcsb_enum_annotated": [
                     {
                       "value": "RMSD",
                       "detail": "The lower the RMSD, the better the structural similarity"
+                    },
+                    {
+                      "value": "coverage",
+                      "detail": "The higher the coverage, the better"
                     }
                   ],
                   "description": "Defines ranking option applicable to group members"
