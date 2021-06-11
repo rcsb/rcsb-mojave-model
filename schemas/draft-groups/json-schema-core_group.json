@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "type": "object",
   "required": [
     "rcsb_id",
@@ -48,29 +49,32 @@
       "additionalProperties": false
     },
     "rcsb_group_info": {
+      "type": "object",
       "required": [
         "group_name",
         "group_description",
         "group_members_granularity",
         "group_members_count"
       ],
-      "group_name": {
-        "type": "string"
-      },
-      "group_description": {
-        "type": "string"
-      },
-      "group_members_granularity": {
-        "type": "string",
-        "enum": [
-          "assembly",
-          "polymer_entity",
-          "polymer_entity_instance"
-        ],
-        "description": "Granularity of group members identifiers"
-      },
-      "group_members_count": {
-        "type": "integer"
+      "properties": {
+        "group_name": {
+          "type": "string"
+        },
+        "group_description": {
+          "type": "string"
+        },
+        "group_members_granularity": {
+          "type": "string",
+          "enum": [
+            "assembly",
+            "polymer_entity",
+            "polymer_entity_instance"
+          ],
+          "description": "Granularity of group members identifiers"
+        },
+        "group_members_count": {
+          "type": "integer"
+        }
       }
     },
     "rcsb_group_statistics": {
@@ -136,12 +140,16 @@
           "representative_criteria_type": {
             "type": "string",
             "enum": [
+              "best coverage",
               "best resolution"
             ],
             "rcsb_enum_annotated": [
               {
                 "value": "best resolution",
                 "detail": "The lower the resolution value, the better"
+              },{
+                "value": "best coverage",
+                "detail": "The higher the coverage value, the better"
               }
             ],
             "description": "Uniquely identifies the criteria incorporated into selecting a representative group member"
