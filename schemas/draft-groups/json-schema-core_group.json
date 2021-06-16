@@ -220,6 +220,62 @@
       },
       "minItems": 1,
       "uniqueItems": true
+    },
+    "rcsb_group_sequence_alignment": {
+      "type": "object",
+      "required": ["abstract_reference", "group_members_alignment"],
+      "properties": {
+        "abstract_reference": {
+          "type": "object",
+          "description": "Abstract reference where group members can be aligned to generate a MSA",
+          "required": ["length"],
+          "properties": {
+            "length": {
+              "type": "integer",
+              "description": "Abstract reference length"
+            },
+            "sequence": {
+              "type": "string",
+              "description": "Sequence that represents the abstract reference"
+            }
+          }
+        },
+        "group_members_alignment": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "type": "object",
+            "required": ["group_member_id", "aligned_regions"],
+            "properties": {
+              "group_member_id": {
+                "type": "string",
+                "description": "Identifier of the group member"
+              },
+              "aligned_regions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["entity_beg_seq_id", "ref_beg_seq_id", "length"],
+                  "properties": {
+                    "entity_beg_seq_id": {
+                      "type": "integer",
+                      "description": "An identifier for the monomer in the entity sequence at which this segment of the alignment begins"
+                    },
+                    "length": {
+                      "type": "integer",
+                      "description": "An length of the this segment of the alignment"
+                    },
+                    "ref_beg_seq_id": {
+                      "type": "integer",
+                      "description": "An identifier for the monomer in the reference sequence at which this segment of the alignment begins"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "additionalProperties": false
