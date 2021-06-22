@@ -284,6 +284,9 @@
                "alt_id": {
                   "bsonType": "string"
                },
+               "average_occupancy": {
+                  "bsonType": "double"
+               },
                "completeness": {
                   "bsonType": "double"
                },
@@ -302,6 +305,13 @@
                   "enum": [
                      "N",
                      "Y"
+                  ]
+               },
+               "is_subject_of_investigation_provenance": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Author",
+                     "RCSB"
                   ]
                },
                "mogul_angle_outliers": {

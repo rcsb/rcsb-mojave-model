@@ -1019,6 +1019,20 @@
                      }
                   ]
                },
+               "average_occupancy": {
+                  "type": "number",
+                  "examples": [
+                     1.0,
+                     0.83
+                  ],
+                  "description": "The average heavy atom occupancy for coordinate records for the non-polymer entity instance.",
+                  "rcsb_description": [
+                     {
+                        "text": "The average heavy atom occupancy for coordinate records for the non-polymer entity instance.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "completeness": {
                   "type": "number",
                   "examples": [
@@ -1104,11 +1118,11 @@
                   "rcsb_enum_annotated": [
                      {
                         "value": "N",
-                        "detail": "Molecule instance is not the subject of the current investivation"
+                        "detail": "Molecule instance is not the subject of the current investigation"
                      },
                      {
                         "value": "Y",
-                        "detail": "Molecule instance is the subject of the current investivation"
+                        "detail": "Molecule instance is the subject of the current investigation"
                      }
                   ],
                   "rcsb_description": [
@@ -1119,6 +1133,34 @@
                      {
                         "text": "Ligand Identified as Subject of Investigation",
                         "context": "brief"
+                     }
+                  ]
+               },
+               "is_subject_of_investigation_provenance": {
+                  "type": "string",
+                  "enum": [
+                     "Author",
+                     "RCSB"
+                  ],
+                  "examples": [
+                     "Author",
+                     "RCSB"
+                  ],
+                  "description": "The provenance for the selection of the molecular entity identified as the subject of the current study.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "Author",
+                        "detail": "The entry author is the source of the selection of the molecular entity of interest"
+                     },
+                     {
+                        "value": "RCSB",
+                        "detail": "RCSB is the source of the selection of the molecular entity of interest"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The provenance for the selection of the molecular entity identified as the subject of the current study.",
+                        "context": "dictionary"
                      }
                   ]
                },
@@ -1843,7 +1885,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 9.0.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 9.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 9.0.0"
+   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 9.0.2",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 9.0.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 9.0.2"
 }

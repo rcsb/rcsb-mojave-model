@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "9.1.1",
+   "DATABASE_VERSION": "9.1.3",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -82813,6 +82813,7 @@
             "ALT_ID": "alt_id",
             "ASYM_ID": "asym_id",
             "AUTH_ASYM_ID": "auth_asym_id",
+            "AVERAGE_OCCUPANCY": "average_occupancy",
             "COMP_ID": "comp_id",
             "COMPLETENESS": "completeness",
             "ENTITY_ID": "entity_id",
@@ -82820,6 +82821,7 @@
             "INTERMOLECULAR_CLASHES": "intermolecular_clashes",
             "IS_BEST_INSTANCE": "is_best_instance",
             "IS_SUBJECT_OF_INVESTIGATION": "is_subject_of_investigation",
+            "IS_SUBJECT_OF_INVESTIGATION_PROVENANCE": "is_subject_of_investigation_provenance",
             "MODEL_ID": "model_id",
             "MOGUL_ANGLE_OUTLIERS": "mogul_angle_outliers",
             "MOGUL_ANGLES_RMSZ": "mogul_angles_RMSZ",
@@ -82869,6 +82871,12 @@
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
+            "AVERAGE_OCCUPANCY": {
+               "CATEGORY": "rcsb_nonpolymer_instance_validation_score",
+               "ATTRIBUTE": "average_occupancy",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
             "COMP_ID": {
                "CATEGORY": "rcsb_nonpolymer_instance_validation_score",
                "ATTRIBUTE": "comp_id",
@@ -82908,6 +82916,12 @@
             "IS_SUBJECT_OF_INVESTIGATION": {
                "CATEGORY": "rcsb_nonpolymer_instance_validation_score",
                "ATTRIBUTE": "is_subject_of_investigation",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "IS_SUBJECT_OF_INVESTIGATION_PROVENANCE": {
+               "CATEGORY": "rcsb_nonpolymer_instance_validation_score",
+               "ATTRIBUTE": "is_subject_of_investigation_provenance",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -83080,8 +83094,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "COMP_ID": {
+            "AVERAGE_OCCUPANCY": {
                "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 6,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "COMP_ID": {
+               "ORDER": 8,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -83098,7 +83129,7 @@
                "SUB_CATEGORIES": []
             },
             "COMPLETENESS": {
-               "ORDER": 8,
+               "ORDER": 9,
                "NULLABLE": true,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
@@ -83115,23 +83146,6 @@
                "SUB_CATEGORIES": []
             },
             "ENTITY_ID": {
-               "ORDER": 9,
-               "NULLABLE": false,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "ENTRY_ID": {
                "ORDER": 10,
                "NULLABLE": false,
                "PRECISION": 0,
@@ -83148,8 +83162,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "INTERMOLECULAR_CLASHES": {
+            "ENTRY_ID": {
                "ORDER": 11,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "INTERMOLECULAR_CLASHES": {
+               "ORDER": 12,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -83166,26 +83197,6 @@
                "SUB_CATEGORIES": []
             },
             "IS_BEST_INSTANCE": {
-               "ORDER": 12,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [
-                  "N",
-                  "Y"
-               ],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "IS_SUBJECT_OF_INVESTIGATION": {
                "ORDER": 13,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -83205,8 +83216,48 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "MODEL_ID": {
+            "IS_SUBJECT_OF_INVESTIGATION": {
                "ORDER": 14,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "N",
+                  "Y"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "IS_SUBJECT_OF_INVESTIGATION_PROVENANCE": {
+               "ORDER": 15,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "Author",
+                  "RCSB"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODEL_ID": {
+               "ORDER": 16,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -83223,40 +83274,6 @@
                "SUB_CATEGORIES": []
             },
             "MOGUL_ANGLE_OUTLIERS": {
-               "ORDER": 15,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "MOGUL_ANGLES_RMSZ": {
-               "ORDER": 16,
-               "NULLABLE": true,
-               "PRECISION": 6,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "float",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "MOGUL_BOND_OUTLIERS": {
                "ORDER": 17,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -83273,7 +83290,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "MOGUL_BONDS_RMSZ": {
+            "MOGUL_ANGLES_RMSZ": {
                "ORDER": 18,
                "NULLABLE": true,
                "PRECISION": 6,
@@ -83290,12 +83307,12 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RANKING_MODEL_FIT": {
+            "MOGUL_BOND_OUTLIERS": {
                "ORDER": 19,
                "NULLABLE": true,
-               "PRECISION": 6,
+               "PRECISION": 0,
                "PRIMARY_KEY": false,
-               "APP_TYPE": "float",
+               "APP_TYPE": "int",
                "WIDTH": 10,
                "ITERABLE_DELIMITER": null,
                "EMBEDDED_ITERABLE_DELIMITER": null,
@@ -83307,7 +83324,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RANKING_MODEL_GEOMETRY": {
+            "MOGUL_BONDS_RMSZ": {
                "ORDER": 20,
                "NULLABLE": true,
                "PRECISION": 6,
@@ -83324,7 +83341,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "SCORE_MODEL_FIT": {
+            "RANKING_MODEL_FIT": {
                "ORDER": 21,
                "NULLABLE": true,
                "PRECISION": 6,
@@ -83341,7 +83358,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "SCORE_MODEL_GEOMETRY": {
+            "RANKING_MODEL_GEOMETRY": {
                "ORDER": 22,
                "NULLABLE": true,
                "PRECISION": 6,
@@ -83358,8 +83375,42 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "STEREO_OUTLIERS": {
+            "SCORE_MODEL_FIT": {
                "ORDER": 23,
+               "NULLABLE": true,
+               "PRECISION": 6,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "SCORE_MODEL_GEOMETRY": {
+               "ORDER": 24,
+               "NULLABLE": true,
+               "PRECISION": 6,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "STEREO_OUTLIERS": {
+               "ORDER": 25,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -83376,7 +83427,7 @@
                "SUB_CATEGORIES": []
             },
             "TYPE": {
-               "ORDER": 24,
+               "ORDER": 26,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -106451,7 +106502,7 @@
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity_instance",
-            "VERSION": "9.0.0"
+            "VERSION": "9.0.2"
          },
          {
             "NAME": "pdbx_core_branched_entity_instance",
