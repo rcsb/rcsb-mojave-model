@@ -2925,6 +2925,40 @@
                            "path": "rcsb_polymer_entity_annotation.name"
                         }
                      ]
+                  },
+                  {
+                     "context_value": "mpstruc",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "MONOTOPIC MEMBRANE PROTEINS.Oxidases.Monoamine Oxidase A"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.annotation_lineage.id"
+                        },
+                        {
+                           "examples": [
+                              "Monoamine Oxidase A"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.annotation_lineage.name"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "OPM",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "Transmembrane.Bitopic proteins.Bitopic proteins with NAD(P)-binding Rossmann-fold domains.Flavin containing amine oxidoreductase"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.annotation_lineage.id"
+                        },
+                        {
+                           "examples": [
+                              "Flavin containing amine oxidoreductase"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.annotation_lineage.name"
+                        }
+                     ]
                   }
                ]
             }
@@ -3404,7 +3438,18 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "CARD_MODEL",
+                     "IMGT_ANTIBODY_DESCRIPTION",
+                     "IMGT_ANTIBODY_DOMAIN_NAME",
+                     "IMGT_ANTIBODY_GENE_ALLELE_NAME",
+                     "IMGT_ANTIBODY_ORGANISM_NAME",
+                     "IMGT_ANTIBODY_PROTEIN_NAME",
+                     "IMGT_ANTIBODY_RECEPTOR_DESCRIPTION",
+                     "IMGT_ANTIBODY_RECEPTOR_TYPE",
                      "Pfam",
+                     "SABDAB_ANTIBODY_ANTIGEN_NAME",
+                     "SABDAB_ANTIBODY_NAME",
+                     "SABDAB_ANTIBODY_TARGET",
                      "artifact",
                      "modified_monomer",
                      "mutation"
@@ -3416,9 +3461,64 @@
                   "description": "A type or category of the feature.",
                   "rcsb_enum_annotated": [
                      {
+                        "value": "CARD_MODEL",
+                        "detail": "Comprehensive Antibiotic Resistance Database Detection Model",
+                        "name": "CARD AMR Detection Model"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_DESCRIPTION",
+                        "detail": "International Immunogenetic Information System (IMGT) antibody description",
+                        "name": "IMGT Antibody Description"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_DOMAIN_NAME",
+                        "detail": "International Immunogenetic Information System (IMGT) domain name",
+                        "name": "IMGT Antibody Domain Name"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_GENE_ALLELE_NAME",
+                        "detail": "International Immunogenetic Information System (IMGT) gene and allele name",
+                        "name": "IMGT Antibody Gene and Allele Name"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_ORGANISM_NAME",
+                        "detail": "International Immunogenetic Information System (IMGT) organism name",
+                        "name": "IMGT Antibody Organism Name"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_PROTEIN_NAME",
+                        "detail": "International Immunogenetic Information System (IMGT) protein name",
+                        "name": "IMGT Antibody Protein Name"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_RECEPTOR_DESCRIPTION",
+                        "detail": "International Immunogenetic Information System (IMGT) receptor description",
+                        "name": "IMGT Antibody Receptor Description"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_RECEPTOR_TYPE",
+                        "detail": "International Immunogenetic Information System (IMGT) receptor type",
+                        "name": "IMGT Antibody Receptor Type"
+                     },
+                     {
                         "value": "Pfam",
                         "detail": "Pfam Protein Family",
                         "name": "Pfam Protein Family"
+                     },
+                     {
+                        "value": "SABDAB_ANTIBODY_ANTIGEN_NAME",
+                        "detail": "Structural Antibody Database (SAbDab) antibody antigen name",
+                        "name": "SAbDab Antibody Antigen Name"
+                     },
+                     {
+                        "value": "SABDAB_ANTIBODY_NAME",
+                        "detail": "Therapeutic Structural Antibody Database (Thera-SAbDab) antibody name",
+                        "name": "SAbDab Antibody Name"
+                     },
+                     {
+                        "value": "SABDAB_ANTIBODY_TARGET",
+                        "detail": "Therapeutic Structural Antibody Database (Thera-SAbDab) antigen targeted by the antibody",
+                        "name": "SAbDab Antibody Target"
                      },
                      {
                         "value": "artifact",
@@ -3516,6 +3616,8 @@
                         "name": {
                            "type": "string",
                            "enum": [
+                              "CARD_MODEL_DESCRIPTION",
+                              "CARD_MODEL_ORGANISM",
                               "PARENT_COMP_ID"
                            ],
                            "examples": [
@@ -3523,6 +3625,14 @@
                            ],
                            "description": "The additional property name.",
                            "rcsb_enum_annotated": [
+                              {
+                                 "value": "CARD_MODEL_DESCRIPTION",
+                                 "detail": "CARD Model Description"
+                              },
+                              {
+                                 "value": "CARD_MODEL_ORGANISM",
+                                 "detail": "CARD Model Organism"
+                              },
                               {
                                  "value": "PARENT_COMP_ID",
                                  "detail": "Parent Chemical Component Reference Dictionary Identifier"
@@ -3875,6 +3985,506 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "rcsb_related_target_references": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "entity_id": {
+                  "type": "string",
+                  "examples": [
+                     "1"
+                  ],
+                  "description": "Entity identifier for the polymer.",
+                  "rcsb_description": [
+                     {
+                        "text": "Entity identifier for the polymer.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "entry_id": {
+                  "type": "string",
+                  "examples": [
+                     "1ABC"
+                  ],
+                  "description": "Structure entry identifier.",
+                  "rcsb_description": [
+                     {
+                        "text": "Structure entry identifier.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Ordinal identifier for this category",
+                  "rcsb_description": [
+                     {
+                        "text": "Ordinal identifier for this category",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "related_resource_name": {
+                  "type": "string",
+                  "enum": [
+                     "ChEMBL",
+                     "DrugBank",
+                     "Pharos"
+                  ],
+                  "examples": [
+                     "DrugBank",
+                     "ChEMBL",
+                     "Pharos"
+                  ],
+                  "description": "The related target data resource name.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "ChEMBL",
+                        "detail": "ChEMBL, manually curated database of bioactive molecules with drug-like properties",
+                        "name": "ChEMBL"
+                     },
+                     {
+                        "value": "DrugBank",
+                        "detail": "DrugBank, database containing information on drugs and drug targets",
+                        "name": "DrugBank"
+                     },
+                     {
+                        "value": "Pharos",
+                        "detail": "User interface to the Knowledge Management Center (KMC) for the Illuminating the Druggable Genome (IDG)",
+                        "name": "Pharos"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The related target data resource name.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "related_resource_version": {
+                  "type": "string",
+                  "examples": [
+                     "6.11.0"
+                  ],
+                  "description": "The version of the target data resource.",
+                  "rcsb_description": [
+                     {
+                        "text": "The version of the target data resource.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "related_target_id": {
+                  "type": "string",
+                  "description": "An identifier for the target sequence in the related data resource.",
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for the target sequence in the related data resource.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "target_taxonomy_id": {
+                  "type": "integer",
+                  "description": "NCBI Taxonomy identifier for the target organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                  "rcsb_description": [
+                     {
+                        "text": "NCBI Taxonomy identifier for the target organism.\n\n Reference:\n\n Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,\n Tatusova TA, Rapp BA (2000). Database resources of the National\n Center for Biotechnology Information. Nucleic Acids Res 2000 Jan\n 1;28(1):10-4\n\n Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,\n Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "aligned_target": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "entity_beg_seq_id": {
+                           "type": "integer",
+                           "description": "The position of the monomer in the entity sequence at which the alignment begins.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The position of the monomer in the entity sequence at which the alignment begins.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "length": {
+                           "type": "integer",
+                           "description": "The length of the alignment.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The length of the alignment.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "target_beg_seq_id": {
+                           "type": "integer",
+                           "description": "The position of the monomer in the target sequence at which the alignment begins.",
+                           "rcsb_description": [
+                              {
+                                 "text": "The position of the monomer in the target sequence at which the alignment begins.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_target_cofactors": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "binding_assay_value": {
+                  "type": "number",
+                  "examples": [
+                     6.82
+                  ],
+                  "description": "The value measured or determined by the assay.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value measured or determined by the assay.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "binding_assay_value_type": {
+                  "type": "string",
+                  "enum": [
+                     "pEC50",
+                     "pIC50",
+                     "pKd",
+                     "pKi"
+                  ],
+                  "examples": [
+                     "pIC50",
+                     "pEC50"
+                  ],
+                  "description": "The type of measurement or value determined by the assay.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "pEC50",
+                        "detail": "half maximal effective concentration",
+                        "name": "pEC50",
+                        "units": "-log(M)"
+                     },
+                     {
+                        "value": "pIC50",
+                        "detail": "half maximal inhibitory concentration ",
+                        "name": "pIC50",
+                        "units": "-log(M)"
+                     },
+                     {
+                        "value": "pKd",
+                        "detail": "binding dissociation constant",
+                        "name": "pKd",
+                        "units": "-log(M)"
+                     },
+                     {
+                        "value": "pKi",
+                        "detail": "binding  inhibitory constant",
+                        "name": "pKi",
+                        "units": "-log(M)"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The type of measurement or value determined by the assay.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "cofactor_InChIKey": {
+                  "type": "string",
+                  "examples": [
+                     "BNOCDEBUFVJMQI-REOHCLBHSA-N"
+                  ],
+                  "description": "Standard IUPAC International Chemical Identifier (InChI) descriptor key\n for the cofactor.\n\n InChI, the IUPAC International Chemical Identifier,\n by Stephen R Heller, Alan McNaught, Igor Pletnev, Stephen Stein and Dmitrii Tchekhovskoi,\n Journal of Cheminformatics, 2015, 7:23",
+                  "rcsb_description": [
+                     {
+                        "text": "Standard IUPAC International Chemical Identifier (InChI) descriptor key\n for the cofactor.\n\n InChI, the IUPAC International Chemical Identifier,\n by Stephen R Heller, Alan McNaught, Igor Pletnev, Stephen Stein and Dmitrii Tchekhovskoi,\n Journal of Cheminformatics, 2015, 7:23",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "cofactor_SMILES": {
+                  "type": "string",
+                  "examples": [
+                     "OC(=O)[CH](CF)O[P](O)(O)=O"
+                  ],
+                  "description": "Simplified molecular-input line-entry system (SMILES) descriptor for the cofactor.\n\n   Weininger D (February 1988). \"SMILES, a chemical language and information system. 1.\n   Introduction to methodology and encoding rules\". Journal of Chemical Information and Modeling. 28 (1): 31-6.\n\n   Weininger D, Weininger A, Weininger JL (May 1989).\n   \"SMILES. 2. Algorithm for generation of unique SMILES notation\",\n   Journal of Chemical Information and Modeling. 29 (2): 97-101.",
+                  "rcsb_description": [
+                     {
+                        "text": "Simplified molecular-input line-entry system (SMILES) descriptor for the cofactor.\n\n   Weininger D (February 1988). \"SMILES, a chemical language and information system. 1.\n   Introduction to methodology and encoding rules\". Journal of Chemical Information and Modeling. 28 (1): 31-6.\n\n   Weininger D, Weininger A, Weininger JL (May 1989).\n   \"SMILES. 2. Algorithm for generation of unique SMILES notation\",\n   Journal of Chemical Information and Modeling. 29 (2): 97-101.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "cofactor_chem_comp_id": {
+                  "type": "string",
+                  "examples": [
+                     "0Z3",
+                     "CD9"
+                  ],
+                  "description": "The chemical component definition identifier for the cofactor.",
+                  "rcsb_description": [
+                     {
+                        "text": "The chemical component definition identifier for the cofactor.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "cofactor_description": {
+                  "type": "string",
+                  "examples": [
+                     "A synthetic naphthoquinone without the isoprenoid side chain and biological activity,\n  but can be converted to active vitamin K2, menaquinone, after alkylation in vivo."
+                  ],
+                  "description": "The cofactor description.",
+                  "rcsb_description": [
+                     {
+                        "text": "The cofactor description.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "cofactor_name": {
+                  "type": "string",
+                  "examples": [
+                     "Menadione"
+                  ],
+                  "description": "The cofactor name.",
+                  "rcsb_description": [
+                     {
+                        "text": "The cofactor name.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "cofactor_prd_id": {
+                  "type": "string",
+                  "examples": [
+                     "PRD_000010"
+                  ],
+                  "description": "The BIRD definition identifier for the cofactor.",
+                  "rcsb_description": [
+                     {
+                        "text": "The BIRD definition identifier for the cofactor.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "cofactor_resource_id": {
+                  "type": "string",
+                  "examples": [
+                     "CHEMBL1987",
+                     "DB00170"
+                  ],
+                  "description": "Identifier for the cofactor assigned by the resource.",
+                  "rcsb_description": [
+                     {
+                        "text": "Identifier for the cofactor assigned by the resource.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "entity_id": {
+                  "type": "string",
+                  "examples": [
+                     "1"
+                  ],
+                  "description": "Entity identifier for the polymer.",
+                  "rcsb_description": [
+                     {
+                        "text": "Entity identifier for the polymer.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "entry_id": {
+                  "type": "string",
+                  "examples": [
+                     "1ABC"
+                  ],
+                  "description": "Structure entry identifier.",
+                  "rcsb_description": [
+                     {
+                        "text": "Structure entry identifier.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "mechanism_of_action": {
+                  "type": "string",
+                  "examples": [
+                     "Menadione (vitamin K3) is involved as a cofactor in the posttranslational gamma-carboxylation of glutamic acid residues of certain proteins i\nn the body. These proteins include the vitamin K-dependent coagulation factors II (prothrombin), VII (proconvertin), IX (Christmas factor), X (Stuart factor), protein\nC, protein S, protein Zv and a growth-arrest-specific factor (Gas6)."
+                  ],
+                  "description": "Mechanism of action describes the biochemical interaction through which the\n cofactor produces a pharmacological effect.",
+                  "rcsb_description": [
+                     {
+                        "text": "Mechanism of action describes the biochemical interaction through which the\n cofactor produces a pharmacological effect.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "neighbor_flag": {
+                  "type": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ],
+                  "examples": [
+                     "Y",
+                     "N"
+                  ],
+                  "description": "A flag to indicate the cofactor is a structural neighbor of this\n entity.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "N",
+                        "detail": "No",
+                        "name": "N"
+                     },
+                     {
+                        "value": "Y",
+                        "detail": "Yes",
+                        "name": "Y"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "A flag to indicate the cofactor is a structural neighbor of this\n entity.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "Ordinal identifier for this category",
+                  "rcsb_description": [
+                     {
+                        "text": "Ordinal identifier for this category",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "patent_nos": {
+                  "type": "array",
+                  "items": {
+                     "type": "string",
+                     "examples": [
+                        "US9346839"
+                     ],
+                     "description": "Patent numbers reporting the pharmacology or activity data.",
+                     "rcsb_description": [
+                        {
+                           "text": "Patent numbers reporting the pharmacology or activity data.",
+                           "context": "dictionary"
+                        }
+                     ]
+                  },
+                  "uniqueItems": false
+               },
+               "pubmed_ids": {
+                  "type": "array",
+                  "items": {
+                     "type": "integer",
+                     "description": "PubMed identifiers for literature supporting the pharmacology or activity data.",
+                     "rcsb_description": [
+                        {
+                           "text": "PubMed identifiers for literature supporting the pharmacology or activity data.",
+                           "context": "dictionary"
+                        }
+                     ]
+                  },
+                  "uniqueItems": false
+               },
+               "resource_name": {
+                  "type": "string",
+                  "enum": [
+                     "ChEMBL",
+                     "DrugBank",
+                     "Pharos"
+                  ],
+                  "examples": [
+                     "DrugBank",
+                     "ChEMBL",
+                     "Pharos"
+                  ],
+                  "description": "Resource providing target and cofactor data.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "ChEMBL",
+                        "detail": "ChEMBL, manually curated database of bioactive molecules with drug-like properties",
+                        "name": "ChEMBL"
+                     },
+                     {
+                        "value": "DrugBank",
+                        "detail": "DrugBank, database containing information on drugs and drug targets",
+                        "name": "DrugBank"
+                     },
+                     {
+                        "value": "Pharos",
+                        "detail": "User interface to the Knowledge Management Center (KMC) for the Illuminating the Druggable Genome (IDG)",
+                        "name": "Pharos"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "Resource providing target and cofactor data.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "resource_version": {
+                  "type": "string",
+                  "examples": [
+                     "V4_0_2"
+                  ],
+                  "description": "Version of the information distributed by the data resource.",
+                  "rcsb_description": [
+                     {
+                        "text": "Version of the information distributed by the data resource.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "target_resource_id": {
+                  "type": "string",
+                  "examples": [
+                     "P00734",
+                     "CHEMBL2242"
+                  ],
+                  "description": "Identifier for the target assigned by the resource.",
+                  "rcsb_description": [
+                     {
+                        "text": "Identifier for the target assigned by the resource.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_id": {
          "type": "string",
          "examples": [
@@ -3899,7 +4509,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 9.0.4",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 9.0.4. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 9.0.4"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 9.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 9.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 9.1.0"
 }

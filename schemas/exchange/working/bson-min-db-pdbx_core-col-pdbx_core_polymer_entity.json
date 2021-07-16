@@ -903,7 +903,18 @@
                "type": {
                   "bsonType": "string",
                   "enum": [
+                     "CARD_MODEL",
+                     "IMGT_ANTIBODY_DESCRIPTION",
+                     "IMGT_ANTIBODY_DOMAIN_NAME",
+                     "IMGT_ANTIBODY_GENE_ALLELE_NAME",
+                     "IMGT_ANTIBODY_ORGANISM_NAME",
+                     "IMGT_ANTIBODY_PROTEIN_NAME",
+                     "IMGT_ANTIBODY_RECEPTOR_DESCRIPTION",
+                     "IMGT_ANTIBODY_RECEPTOR_TYPE",
                      "Pfam",
+                     "SABDAB_ANTIBODY_ANTIGEN_NAME",
+                     "SABDAB_ANTIBODY_NAME",
+                     "SABDAB_ANTIBODY_TARGET",
                      "artifact",
                      "modified_monomer",
                      "mutation"
@@ -942,6 +953,8 @@
                         "name": {
                            "bsonType": "string",
                            "enum": [
+                              "CARD_MODEL_DESCRIPTION",
+                              "CARD_MODEL_ORGANISM",
                               "PARENT_COMP_ID"
                            ]
                         },
@@ -1051,6 +1064,159 @@
             "additionalProperties": false,
             "required": [
                "name"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_related_target_references": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "entity_id": {
+                  "bsonType": "string"
+               },
+               "entry_id": {
+                  "bsonType": "string"
+               },
+               "ordinal": {
+                  "bsonType": "int"
+               },
+               "related_resource_name": {
+                  "bsonType": "string",
+                  "enum": [
+                     "ChEMBL",
+                     "DrugBank",
+                     "Pharos"
+                  ]
+               },
+               "related_resource_version": {
+                  "bsonType": "string"
+               },
+               "related_target_id": {
+                  "bsonType": "string"
+               },
+               "target_taxonomy_id": {
+                  "bsonType": "int"
+               },
+               "aligned_target": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "entity_beg_seq_id": {
+                           "bsonType": "int"
+                        },
+                        "length": {
+                           "bsonType": "int"
+                        },
+                        "target_beg_seq_id": {
+                           "bsonType": "int"
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_target_cofactors": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "binding_assay_value": {
+                  "bsonType": "double"
+               },
+               "binding_assay_value_type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "pEC50",
+                     "pIC50",
+                     "pKd",
+                     "pKi"
+                  ]
+               },
+               "cofactor_InChIKey": {
+                  "bsonType": "string"
+               },
+               "cofactor_SMILES": {
+                  "bsonType": "string"
+               },
+               "cofactor_chem_comp_id": {
+                  "bsonType": "string"
+               },
+               "cofactor_description": {
+                  "bsonType": "string"
+               },
+               "cofactor_name": {
+                  "bsonType": "string"
+               },
+               "cofactor_prd_id": {
+                  "bsonType": "string"
+               },
+               "cofactor_resource_id": {
+                  "bsonType": "string"
+               },
+               "entity_id": {
+                  "bsonType": "string"
+               },
+               "entry_id": {
+                  "bsonType": "string"
+               },
+               "mechanism_of_action": {
+                  "bsonType": "string"
+               },
+               "neighbor_flag": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "ordinal": {
+                  "bsonType": "int"
+               },
+               "patent_nos": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "string"
+                  },
+                  "uniqueItems": false
+               },
+               "pubmed_ids": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "int"
+                  },
+                  "uniqueItems": false
+               },
+               "resource_name": {
+                  "bsonType": "string",
+                  "enum": [
+                     "ChEMBL",
+                     "DrugBank",
+                     "Pharos"
+                  ]
+               },
+               "resource_version": {
+                  "bsonType": "string"
+               },
+               "target_resource_id": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal"
             ]
          },
          "minItems": 1,
