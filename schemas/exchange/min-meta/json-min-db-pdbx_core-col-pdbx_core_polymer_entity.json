@@ -3851,7 +3851,18 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "CARD_MODEL",
+                     "IMGT_ANTIBODY_DESCRIPTION",
+                     "IMGT_ANTIBODY_DOMAIN_NAME",
+                     "IMGT_ANTIBODY_GENE_ALLELE_NAME",
+                     "IMGT_ANTIBODY_ORGANISM_NAME",
+                     "IMGT_ANTIBODY_PROTEIN_NAME",
+                     "IMGT_ANTIBODY_RECEPTOR_DESCRIPTION",
+                     "IMGT_ANTIBODY_RECEPTOR_TYPE",
                      "Pfam",
+                     "SABDAB_ANTIBODY_ANTIGEN_NAME",
+                     "SABDAB_ANTIBODY_NAME",
+                     "SABDAB_ANTIBODY_TARGET",
                      "artifact",
                      "modified_monomer",
                      "mutation"
@@ -3867,9 +3878,64 @@
                   "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
+                        "value": "CARD_MODEL",
+                        "detail": "Comprehensive Antibiotic Resistance Database Detection Model",
+                        "name": "CARD AMR Detection Model"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_DESCRIPTION",
+                        "detail": "International Immunogenetic Information System (IMGT) antibody description",
+                        "name": "IMGT Antibody Description"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_DOMAIN_NAME",
+                        "detail": "International Immunogenetic Information System (IMGT) domain name",
+                        "name": "IMGT Antibody Domain Name"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_GENE_ALLELE_NAME",
+                        "detail": "International Immunogenetic Information System (IMGT) gene and allele name",
+                        "name": "IMGT Antibody Gene and Allele Name"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_ORGANISM_NAME",
+                        "detail": "International Immunogenetic Information System (IMGT) organism name",
+                        "name": "IMGT Antibody Organism Name"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_PROTEIN_NAME",
+                        "detail": "International Immunogenetic Information System (IMGT) protein name",
+                        "name": "IMGT Antibody Protein Name"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_RECEPTOR_DESCRIPTION",
+                        "detail": "International Immunogenetic Information System (IMGT) receptor description",
+                        "name": "IMGT Antibody Receptor Description"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_RECEPTOR_TYPE",
+                        "detail": "International Immunogenetic Information System (IMGT) receptor type",
+                        "name": "IMGT Antibody Receptor Type"
+                     },
+                     {
                         "value": "Pfam",
                         "detail": "Pfam Protein Family",
                         "name": "Pfam Protein Family"
+                     },
+                     {
+                        "value": "SABDAB_ANTIBODY_ANTIGEN_NAME",
+                        "detail": "Structural Antibody Database (SAbDab) antibody antigen name",
+                        "name": "SAbDab Antibody Antigen Name"
+                     },
+                     {
+                        "value": "SABDAB_ANTIBODY_NAME",
+                        "detail": "Therapeutic Structural Antibody Database (Thera-SAbDab) antibody name",
+                        "name": "SAbDab Antibody Name"
+                     },
+                     {
+                        "value": "SABDAB_ANTIBODY_TARGET",
+                        "detail": "Therapeutic Structural Antibody Database (Thera-SAbDab) antigen targeted by the antibody",
+                        "name": "SAbDab Antibody Target"
                      },
                      {
                         "value": "artifact",
