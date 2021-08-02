@@ -2,7 +2,7 @@
    "NAME": "bird_chem_comp_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "bird_chem_comp_core",
-   "DATABASE_VERSION": "7.0.0",
+   "DATABASE_VERSION": "7.1.0",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -6344,6 +6344,7 @@
             "ATOM_COUNT_HEAVY": "atom_count_heavy",
             "BOND_COUNT": "bond_count",
             "BOND_COUNT_AROMATIC": "bond_count_aromatic",
+            "INITIAL_DEPOSITION_DATE": "initial_deposition_date",
             "INITIAL_RELEASE_DATE": "initial_release_date",
             "RELEASE_STATUS": "release_status",
             "REVISION_DATE": "revision_date"
@@ -6382,6 +6383,12 @@
             "BOND_COUNT_AROMATIC": {
                "CATEGORY": "rcsb_chem_comp_info",
                "ATTRIBUTE": "bond_count_aromatic",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "INITIAL_DEPOSITION_DATE": {
+               "CATEGORY": "rcsb_chem_comp_info",
+               "ATTRIBUTE": "initial_deposition_date",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -6506,7 +6513,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "INITIAL_RELEASE_DATE": {
+            "INITIAL_DEPOSITION_DATE": {
                "ORDER": 7,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -6523,8 +6530,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RELEASE_STATUS": {
+            "INITIAL_RELEASE_DATE": {
                "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RELEASE_STATUS": {
+               "ORDER": 9,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -6548,7 +6572,7 @@
                "SUB_CATEGORIES": []
             },
             "REVISION_DATE": {
-               "ORDER": 9,
+               "ORDER": 10,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -7320,7 +7344,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "bird_chem_comp_core",
-            "VERSION": "7.0.1"
+            "VERSION": "7.1.0"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {

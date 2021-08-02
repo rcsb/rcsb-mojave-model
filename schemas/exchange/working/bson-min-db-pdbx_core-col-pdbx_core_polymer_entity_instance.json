@@ -259,6 +259,13 @@
                         },
                         "value": {
                            "bsonType": "double"
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "bsonType": "double"
+                           },
+                           "uniqueItems": false
                         }
                      },
                      "additionalProperties": false,
@@ -311,7 +318,8 @@
                                     "bsonType": "double"
                                  }
                               ]
-                           }
+                           },
+                           "uniqueItems": false
                         }
                      },
                      "additionalProperties": false
