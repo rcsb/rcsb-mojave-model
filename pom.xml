@@ -344,6 +344,8 @@
                         <configuration>
                             <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
                             <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
                                 <!-- where to put final schema -->
                                 <argument>-o</argument>
                                 <argument>${project.build.directory}/${core.schema.location}/${core.group.json.schema.name}</argument>
