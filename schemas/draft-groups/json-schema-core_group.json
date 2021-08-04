@@ -21,7 +21,10 @@
       "properties": {
         "group_id": {
           "type": "string",
-          "description": "A unique textual identifier for a group"
+          "description": "A unique textual identifier for a group",
+          "rcsb_search_context": [
+            "exact-match"
+          ]
         },
         "group_provenance_id": {
           "type": "string",
@@ -39,7 +42,10 @@
         "group_member_ids": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "rcsb_search_context": [
+              "exact-match"
+            ]
           },
           "minItems": 1,
           "uniqueItems": true,
@@ -58,7 +64,10 @@
       ],
       "properties": {
         "group_name": {
-          "type": "string"
+          "type": "string",
+          "rcsb_search_context": [
+            "exact-match"
+          ]
         },
         "group_description": {
           "type": "string"
@@ -73,7 +82,10 @@
           "description": "Granularity of group members identifiers"
         },
         "group_members_count": {
-          "type": "integer"
+          "type": "integer",
+          "rcsb_search_context": [
+            "default-match"
+          ]
         }
       }
     },
@@ -181,7 +193,10 @@
                       "detail": "The higher the coverage, the better"
                     }
                   ],
-                  "description": "Defines ranking option applicable to group members"
+                  "description": "Defines ranking option applicable to group members",
+                  "rcsb_search_context": [
+                    "exact-match"
+                  ]
                 },
                 "group_members": {
                   "type": "array",
@@ -193,15 +208,24 @@
                     ],
                     "properties": {
                       "member_id": {
-                        "type": "string"
+                        "type": "string",
+                        "rcsb_search_context": [
+                          "exact-match"
+                        ]
                       },
                       "rank": {
                         "type": "integer",
-                        "description": "Reflects a relationship between group members such that, for any two members the first is ranked higher (smaller rank value) than the second"
+                        "description": "Reflects a relationship between group members such that, for any two members the first is ranked higher (smaller rank value) than the second",
+                        "rcsb_search_context": [
+                          "default-match"
+                        ]
                       },
                       "original_score": {
                         "type": "number",
-                        "description": "Quantifies the criteria used for ranking"
+                        "description": "Quantifies the criteria used for ranking",
+                        "rcsb_search_context": [
+                          "default-match"
+                        ]
                       }
                     },
                     "additionalProperties": false
