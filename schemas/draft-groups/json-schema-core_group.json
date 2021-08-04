@@ -1,5 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "/draft-groups/json-schema-core_group.json",
   "type": "object",
   "required": [
     "rcsb_id",
@@ -266,37 +267,21 @@
         },
         "group_members_alignment": {
           "type": "array",
-          "description": "",
+          "description": "List of alignments with core_entity canonical sequences",
           "items": {
             "type": "object",
-            "required": ["group_member_id", "aligned_regions"],
-            "properties": {
-              "group_member_id": {
-                "type": "string",
-                "description": "Identifier of the group member"
-              },
-              "aligned_regions": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": ["entity_beg_seq_id", "ref_beg_seq_id", "length"],
-                  "properties": {
-                    "entity_beg_seq_id": {
-                      "type": "integer",
-                      "description": "An identifier for the monomer in the entity sequence at which this segment of the alignment begins"
-                    },
-                    "length": {
-                      "type": "integer",
-                      "description": "An length of the this segment of the alignment"
-                    },
-                    "ref_beg_seq_id": {
-                      "type": "integer",
-                      "description": "An identifier for the monomer in the reference sequence at which this segment of the alignment begins"
-                    }
-                  }
+            "required": ["scores","aligned_regions"],
+            "description": "Alignment with a core_entity canonical sequence",
+            "allOf": [{
+              "$ref": "../internal/common/common-schema-alignment.json#/definitions/alignment"
+            },{
+              "type": "object",
+              "properties": {
+                "member_id": {
+                  "type": "string"
                 }
               }
-            }
+            }]
           }
         }
       }
