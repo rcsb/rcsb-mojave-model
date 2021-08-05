@@ -146,93 +146,61 @@
       "items": {
         "type": "object",
         "required": [
-          "representative_criteria_type",
-          "ranking_options"
+          "ranking_criteria_type",
+          "group_members"
         ],
         "properties": {
-          "representative_criteria_type": {
+          "ranking_criteria_type": {
             "type": "string",
             "enum": [
-              "best coverage",
-              "best resolution"
+              "RMSD",
+              "data quality",
+              "number of modified residues",
+              "coverage"
             ],
             "rcsb_enum_annotated": [
               {
-                "value": "best resolution",
-                "detail": "The lower the resolution value, the better"
-              },{
-                "value": "best coverage",
-                "detail": "The higher the coverage value, the better"
+                "value": "RMSD",
+                "detail": "The lower the RMSD, the better the structural similarity"
+              },
+              {
+                "value": "coverage",
+                "detail": "The higher the coverage, the better"
               }
             ],
-            "description": "Uniquely identifies the criteria incorporated into selecting a representative group member"
+            "description": "Defines ranking option applicable to group members",
+            "rcsb_search_context": [
+              "exact-match"
+            ]
           },
-          "ranking_options": {
+          "group_members": {
             "type": "array",
             "items": {
               "type": "object",
               "required": [
-                "ranking_criteria_type",
-                "group_members"
+                "member_id",
+                "rank"
               ],
               "properties": {
-                "ranking_criteria_type": {
+                "member_id": {
                   "type": "string",
-                  "enum": [
-                    "RMSD",
-                    "data quality",
-                    "number of modified residues",
-                    "coverage"
-                  ],
-                  "rcsb_enum_annotated": [
-                    {
-                      "value": "RMSD",
-                      "detail": "The lower the RMSD, the better the structural similarity"
-                    },
-                    {
-                      "value": "coverage",
-                      "detail": "The higher the coverage, the better"
-                    }
-                  ],
-                  "description": "Defines ranking option applicable to group members",
                   "rcsb_search_context": [
                     "exact-match"
                   ]
                 },
-                "group_members": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "member_id",
-                      "rank"
-                    ],
-                    "properties": {
-                      "member_id": {
-                        "type": "string",
-                        "rcsb_search_context": [
-                          "exact-match"
-                        ]
-                      },
-                      "rank": {
-                        "type": "integer",
-                        "description": "Reflects a relationship between group members such that, for any two members the first is ranked higher (smaller rank value) than the second",
-                        "rcsb_search_context": [
-                          "default-match"
-                        ]
-                      },
-                      "original_score": {
-                        "type": "number",
-                        "description": "Quantifies the criteria used for ranking",
-                        "rcsb_search_context": [
-                          "default-match"
-                        ]
-                      }
-                    },
-                    "additionalProperties": false
-                  },
-                  "minItems": 1,
-                  "uniqueItems": true
+                "rank": {
+                  "type": "integer",
+                  "description": "Reflects a relationship between group members such that, for any two members the first is ranked higher (smaller rank value) than the second",
+                  "rcsb_search_context": [
+                    "default-match"
+                  ]
+                },
+                "original_score": {
+                  "type": "number",
+                  "description": "Quantifies the criteria used for ranking",
+                  "rcsb_search_context": [
+                    "default-match"
+                  ]
                 }
               },
               "additionalProperties": false
