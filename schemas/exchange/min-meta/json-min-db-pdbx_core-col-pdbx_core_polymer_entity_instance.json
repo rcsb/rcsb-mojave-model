@@ -1053,6 +1053,24 @@
                                  "context": "dictionary"
                               }
                            ]
+                        },
+                        "values": {
+                           "type": "array",
+                           "items": {
+                              "type": "number",
+                              "examples": [
+                                 1.5,
+                                 0.25
+                              ],
+                              "description": "The value(s) of the feature over the monomer segment.",
+                              "rcsb_description": [
+                                 {
+                                    "text": "The value(s) of the feature over the monomer segment.",
+                                    "context": "dictionary"
+                                 }
+                              ]
+                           },
+                           "uniqueItems": false
                         }
                      },
                      "additionalProperties": false,
@@ -1070,8 +1088,6 @@
                         "name": {
                            "type": "string",
                            "enum": [
-                              "CARD_MODEL_DESCRIPTION",
-                              "CARD_MODEL_ORGANISM",
                               "CATH_DOMAIN_ID",
                               "CATH_NAME",
                               "ECOD_DOMAIN_ID",
@@ -1096,14 +1112,6 @@
                            ],
                            "description": "The additional property name.",
                            "rcsb_enum_annotated": [
-                              {
-                                 "value": "CARD_MODEL_DESCRIPTION",
-                                 "detail": "CARD Model Description"
-                              },
-                              {
-                                 "value": "CARD_MODEL_ORGANISM",
-                                 "detail": "CARD Model Organism"
-                              },
                               {
                                  "value": "CATH_DOMAIN_ID",
                                  "detail": "CATH Domain Identifier"
@@ -1193,20 +1201,21 @@
                                  {
                                     "type": "number"
                                  }
+                              ],
+                              "examples": [
+                                 "globin-like",
+                                 "2.54",
+                                 "300"
+                              ],
+                              "description": "The value(s) of the additional property.",
+                              "rcsb_description": [
+                                 {
+                                    "text": "The value(s) of the additional property.",
+                                    "context": "dictionary"
+                                 }
                               ]
                            },
-                           "examples": [
-                              "globin-like",
-                              "2.54",
-                              "300"
-                           ],
-                           "description": "The value(s) of the additional property.",
-                           "rcsb_description": [
-                              {
-                                 "text": "The value(s) of the additional property.",
-                                 "context": "dictionary"
-                              }
-                           ]
+                           "uniqueItems": false
                         }
                      },
                      "additionalProperties": false
@@ -1340,6 +1349,7 @@
                      "C-MANNOSYLATION_SITE",
                      "CATH",
                      "CIS-PEPTIDE",
+                     "ECOD",
                      "HELIX_P",
                      "MEMBRANE_SEGMENT",
                      "MOGUL_ANGLE_OUTLIER",
@@ -1351,7 +1361,19 @@
                      "RSCC_OUTLIER",
                      "RSRZ_OUTLIER",
                      "S-GLYCOSYLATION_SITE",
+                     "SABDAB_ANTIBODY_HEAVY_CHAIN_SUBCLASS",
+                     "SABDAB_ANTIBODY_LIGHT_CHAIN_SUBCLASS",
+                     "SABDAB_ANTIBODY_LIGHT_CHAIN_TYPE",
+                     "SAbDab Antibody Heavy Chain Subclass",
+                     "SAbDab Antibody Light Chain Subclass",
+                     "SAbDab Antibody Light Chain Type",
                      "SCOP",
+                     "SCOP2 Family",
+                     "SCOP2 Superfamily",
+                     "SCOP2B Superfamily",
+                     "SCOP2B_SUPERFAMILY",
+                     "SCOP2_FAMILY",
+                     "SCOP2_SUPERFAMILY",
                      "SHEET",
                      "STEREO_OUTLIER",
                      "UNASSIGNED_SEC_STRUCT",
@@ -1393,6 +1415,9 @@
                      {
                         "value": "CIS-PEPTIDE",
                         "detail": "Peptide linkages with CIS configurations"
+                     },
+                     {
+                        "value": "ECOD"
                      },
                      {
                         "value": "HELIX_P",
@@ -1439,8 +1464,50 @@
                         "detail": "Glycan binding to the sulfur atom of a cysteine (Cys) residue"
                      },
                      {
+                        "value": "SABDAB_ANTIBODY_HEAVY_CHAIN_SUBCLASS",
+                        "detail": "Structural Antibody Database (SAbDab) antibody heavy chain subclass (IGHV1, IGHV2,)"
+                     },
+                     {
+                        "value": "SABDAB_ANTIBODY_LIGHT_CHAIN_SUBCLASS",
+                        "detail": "Structural Antibody Database (SAbDab) antibody light chain subclass (IGLV1, IGLV2, ...)"
+                     },
+                     {
+                        "value": "SABDAB_ANTIBODY_LIGHT_CHAIN_TYPE",
+                        "detail": "Structural Antibody Database (SAbDab) antibody light chain type (Kappa or Lambda)"
+                     },
+                     {
+                        "value": "SAbDab Antibody Heavy Chain Subclass"
+                     },
+                     {
+                        "value": "SAbDab Antibody Light Chain Subclass"
+                     },
+                     {
+                        "value": "SAbDab Antibody Light Chain Type"
+                     },
+                     {
                         "value": "SCOP",
                         "detail": "SCOP - Structural Classification of Proteins"
+                     },
+                     {
+                        "value": "SCOP2 Family"
+                     },
+                     {
+                        "value": "SCOP2 Superfamily"
+                     },
+                     {
+                        "value": "SCOP2B Superfamily"
+                     },
+                     {
+                        "value": "SCOP2B_SUPERFAMILY",
+                        "detail": "SCOP2B - Structural Classification of Proteins 2 - Superfamily automated assignments"
+                     },
+                     {
+                        "value": "SCOP2_FAMILY",
+                        "detail": "SCOP2 - Structural Classification of Proteins 2 Family"
+                     },
+                     {
+                        "value": "SCOP2_SUPERFAMILY",
+                        "detail": "SCOP2 - Structural Classification of Proteins 2 Superfamily"
                      },
                      {
                         "value": "SHEET",
@@ -1916,7 +1983,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 9.1.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 9.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 9.1.0"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 9.2.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 9.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 9.2.0"
 }

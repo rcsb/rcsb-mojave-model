@@ -502,6 +502,7 @@
                   "enum": [
                      "BINDING_SITE",
                      "CATH",
+                     "ECOD",
                      "MOGUL_ANGLE_OUTLIER",
                      "MOGUL_BOND_OUTLIER",
                      "RSCC_OUTLIER",
@@ -526,6 +527,9 @@
                      {
                         "value": "CATH",
                         "detail": "CATH - Class, Architecture, Topology, and Homology Protein Structure Database"
+                     },
+                     {
+                        "value": "ECOD"
                      },
                      {
                         "value": "MOGUL_ANGLE_OUTLIER",
@@ -631,6 +635,24 @@
                                  "context": "dictionary"
                               }
                            ]
+                        },
+                        "values": {
+                           "type": "array",
+                           "items": {
+                              "type": "number",
+                              "examples": [
+                                 1.5,
+                                 0.25
+                              ],
+                              "description": "The value(s) of the feature at the monomer position.",
+                              "rcsb_description": [
+                                 {
+                                    "text": "The value(s) of the feature at the monomer position.",
+                                    "context": "dictionary"
+                                 }
+                              ]
+                           },
+                           "uniqueItems": false
                         }
                      },
                      "additionalProperties": false,
@@ -774,19 +796,20 @@
                                  {
                                     "type": "number"
                                  }
+                              ],
+                              "examples": [
+                                 "2.54",
+                                 "300"
+                              ],
+                              "description": "The value(s) of the additional property.",
+                              "rcsb_description": [
+                                 {
+                                    "text": "The value(s) of the additional property.",
+                                    "context": "dictionary"
+                                 }
                               ]
                            },
-                           "examples": [
-                              "2.54",
-                              "300"
-                           ],
-                           "description": "The value(s) of the additional property.",
-                           "rcsb_description": [
-                              {
-                                 "text": "The value(s) of the additional property.",
-                                 "context": "dictionary"
-                              }
-                           ]
+                           "uniqueItems": false
                         }
                      },
                      "additionalProperties": false
@@ -1528,7 +1551,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_branched_entity_instance version: 8.7.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity_instance version 8.7.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.7.0"
+   "title": "schema: pdbx_core collection: pdbx_core_branched_entity_instance version: 8.8.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity_instance version 8.8.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.8.0"
 }

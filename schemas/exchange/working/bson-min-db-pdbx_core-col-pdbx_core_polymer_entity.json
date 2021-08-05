@@ -936,6 +936,13 @@
                         },
                         "value": {
                            "bsonType": "double"
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "bsonType": "double"
+                           },
+                           "uniqueItems": false
                         }
                      },
                      "additionalProperties": false,
@@ -972,7 +979,8 @@
                                     "bsonType": "double"
                                  }
                               ]
-                           }
+                           },
+                           "uniqueItems": false
                         }
                      },
                      "additionalProperties": false
@@ -1011,7 +1019,18 @@
                "type": {
                   "bsonType": "string",
                   "enum": [
+                     "CARD_MODEL",
+                     "IMGT_ANTIBODY_DESCRIPTION",
+                     "IMGT_ANTIBODY_DOMAIN_NAME",
+                     "IMGT_ANTIBODY_GENE_ALLELE_NAME",
+                     "IMGT_ANTIBODY_ORGANISM_NAME",
+                     "IMGT_ANTIBODY_PROTEIN_NAME",
+                     "IMGT_ANTIBODY_RECEPTOR_DESCRIPTION",
+                     "IMGT_ANTIBODY_RECEPTOR_TYPE",
                      "Pfam",
+                     "SABDAB_ANTIBODY_ANTIGEN_NAME",
+                     "SABDAB_ANTIBODY_NAME",
+                     "SABDAB_ANTIBODY_TARGET",
                      "artifact",
                      "modified_monomer",
                      "mutation"
@@ -1139,6 +1158,7 @@
                "binding_assay_value_type": {
                   "bsonType": "string",
                   "enum": [
+                     "pAC50",
                      "pEC50",
                      "pIC50",
                      "pKd",

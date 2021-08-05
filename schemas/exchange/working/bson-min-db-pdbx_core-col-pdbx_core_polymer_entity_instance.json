@@ -259,6 +259,13 @@
                         },
                         "value": {
                            "bsonType": "double"
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "bsonType": "double"
+                           },
+                           "uniqueItems": false
                         }
                      },
                      "additionalProperties": false,
@@ -276,8 +283,6 @@
                         "name": {
                            "bsonType": "string",
                            "enum": [
-                              "CARD_MODEL_DESCRIPTION",
-                              "CARD_MODEL_ORGANISM",
                               "CATH_DOMAIN_ID",
                               "CATH_NAME",
                               "ECOD_DOMAIN_ID",
@@ -311,7 +316,8 @@
                                     "bsonType": "double"
                                  }
                               ]
-                           }
+                           },
+                           "uniqueItems": false
                         }
                      },
                      "additionalProperties": false
@@ -359,6 +365,7 @@
                      "C-MANNOSYLATION_SITE",
                      "CATH",
                      "CIS-PEPTIDE",
+                     "ECOD",
                      "HELIX_P",
                      "MEMBRANE_SEGMENT",
                      "MOGUL_ANGLE_OUTLIER",
@@ -370,7 +377,19 @@
                      "RSCC_OUTLIER",
                      "RSRZ_OUTLIER",
                      "S-GLYCOSYLATION_SITE",
+                     "SABDAB_ANTIBODY_HEAVY_CHAIN_SUBCLASS",
+                     "SABDAB_ANTIBODY_LIGHT_CHAIN_SUBCLASS",
+                     "SABDAB_ANTIBODY_LIGHT_CHAIN_TYPE",
+                     "SAbDab Antibody Heavy Chain Subclass",
+                     "SAbDab Antibody Light Chain Subclass",
+                     "SAbDab Antibody Light Chain Type",
                      "SCOP",
+                     "SCOP2 Family",
+                     "SCOP2 Superfamily",
+                     "SCOP2B Superfamily",
+                     "SCOP2B_SUPERFAMILY",
+                     "SCOP2_FAMILY",
+                     "SCOP2_SUPERFAMILY",
                      "SHEET",
                      "STEREO_OUTLIER",
                      "UNASSIGNED_SEC_STRUCT",
