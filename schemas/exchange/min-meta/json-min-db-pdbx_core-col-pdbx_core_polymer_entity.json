@@ -1701,7 +1701,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Polymer Molecular Features",
-                                 "priority_order": 70
+                                 "priority_order": 85
                               }
                            ]
                         },
@@ -1731,7 +1731,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Polymer Molecular Features",
-                                 "priority_order": 65
+                                 "priority_order": 80
                               }
                            ]
                         }
@@ -1793,6 +1793,11 @@
                   "type": "array",
                   "items": {
                      "type": "string",
+                     "examples": [
+                        "human",
+                        "mouse",
+                        "pig"
+                     ],
                      "description": "Common names associated with this taxonomy code aggregated by the NCBI Taxonomy Database.\n\n  These name correspond to the taxonomy identifier assigned by the PDB depositor.\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.",
                      "rcsb_search_context": [
                         "exact-match",
@@ -1805,7 +1810,7 @@
                            "context": "dictionary"
                         },
                         {
-                           "text": "Common Name of Source Organism",
+                           "text": "Common Name of the Source Organism",
                            "context": "brief"
                         }
                      ]
@@ -1814,7 +1819,16 @@
                },
                "ncbi_parent_scientific_name": {
                   "type": "string",
-                  "description": "The parent scientific name in the NCBI taxonomy hierarchy (depth=1) of the source organism assigned by the PDB depositor.\n\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.",
+                  "examples": [
+                     "Archaea",
+                     "Bacteria",
+                     "Eukaryota",
+                     "Adnaviria",
+                     "Bicaudaviridae",
+                     "Clavaviridae",
+                     "Duplodnaviria"
+                  ],
+                  "description": "A parent scientific name in the NCBI taxonomy hierarchy of the source organism assigned by the PDB depositor.\n  For cellular organism this corresponds to a superkingdom (e.g., Archaea, Bacteria, Eukaryota).  For viruses this\n  corresponds to a clade (e.g.  Adnaviria, Bicaudaviridae, Clavaviridae). For other and unclassified entries this\n  corresponds to the first level of any taxonomic rank below the root level.\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.",
                   "rcsb_search_context": [
                      "exact-match",
                      "full-text"
@@ -1822,12 +1836,18 @@
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
-                        "text": "The parent scientific name in the NCBI taxonomy hierarchy (depth=1) of the source organism assigned by the PDB depositor.\n\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.",
+                        "text": "A parent scientific name in the NCBI taxonomy hierarchy of the source organism assigned by the PDB depositor.\n  For cellular organism this corresponds to a superkingdom (e.g., Archaea, Bacteria, Eukaryota).  For viruses this\n  corresponds to a clade (e.g.  Adnaviria, Bicaudaviridae, Clavaviridae). For other and unclassified entries this\n  corresponds to the first level of any taxonomic rank below the root level.\n\nReferences:\n\nSayers EW, Barrett T, Benson DA, Bryant SH, Canese K, Chetvernin V,\nChurch DM, DiCuccio M, Edgar R, Federhen S, Feolo M, Geer LY,\nHelmberg W, Kapustin Y, Landsman D, Lipman DJ, Madden TL, Maglott DR,\nMiller V, Mizrachi I, Ostell J, Pruitt KD, Schuler GD, Sequeira E,\nSherry ST, Shumway M, Sirotkin K, Souvorov A, Starchenko G,\nTatusova TA, Wagner L, Yaschenko E, Ye J (2009). Database resources\nof the National Center for Biotechnology Information. Nucleic Acids\nRes. 2009 Jan;37(Database issue):D5-15. Epub 2008 Oct 21.\n\nBenson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Sayers EW (2009).\nGenBank. Nucleic Acids Res. 2009 Jan;37(Database issue):D26-31.\nEpub 2008 Oct 21.",
                         "context": "dictionary"
                      },
                      {
-                        "text": "Taxonomy",
+                        "text": "Parent Scientific Name (typically superkingdom or clade)",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Polymer Molecular Features",
+                        "priority_order": 60
                      }
                   ]
                },
@@ -1845,8 +1865,14 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Scientific Name of Source Organism",
+                        "text": "Scientific Name of the Source Organism",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Polymer Molecular Features",
+                        "priority_order": 55
                      }
                   ]
                },
@@ -1913,6 +1939,16 @@
                      {
                         "text": "The source type for the entity",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Source Organism Type",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Polymer Molecular Features",
+                        "priority_order": 65
                      }
                   ]
                },
@@ -1951,7 +1987,7 @@
                                  "context": "dictionary"
                               },
                               {
-                                 "text": "Source Organism Taxonomy ID",
+                                 "text": "Source Organism Taxonomy ID (Full Lineage)",
                                  "context": "brief"
                               }
                            ],
@@ -1981,7 +2017,7 @@
                                  "context": "dictionary"
                               },
                               {
-                                 "text": "Source Organism Taxonomy Name",
+                                 "text": "Source Organism Taxonomy Name (Full Lineage)",
                                  "context": "brief"
                               }
                            ],
@@ -2218,7 +2254,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Polymer Molecular Features",
-                     "priority_order": 55
+                     "priority_order": 70
                   }
                ]
             },
@@ -2241,7 +2277,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Polymer Molecular Features",
-                     "priority_order": 60
+                     "priority_order": 75
                   }
                ]
             },
@@ -2320,7 +2356,7 @@
                         "rcsb_search_group": [
                            {
                               "group_name": "Polymer Molecular Features",
-                              "priority_order": 75
+                              "priority_order": 90
                            }
                         ]
                      },
@@ -2348,7 +2384,7 @@
                         "rcsb_search_group": [
                            {
                               "group_name": "Polymer Molecular Features",
-                              "priority_order": 80
+                              "priority_order": 95
                            }
                         ]
                      }
@@ -2624,7 +2660,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Polymer Molecular Features",
-                        "priority_order": 85
+                        "priority_order": 100
                      }
                   ]
                },
@@ -2823,7 +2859,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Polymer Molecular Features",
-                                 "priority_order": 90
+                                 "priority_order": 105
                               }
                            ]
                         },
@@ -2848,7 +2884,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Polymer Molecular Features",
-                                 "priority_order": 95
+                                 "priority_order": 110
                               }
                            ]
                         }
@@ -3558,10 +3594,10 @@
                               "TRP",
                               "VAL"
                            ],
-                           "description": "An identifier for the monomer(s) corresponding to the feature assignment.",
+                           "description": "An identifier for the leading monomer corresponding to the feature assignment.",
                            "rcsb_description": [
                               {
-                                 "text": "An identifier for the monomer(s) corresponding to the feature assignment.",
+                                 "text": "An identifier for the leading monomer corresponding to the feature assignment.",
                                  "context": "dictionary"
                               }
                            ]
@@ -3599,6 +3635,24 @@
                                  "context": "dictionary"
                               }
                            ]
+                        },
+                        "values": {
+                           "type": "array",
+                           "items": {
+                              "type": "number",
+                              "examples": [
+                                 5.0,
+                                 0.25
+                              ],
+                              "description": "The value(s) for the feature over this monomer segment.",
+                              "rcsb_description": [
+                                 {
+                                    "text": "The value(s) for the feature over this monomer segment.",
+                                    "context": "dictionary"
+                                 }
+                              ]
+                           },
+                           "uniqueItems": false
                         }
                      },
                      "additionalProperties": false,
@@ -3658,20 +3712,21 @@
                                  {
                                     "type": "number"
                                  }
+                              ],
+                              "examples": [
+                                 "globin-like",
+                                 "2.54",
+                                 "300"
+                              ],
+                              "description": "The value(s) of the additional property.",
+                              "rcsb_description": [
+                                 {
+                                    "text": "The value(s) of the additional property.",
+                                    "context": "dictionary"
+                                 }
                               ]
                            },
-                           "examples": [
-                              "globin-like",
-                              "2.54",
-                              "300"
-                           ],
-                           "description": "The value(s) of the additional property.",
-                           "rcsb_description": [
-                              {
-                                 "text": "The value(s) of the additional property.",
-                                 "context": "dictionary"
-                              }
-                           ]
+                           "uniqueItems": false
                         }
                      },
                      "additionalProperties": false
@@ -3708,7 +3763,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Polymer Molecular Features",
-                        "priority_order": 100
+                        "priority_order": 115
                      }
                   ]
                },
@@ -3735,7 +3790,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Polymer Molecular Features",
-                        "priority_order": 105
+                        "priority_order": 120
                      }
                   ]
                },
@@ -3796,7 +3851,18 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "CARD_MODEL",
+                     "IMGT_ANTIBODY_DESCRIPTION",
+                     "IMGT_ANTIBODY_DOMAIN_NAME",
+                     "IMGT_ANTIBODY_GENE_ALLELE_NAME",
+                     "IMGT_ANTIBODY_ORGANISM_NAME",
+                     "IMGT_ANTIBODY_PROTEIN_NAME",
+                     "IMGT_ANTIBODY_RECEPTOR_DESCRIPTION",
+                     "IMGT_ANTIBODY_RECEPTOR_TYPE",
                      "Pfam",
+                     "SABDAB_ANTIBODY_ANTIGEN_NAME",
+                     "SABDAB_ANTIBODY_NAME",
+                     "SABDAB_ANTIBODY_TARGET",
                      "artifact",
                      "modified_monomer",
                      "mutation"
@@ -3812,9 +3878,64 @@
                   "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
+                        "value": "CARD_MODEL",
+                        "detail": "Comprehensive Antibiotic Resistance Database Detection Model",
+                        "name": "CARD AMR Detection Model"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_DESCRIPTION",
+                        "detail": "International Immunogenetic Information System (IMGT) antibody description",
+                        "name": "IMGT Antibody Description"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_DOMAIN_NAME",
+                        "detail": "International Immunogenetic Information System (IMGT) domain name",
+                        "name": "IMGT Antibody Domain Name"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_GENE_ALLELE_NAME",
+                        "detail": "International Immunogenetic Information System (IMGT) gene and allele name",
+                        "name": "IMGT Antibody Gene and Allele Name"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_ORGANISM_NAME",
+                        "detail": "International Immunogenetic Information System (IMGT) organism name",
+                        "name": "IMGT Antibody Organism Name"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_PROTEIN_NAME",
+                        "detail": "International Immunogenetic Information System (IMGT) protein name",
+                        "name": "IMGT Antibody Protein Name"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_RECEPTOR_DESCRIPTION",
+                        "detail": "International Immunogenetic Information System (IMGT) receptor description",
+                        "name": "IMGT Antibody Receptor Description"
+                     },
+                     {
+                        "value": "IMGT_ANTIBODY_RECEPTOR_TYPE",
+                        "detail": "International Immunogenetic Information System (IMGT) receptor type",
+                        "name": "IMGT Antibody Receptor Type"
+                     },
+                     {
                         "value": "Pfam",
                         "detail": "Pfam Protein Family",
                         "name": "Pfam Protein Family"
+                     },
+                     {
+                        "value": "SABDAB_ANTIBODY_ANTIGEN_NAME",
+                        "detail": "Structural Antibody Database (SAbDab) antibody antigen name",
+                        "name": "SAbDab Antibody Antigen Name"
+                     },
+                     {
+                        "value": "SABDAB_ANTIBODY_NAME",
+                        "detail": "Therapeutic Structural Antibody Database (Thera-SAbDab) antibody name",
+                        "name": "SAbDab Antibody Name"
+                     },
+                     {
+                        "value": "SABDAB_ANTIBODY_TARGET",
+                        "detail": "Therapeutic Structural Antibody Database (Thera-SAbDab) antigen targeted by the antibody",
+                        "name": "SAbDab Antibody Target"
                      },
                      {
                         "value": "artifact",
@@ -4166,6 +4287,7 @@
                "binding_assay_value_type": {
                   "type": "string",
                   "enum": [
+                     "pAC50",
                      "pEC50",
                      "pIC50",
                      "pKd",
@@ -4177,6 +4299,12 @@
                   ],
                   "description": "The type of measurement or value determined by the assay.",
                   "rcsb_enum_annotated": [
+                     {
+                        "value": "pAC50",
+                        "detail": "half maximal activity concentration ",
+                        "name": "pAC50",
+                        "units": "-log(M)"
+                     },
                      {
                         "value": "pEC50",
                         "detail": "half maximal effective concentration",
@@ -4509,7 +4637,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 9.1.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 9.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 9.1.0"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 9.2.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 9.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 9.2.0"
 }
