@@ -1093,15 +1093,6 @@
          "items": {
             "bsonType": "object",
             "properties": {
-               "entity_id": {
-                  "bsonType": "string"
-               },
-               "entry_id": {
-                  "bsonType": "string"
-               },
-               "ordinal": {
-                  "bsonType": "int"
-               },
                "related_resource_name": {
                   "bsonType": "string",
                   "enum": [
@@ -1139,10 +1130,7 @@
                   "uniqueItems": false
                }
             },
-            "additionalProperties": false,
-            "required": [
-               "ordinal"
-            ]
+            "additionalProperties": false
          },
          "minItems": 1,
          "uniqueItems": true
@@ -1186,12 +1174,6 @@
                "cofactor_resource_id": {
                   "bsonType": "string"
                },
-               "entity_id": {
-                  "bsonType": "string"
-               },
-               "entry_id": {
-                  "bsonType": "string"
-               },
                "mechanism_of_action": {
                   "bsonType": "string"
                },
@@ -1201,9 +1183,6 @@
                      "N",
                      "Y"
                   ]
-               },
-               "ordinal": {
-                  "bsonType": "int"
                },
                "patent_nos": {
                   "bsonType": "array",
@@ -1234,10 +1213,7 @@
                   "bsonType": "string"
                }
             },
-            "additionalProperties": false,
-            "required": [
-               "ordinal"
-            ]
+            "additionalProperties": false
          },
          "minItems": 1,
          "uniqueItems": true
