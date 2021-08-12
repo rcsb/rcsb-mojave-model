@@ -4111,42 +4111,6 @@
          "items": {
             "type": "object",
             "properties": {
-               "entity_id": {
-                  "type": "string",
-                  "examples": [
-                     "1"
-                  ],
-                  "description": "Entity identifier for the polymer.",
-                  "rcsb_description": [
-                     {
-                        "text": "Entity identifier for the polymer.",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "entry_id": {
-                  "type": "string",
-                  "examples": [
-                     "1ABC"
-                  ],
-                  "description": "Structure entry identifier.",
-                  "rcsb_description": [
-                     {
-                        "text": "Structure entry identifier.",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "ordinal": {
-                  "type": "integer",
-                  "description": "Ordinal identifier for this category",
-                  "rcsb_description": [
-                     {
-                        "text": "Ordinal identifier for this category",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
                "related_resource_name": {
                   "type": "string",
                   "enum": [
@@ -4258,10 +4222,7 @@
                   "uniqueItems": false
                }
             },
-            "additionalProperties": false,
-            "required": [
-               "ordinal"
-            ]
+            "additionalProperties": false
          },
          "minItems": 1,
          "uniqueItems": true
@@ -4430,32 +4391,6 @@
                      }
                   ]
                },
-               "entity_id": {
-                  "type": "string",
-                  "examples": [
-                     "1"
-                  ],
-                  "description": "Entity identifier for the polymer.",
-                  "rcsb_description": [
-                     {
-                        "text": "Entity identifier for the polymer.",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "entry_id": {
-                  "type": "string",
-                  "examples": [
-                     "1ABC"
-                  ],
-                  "description": "Structure entry identifier.",
-                  "rcsb_description": [
-                     {
-                        "text": "Structure entry identifier.",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
                "mechanism_of_action": {
                   "type": "string",
                   "examples": [
@@ -4495,16 +4430,6 @@
                   "rcsb_description": [
                      {
                         "text": "A flag to indicate the cofactor is a structural neighbor of this\n entity.",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "ordinal": {
-                  "type": "integer",
-                  "description": "Ordinal identifier for this category",
-                  "rcsb_description": [
-                     {
-                        "text": "Ordinal identifier for this category",
                         "context": "dictionary"
                      }
                   ]
@@ -4605,10 +4530,7 @@
                   ]
                }
             },
-            "additionalProperties": false,
-            "required": [
-               "ordinal"
-            ]
+            "additionalProperties": false
          },
          "minItems": 1,
          "uniqueItems": true
@@ -4637,7 +4559,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 9.2.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 9.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 9.2.0"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 9.2.1",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 9.2.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 9.2.1"
 }
