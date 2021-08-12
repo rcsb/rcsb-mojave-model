@@ -3,7 +3,7 @@
   "$id": "/internal/common/common-schema-annotation-additional-properties.json",
   "type" : "object",
   "definitions": {
-    "uniprot_additional_property_names": {
+    "additional_property_names": {
       "type": "string",
       "enum": ["LINK", "WILD_TYPE", "MUTATED_TYPE", "CONSEQUENCE_TYPE", "PREDICTED_IMPACT", "CLINICAL_SIGNIFICANCE", "EVIDENCE", "DISEASE_TYPE", "STRAIN_ID", "SUBTYPE"]
     },
@@ -13,7 +13,7 @@
         "property_name": {
           "type": "string",
           "allOf": [{
-              "$ref" : "#/definitions/uniprot_additional_property_names"
+              "$ref" : "#/definitions/additional_property_names"
             },{
               "$ref": "../../exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json#/properties/rcsb_polymer_entity_feature/items/properties/additional_properties/items/properties/name"
             },{
