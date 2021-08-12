@@ -93,6 +93,10 @@
     "rcsb_group_statistics": {
       "type": "object",
       "properties": {
+        "similarity_cutoff": {
+          "type": "number",
+          "description": "The desired lower limit for the similarity between two members that belong to the same group"
+        },
         "similarity_score_min": {
           "type": "number",
           "description": "Similarity score between two least similar group members"
