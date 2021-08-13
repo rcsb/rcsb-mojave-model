@@ -95,6 +95,9 @@
       "properties": {
         "similarity_cutoff": {
           "type": "number",
+          "rcsb_search_context": [
+            "default-match"
+          ],
           "description": "The desired lower limit for the similarity between two members that belong to the same group"
         },
         "similarity_score_min": {
@@ -157,19 +160,24 @@
           "ranking_criteria_type": {
             "type": "string",
             "enum": [
-              "RMSD",
-              "data quality",
-              "number of modified residues",
-              "coverage"
+              "rmsd",
+              "data_quality",
+              "number_of_modified_residues",
+              "coverage",
+              "member_quality"
             ],
             "rcsb_enum_annotated": [
               {
-                "value": "RMSD",
+                "value": "rmsd",
                 "detail": "The lower the RMSD, the better the structural similarity"
               },
               {
                 "value": "coverage",
                 "detail": "The higher the coverage, the better"
+              },
+              {
+                "value": "member_quality",
+                "detail": "Complex quality metric. The higher, the better"
               }
             ],
             "description": "Defines ranking option applicable to group members",

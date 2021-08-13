@@ -28,9 +28,9 @@
         "type": {
           "type": "string",
           "enum": [
-            "structure similarity",
-            "sequence similarity",
-            "reference identity"
+            "structure_similarity",
+            "sequence_similarity",
+            "reference_identity"
           ],
           "description": "Specifies the type of similarity criteria used to aggregate members into higher levels in the hierarchy"
         },
@@ -44,8 +44,8 @@
               "type": "string",
               "enum": [
                 "mmseqs2",
-                "matching UniProt accession",
-                "matching UniProt accession list"
+                "matching_uniprot_accession",
+                "matching_uniprot_accession_list"
               ],
               "examples": [
                 "mmseqs2"
@@ -96,8 +96,8 @@
             "similarity_function": {
               "type": "string",
               "enum": [
-                "RMSD",
-                "sequence identity"
+                "rmsd",
+                "sequence_identity"
               ],
               "examples": [
                 "RMSD"
@@ -105,12 +105,12 @@
               "description": "A function or similarity measure that quantifies the similarity between two members",
               "rcsb_enum_annotated": [
                 {
-                  "value": "RMSD",
+                  "value": "rmsd",
                   "detail": "The lower the RMSD, the higher the similarity between two group members",
                   "units": "Å"
                 },
                 {
-                  "value": "sequence identity",
+                  "value": "sequence_identity",
                   "detail": "The higher the sequence identity, the higher the similarity between two group members",
                   "units": "%"
                 }
