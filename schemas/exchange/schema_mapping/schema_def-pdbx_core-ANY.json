@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "9.3.0",
+   "DATABASE_VERSION": "9.3.1",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -107647,7 +107647,7 @@
          },
          {
             "NAME": "pdbx_core_polymer_entity",
-            "VERSION": "9.2.0"
+            "VERSION": "9.2.1"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity",
@@ -108455,6 +108455,16 @@
                   "entity_id",
                   "entry_id",
                   "ordinal"
+               ],
+               "rcsb_related_target_references": [
+                  "ordinal",
+                  "entity_id",
+                  "entry_id"
+               ],
+               "rcsb_target_cofactors": [
+                  "ordinal",
+                  "entity_id",
+                  "entry_id"
                ],
                "entity": [
                   "id",
