@@ -28,6 +28,8 @@
           "allOf": [{
             "$ref": "../core/json-schema-core_uniprot.json#/properties/rcsb_uniprot_feature/items/properties/type"
           },{
+            "$ref": "../core/json-schema-core_polymer_entity.json#/properties/rcsb_polymer_entity_feature/items/properties/type"
+          },{
             "$ref": "../../exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json#/properties/rcsb_polymer_entity_feature/items/properties/type"
           },{
             "$ref": "../../exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity_instance.json#/properties/rcsb_polymer_instance_feature/items/properties/type"
@@ -63,6 +65,13 @@
               "value": {
                 "type": "number",
                 "description": "The value for the feature over this monomer segment."
+              },
+              "values": {
+                "description": "The value(s) for the feature over this monomer segment.",
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
               }
             },
             "additionalProperties": false
