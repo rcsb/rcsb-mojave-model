@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "9.3.1",
+   "DATABASE_VERSION": "9.3.2",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -72854,12 +72854,14 @@
                "ENUMERATION": [
                   "C-MANNOSYLATION_SITE",
                   "CATH",
+                  "ECOD",
                   "HAS_COVALENT_LINKAGE",
                   "HAS_METAL_COORDINATION_LINKAGE",
                   "N-GLYCOSYLATION_SITE",
                   "O-GLYCOSYLATION_SITE",
                   "S-GLYCOSYLATION_SITE",
-                  "SCOP"
+                  "SCOP",
+                  "SCOP2"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -88268,7 +88270,9 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "CATH",
-                  "SCOP"
+                  "ECOD",
+                  "SCOP",
+                  "SCOP2"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -107659,7 +107663,7 @@
          },
          {
             "NAME": "pdbx_core_polymer_entity_instance",
-            "VERSION": "9.2.0"
+            "VERSION": "9.2.1"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity_instance",
