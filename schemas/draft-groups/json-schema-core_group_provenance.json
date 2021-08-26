@@ -28,9 +28,8 @@
         "type": {
           "type": "string",
           "enum": [
-            "structure_similarity",
-            "sequence_similarity",
-            "reference_identity"
+            "sequence_identity",
+            "matching_uniprot_accession"
           ],
           "description": "Specifies the type of similarity criteria used to aggregate members into higher levels in the hierarchy"
         },
@@ -44,8 +43,7 @@
               "type": "string",
               "enum": [
                 "mmseqs2",
-                "matching_uniprot_accession",
-                "matching_uniprot_accession_list"
+                "matching_reference_identity"
               ],
               "examples": [
                 "mmseqs2"
