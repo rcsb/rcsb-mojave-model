@@ -3,8 +3,7 @@
   "type": "object",
   "properties": {
     "rcsb_id": {
-      "type": "string",
-      "description": "A unique group provenance identifier"
+      "$ref": "#/properties/rcsb_group_provenance_container_identifiers/properties/group_provenance_id"
     },
     "rcsb_group_provenance_container_identifiers": {
       "type": "object",
@@ -14,6 +13,10 @@
       "properties": {
         "group_provenance_id": {
           "type": "string",
+          "enum": [
+            "provenance_sequence_identity",
+            "provenance_matching_uniprot_accession"
+          ],
           "description": "A unique group provenance identifier"
         }
       }
