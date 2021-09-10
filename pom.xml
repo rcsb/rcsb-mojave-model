@@ -48,8 +48,9 @@
         <exch.core.drugbank.json.schema.name>json-min-db-drugbank_core-col-drugbank_core.json</exch.core.drugbank.json.schema.name>
 
         <!-- schema for sequence clusters collection -->
-        <exch.clusters.entity.members.json.schema.name>json-min-db-sequence_clusters-col-entity_members.json</exch.clusters.entity.members.json.schema.name>
-        <exch.clusters.cluster.members.json.schema.name>json-min-db-sequence_clusters-col-cluster_members.json</exch.clusters.cluster.members.json.schema.name>
+        <exch.sequence.clusters.entity.members.json.schema.name>json-min-db-sequence_clusters-col-entity_members.json</exch.sequence.clusters.entity.members.json.schema.name>
+        <exch.sequence.clusters.cluster.members.json.schema.name>json-min-db-sequence_clusters-col-cluster_members.json</exch.sequence.clusters.cluster.members.json.schema.name>
+        <exch.sequence.clusters.provenance.json.schema.name>json-min-db-sequence_clusters-col-cluster_provenance.json</exch.sequence.clusters.provenance.json.schema.name>
 
         <!-- schemas for repository holdings collections -->
         <exch.holdings.current.entries.json.schema.name>json-min-db-repository_holdings-col-repository_holdings_current_entry.json</exch.holdings.current.entries.json.schema.name>
@@ -329,10 +330,39 @@
                                 <argument>true</argument>
                                 <!-- where to put final schema -->
                                 <argument>-o</argument>
-                                <argument>${project.build.directory}/${exchange.schema.location}/${exch.clusters.cluster.members.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${exchange.schema.location}/${exch.sequence.clusters.cluster.members.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.clusters.cluster.members.json.schema.name}</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.sequence.clusters.cluster.members.json.schema.name}</argument>
+                            </arguments>
+                            <systemProperties>
+                                <!-- Identifies a resource by type -->
+                                <systemProperty>
+                                    <key>sourceScheme</key>
+                                    <value>resource</value>
+                                </systemProperty>
+                            </systemProperties>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>build-exchange-clusters-provenance-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${exchange.schema.location}/${exch.sequence.clusters.provenance.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.sequence.clusters.provenance.json.schema.name}</argument>
                             </arguments>
                             <systemProperties>
                                 <!-- Identifies a resource by type -->
@@ -357,7 +387,7 @@
                             <arguments>
                                 <!-- where to get source schema -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.clusters.entity.members.json.schema.name}</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.sequence.clusters.entity.members.json.schema.name}</argument>
                                 <!-- where to put final schema -->
                                 <argument>-o</argument>
                                 <argument>${project.build.directory}/${derived.schema.location}/${sequence.clusters.derived.json.schema.name}</argument>
@@ -404,6 +434,8 @@
                         <configuration>
                             <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
                             <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
                                 <!-- where to put final schema -->
                                 <argument>-o</argument>
                                 <argument>${project.build.directory}/${core.schema.location}/${core.group.provenance.json.schema.name}</argument>
