@@ -36,6 +36,9 @@
               "context": "dictionary"
             }
           ]
+        },
+        "rcsb_id": {
+          "type": "string"
         }
       },
       "additionalProperties": false,
@@ -485,30 +488,20 @@
     "rcsb_polymer_entity_instance_interface_partner_2": {
       "$ref": "#/properties/rcsb_polymer_entity_instance_interface_partner_1"
     },
-    "rcsb_polymer_entity_instance_assembly_interface_pairs": {
+    "rcsb_operator_interface_pairs": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "rcsb_polymer_entity_instance_assembly_interface_partner_1": {
-            "type": "object",
-            "properties": {
-              "partner_operator_list": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "description": "Identifies the operation of collection of operations from category PDBX_STRUCT_OPER_LIST."
-              }
-            }
+          "rcsb_operator_interface_partner_1": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Identifies the list operations from the category PDBX_STRUCT_OPER_LIST."
           },
-          "rcsb_polymer_entity_instance_assembly_interface_partner_2": {
-            "$ref": "#/properties/rcsb_polymer_entity_instance_assembly_interface_pairs/items/properties/rcsb_polymer_entity_instance_assembly_interface_partner_1"
+          "rcsb_operator_interface_partner_2": {
+            "$ref": "#/properties/rcsb_operator_interface_pairs/items/properties/rcsb_operator_interface_partner_1"
           }
         }
       }
