@@ -208,7 +208,7 @@
         }
       }
     },
-    "rcsb_interface_feature": {
+    "rcsb_interface_property": {
       "type": "object",
       "description": "Global interface properties (e.g. number of interface residues, interface accessibility, etc.)",
       "properties": {
@@ -223,7 +223,7 @@
           "type": "string",
           "description": "A description for the feature."
         },
-        "feature_id": {
+        "property_id": {
           "type": "string",
           "description": "An identifier for the feature."
         },
@@ -252,48 +252,24 @@
           ],
           "description": "A type or category of the feature."
         },
-        "additional_properties": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string",
-                "enum": [
-                  "TO_BE_DEFINED"
-                ],
-                "examples": [
-                  "TO_BE_DEFINED"
-                ],
-                "description": "The additional property name."
-              },
-              "values": {
-                "type": "array",
-                "items": {
-                  "anyOf": [
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "integer"
-                    },
-                    {
-                      "type": "number"
-                    }
-                  ],
-                  "examples": [
-                    "globin-like",
-                    "2.54",
-                    "300"
-                  ],
-                  "description": "The value(s) of the additional property."
-                },
-                "uniqueItems": false
-              }
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
             },
-            "additionalProperties": false
-          },
-          "uniqueItems": false
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "examples": [
+            "hetero",
+            "2.54",
+            "300"
+          ],
+          "description": "The value of the property."
         }
       }
     }
