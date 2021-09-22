@@ -315,6 +315,13 @@
           "description": "The release date of the latest revision item."
         }
       }
+    },
+    "rcsb_interface_list": {
+      "type": "array",
+      "description": "List of binary interface Ids within the assembly",
+      "items": {
+        "$ref": "json-schema-core_interface.json#/properties/rcsb_interface_container_identifier/properties/interface_id"
+      }
     }
   },
   "additionalProperties": false
