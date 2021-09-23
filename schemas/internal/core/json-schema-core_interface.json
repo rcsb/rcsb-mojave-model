@@ -1,10 +1,14 @@
 {
   "$schema" : "http://json-schema.org/draft-04/schema#",
-  "title" : "Core Assembly",
-  "description": "JSON schema for entity level core data. Combines RCSB Exchange Database schema: json-schema-min-pdbx_core_assembly.json and RCSB Data Warehouse schema: json-schema-core_assembly.json",
+  "title" : "Core Interface",
+  "description": "JSON schema for binary interfaces core data.",
   "type": "object",
   "required": [
-    ""
+    "rcsb_interface_container_identifier",
+    "rcsb_interface_partner_1",
+    "rcsb_interface_partner_2",
+    "rcsb_id",
+    "rcsb_interface_operator_pair"
   ],
   "properties": {
     "rcsb_id": {
@@ -23,16 +27,26 @@
         },
         "interface_id": {
           "type": "string",
+          "examples": [
+            "1",
+            "2"
+          ],
           "description": "Identifier for the equivalent interfaces within the assembly"
         },
         "rcsb_id": {
-          "type": "string"
+          "type": "string",
+          "examples": [
+            "2UZI-1.A.B?1"
+          ],
+          "description": "Unique identifier for the document"
         }
       },
       "additionalProperties": false,
       "required": [
         "entry_id",
-        "assembly_id"
+        "assembly_id",
+        "interface_id",
+        "rcsb_id"
       ]
     },
     "rcsb_interface_partner_1": {
@@ -177,10 +191,7 @@
                 "uniqueItems": false
               }
             },
-            "additionalProperties": false,
-            "required": [
-              "ordinal"
-            ]
+            "additionalProperties": false
           },
           "minItems": 1,
           "uniqueItems": true
