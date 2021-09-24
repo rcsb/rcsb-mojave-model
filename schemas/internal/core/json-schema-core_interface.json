@@ -5,10 +5,9 @@
   "type": "object",
   "required": [
     "rcsb_interface_container_identifier",
-    "rcsb_interface_partner_1",
-    "rcsb_interface_partner_2",
+    "rcsb_interface_partner",
     "rcsb_id",
-    "rcsb_interface_operator_pair"
+    "rcsb_interface_operator"
   ],
   "properties": {
     "rcsb_id": {
@@ -54,7 +53,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "rcsb_partner": {
+          "interface_partner_identifier": {
             "type": "object",
             "properties": {
               "entity_id": {
@@ -72,7 +71,7 @@
               "entity_id"
             ]
           },
-          "rcsb_partner_feature": {
+          "interface_partner_feature": {
             "type": "array",
             "items": {
               "type": "object",
@@ -217,7 +216,7 @@
         }
       }
     },
-    "rcsb_interface_property": {
+    "rcsb_interface_annotation": {
       "type": "object",
       "description": "Global interface properties (e.g. number of interface residues, interface accessibility, etc.)",
       "properties": {
@@ -256,7 +255,6 @@
           ],
           "examples": [
             "TOTAL_ASA",
-            "RESIDUE_NUMBER",
             "HOMO_IOU"
           ],
           "description": "A type or category of the feature."
@@ -279,6 +277,18 @@
             "300"
           ],
           "description": "The value of the property."
+        }
+      }
+    },
+    "rcsb_interface_info":{
+      "type": "object",
+      "properties": {
+        "polymer_composition": {
+          "type": "string",
+          "enum": ["a","b","c"]
+        },
+        "residue_count": {
+          "type": "integer"
         }
       }
     }

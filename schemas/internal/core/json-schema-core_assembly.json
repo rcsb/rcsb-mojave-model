@@ -7,6 +7,18 @@
     "rcsb_assembly_container_identifiers"
   ],
   "properties": {
+    "rcsb_assembly_container_identifier": {
+      "type": "object",
+      "properties": {
+        "interface_ids": {
+          "type": "array",
+          "description": "List of binary interface Ids within the assembly (it points to interface id collection).",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "rcsb_struct_symmetry": {
       "type":"array",
       "minItems": 1,
@@ -314,13 +326,6 @@
           "format": "date-time",
           "description": "The release date of the latest revision item."
         }
-      }
-    },
-    "rcsb_interface_list": {
-      "type": "array",
-      "description": "List of binary interface Ids within the assembly",
-      "items": {
-        "$ref": "json-schema-core_interface.json#/properties/rcsb_interface_container_identifier/properties/interface_id"
       }
     }
   },
