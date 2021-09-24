@@ -250,7 +250,6 @@
           "type": "string",
           "enum": [
             "TOTAL_ASA",
-            "RESIDUE_NUMBER",
             "HOMO_IOU"
           ],
           "examples": [
@@ -285,10 +284,14 @@
       "properties": {
         "polymer_composition": {
           "type": "string",
-          "enum": ["a","b","c"]
+          "enum": ["Nucleic acid (only)", "Protein (only)", "Protein/NA"]
         },
         "residue_count": {
           "type": "integer"
+        },
+        "interface_character": {
+          "type": "string",
+          "enum": ["homo", "hetero"]
         }
       }
     }
