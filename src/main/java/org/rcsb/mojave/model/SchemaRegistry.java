@@ -20,6 +20,9 @@ public enum SchemaRegistry {
     CORE_ASSEMBLY_JSON("core.assembly.json.schema.name"),
     CORE_ASSEMBLY_BSON("validation.assembly.bson.schema.name"),
 
+    CORE_INTERFACE_JSON("core.interface.json.schema.name"),
+    CORE_INTERFACE_BSON("validation.interface.bson.schema.name"),
+
     CORE_ENTRY_JSON("core.entry.json.schema.name"),
     CORE_ENTRY_BSON("validation.entry.bson.schema.name"),
 
