@@ -4,7 +4,7 @@
   "description": "JSON schema for binary interfaces core data.",
   "type": "object",
   "required": [
-    "rcsb_interface_container_identifier",
+    "rcsb_interface_container_identifiers",
     "rcsb_interface_partner",
     "rcsb_id",
     "rcsb_interface_operator"
@@ -13,7 +13,7 @@
     "rcsb_id": {
       "type": "string"
     },
-    "rcsb_interface_container_identifier": {
+    "rcsb_interface_container_identifiers": {
       "type": "object",
       "properties": {
         "entry_id": {
