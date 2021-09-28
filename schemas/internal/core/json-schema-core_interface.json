@@ -294,6 +294,24 @@
           "enum": ["homo", "hetero"]
         }
       }
+    },
+    "rcsb_latest_revision": {
+      "type": "object",
+      "properties": {
+        "major_revision": {
+          "type": "integer",
+          "description": "The major version number of the latest revision."
+        },
+        "minor_revision": {
+          "type": "integer",
+          "description": "The minor version number of the latest revision."
+        },
+        "revision_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The release date of the latest revision item."
+        }
+      }
     }
   },
   "additionalProperties": false
