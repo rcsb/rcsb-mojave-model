@@ -30,7 +30,15 @@
             "1",
             "2"
           ],
-          "description": "Identifier for the equivalent interfaces within the assembly"
+          "description": "Identifier for the geometrically equivalent (same asym_ids on both sides) interfaces within the assembly"
+        },
+        "interface_entity_id": {
+          "type": "string",
+          "examples": [
+            "1",
+            "2"
+          ],
+          "description": "Identifier for NCS-equivalent interfaces within the assembly (same entity_ids on both sides)"
         },
         "rcsb_id": {
           "type": "string",
@@ -107,7 +115,7 @@
                   "enum": [
                     "ASA_UNBOUND",
                     "ASA_BOUND",
-                    "BINDING_SITE"
+                    "BURIAL_FRACTION"
                   ],
                   "examples": [
                     "ASA_UNBOUND",
