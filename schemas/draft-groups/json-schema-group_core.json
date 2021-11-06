@@ -1,4 +1,5 @@
 {
+  "title" : "Core Group",
   "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "/draft-groups/json-schema-core_group.json",
   "type": "object",
@@ -228,52 +229,6 @@
       },
       "minItems": 1,
       "uniqueItems": true
-    },
-    "rcsb_group_sequence_alignment": {
-      "type": "object",
-      "required": [
-        "abstract_reference",
-        "group_members_alignment"
-      ],
-      "properties": {
-        "abstract_reference": {
-          "type": "object",
-          "description": "Abstract reference where group members can be aligned to generate a MSA",
-          "required": [
-            "length"
-          ],
-          "properties": {
-            "length": {
-              "type": "integer",
-              "description": "Abstract reference length"
-            },
-            "sequence": {
-              "type": "string",
-              "description": "Sequence that represents the abstract reference"
-            }
-          }
-        },
-        "group_members_alignment": {
-          "type": "array",
-          "description": "List of alignments with core_entity canonical sequences",
-          "items": {
-            "description": "Alignment with a core_entity canonical sequence",
-            "allOf": [
-              {
-                "$ref": "../internal/common/common-schema-alignment.json#/definitions/alignment"
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "member_id": {
-                    "type": "string"
-                  }
-                }
-              }
-            ]
-          }
-        }
-      }
     }
   },
   "additionalProperties": false
