@@ -493,7 +493,9 @@
                   "type": "string",
                   "enum": [
                      "CATH",
-                     "SCOP"
+                     "ECOD",
+                     "SCOP",
+                     "SCOP2"
                   ],
                   "examples": [
                      "CATH",
@@ -511,9 +513,19 @@
                         "name": "CATH"
                      },
                      {
+                        "value": "ECOD",
+                        "detail": "ECOD - An Evolutionary Classification of Protein Domains",
+                        "name": "ECOD"
+                     },
+                     {
                         "value": "SCOP",
                         "detail": "SCOP - Structural Classification of Proteins",
                         "name": "SCOP"
+                     },
+                     {
+                        "value": "SCOP2",
+                        "detail": "SCOP2 - Structural Classification of Proteins 2 Family and Superfamilies",
+                        "name": "SCOP2 Family/Superfamily"
                      }
                   ],
                   "rcsb_description": [
@@ -651,6 +663,48 @@
                            "examples": [
                               "Prokaryotic SH3-related domain",
                               "Actin-like ATPase domain"
+                           ],
+                           "path": "rcsb_polymer_instance_annotation.annotation_lineage.name"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "SCOP2",
+                     "attributes": [
+                        {
+                           "examples": [
+                              8093789,
+                              8084640,
+                              8084641,
+                              8093790
+                           ],
+                           "path": "rcsb_polymer_instance_annotation.annotation_lineage.id"
+                        },
+                        {
+                           "examples": [
+                              "Sialidases (neuraminidases)",
+                              "FAD-dependent thiol oxidase",
+                              "FAD-dependent thiol oxidase",
+                              "Sialidases"
+                           ],
+                           "path": "rcsb_polymer_instance_annotation.annotation_lineage.name"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "ECOD",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "e3mbgA1",
+                              "e6lu7A2"
+                           ],
+                           "path": "rcsb_polymer_instance_annotation.annotation_lineage.id"
+                        },
+                        {
+                           "examples": [
+                              "Evr1_Alr",
+                              "Peptidase_C30_C"
                            ],
                            "path": "rcsb_polymer_instance_annotation.annotation_lineage.name"
                         }
@@ -1983,7 +2037,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 9.2.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 9.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 9.2.0"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 9.2.1",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 9.2.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 9.2.1"
 }
