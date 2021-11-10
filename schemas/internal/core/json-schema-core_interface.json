@@ -207,13 +207,15 @@
           }
         }
       },
-      "maxLength": 2
+      "maxLength": 2,
+      "minLength": 2
     },
     "rcsb_interface_operator": {
       "type": "array",
       "items": {
         "type": "array",
         "maxLength": 2,
+        "minLength": 2,
         "description": "List of operations for each interface partner.",
         "items": {
           "type": "array",
