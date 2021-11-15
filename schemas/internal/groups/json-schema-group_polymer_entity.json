@@ -16,17 +16,12 @@
           "ranking_criteria_type": {
             "type": "string",
             "enum": [
-              "coverage",
-              "member_quality"
+              "coverage"
             ],
             "rcsb_enum_annotated": [
               {
                 "value": "coverage",
                 "detail": "The higher the coverage, the better"
-              },
-              {
-                "value": "member_quality",
-                "detail": "Complex quality metric. The higher, the better"
               }
             ],
             "description": "Defines ranking option applicable to group members",
