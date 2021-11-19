@@ -9,7 +9,7 @@
 
     <groupId>org.rcsb</groupId>
     <artifactId>rcsb-mojave-model</artifactId>
-    <version>1.27.0-SNAPSHOT_INTERFACES</version>
+    <version>1.27.0-INTERFACES-SNAPSHOT</version>
 
     <properties>
 
@@ -22,7 +22,7 @@
         <project.auto.package>org.rcsb.mojave.auto</project.auto.package>
         <project.enums.package>org.rcsb.mojave.enumeration</project.enums.package>
 
-        <rcsb-json-schema.version>1.27.0-SNAPSHOT-INTERFACES</rcsb-json-schema.version>
+        <rcsb-json-schema.version>1.27.0-INTERFACES-SNAPSHOT</rcsb-json-schema.version>
 
         <mojave.meta.version>1.1.2</mojave.meta.version>
         <mojave.tools.version>1.3.0</mojave.tools.version>
@@ -88,6 +88,7 @@
         <rcsb.annotations.uniprot.json.schema.name>json-schema-annotations_uniprot.json</rcsb.annotations.uniprot.json.schema.name>
         <rcsb.annotations.polymer.entity.json.schema.name>json-schema-annotations_polymer_entity.json</rcsb.annotations.polymer.entity.json.schema.name>
         <rcsb.annotations.polymer.entity.instance.json.schema.name>json-schema-annotations_polymer_entity_instance.json</rcsb.annotations.polymer.entity.instance.json.schema.name>
+        <rcsb.annotations.interface.polymer.entity.instance.json.schema.name>json-schema-annotations_interface_polymer_entity_instance.json</rcsb.annotations.interface.polymer.entity.instance.json.schema.name>
 
         <!-- ================================= WHERE WE KEEP SCHEMAS PRODUCTS ====================================== -->
 
@@ -141,6 +142,7 @@
         <annotations.uniprot.json.schema.name>annotations_uniprot.json</annotations.uniprot.json.schema.name>
         <annotations.polymer.entity.json.schema.name>annotations_polymer_entity.json</annotations.polymer.entity.json.schema.name>
         <annotations.polymer.entity.instance.json.schema.name>annotations_polymer_entity_instance.json</annotations.polymer.entity.instance.json.schema.name>
+        <annotations.interface.polymer.entity.instance.json.schema.name>annotations_interface_polymer_entity_instance.json</annotations.interface.polymer.entity.instance.json.schema.name>
 
         <!-- VALIDATION SCHEMA NAMES -->
         <validation.assembly.bson.schema.name>validation-core_assembly.json</validation.assembly.bson.schema.name>
@@ -174,6 +176,7 @@
         <validation.annotations.uniprot.bson.schema.name>validation-annotations_uniprot.json</validation.annotations.uniprot.bson.schema.name>
         <validation.annotations.polymer.entity.bson.schema.name>validation-annotations_polymer_entity.json</validation.annotations.polymer.entity.bson.schema.name>
         <validation.annotations.polymer.entity.instance.bson.schema.name>validation-annotations_polymer_entity_instance.json</validation.annotations.polymer.entity.instance.bson.schema.name>
+        <validation.annotations.interface.polymer.entity.instance.bson.schema.name>validation-annotations_interface_polymer_entity_instance.json</validation.annotations.interface.polymer.entity.instance.bson.schema.name>
 
     </properties>
 
@@ -818,6 +821,28 @@
                         </configuration>
                     </execution>
 
+                    <execution>
+                        <id>build-interface_instance-annotations-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${annotations.interface.polymer.entity.instance.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.annotations.json.schemas.location}/${rcsb.annotations.interface.polymer.entity.instance.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
                     <!-- GENERATE VALIDATION SCHEMAS -->
                     <execution>
                         <id>generate-validation-schema-assembly</id>
@@ -1152,6 +1177,20 @@
                             <arguments>
                                 <argument>${project.build.directory}/${core.schema.location}/${annotations.polymer.entity.instance.json.schema.name}</argument>
                                 <argument>${project.build.directory}/${validation.schema.location}/${validation.annotations.polymer.entity.instance.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-annotations_interface_polymer_entity_instance</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${annotations.interface.polymer.entity.instance.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.annotations.interface.polymer.entity.instance.bson.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
