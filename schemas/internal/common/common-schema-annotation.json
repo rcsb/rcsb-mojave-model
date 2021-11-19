@@ -26,6 +26,8 @@
           "type": "string",
           "description": "A type or category of the feature.",
           "allOf": [{
+            "$ref": "../core/json-schema-core_interface.json#/properties/rcsb_interface_partner/items/properties/interface_partner_feature/items/properties/type"
+          },{
             "$ref": "../core/json-schema-core_uniprot.json#/properties/rcsb_uniprot_feature/items/properties/type"
           },{
             "$ref": "../core/json-schema-core_polymer_entity.json#/properties/rcsb_polymer_entity_feature/items/properties/type"
