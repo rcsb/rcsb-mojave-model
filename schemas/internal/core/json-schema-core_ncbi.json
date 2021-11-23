@@ -24,10 +24,10 @@
       ],
       "properties": {
         "gene_id": {
-          "type": "string",
+          "type": "integer",
           "description": "NCBI gene ID.",
           "examples": [
-            "3265"
+            3265
           ]
         },
         "rna_nucleotide_accession": {
@@ -54,10 +54,10 @@
           ]
         },
         "rna_nucleotide_gi": {
-          "type": "string",
+          "type": "integer",
           "description": "NCBI transcript GI number.",
           "examples": [
-            "568815587"
+            568815587
           ]
         },
         "protein_accession": {
@@ -84,10 +84,10 @@
           ]
         },
         "protein_gi": {
-          "type": "string",
+          "type": "integer",
           "description": "NCBI protein GI number.",
           "examples": [
-            "4885425"
+            4885425
           ]
         },
         "symbol": {
@@ -110,7 +110,7 @@
           "type": "string",
           "description": "NCBI taxonomy ID (String).",
           "examples": [
-            "9606"
+            "NP_005334"
           ],
           "pattern": "^(.*)$"
         },
@@ -184,10 +184,10 @@
           ]
         },
         "genomic_nucleotide_gi": {
-          "type": "string",
+          "type": "integer",
           "description": "NCBI chromosome GI number.",
           "examples": [
-            "568815587"
+            568815587
           ]
         },
         "assembly": {
@@ -311,10 +311,10 @@
       ],
       "properties": {
         "tax_id": {
-          "type": "string",
+          "type": "integer",
           "description": "NCBI taxonomy ID.",
           "examples": [
-            "9606"
+            9606
           ]
         },
         "source": {
