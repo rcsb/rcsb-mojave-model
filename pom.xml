@@ -23,7 +23,7 @@
         <project.enums.package>org.rcsb.mojave.enumeration</project.enums.package>
         <rcsb-json-schema.version>1.28.0</rcsb-json-schema.version>
 
-        <mojave.meta.version>1.1.2</mojave.meta.version>
+        <mojave.meta.version>1.2.1</mojave.meta.version>
         <mojave.tools.version>1.3.0</mojave.tools.version>
         <reflection.version>0.9.11</reflection.version>
 
@@ -223,6 +223,7 @@
         <!-- Dependency on mojave-meta project is needed to have a type safety in validation process.
              The validation occurs  -->
         <dependency>
+            <scope>test</scope>
             <groupId>org.rcsb</groupId>
             <artifactId>rcsb-mojave-meta</artifactId>
             <version>${mojave.meta.version}</version>
