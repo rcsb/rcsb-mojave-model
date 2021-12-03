@@ -9,7 +9,7 @@
 
     <groupId>org.rcsb</groupId>
     <artifactId>rcsb-mojave-model</artifactId>
-    <version>1.27.1</version>
+    <version>1.27.2-SNAPSHOT</version>
 
     <properties>
 
@@ -21,8 +21,7 @@
 
         <project.auto.package>org.rcsb.mojave.auto</project.auto.package>
         <project.enums.package>org.rcsb.mojave.enumeration</project.enums.package>
-
-        <rcsb-json-schema.version>1.27.1</rcsb-json-schema.version>
+        <rcsb-json-schema.version>1.28.0</rcsb-json-schema.version>
 
         <mojave.meta.version>1.1.2</mojave.meta.version>
         <mojave.tools.version>1.3.0</mojave.tools.version>
@@ -48,7 +47,9 @@
         <exch.core.drugbank.json.schema.name>json-min-db-drugbank_core-col-drugbank_core.json</exch.core.drugbank.json.schema.name>
 
         <!-- schema for sequence clusters collection -->
-        <exch.clusters.json.schema.name>json-min-db-sequence_clusters-col-entity_members.json</exch.clusters.json.schema.name>
+        <exch.sequence.clusters.entity.members.json.schema.name>json-min-db-sequence_clusters-col-entity_members.json</exch.sequence.clusters.entity.members.json.schema.name>
+        <exch.sequence.clusters.cluster.members.json.schema.name>json-min-db-sequence_clusters-col-cluster_members.json</exch.sequence.clusters.cluster.members.json.schema.name>
+        <exch.sequence.clusters.provenance.json.schema.name>json-min-db-sequence_clusters-col-cluster_provenance.json</exch.sequence.clusters.provenance.json.schema.name>
 
         <!-- schemas for repository holdings collections -->
         <exch.holdings.current.entries.json.schema.name>json-min-db-repository_holdings-col-repository_holdings_current_entry.json</exch.holdings.current.entries.json.schema.name>
@@ -88,13 +89,21 @@
         <rcsb.annotations.polymer.entity.json.schema.name>json-schema-annotations_polymer_entity.json</rcsb.annotations.polymer.entity.json.schema.name>
         <rcsb.annotations.polymer.entity.instance.json.schema.name>json-schema-annotations_polymer_entity_instance.json</rcsb.annotations.polymer.entity.instance.json.schema.name>
 
+        <!-- ==================================== GROUPS DW JSON SCHEMAS ========================================= -->
+        <rcsb.group.json.schemas.location>/internal/groups</rcsb.group.json.schemas.location>
+        <rcsb.group.provenance.json.schema.name>json-schema-group_provenance.json</rcsb.group.provenance.json.schema.name>
+        <rcsb.group.core.json.schema.name>json-schema-group_core.json</rcsb.group.core.json.schema.name>
+        <rcsb.group.entry.json.schema.name>json-schema-group_entry.json</rcsb.group.entry.json.schema.name>
+        <rcsb.group.polymer.entity.json.schema.name>json-schema-group_polymer_entity.json</rcsb.group.polymer.entity.json.schema.name>
+
         <!-- ================================= WHERE WE KEEP SCHEMAS PRODUCTS ====================================== -->
 
         <!-- for schemas we create automatically or download -->
         <generated.schema.location>generated-sources/schema</generated.schema.location>
-
+        <!-- for schemas we copy from exchange area -->
+        <exchange.schema.location>${generated.schema.location}/exchange</exchange.schema.location>
         <!-- for schemas we create as an intermediate product -->
-        <derived.schemas.location>${generated.schema.location}/derived</derived.schemas.location>
+        <derived.schema.location>${generated.schema.location}/derived</derived.schema.location>
         <!-- schemas automatically created for DW core collections in JSON -->
         <core.schema.location>${generated.schema.location}/core</core.schema.location>
         <!-- schemas automatically created for Java types generation in JSON -->
@@ -127,6 +136,10 @@
         <core.ncbi.json.schema.name>core_ncbi.json</core.ncbi.json.schema.name>
         <core.pfam.json.schema.name>core_pfam.json</core.pfam.json.schema.name>
 
+        <group.entry.json.schema.name>group_entry.json</group.entry.json.schema.name>
+        <group.polymer.entity.json.schema.name>group_polymer_entity.json</group.polymer.entity.json.schema.name>
+        <group.provenance.json.schema.name>group_provenance.json</group.provenance.json.schema.name>
+
         <holdings.current.entry.json.schema.name>current_entry.json</holdings.current.entry.json.schema.name>
         <holdings.removed.entry.json.schema.name>removed_entry.json</holdings.removed.entry.json.schema.name>
         <holdings.unreleased.entry.json.schema.name>unreleased_entry.json</holdings.unreleased.entry.json.schema.name>
@@ -158,6 +171,10 @@
         <validation.uniprot.bson.schema.name>validation-core_uniprot.json</validation.uniprot.bson.schema.name>
         <validation.pubmed.bson.schema.name>validation-core_pubmed.json</validation.pubmed.bson.schema.name>
         <validation.ncbi.bson.schema.name>validation-core_ncbi.json</validation.ncbi.bson.schema.name>
+
+        <validation.group.entry.bson.schema.name>validation-group_entry.json</validation.group.entry.bson.schema.name>
+        <validation.group.polymer.entity.bson.schema.name>validation-group_polymer_entity.json</validation.group.polymer.entity.bson.schema.name>
+        <validation.group.provenance.bson.schema.name>validation-group_provenance.json</validation.group.provenance.bson.schema.name>
 
         <validation.graph.bson.schema.name>validation-rcsb_graph_node.json</validation.graph.bson.schema.name>
 
@@ -252,6 +269,7 @@
                 <directory>${project.build.directory}/generated-sources/classes/org/rcsb/mojave</directory>
                 <includes>
                     <include>CoreConstants.java</include>
+                    <include>ExchangeConstants.java</include>
                 </includes>
             </resource>
         </resources>
@@ -301,6 +319,64 @@
                 <!-- executes the supplied java class in the current VM with the enclosing project's dependencies as classpath -->
                 <executions>
 
+                    <execution>
+                        <id>build-exchange-clusters-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${exchange.schema.location}/${exch.sequence.clusters.cluster.members.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.sequence.clusters.cluster.members.json.schema.name}</argument>
+                            </arguments>
+                            <systemProperties>
+                                <!-- Identifies a resource by type -->
+                                <systemProperty>
+                                    <key>sourceScheme</key>
+                                    <value>resource</value>
+                                </systemProperty>
+                            </systemProperties>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>build-exchange-clusters-provenance-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${exchange.schema.location}/${exch.sequence.clusters.provenance.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.sequence.clusters.provenance.json.schema.name}</argument>
+                            </arguments>
+                            <systemProperties>
+                                <!-- Identifies a resource by type -->
+                                <systemProperty>
+                                    <key>sourceScheme</key>
+                                    <value>resource</value>
+                                </systemProperty>
+                            </systemProperties>
+                        </configuration>
+                    </execution>
+
                     <!-- GENERATE INTERMEDIATE SEQUENCE CLUSTERS JSON SCHEMA -->
                     <execution>
                         <id>generate-derived-seq-clusters-schema</id>
@@ -314,11 +390,99 @@
                             <arguments>
                                 <!-- where to get source schema -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.clusters.json.schema.name}</argument>
+                                <argument>jar:${exch.json.schemas.location}/${exch.sequence.clusters.entity.members.json.schema.name}</argument>
                                 <!-- where to put final schema -->
                                 <argument>-o</argument>
-                                <argument>${project.build.directory}/${derived.schemas.location}/${sequence.clusters.derived.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${derived.schema.location}/${sequence.clusters.derived.json.schema.name}</argument>
                             </arguments>
+                        </configuration>
+                    </execution>
+
+                    <!-- GENERATE GROUPS SCHEMAS -->
+                    <execution>
+                        <id>build-group-provenance-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${group.provenance.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.group.json.schemas.location}/${rcsb.group.provenance.json.schema.name}</argument>
+                            </arguments>
+                            <systemProperties>
+                                <!-- Identifies a resource by type -->
+                                <systemProperty>
+                                    <key>sourceScheme</key>
+                                    <value>resource</value>
+                                </systemProperty>
+                            </systemProperties>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-entry-group-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${group.entry.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.group.json.schemas.location}/${rcsb.group.core.json.schema.name}</argument>
+                                <argument>jar:${rcsb.group.json.schemas.location}/${rcsb.group.entry.json.schema.name}</argument>
+                            </arguments>
+                            <systemProperties>
+                                <!-- Identifies a resource by type -->
+                                <systemProperty>
+                                    <key>sourceScheme</key>
+                                    <value>resource</value>
+                                </systemProperty>
+                            </systemProperties>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-polymer_entity-group-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${group.polymer.entity.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.group.json.schemas.location}/${rcsb.group.core.json.schema.name}</argument>
+                                <argument>jar:${rcsb.group.json.schemas.location}/${rcsb.group.polymer.entity.json.schema.name}</argument>
+                            </arguments>
+                            <systemProperties>
+                                <!-- Identifies a resource by type -->
+                                <systemProperty>
+                                    <key>sourceScheme</key>
+                                    <value>resource</value>
+                                </systemProperty>
+                            </systemProperties>
                         </configuration>
                     </execution>
 
@@ -384,7 +548,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.polymer.entity.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>file://${project.build.directory}/${derived.schemas.location}/${sequence.clusters.derived.json.schema.name}</argument>
+                                <argument>file://${project.build.directory}/${derived.schema.location}/${sequence.clusters.derived.json.schema.name}</argument>
                                 <argument>jar:${exch.json.schemas.location}/${exch.core.polymer.entity.json.schema.name}</argument>
                                 <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.polymer.entity.json.schema.name}</argument>
                             </arguments>
@@ -722,7 +886,6 @@
                             </arguments>
                         </configuration>
                     </execution>
-
                     <execution>
                         <id>build-uniprot-annotations-schema</id>
                         <phase>generate-sources</phase>
@@ -744,7 +907,6 @@
                             </arguments>
                         </configuration>
                     </execution>
-
                     <execution>
                         <id>build-entity-annotations-schema</id>
                         <phase>generate-sources</phase>
@@ -766,7 +928,6 @@
                             </arguments>
                         </configuration>
                     </execution>
-
                     <execution>
                         <id>build-instance-annotations-schema</id>
                         <phase>generate-sources</phase>
@@ -789,7 +950,51 @@
                         </configuration>
                     </execution>
 
-                    <!-- GENERATE VALIDATION SCHEMAS -->
+                    <!-- GENERATE VALIDATION SCHEMAS FOR GROUPS -->
+                    <execution>
+                        <id>generate-validation-schema-group-provenance</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${group.provenance.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.group.provenance.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-group-entry</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${group.entry.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.group.entry.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-group-polymer-entity</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${group.polymer.entity.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.group.polymer.entity.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                    <!-- GENERATE VALIDATION SCHEMAS FOR CORES -->
                     <execution>
                         <id>generate-validation-schema-assembly</id>
                         <phase>generate-sources</phase>
@@ -1136,6 +1341,30 @@
                         </configuration>
                     </execution>
 
+                    <!-- GENERATE EXCHANGE CONSTANTS -->
+                    <execution>
+                        <id>generate-exchange-constants</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateSchemaConstants</mainClass>
+                            <arguments>
+                                <!-- Location of the JSON Schema file(s). -->
+                                <argument>-i</argument>
+                                <argument>${project.build.directory}/${exchange.schema.location}</argument>
+                                <!-- Target directory for generated Java source files. -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/generated-sources/classes</argument>
+                                <!-- Target fully qualified class name used for generated Java class. -->
+                                <argument>-t</argument>
+                                <argument>org.rcsb.mojave.ExchangeConstants</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
                     <!-- GENERATE CORE CONSTANTS -->
                     <execution>
                         <id>generate-core-constants</id>
@@ -1258,3 +1487,4 @@
     </build>
 
 </project>
+
