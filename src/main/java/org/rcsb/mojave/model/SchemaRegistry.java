@@ -87,7 +87,10 @@ public enum SchemaRegistry {
     ANNOTATIONS_POLYMER_ENTITY_DESCRIPTOR_BSON("validation.annotations.polymer.entity.bson.schema.name"),
 
     ANNOTATIONS_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_JSON("annotations.polymer.entity.instance.json.schema.name"),
-    ANNOTATIONS_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_BSON("validation.annotations.polymer.entity.instance.bson.schema.name");
+    ANNOTATIONS_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_BSON("validation.annotations.polymer.entity.instance.bson.schema.name"),
+
+    ANNOTATIONS_INTERFACE_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_JSON("annotations.interface.polymer.entity.instance.json.schema.name"),
+    ANNOTATIONS_INTERFACE_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_BSON("validation.annotations.interface.polymer.entity.instance.bson.schema.name");
 
     private final String value;
     private static final Map<String, SchemaRegistry> CONSTANTS = new HashMap<>();
