@@ -14,6 +14,39 @@
         "pubmed_id": {
           "type": "integer",
           "description": "Unique integer value assigned to each PubMed record."
+        },
+        "group_membership": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "group_id",
+              "aggregation_method"
+            ],
+            "properties": {
+              "group_id": {
+                "type": "string",
+                "rcsb_search_context": [
+                  "exact-match"
+                ],
+                "description": "Identifier for a group a given polymer entity belongs to"
+              },
+              "aggregation_method": {
+                "type": "string",
+                "enum": [
+                  "matching_deposit_group_id"
+                ],
+                "rcsb_search_context": [
+                  "exact-match"
+                ],
+                "description": "Method used to establish group membership"
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "rcsb_nested_indexing": true
         }
       }
     },

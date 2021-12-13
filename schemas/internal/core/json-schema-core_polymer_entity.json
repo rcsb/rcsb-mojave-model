@@ -17,6 +17,47 @@
           "items": {
             "type": "string"
           }
+        },
+        "group_membership": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "group_id",
+              "aggregation_method"
+            ],
+            "properties": {
+              "group_id": {
+                "type": "string",
+                "rcsb_search_context": [
+                  "exact-match"
+                ],
+                "description": "Identifier for a group a given polymer entity belongs to"
+              },
+              "aggregation_method": {
+                "type": "string",
+                "enum": [
+                  "sequence_identity",
+                  "matching_uniprot_accession"
+                ],
+                "rcsb_search_context": [
+                  "exact-match"
+                ],
+                "description": "Method used to establish group membership"
+              },
+              "similarity_cutoff": {
+                "type": "number",
+                "rcsb_search_context": [
+                  "default-match"
+                ],
+                "description": "Degree of similarity expressed as a floating-point number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "rcsb_nested_indexing": true
         }
       }
     },
