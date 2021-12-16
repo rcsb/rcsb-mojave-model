@@ -793,7 +793,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "X-ray Data Collection Details",
-                        "priority_order": 45
+                        "priority_order": 50
                      }
                   ]
                },
@@ -1329,9 +1329,10 @@
                   ],
                   "description": "The general class of the radiation source.",
                   "rcsb_search_context": [
+                     "exact-match",
                      "full-text"
                   ],
-                  "rcsb_full_text_priority": 1,
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The general class of the radiation source.",
@@ -1340,6 +1341,16 @@
                      {
                         "text": "If an X-ray generator was used, please specify the name and model of the generator. If your particular model is not found, use other.",
                         "context": "deposition"
+                     },
+                     {
+                        "text": "Diffraction Source General Class",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "X-ray Data Collection Details",
+                        "priority_order": 45
                      }
                   ]
                },
@@ -11838,7 +11849,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "X-ray Data Collection Details",
-                     "priority_order": 55
+                     "priority_order": 60
                   }
                ]
             },
@@ -11862,7 +11873,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "X-ray Data Collection Details",
-                     "priority_order": 50
+                     "priority_order": 55
                   }
                ]
             },
@@ -16185,7 +16196,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.16.2",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.16.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.16.2"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.16.3",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.16.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 8.16.3"
 }
