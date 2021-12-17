@@ -232,9 +232,6 @@
           "type": "string",
           "enum": ["Nucleic acid (only)", "Protein (only)", "Protein/NA"]
         },
-        "residue_count": {
-          "type": "integer"
-        },
         "interface_character": {
           "type": "string",
           "enum": ["homo", "hetero"]
@@ -245,7 +242,7 @@
         },
         "self_jaccard_contact_score": {
           "type": "number",
-          "description": "The Jaccard score (intersection over union) of interface contacts, comparing contact sets left-right vs right-left. High values indicate isologous (symmetric) interfaces"
+          "description": "The Jaccard score (intersection over union) of interface contacts in homomeric interfaces, comparing contact sets left-right vs right-left. High values indicate isologous (symmetric) interfaces"
         },
         "num_interface_residues": {
           "type": "integer",
