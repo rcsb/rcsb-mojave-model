@@ -242,11 +242,15 @@
         },
         "self_jaccard_contact_score": {
           "type": "number",
-          "description": "The Jaccard score (intersection over union) of interface contacts in homomeric interfaces, comparing contact sets left-right vs right-left. High values indicate isologous (symmetric) interfaces"
+          "description": "The Jaccard score (intersection over union) of interface contacts in homomeric interfaces, comparing contact sets left-right vs right-left. High values indicate isologous (symmetric) interfaces, with value=1 if perfectly symmetric (e.g. crystallographic symmetry)"
         },
         "num_interface_residues": {
           "type": "integer",
           "description": "Number of interface residues, defined as those with burial fraction > 0"
+        },
+        "num_core_interface_residues": {
+          "type": "integer",
+          "description": "Number of core interface residues, defined as those that bury >95% accessible surface area with respect to the unbound state"
         }
       }
     },
