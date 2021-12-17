@@ -30,7 +30,7 @@
             "1",
             "2"
           ],
-          "description": "Identifier for the geometrically equivalent (same asym_ids on both sides) interfaces within the assembly"
+          "description": "Identifier for the geometrically equivalent (same asym_ids on either side) interfaces within the assembly"
         },
         "interface_entity_id": {
           "type": "string",
@@ -108,14 +108,13 @@
                   "examples": [
                     "NACCESS"
                   ],
-                  "description": "Code identifying the individual, organization or program that\n assigned the feature."
+                  "description": "Code identifying the individual, organization or program that assigned the feature."
                 },
                 "type": {
                   "type": "string",
                   "enum": [
                     "ASA_UNBOUND",
-                    "ASA_BOUND",
-                    "BURIAL_FRACTION"
+                    "ASA_BOUND"
                   ],
                   "examples": [
                     "ASA_UNBOUND",
@@ -226,72 +225,6 @@
         }
       }
     },
-    "rcsb_interface_annotation": {
-      "type": "array",
-      "description": "Global interface properties (e.g. number of interface residues, interface accessibility, etc.)",
-      "items": {
-        "type": "object",
-        "properties": {
-          "assignment_version": {
-            "type": "string",
-            "examples": [
-              "V4_0_2"
-            ],
-            "description": "Identifies the version of the feature assignment."
-          },
-          "description": {
-            "type": "string",
-            "description": "A description for the feature."
-          },
-          "property_id": {
-            "type": "string",
-            "description": "An identifier for the feature."
-          },
-          "name": {
-            "type": "string",
-            "description": "A name for the feature."
-          },
-          "provenance_source": {
-            "type": "string",
-            "examples": [
-              "NACCESS"
-            ],
-            "description": "Code identifying the individual, organization or program that\n assigned the feature."
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "TOTAL_ASA",
-              "HOMO_IOU"
-            ],
-            "examples": [
-              "TOTAL_ASA",
-              "HOMO_IOU"
-            ],
-            "description": "A type or category of the feature."
-          },
-          "value": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "integer"
-              },
-              {
-                "type": "number"
-              }
-            ],
-            "examples": [
-              "hetero",
-              "2.54",
-              "300"
-            ],
-            "description": "The value of the property."
-          }
-        }
-      }
-    },
     "rcsb_interface_info":{
       "type": "object",
       "properties": {
@@ -305,6 +238,18 @@
         "interface_character": {
           "type": "string",
           "enum": ["homo", "hetero"]
+        },
+        "interface_area": {
+          "type": "number",
+          "description": "Total interface buried surface area"
+        },
+        "self_jaccard_contact_score": {
+          "type": "number",
+          "description": "The Jaccard score (intersection over union) of interface contacts, comparing contact sets left-right vs right-left. High values indicate isologous (symmetric) interfaces"
+        },
+        "num_interface_residues": {
+          "type": "integer",
+          "description": "Number of interface residues, defined as those with burial fraction > 0"
         }
       }
     },

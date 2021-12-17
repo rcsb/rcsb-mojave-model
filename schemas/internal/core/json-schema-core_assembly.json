@@ -327,6 +327,55 @@
           "description": "The release date of the latest revision item."
         }
       }
+    },
+    "rcsb_assembly_info": {
+      "type": "object",
+      "properties": {
+        "num_interfaces": {
+          "type": "integer",
+          "description": "Number of geometrically equivalent (i.e. same asym_ids on either side) polymer-polymer interfaces in the assembly"
+        },
+        "num_interface_entities": {
+          "type": "integer",
+          "description": "Number of polymer-polymer interface entities, grouping equivalent interfaces at the entity level (i.e. same entity_ids on either side, with similar binding sites)"
+        },
+        "num_homomeric_interface_entities": {
+          "type": "integer",
+          "description": "Number of homomeric (both partners are the same polymeric entity) interface entities"
+        },
+        "num_heteromeric_interface_entities": {
+          "type": "integer",
+          "description": "Number of heteromeric (both partners are different polymeric entities) interface entities"
+        },
+        "num_isologous_interface_entities": {
+          "type": "integer",
+          "description": "Number of isologous (both binding sites are same, i.e. interface is symmetric) interface entities"
+        },
+        "num_heterologous_interface_entities": {
+          "type": "integer",
+          "description": "Number of heterologous (both binding sites are different) interface entities"
+        },
+        "num_protein_interface_entities": {
+          "type": "integer",
+          "description": "Number of protein-protein interface entities"
+        },
+        "num_na_interface_entities": {
+          "type": "integer",
+          "description": "Number of nucleic acid-nucleic acid interface entities"
+        },
+        "num_prot-na_interface_entities": {
+          "type": "integer",
+          "description": "Number of protein-nucleic acid interface entities"
+        },
+        "total_assembly_buried_surface_area": {
+          "type": "number",
+          "description": "Total buried surface area calculated as the sum of buried surface areas over all interfaces"
+        },
+        "total_number_interface_residues": {
+          "type": "number",
+          "description": "Total number of interfacing residues in the assembly, calculated as the sum of interfacing residues over all interfaces"
+        }
+      }
     }
   },
   "additionalProperties": false
