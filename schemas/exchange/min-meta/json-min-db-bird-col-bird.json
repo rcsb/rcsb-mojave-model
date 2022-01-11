@@ -1,0 +1,1468 @@
+{
+   "type": "object",
+   "properties": {
+      "pdbx_prd_audit": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "db_id": {
+                  "type": "string"
+               },
+               "action_type": {
+                  "type": "string",
+                  "enum": [
+                     "Create molecule",
+                     "Initial release",
+                     "Modify audit",
+                     "Modify class",
+                     "Modify linkage",
+                     "Modify molecule name",
+                     "Modify representation",
+                     "Modify sequence",
+                     "Modify taxonomy organism",
+                     "Modify type",
+                     "Obsolete molecule",
+                     "Other modification"
+                  ],
+                  "description": "The action associated with this audit record.",
+                  "rcsb_description": [
+                     {
+                        "text": "The action associated with this audit record.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "annotator": {
+                  "type": "string",
+                  "examples": [
+                     "JO",
+                     "SJ",
+                     "KB"
+                  ],
+                  "description": "The initials of the annotator creating of modifying the molecule.",
+                  "rcsb_description": [
+                     {
+                        "text": "The initials of the annotator creating of modifying the molecule.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "date": {
+                  "type": "string",
+                  "format": "date",
+                  "description": "The date associated with this audit record.",
+                  "rcsb_description": [
+                     {
+                        "text": "The date associated with this audit record.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "details": {
+                  "type": "string",
+                  "examples": [
+                     "Revise molecule sequence."
+                  ],
+                  "description": "Additional details decribing this change.",
+                  "rcsb_description": [
+                     {
+                        "text": "Additional details decribing this change.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "prd_id": {
+                  "type": "string",
+                  "description": "This data item is a pointer to _pdbx_reference_molecule.prd_id in the\n\t       pdbx_reference_molecule category.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is a pointer to _pdbx_reference_molecule.prd_id in the\n\t       pdbx_reference_molecule category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "processing_site": {
+                  "type": "string",
+                  "enum": [
+                     "BMRB",
+                     "PDBC",
+                     "PDBJ",
+                     "PDBe",
+                     "RCSB"
+                  ],
+                  "examples": [
+                     "RCSB",
+                     "PDBe",
+                     "PDBJ",
+                     "BMRB",
+                     "PDBC"
+                  ],
+                  "description": "An identifier for the wwPDB site creating or modifying the molecule.",
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for the wwPDB site creating or modifying the molecule.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_id",
+               "action_type",
+               "date",
+               "prd_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_reference_entity_link": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "db_id": {
+                  "type": "string"
+               },
+               "atom_id_1": {
+                  "type": "string",
+                  "description": "The atom identifier/name in the first of the two entities containing the linkage.",
+                  "rcsb_description": [
+                     {
+                        "text": "The atom identifier/name in the first of the two entities containing the linkage.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "atom_id_2": {
+                  "type": "string",
+                  "description": "The atom identifier/name in the second of the two entities containing the linkage.",
+                  "rcsb_description": [
+                     {
+                        "text": "The atom identifier/name in the second of the two entities containing the linkage.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "comp_id_1": {
+                  "type": "string",
+                  "description": "The component identifier in the first of the two entities containing the linkage.\n\n For polymer entities, this data item is a pointer to _pdbx_reference_entity_poly_seq.mon_id\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.\n\n For non-polymer entities, this data item is a pointer to\n _pdbx_reference_entity_nonpoly.chem_comp_id in the\n PDBX_REFERENCE_ENTITY_NONPOLY category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The component identifier in the first of the two entities containing the linkage.\n\n For polymer entities, this data item is a pointer to _pdbx_reference_entity_poly_seq.mon_id\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.\n\n For non-polymer entities, this data item is a pointer to\n _pdbx_reference_entity_nonpoly.chem_comp_id in the\n PDBX_REFERENCE_ENTITY_NONPOLY category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "comp_id_2": {
+                  "type": "string",
+                  "description": "The component identifier in the second of the two entities containing the linkage.\n\n For polymer entities, this data item is a pointer to _pdbx_reference_entity_poly_seq.mon_id\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.\n\n For non-polymer entities, this data item is a pointer to\n _pdbx_reference_entity_nonpoly.chem_comp_id in the\n PDBX_REFERENCE_ENTITY_NONPOLY category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The component identifier in the second of the two entities containing the linkage.\n\n For polymer entities, this data item is a pointer to _pdbx_reference_entity_poly_seq.mon_id\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.\n\n For non-polymer entities, this data item is a pointer to\n _pdbx_reference_entity_nonpoly.chem_comp_id in the\n PDBX_REFERENCE_ENTITY_NONPOLY category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "component_1": {
+                  "type": "integer",
+                  "description": "The entity component identifier for the first of two entities containing the linkage.",
+                  "rcsb_description": [
+                     {
+                        "text": "The entity component identifier for the first of two entities containing the linkage.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "component_2": {
+                  "type": "integer",
+                  "description": "The entity component identifier for the second of two entities containing the linkage.",
+                  "rcsb_description": [
+                     {
+                        "text": "The entity component identifier for the second of two entities containing the linkage.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "entity_seq_num_1": {
+                  "type": "integer",
+                  "description": "For a polymer entity, the sequence number in the first of\n the two entities containing the linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.num\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
+                  "rcsb_description": [
+                     {
+                        "text": "For a polymer entity, the sequence number in the first of\n the two entities containing the linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.num\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "link_class": {
+                  "type": "string",
+                  "enum": [
+                     "NN",
+                     "NP",
+                     "PN",
+                     "PP"
+                  ],
+                  "description": "A code indicating the entity types involved in the linkage.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "NN",
+                        "detail": "non-polymer non-polymer"
+                     },
+                     {
+                        "value": "NP",
+                        "detail": "non-polymer polymer"
+                     },
+                     {
+                        "value": "PN",
+                        "detail": "polymer non-polymer"
+                     },
+                     {
+                        "value": "PP",
+                        "detail": "polymer polymer"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "A code indicating the entity types involved in the linkage.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "link_id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_reference_entity_link.link_id uniquely identifies\n linkages between entities with a molecule.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_link.link_id uniquely identifies\n linkages between entities with a molecule.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "prd_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_link.prd_id is a reference\n _pdbx_reference_entity_list.prd_id in the PDBX_REFERENCE_ENTITY_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_link.prd_id is a reference\n _pdbx_reference_entity_list.prd_id in the PDBX_REFERENCE_ENTITY_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ref_entity_id_1": {
+                  "type": "string",
+                  "description": "The reference entity id of the first of the two entities joined by the\n linkage.\n\n This data item is a pointer to _pdbx_reference_entity_list.ref_entity_id\n in the PDBX_REFERENCE_ENTITY_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The reference entity id of the first of the two entities joined by the\n linkage.\n\n This data item is a pointer to _pdbx_reference_entity_list.ref_entity_id\n in the PDBX_REFERENCE_ENTITY_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ref_entity_id_2": {
+                  "type": "string",
+                  "description": "The reference entity id of the second of the two entities joined by the\n linkage.\n\n This data item is a pointer to _pdbx_reference_entity_list.ref_entity_id\n in the PDBX_REFERENCE_ENTITY_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The reference entity id of the second of the two entities joined by the\n linkage.\n\n This data item is a pointer to _pdbx_reference_entity_list.ref_entity_id\n in the PDBX_REFERENCE_ENTITY_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "value_order": {
+                  "type": "string",
+                  "enum": [
+                     "arom",
+                     "delo",
+                     "doub",
+                     "pi",
+                     "poly",
+                     "quad",
+                     "sing",
+                     "trip"
+                  ],
+                  "description": "The bond order target for the chemical linkage.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "arom",
+                        "detail": "aromatic bond"
+                     },
+                     {
+                        "value": "delo",
+                        "detail": "delocalised double bond"
+                     },
+                     {
+                        "value": "doub",
+                        "detail": "double bond"
+                     },
+                     {
+                        "value": "pi",
+                        "detail": "pi bond"
+                     },
+                     {
+                        "value": "poly",
+                        "detail": "polymeric bond"
+                     },
+                     {
+                        "value": "quad",
+                        "detail": "quadruple bond"
+                     },
+                     {
+                        "value": "sing",
+                        "detail": "single bond"
+                     },
+                     {
+                        "value": "trip",
+                        "detail": "triple bond"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The bond order target for the chemical linkage.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_id",
+               "link_id",
+               "prd_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_reference_entity_list": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "db_id": {
+                  "type": "string"
+               },
+               "component_id": {
+                  "type": "integer",
+                  "description": "The component number of this entity within the molecule.",
+                  "rcsb_description": [
+                     {
+                        "text": "The component number of this entity within the molecule.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "details": {
+                  "type": "string",
+                  "description": "Additional details about this entity.",
+                  "rcsb_description": [
+                     {
+                        "text": "Additional details about this entity.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "prd_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_list.prd_id is a reference\n _pdbx_reference_molecule.prd_id in the PDBX_REFERENCE_MOLECULE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_list.prd_id is a reference\n _pdbx_reference_molecule.prd_id in the PDBX_REFERENCE_MOLECULE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ref_entity_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_list.ref_entity_id is a unique identifier\n the a constituent entity within this reference molecule.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_list.ref_entity_id is a unique identifier\n the a constituent entity within this reference molecule.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "branched",
+                     "non-polymer",
+                     "polymer",
+                     "polymer-like"
+                  ],
+                  "examples": [
+                     "polymer",
+                     "non-polymer",
+                     "branched"
+                  ],
+                  "description": "Defines the polymer characteristic of the entity.",
+                  "rcsb_description": [
+                     {
+                        "text": "Defines the polymer characteristic of the entity.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_id",
+               "component_id",
+               "prd_id",
+               "ref_entity_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_reference_entity_nonpoly": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "db_id": {
+                  "type": "string"
+               },
+               "chem_comp_id": {
+                  "type": "string",
+                  "examples": [
+                     "0Z3",
+                     "CD9"
+                  ],
+                  "description": "For non-polymer entities, the identifier corresponding\n to the chemical definition for the molecule.",
+                  "rcsb_description": [
+                     {
+                        "text": "For non-polymer entities, the identifier corresponding\n to the chemical definition for the molecule.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "name": {
+                  "type": "string",
+                  "examples": [
+                     "2-CARBOXYQUINOXALINE"
+                  ],
+                  "description": "A name of the non-polymer entity.",
+                  "rcsb_description": [
+                     {
+                        "text": "A name of the non-polymer entity.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "prd_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_nonpoly.prd_id is a reference\n _pdbx_reference_entity_list.prd_id in the PDBX_REFERENCE_ENTITY_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_nonpoly.prd_id is a reference\n _pdbx_reference_entity_list.prd_id in the PDBX_REFERENCE_ENTITY_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ref_entity_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_nonpoly.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_nonpoly.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_id",
+               "prd_id",
+               "ref_entity_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_reference_entity_poly": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "db_id": {
+                  "type": "string"
+               },
+               "db_code": {
+                  "type": "string",
+                  "description": "The database code for this source information",
+                  "rcsb_description": [
+                     {
+                        "text": "The database code for this source information",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "db_name": {
+                  "type": "string",
+                  "description": "The database name for this source information",
+                  "rcsb_description": [
+                     {
+                        "text": "The database name for this source information",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "prd_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_poly.prd_id is a reference\n\t       _pdbx_reference_entity_list.prd_id in the  PDBX_REFERENCE_ENTITY_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_poly.prd_id is a reference\n\t       _pdbx_reference_entity_list.prd_id in the  PDBX_REFERENCE_ENTITY_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ref_entity_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_poly.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_poly.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "nucleic-acid-like",
+                     "oligosaccharide",
+                     "peptide-like",
+                     "polysaccharide-like"
+                  ],
+                  "examples": [
+                     "peptide-like"
+                  ],
+                  "description": "The type of the polymer.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "nucleic-acid-like",
+                        "detail": "Where the majority of residue linkages are nucleotide sugar phosphate bonds"
+                     },
+                     {
+                        "value": "oligosaccharide",
+                        "detail": "Where the majority of residue linkages are sugar to sugar bonds"
+                     },
+                     {
+                        "value": "peptide-like",
+                        "detail": "Where the majority of residue linkages are peptide bonds"
+                     },
+                     {
+                        "value": "polysaccharide-like",
+                        "detail": "Where the majority of residue linkages are sugar to sugar bonds"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The type of the polymer.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_id",
+               "prd_id",
+               "ref_entity_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_reference_entity_poly_link": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "db_id": {
+                  "type": "string"
+               },
+               "atom_id_1": {
+                  "type": "string",
+                  "description": "The atom identifier/name in the first of the two components making\n the linkage.",
+                  "rcsb_description": [
+                     {
+                        "text": "The atom identifier/name in the first of the two components making\n the linkage.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "atom_id_2": {
+                  "type": "string",
+                  "description": "The atom identifier/name in the second of the two components making\n the linkage.",
+                  "rcsb_description": [
+                     {
+                        "text": "The atom identifier/name in the second of the two components making\n the linkage.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "comp_id_1": {
+                  "type": "string",
+                  "description": "The component identifier in the first of the two components making the\n linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.mon_id\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The component identifier in the first of the two components making the\n linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.mon_id\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "comp_id_2": {
+                  "type": "string",
+                  "description": "The component identifier in the second of the two components making the\n linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.mon_id\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The component identifier in the second of the two components making the\n linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.mon_id\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "component_id": {
+                  "type": "integer",
+                  "description": "The entity component identifier entity containing the linkage.",
+                  "rcsb_description": [
+                     {
+                        "text": "The entity component identifier entity containing the linkage.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "entity_seq_num_1": {
+                  "type": "integer",
+                  "description": "For a polymer entity, the sequence number in the first of\n the two components making the linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.num\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
+                  "rcsb_description": [
+                     {
+                        "text": "For a polymer entity, the sequence number in the first of\n the two components making the linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.num\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "entity_seq_num_2": {
+                  "type": "integer",
+                  "description": "For a polymer entity, the sequence number in the second of\n the two components making the linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.num\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
+                  "rcsb_description": [
+                     {
+                        "text": "For a polymer entity, the sequence number in the second of\n the two components making the linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly_seq.num\n in the PDBX_REFERENCE_ENTITY_POLY_SEQ category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "link_id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_reference_entity_poly_link.link_id uniquely identifies\n a linkage within a polymer entity.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_poly_link.link_id uniquely identifies\n a linkage within a polymer entity.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "prd_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_poly_link.prd_id is a reference\n _pdbx_reference_entity_list.prd_id in the PDBX_REFERENCE_ENTITY_POLY category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_poly_link.prd_id is a reference\n _pdbx_reference_entity_list.prd_id in the PDBX_REFERENCE_ENTITY_POLY category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ref_entity_id": {
+                  "type": "string",
+                  "description": "The reference entity id of the polymer entity containing the linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly.ref_entity_id\n in the PDBX_REFERENCE_ENTITY_POLY category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The reference entity id of the polymer entity containing the linkage.\n\n This data item is a pointer to _pdbx_reference_entity_poly.ref_entity_id\n in the PDBX_REFERENCE_ENTITY_POLY category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "value_order": {
+                  "type": "string",
+                  "enum": [
+                     "arom",
+                     "delo",
+                     "doub",
+                     "pi",
+                     "poly",
+                     "quad",
+                     "sing",
+                     "trip"
+                  ],
+                  "description": "The bond order target for the non-standard linkage.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "arom",
+                        "detail": "aromatic bond"
+                     },
+                     {
+                        "value": "delo",
+                        "detail": "delocalised double bond"
+                     },
+                     {
+                        "value": "doub",
+                        "detail": "double bond"
+                     },
+                     {
+                        "value": "pi",
+                        "detail": "pi bond"
+                     },
+                     {
+                        "value": "poly",
+                        "detail": "polymeric bond"
+                     },
+                     {
+                        "value": "quad",
+                        "detail": "quadruple bond"
+                     },
+                     {
+                        "value": "sing",
+                        "detail": "single bond"
+                     },
+                     {
+                        "value": "trip",
+                        "detail": "triple bond"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The bond order target for the non-standard linkage.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_id",
+               "component_id",
+               "link_id",
+               "prd_id",
+               "ref_entity_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_reference_entity_poly_seq": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "db_id": {
+                  "type": "string"
+               },
+               "hetero": {
+                  "type": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ],
+                  "examples": [
+                     "N"
+                  ],
+                  "description": "A flag to indicate that sequence heterogeneity at this monomer position.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "N",
+                        "detail": "sequence is not heterogeneous at this monomer"
+                     },
+                     {
+                        "value": "Y",
+                        "detail": "sequence is heterogeneous at this monomer"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "A flag to indicate that sequence heterogeneity at this monomer position.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "mon_id": {
+                  "type": "string",
+                  "description": "This data item is the chemical component identifier of monomer.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is the chemical component identifier of monomer.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "num": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_reference_entity_poly_seq.num must uniquely and sequentially\n identify a record in the PDBX_REFERENCE_ENTITY_POLY_SEQ list.\n\n This value is conforms to author numbering conventions and does not map directly\n to the numbering conventions used for _entity_poly_seq.num.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_poly_seq.num must uniquely and sequentially\n identify a record in the PDBX_REFERENCE_ENTITY_POLY_SEQ list.\n\n This value is conforms to author numbering conventions and does not map directly\n to the numbering conventions used for _entity_poly_seq.num.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "observed": {
+                  "type": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ],
+                  "examples": [
+                     "Y"
+                  ],
+                  "description": "A flag to indicate that this monomer is observed in the instance example.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "N",
+                        "detail": "not observed"
+                     },
+                     {
+                        "value": "Y",
+                        "detail": "observed"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "A flag to indicate that this monomer is observed in the instance example.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "parent_mon_id": {
+                  "type": "string",
+                  "description": "This data item is the chemical component identifier for the parent component corresponding to this monomer.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is the chemical component identifier for the parent component corresponding to this monomer.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "prd_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_poly_seq.prd_id is a reference\n\t       _pdbx_reference_entity_poly.prd_id in the  PDBX_REFERENCE_ENTITY_POLY category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_poly_seq.prd_id is a reference\n\t       _pdbx_reference_entity_poly.prd_id in the  PDBX_REFERENCE_ENTITY_POLY category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ref_entity_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_poly_seq.ref_entity_id is a reference\n to _pdbx_reference_entity_poly.ref_entity_id in PDBX_REFERENCE_ENTITY_POLY category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_poly_seq.ref_entity_id is a reference\n to _pdbx_reference_entity_poly.ref_entity_id in PDBX_REFERENCE_ENTITY_POLY category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_id",
+               "hetero",
+               "mon_id",
+               "num",
+               "prd_id",
+               "ref_entity_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_reference_entity_sequence": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "db_id": {
+                  "type": "string"
+               },
+               "NRP_flag": {
+                  "type": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ],
+                  "examples": [
+                     "Y"
+                  ],
+                  "description": "A flag to indicate a non-ribosomal entity.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "N",
+                        "detail": "ribosomal"
+                     },
+                     {
+                        "value": "Y",
+                        "detail": "non-ribosomal"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "A flag to indicate a non-ribosomal entity.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "one_letter_codes": {
+                  "type": "string",
+                  "description": "The one-letter-code sequence for this entity.  Non-standard monomers are represented as 'X'.",
+                  "rcsb_description": [
+                     {
+                        "text": "The one-letter-code sequence for this entity.  Non-standard monomers are represented as 'X'.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "prd_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_sequence.prd_id is a reference\n\t       _pdbx_reference_entity_list.prd_id in the  PDBX_REFERENCE_ENTITY_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_sequence.prd_id is a reference\n\t       _pdbx_reference_entity_list.prd_id in the  PDBX_REFERENCE_ENTITY_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ref_entity_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_sequence.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_sequence.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "peptide-like",
+                     "saccharide"
+                  ],
+                  "examples": [
+                     "peptide-like",
+                     "saccharide"
+                  ],
+                  "description": "The monomer type for the sequence.",
+                  "rcsb_description": [
+                     {
+                        "text": "The monomer type for the sequence.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_id",
+               "prd_id",
+               "ref_entity_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_reference_entity_src_nat": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "db_id": {
+                  "type": "string"
+               },
+               "atcc": {
+                  "type": "string",
+                  "description": "The Americal Tissue Culture Collection code for organism from which the entity was isolated.",
+                  "rcsb_description": [
+                     {
+                        "text": "The Americal Tissue Culture Collection code for organism from which the entity was isolated.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "db_code": {
+                  "type": "string",
+                  "description": "The database code for this source information",
+                  "rcsb_description": [
+                     {
+                        "text": "The database code for this source information",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "db_name": {
+                  "type": "string",
+                  "description": "The database name for this source information",
+                  "rcsb_description": [
+                     {
+                        "text": "The database name for this source information",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ordinal": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_reference_entity_src_nat.ordinal distinguishes\n\t       source details for this entity.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_src_nat.ordinal distinguishes\n\t       source details for this entity.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "organism_scientific": {
+                  "type": "string",
+                  "examples": [
+                     "Mus musculus"
+                  ],
+                  "description": "The scientific name of the organism from which the entity was isolated.",
+                  "rcsb_description": [
+                     {
+                        "text": "The scientific name of the organism from which the entity was isolated.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "prd_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_src_nat.prd_id is a reference\n\t       _pdbx_reference_entity_list.prd_id in the  PDBX_REFERENCE_ENTITY_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_src_nat.prd_id is a reference\n\t       _pdbx_reference_entity_list.prd_id in the  PDBX_REFERENCE_ENTITY_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ref_entity_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_src_nat.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_src_nat.ref_entity_id is a reference\n to _pdbx_reference_entity_list.ref_entity_id in PDBX_REFERENCE_ENTITY_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "source": {
+                  "type": "string",
+                  "description": "The data source for this information.",
+                  "rcsb_description": [
+                     {
+                        "text": "The data source for this information.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "source_id": {
+                  "type": "string",
+                  "description": "A identifier within the data source for this information.",
+                  "rcsb_description": [
+                     {
+                        "text": "A identifier within the data source for this information.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "taxid": {
+                  "type": "string",
+                  "description": "The NCBI TaxId of the organism from which the entity was isolated.",
+                  "rcsb_description": [
+                     {
+                        "text": "The NCBI TaxId of the organism from which the entity was isolated.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_id",
+               "ordinal",
+               "prd_id",
+               "ref_entity_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_reference_entity_subcomponents": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "db_id": {
+                  "type": "string"
+               },
+               "chem_comp_id": {
+                  "type": "string",
+                  "examples": [
+                     "0Z3",
+                     "CD9"
+                  ],
+                  "description": "For entities represented as single molecules, the identifier\n corresponding to the chemical definition for the molecule.",
+                  "rcsb_description": [
+                     {
+                        "text": "For entities represented as single molecules, the identifier\n corresponding to the chemical definition for the molecule.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "prd_id": {
+                  "type": "string",
+                  "description": "The value of _pdbx_reference_entity_subcomponents.prd_id is a reference\n\t       _pdbx_reference_molecule.prd_id in the  PDBX_REFERENCE_MOLECULE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_reference_entity_subcomponents.prd_id is a reference\n\t       _pdbx_reference_molecule.prd_id in the  PDBX_REFERENCE_MOLECULE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "seq": {
+                  "type": "string",
+                  "examples": [
+                     "ACE DLY GLY DAL DCY DAS DTY DPR DGL DTR DGN DTR DLE DCY DAL DAL NH2"
+                  ],
+                  "description": "The subcomponent sequence for the entity.",
+                  "rcsb_description": [
+                     {
+                        "text": "The subcomponent sequence for the entity.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_id",
+               "prd_id",
+               "seq"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_reference_molecule": {
+         "type": "object",
+         "properties": {
+            "db_id": {
+               "type": "string"
+            },
+            "chem_comp_id": {
+               "type": "string",
+               "examples": [
+                  "0Z3",
+                  "CD9"
+               ],
+               "description": "For entities represented as single molecules, the identifier\n corresponding to the chemical definition for the molecule.",
+               "rcsb_description": [
+                  {
+                     "text": "For entities represented as single molecules, the identifier\n corresponding to the chemical definition for the molecule.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "class": {
+               "type": "string",
+               "enum": [
+                  "Antagonist",
+                  "Anthelmintic",
+                  "Antibiotic",
+                  "Antibiotic, Anthelmintic",
+                  "Antibiotic, Antimicrobial",
+                  "Antibiotic, Antineoplastic",
+                  "Anticancer",
+                  "Anticoagulant",
+                  "Anticoagulant, Antithrombotic",
+                  "Antifungal",
+                  "Antigen",
+                  "Antiinflammatory",
+                  "Antimicrobial",
+                  "Antimicrobial, Antiparasitic, Antibiotic",
+                  "Antimicrobial, Antiretroviral",
+                  "Antimicrobial, Antitumor",
+                  "Antineoplastic",
+                  "Antiparasitic",
+                  "Antiretroviral",
+                  "Antithrombotic",
+                  "Antitumor",
+                  "Antiviral",
+                  "CASPASE inhibitor",
+                  "Chaperone binding",
+                  "Drug delivery",
+                  "Enzyme inhibitor",
+                  "Glycan component",
+                  "Growth factor",
+                  "Immunosuppressant",
+                  "Inducer",
+                  "Inhibitor",
+                  "Lantibiotic",
+                  "Metabolism",
+                  "Metal transport",
+                  "Nutrient",
+                  "Oxidation-reduction",
+                  "Protein binding",
+                  "Receptor",
+                  "Substrate analog",
+                  "Synthetic opioid",
+                  "Thrombin inhibitor",
+                  "Thrombin inhibitor, Trypsin inhibitor",
+                  "Toxin",
+                  "Transition state mimetic",
+                  "Transport activator",
+                  "Trypsin inhibitor",
+                  "Unknown",
+                  "Water retention"
+               ],
+               "description": "Broadly defines the function of the entity.",
+               "rcsb_description": [
+                  {
+                     "text": "Broadly defines the function of the entity.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "BIRD Class",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Biologically Interesting Molecules (BIRD)",
+                     "priority_order": 20
+                  }
+               ]
+            },
+            "compound_details": {
+               "type": "string",
+               "description": "Special details about this molecule.",
+               "rcsb_description": [
+                  {
+                     "text": "Special details about this molecule.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "description": {
+               "type": "string",
+               "description": "Description of this molecule.",
+               "rcsb_description": [
+                  {
+                     "text": "Description of this molecule.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "formula": {
+               "type": "string",
+               "examples": [
+                  "C18 H19 N7 O8 S"
+               ],
+               "description": "The formula for the reference entity. Formulae are written\n according to the rules:\n\n 1. Only recognised element symbols may be used.\n\n 2. Each element symbol is followed by a 'count' number. A count\n    of '1' may be omitted.\n\n 3. A space or parenthesis must separate each element symbol and\n    its count, but in general parentheses are not used.\n\n 4. The order of elements depends on whether or not carbon is\n    present. If carbon is present, the order should be: C, then\n    H, then the other elements in alphabetical order of their\n    symbol. If carbon is not present, the elements are listed\n    purely in alphabetic order of their symbol. This is the\n    'Hill' system used by Chemical Abstracts.",
+               "rcsb_description": [
+                  {
+                     "text": "The formula for the reference entity. Formulae are written\n according to the rules:\n\n 1. Only recognised element symbols may be used.\n\n 2. Each element symbol is followed by a 'count' number. A count\n    of '1' may be omitted.\n\n 3. A space or parenthesis must separate each element symbol and\n    its count, but in general parentheses are not used.\n\n 4. The order of elements depends on whether or not carbon is\n    present. If carbon is present, the order should be: C, then\n    H, then the other elements in alphabetical order of their\n    symbol. If carbon is not present, the elements are listed\n    purely in alphabetic order of their symbol. This is the\n    'Hill' system used by Chemical Abstracts.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "formula_weight": {
+               "type": "number",
+               "description": "Formula mass in daltons of the entity.",
+               "rcsb_description": [
+                  {
+                     "text": "Formula mass in daltons of the entity.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "name": {
+               "type": "string",
+               "examples": [
+                  "thiostrepton"
+               ],
+               "description": "A name of the entity.",
+               "rcsb_description": [
+                  {
+                     "text": "A name of the entity.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "BIRD Name",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Biologically Interesting Molecules (BIRD)",
+                     "priority_order": 10
+                  }
+               ]
+            },
+            "prd_id": {
+               "type": "string",
+               "examples": [
+                  "PRD_000001",
+                  "PRD_0000010"
+               ],
+               "description": "The value of _pdbx_reference_molecule.prd_id is the unique identifier\n for the reference molecule in this family.\n\n By convention this ID uniquely identifies the reference molecule in\n in the PDB reference dictionary.\n\n The ID has the template form PRD_dddddd (e.g. PRD_000001)",
+               "rcsb_description": [
+                  {
+                     "text": "The value of _pdbx_reference_molecule.prd_id is the unique identifier\n for the reference molecule in this family.\n\n By convention this ID uniquely identifies the reference molecule in\n in the PDB reference dictionary.\n\n The ID has the template form PRD_dddddd (e.g. PRD_000001)",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "BIRD ID(s)",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Biologically Interesting Molecules (BIRD)",
+                     "priority_order": 5
+                  }
+               ]
+            },
+            "release_status": {
+               "type": "string",
+               "enum": [
+                  "HOLD",
+                  "OBS",
+                  "REL",
+                  "WAIT"
+               ],
+               "description": "Defines the current PDB release status for this molecule definition.",
+               "rcsb_description": [
+                  {
+                     "text": "Defines the current PDB release status for this molecule definition.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "replaced_by": {
+               "type": "string",
+               "description": "Assigns the identifier of the reference molecule that has replaced this molecule.",
+               "rcsb_description": [
+                  {
+                     "text": "Assigns the identifier of the reference molecule that has replaced this molecule.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "replaces": {
+               "type": "string",
+               "description": "Assigns the identifier for the reference molecule which have been replaced\n by this reference molecule.\n Multiple molecule identifier codes should be separated by commas.",
+               "rcsb_description": [
+                  {
+                     "text": "Assigns the identifier for the reference molecule which have been replaced\n by this reference molecule.\n Multiple molecule identifier codes should be separated by commas.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "represent_as": {
+               "type": "string",
+               "enum": [
+                  "branched",
+                  "polymer",
+                  "single molecule"
+               ],
+               "description": "Defines how this entity is represented in PDB data files.",
+               "rcsb_description": [
+                  {
+                     "text": "Defines how this entity is represented in PDB data files.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "representative_PDB_id_code": {
+               "type": "string",
+               "description": "The PDB accession code for the entry containing a representative example of this molecule.",
+               "rcsb_description": [
+                  {
+                     "text": "The PDB accession code for the entry containing a representative example of this molecule.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "type": {
+               "type": "string",
+               "enum": [
+                  "Amino acid",
+                  "Aminoglycoside",
+                  "Ansamycin",
+                  "Anthracycline",
+                  "Anthraquinone",
+                  "Chalkophore",
+                  "Chalkophore, Polypeptide",
+                  "Chromophore",
+                  "Cyclic depsipeptide",
+                  "Cyclic lipopeptide",
+                  "Cyclic peptide",
+                  "Glycopeptide",
+                  "Heterocyclic",
+                  "Imino sugar",
+                  "Keto acid",
+                  "Lipoglycopeptide",
+                  "Lipopeptide",
+                  "Macrolide",
+                  "Non-polymer",
+                  "Nucleoside",
+                  "Oligopeptide",
+                  "Oligosaccharide",
+                  "Peptaibol",
+                  "Peptide-like",
+                  "Polycyclic",
+                  "Polypeptide",
+                  "Polysaccharide",
+                  "Quinolone",
+                  "Siderophore",
+                  "Thiolactone",
+                  "Thiopeptide",
+                  "Unknown"
+               ],
+               "examples": [
+                  "Peptide-like",
+                  "Macrolide"
+               ],
+               "description": "Defines the structural classification of the entity.",
+               "rcsb_description": [
+                  {
+                     "text": "Defines the structural classification of the entity.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "BIRD Type",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Biologically Interesting Molecules (BIRD)",
+                     "priority_order": 15
+                  }
+               ]
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "db_id",
+            "prd_id"
+         ]
+      }
+   },
+   "additionalProperties": false,
+   "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird.json",
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "schema: bird collection: bird version: 5.2.2",
+   "description": "RCSB Exchange Database JSON schema derived from the bird content type schema. This schema supports collection bird version 5.2.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-bird.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 5.2.2"
+}

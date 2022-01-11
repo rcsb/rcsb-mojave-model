@@ -1,0 +1,392 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "pdbx_struct_assembly": {
+         "bsonType": "object",
+         "properties": {
+            "details": {
+               "bsonType": "string"
+            },
+            "id": {
+               "bsonType": "string"
+            },
+            "method_details": {
+               "bsonType": "string"
+            },
+            "oligomeric_count": {
+               "bsonType": "int"
+            },
+            "oligomeric_details": {
+               "bsonType": "string"
+            },
+            "rcsb_candidate_assembly": {
+               "bsonType": "string",
+               "enum": [
+                  "N",
+                  "Y"
+               ]
+            },
+            "rcsb_details": {
+               "bsonType": "string",
+               "enum": [
+                  "author_and_software_defined_assembly",
+                  "author_defined_assembly",
+                  "software_defined_assembly"
+               ]
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "id"
+         ]
+      },
+      "pdbx_struct_assembly_auth_evidence": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "assembly_id": {
+                  "bsonType": "string"
+               },
+               "details": {
+                  "bsonType": "string"
+               },
+               "experimental_support": {
+                  "bsonType": "string",
+                  "enum": [
+                     "NMR Distance Restraints",
+                     "NMR relaxation study",
+                     "SAXS",
+                     "assay for oligomerization",
+                     "cross-linking",
+                     "electron microscopy",
+                     "equilibrium centrifugation",
+                     "fluorescence resonance energy transfer",
+                     "gel filtration",
+                     "homology",
+                     "immunoprecipitation",
+                     "isothermal titration calorimetry",
+                     "light scattering",
+                     "mass spectrometry",
+                     "microscopy",
+                     "native gel electrophoresis",
+                     "none",
+                     "scanning transmission electron microscopy",
+                     "surface plasmon resonance"
+                  ]
+               },
+               "id": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "assembly_id",
+               "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_struct_assembly_gen": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "assembly_id": {
+                  "bsonType": "string"
+               },
+               "asym_id_list": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "string"
+                  },
+                  "uniqueItems": false
+               },
+               "auth_asym_id_list": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "string"
+                  },
+                  "uniqueItems": false
+               },
+               "entity_inst_id": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "string"
+                  },
+                  "uniqueItems": false
+               },
+               "oper_expression": {
+                  "bsonType": "string"
+               },
+               "ordinal": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_struct_assembly_prop": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "assembly_id": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_struct_oper_list": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "id": {
+                  "bsonType": "string"
+               },
+               "matrix_1_1": {
+                  "bsonType": "double"
+               },
+               "matrix_1_2": {
+                  "bsonType": "double"
+               },
+               "matrix_1_3": {
+                  "bsonType": "double"
+               },
+               "matrix_2_1": {
+                  "bsonType": "double"
+               },
+               "matrix_2_2": {
+                  "bsonType": "double"
+               },
+               "matrix_2_3": {
+                  "bsonType": "double"
+               },
+               "matrix_3_1": {
+                  "bsonType": "double"
+               },
+               "matrix_3_2": {
+                  "bsonType": "double"
+               },
+               "matrix_3_3": {
+                  "bsonType": "double"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "symmetry_operation": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "2D crystal symmetry operation",
+                     "3D crystal symmetry operation",
+                     "build 2D crystal asymmetric unit",
+                     "build 3D crystal asymmetric unit",
+                     "build helical asymmetric unit",
+                     "build point asymmetric unit",
+                     "crystal symmetry operation",
+                     "helical symmetry operation",
+                     "identity operation",
+                     "point symmetry operation",
+                     "transform to 2D crystal frame",
+                     "transform to 3D crystal frame",
+                     "transform to crystal frame",
+                     "transform to helical frame",
+                     "transform to point frame"
+                  ]
+               },
+               "vector_1": {
+                  "bsonType": "double"
+               },
+               "vector_2": {
+                  "bsonType": "double"
+               },
+               "vector_3": {
+                  "bsonType": "double"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_assembly_container_identifiers": {
+         "bsonType": "object",
+         "properties": {
+            "assembly_id": {
+               "bsonType": "string"
+            },
+            "entry_id": {
+               "bsonType": "string"
+            },
+            "rcsb_id": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "assembly_id",
+            "entry_id"
+         ]
+      },
+      "rcsb_assembly_info": {
+         "bsonType": "object",
+         "properties": {
+            "assembly_id": {
+               "bsonType": "string"
+            },
+            "atom_count": {
+               "bsonType": "int"
+            },
+            "branched_atom_count": {
+               "bsonType": "int"
+            },
+            "branched_entity_count": {
+               "bsonType": "int"
+            },
+            "branched_entity_instance_count": {
+               "bsonType": "int"
+            },
+            "entry_id": {
+               "bsonType": "string"
+            },
+            "hydrogen_atom_count": {
+               "bsonType": "int"
+            },
+            "modeled_polymer_monomer_count": {
+               "bsonType": "int"
+            },
+            "na_polymer_entity_types": {
+               "bsonType": "string",
+               "enum": [
+                  "DNA (only)",
+                  "DNA/RNA (only)",
+                  "NA-hybrid (only)",
+                  "Other",
+                  "RNA (only)"
+               ]
+            },
+            "nonpolymer_atom_count": {
+               "bsonType": "int"
+            },
+            "nonpolymer_entity_count": {
+               "bsonType": "int"
+            },
+            "nonpolymer_entity_instance_count": {
+               "bsonType": "int"
+            },
+            "polymer_atom_count": {
+               "bsonType": "int"
+            },
+            "polymer_composition": {
+               "bsonType": "string",
+               "enum": [
+                  "DNA",
+                  "DNA/RNA",
+                  "NA-hybrid",
+                  "NA/oligosaccharide",
+                  "RNA",
+                  "heteromeric protein",
+                  "homomeric protein",
+                  "oligosaccharide",
+                  "other",
+                  "other type composition",
+                  "other type pair",
+                  "protein/NA",
+                  "protein/NA/oligosaccharide",
+                  "protein/oligosaccharide"
+               ]
+            },
+            "polymer_entity_count": {
+               "bsonType": "int"
+            },
+            "polymer_entity_count_DNA": {
+               "bsonType": "int"
+            },
+            "polymer_entity_count_RNA": {
+               "bsonType": "int"
+            },
+            "polymer_entity_count_nucleic_acid": {
+               "bsonType": "int"
+            },
+            "polymer_entity_count_nucleic_acid_hybrid": {
+               "bsonType": "int"
+            },
+            "polymer_entity_count_protein": {
+               "bsonType": "int"
+            },
+            "polymer_entity_instance_count": {
+               "bsonType": "int"
+            },
+            "polymer_entity_instance_count_DNA": {
+               "bsonType": "int"
+            },
+            "polymer_entity_instance_count_RNA": {
+               "bsonType": "int"
+            },
+            "polymer_entity_instance_count_nucleic_acid": {
+               "bsonType": "int"
+            },
+            "polymer_entity_instance_count_nucleic_acid_hybrid": {
+               "bsonType": "int"
+            },
+            "polymer_entity_instance_count_protein": {
+               "bsonType": "int"
+            },
+            "polymer_monomer_count": {
+               "bsonType": "int"
+            },
+            "selected_polymer_entity_types": {
+               "bsonType": "string",
+               "enum": [
+                  "Nucleic acid (only)",
+                  "Other",
+                  "Protein (only)",
+                  "Protein/NA"
+               ]
+            },
+            "solvent_atom_count": {
+               "bsonType": "int"
+            },
+            "solvent_entity_count": {
+               "bsonType": "int"
+            },
+            "solvent_entity_instance_count": {
+               "bsonType": "int"
+            },
+            "unmodeled_polymer_monomer_count": {
+               "bsonType": "int"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "entry_id"
+         ]
+      },
+      "rcsb_id": {
+         "bsonType": "string"
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ]
+}

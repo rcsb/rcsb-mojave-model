@@ -1,0 +1,507 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "rcsb_nonpolymer_entity_instance_container_identifiers": {
+         "bsonType": "object",
+         "properties": {
+            "asym_id": {
+               "bsonType": "string"
+            },
+            "auth_asym_id": {
+               "bsonType": "string"
+            },
+            "auth_seq_id": {
+               "bsonType": "string"
+            },
+            "comp_id": {
+               "bsonType": "string"
+            },
+            "entity_id": {
+               "bsonType": "string"
+            },
+            "entry_id": {
+               "bsonType": "string"
+            },
+            "rcsb_id": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "asym_id",
+            "entry_id"
+         ]
+      },
+      "rcsb_nonpolymer_instance_annotation": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "annotation_id": {
+                  "bsonType": "string"
+               },
+               "assignment_version": {
+                  "bsonType": "string"
+               },
+               "comp_id": {
+                  "bsonType": "string"
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "ordinal": {
+                  "bsonType": "int"
+               },
+               "provenance_source": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "HAS_COVALENT_LINKAGE",
+                     "HAS_METAL_COORDINATION_LINKAGE"
+                  ]
+               },
+               "annotation_lineage": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "depth": {
+                           "bsonType": "int"
+                        },
+                        "id": {
+                           "bsonType": "string"
+                        },
+                        "name": {
+                           "bsonType": "string"
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_nonpolymer_instance_feature": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "assignment_version": {
+                  "bsonType": "string"
+               },
+               "comp_id": {
+                  "bsonType": "string"
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "feature_id": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "ordinal": {
+                  "bsonType": "int"
+               },
+               "provenance_source": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "HAS_COVALENT_LINKAGE",
+                     "HAS_METAL_COORDINATION_LINKAGE",
+                     "MOGUL_ANGLE_OUTLIER",
+                     "MOGUL_BOND_OUTLIER",
+                     "RSCC_OUTLIER",
+                     "RSRZ_OUTLIER",
+                     "STEREO_OUTLIER"
+                  ]
+               },
+               "feature_value": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "comp_id": {
+                           "bsonType": "string"
+                        },
+                        "details": {
+                           "bsonType": "string"
+                        },
+                        "reference": {
+                           "bsonType": "double"
+                        },
+                        "reported": {
+                           "bsonType": "double"
+                        },
+                        "uncertainty_estimate": {
+                           "bsonType": "double"
+                        },
+                        "uncertainty_estimate_type": {
+                           "bsonType": "string",
+                           "enum": [
+                              "Z-Score"
+                           ]
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               },
+               "additional_properties": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "name": {
+                           "bsonType": "string"
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "anyOf": [
+                                 {
+                                    "bsonType": "string"
+                                 },
+                                 {
+                                    "bsonType": "int"
+                                 },
+                                 {
+                                    "bsonType": "double"
+                                 }
+                              ]
+                           },
+                           "uniqueItems": false
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_nonpolymer_instance_feature_summary": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "comp_id": {
+                  "bsonType": "string"
+               },
+               "count": {
+                  "bsonType": "int"
+               },
+               "maximum_length": {
+                  "bsonType": "int"
+               },
+               "maximum_value": {
+                  "bsonType": "double"
+               },
+               "minimum_length": {
+                  "bsonType": "int"
+               },
+               "minimum_value": {
+                  "bsonType": "double"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "HAS_COVALENT_LINKAGE",
+                     "HAS_METAL_COORDINATION_LINKAGE",
+                     "MOGUL_ANGLE_OUTLIER",
+                     "MOGUL_BOND_OUTLIER",
+                     "RSCC_OUTLIER",
+                     "RSRZ_OUTLIER",
+                     "STEREO_OUTLIER"
+                  ]
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_nonpolymer_instance_validation_score": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "RSCC": {
+                  "bsonType": "double"
+               },
+               "RSR": {
+                  "bsonType": "double"
+               },
+               "alt_id": {
+                  "bsonType": "string"
+               },
+               "average_occupancy": {
+                  "bsonType": "double"
+               },
+               "completeness": {
+                  "bsonType": "double"
+               },
+               "intermolecular_clashes": {
+                  "bsonType": "int"
+               },
+               "is_best_instance": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "is_subject_of_investigation": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "is_subject_of_investigation_provenance": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Author",
+                     "RCSB"
+                  ]
+               },
+               "mogul_angle_outliers": {
+                  "bsonType": "int"
+               },
+               "mogul_angles_RMSZ": {
+                  "bsonType": "double"
+               },
+               "mogul_bond_outliers": {
+                  "bsonType": "int"
+               },
+               "mogul_bonds_RMSZ": {
+                  "bsonType": "double"
+               },
+               "ranking_model_fit": {
+                  "bsonType": "double"
+               },
+               "ranking_model_geometry": {
+                  "bsonType": "double"
+               },
+               "score_model_fit": {
+                  "bsonType": "double"
+               },
+               "score_model_geometry": {
+                  "bsonType": "double"
+               },
+               "stereo_outliers": {
+                  "bsonType": "int"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "RCSB_LIGAND_QUALITY_SCORE_2021"
+                  ]
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_nonpolymer_struct_conn": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "connect_type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "covalent bond",
+                     "disulfide bridge",
+                     "hydrogen bond",
+                     "ionic interaction",
+                     "metal coordination",
+                     "mismatched base pairs"
+                  ]
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "dist_value": {
+                  "bsonType": "double"
+               },
+               "id": {
+                  "bsonType": "string"
+               },
+               "ordinal_id": {
+                  "bsonType": "int"
+               },
+               "role": {
+                  "bsonType": "string",
+                  "enum": [
+                     "C-Mannosylation",
+                     "N-Glycosylation",
+                     "O-Glycosylation",
+                     "S-Glycosylation"
+                  ]
+               },
+               "value_order": {
+                  "bsonType": "string",
+                  "enum": [
+                     "doub",
+                     "quad",
+                     "sing",
+                     "trip"
+                  ]
+               },
+               "connect_target": {
+                  "bsonType": "object",
+                  "properties": {
+                     "auth_asym_id": {
+                        "bsonType": "string"
+                     },
+                     "auth_seq_id": {
+                        "bsonType": "string"
+                     },
+                     "label_alt_id": {
+                        "bsonType": "string"
+                     },
+                     "label_asym_id": {
+                        "bsonType": "string"
+                     },
+                     "label_atom_id": {
+                        "bsonType": "string"
+                     },
+                     "label_comp_id": {
+                        "bsonType": "string"
+                     },
+                     "label_seq_id": {
+                        "bsonType": "int"
+                     },
+                     "symmetry": {
+                        "bsonType": "string"
+                     }
+                  },
+                  "additionalProperties": false,
+                  "required": [
+                     "label_asym_id",
+                     "label_comp_id"
+                  ]
+               },
+               "connect_partner": {
+                  "bsonType": "object",
+                  "properties": {
+                     "label_alt_id": {
+                        "bsonType": "string"
+                     },
+                     "label_asym_id": {
+                        "bsonType": "string"
+                     },
+                     "label_atom_id": {
+                        "bsonType": "string"
+                     },
+                     "label_comp_id": {
+                        "bsonType": "string"
+                     },
+                     "label_seq_id": {
+                        "bsonType": "int"
+                     },
+                     "symmetry": {
+                        "bsonType": "string"
+                     }
+                  },
+                  "additionalProperties": false,
+                  "required": [
+                     "label_asym_id",
+                     "label_comp_id"
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_target_neighbors": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "alt_id": {
+                  "bsonType": "string"
+               },
+               "atom_id": {
+                  "bsonType": "string"
+               },
+               "comp_id": {
+                  "bsonType": "string"
+               },
+               "distance": {
+                  "bsonType": "double"
+               },
+               "target_asym_id": {
+                  "bsonType": "string"
+               },
+               "target_atom_id": {
+                  "bsonType": "string"
+               },
+               "target_auth_seq_id": {
+                  "bsonType": "int"
+               },
+               "target_comp_id": {
+                  "bsonType": "string"
+               },
+               "target_entity_id": {
+                  "bsonType": "string"
+               },
+               "target_is_bound": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "target_model_id": {
+                  "bsonType": "int"
+               },
+               "target_seq_id": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_id": {
+         "bsonType": "string"
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ]
+}
