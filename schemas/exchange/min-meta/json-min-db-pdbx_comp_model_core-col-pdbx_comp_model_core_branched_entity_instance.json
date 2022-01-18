@@ -229,6 +229,10 @@
             "asym_id": {
                "type": "string",
                "description": "Instance identifier for this container.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Instance identifier for this container.",
@@ -239,6 +243,10 @@
             "auth_asym_id": {
                "type": "string",
                "description": "Author instance identifier for this container.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Author instance identifier for this container.",
@@ -249,6 +257,10 @@
             "entity_id": {
                "type": "string",
                "description": "Entity identifier for the container.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Entity identifier for the container.",
@@ -259,6 +271,10 @@
             "entry_id": {
                "type": "string",
                "description": "Entry identifier for the container.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Entry identifier for the container.",
@@ -272,6 +288,10 @@
                   "1KIP.A"
                ],
                "description": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
@@ -294,6 +314,10 @@
                "annotation_id": {
                   "type": "string",
                   "description": "An identifier for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "An identifier for the annotation.",
@@ -338,6 +362,11 @@
                "description": {
                   "type": "string",
                   "description": "A description for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "A description for the annotation.",
@@ -352,6 +381,11 @@
                "name": {
                   "type": "string",
                   "description": "A name for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "A name for the annotation.",
@@ -401,6 +435,10 @@
                      "SCOP"
                   ],
                   "description": "A type or category of the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "CATH",
@@ -430,6 +468,9 @@
                         "depth": {
                            "type": "integer",
                            "description": "Members of the annotation lineage as parent lineage depth (1-N)",
+                           "rcsb_search_context": [
+                              "default-match"
+                           ],
                            "rcsb_description": [
                               {
                                  "text": "Members of the annotation lineage as parent lineage depth (1-N)",
@@ -444,6 +485,10 @@
                         "id": {
                            "type": "string",
                            "description": "Members of the annotation lineage as parent class identifiers.",
+                           "rcsb_search_context": [
+                              "exact-match"
+                           ],
+                           "rcsb_full_text_priority": 10,
                            "rcsb_description": [
                               {
                                  "text": "Members of the annotation lineage as parent class identifiers.",
@@ -458,6 +503,11 @@
                         "name": {
                            "type": "string",
                            "description": "Members of the annotation lineage as parent class names.",
+                           "rcsb_search_context": [
+                              "exact-match",
+                              "full-text"
+                           ],
+                           "rcsb_full_text_priority": 10,
                            "rcsb_description": [
                               {
                                  "text": "Members of the annotation lineage as parent class names.",
@@ -941,6 +991,9 @@
                "count": {
                   "type": "integer",
                   "description": "The feature count.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The feature count.",
@@ -955,6 +1008,9 @@
                      0.95
                   ],
                   "description": "The fractional feature coverage relative to the full branched entity.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The fractional feature coverage relative to the full branched entity.",
@@ -965,6 +1021,9 @@
                "maximum_length": {
                   "type": "integer",
                   "description": "The maximum feature length.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The maximum feature length.",
@@ -989,6 +1048,9 @@
                "minimum_length": {
                   "type": "integer",
                   "description": "The minimum feature length.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The minimum feature length.",
@@ -1031,6 +1093,10 @@
                      "UNOBSERVED_RESIDUE_XYZ"
                   ],
                   "description": "Type or category of the feature.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "BINDING_SITE",
@@ -1450,6 +1516,9 @@
                "distance": {
                   "type": "number",
                   "description": "Distance value for this ligand interaction.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -1479,6 +1548,10 @@
                      "B"
                   ],
                   "description": "The entity instance identifier for the ligand interaction.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The entity instance identifier for the ligand interaction.",
@@ -1513,6 +1586,10 @@
                      "SER"
                   ],
                   "description": "The chemical component identifier for the ligand interaction.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The chemical component identifier for the ligand interaction.",
@@ -1531,6 +1608,10 @@
                      "2"
                   ],
                   "description": "The entity identifier for the ligand of interaction.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The entity identifier for the ligand of interaction.",
@@ -1553,6 +1634,10 @@
                      "N"
                   ],
                   "description": "A flag to indicate the nature of the ligand interaction is covalent or metal-coordination.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "N",
@@ -1704,6 +1789,10 @@
             "1KIP.A"
          ],
          "description": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+         "rcsb_search_context": [
+            "exact-match"
+         ],
+         "rcsb_full_text_priority": 10,
          "rcsb_description": [
             {
                "text": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",

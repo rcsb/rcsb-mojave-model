@@ -370,6 +370,9 @@
             "rcsb_branched_component_count": {
                "type": "integer",
                "description": "Number of constituent chemical components in the branched entity.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "Number of constituent chemical components in the branched entity.",
@@ -393,6 +396,10 @@
                   "oligosaccharide"
                ],
                "description": "The type of this branched oligosaccharide.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "The type of this branched oligosaccharide.",
@@ -421,6 +428,11 @@
                "descriptor": {
                   "type": "string",
                   "description": "This data item contains the descriptor value for this\n entity.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "This data item contains the descriptor value for this\n entity.",
@@ -472,6 +484,10 @@
                      "WURCS"
                   ],
                   "description": "This data item contains the descriptor type.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "Glycam Condensed Core Sequence",
@@ -505,7 +521,52 @@
             "additionalProperties": false
          },
          "minItems": 1,
-         "uniqueItems": true
+         "uniqueItems": true,
+         "rcsb_nested_indexing": true,
+         "rcsb_nested_indexing_context": [
+            {
+               "category_name": "descriptor_type",
+               "category_path": "pdbx_entity_branch_descriptor.type",
+               "context_attributes": [
+                  {
+                     "context_value": "LINUCS",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "[][a-D-Manp]{[(2+1)][a-D-Manp]{}}",
+                              "[]{[(4+1)][b-D-GlcpNAc]{[(4+1)][b-D-GlcpNAc]{}}}"
+                           ],
+                           "path": "pdbx_entity_branch_descriptor.descriptor"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "Glycam Condensed Sequence",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "DManpa1-2DManpa1-ROH",
+                              "DManpb1-4DGlcpNAcb1-4DGlcpNAcb1-"
+                           ],
+                           "path": "pdbx_entity_branch_descriptor.descriptor"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "WURCS",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "WURCS=2.0/1,2,1/[a1122h-1a_1-5]/1-1/a2-b1",
+                              "WURCS=2.0/1,2,1/[a2122h-1b_1-5_2*NCC/3=O]/1-1/a4-b1"
+                           ],
+                           "path": "pdbx_entity_branch_descriptor.descriptor"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
       },
       "rcsb_branched_entity": {
          "type": "object",
@@ -513,6 +574,10 @@
             "details": {
                "type": "string",
                "description": "A description of special aspects of the branched entity.",
+               "rcsb_search_context": [
+                  "full-text"
+               ],
+               "rcsb_full_text_priority": 1,
                "rcsb_description": [
                   {
                      "text": "A description of special aspects of the branched entity.",
@@ -527,6 +592,9 @@
                   1.2
                ],
                "description": "Formula mass (KDa) of the branched entity.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_units": "KDa",
                "rcsb_description": [
                   {
@@ -552,6 +620,11 @@
                   "beta-D-xylopyranose-(1-4)-beta-D-xylopyranose"
                ],
                "description": "A description of the branched entity.",
+               "rcsb_search_context": [
+                  "exact-match",
+                  "full-text"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "A description of the branched entity.",
@@ -572,6 +645,9 @@
             "pdbx_number_of_molecules": {
                "type": "integer",
                "description": "The number of molecules of the branched entity in the entry.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
                "rcsb_description": [
                   {
                      "text": "The number of molecules of the branched entity in the entry.",
@@ -590,6 +666,10 @@
                "annotation_id": {
                   "type": "string",
                   "description": "An identifier for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "An identifier for the annotation.",
@@ -621,6 +701,11 @@
                "description": {
                   "type": "string",
                   "description": "A description for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "A description for the annotation.",
@@ -635,6 +720,11 @@
                "name": {
                   "type": "string",
                   "description": "A name for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "A name for the annotation.",
@@ -666,6 +756,10 @@
                "type": {
                   "type": "string",
                   "description": "A type or category of the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "A type or category of the annotation.",
@@ -685,6 +779,9 @@
                         "depth": {
                            "type": "integer",
                            "description": "Members of the annotation lineage as parent lineage depth (1-N)",
+                           "rcsb_search_context": [
+                              "default-match"
+                           ],
                            "rcsb_description": [
                               {
                                  "text": "Members of the annotation lineage as parent lineage depth (1-N)",
@@ -699,6 +796,10 @@
                         "id": {
                            "type": "string",
                            "description": "Members of the annotation lineage as parent class identifiers.",
+                           "rcsb_search_context": [
+                              "exact-match"
+                           ],
+                           "rcsb_full_text_priority": 10,
                            "rcsb_description": [
                               {
                                  "text": "Members of the annotation lineage as parent class identifiers.",
@@ -713,6 +814,11 @@
                         "name": {
                            "type": "string",
                            "description": "Members of the annotation lineage as parent class names.",
+                           "rcsb_search_context": [
+                              "exact-match",
+                              "full-text"
+                           ],
+                           "rcsb_full_text_priority": 10,
                            "rcsb_description": [
                               {
                                  "text": "Members of the annotation lineage as parent class names.",
@@ -734,7 +840,14 @@
             "additionalProperties": false
          },
          "minItems": 1,
-         "uniqueItems": true
+         "uniqueItems": true,
+         "rcsb_nested_indexing": true,
+         "rcsb_nested_indexing_context": [
+            {
+               "category_name": "annotation_type",
+               "category_path": "rcsb_branched_entity_annotation.type"
+            }
+         ]
       },
       "rcsb_branched_entity_container_identifiers": {
          "type": "object",
@@ -785,6 +898,10 @@
                      "GAL"
                   ],
                   "description": "Unique list of monomer chemical component identifiers in the entity in this container.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "Unique list of monomer chemical component identifiers in the entity in this container.",
@@ -810,6 +927,10 @@
                   "PRD_000010"
                ],
                "description": "The chemical reference definition identifier for the entity in this container.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "The chemical reference definition identifier for the entity in this container.",
@@ -824,6 +945,10 @@
                   "2"
                ],
                "description": "Entity identifier for the container.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Entity identifier for the container.",
@@ -838,6 +963,10 @@
                   "2HYV"
                ],
                "description": "Entry identifier for the container.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Entry identifier for the container.",
@@ -851,6 +980,10 @@
                   "PRD_000010"
                ],
                "description": "The BIRD identifier for the entity in this container.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "The BIRD identifier for the entity in this container.",
@@ -864,6 +997,10 @@
                   "2HYV_2"
                ],
                "description": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
@@ -900,6 +1037,10 @@
                            "G42666HT"
                         ],
                         "description": "Reference resource accession code",
+                        "rcsb_search_context": [
+                           "exact-match"
+                        ],
+                        "rcsb_full_text_priority": 10,
                         "rcsb_description": [
                            {
                               "text": "Reference resource accession code",
@@ -919,6 +1060,10 @@
                            "GlyCosmos"
                         ],
                         "description": "Reference resource name",
+                        "rcsb_search_context": [
+                           "exact-match"
+                        ],
+                        "rcsb_full_text_priority": 10,
                         "rcsb_enum_annotated": [
                            {
                               "value": "GlyCosmos",
@@ -1205,6 +1350,9 @@
                "count": {
                   "type": "integer",
                   "description": "The feature count.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The feature count.",
@@ -1219,6 +1367,9 @@
                      0.00132
                   ],
                   "description": "The fractional feature coverage relative to the full branched entity.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The fractional feature coverage relative to the full branched entity.",
@@ -1229,6 +1380,9 @@
                "maximum_length": {
                   "type": "integer",
                   "description": "The maximum feature length.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The maximum feature length.",
@@ -1253,6 +1407,9 @@
                "minimum_length": {
                   "type": "integer",
                   "description": "The minimum feature length.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The minimum feature length.",
@@ -1283,6 +1440,10 @@
                      "mutation"
                   ],
                   "description": "Type or category of the feature.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "mutation",
@@ -1301,7 +1462,14 @@
             "additionalProperties": false
          },
          "minItems": 1,
-         "uniqueItems": true
+         "uniqueItems": true,
+         "rcsb_nested_indexing": true,
+         "rcsb_nested_indexing_context": [
+            {
+               "category_name": "feature_summary",
+               "category_path": "rcsb_branched_entity_feature_summary.type"
+            }
+         ]
       },
       "rcsb_branched_entity_keywords": {
          "type": "object",
@@ -1309,6 +1477,10 @@
             "text": {
                "type": "string",
                "description": "Keywords describing this branched entity.",
+               "rcsb_search_context": [
+                  "full-text"
+               ],
+               "rcsb_full_text_priority": 1,
                "rcsb_description": [
                   {
                      "text": "Keywords describing this branched entity.",
@@ -1329,6 +1501,10 @@
                   "hemoglobin alpha chain"
                ],
                "description": "A common name for the branched entity.",
+               "rcsb_search_context": [
+                  "full-text"
+               ],
+               "rcsb_full_text_priority": 1,
                "rcsb_description": [
                   {
                      "text": "A common name for the branched entity.",
@@ -1347,6 +1523,10 @@
                "name": {
                   "type": "string",
                   "description": "The systematic name for the branched entity.",
+                  "rcsb_search_context": [
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 1,
                   "rcsb_description": [
                      {
                         "text": "The systematic name for the branched entity.",
@@ -1379,6 +1559,10 @@
             "2HYV_2"
          ],
          "description": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
+         "rcsb_search_context": [
+            "exact-match"
+         ],
+         "rcsb_full_text_priority": 10,
          "rcsb_description": [
             {
                "text": "A unique identifier for each object in this entity container formed by\n an underscore separated concatenation of entry and entity identifiers.",
