@@ -28,7 +28,17 @@
             "pdbx_seq_one_letter_code_can": {
                "bsonType": "string"
             },
+            "pdbx_sequence_evidence_code": {
+               "bsonType": "string",
+               "enum": [
+                  "depositor provided",
+                  "derived from coordinates"
+               ]
+            },
             "pdbx_strand_id": {
+               "bsonType": "string"
+            },
+            "pdbx_target_identifier": {
                "bsonType": "string"
             },
             "rcsb_artifact_monomer_count": {
@@ -87,6 +97,436 @@
             }
          },
          "additionalProperties": false
+      },
+      "entity_src_gen": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "expression_system_id": {
+                  "bsonType": "string"
+               },
+               "gene_src_common_name": {
+                  "bsonType": "string"
+               },
+               "gene_src_details": {
+                  "bsonType": "string"
+               },
+               "gene_src_genus": {
+                  "bsonType": "string"
+               },
+               "gene_src_species": {
+                  "bsonType": "string"
+               },
+               "gene_src_strain": {
+                  "bsonType": "string"
+               },
+               "gene_src_tissue": {
+                  "bsonType": "string"
+               },
+               "gene_src_tissue_fraction": {
+                  "bsonType": "string"
+               },
+               "host_org_common_name": {
+                  "bsonType": "string"
+               },
+               "host_org_details": {
+                  "bsonType": "string"
+               },
+               "host_org_genus": {
+                  "bsonType": "string"
+               },
+               "host_org_species": {
+                  "bsonType": "string"
+               },
+               "pdbx_alt_source_flag": {
+                  "bsonType": "string",
+                  "enum": [
+                     "model",
+                     "sample"
+                  ]
+               },
+               "pdbx_beg_seq_num": {
+                  "bsonType": "int"
+               },
+               "pdbx_description": {
+                  "bsonType": "string"
+               },
+               "pdbx_end_seq_num": {
+                  "bsonType": "int"
+               },
+               "pdbx_gene_src_atcc": {
+                  "bsonType": "string"
+               },
+               "pdbx_gene_src_cell": {
+                  "bsonType": "string"
+               },
+               "pdbx_gene_src_cell_line": {
+                  "bsonType": "string"
+               },
+               "pdbx_gene_src_cellular_location": {
+                  "bsonType": "string"
+               },
+               "pdbx_gene_src_fragment": {
+                  "bsonType": "string"
+               },
+               "pdbx_gene_src_gene": {
+                  "bsonType": "string"
+               },
+               "pdbx_gene_src_ncbi_taxonomy_id": {
+                  "bsonType": "string"
+               },
+               "pdbx_gene_src_organ": {
+                  "bsonType": "string"
+               },
+               "pdbx_gene_src_organelle": {
+                  "bsonType": "string"
+               },
+               "pdbx_gene_src_scientific_name": {
+                  "bsonType": "string"
+               },
+               "pdbx_gene_src_variant": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_atcc": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_cell": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_cell_line": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_cellular_location": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_culture_collection": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_gene": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_ncbi_taxonomy_id": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_organ": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_organelle": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_scientific_name": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_strain": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_tissue": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_tissue_fraction": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_variant": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_vector": {
+                  "bsonType": "string"
+               },
+               "pdbx_host_org_vector_type": {
+                  "bsonType": "string"
+               },
+               "pdbx_seq_type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Biological sequence",
+                     "C-terminal tag",
+                     "Linker",
+                     "N-terminal tag"
+                  ]
+               },
+               "pdbx_src_id": {
+                  "bsonType": "int"
+               },
+               "plasmid_details": {
+                  "bsonType": "string"
+               },
+               "plasmid_name": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "pdbx_src_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "entity_src_nat": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "common_name": {
+                  "bsonType": "string"
+               },
+               "details": {
+                  "bsonType": "string"
+               },
+               "genus": {
+                  "bsonType": "string"
+               },
+               "pdbx_alt_source_flag": {
+                  "bsonType": "string",
+                  "enum": [
+                     "model",
+                     "sample"
+                  ]
+               },
+               "pdbx_atcc": {
+                  "bsonType": "string"
+               },
+               "pdbx_beg_seq_num": {
+                  "bsonType": "int"
+               },
+               "pdbx_cell": {
+                  "bsonType": "string"
+               },
+               "pdbx_cell_line": {
+                  "bsonType": "string"
+               },
+               "pdbx_cellular_location": {
+                  "bsonType": "string"
+               },
+               "pdbx_end_seq_num": {
+                  "bsonType": "int"
+               },
+               "pdbx_fragment": {
+                  "bsonType": "string"
+               },
+               "pdbx_ncbi_taxonomy_id": {
+                  "bsonType": "string"
+               },
+               "pdbx_organ": {
+                  "bsonType": "string"
+               },
+               "pdbx_organelle": {
+                  "bsonType": "string"
+               },
+               "pdbx_organism_scientific": {
+                  "bsonType": "string"
+               },
+               "pdbx_plasmid_details": {
+                  "bsonType": "string"
+               },
+               "pdbx_plasmid_name": {
+                  "bsonType": "string"
+               },
+               "pdbx_secretion": {
+                  "bsonType": "string"
+               },
+               "pdbx_src_id": {
+                  "bsonType": "int"
+               },
+               "pdbx_variant": {
+                  "bsonType": "string"
+               },
+               "species": {
+                  "bsonType": "string"
+               },
+               "strain": {
+                  "bsonType": "string"
+               },
+               "tissue": {
+                  "bsonType": "string"
+               },
+               "tissue_fraction": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "pdbx_src_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_struct_assembly": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "assembly_id": {
+                  "bsonType": "int"
+               },
+               "asym_id": {
+                  "bsonType": "string"
+               },
+               "entity_id": {
+                  "bsonType": "string"
+               },
+               "ordinal_id": {
+                  "bsonType": "int"
+               },
+               "seq_id_begin": {
+                  "bsonType": "int"
+               },
+               "seq_id_end": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_target_entity": {
+         "bsonType": "object",
+         "properties": {
+            "data_id": {
+               "bsonType": "int"
+            },
+            "entity_id": {
+               "bsonType": "string"
+            },
+            "origin": {
+               "bsonType": "string",
+               "enum": [
+                  "designed",
+                  "reference database"
+               ]
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "entity_id"
+         ]
+      },
+      "ma_target_entity_instance": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "asym_id": {
+                  "bsonType": "string"
+               },
+               "entity_id": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "asym_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_target_ref_db_details": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "db_accession": {
+                  "bsonType": "string"
+               },
+               "db_code": {
+                  "bsonType": "string"
+               },
+               "db_name": {
+                  "bsonType": "string",
+                  "enum": [
+                     "GB",
+                     "JGI",
+                     "NCBI",
+                     "OrthoDB",
+                     "Other",
+                     "UNP"
+                  ]
+               },
+               "db_name_other_details": {
+                  "bsonType": "string"
+               },
+               "gene_name": {
+                  "bsonType": "string"
+               },
+               "ncbi_taxonomy_id": {
+                  "bsonType": "string"
+               },
+               "organism_scientific": {
+                  "bsonType": "string"
+               },
+               "seq_db_align_begin": {
+                  "bsonType": "string"
+               },
+               "seq_db_align_end": {
+                  "bsonType": "string"
+               },
+               "seq_db_sequence_checksum": {
+                  "bsonType": "string"
+               },
+               "seq_db_sequence_version_date": {
+                  "bsonType": "date"
+               },
+               "target_entity_id": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_name",
+               "target_entity_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_entity_src_syn": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "details": {
+                  "bsonType": "string"
+               },
+               "ncbi_taxonomy_id": {
+                  "bsonType": "string"
+               },
+               "organism_common_name": {
+                  "bsonType": "string"
+               },
+               "organism_scientific": {
+                  "bsonType": "string"
+               },
+               "pdbx_alt_source_flag": {
+                  "bsonType": "string",
+                  "enum": [
+                     "model",
+                     "sample"
+                  ]
+               },
+               "pdbx_beg_seq_num": {
+                  "bsonType": "int"
+               },
+               "pdbx_end_seq_num": {
+                  "bsonType": "int"
+               },
+               "pdbx_src_id": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "pdbx_src_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
       },
       "rcsb_entity_host_organism": {
          "bsonType": "array",

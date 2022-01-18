@@ -1,12 +1,238 @@
 {
    "type": "object",
    "properties": {
+      "ma_qa_metric_local": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "The identifier for the asym id of the residue in the \n structural model, for which local QA metric is provided.\n This data item is a pointer to _atom_site.label_asym_id\n in the ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The identifier for the asym id of the residue in the \n structural model, for which local QA metric is provided.\n This data item is a pointer to _atom_site.label_asym_id\n in the ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "The component identifier for the residue in the \n structural model, for which local QA metric is provided.\n This data item is a pointer to _atom_site.label_comp_id\n in the ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The component identifier for the residue in the \n structural model, for which local QA metric is provided.\n This data item is a pointer to _atom_site.label_comp_id\n in the ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "The identifier for the sequence index of the residue \n in the structural model, for which local QA metric is provided.\n This data item is a pointer to _atom_site.label_seq_id\n in the ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The identifier for the sequence index of the residue \n in the structural model, for which local QA metric is provided.\n This data item is a pointer to _atom_site.label_seq_id\n in the ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "metric_id": {
+                  "type": "integer",
+                  "description": "The identifier for the QA metric.\n This data item is a pointer to _ma_qa_metric.id in the\n MA_QA_METRIC category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The identifier for the QA metric.\n This data item is a pointer to _ma_qa_metric.id in the\n MA_QA_METRIC category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "metric_value": {
+                  "type": "number",
+                  "description": "The value of the local QA metric.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of the local QA metric.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "model_id": {
+                  "type": "integer",
+                  "description": "The identifier for the structural model, for which local QA metric is provided.\n This data item is a pointer to _ma_model_list.model_id\n in the MA_MODEL_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The identifier for the structural model, for which local QA metric is provided.\n This data item is a pointer to _ma_model_list.model_id\n in the MA_MODEL_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ordinal_id": {
+                  "type": "integer",
+                  "description": "A unique identifier for the category.",
+                  "rcsb_description": [
+                     {
+                        "text": "A unique identifier for the category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_struct_assembly": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "assembly_id": {
+                  "type": "integer",
+                  "description": "An identifier for the structural assembly. \n This data item will remain the same for all components \n of an assembly. \n This data item is a pointer to _ma_model_list.assembly_id in the\n MA_MODEL_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for the structural assembly. \n This data item will remain the same for all components \n of an assembly. \n This data item is a pointer to _ma_model_list.assembly_id in the\n MA_MODEL_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "asym_id": {
+                  "type": "string",
+                  "description": "An asym/strand identifier for the component in the assembly.\n This data item is a pointer to _struct_asym.id in the\n STRUCT_ASYM category.",
+                  "rcsb_description": [
+                     {
+                        "text": "An asym/strand identifier for the component in the assembly.\n This data item is a pointer to _struct_asym.id in the\n STRUCT_ASYM category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "A unique identifier for distinct molecular entities.\n This data item is a pointer to _entity_poly_seq.entity_id in the \n ENTITY_POLY_SEQ category.",
+                  "rcsb_description": [
+                     {
+                        "text": "A unique identifier for distinct molecular entities.\n This data item is a pointer to _entity_poly_seq.entity_id in the \n ENTITY_POLY_SEQ category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ordinal_id": {
+                  "type": "integer",
+                  "description": "A unique identifier for the structural assembly description.",
+                  "rcsb_description": [
+                     {
+                        "text": "A unique identifier for the structural assembly description.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "seq_id_begin": {
+                  "type": "integer",
+                  "description": "The starting residue index for the sequence segment of the entity instance \n that is part of the assembly.",
+                  "rcsb_description": [
+                     {
+                        "text": "The starting residue index for the sequence segment of the entity instance \n that is part of the assembly.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "seq_id_end": {
+                  "type": "integer",
+                  "description": "The ending residue index for the sequence segment of the entity instance \n that is part of the assembly.",
+                  "rcsb_description": [
+                     {
+                        "text": "The ending residue index for the sequence segment of the entity instance \n that is part of the assembly.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_struct_special_symmetry": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "type": "integer",
+                  "description": "Part of the identifier for the molecular component.\n\nThis data item is a pointer to _atom_site.pdbx_PDB_model_num in the\nATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "Part of the identifier for the molecular component.\n\nThis data item is a pointer to _atom_site.pdbx_PDB_model_num in the\nATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "auth_seq_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.auth_seq_id in the\n ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "The value of _pdbx_struct_special_symmetry.id must uniquely identify\n each item in the PDBX_STRUCT_SPECIAL_SYMMETRY list.\n\n This is an integer serial number.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of _pdbx_struct_special_symmetry.id must uniquely identify\n each item in the PDBX_STRUCT_SPECIAL_SYMMETRY list.\n\n This is an integer serial number.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.label_asym_id in the\n ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "Part of the identifier for the molecular component.\n\n This data item is a pointer to _atom_site.label_comp_id in the\n ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_branched_entity_instance_container_identifiers": {
          "type": "object",
          "properties": {
             "asym_id": {
                "type": "string",
                "description": "Instance identifier for this container.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Instance identifier for this container.",
@@ -17,6 +243,10 @@
             "auth_asym_id": {
                "type": "string",
                "description": "Author instance identifier for this container.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Author instance identifier for this container.",
@@ -27,6 +257,10 @@
             "entity_id": {
                "type": "string",
                "description": "Entity identifier for the container.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Entity identifier for the container.",
@@ -37,6 +271,10 @@
             "entry_id": {
                "type": "string",
                "description": "Entry identifier for the container.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Entry identifier for the container.",
@@ -50,6 +288,10 @@
                   "1KIP.A"
                ],
                "description": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
@@ -72,6 +314,10 @@
                "annotation_id": {
                   "type": "string",
                   "description": "An identifier for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "An identifier for the annotation.",
@@ -116,6 +362,11 @@
                "description": {
                   "type": "string",
                   "description": "A description for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "A description for the annotation.",
@@ -130,6 +381,11 @@
                "name": {
                   "type": "string",
                   "description": "A name for the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "A name for the annotation.",
@@ -179,6 +435,10 @@
                      "SCOP"
                   ],
                   "description": "A type or category of the annotation.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "CATH",
@@ -208,6 +468,9 @@
                         "depth": {
                            "type": "integer",
                            "description": "Members of the annotation lineage as parent lineage depth (1-N)",
+                           "rcsb_search_context": [
+                              "default-match"
+                           ],
                            "rcsb_description": [
                               {
                                  "text": "Members of the annotation lineage as parent lineage depth (1-N)",
@@ -222,6 +485,10 @@
                         "id": {
                            "type": "string",
                            "description": "Members of the annotation lineage as parent class identifiers.",
+                           "rcsb_search_context": [
+                              "exact-match"
+                           ],
+                           "rcsb_full_text_priority": 10,
                            "rcsb_description": [
                               {
                                  "text": "Members of the annotation lineage as parent class identifiers.",
@@ -236,6 +503,11 @@
                         "name": {
                            "type": "string",
                            "description": "Members of the annotation lineage as parent class names.",
+                           "rcsb_search_context": [
+                              "exact-match",
+                              "full-text"
+                           ],
+                           "rcsb_full_text_priority": 10,
                            "rcsb_description": [
                               {
                                  "text": "Members of the annotation lineage as parent class names.",
@@ -719,6 +991,9 @@
                "count": {
                   "type": "integer",
                   "description": "The feature count.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The feature count.",
@@ -733,6 +1008,9 @@
                      0.95
                   ],
                   "description": "The fractional feature coverage relative to the full branched entity.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The fractional feature coverage relative to the full branched entity.",
@@ -743,6 +1021,9 @@
                "maximum_length": {
                   "type": "integer",
                   "description": "The maximum feature length.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The maximum feature length.",
@@ -767,6 +1048,9 @@
                "minimum_length": {
                   "type": "integer",
                   "description": "The minimum feature length.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The minimum feature length.",
@@ -809,6 +1093,10 @@
                      "UNOBSERVED_RESIDUE_XYZ"
                   ],
                   "description": "Type or category of the feature.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "BINDING_SITE",
@@ -1228,6 +1516,9 @@
                "distance": {
                   "type": "number",
                   "description": "Distance value for this ligand interaction.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
@@ -1257,6 +1548,10 @@
                      "B"
                   ],
                   "description": "The entity instance identifier for the ligand interaction.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The entity instance identifier for the ligand interaction.",
@@ -1291,6 +1586,10 @@
                      "SER"
                   ],
                   "description": "The chemical component identifier for the ligand interaction.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The chemical component identifier for the ligand interaction.",
@@ -1309,6 +1608,10 @@
                      "2"
                   ],
                   "description": "The entity identifier for the ligand of interaction.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "The entity identifier for the ligand of interaction.",
@@ -1331,6 +1634,10 @@
                      "N"
                   ],
                   "description": "A flag to indicate the nature of the ligand interaction is covalent or metal-coordination.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "N",
@@ -1378,12 +1685,114 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "struct_asym": {
+         "type": "object",
+         "properties": {
+            "pdbx_PDB_id": {
+               "type": "string",
+               "examples": [
+                  "1ABC"
+               ],
+               "description": "This data item is a pointer to _atom_site.pdbx_PDB_strand_id the\n ATOM_SITE category.",
+               "rcsb_description": [
+                  {
+                     "text": "This data item is a pointer to _atom_site.pdbx_PDB_strand_id the\n ATOM_SITE category.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "pdbx_alt_id": {
+               "type": "string",
+               "description": "This data item is a pointer to _atom_site.ndb_alias_strand_id the\n ATOM_SITE category.",
+               "rcsb_description": [
+                  {
+                     "text": "This data item is a pointer to _atom_site.ndb_alias_strand_id the\n ATOM_SITE category.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "pdbx_order": {
+               "type": "integer",
+               "description": "This data item gives the order of the structural elements in the\n ATOM_SITE category.",
+               "rcsb_description": [
+                  {
+                     "text": "This data item gives the order of the structural elements in the\n ATOM_SITE category.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "pdbx_type": {
+               "type": "string",
+               "enum": [
+                  "ATOMN",
+                  "ATOMP",
+                  "ATOMS",
+                  "HETAC",
+                  "HETAD",
+                  "HETAI",
+                  "HETAIN",
+                  "HETAS",
+                  "HETIC"
+               ],
+               "description": "This data item describes the general type of the structural elements\n in the ATOM_SITE category.",
+               "rcsb_enum_annotated": [
+                  {
+                     "value": "ATOMN",
+                     "detail": "nucleic acid"
+                  },
+                  {
+                     "value": "ATOMP",
+                     "detail": "protein"
+                  },
+                  {
+                     "value": "ATOMS",
+                     "detail": "sugar"
+                  },
+                  {
+                     "value": "HETAC",
+                     "detail": "coenzyme"
+                  },
+                  {
+                     "value": "HETAD",
+                     "detail": "drug"
+                  },
+                  {
+                     "value": "HETAI",
+                     "detail": "ion"
+                  },
+                  {
+                     "value": "HETAIN",
+                     "detail": "inhibitor"
+                  },
+                  {
+                     "value": "HETAS",
+                     "detail": "solvent"
+                  },
+                  {
+                     "value": "HETIC",
+                     "detail": "ion complex"
+                  }
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "This data item describes the general type of the structural elements\n in the ATOM_SITE category.",
+                     "context": "dictionary"
+                  }
+               ]
+            }
+         },
+         "additionalProperties": false
+      },
       "rcsb_id": {
          "type": "string",
          "examples": [
             "1KIP.A"
          ],
          "description": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
+         "rcsb_search_context": [
+            "exact-match"
+         ],
+         "rcsb_full_text_priority": 10,
          "rcsb_description": [
             {
                "text": "A unique identifier for each object in this entity instance container formed by\n an 'dot' (.) separated concatenation of entry and entity instance identifiers.",
@@ -1398,7 +1807,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_comp_model_core_branched_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_comp_model_core collection: pdbx_comp_model_core_branched_entity_instance version: 0.1.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_comp_model_core content type schema. This schema supports collection pdbx_comp_model_core_branched_entity_instance version 0.1.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_comp_model_core_branched_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 0.1.1"
+   "title": "schema: pdbx_comp_model_core collection: pdbx_comp_model_core_branched_entity_instance version: 1.0.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_comp_model_core content type schema. This schema supports collection pdbx_comp_model_core_branched_entity_instance version 1.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_comp_model_core_branched_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 1.0.0"
 }
