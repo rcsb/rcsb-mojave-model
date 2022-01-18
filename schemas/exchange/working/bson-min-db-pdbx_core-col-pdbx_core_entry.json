@@ -95,6 +95,9 @@
                "journal_abbrev": {
                   "bsonType": "string"
                },
+               "journal_full": {
+                  "bsonType": "string"
+               },
                "journal_id_ASTM": {
                   "bsonType": "string"
                },
@@ -1417,6 +1420,9 @@
          "properties": {
             "id": {
                "bsonType": "string"
+            },
+            "ma_collection_id": {
+               "bsonType": "string"
             }
          },
          "additionalProperties": false,
@@ -1539,6 +1545,220 @@
             "additionalProperties": false,
             "required": [
                "crystal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_data": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "content_type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "coevolution MSA",
+                     "model coordinates",
+                     "other",
+                     "polymeric template library",
+                     "spatial restraints",
+                     "target",
+                     "target-template alignment",
+                     "template structure"
+                  ]
+               },
+               "content_type_other_details": {
+                  "bsonType": "string"
+               },
+               "id": {
+                  "bsonType": "int"
+               },
+               "name": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_model_list": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "assembly_id": {
+                  "bsonType": "int"
+               },
+               "data_id": {
+                  "bsonType": "int"
+               },
+               "model_group_id": {
+                  "bsonType": "int"
+               },
+               "model_group_name": {
+                  "bsonType": "string"
+               },
+               "model_id": {
+                  "bsonType": "int"
+               },
+               "model_name": {
+                  "bsonType": "string"
+               },
+               "model_type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Ab initio model",
+                     "Homology model",
+                     "Other"
+                  ]
+               },
+               "ordinal_id": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_qa_metric": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "description": {
+                  "bsonType": "string"
+               },
+               "id": {
+                  "bsonType": "int"
+               },
+               "mode": {
+                  "bsonType": "string",
+                  "enum": [
+                     "global",
+                     "local",
+                     "local-pairwise"
+                  ]
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "software_group_id": {
+                  "bsonType": "int"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "PAE",
+                     "contact probability",
+                     "distance",
+                     "energy",
+                     "normalized score",
+                     "other",
+                     "pLDDT",
+                     "zscore"
+                  ]
+               },
+               "type_other_details": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_qa_metric_global": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "metric_id": {
+                  "bsonType": "int"
+               },
+               "metric_value": {
+                  "bsonType": "double"
+               },
+               "model_id": {
+                  "bsonType": "int"
+               },
+               "ordinal_id": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_target_ref_db_details": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "db_accession": {
+                  "bsonType": "string"
+               },
+               "db_code": {
+                  "bsonType": "string"
+               },
+               "db_name": {
+                  "bsonType": "string",
+                  "enum": [
+                     "GB",
+                     "JGI",
+                     "NCBI",
+                     "OrthoDB",
+                     "Other",
+                     "UNP"
+                  ]
+               },
+               "db_name_other_details": {
+                  "bsonType": "string"
+               },
+               "gene_name": {
+                  "bsonType": "string"
+               },
+               "ncbi_taxonomy_id": {
+                  "bsonType": "string"
+               },
+               "organism_scientific": {
+                  "bsonType": "string"
+               },
+               "seq_db_align_begin": {
+                  "bsonType": "string"
+               },
+               "seq_db_align_end": {
+                  "bsonType": "string"
+               },
+               "seq_db_sequence_checksum": {
+                  "bsonType": "string"
+               },
+               "seq_db_sequence_version_date": {
+                  "bsonType": "date"
+               },
+               "target_entity_id": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_name",
+               "target_entity_id"
             ]
          },
          "minItems": 1,
@@ -4476,6 +4696,9 @@
          "items": {
             "bsonType": "object",
             "properties": {
+               "citation_id": {
+                  "bsonType": "string"
+               },
                "classification": {
                   "bsonType": "string"
                },
@@ -4630,6 +4853,7 @@
    },
    "additionalProperties": false,
    "required": [
+      "ma_data",
       "rcsb_id"
    ]
 }

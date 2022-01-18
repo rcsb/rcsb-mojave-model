@@ -425,6 +425,19 @@
                      }
                   ]
                },
+               "journal_full": {
+                  "type": "string",
+                  "examples": [
+                     "Journal of Molecular Biology"
+                  ],
+                  "description": "Full name of the cited journal; relevant for journal articles.",
+                  "rcsb_description": [
+                     {
+                        "text": "Full name of the cited journal; relevant for journal articles.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "journal_id_ASTM": {
                   "type": "string",
                   "description": "The American Society for Testing and Materials (ASTM) code\n assigned to the journal cited (also referred to as the CODEN\n designator of the Chemical Abstracts Service); relevant for\n journal articles.",
@@ -4462,6 +4475,16 @@
                      "context": "dictionary"
                   }
                ]
+            },
+            "ma_collection_id": {
+               "type": "string",
+               "description": "An identifier for the model collection associated with the entry.",
+               "rcsb_description": [
+                  {
+                     "text": "An identifier for the model collection associated with the entry.",
+                     "context": "dictionary"
+                  }
+               ]
             }
          },
          "additionalProperties": false,
@@ -4956,6 +4979,600 @@
             "additionalProperties": false,
             "required": [
                "crystal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_data": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "content_type": {
+                  "type": "string",
+                  "enum": [
+                     "coevolution MSA",
+                     "model coordinates",
+                     "other",
+                     "polymeric template library",
+                     "spatial restraints",
+                     "target",
+                     "target-template alignment",
+                     "template structure"
+                  ],
+                  "description": "The type of data held in the dataset.",
+                  "rcsb_description": [
+                     {
+                        "text": "The type of data held in the dataset.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "content_type_other_details": {
+                  "type": "string",
+                  "description": "Details for other content types.",
+                  "rcsb_description": [
+                     {
+                        "text": "Details for other content types.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "A unique identifier for the data.",
+                  "rcsb_description": [
+                     {
+                        "text": "A unique identifier for the data.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "name": {
+                  "type": "string",
+                  "examples": [
+                     "NMR NOE Distances",
+                     "Target Template Alignment",
+                     "Coevolution Data"
+                  ],
+                  "description": "An author-given name for the content held in the dataset.",
+                  "rcsb_description": [
+                     {
+                        "text": "An author-given name for the content held in the dataset.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_model_list": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "assembly_id": {
+                  "type": "integer",
+                  "description": "An identifier to the structural assembly corresponding to the model.",
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier to the structural assembly corresponding to the model.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "data_id": {
+                  "type": "integer",
+                  "description": "The data_id identifier. This data item is a pointer to\n _ma_data.id in the MA_DATA category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The data_id identifier. This data item is a pointer to\n _ma_data.id in the MA_DATA category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "model_group_id": {
+                  "type": "integer",
+                  "description": "An identifier to group structural models into collections or sets.\n A cluster of models and its representative can either be grouped together \n or can be separate groups in the ma_model_list table. The choice between \n the two options should be decided based on how the modeling was carried out \n and how the representative was chosen. If the representative is a member of \n the ensemble (i.e., best scoring model), then it is recommended that the \n representative and the ensemble belong to the same model group. If the \n representative is calculated from the ensemble (i.e., centroid), then it is \n recommended that the representative be separated into a different group. \n If the models do not need to be grouped into collections, then the\n _ma_model_list.model_group_id is the same as _ma_model_list.model_id.",
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier to group structural models into collections or sets.\n A cluster of models and its representative can either be grouped together \n or can be separate groups in the ma_model_list table. The choice between \n the two options should be decided based on how the modeling was carried out \n and how the representative was chosen. If the representative is a member of \n the ensemble (i.e., best scoring model), then it is recommended that the \n representative and the ensemble belong to the same model group. If the \n representative is calculated from the ensemble (i.e., centroid), then it is \n recommended that the representative be separated into a different group. \n If the models do not need to be grouped into collections, then the\n _ma_model_list.model_group_id is the same as _ma_model_list.model_id.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "model_group_name": {
+                  "type": "string",
+                  "examples": [
+                     "cluster1",
+                     "cluster2"
+                  ],
+                  "description": "A decsriptive name for the model group.",
+                  "rcsb_description": [
+                     {
+                        "text": "A decsriptive name for the model group.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "model_id": {
+                  "type": "integer",
+                  "description": "A unique identifier for the structural model being deposited.",
+                  "rcsb_description": [
+                     {
+                        "text": "A unique identifier for the structural model being deposited.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "model_name": {
+                  "type": "string",
+                  "examples": [
+                     "Best scoring model",
+                     "2nd best scoring model",
+                     "Cluster center"
+                  ],
+                  "description": "A decsriptive name for the model.",
+                  "rcsb_description": [
+                     {
+                        "text": "A decsriptive name for the model.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "model_type": {
+                  "type": "string",
+                  "enum": [
+                     "Ab initio model",
+                     "Homology model",
+                     "Other"
+                  ],
+                  "description": "The type of model.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "Ab initio model",
+                        "detail": "Ab initio or template-free models"
+                     },
+                     {
+                        "value": "Homology model",
+                        "detail": "Homology or comparative model based on existing templates"
+                     },
+                     {
+                        "value": "Other",
+                        "detail": "Other computational models"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The type of model.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ordinal_id": {
+                  "type": "integer",
+                  "description": "A unique identifier for the model / model group combination.",
+                  "rcsb_description": [
+                     {
+                        "text": "A unique identifier for the model / model group combination.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_qa_metric": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "description": {
+                  "type": "string",
+                  "description": "Description of the QA metric.",
+                  "rcsb_description": [
+                     {
+                        "text": "Description of the QA metric.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "An identifier for the QA metric.",
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for the QA metric.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "mode": {
+                  "type": "string",
+                  "enum": [
+                     "global",
+                     "local",
+                     "local-pairwise"
+                  ],
+                  "description": "The mode of calculation of the QA metric.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "global",
+                        "detail": "QA metric is calculated per-model"
+                     },
+                     {
+                        "value": "local",
+                        "detail": "QA metric is calculated per-residue"
+                     },
+                     {
+                        "value": "local-pairwise",
+                        "detail": "QA metric is calculated per-residue-pair"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The mode of calculation of the QA metric.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "name": {
+                  "type": "string",
+                  "description": "Name of the QA metric.",
+                  "rcsb_description": [
+                     {
+                        "text": "Name of the QA metric.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "software_group_id": {
+                  "type": "integer",
+                  "description": "Identifier to the set of software used to calculate the QA metric.\n This data item is a pointer to the _ma_software_group.group_id in the\n MA_SOFTWARE_GROUP category.",
+                  "rcsb_description": [
+                     {
+                        "text": "Identifier to the set of software used to calculate the QA metric.\n This data item is a pointer to the _ma_software_group.group_id in the\n MA_SOFTWARE_GROUP category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "PAE",
+                     "contact probability",
+                     "distance",
+                     "energy",
+                     "normalized score",
+                     "other",
+                     "pLDDT",
+                     "zscore"
+                  ],
+                  "description": "The type of QA metric.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "PAE",
+                        "detail": "predicted aligned error"
+                     },
+                     {
+                        "value": "contact probability",
+                        "detail": "the contact probability of a pairwise interaction"
+                     },
+                     {
+                        "value": "distance",
+                        "detail": "the lower the distance, the better the quality"
+                     },
+                     {
+                        "value": "energy",
+                        "detail": "the lower the energy, the better the quality"
+                     },
+                     {
+                        "value": "normalized score",
+                        "detail": "normalized score ranging from 0 to 1"
+                     },
+                     {
+                        "value": "other",
+                        "detail": "other type of QA metric"
+                     },
+                     {
+                        "value": "pLDDT",
+                        "detail": "per-residue confidence score based on the Local Distance Difference Test"
+                     },
+                     {
+                        "value": "zscore",
+                        "detail": "number of standard deviations from optimal/best"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The type of QA metric.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "type_other_details": {
+                  "type": "string",
+                  "description": "Details for other type of QA metric.",
+                  "rcsb_description": [
+                     {
+                        "text": "Details for other type of QA metric.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_qa_metric_global": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "metric_id": {
+                  "type": "integer",
+                  "description": "The identifier for the QA metric.\n This data item is a pointer to _ma_qa_metric.id in the\n MA_QA_METRIC category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The identifier for the QA metric.\n This data item is a pointer to _ma_qa_metric.id in the\n MA_QA_METRIC category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "metric_value": {
+                  "type": "number",
+                  "description": "The value of the global QA metric.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of the global QA metric.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "model_id": {
+                  "type": "integer",
+                  "description": "The identifier for the structural model, for which global QA metric is provided.\n This data item is a pointer to _ma_model_list.model_id\n in the MA_MODEL_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The identifier for the structural model, for which global QA metric is provided.\n This data item is a pointer to _ma_model_list.model_id\n in the MA_MODEL_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ordinal_id": {
+                  "type": "integer",
+                  "description": "A unique identifier for the category.",
+                  "rcsb_description": [
+                     {
+                        "text": "A unique identifier for the category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_target_ref_db_details": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "db_accession": {
+                  "type": "string",
+                  "examples": [
+                     "P07617",
+                     "11612676",
+                     "B2RHG4"
+                  ],
+                  "description": "Accession code assigned by the reference database.",
+                  "rcsb_description": [
+                     {
+                        "text": "Accession code assigned by the reference database.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "db_code": {
+                  "type": "string",
+                  "examples": [
+                     "B2RHG4_PORG3",
+                     "AE000513.1"
+                  ],
+                  "description": "The code for this entity or biological unit or for a closely\n related entity or biological unit in the named database.\n This can include the version number.",
+                  "rcsb_description": [
+                     {
+                        "text": "The code for this entity or biological unit or for a closely\n related entity or biological unit in the named database.\n This can include the version number.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "db_name": {
+                  "type": "string",
+                  "enum": [
+                     "GB",
+                     "JGI",
+                     "NCBI",
+                     "OrthoDB",
+                     "Other",
+                     "UNP"
+                  ],
+                  "description": "The name of the database containing reference information about\n this entity or biological unit.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "GB",
+                        "detail": "Genbank"
+                     },
+                     {
+                        "value": "JGI",
+                        "detail": "JGI"
+                     },
+                     {
+                        "value": "NCBI",
+                        "detail": "NCBI"
+                     },
+                     {
+                        "value": "OrthoDB",
+                        "detail": "OrthoDB"
+                     },
+                     {
+                        "value": "Other",
+                        "detail": "Other"
+                     },
+                     {
+                        "value": "UNP",
+                        "detail": "UniProtKB"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The name of the database containing reference information about\n this entity or biological unit.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "db_name_other_details": {
+                  "type": "string",
+                  "description": "The other database name.",
+                  "rcsb_description": [
+                     {
+                        "text": "The other database name.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "gene_name": {
+                  "type": "string",
+                  "examples": [
+                     "bach1b"
+                  ],
+                  "description": "Name of the gene corresponding to the target entity.",
+                  "rcsb_description": [
+                     {
+                        "text": "Name of the gene corresponding to the target entity.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ncbi_taxonomy_id": {
+                  "type": "string",
+                  "examples": [
+                     "1294385"
+                  ],
+                  "description": "Taxonomy identifier provided by NCBI.",
+                  "rcsb_description": [
+                     {
+                        "text": "Taxonomy identifier provided by NCBI.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "organism_scientific": {
+                  "type": "string",
+                  "examples": [
+                     "Saccharomyces cerevisiae YJM1573"
+                  ],
+                  "description": "Scientific name of the organism.",
+                  "rcsb_description": [
+                     {
+                        "text": "Scientific name of the organism.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "seq_db_align_begin": {
+                  "type": "string",
+                  "examples": [
+                     "1",
+                     "2"
+                  ],
+                  "description": "Beginning index in the chemical sequence from the\nreference database.",
+                  "rcsb_description": [
+                     {
+                        "text": "Beginning index in the chemical sequence from the\nreference database.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "seq_db_align_end": {
+                  "type": "string",
+                  "examples": [
+                     "105",
+                     "245"
+                  ],
+                  "description": "Ending index in the chemical sequence from the\n reference database.",
+                  "rcsb_description": [
+                     {
+                        "text": "Ending index in the chemical sequence from the\n reference database.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "seq_db_sequence_checksum": {
+                  "type": "string",
+                  "examples": [
+                     "EAB5441A9AF8E49E"
+                  ],
+                  "description": "Checksum (CRC64) for the sequence in the reference sequence database.",
+                  "rcsb_description": [
+                     {
+                        "text": "Checksum (CRC64) for the sequence in the reference sequence database.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "seq_db_sequence_version_date": {
+                  "type": "string",
+                  "format": "date",
+                  "examples": [
+                     "2014-07-09"
+                  ],
+                  "description": "The version date of the sequence in the reference sequence database.",
+                  "rcsb_description": [
+                     {
+                        "text": "The version date of the sequence in the reference sequence database.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "target_entity_id": {
+                  "type": "string",
+                  "description": "An identifier for the target entity.",
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for the target entity.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_name",
+               "target_entity_id"
             ]
          },
          "minItems": 1,
@@ -15512,6 +16129,16 @@
          "items": {
             "type": "object",
             "properties": {
+               "citation_id": {
+                  "type": "string",
+                  "description": "This data item is a pointer to _citation.id in the CITATION\n category.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is a pointer to _citation.id in the CITATION\n category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "classification": {
                   "type": "string",
                   "examples": [
@@ -16197,11 +16824,12 @@
    },
    "additionalProperties": false,
    "required": [
+      "ma_data",
       "rcsb_id"
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.16.3",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.16.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.16.3"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 9.0.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 9.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 9.0.0"
 }

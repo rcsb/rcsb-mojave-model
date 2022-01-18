@@ -1,6 +1,73 @@
 {
    "bsonType": "object",
    "properties": {
+      "ma_qa_metric_local": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "label_asym_id": {
+                  "bsonType": "string"
+               },
+               "label_comp_id": {
+                  "bsonType": "string"
+               },
+               "label_seq_id": {
+                  "bsonType": "int"
+               },
+               "metric_id": {
+                  "bsonType": "int"
+               },
+               "metric_value": {
+                  "bsonType": "double"
+               },
+               "model_id": {
+                  "bsonType": "int"
+               },
+               "ordinal_id": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_struct_assembly": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "assembly_id": {
+                  "bsonType": "int"
+               },
+               "asym_id": {
+                  "bsonType": "string"
+               },
+               "entity_id": {
+                  "bsonType": "string"
+               },
+               "ordinal_id": {
+                  "bsonType": "int"
+               },
+               "seq_id_begin": {
+                  "bsonType": "int"
+               },
+               "seq_id_end": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_struct_special_symmetry": {
          "bsonType": "array",
          "items": {
@@ -521,6 +588,35 @@
          },
          "minItems": 1,
          "uniqueItems": true
+      },
+      "struct_asym": {
+         "bsonType": "object",
+         "properties": {
+            "pdbx_PDB_id": {
+               "bsonType": "string"
+            },
+            "pdbx_alt_id": {
+               "bsonType": "string"
+            },
+            "pdbx_order": {
+               "bsonType": "int"
+            },
+            "pdbx_type": {
+               "bsonType": "string",
+               "enum": [
+                  "ATOMN",
+                  "ATOMP",
+                  "ATOMS",
+                  "HETAC",
+                  "HETAD",
+                  "HETAI",
+                  "HETAIN",
+                  "HETAS",
+                  "HETIC"
+               ]
+            }
+         },
+         "additionalProperties": false
       },
       "rcsb_id": {
          "bsonType": "string"

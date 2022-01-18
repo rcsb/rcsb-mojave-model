@@ -1,6 +1,164 @@
 {
    "type": "object",
    "properties": {
+      "ma_qa_metric_local": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "label_asym_id": {
+                  "type": "string",
+                  "description": "The identifier for the asym id of the residue in the \n structural model, for which local QA metric is provided.\n This data item is a pointer to _atom_site.label_asym_id\n in the ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The identifier for the asym id of the residue in the \n structural model, for which local QA metric is provided.\n This data item is a pointer to _atom_site.label_asym_id\n in the ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "The component identifier for the residue in the \n structural model, for which local QA metric is provided.\n This data item is a pointer to _atom_site.label_comp_id\n in the ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The component identifier for the residue in the \n structural model, for which local QA metric is provided.\n This data item is a pointer to _atom_site.label_comp_id\n in the ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "label_seq_id": {
+                  "type": "integer",
+                  "description": "The identifier for the sequence index of the residue \n in the structural model, for which local QA metric is provided.\n This data item is a pointer to _atom_site.label_seq_id\n in the ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The identifier for the sequence index of the residue \n in the structural model, for which local QA metric is provided.\n This data item is a pointer to _atom_site.label_seq_id\n in the ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "metric_id": {
+                  "type": "integer",
+                  "description": "The identifier for the QA metric.\n This data item is a pointer to _ma_qa_metric.id in the\n MA_QA_METRIC category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The identifier for the QA metric.\n This data item is a pointer to _ma_qa_metric.id in the\n MA_QA_METRIC category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "metric_value": {
+                  "type": "number",
+                  "description": "The value of the local QA metric.",
+                  "rcsb_description": [
+                     {
+                        "text": "The value of the local QA metric.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "model_id": {
+                  "type": "integer",
+                  "description": "The identifier for the structural model, for which local QA metric is provided.\n This data item is a pointer to _ma_model_list.model_id\n in the MA_MODEL_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The identifier for the structural model, for which local QA metric is provided.\n This data item is a pointer to _ma_model_list.model_id\n in the MA_MODEL_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ordinal_id": {
+                  "type": "integer",
+                  "description": "A unique identifier for the category.",
+                  "rcsb_description": [
+                     {
+                        "text": "A unique identifier for the category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_struct_assembly": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "assembly_id": {
+                  "type": "integer",
+                  "description": "An identifier for the structural assembly. \n This data item will remain the same for all components \n of an assembly. \n This data item is a pointer to _ma_model_list.assembly_id in the\n MA_MODEL_LIST category.",
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for the structural assembly. \n This data item will remain the same for all components \n of an assembly. \n This data item is a pointer to _ma_model_list.assembly_id in the\n MA_MODEL_LIST category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "asym_id": {
+                  "type": "string",
+                  "description": "An asym/strand identifier for the component in the assembly.\n This data item is a pointer to _struct_asym.id in the\n STRUCT_ASYM category.",
+                  "rcsb_description": [
+                     {
+                        "text": "An asym/strand identifier for the component in the assembly.\n This data item is a pointer to _struct_asym.id in the\n STRUCT_ASYM category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "A unique identifier for distinct molecular entities.\n This data item is a pointer to _entity_poly_seq.entity_id in the \n ENTITY_POLY_SEQ category.",
+                  "rcsb_description": [
+                     {
+                        "text": "A unique identifier for distinct molecular entities.\n This data item is a pointer to _entity_poly_seq.entity_id in the \n ENTITY_POLY_SEQ category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ordinal_id": {
+                  "type": "integer",
+                  "description": "A unique identifier for the structural assembly description.",
+                  "rcsb_description": [
+                     {
+                        "text": "A unique identifier for the structural assembly description.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "seq_id_begin": {
+                  "type": "integer",
+                  "description": "The starting residue index for the sequence segment of the entity instance \n that is part of the assembly.",
+                  "rcsb_description": [
+                     {
+                        "text": "The starting residue index for the sequence segment of the entity instance \n that is part of the assembly.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "seq_id_end": {
+                  "type": "integer",
+                  "description": "The ending residue index for the sequence segment of the entity instance \n that is part of the assembly.",
+                  "rcsb_description": [
+                     {
+                        "text": "The ending residue index for the sequence segment of the entity instance \n that is part of the assembly.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_struct_special_symmetry": {
          "type": "array",
          "items": {
@@ -845,13 +1003,17 @@
                   "type": "string",
                   "enum": [
                      "ANGLE_OUTLIER",
+                     "BEND",
                      "BINDING_SITE",
                      "BOND_OUTLIER",
                      "C-MANNOSYLATION_SITE",
                      "CATH",
                      "CIS-PEPTIDE",
                      "ECOD",
-                     "HELIX_P",
+                     "HELX_LH_PP_P",
+                     "HELX_RH_3T_P",
+                     "HELX_RH_AL_P",
+                     "HELX_RH_PI_P",
                      "MEMBRANE_SEGMENT",
                      "MOGUL_ANGLE_OUTLIER",
                      "MOGUL_BOND_OUTLIER",
@@ -869,8 +1031,9 @@
                      "SCOP2B_SUPERFAMILY",
                      "SCOP2_FAMILY",
                      "SCOP2_SUPERFAMILY",
-                     "SHEET",
                      "STEREO_OUTLIER",
+                     "STRN",
+                     "TURN_TY1_P",
                      "UNASSIGNED_SEC_STRUCT",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
@@ -887,6 +1050,11 @@
                         "value": "ANGLE_OUTLIER",
                         "detail": "Molprobity bond angle outlier",
                         "name": "Molprobity bond angle outlier"
+                     },
+                     {
+                        "value": "BEND",
+                        "detail": "Bend - region with high backbone curvature without specific hydrogen bonding",
+                        "name": "Bend - region with high backbone curvature without specific hydrogen bonding"
                      },
                      {
                         "value": "BINDING_SITE",
@@ -919,9 +1087,24 @@
                         "name": "ECOD"
                      },
                      {
-                        "value": "HELIX_P",
-                        "detail": "Protein helices",
-                        "name": "Protein helices"
+                        "value": "HELX_LH_PP_P",
+                        "detail": "Left-handed polyproline helix (protein)",
+                        "name": "Left-handed polyproline helix (protein)"
+                     },
+                     {
+                        "value": "HELX_RH_3T_P",
+                        "detail": "Right-handed 3-10 helix (protein)",
+                        "name": "Right-handed 3-10 helix (protein)"
+                     },
+                     {
+                        "value": "HELX_RH_AL_P",
+                        "detail": "Alpha helix (protein)",
+                        "name": "Alpha helix (protein)"
+                     },
+                     {
+                        "value": "HELX_RH_PI_P",
+                        "detail": "Right-handed pi helix (protein)",
+                        "name": "Right-handed pi helix (protein)"
                      },
                      {
                         "value": "MEMBRANE_SEGMENT",
@@ -1009,14 +1192,19 @@
                         "name": "SCOP2 Superfamily"
                      },
                      {
-                        "value": "SHEET",
-                        "detail": "Beta-sheets",
-                        "name": "Beta-sheets"
-                     },
-                     {
                         "value": "STEREO_OUTLIER",
                         "detail": "Stereochemical/chirality outlier",
                         "name": "Stereochemical/chirality outlier"
+                     },
+                     {
+                        "value": "STRN",
+                        "detail": "Strand or beta-bridge (protein)",
+                        "name": "Strand or beta-bridge (protein)"
+                     },
+                     {
+                        "value": "TURN_TY1_P",
+                        "detail": "Type I turn (protein)",
+                        "name": "Type I turn (protein)"
                      },
                      {
                         "value": "UNASSIGNED_SEC_STRUCT",
@@ -1398,13 +1586,17 @@
                   "type": "string",
                   "enum": [
                      "ANGLE_OUTLIER",
+                     "BEND",
                      "BINDING_SITE",
                      "BOND_OUTLIER",
                      "C-MANNOSYLATION_SITE",
                      "CATH",
                      "CIS-PEPTIDE",
                      "ECOD",
-                     "HELIX_P",
+                     "HELX_LH_PP_P",
+                     "HELX_RH_3T_P",
+                     "HELX_RH_AL_P",
+                     "HELX_RH_PI_P",
                      "MEMBRANE_SEGMENT",
                      "MOGUL_ANGLE_OUTLIER",
                      "MOGUL_BOND_OUTLIER",
@@ -1418,18 +1610,13 @@
                      "SABDAB_ANTIBODY_HEAVY_CHAIN_SUBCLASS",
                      "SABDAB_ANTIBODY_LIGHT_CHAIN_SUBCLASS",
                      "SABDAB_ANTIBODY_LIGHT_CHAIN_TYPE",
-                     "SAbDab Antibody Heavy Chain Subclass",
-                     "SAbDab Antibody Light Chain Subclass",
-                     "SAbDab Antibody Light Chain Type",
                      "SCOP",
-                     "SCOP2 Family",
-                     "SCOP2 Superfamily",
-                     "SCOP2B Superfamily",
                      "SCOP2B_SUPERFAMILY",
                      "SCOP2_FAMILY",
                      "SCOP2_SUPERFAMILY",
-                     "SHEET",
                      "STEREO_OUTLIER",
+                     "STRN",
+                     "TURN_TY1_P",
                      "UNASSIGNED_SEC_STRUCT",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
@@ -1448,148 +1635,188 @@
                   "rcsb_enum_annotated": [
                      {
                         "value": "ANGLE_OUTLIER",
-                        "detail": "Molprobity bond angle outlier"
+                        "detail": "Molprobity bond angle outlier",
+                        "name": "Molprobity bond angle outlier"
+                     },
+                     {
+                        "value": "BEND",
+                        "detail": "Bend - region with high backbone curvature without specific hydrogen bonding",
+                        "name": "Bend - region with high backbone curvature without specific hydrogen bonding"
                      },
                      {
                         "value": "BINDING_SITE",
-                        "detail": "Macromolecular target for ligand binding"
+                        "detail": "Macromolecular target for ligand binding",
+                        "name": "Ligand Binding Site"
                      },
                      {
                         "value": "BOND_OUTLIER",
-                        "detail": "Molprobity bond distance outlier"
+                        "detail": "Molprobity bond distance outlier",
+                        "name": "Molprobity bond distance outlier"
                      },
                      {
                         "value": "C-MANNOSYLATION_SITE",
-                        "detail": "Mannose glycan binding to the first tryptophan (W) residue in the sequence motif WXXW  (where X is any amino acid)."
+                        "detail": "Mannose glycan binding to the first tryptophan (W) residue in the sequence motif WXXW  (where X is any amino acid).",
+                        "name": "C-Mannosylation Site"
                      },
                      {
                         "value": "CATH",
-                        "detail": "CATH - Class, Architecture, Topology, and Homology Protein Structure Database"
+                        "detail": "CATH - Class, Architecture, Topology, and Homology Protein Structure Database",
+                        "name": "CATH"
                      },
                      {
                         "value": "CIS-PEPTIDE",
-                        "detail": "Peptide linkages with CIS configurations"
+                        "detail": "Peptide linkages with CIS configurations",
+                        "name": "CIS Peptide linkages"
                      },
                      {
-                        "value": "ECOD"
+                        "value": "ECOD",
+                        "detail": "ECOD - An Evolutionary Classification of Protein Domains",
+                        "name": "ECOD"
                      },
                      {
-                        "value": "HELIX_P",
-                        "detail": "Protein helices"
+                        "value": "HELX_LH_PP_P",
+                        "detail": "Left-handed polyproline helix (protein)",
+                        "name": "Left-handed polyproline helix (protein)"
+                     },
+                     {
+                        "value": "HELX_RH_3T_P",
+                        "detail": "Right-handed 3-10 helix (protein)",
+                        "name": "Right-handed 3-10 helix (protein)"
+                     },
+                     {
+                        "value": "HELX_RH_AL_P",
+                        "detail": "Alpha helix (protein)",
+                        "name": "Alpha helix (protein)"
+                     },
+                     {
+                        "value": "HELX_RH_PI_P",
+                        "detail": "Right-handed pi helix (protein)",
+                        "name": "Right-handed pi helix (protein)"
                      },
                      {
                         "value": "MEMBRANE_SEGMENT",
-                        "detail": "Extent of a region located in a membrane"
+                        "detail": "Extent of a region located in a membrane",
+                        "name": "Extent of a region located in a membrane"
                      },
                      {
                         "value": "MOGUL_ANGLE_OUTLIER",
-                        "detail": "Mogul bond angle outlier"
+                        "detail": "Mogul bond angle outlier",
+                        "name": "Mogul bond angle outlier"
                      },
                      {
                         "value": "MOGUL_BOND_OUTLIER",
-                        "detail": "Mogul bond distance outlier"
+                        "detail": "Mogul bond distance outlier",
+                        "name": "Mogul bond distance outlier"
                      },
                      {
                         "value": "N-GLYCOSYLATION_SITE",
-                        "detail": "Glycan binding to the amide nitrogen of an asparagine (Asn) residue"
+                        "detail": "Glycan binding to the amide nitrogen of an asparagine (Asn) residue",
+                        "name": "N-Glycosylation Site"
                      },
                      {
                         "value": "O-GLYCOSYLATION_SITE",
-                        "detail": "Glycan binding to the oxygen atom of serine (Ser) or threonine (Thr) residues"
+                        "detail": "Glycan binding to the oxygen atom of serine (Ser) or threonine (Thr) residues",
+                        "name": "O-Glycosylation Site"
                      },
                      {
                         "value": "RAMACHANDRAN_OUTLIER",
-                        "detail": "Molprobity Ramachandran outlier"
+                        "detail": "Molprobity Ramachandran outlier",
+                        "name": "Molprobity Ramachandran outlier"
                      },
                      {
                         "value": "ROTAMER_OUTLIER",
-                        "detail": "Molprobity rotamer outlier"
+                        "detail": "Molprobity rotamer outlier",
+                        "name": "Molprobity rotamer outlier"
                      },
                      {
                         "value": "RSCC_OUTLIER",
-                        "detail": "Real space density correlation value < 0.65"
+                        "detail": "Real space density correlation value < 0.65",
+                        "name": "Real space density correlation outlier"
                      },
                      {
                         "value": "RSRZ_OUTLIER",
-                        "detail": "Real space R-value Z score > 2"
+                        "detail": "Real space R-value Z score > 2",
+                        "name": "Real space outlier"
                      },
                      {
                         "value": "S-GLYCOSYLATION_SITE",
-                        "detail": "Glycan binding to the sulfur atom of a cysteine (Cys) residue"
+                        "detail": "Glycan binding to the sulfur atom of a cysteine (Cys) residue",
+                        "name": "S-Glycosylation Site"
                      },
                      {
                         "value": "SABDAB_ANTIBODY_HEAVY_CHAIN_SUBCLASS",
-                        "detail": "Structural Antibody Database (SAbDab) antibody heavy chain subclass (IGHV1, IGHV2,)"
+                        "detail": "Structural Antibody Database (SAbDab) antibody heavy chain subclass (IGHV1, IGHV2,)",
+                        "name": "SAbDab Antibody Heavy Chain Subclass"
                      },
                      {
                         "value": "SABDAB_ANTIBODY_LIGHT_CHAIN_SUBCLASS",
-                        "detail": "Structural Antibody Database (SAbDab) antibody light chain subclass (IGLV1, IGLV2, ...)"
+                        "detail": "Structural Antibody Database (SAbDab) antibody light chain subclass (IGLV1, IGLV2, ...)",
+                        "name": "SAbDab Antibody Light Chain Subclass"
                      },
                      {
                         "value": "SABDAB_ANTIBODY_LIGHT_CHAIN_TYPE",
-                        "detail": "Structural Antibody Database (SAbDab) antibody light chain type (Kappa or Lambda)"
-                     },
-                     {
-                        "value": "SAbDab Antibody Heavy Chain Subclass"
-                     },
-                     {
-                        "value": "SAbDab Antibody Light Chain Subclass"
-                     },
-                     {
-                        "value": "SAbDab Antibody Light Chain Type"
+                        "detail": "Structural Antibody Database (SAbDab) antibody light chain type (Kappa or Lambda)",
+                        "name": "SAbDab Antibody Light Chain Type"
                      },
                      {
                         "value": "SCOP",
-                        "detail": "SCOP - Structural Classification of Proteins"
-                     },
-                     {
-                        "value": "SCOP2 Family"
-                     },
-                     {
-                        "value": "SCOP2 Superfamily"
-                     },
-                     {
-                        "value": "SCOP2B Superfamily"
+                        "detail": "SCOP - Structural Classification of Proteins",
+                        "name": "SCOP"
                      },
                      {
                         "value": "SCOP2B_SUPERFAMILY",
-                        "detail": "SCOP2B - Structural Classification of Proteins 2 - Superfamily automated assignments"
+                        "detail": "SCOP2B - Structural Classification of Proteins 2 - Superfamily automated assignments",
+                        "name": "SCOP2B Superfamily"
                      },
                      {
                         "value": "SCOP2_FAMILY",
-                        "detail": "SCOP2 - Structural Classification of Proteins 2 Family"
+                        "detail": "SCOP2 - Structural Classification of Proteins 2 Family",
+                        "name": "SCOP2 Family"
                      },
                      {
                         "value": "SCOP2_SUPERFAMILY",
-                        "detail": "SCOP2 - Structural Classification of Proteins 2 Superfamily"
-                     },
-                     {
-                        "value": "SHEET",
-                        "detail": "Beta-sheets"
+                        "detail": "SCOP2 - Structural Classification of Proteins 2 Superfamily",
+                        "name": "SCOP2 Superfamily"
                      },
                      {
                         "value": "STEREO_OUTLIER",
-                        "detail": "Stereochemical/chirality outlier"
+                        "detail": "Stereochemical/chirality outlier",
+                        "name": "Stereochemical/chirality outlier"
+                     },
+                     {
+                        "value": "STRN",
+                        "detail": "Strand or beta-bridge (protein)",
+                        "name": "Strand or beta-bridge (protein)"
+                     },
+                     {
+                        "value": "TURN_TY1_P",
+                        "detail": "Type I turn (protein)",
+                        "name": "Type I turn (protein)"
                      },
                      {
                         "value": "UNASSIGNED_SEC_STRUCT",
-                        "detail": "Unassigned secondary structure"
+                        "detail": "Unassigned secondary structure",
+                        "name": "Unassigned secondary structure"
                      },
                      {
                         "value": "UNOBSERVED_ATOM_XYZ",
-                        "detail": "Unobserved atom coordinates"
+                        "detail": "Unobserved atom coordinates",
+                        "name": "Unobserved Atoms"
                      },
                      {
                         "value": "UNOBSERVED_RESIDUE_XYZ",
-                        "detail": "Unobserved residue coordinates"
+                        "detail": "Unobserved residue coordinates",
+                        "name": "Unobserved Residues"
                      },
                      {
                         "value": "ZERO_OCCUPANCY_ATOM_XYZ",
-                        "detail": "Atom coordinates with zero occupancy"
+                        "detail": "Atom coordinates with zero occupancy",
+                        "name": "Zero Occupancy Atoms"
                      },
                      {
                         "value": "ZERO_OCCUPANCY_RESIDUE_XYZ",
-                        "detail": "Residue coordinates with zero occupancy"
+                        "detail": "Residue coordinates with zero occupancy",
+                        "name": "Zero Occupancy Residues"
                      }
                   ],
                   "rcsb_description": [
@@ -2013,6 +2240,104 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "struct_asym": {
+         "type": "object",
+         "properties": {
+            "pdbx_PDB_id": {
+               "type": "string",
+               "examples": [
+                  "1ABC"
+               ],
+               "description": "This data item is a pointer to _atom_site.pdbx_PDB_strand_id the\n ATOM_SITE category.",
+               "rcsb_description": [
+                  {
+                     "text": "This data item is a pointer to _atom_site.pdbx_PDB_strand_id the\n ATOM_SITE category.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "pdbx_alt_id": {
+               "type": "string",
+               "description": "This data item is a pointer to _atom_site.ndb_alias_strand_id the\n ATOM_SITE category.",
+               "rcsb_description": [
+                  {
+                     "text": "This data item is a pointer to _atom_site.ndb_alias_strand_id the\n ATOM_SITE category.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "pdbx_order": {
+               "type": "integer",
+               "description": "This data item gives the order of the structural elements in the\n ATOM_SITE category.",
+               "rcsb_description": [
+                  {
+                     "text": "This data item gives the order of the structural elements in the\n ATOM_SITE category.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "pdbx_type": {
+               "type": "string",
+               "enum": [
+                  "ATOMN",
+                  "ATOMP",
+                  "ATOMS",
+                  "HETAC",
+                  "HETAD",
+                  "HETAI",
+                  "HETAIN",
+                  "HETAS",
+                  "HETIC"
+               ],
+               "description": "This data item describes the general type of the structural elements\n in the ATOM_SITE category.",
+               "rcsb_enum_annotated": [
+                  {
+                     "value": "ATOMN",
+                     "detail": "nucleic acid"
+                  },
+                  {
+                     "value": "ATOMP",
+                     "detail": "protein"
+                  },
+                  {
+                     "value": "ATOMS",
+                     "detail": "sugar"
+                  },
+                  {
+                     "value": "HETAC",
+                     "detail": "coenzyme"
+                  },
+                  {
+                     "value": "HETAD",
+                     "detail": "drug"
+                  },
+                  {
+                     "value": "HETAI",
+                     "detail": "ion"
+                  },
+                  {
+                     "value": "HETAIN",
+                     "detail": "inhibitor"
+                  },
+                  {
+                     "value": "HETAS",
+                     "detail": "solvent"
+                  },
+                  {
+                     "value": "HETIC",
+                     "detail": "ion complex"
+                  }
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "This data item describes the general type of the structural elements\n in the ATOM_SITE category.",
+                     "context": "dictionary"
+                  }
+               ]
+            }
+         },
+         "additionalProperties": false
+      },
       "rcsb_id": {
          "type": "string",
          "examples": [
@@ -2037,7 +2362,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 9.2.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 9.2.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 9.2.1"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 10.0.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 10.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 10.0.0"
 }

@@ -2691,6 +2691,20 @@
                "structure_id": {
                   "type": "string"
                },
+               "criteria": {
+                  "type": "string",
+                  "examples": [
+                     "author judgement",
+                     "phi=54-74, psi=30-50"
+                  ],
+                  "description": "The criteria used to assign this conformation type.",
+                  "rcsb_description": [
+                     {
+                        "text": "The criteria used to assign this conformation type.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "id": {
                   "type": "string",
                   "enum": [

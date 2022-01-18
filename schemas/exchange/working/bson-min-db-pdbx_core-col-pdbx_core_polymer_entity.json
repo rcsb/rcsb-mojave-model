@@ -28,6 +28,13 @@
             "pdbx_seq_one_letter_code_can": {
                "bsonType": "string"
             },
+            "pdbx_sequence_evidence_code": {
+               "bsonType": "string",
+               "enum": [
+                  "depositor provided",
+                  "derived from coordinates"
+               ]
+            },
             "pdbx_strand_id": {
                "bsonType": "string"
             },
@@ -346,6 +353,139 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "ma_struct_assembly": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "assembly_id": {
+                  "bsonType": "int"
+               },
+               "asym_id": {
+                  "bsonType": "string"
+               },
+               "entity_id": {
+                  "bsonType": "string"
+               },
+               "ordinal_id": {
+                  "bsonType": "int"
+               },
+               "seq_id_begin": {
+                  "bsonType": "int"
+               },
+               "seq_id_end": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_target_entity": {
+         "bsonType": "object",
+         "properties": {
+            "data_id": {
+               "bsonType": "int"
+            },
+            "entity_id": {
+               "bsonType": "string"
+            },
+            "origin": {
+               "bsonType": "string",
+               "enum": [
+                  "designed",
+                  "reference database"
+               ]
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "entity_id"
+         ]
+      },
+      "ma_target_entity_instance": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "asym_id": {
+                  "bsonType": "string"
+               },
+               "entity_id": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "asym_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_target_ref_db_details": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "db_accession": {
+                  "bsonType": "string"
+               },
+               "db_code": {
+                  "bsonType": "string"
+               },
+               "db_name": {
+                  "bsonType": "string",
+                  "enum": [
+                     "GB",
+                     "JGI",
+                     "NCBI",
+                     "OrthoDB",
+                     "Other",
+                     "UNP"
+                  ]
+               },
+               "db_name_other_details": {
+                  "bsonType": "string"
+               },
+               "gene_name": {
+                  "bsonType": "string"
+               },
+               "ncbi_taxonomy_id": {
+                  "bsonType": "string"
+               },
+               "organism_scientific": {
+                  "bsonType": "string"
+               },
+               "seq_db_align_begin": {
+                  "bsonType": "string"
+               },
+               "seq_db_align_end": {
+                  "bsonType": "string"
+               },
+               "seq_db_sequence_checksum": {
+                  "bsonType": "string"
+               },
+               "seq_db_sequence_version_date": {
+                  "bsonType": "date"
+               },
+               "target_entity_id": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "db_name",
+               "target_entity_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_entity_src_syn": {
          "bsonType": "array",
          "items": {
@@ -494,7 +634,8 @@
                "provenance_source": {
                   "bsonType": "string",
                   "enum": [
-                     "PDB Primary Data"
+                     "PDB Primary Data",
+                     "UniProt"
                   ]
                },
                "scientific_name": {
@@ -857,7 +998,8 @@
                         "enum": [
                            "PDB",
                            "RCSB",
-                           "SIFTS"
+                           "SIFTS",
+                           "UniProt"
                         ]
                      }
                   },

@@ -1,6 +1,73 @@
 {
    "bsonType": "object",
    "properties": {
+      "ma_qa_metric_local": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "label_asym_id": {
+                  "bsonType": "string"
+               },
+               "label_comp_id": {
+                  "bsonType": "string"
+               },
+               "label_seq_id": {
+                  "bsonType": "int"
+               },
+               "metric_id": {
+                  "bsonType": "int"
+               },
+               "metric_value": {
+                  "bsonType": "double"
+               },
+               "model_id": {
+                  "bsonType": "int"
+               },
+               "ordinal_id": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_struct_assembly": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "assembly_id": {
+                  "bsonType": "int"
+               },
+               "asym_id": {
+                  "bsonType": "string"
+               },
+               "entity_id": {
+                  "bsonType": "string"
+               },
+               "ordinal_id": {
+                  "bsonType": "int"
+               },
+               "seq_id_begin": {
+                  "bsonType": "int"
+               },
+               "seq_id_end": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_struct_special_symmetry": {
          "bsonType": "array",
          "items": {
@@ -212,13 +279,17 @@
                   "bsonType": "string",
                   "enum": [
                      "ANGLE_OUTLIER",
+                     "BEND",
                      "BINDING_SITE",
                      "BOND_OUTLIER",
                      "C-MANNOSYLATION_SITE",
                      "CATH",
                      "CIS-PEPTIDE",
                      "ECOD",
-                     "HELIX_P",
+                     "HELX_LH_PP_P",
+                     "HELX_RH_3T_P",
+                     "HELX_RH_AL_P",
+                     "HELX_RH_PI_P",
                      "MEMBRANE_SEGMENT",
                      "MOGUL_ANGLE_OUTLIER",
                      "MOGUL_BOND_OUTLIER",
@@ -236,8 +307,9 @@
                      "SCOP2B_SUPERFAMILY",
                      "SCOP2_FAMILY",
                      "SCOP2_SUPERFAMILY",
-                     "SHEET",
                      "STEREO_OUTLIER",
+                     "STRN",
+                     "TURN_TY1_P",
                      "UNASSIGNED_SEC_STRUCT",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
@@ -362,13 +434,17 @@
                   "bsonType": "string",
                   "enum": [
                      "ANGLE_OUTLIER",
+                     "BEND",
                      "BINDING_SITE",
                      "BOND_OUTLIER",
                      "C-MANNOSYLATION_SITE",
                      "CATH",
                      "CIS-PEPTIDE",
                      "ECOD",
-                     "HELIX_P",
+                     "HELX_LH_PP_P",
+                     "HELX_RH_3T_P",
+                     "HELX_RH_AL_P",
+                     "HELX_RH_PI_P",
                      "MEMBRANE_SEGMENT",
                      "MOGUL_ANGLE_OUTLIER",
                      "MOGUL_BOND_OUTLIER",
@@ -382,18 +458,13 @@
                      "SABDAB_ANTIBODY_HEAVY_CHAIN_SUBCLASS",
                      "SABDAB_ANTIBODY_LIGHT_CHAIN_SUBCLASS",
                      "SABDAB_ANTIBODY_LIGHT_CHAIN_TYPE",
-                     "SAbDab Antibody Heavy Chain Subclass",
-                     "SAbDab Antibody Light Chain Subclass",
-                     "SAbDab Antibody Light Chain Type",
                      "SCOP",
-                     "SCOP2 Family",
-                     "SCOP2 Superfamily",
-                     "SCOP2B Superfamily",
                      "SCOP2B_SUPERFAMILY",
                      "SCOP2_FAMILY",
                      "SCOP2_SUPERFAMILY",
-                     "SHEET",
                      "STEREO_OUTLIER",
+                     "STRN",
+                     "TURN_TY1_P",
                      "UNASSIGNED_SEC_STRUCT",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
@@ -527,6 +598,35 @@
          },
          "minItems": 1,
          "uniqueItems": true
+      },
+      "struct_asym": {
+         "bsonType": "object",
+         "properties": {
+            "pdbx_PDB_id": {
+               "bsonType": "string"
+            },
+            "pdbx_alt_id": {
+               "bsonType": "string"
+            },
+            "pdbx_order": {
+               "bsonType": "int"
+            },
+            "pdbx_type": {
+               "bsonType": "string",
+               "enum": [
+                  "ATOMN",
+                  "ATOMP",
+                  "ATOMS",
+                  "HETAC",
+                  "HETAD",
+                  "HETAI",
+                  "HETAIN",
+                  "HETAS",
+                  "HETIC"
+               ]
+            }
+         },
+         "additionalProperties": false
       },
       "rcsb_id": {
          "bsonType": "string"

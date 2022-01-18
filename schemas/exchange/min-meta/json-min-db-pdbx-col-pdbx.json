@@ -1536,6 +1536,19 @@
                      }
                   ]
                },
+               "journal_full": {
+                  "type": "string",
+                  "examples": [
+                     "Journal of Molecular Biology"
+                  ],
+                  "description": "Full name of the cited journal; relevant for journal articles.",
+                  "rcsb_description": [
+                     {
+                        "text": "Full name of the cited journal; relevant for journal articles.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "journal_id_ASTM": {
                   "type": "string",
                   "description": "The American Society for Testing and Materials (ASTM) code\n assigned to the journal cited (also referred to as the CODEN\n designator of the Chemical Abstracts Service); relevant for\n journal articles.",
@@ -7880,6 +7893,20 @@
                      }
                   ]
                },
+               "pdbx_sequence_evidence_code": {
+                  "type": "string",
+                  "enum": [
+                     "depositor provided",
+                     "derived from coordinates"
+                  ],
+                  "description": "Evidence for the assignment of the polymer sequence.",
+                  "rcsb_description": [
+                     {
+                        "text": "Evidence for the assignment of the polymer sequence.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "pdbx_strand_id": {
                   "type": "string",
                   "examples": [
@@ -10504,6 +10531,16 @@
                   "rcsb_description": [
                      {
                         "text": "The type of file that the pdbx_audit_revision_history record refers to.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "description": {
+                  "type": "string",
+                  "description": "Additional details describing the revision.",
+                  "rcsb_description": [
+                     {
+                        "text": "Additional details describing the revision.",
                         "context": "dictionary"
                      }
                   ]
@@ -17794,6 +17831,65 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "pdbx_seq_map_depositor_info": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "structure_id": {
+                  "type": "string"
+               },
+               "auth_asym_id": {
+                  "type": "string",
+                  "description": "This data item is a pointer to _atom_site.auth_asym_id in the ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is a pointer to _atom_site.auth_asym_id in the ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "entity_id": {
+                  "type": "string",
+                  "description": "This data item is a pointer to _entity_poly.entity_id in the ENTITY_POLY category.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is a pointer to _entity_poly.entity_id in the ENTITY_POLY category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "one_letter_code": {
+                  "type": "string",
+                  "description": "Coordinate sequence expressed as string of one-letter residue codes.",
+                  "rcsb_description": [
+                     {
+                        "text": "Coordinate sequence expressed as string of one-letter residue codes.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "one_letter_code_mod": {
+                  "type": "string",
+                  "description": "Coordinate sequence expressed as string of one-letter residue codes with\n nonstandard residues expressed as 3-letter codes in parentheses.",
+                  "rcsb_description": [
+                     {
+                        "text": "Coordinate sequence expressed as string of one-letter residue codes with\n nonstandard residues expressed as 3-letter codes in parentheses.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "structure_id",
+               "auth_asym_id",
+               "entity_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_soln_scatter": {
          "type": "array",
          "items": {
@@ -24509,6 +24605,16 @@
                "structure_id": {
                   "type": "string"
                },
+               "citation_id": {
+                  "type": "string",
+                  "description": "This data item is a pointer to _citation.id in the CITATION\n category.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is a pointer to _citation.id in the CITATION\n category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "classification": {
                   "type": "string",
                   "examples": [
@@ -25038,6 +25144,29 @@
                      }
                   ]
                },
+               "pdbx_PDB_id": {
+                  "type": "string",
+                  "examples": [
+                     "1ABC"
+                  ],
+                  "description": "This data item is a pointer to _atom_site.pdbx_PDB_strand_id the\n ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is a pointer to _atom_site.pdbx_PDB_strand_id the\n ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "pdbx_alt_id": {
+                  "type": "string",
+                  "description": "This data item is a pointer to _atom_site.ndb_alias_strand_id the\n ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is a pointer to _atom_site.ndb_alias_strand_id the\n ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "pdbx_blank_PDB_chainid_flag": {
                   "type": "string",
                   "enum": [
@@ -25071,6 +25200,75 @@
                   "rcsb_description": [
                      {
                         "text": "This data item indicates whether the structural elements are modified.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "pdbx_order": {
+                  "type": "integer",
+                  "description": "This data item gives the order of the structural elements in the\n ATOM_SITE category.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item gives the order of the structural elements in the\n ATOM_SITE category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "pdbx_type": {
+                  "type": "string",
+                  "enum": [
+                     "ATOMN",
+                     "ATOMP",
+                     "ATOMS",
+                     "HETAC",
+                     "HETAD",
+                     "HETAI",
+                     "HETAIN",
+                     "HETAS",
+                     "HETIC"
+                  ],
+                  "description": "This data item describes the general type of the structural elements\n in the ATOM_SITE category.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "ATOMN",
+                        "detail": "nucleic acid"
+                     },
+                     {
+                        "value": "ATOMP",
+                        "detail": "protein"
+                     },
+                     {
+                        "value": "ATOMS",
+                        "detail": "sugar"
+                     },
+                     {
+                        "value": "HETAC",
+                        "detail": "coenzyme"
+                     },
+                     {
+                        "value": "HETAD",
+                        "detail": "drug"
+                     },
+                     {
+                        "value": "HETAI",
+                        "detail": "ion"
+                     },
+                     {
+                        "value": "HETAIN",
+                        "detail": "inhibitor"
+                     },
+                     {
+                        "value": "HETAS",
+                        "detail": "solvent"
+                     },
+                     {
+                        "value": "HETIC",
+                        "detail": "ion complex"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "This data item describes the general type of the structural elements\n in the ATOM_SITE category.",
                         "context": "dictionary"
                      }
                   ]
@@ -26054,6 +26252,20 @@
                   "rcsb_description": [
                      {
                         "text": "Beginning index in the chemical sequence from the\nreference database.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "pdbx_align_end": {
+                  "type": "string",
+                  "examples": [
+                     "105",
+                     "245"
+                  ],
+                  "description": "Ending index in the chemical sequence from the\nreference database.",
+                  "rcsb_description": [
+                     {
+                        "text": "Ending index in the chemical sequence from the\nreference database.",
                         "context": "dictionary"
                      }
                   ]
