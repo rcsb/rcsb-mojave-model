@@ -167,6 +167,48 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "database_2": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "database_code": {
+                  "bsonType": "string"
+               },
+               "database_id": {
+                  "bsonType": "string",
+                  "enum": [
+                     "AFDB",
+                     "BMRB",
+                     "CAS",
+                     "CSD",
+                     "EBI",
+                     "EMDB",
+                     "ICSD",
+                     "MA",
+                     "MDF",
+                     "MODBASE",
+                     "NBS",
+                     "NDB",
+                     "PDB",
+                     "PDBE",
+                     "PDB_ACC",
+                     "PDF",
+                     "RCSB",
+                     "SMR",
+                     "WWPDB"
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "database_code",
+               "database_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "diffrn": {
          "bsonType": "array",
          "items": {
@@ -3832,7 +3874,6 @@
             "experimental_method": {
                "bsonType": "string",
                "enum": [
-                  "Computational modeling",
                   "EM",
                   "Multiple methods",
                   "NMR",
@@ -3958,6 +3999,14 @@
             },
             "solvent_entity_count": {
                "bsonType": "int"
+            },
+            "structure_determination_methodology": {
+               "bsonType": "string",
+               "enum": [
+                  "computational",
+                  "experimental",
+                  "integrative"
+               ]
             },
             "diffrn_resolution_high": {
                "bsonType": "object",

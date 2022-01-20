@@ -3508,13 +3508,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "AFDB",
                   "BMRB",
                   "CAS",
                   "CSD",
                   "EBI",
                   "EMDB",
                   "ICSD",
+                  "MA",
                   "MDF",
+                  "MODBASE",
                   "NBS",
                   "NDB",
                   "PDB",
@@ -3522,6 +3525,7 @@
                   "PDB_ACC",
                   "PDF",
                   "RCSB",
+                  "SMR",
                   "WWPDB"
                ],
                "CONTENT_CLASSES": [],
@@ -19865,7 +19869,7 @@
          "SCHEMA_TYPE": "transactional",
          "SCHEMA_UNIT_CARDINALITY": false,
          "SCHEMA_CONTENT_CLASSES": [],
-         "SCHEMA_MANDATORY": true,
+         "SCHEMA_MANDATORY": false,
          "SCHEMA_SUB_CATEGORIES": [],
          "ATTRIBUTES": {
             "ORDINAL_ID": "ordinal_id",
@@ -21327,7 +21331,7 @@
          "SCHEMA_TYPE": "transactional",
          "SCHEMA_UNIT_CARDINALITY": false,
          "SCHEMA_CONTENT_CLASSES": [],
-         "SCHEMA_MANDATORY": true,
+         "SCHEMA_MANDATORY": false,
          "SCHEMA_SUB_CATEGORIES": [],
          "ATTRIBUTES": {
             "ORDINAL_ID": "ordinal_id",
@@ -81834,7 +81838,8 @@
             "RESOLUTION_COMBINED": "resolution_combined",
             "SELECTED_POLYMER_ENTITY_TYPES": "selected_polymer_entity_types",
             "SOFTWARE_PROGRAMS_COMBINED": "software_programs_combined",
-            "SOLVENT_ENTITY_COUNT": "solvent_entity_count"
+            "SOLVENT_ENTITY_COUNT": "solvent_entity_count",
+            "STRUCTURE_DETERMINATION_METHODOLOGY": "structure_determination_methodology"
          },
          "ATTRIBUTE_MAP": {
             "ENTRY_ID": {
@@ -82116,6 +82121,12 @@
             "SOLVENT_ENTITY_COUNT": {
                "CATEGORY": "rcsb_entry_info",
                "ATTRIBUTE": "solvent_entity_count",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "STRUCTURE_DETERMINATION_METHODOLOGY": {
+               "CATEGORY": "rcsb_entry_info",
+               "ATTRIBUTE": "structure_determination_methodology",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             }
@@ -82497,7 +82508,6 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
-                  "Computational modeling",
                   "EM",
                   "Multiple methods",
                   "NMR",
@@ -82958,6 +82968,27 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": false,
                "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "STRUCTURE_DETERMINATION_METHODOLOGY": {
+               "ORDER": 48,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "computational",
+                  "experimental",
+                  "integrative"
+               ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
                ],
@@ -113072,6 +113103,7 @@
                "STRUCT",
                "STRUCT_KEYWORDS",
                "SYMMETRY",
+               "DATABASE_2",
                "MA_DATA",
                "MA_MODEL_LIST",
                "MA_QA_METRIC",

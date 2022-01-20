@@ -763,6 +763,155 @@
          "uniqueItems": true,
          "rcsb_nested_indexing": true
       },
+      "database_2": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "database_code": {
+                  "type": "string",
+                  "examples": [
+                     "1ABC",
+                     "ABCDEF"
+                  ],
+                  "description": "The code assigned by the database identified in\n _database_2.database_id.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "The code assigned by the database identified in\n _database_2.database_id.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "database_id": {
+                  "type": "string",
+                  "enum": [
+                     "AFDB",
+                     "BMRB",
+                     "CAS",
+                     "CSD",
+                     "EBI",
+                     "EMDB",
+                     "ICSD",
+                     "MA",
+                     "MDF",
+                     "MODBASE",
+                     "NBS",
+                     "NDB",
+                     "PDB",
+                     "PDBE",
+                     "PDB_ACC",
+                     "PDF",
+                     "RCSB",
+                     "SMR",
+                     "WWPDB"
+                  ],
+                  "description": "An abbreviation that identifies the database.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "full-text",
+                     "suggest"
+                  ],
+                  "rcsb_full_text_priority": 20,
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "AFDB",
+                        "detail": "                                 AlphaFoldDB"
+                     },
+                     {
+                        "value": "BMRB",
+                        "detail": "                                 Biological Magnetic Reference Data Bank"
+                     },
+                     {
+                        "value": "CAS",
+                        "detail": "                                 Chemical Abstracts"
+                     },
+                     {
+                        "value": "CSD",
+                        "detail": "                                 Cambridge Structural Database\n                                  (organic and metal-organic compounds)"
+                     },
+                     {
+                        "value": "EBI",
+                        "detail": "                                 European Bioinformatics Institute"
+                     },
+                     {
+                        "value": "EMDB",
+                        "detail": "                                 Electron Microscopy Data Bank"
+                     },
+                     {
+                        "value": "ICSD",
+                        "detail": "                                 Inorganic Crystal Structure Database"
+                     },
+                     {
+                        "value": "MA",
+                        "detail": "                                 ModelArchive"
+                     },
+                     {
+                        "value": "MDF",
+                        "detail": "                                 Metals Data File (metal structures)"
+                     },
+                     {
+                        "value": "MODBASE",
+                        "detail": "                                 Database of Comparative Protein Structure Models"
+                     },
+                     {
+                        "value": "NBS",
+                        "detail": "                                 NBS (NIST) Crystal Data Database\n                                  (lattice parameters)"
+                     },
+                     {
+                        "value": "NDB",
+                        "detail": "                                 Nucleic Acid Database"
+                     },
+                     {
+                        "value": "PDB",
+                        "detail": "                                 Protein Data Bank"
+                     },
+                     {
+                        "value": "PDBE",
+                        "detail": "                                 Protein Data Bank Europe"
+                     },
+                     {
+                        "value": "PDB_ACC",
+                        "detail": "                                 Protein Data Bank Versioned Accession"
+                     },
+                     {
+                        "value": "PDF",
+                        "detail": "                                 Powder Diffraction File (JCPDS/ICDD)"
+                     },
+                     {
+                        "value": "RCSB",
+                        "detail": "                                 Research Collaboratory for Structural Bioinformatics"
+                     },
+                     {
+                        "value": "SMR",
+                        "detail": "                                 Swiss-Model Repository"
+                     },
+                     {
+                        "value": "WWPDB",
+                        "detail": "                                 Worldwide Protein Data Bank"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "An abbreviation that identifies the database.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "database_code",
+               "database_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "diffrn": {
          "type": "array",
          "items": {
@@ -795,7 +944,7 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Give the temperature in Kelvin that the data were collected at",
+                        "text": "The usual temperature when using cold nitrogen gas stream is around T=100 K",
                         "context": "deposition"
                      },
                      {
@@ -1325,7 +1474,7 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Provide the wavelength(s) in Angstrom used for data collection. Multiple wavelengths should be comma separated. For Laue experiments, indicate the range with a hyphen.",
+                        "text": "Provide the wavelength(s) in angstrom used for data collection. Multiple wavelengths should be comma separated. For Laue experiments, indicate the range with a hyphen.",
                         "context": "deposition"
                      }
                   ]
@@ -1449,28 +1598,28 @@
                },
                "length_a": {
                   "type": "number",
-                  "description": "Unit-cell length a in Angstroms.",
+                  "description": "Unit-cell length a in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "Unit-cell length a in Angstroms.",
+                        "text": "Unit-cell length a in angstroms.",
                         "context": "dictionary"
                      }
                   ]
                },
                "length_b": {
                   "type": "number",
-                  "description": "Unit-cell length b in Angstroms.",
+                  "description": "Unit-cell length b in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "Unit-cell length b in Angstroms.",
+                        "text": "Unit-cell length b in angstroms.",
                         "context": "dictionary"
                      }
                   ]
@@ -1667,42 +1816,42 @@
                },
                "length_a": {
                   "type": "number",
-                  "description": "Unit-cell length a in Angstroms.",
+                  "description": "Unit-cell length a in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "Unit-cell length a in Angstroms.",
+                        "text": "Unit-cell length a in angstroms.",
                         "context": "dictionary"
                      }
                   ]
                },
                "length_b": {
                   "type": "number",
-                  "description": "Unit-cell length b in Angstroms.",
+                  "description": "Unit-cell length b in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "Unit-cell length b in Angstroms.",
+                        "text": "Unit-cell length b in angstroms.",
                         "context": "dictionary"
                      }
                   ]
                },
                "length_c": {
                   "type": "number",
-                  "description": "Unit-cell length c in Angstroms.",
+                  "description": "Unit-cell length c in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "Unit-cell length c in Angstroms.",
+                        "text": "Unit-cell length c in angstroms.",
                         "context": "dictionary"
                      }
                   ]
@@ -2132,14 +2281,14 @@
                      8.9,
                      10.0
                   ],
-                  "description": "The final resolution (in Angstroms)of the 3D reconstruction.",
+                  "description": "The final resolution (in angstroms)of the 3D reconstruction.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "The final resolution (in Angstroms)of the 3D reconstruction.",
+                        "text": "The final resolution (in angstroms)of the 3D reconstruction.",
                         "context": "dictionary"
                      },
                      {
@@ -2363,14 +2512,14 @@
                   "examples": [
                      3.0
                   ],
-                  "description": "High resolution limit for this shell (Angstroms)",
+                  "description": "High resolution limit for this shell (angstroms)",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "High resolution limit for this shell (Angstroms)",
+                        "text": "High resolution limit for this shell (angstroms)",
                         "context": "dictionary"
                      }
                   ]
@@ -2390,14 +2539,14 @@
                   "examples": [
                      5.5
                   ],
-                  "description": "Low resolution limit for this shell (Angstroms)",
+                  "description": "Low resolution limit for this shell (angstroms)",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "Low resolution limit for this shell (Angstroms)",
+                        "text": "Low resolution limit for this shell (angstroms)",
                         "context": "dictionary"
                      }
                   ]
@@ -2496,14 +2645,14 @@
                   "examples": [
                      7.5
                   ],
-                  "description": "High resolution limit of the structure factor data, in Angstroms",
+                  "description": "High resolution limit of the structure factor data, in angstroms",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "High resolution limit of the structure factor data, in Angstroms",
+                        "text": "High resolution limit of the structure factor data, in angstroms",
                         "context": "dictionary"
                      }
                   ]
@@ -3608,28 +3757,28 @@
                },
                "recording_temperature_maximum": {
                   "type": "number",
-                  "description": "The specimen temperature maximum (degrees Kelvin) for the duration\n of imaging.",
+                  "description": "The specimen temperature maximum (kelvin) for the duration\n of imaging.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
-                        "text": "The specimen temperature maximum (degrees Kelvin) for the duration\n of imaging.",
+                        "text": "The specimen temperature maximum (kelvin) for the duration\n of imaging.",
                         "context": "dictionary"
                      }
                   ]
                },
                "recording_temperature_minimum": {
                   "type": "number",
-                  "description": "The specimen temperature minimum (degrees Kelvin) for the duration\n of imaging.",
+                  "description": "The specimen temperature minimum (kelvin) for the duration\n of imaging.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
-                        "text": "The specimen temperature minimum (degrees Kelvin) for the duration\n of imaging.",
+                        "text": "The specimen temperature minimum (kelvin) for the duration\n of imaging.",
                         "context": "dictionary"
                      }
                   ]
@@ -3715,14 +3864,14 @@
                },
                "temperature": {
                   "type": "number",
-                  "description": "The mean specimen stage temperature (degrees Kelvin) during imaging\n in the microscope.",
+                  "description": "The mean specimen stage temperature (in kelvin) during imaging\n in the microscope.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
-                        "text": "The mean specimen stage temperature (degrees Kelvin) during imaging\n in the microscope.",
+                        "text": "The mean specimen stage temperature (in kelvin) during imaging\n in the microscope.",
                         "context": "dictionary"
                      }
                   ]
@@ -4285,14 +4434,14 @@
             "properties": {
                "chamber_temperature": {
                   "type": "number",
-                  "description": "The temperature (in degrees Kelvin) of the sample just prior to vitrification.",
+                  "description": "The temperature (in kelvin) of the sample just prior to vitrification.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
-                        "text": "The temperature (in degrees Kelvin) of the sample just prior to vitrification.",
+                        "text": "The temperature (in kelvin) of the sample just prior to vitrification.",
                         "context": "dictionary"
                      }
                   ]
@@ -4428,14 +4577,14 @@
                },
                "temp": {
                   "type": "number",
-                  "description": "The vitrification temperature (in degrees Kelvin), e.g.,\n  temperature of the plunge instrument cryogen bath.",
+                  "description": "The vitrification temperature (in kelvin), e.g.,\n  temperature of the plunge instrument cryogen bath.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
-                        "text": "The vitrification temperature (in degrees Kelvin), e.g.,\n  temperature of the plunge instrument cryogen bath.",
+                        "text": "The vitrification temperature (in kelvin), e.g.,\n  temperature of the plunge instrument cryogen bath.",
                         "context": "dictionary"
                      }
                   ]
@@ -8549,10 +8698,10 @@
                },
                "temperature": {
                   "type": "string",
-                  "description": "The temperature (in Kelvin) at which NMR data were\n collected.",
+                  "description": "The temperature (in kelvin) at which NMR data were\n collected.",
                   "rcsb_description": [
                      {
-                        "text": "The temperature (in Kelvin) at which NMR data were\n collected.",
+                        "text": "The temperature (in kelvin) at which NMR data were\n collected.",
                         "context": "dictionary"
                      }
                   ]
@@ -12543,7 +12692,6 @@
             "experimental_method": {
                "type": "string",
                "enum": [
-                  "Computational modeling",
                   "EM",
                   "Multiple methods",
                   "NMR",
@@ -12562,12 +12710,8 @@
                "rcsb_full_text_priority": 20,
                "rcsb_enum_annotated": [
                   {
-                     "value": "Computational modeling",
-                     "detail": "AB INITIO MODEL or HOMOLOGY MODEL"
-                  },
-                  {
                      "value": "EM",
-                     "detail": "ELECTRON MICROSCOPY or ELECTRON CRYSTALLOGRAPHY or ELECTRON TOMOGRAPH"
+                     "detail": "ELECTRON MICROSCOPY or ELECTRON CRYSTALLOGRAPHY or ELECTRON TOMOGRAPHY"
                   },
                   {
                      "value": "Multiple methods",
@@ -12583,7 +12727,7 @@
                   },
                   {
                      "value": "Other",
-                     "detail": "SOLUTION SCATTERING, EPR, THEORETICAL MODEL, INFRARED SPECTROSCOPY or FLUORESCENCE TRANSFER"
+                     "detail": "SOLUTION SCATTERING, EPR, INFRARED SPECTROSCOPY or FLUORESCENCE TRANSFER"
                   },
                   {
                      "value": "X-ray",
@@ -13241,6 +13385,38 @@
                   {
                      "text": "Number of Distinct Solvent Entities",
                      "context": "brief"
+                  }
+               ]
+            },
+            "structure_determination_methodology": {
+               "type": "string",
+               "enum": [
+                  "computational",
+                  "experimental",
+                  "integrative"
+               ],
+               "examples": [
+                  "experimental"
+               ],
+               "description": "Indicates if the structure was determined using experimental, computational, or integrative methods.",
+               "rcsb_enum_annotated": [
+                  {
+                     "value": "computational",
+                     "detail": "Computational modeling"
+                  },
+                  {
+                     "value": "experimental",
+                     "detail": "Experimentally based structure determination"
+                  },
+                  {
+                     "value": "integrative",
+                     "detail": "Integrative/Hybrid methods"
+                  }
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "Indicates if the structure was determined using experimental, computational, or integrative methods.",
+                     "context": "dictionary"
                   }
                ]
             },
