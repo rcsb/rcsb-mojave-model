@@ -1003,17 +1003,13 @@
                   "type": "string",
                   "enum": [
                      "ANGLE_OUTLIER",
-                     "BEND",
                      "BINDING_SITE",
                      "BOND_OUTLIER",
                      "C-MANNOSYLATION_SITE",
                      "CATH",
                      "CIS-PEPTIDE",
                      "ECOD",
-                     "HELX_LH_PP_P",
-                     "HELX_RH_3T_P",
-                     "HELX_RH_AL_P",
-                     "HELX_RH_PI_P",
+                     "HELIX_P",
                      "MEMBRANE_SEGMENT",
                      "MOGUL_ANGLE_OUTLIER",
                      "MOGUL_BOND_OUTLIER",
@@ -1031,9 +1027,8 @@
                      "SCOP2B_SUPERFAMILY",
                      "SCOP2_FAMILY",
                      "SCOP2_SUPERFAMILY",
+                     "SHEET",
                      "STEREO_OUTLIER",
-                     "STRN",
-                     "TURN_TY1_P",
                      "UNASSIGNED_SEC_STRUCT",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
@@ -1050,11 +1045,6 @@
                         "value": "ANGLE_OUTLIER",
                         "detail": "Molprobity bond angle outlier",
                         "name": "Molprobity bond angle outlier"
-                     },
-                     {
-                        "value": "BEND",
-                        "detail": "Bend - region with high backbone curvature without specific hydrogen bonding",
-                        "name": "Bend - region with high backbone curvature without specific hydrogen bonding"
                      },
                      {
                         "value": "BINDING_SITE",
@@ -1087,24 +1077,9 @@
                         "name": "ECOD"
                      },
                      {
-                        "value": "HELX_LH_PP_P",
-                        "detail": "Left-handed polyproline helix (protein)",
-                        "name": "Left-handed polyproline helix (protein)"
-                     },
-                     {
-                        "value": "HELX_RH_3T_P",
-                        "detail": "Right-handed 3-10 helix (protein)",
-                        "name": "Right-handed 3-10 helix (protein)"
-                     },
-                     {
-                        "value": "HELX_RH_AL_P",
-                        "detail": "Alpha helix (protein)",
-                        "name": "Alpha helix (protein)"
-                     },
-                     {
-                        "value": "HELX_RH_PI_P",
-                        "detail": "Right-handed pi helix (protein)",
-                        "name": "Right-handed pi helix (protein)"
+                        "value": "HELIX_P",
+                        "detail": "Protein helices",
+                        "name": "Protein helices"
                      },
                      {
                         "value": "MEMBRANE_SEGMENT",
@@ -1192,19 +1167,14 @@
                         "name": "SCOP2 Superfamily"
                      },
                      {
+                        "value": "SHEET",
+                        "detail": "Beta-sheets",
+                        "name": "Beta-sheets"
+                     },
+                     {
                         "value": "STEREO_OUTLIER",
                         "detail": "Stereochemical/chirality outlier",
                         "name": "Stereochemical/chirality outlier"
-                     },
-                     {
-                        "value": "STRN",
-                        "detail": "Strand or beta-bridge (protein)",
-                        "name": "Strand or beta-bridge (protein)"
-                     },
-                     {
-                        "value": "TURN_TY1_P",
-                        "detail": "Type I turn (protein)",
-                        "name": "Type I turn (protein)"
                      },
                      {
                         "value": "UNASSIGNED_SEC_STRUCT",
@@ -1586,17 +1556,13 @@
                   "type": "string",
                   "enum": [
                      "ANGLE_OUTLIER",
-                     "BEND",
                      "BINDING_SITE",
                      "BOND_OUTLIER",
                      "C-MANNOSYLATION_SITE",
                      "CATH",
                      "CIS-PEPTIDE",
                      "ECOD",
-                     "HELX_LH_PP_P",
-                     "HELX_RH_3T_P",
-                     "HELX_RH_AL_P",
-                     "HELX_RH_PI_P",
+                     "HELIX_P",
                      "MEMBRANE_SEGMENT",
                      "MOGUL_ANGLE_OUTLIER",
                      "MOGUL_BOND_OUTLIER",
@@ -1610,13 +1576,18 @@
                      "SABDAB_ANTIBODY_HEAVY_CHAIN_SUBCLASS",
                      "SABDAB_ANTIBODY_LIGHT_CHAIN_SUBCLASS",
                      "SABDAB_ANTIBODY_LIGHT_CHAIN_TYPE",
+                     "SAbDab Antibody Heavy Chain Subclass",
+                     "SAbDab Antibody Light Chain Subclass",
+                     "SAbDab Antibody Light Chain Type",
                      "SCOP",
+                     "SCOP2 Family",
+                     "SCOP2 Superfamily",
+                     "SCOP2B Superfamily",
                      "SCOP2B_SUPERFAMILY",
                      "SCOP2_FAMILY",
                      "SCOP2_SUPERFAMILY",
+                     "SHEET",
                      "STEREO_OUTLIER",
-                     "STRN",
-                     "TURN_TY1_P",
                      "UNASSIGNED_SEC_STRUCT",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
@@ -1635,188 +1606,148 @@
                   "rcsb_enum_annotated": [
                      {
                         "value": "ANGLE_OUTLIER",
-                        "detail": "Molprobity bond angle outlier",
-                        "name": "Molprobity bond angle outlier"
-                     },
-                     {
-                        "value": "BEND",
-                        "detail": "Bend - region with high backbone curvature without specific hydrogen bonding",
-                        "name": "Bend - region with high backbone curvature without specific hydrogen bonding"
+                        "detail": "Molprobity bond angle outlier"
                      },
                      {
                         "value": "BINDING_SITE",
-                        "detail": "Macromolecular target for ligand binding",
-                        "name": "Ligand Binding Site"
+                        "detail": "Macromolecular target for ligand binding"
                      },
                      {
                         "value": "BOND_OUTLIER",
-                        "detail": "Molprobity bond distance outlier",
-                        "name": "Molprobity bond distance outlier"
+                        "detail": "Molprobity bond distance outlier"
                      },
                      {
                         "value": "C-MANNOSYLATION_SITE",
-                        "detail": "Mannose glycan binding to the first tryptophan (W) residue in the sequence motif WXXW  (where X is any amino acid).",
-                        "name": "C-Mannosylation Site"
+                        "detail": "Mannose glycan binding to the first tryptophan (W) residue in the sequence motif WXXW  (where X is any amino acid)."
                      },
                      {
                         "value": "CATH",
-                        "detail": "CATH - Class, Architecture, Topology, and Homology Protein Structure Database",
-                        "name": "CATH"
+                        "detail": "CATH - Class, Architecture, Topology, and Homology Protein Structure Database"
                      },
                      {
                         "value": "CIS-PEPTIDE",
-                        "detail": "Peptide linkages with CIS configurations",
-                        "name": "CIS Peptide linkages"
+                        "detail": "Peptide linkages with CIS configurations"
                      },
                      {
-                        "value": "ECOD",
-                        "detail": "ECOD - An Evolutionary Classification of Protein Domains",
-                        "name": "ECOD"
+                        "value": "ECOD"
                      },
                      {
-                        "value": "HELX_LH_PP_P",
-                        "detail": "Left-handed polyproline helix (protein)",
-                        "name": "Left-handed polyproline helix (protein)"
-                     },
-                     {
-                        "value": "HELX_RH_3T_P",
-                        "detail": "Right-handed 3-10 helix (protein)",
-                        "name": "Right-handed 3-10 helix (protein)"
-                     },
-                     {
-                        "value": "HELX_RH_AL_P",
-                        "detail": "Alpha helix (protein)",
-                        "name": "Alpha helix (protein)"
-                     },
-                     {
-                        "value": "HELX_RH_PI_P",
-                        "detail": "Right-handed pi helix (protein)",
-                        "name": "Right-handed pi helix (protein)"
+                        "value": "HELIX_P",
+                        "detail": "Protein helices"
                      },
                      {
                         "value": "MEMBRANE_SEGMENT",
-                        "detail": "Extent of a region located in a membrane",
-                        "name": "Extent of a region located in a membrane"
+                        "detail": "Extent of a region located in a membrane"
                      },
                      {
                         "value": "MOGUL_ANGLE_OUTLIER",
-                        "detail": "Mogul bond angle outlier",
-                        "name": "Mogul bond angle outlier"
+                        "detail": "Mogul bond angle outlier"
                      },
                      {
                         "value": "MOGUL_BOND_OUTLIER",
-                        "detail": "Mogul bond distance outlier",
-                        "name": "Mogul bond distance outlier"
+                        "detail": "Mogul bond distance outlier"
                      },
                      {
                         "value": "N-GLYCOSYLATION_SITE",
-                        "detail": "Glycan binding to the amide nitrogen of an asparagine (Asn) residue",
-                        "name": "N-Glycosylation Site"
+                        "detail": "Glycan binding to the amide nitrogen of an asparagine (Asn) residue"
                      },
                      {
                         "value": "O-GLYCOSYLATION_SITE",
-                        "detail": "Glycan binding to the oxygen atom of serine (Ser) or threonine (Thr) residues",
-                        "name": "O-Glycosylation Site"
+                        "detail": "Glycan binding to the oxygen atom of serine (Ser) or threonine (Thr) residues"
                      },
                      {
                         "value": "RAMACHANDRAN_OUTLIER",
-                        "detail": "Molprobity Ramachandran outlier",
-                        "name": "Molprobity Ramachandran outlier"
+                        "detail": "Molprobity Ramachandran outlier"
                      },
                      {
                         "value": "ROTAMER_OUTLIER",
-                        "detail": "Molprobity rotamer outlier",
-                        "name": "Molprobity rotamer outlier"
+                        "detail": "Molprobity rotamer outlier"
                      },
                      {
                         "value": "RSCC_OUTLIER",
-                        "detail": "Real space density correlation value < 0.65",
-                        "name": "Real space density correlation outlier"
+                        "detail": "Real space density correlation value < 0.65"
                      },
                      {
                         "value": "RSRZ_OUTLIER",
-                        "detail": "Real space R-value Z score > 2",
-                        "name": "Real space outlier"
+                        "detail": "Real space R-value Z score > 2"
                      },
                      {
                         "value": "S-GLYCOSYLATION_SITE",
-                        "detail": "Glycan binding to the sulfur atom of a cysteine (Cys) residue",
-                        "name": "S-Glycosylation Site"
+                        "detail": "Glycan binding to the sulfur atom of a cysteine (Cys) residue"
                      },
                      {
                         "value": "SABDAB_ANTIBODY_HEAVY_CHAIN_SUBCLASS",
-                        "detail": "Structural Antibody Database (SAbDab) antibody heavy chain subclass (IGHV1, IGHV2,)",
-                        "name": "SAbDab Antibody Heavy Chain Subclass"
+                        "detail": "Structural Antibody Database (SAbDab) antibody heavy chain subclass (IGHV1, IGHV2,)"
                      },
                      {
                         "value": "SABDAB_ANTIBODY_LIGHT_CHAIN_SUBCLASS",
-                        "detail": "Structural Antibody Database (SAbDab) antibody light chain subclass (IGLV1, IGLV2, ...)",
-                        "name": "SAbDab Antibody Light Chain Subclass"
+                        "detail": "Structural Antibody Database (SAbDab) antibody light chain subclass (IGLV1, IGLV2, ...)"
                      },
                      {
                         "value": "SABDAB_ANTIBODY_LIGHT_CHAIN_TYPE",
-                        "detail": "Structural Antibody Database (SAbDab) antibody light chain type (Kappa or Lambda)",
-                        "name": "SAbDab Antibody Light Chain Type"
+                        "detail": "Structural Antibody Database (SAbDab) antibody light chain type (Kappa or Lambda)"
+                     },
+                     {
+                        "value": "SAbDab Antibody Heavy Chain Subclass"
+                     },
+                     {
+                        "value": "SAbDab Antibody Light Chain Subclass"
+                     },
+                     {
+                        "value": "SAbDab Antibody Light Chain Type"
                      },
                      {
                         "value": "SCOP",
-                        "detail": "SCOP - Structural Classification of Proteins",
-                        "name": "SCOP"
+                        "detail": "SCOP - Structural Classification of Proteins"
+                     },
+                     {
+                        "value": "SCOP2 Family"
+                     },
+                     {
+                        "value": "SCOP2 Superfamily"
+                     },
+                     {
+                        "value": "SCOP2B Superfamily"
                      },
                      {
                         "value": "SCOP2B_SUPERFAMILY",
-                        "detail": "SCOP2B - Structural Classification of Proteins 2 - Superfamily automated assignments",
-                        "name": "SCOP2B Superfamily"
+                        "detail": "SCOP2B - Structural Classification of Proteins 2 - Superfamily automated assignments"
                      },
                      {
                         "value": "SCOP2_FAMILY",
-                        "detail": "SCOP2 - Structural Classification of Proteins 2 Family",
-                        "name": "SCOP2 Family"
+                        "detail": "SCOP2 - Structural Classification of Proteins 2 Family"
                      },
                      {
                         "value": "SCOP2_SUPERFAMILY",
-                        "detail": "SCOP2 - Structural Classification of Proteins 2 Superfamily",
-                        "name": "SCOP2 Superfamily"
+                        "detail": "SCOP2 - Structural Classification of Proteins 2 Superfamily"
+                     },
+                     {
+                        "value": "SHEET",
+                        "detail": "Beta-sheets"
                      },
                      {
                         "value": "STEREO_OUTLIER",
-                        "detail": "Stereochemical/chirality outlier",
-                        "name": "Stereochemical/chirality outlier"
-                     },
-                     {
-                        "value": "STRN",
-                        "detail": "Strand or beta-bridge (protein)",
-                        "name": "Strand or beta-bridge (protein)"
-                     },
-                     {
-                        "value": "TURN_TY1_P",
-                        "detail": "Type I turn (protein)",
-                        "name": "Type I turn (protein)"
+                        "detail": "Stereochemical/chirality outlier"
                      },
                      {
                         "value": "UNASSIGNED_SEC_STRUCT",
-                        "detail": "Unassigned secondary structure",
-                        "name": "Unassigned secondary structure"
+                        "detail": "Unassigned secondary structure"
                      },
                      {
                         "value": "UNOBSERVED_ATOM_XYZ",
-                        "detail": "Unobserved atom coordinates",
-                        "name": "Unobserved Atoms"
+                        "detail": "Unobserved atom coordinates"
                      },
                      {
                         "value": "UNOBSERVED_RESIDUE_XYZ",
-                        "detail": "Unobserved residue coordinates",
-                        "name": "Unobserved Residues"
+                        "detail": "Unobserved residue coordinates"
                      },
                      {
                         "value": "ZERO_OCCUPANCY_ATOM_XYZ",
-                        "detail": "Atom coordinates with zero occupancy",
-                        "name": "Zero Occupancy Atoms"
+                        "detail": "Atom coordinates with zero occupancy"
                      },
                      {
                         "value": "ZERO_OCCUPANCY_RESIDUE_XYZ",
-                        "detail": "Residue coordinates with zero occupancy",
-                        "name": "Zero Occupancy Residues"
+                        "detail": "Residue coordinates with zero occupancy"
                      }
                   ],
                   "rcsb_description": [
