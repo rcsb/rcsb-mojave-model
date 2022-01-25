@@ -20,6 +20,30 @@
         }
       }
     },
+    "rcsb_polymer_entity": {
+      "type": "object",
+      "properties": {
+        "rcsb_protein_name_combined": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Full name recommended by the UniProt consortium or macromolecular name PDB assigned by PDB",
+              "rcsb_search_context": [
+                "exact-match"
+              ]
+            },
+            "provenance_source": {
+              "type": "string",
+              "enum": [
+                "PDB Preferred Name",
+                "UniProt Recommended Name"
+              ]
+            }
+          }
+        }
+      }
+    },
     "rcsb_polymer_entity_group_membership": {
       "type": "array",
       "items": {
