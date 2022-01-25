@@ -1916,7 +1916,7 @@
                "database_id": {
                   "type": "string",
                   "enum": [
-                     "AFDB",
+                     "AF",
                      "BMRB",
                      "CAS",
                      "CSD",
@@ -1939,7 +1939,7 @@
                   "description": "An abbreviation that identifies the database.",
                   "rcsb_enum_annotated": [
                      {
-                        "value": "AFDB",
+                        "value": "AF",
                         "detail": "                                 AlphaFoldDB"
                      },
                      {
@@ -9658,6 +9658,23 @@
                "structure_id",
                "crystal_id",
                "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ma_data": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "structure_id": {
+                  "type": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "structure_id"
             ]
          },
          "minItems": 1,

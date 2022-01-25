@@ -2276,7 +2276,8 @@
                "provenance_source": {
                   "type": "string",
                   "enum": [
-                     "PDB Primary Data"
+                     "PDB Primary Data",
+                     "UniProt"
                   ],
                   "description": "A code indicating the provenance of the source organism details for the entity",
                   "rcsb_description": [
@@ -3666,7 +3667,8 @@
                         "enum": [
                            "PDB",
                            "RCSB",
-                           "SIFTS"
+                           "SIFTS",
+                           "UniProt"
                         ],
                         "examples": [
                            "PDB",
