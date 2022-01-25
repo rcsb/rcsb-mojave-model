@@ -37,7 +37,25 @@
               "type": "string",
               "enum": [
                 "PDB Preferred Name",
+                "PDB Description",
                 "UniProt Recommended Name"
+              ],
+              "rcsb_enum_annotated": [
+                {
+                  "value": "PDB Preferred Name",
+                  "name": "PDB Preferred Name",
+                  "detail": "A description of special aspects of the entity (_rcsb_macromolecular_names_combined.name)"
+                },
+                {
+                  "value": "PDB Description",
+                  "name": "PDB Description",
+                  "detail": "A description of the entity (_entity.pdbx_description)"
+                },
+                {
+                  "value": "UniProt Recommended Name",
+                  "name": "UniProt Recommended Name",
+                  "detail": "Full name recommended by the UniProt consortium"
+                }
               ]
             }
           }
