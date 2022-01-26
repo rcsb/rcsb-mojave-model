@@ -26,12 +26,17 @@
         "rcsb_protein_name_combined": {
           "type": "object",
           "properties": {
-            "name": {
-              "type": "string",
-              "description": "Full name recommended by the UniProt consortium or macromolecular name PDB assigned by PDB",
-              "rcsb_search_context": [
-                "exact-match"
-              ]
+            "names": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "Full name recommended by the UniProt consortium or macromolecular name PDB assigned by PDB",
+                "rcsb_search_context": [
+                  "exact-match"
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
             },
             "provenance_source": {
               "type": "string",
