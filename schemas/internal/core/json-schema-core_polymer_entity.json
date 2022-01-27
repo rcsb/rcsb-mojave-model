@@ -30,7 +30,7 @@
               "type": "array",
               "items": {
                 "type": "string",
-                "description": "Full name recommended by the UniProt consortium or macromolecular name PDB assigned by PDB",
+                "description": "Protein name annotated by the UniProt or macromolecular name PDB assigned by the PDB",
                 "rcsb_search_context": [
                   "exact-match"
                 ]
@@ -43,7 +43,7 @@
               "enum": [
                 "PDB Preferred Name",
                 "PDB Description",
-                "UniProt Recommended Name"
+                "UniProt Name"
               ],
               "rcsb_enum_annotated": [
                 {
