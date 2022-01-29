@@ -78,10 +78,26 @@
         "properties": {
           "group_id": {
             "type": "string",
+            "examples": [
+              "1_100",
+              "P00003"
+            ],
             "rcsb_search_context": [
               "exact-match"
             ],
-            "description": "Identifier for a group a given polymer entity belongs to"
+            "description": "A unique identifier for a group of entities",
+            "rcsb_description": [
+              {
+                "text": "Polymer Entity Group ID(s)",
+                "context": "brief"
+              }
+            ],
+            "rcsb_search_group": [
+              {
+                "group_name": "ID(s) and Keywords",
+                "priority_order": 10
+              }
+            ]
           },
           "aggregation_method": {
             "type": "string",
