@@ -9,7 +9,7 @@
 
     <groupId>org.rcsb</groupId>
     <artifactId>rcsb-mojave-model</artifactId>
-    <version>1.30.0</version>
+    <version>1.30.1-SNAPSHOT</version>
 
     <properties>
 
@@ -21,7 +21,7 @@
 
         <project.auto.package>org.rcsb.mojave.auto</project.auto.package>
         <project.enums.package>org.rcsb.mojave.enumeration</project.enums.package>
-        <rcsb-json-schema.version>1.30.0</rcsb-json-schema.version>
+        <rcsb-json-schema.version>1.31.0</rcsb-json-schema.version>
 
         <mojave.meta.version>1.2.1</mojave.meta.version>
         <mojave.tools.version>1.5.0</mojave.tools.version>
@@ -63,9 +63,9 @@
         <rcsb.supl.json.schemas.location>/internal/supplemental</rcsb.supl.json.schemas.location>
         <rcsb.annotations.json.schemas.location>/internal/annotations</rcsb.annotations.json.schemas.location>
 
-
         <!-- schemas for core collections -->
         <rcsb.core.assembly.json.schema.name>json-schema-core_assembly.json</rcsb.core.assembly.json.schema.name>
+        <rcsb.core.interface.json.schema.name>json-schema-core_interface.json</rcsb.core.interface.json.schema.name>
         <rcsb.core.entry.json.schema.name>json-schema-core_entry.json</rcsb.core.entry.json.schema.name>
 
         <rcsb.core.polymer.entity.json.schema.name>json-schema-core_polymer_entity.json</rcsb.core.polymer.entity.json.schema.name>
@@ -88,6 +88,7 @@
         <rcsb.annotations.uniprot.json.schema.name>json-schema-annotations_uniprot.json</rcsb.annotations.uniprot.json.schema.name>
         <rcsb.annotations.polymer.entity.json.schema.name>json-schema-annotations_polymer_entity.json</rcsb.annotations.polymer.entity.json.schema.name>
         <rcsb.annotations.polymer.entity.instance.json.schema.name>json-schema-annotations_polymer_entity_instance.json</rcsb.annotations.polymer.entity.instance.json.schema.name>
+        <rcsb.annotations.interface.polymer.entity.instance.json.schema.name>json-schema-annotations_interface_polymer_entity_instance.json</rcsb.annotations.interface.polymer.entity.instance.json.schema.name>
 
         <!-- ==================================== GROUPS DW JSON SCHEMAS ========================================= -->
         <rcsb.group.json.schemas.location>/internal/groups</rcsb.group.json.schemas.location>
@@ -119,6 +120,7 @@
 
         <!-- CORE SCHEMA NAMES -->
         <core.assembly.json.schema.name>core_assembly.json</core.assembly.json.schema.name>
+        <core.interface.json.schema.name>core_interface.json</core.interface.json.schema.name>
         <core.entry.json.schema.name>core_entry.json</core.entry.json.schema.name>
 
         <core.polymer.entity.json.schema.name>core_polymer_entity.json</core.polymer.entity.json.schema.name>
@@ -152,10 +154,12 @@
         <annotations.uniprot.json.schema.name>annotations_uniprot.json</annotations.uniprot.json.schema.name>
         <annotations.polymer.entity.json.schema.name>annotations_polymer_entity.json</annotations.polymer.entity.json.schema.name>
         <annotations.polymer.entity.instance.json.schema.name>annotations_polymer_entity_instance.json</annotations.polymer.entity.instance.json.schema.name>
+        <annotations.interface.polymer.entity.instance.json.schema.name>annotations_interface_polymer_entity_instance.json</annotations.interface.polymer.entity.instance.json.schema.name>
 
         <!-- VALIDATION SCHEMA NAMES -->
         <validation.assembly.bson.schema.name>validation-core_assembly.json</validation.assembly.bson.schema.name>
         <validation.entry.bson.schema.name>validation-core_entry.json</validation.entry.bson.schema.name>
+        <validation.interface.bson.schema.name>validation-core_interface.json</validation.interface.bson.schema.name>
 
         <validation.polymer.entity.bson.schema.name>validation-core_polymer_entity.json</validation.polymer.entity.bson.schema.name>
         <validation.nonpolymer.entity.bson.schema.name>validation-core_nonpolymer_entity.json</validation.nonpolymer.entity.bson.schema.name>
@@ -188,6 +192,7 @@
         <validation.annotations.uniprot.bson.schema.name>validation-annotations_uniprot.json</validation.annotations.uniprot.bson.schema.name>
         <validation.annotations.polymer.entity.bson.schema.name>validation-annotations_polymer_entity.json</validation.annotations.polymer.entity.bson.schema.name>
         <validation.annotations.polymer.entity.instance.bson.schema.name>validation-annotations_polymer_entity_instance.json</validation.annotations.polymer.entity.instance.bson.schema.name>
+        <validation.annotations.interface.polymer.entity.instance.bson.schema.name>validation-annotations_interface_polymer_entity_instance.json</validation.annotations.interface.polymer.entity.instance.bson.schema.name>
 
     </properties>
 
@@ -505,6 +510,32 @@
                                 <argument>-i</argument>
                                 <argument>jar:${exch.json.schemas.location}/${exch.core.assembly.json.schema.name}</argument>
                                 <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.assembly.json.schema.name}</argument>
+                            </arguments>
+                            <systemProperties>
+                                <!-- Identifies a resource by type -->
+                                <systemProperty>
+                                    <key>sourceScheme</key>
+                                    <value>resource</value>
+                                </systemProperty>
+                            </systemProperties>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-core-interface-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.interface.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.interface.json.schema.name}</argument>
                             </arguments>
                             <systemProperties>
                                 <!-- Identifies a resource by type -->
@@ -951,6 +982,28 @@
                         </configuration>
                     </execution>
 
+                    <execution>
+                        <id>build-interface_instance-annotations-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${annotations.interface.polymer.entity.instance.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.annotations.json.schemas.location}/${rcsb.annotations.interface.polymer.entity.instance.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
                     <!-- GENERATE VALIDATION SCHEMAS FOR GROUPS -->
                     <execution>
                         <id>generate-validation-schema-group-provenance</id>
@@ -1007,6 +1060,20 @@
                             <arguments>
                                 <argument>${project.build.directory}/${core.schema.location}/${core.assembly.json.schema.name}</argument>
                                 <argument>${project.build.directory}/${validation.schema.location}/${validation.assembly.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-interface</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${core.interface.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.interface.bson.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -1318,6 +1385,20 @@
                             </arguments>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>generate-validation-schema-annotations_interface_polymer_entity_instance</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${annotations.interface.polymer.entity.instance.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.annotations.interface.polymer.entity.instance.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
 
                     <!-- GENERATE SCHEMAS USED TO CREATE JAVA TYPES -->
                     <execution>
@@ -1420,7 +1501,6 @@
             <!-- Generates Java types from JSON Schema (or example JSON) and can annotate those types for data-binding
                 with Jackson 1.x, Jackson 2.x or Gson -->
             <plugin>
-
                 <groupId>org.jsonschema2pojo</groupId>
                 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
                 <version>1.1.1</version>
@@ -1488,4 +1568,3 @@
     </build>
 
 </project>
-

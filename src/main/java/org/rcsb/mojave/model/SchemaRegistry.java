@@ -29,6 +29,9 @@ public enum SchemaRegistry {
     CORE_ASSEMBLY_JSON("core.assembly.json.schema.name"),
     CORE_ASSEMBLY_BSON("validation.assembly.bson.schema.name"),
 
+    CORE_INTERFACE_JSON("core.interface.json.schema.name"),
+    CORE_INTERFACE_BSON("validation.interface.bson.schema.name"),
+
     CORE_ENTRY_JSON("core.entry.json.schema.name"),
     CORE_ENTRY_BSON("validation.entry.bson.schema.name"),
 
@@ -93,7 +96,10 @@ public enum SchemaRegistry {
     ANNOTATIONS_POLYMER_ENTITY_DESCRIPTOR_BSON("validation.annotations.polymer.entity.bson.schema.name"),
 
     ANNOTATIONS_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_JSON("annotations.polymer.entity.instance.json.schema.name"),
-    ANNOTATIONS_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_BSON("validation.annotations.polymer.entity.instance.bson.schema.name");
+    ANNOTATIONS_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_BSON("validation.annotations.polymer.entity.instance.bson.schema.name"),
+
+    ANNOTATIONS_INTERFACE_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_JSON("annotations.interface.polymer.entity.instance.json.schema.name"),
+    ANNOTATIONS_INTERFACE_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_BSON("validation.annotations.interface.polymer.entity.instance.bson.schema.name");
 
     private final String value;
     private static final Map<String, SchemaRegistry> CONSTANTS = new HashMap<>();
