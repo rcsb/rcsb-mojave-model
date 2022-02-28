@@ -21,6 +21,20 @@
           "description": "The release date of the latest revision item."
         }
       }
+    },
+    "rcsb_polymer_instance_feature": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "ASA"
+            ]
+          }
+        }
+      }
     }
   }
 }
