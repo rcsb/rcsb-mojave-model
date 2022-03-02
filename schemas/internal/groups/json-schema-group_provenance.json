@@ -4,7 +4,11 @@
   "type": "object",
   "properties": {
     "rcsb_id": {
-      "$ref": "#/properties/rcsb_group_provenance_container_identifiers/properties/group_provenance_id"
+      "type": "string",
+      "rcsb_search_context": [
+        "exact-match"
+      ],
+      "description": "A unique textual identifier for a group provenance"
     },
     "rcsb_group_provenance_container_identifiers": {
       "type": "object",
@@ -36,6 +40,9 @@
             "sequence_identity",
             "matching_uniprot_accession",
             "matching_deposit_group_id"
+          ],
+          "rcsb_search_context": [
+            "exact-match"
           ],
           "description": "Specifies the type of similarity criteria used to aggregate members into higher levels in the hierarchy"
         },
