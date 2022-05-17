@@ -99,55 +99,31 @@
           "description": "List of alignments with core_entity canonical sequences",
           "items": {
             "description": "Alignment with a core_entity canonical sequence",
-            "allOf": [
-              {
-                "type": "object",
-                "required": ["scores","aligned_regions"],
-                "properties": {
-                  "scores": {
-                    "type": "object",
-                    "description": "Alignment scores",
-                    "required": ["target_coverage","query_coverage","target_length","query_length"],
-                    "properties": {
-                      "target_coverage": {
-                        "type": "integer"
-                      },
-                      "query_coverage": {
-                        "type": "integer"
-                      },
-                      "target_length": {
-                        "type": "integer"
-                      },
-                      "query_length": {
-                        "type": "integer"
-                      }
-                    }
-                  },
-                  "aligned_regions": {
-                    "type": "array",
-                    "description": "List of alignments with core_entity canonical sequences encoded as an array of triplets [query_begin, target_begin, length]",
-                    "items": {
-                      "type": "array",
-                      "description": "Alignment region encoded as a triplet [query_begin, target_begin, length]",
-                      "items": {
-                        "type": "integer"
-                      },
-                      "maxItems": 3,
-                      "minItems": 3
-                    }
-                  }
-                }
+            "type": "object",
+            "required": ["scores","aligned_regions","member_id"],
+            "properties": {
+              "member_id": {
+                "type": "string"
               },
-              {
-                "type": "object",
-                "properties": {
-                  "member_id": {
-                    "type": "string"
-                  }
+              "scores": {
+                "$ref": "../common/common-schema-alignment.json#/definitions/alignment/properties/scores"
+              },
+              "aligned_regions": {
+                "type": "array",
+                "description": "List of alignments with core_entity canonical sequences encoded as an array of triplets [query_begin, target_begin, length]",
+                "items": {
+                  "type": "array",
+                  "description": "Alignment region encoded as a triplet [query_begin, target_begin, length]",
+                  "items": {
+                    "type": "integer"
+                  },
+                  "maxItems": 3,
+                  "minItems": 3
                 }
               }
-            ]
-          }
+            }
+          },
+          "minItems": 1
         }
       }
     }
