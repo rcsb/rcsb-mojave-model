@@ -375,15 +375,7 @@
                 },
                 "rcsb_latest_revision": {
                   "type": "object",
-                  "description": "RCSB PDB entry version",
-                  "properties": {
-                    "major_revision": {
-                      "type": "integer"
-                    },
-                    "minor_revision": {
-                      "type": "integer"
-                    }
-                  }
+                  "$ref": "./json-schema-core_polymer_entity.json#/properties/rcsb_latest_revision"
                 }
               }
             }]
