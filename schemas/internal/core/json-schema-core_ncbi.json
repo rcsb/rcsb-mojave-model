@@ -359,6 +359,7 @@
               "$ref": "../common/common-schema-alignment.json#/definitions/alignment"
             },{
               "type": "object",
+              "required": ["core_entity_identifiers", "rcsb_latest_revision"],
               "properties": {
                 "core_entity_identifiers": {
                   "type": "object",
@@ -372,6 +373,10 @@
                       "type": "string"
                     }
                   }
+                },
+                "rcsb_latest_revision": {
+                  "type": "object",
+                  "$ref": "./json-schema-core_polymer_entity.json#/properties/rcsb_latest_revision"
                 }
               }
             }]
