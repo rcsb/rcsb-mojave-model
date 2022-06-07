@@ -25,7 +25,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class SchemaMetadataValidator implements Visitor {
 
     private String schemaName;
-    private ValidationContext validationCtx;
+    private final ValidationContext validationCtx;
 
     public SchemaMetadataValidator() {
         validationCtx = new ValidationContext();
@@ -83,9 +83,8 @@ public class SchemaMetadataValidator implements Visitor {
 
         if (JsonSchemaNodeUtils.isObject(node)) {
             JsonNode properties = node.get(MetaSchemaConstants.PROPERTIES);
-            properties.fieldNames().forEachRemaining(name -> {
-                validateNestedHasSearchContext(count, properties.get(name));
-            });
+            properties.fieldNames().forEachRemaining(name ->
+                    validateNestedHasSearchContext(count, properties.get(name)));
         }
     }
 
