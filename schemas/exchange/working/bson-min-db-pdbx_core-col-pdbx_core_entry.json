@@ -167,48 +167,6 @@
          "minItems": 1,
          "uniqueItems": true
       },
-      "database_2": {
-         "bsonType": "array",
-         "items": {
-            "bsonType": "object",
-            "properties": {
-               "database_code": {
-                  "bsonType": "string"
-               },
-               "database_id": {
-                  "bsonType": "string",
-                  "enum": [
-                     "AF",
-                     "BMRB",
-                     "CAS",
-                     "CSD",
-                     "EBI",
-                     "EMDB",
-                     "ICSD",
-                     "MA",
-                     "MDF",
-                     "MODBASE",
-                     "NBS",
-                     "NDB",
-                     "PDB",
-                     "PDBE",
-                     "PDB_ACC",
-                     "PDF",
-                     "RCSB",
-                     "SMR",
-                     "WWPDB"
-                  ]
-               }
-            },
-            "additionalProperties": false,
-            "required": [
-               "database_code",
-               "database_id"
-            ]
-         },
-         "minItems": 1,
-         "uniqueItems": true
-      },
       "diffrn": {
          "bsonType": "array",
          "items": {
@@ -3846,8 +3804,7 @@
                "bsonType": "string",
                "enum": [
                   "computational",
-                  "experimental",
-                  "integrative"
+                  "experimental"
                ]
             },
             "diffrn_resolution_high": {
