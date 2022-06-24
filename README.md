@@ -15,11 +15,18 @@ Given a version number **major.minor.patch**, increment the:
 - **minor** version when changes are backwards-compatible (adding new fields), and
 - **patch** version when changes are backwards-compatible and related to metadata (changing field description, adding examples, etc.).
 
+## Schema Sources
+This project has 2 types of schema sources:
+- `schemas/exchange` - automatically generated JSON Schema files that contain definitions for data items that are coming 
+from the Exchange DB. Those files are not sources and should not be updated directly. The definitions need to be updated 
+in the [py-rcsb_exdb_assets](https://github.com/rcsb/py-rcsb_exdb_assets) repository, JSON Schema files need to be 
+generated and pushed to this project
+- `schemas/internal` - manually curated JSON Schema files that contain definitions for data items that are NOT coming 
+from the Exchange DB. If changes are needed for those definitions, they should be done to the files in this folder 
+directly
+
 ### Distribution
-This package provides tar files for the distribution of releases. The tar file for version **x.y.z** will be named
-*dw_source_schemas_**x.y.z**.tar.gz*. Every build will provide the latest snapshot named as
-*dw_source_schemas_**branch_name**.tar.gz*. As a part of CI/CD process source schemas
-(current version and latest snapshot) will be distributed to the build locker.
+As a part of CI/CD process, the source schemas will be pushed to the [Nexus Repository](http://nexus3.rcsb.org/#browse/browse:rcsb-super-proxy:org%2Frcsb%2Frcsb-json-schema).
 
 ### Cardinal Identifier Containers
 Cardinal identifier containers provide evidence about how the data described by core schemas are related.
