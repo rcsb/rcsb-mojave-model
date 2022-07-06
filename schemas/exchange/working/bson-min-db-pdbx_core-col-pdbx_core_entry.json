@@ -3520,6 +3520,9 @@
       "rcsb_comp_model_provenance": {
          "bsonType": "object",
          "properties": {
+            "entry_id": {
+               "bsonType": "string"
+            },
             "source_db": {
                "bsonType": "string",
                "enum": [
@@ -3534,7 +3537,10 @@
                "bsonType": "string"
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "required": [
+            "entry_id"
+         ]
       },
       "rcsb_entry_container_identifiers": {
          "bsonType": "object",

@@ -4469,25 +4469,10 @@
             "id": {
                "type": "string",
                "description": "The value of _entry.id identifies the data block.\n\n Note that this item need not be a number; it can be any unique\n identifier.",
-               "rcsb_search_context": [
-                  "exact-match",
-                  "suggest"
-               ],
-               "rcsb_full_text_priority": 20,
                "rcsb_description": [
                   {
                      "text": "The value of _entry.id identifies the data block.\n\n Note that this item need not be a number; it can be any unique\n identifier.",
                      "context": "dictionary"
-                  },
-                  {
-                     "text": "Entry ID(s)",
-                     "context": "brief"
-                  }
-               ],
-               "rcsb_search_group": [
-                  {
-                     "group_name": "ID(s) and Keywords",
-                     "priority_order": 5
                   }
                ]
             },
@@ -11503,6 +11488,31 @@
       "rcsb_comp_model_provenance": {
          "type": "object",
          "properties": {
+            "entry_id": {
+               "type": "string",
+               "description": "Entry identifier corresponding to the computed structure model.",
+               "rcsb_search_context": [
+                  "exact-match",
+                  "suggest"
+               ],
+               "rcsb_full_text_priority": 20,
+               "rcsb_description": [
+                  {
+                     "text": "Entry identifier corresponding to the computed structure model.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Computed Structure Model ID(s)",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Computed Structure Model Details",
+                     "priority_order": 5
+                  }
+               ]
+            },
             "source_db": {
                "type": "string",
                "enum": [
@@ -11537,7 +11547,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Computed Structure Model Details",
-                     "priority_order": 5
+                     "priority_order": 10
                   }
                ]
             },
@@ -11562,7 +11572,10 @@
                ]
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "required": [
+            "entry_id"
+         ]
       },
       "rcsb_entry_container_identifiers": {
          "type": "object",
@@ -11649,13 +11662,24 @@
                ],
                "description": "Entry identifier for the container.",
                "rcsb_search_context": [
-                  "exact-match"
+                  "exact-match",
+                  "suggest"
                ],
-               "rcsb_full_text_priority": 10,
+               "rcsb_full_text_priority": 20,
                "rcsb_description": [
                   {
                      "text": "Entry identifier for the container.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "Entry ID(s)",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "ID(s) and Keywords",
+                     "priority_order": 5
                   }
                ]
             },
@@ -13089,7 +13113,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Computed Structure Model Details",
-                                 "priority_order": 10
+                                 "priority_order": 15
                               }
                            ]
                         }
