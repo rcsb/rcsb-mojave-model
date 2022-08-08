@@ -12887,6 +12887,19 @@
                   }
                ]
             },
+            "structure_determination_methodology_priority": {
+               "type": "integer",
+               "description": "Indicates the priority of the value in _rcsb_entry_info.structure_determination_methodology.\n The lower the number the higher the priority.\n Priority values for \"experimental\" structures is currently set to 10 and\n the values for \"computational\" structures is set to 100.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "Indicates the priority of the value in _rcsb_entry_info.structure_determination_methodology.\n The lower the number the higher the priority.\n Priority values for \"experimental\" structures is currently set to 10 and\n the values for \"computational\" structures is set to 100.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
             "diffrn_resolution_high": {
                "type": "object",
                "properties": {
