@@ -80891,7 +80891,8 @@
             "SELECTED_POLYMER_ENTITY_TYPES": "selected_polymer_entity_types",
             "SOFTWARE_PROGRAMS_COMBINED": "software_programs_combined",
             "SOLVENT_ENTITY_COUNT": "solvent_entity_count",
-            "STRUCTURE_DETERMINATION_METHODOLOGY": "structure_determination_methodology"
+            "STRUCTURE_DETERMINATION_METHODOLOGY": "structure_determination_methodology",
+            "STRUCTURE_DETERMINATION_METHODOLOGY_PRIORITY": "structure_determination_methodology_priority"
          },
          "ATTRIBUTE_MAP": {
             "ENTRY_ID": {
@@ -81179,6 +81180,12 @@
             "STRUCTURE_DETERMINATION_METHODOLOGY": {
                "CATEGORY": "rcsb_entry_info",
                "ATTRIBUTE": "structure_determination_methodology",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "STRUCTURE_DETERMINATION_METHODOLOGY_PRIORITY": {
+               "CATEGORY": "rcsb_entry_info",
+               "ATTRIBUTE": "structure_determination_methodology_priority",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             }
@@ -82040,6 +82047,23 @@
                   "computational",
                   "experimental"
                ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "STRUCTURE_DETERMINATION_METHODOLOGY_PRIORITY": {
+               "ORDER": 49,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
                ],
