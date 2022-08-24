@@ -21,7 +21,7 @@ import java.util.Properties;
  */
 public class SchemaResolver {
 
-    private Properties props;
+    private final Properties props;
     private ObjectMapper mapper;
 
     public SchemaResolver() throws IOException {

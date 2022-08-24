@@ -26,10 +26,6 @@ The other example of use is text indexing. We use [Elasticsearch](https://www.el
 
 ## Schema Sources
 Schema source files are stored in [rcsb-json-schema](https://github.com/rcsb/rcsb-json-schema) repository.
-This project has 3 folders:
-- `meta` -
-- `exchange` - 
-- `internal` -
 
 ## Product
 This module contains: 
