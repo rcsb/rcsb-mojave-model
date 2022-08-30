@@ -9,7 +9,7 @@
 
     <groupId>org.rcsb</groupId>
     <artifactId>rcsb-mojave-model</artifactId>
-    <version>1.33.1</version>
+    <version>1.34.0</version>
 
     <properties>
 
@@ -17,14 +17,15 @@
         <project.build.targetEncoding>UTF-8</project.build.targetEncoding>
 
         <jdk.version>11</jdk.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.2</junit.version>
 
         <project.auto.package>org.rcsb.mojave.auto</project.auto.package>
         <project.enums.package>org.rcsb.mojave.enumeration</project.enums.package>
-        <rcsb-json-schema.version>1.33.1</rcsb-json-schema.version>
+        <rcsb-json-schema.version>1.34.0</rcsb-json-schema.version>
 
-        <mojave.meta.version>1.2.1</mojave.meta.version>
-        <mojave.tools.version>1.5.1</mojave.tools.version>
+        <mojave.meta.version>1.5.0</mojave.meta.version>
+        <mojave.tools.version>1.6.0</mojave.tools.version>
+        <!-- 0.10 has breaking changes -->
         <reflection.version>0.9.11</reflection.version>
 
         <!-- ==================================== EXCHANGE DB JSON SCHEMAS ========================================= -->
@@ -99,11 +100,11 @@
 
         <!-- ================================= WHERE WE KEEP SCHEMAS PRODUCTS ====================================== -->
 
-        <!-- for schemas we create automatically or download -->
+        <!-- for schema files we create automatically or download -->
         <generated.schema.location>generated-sources/schema</generated.schema.location>
-        <!-- for schemas we copy from exchange area -->
+        <!-- for schema files we copy from exchange area -->
         <exchange.schema.location>${generated.schema.location}/exchange</exchange.schema.location>
-        <!-- for schemas we create as an intermediate product -->
+        <!-- for schema files we create as an intermediate product -->
         <derived.schema.location>${generated.schema.location}/derived</derived.schema.location>
         <!-- schemas automatically created for DW core collections in JSON -->
         <core.schema.location>${generated.schema.location}/core</core.schema.location>
@@ -225,15 +226,6 @@
             <version>${rcsb-json-schema.version}</version>
         </dependency>
 
-        <!-- Dependency on mojave-meta project is needed to have a type safety in validation process.
-             The validation occurs  -->
-        <dependency>
-            <scope>test</scope>
-            <groupId>org.rcsb</groupId>
-            <artifactId>rcsb-mojave-meta</artifactId>
-            <version>${mojave.meta.version}</version>
-        </dependency>
-
         <dependency>
             <groupId>org.rcsb</groupId>
             <artifactId>rcsb-mojave-tools</artifactId>
@@ -247,6 +239,23 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Dependency on mojave-meta project is needed to have a type safety in validation process.
+     The validation occurs  -->
+        <dependency>
+            <groupId>org.rcsb</groupId>
+            <artifactId>rcsb-mojave-meta</artifactId>
+            <version>${mojave.meta.version}</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.rcsb</groupId>
+                    <artifactId>rcsb-mojave-tools</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.reflections/reflections -->
         <dependency>
             <groupId>org.reflections</groupId>
             <artifactId>reflections</artifactId>
@@ -1566,5 +1575,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
