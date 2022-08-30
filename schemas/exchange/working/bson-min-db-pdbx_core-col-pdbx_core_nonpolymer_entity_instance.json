@@ -522,6 +522,35 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "struct_asym": {
+         "bsonType": "object",
+         "properties": {
+            "pdbx_PDB_id": {
+               "bsonType": "string"
+            },
+            "pdbx_alt_id": {
+               "bsonType": "string"
+            },
+            "pdbx_order": {
+               "bsonType": "int"
+            },
+            "pdbx_type": {
+               "bsonType": "string",
+               "enum": [
+                  "ATOMN",
+                  "ATOMP",
+                  "ATOMS",
+                  "HETAC",
+                  "HETAD",
+                  "HETAI",
+                  "HETAIN",
+                  "HETAS",
+                  "HETIC"
+               ]
+            }
+         },
+         "additionalProperties": false
+      },
       "rcsb_id": {
          "bsonType": "string"
       },

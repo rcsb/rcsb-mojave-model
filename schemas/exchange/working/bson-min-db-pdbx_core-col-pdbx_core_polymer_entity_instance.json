@@ -212,6 +212,7 @@
                   "bsonType": "string",
                   "enum": [
                      "ANGLE_OUTLIER",
+                     "BEND",
                      "BINDING_SITE",
                      "BOND_OUTLIER",
                      "C-MANNOSYLATION_SITE",
@@ -219,6 +220,23 @@
                      "CIS-PEPTIDE",
                      "ECOD",
                      "HELIX_P",
+                     "HELX_LH_PP_P",
+                     "HELX_RH_3T_P",
+                     "HELX_RH_AL_P",
+                     "HELX_RH_PI_P",
+                     "MA_QA_METRIC_LOCAL_TYPE_CONTACT_PROBABILITY",
+                     "MA_QA_METRIC_LOCAL_TYPE_DISTANCE",
+                     "MA_QA_METRIC_LOCAL_TYPE_ENERGY",
+                     "MA_QA_METRIC_LOCAL_TYPE_IPTM",
+                     "MA_QA_METRIC_LOCAL_TYPE_NORMALIZED_SCORE",
+                     "MA_QA_METRIC_LOCAL_TYPE_OTHER",
+                     "MA_QA_METRIC_LOCAL_TYPE_PAE",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT_ALL-ATOM",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT_ALL-ATOM_[0,1]",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT_[0,1]",
+                     "MA_QA_METRIC_LOCAL_TYPE_PTM",
+                     "MA_QA_METRIC_LOCAL_TYPE_ZSCORE",
                      "MEMBRANE_SEGMENT",
                      "MOGUL_ANGLE_OUTLIER",
                      "MOGUL_BOND_OUTLIER",
@@ -238,6 +256,8 @@
                      "SCOP2_SUPERFAMILY",
                      "SHEET",
                      "STEREO_OUTLIER",
+                     "STRN",
+                     "TURN_TY1_P",
                      "UNASSIGNED_SEC_STRUCT",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
@@ -289,6 +309,7 @@
                               "CATH_NAME",
                               "ECOD_DOMAIN_ID",
                               "ECOD_FAMILY_NAME",
+                              "MODELCIF_MODEL_ID",
                               "OMEGA_ANGLE",
                               "PARTNER_ASYM_ID",
                               "PARTNER_BOND_DISTANCE",
@@ -362,6 +383,7 @@
                   "bsonType": "string",
                   "enum": [
                      "ANGLE_OUTLIER",
+                     "BEND",
                      "BINDING_SITE",
                      "BOND_OUTLIER",
                      "C-MANNOSYLATION_SITE",
@@ -369,6 +391,23 @@
                      "CIS-PEPTIDE",
                      "ECOD",
                      "HELIX_P",
+                     "HELX_LH_PP_P",
+                     "HELX_RH_3T_P",
+                     "HELX_RH_AL_P",
+                     "HELX_RH_PI_P",
+                     "MA_QA_METRIC_LOCAL_TYPE_CONTACT_PROBABILITY",
+                     "MA_QA_METRIC_LOCAL_TYPE_DISTANCE",
+                     "MA_QA_METRIC_LOCAL_TYPE_ENERGY",
+                     "MA_QA_METRIC_LOCAL_TYPE_IPTM",
+                     "MA_QA_METRIC_LOCAL_TYPE_NORMALIZED_SCORE",
+                     "MA_QA_METRIC_LOCAL_TYPE_OTHER",
+                     "MA_QA_METRIC_LOCAL_TYPE_PAE",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT_ALL-ATOM",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT_ALL-ATOM_[0,1]",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT_[0,1]",
+                     "MA_QA_METRIC_LOCAL_TYPE_PTM",
+                     "MA_QA_METRIC_LOCAL_TYPE_ZSCORE",
                      "MEMBRANE_SEGMENT",
                      "MOGUL_ANGLE_OUTLIER",
                      "MOGUL_BOND_OUTLIER",
@@ -382,18 +421,14 @@
                      "SABDAB_ANTIBODY_HEAVY_CHAIN_SUBCLASS",
                      "SABDAB_ANTIBODY_LIGHT_CHAIN_SUBCLASS",
                      "SABDAB_ANTIBODY_LIGHT_CHAIN_TYPE",
-                     "SAbDab Antibody Heavy Chain Subclass",
-                     "SAbDab Antibody Light Chain Subclass",
-                     "SAbDab Antibody Light Chain Type",
                      "SCOP",
-                     "SCOP2 Family",
-                     "SCOP2 Superfamily",
-                     "SCOP2B Superfamily",
                      "SCOP2B_SUPERFAMILY",
                      "SCOP2_FAMILY",
                      "SCOP2_SUPERFAMILY",
                      "SHEET",
                      "STEREO_OUTLIER",
+                     "STRN",
+                     "TURN_TY1_P",
                      "UNASSIGNED_SEC_STRUCT",
                      "UNOBSERVED_ATOM_XYZ",
                      "UNOBSERVED_RESIDUE_XYZ",
@@ -527,6 +562,35 @@
          },
          "minItems": 1,
          "uniqueItems": true
+      },
+      "struct_asym": {
+         "bsonType": "object",
+         "properties": {
+            "pdbx_PDB_id": {
+               "bsonType": "string"
+            },
+            "pdbx_alt_id": {
+               "bsonType": "string"
+            },
+            "pdbx_order": {
+               "bsonType": "int"
+            },
+            "pdbx_type": {
+               "bsonType": "string",
+               "enum": [
+                  "ATOMN",
+                  "ATOMP",
+                  "ATOMS",
+                  "HETAC",
+                  "HETAD",
+                  "HETAI",
+                  "HETAIN",
+                  "HETAS",
+                  "HETIC"
+               ]
+            }
+         },
+         "additionalProperties": false
       },
       "rcsb_id": {
          "bsonType": "string"

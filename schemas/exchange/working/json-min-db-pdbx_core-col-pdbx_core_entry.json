@@ -28,7 +28,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "Deposition",
+                        "group_name": "Structure Details",
                         "priority_order": 15
                      }
                   ]
@@ -66,7 +66,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "Deposition",
+                        "group_name": "Structure Details",
                         "priority_order": 10
                      }
                   ]
@@ -422,6 +422,19 @@
                      {
                         "text": "Citation Journal Name",
                         "context": "brief"
+                     }
+                  ]
+               },
+               "journal_full": {
+                  "type": "string",
+                  "examples": [
+                     "Journal of Molecular Biology"
+                  ],
+                  "description": "Full name of the cited journal; relevant for journal articles.",
+                  "rcsb_description": [
+                     {
+                        "text": "Full name of the cited journal; relevant for journal articles.",
+                        "context": "dictionary"
                      }
                   ]
                },
@@ -782,7 +795,7 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Give the temperature in Kelvin that the data were collected at",
+                        "text": "The usual temperature when using cold nitrogen gas stream is around T=100 K",
                         "context": "deposition"
                      },
                      {
@@ -1312,7 +1325,7 @@
                         "context": "dictionary"
                      },
                      {
-                        "text": "Provide the wavelength(s) in Angstrom used for data collection. Multiple wavelengths should be comma separated. For Laue experiments, indicate the range with a hyphen.",
+                        "text": "Provide the wavelength(s) in angstrom used for data collection. Multiple wavelengths should be comma separated. For Laue experiments, indicate the range with a hyphen.",
                         "context": "deposition"
                      }
                   ]
@@ -1436,28 +1449,28 @@
                },
                "length_a": {
                   "type": "number",
-                  "description": "Unit-cell length a in Angstroms.",
+                  "description": "Unit-cell length a in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "Unit-cell length a in Angstroms.",
+                        "text": "Unit-cell length a in angstroms.",
                         "context": "dictionary"
                      }
                   ]
                },
                "length_b": {
                   "type": "number",
-                  "description": "Unit-cell length b in Angstroms.",
+                  "description": "Unit-cell length b in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "Unit-cell length b in Angstroms.",
+                        "text": "Unit-cell length b in angstroms.",
                         "context": "dictionary"
                      }
                   ]
@@ -1654,42 +1667,42 @@
                },
                "length_a": {
                   "type": "number",
-                  "description": "Unit-cell length a in Angstroms.",
+                  "description": "Unit-cell length a in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "Unit-cell length a in Angstroms.",
+                        "text": "Unit-cell length a in angstroms.",
                         "context": "dictionary"
                      }
                   ]
                },
                "length_b": {
                   "type": "number",
-                  "description": "Unit-cell length b in Angstroms.",
+                  "description": "Unit-cell length b in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "Unit-cell length b in Angstroms.",
+                        "text": "Unit-cell length b in angstroms.",
                         "context": "dictionary"
                      }
                   ]
                },
                "length_c": {
                   "type": "number",
-                  "description": "Unit-cell length c in Angstroms.",
+                  "description": "Unit-cell length c in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "Unit-cell length c in Angstroms.",
+                        "text": "Unit-cell length c in angstroms.",
                         "context": "dictionary"
                      }
                   ]
@@ -2119,14 +2132,14 @@
                      8.9,
                      10.0
                   ],
-                  "description": "The final resolution (in Angstroms)of the 3D reconstruction.",
+                  "description": "The final resolution (in angstroms)of the 3D reconstruction.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "The final resolution (in Angstroms)of the 3D reconstruction.",
+                        "text": "The final resolution (in angstroms)of the 3D reconstruction.",
                         "context": "dictionary"
                      },
                      {
@@ -2350,14 +2363,14 @@
                   "examples": [
                      3.0
                   ],
-                  "description": "High resolution limit for this shell (Angstroms)",
+                  "description": "High resolution limit for this shell (angstroms)",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "High resolution limit for this shell (Angstroms)",
+                        "text": "High resolution limit for this shell (angstroms)",
                         "context": "dictionary"
                      }
                   ]
@@ -2377,14 +2390,14 @@
                   "examples": [
                      5.5
                   ],
-                  "description": "Low resolution limit for this shell (Angstroms)",
+                  "description": "Low resolution limit for this shell (angstroms)",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "Low resolution limit for this shell (Angstroms)",
+                        "text": "Low resolution limit for this shell (angstroms)",
                         "context": "dictionary"
                      }
                   ]
@@ -2483,14 +2496,14 @@
                   "examples": [
                      7.5
                   ],
-                  "description": "High resolution limit of the structure factor data, in Angstroms",
+                  "description": "High resolution limit of the structure factor data, in angstroms",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "High resolution limit of the structure factor data, in Angstroms",
+                        "text": "High resolution limit of the structure factor data, in angstroms",
                         "context": "dictionary"
                      }
                   ]
@@ -3595,28 +3608,28 @@
                },
                "recording_temperature_maximum": {
                   "type": "number",
-                  "description": "The specimen temperature maximum (degrees Kelvin) for the duration\n of imaging.",
+                  "description": "The specimen temperature maximum (kelvin) for the duration\n of imaging.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
-                        "text": "The specimen temperature maximum (degrees Kelvin) for the duration\n of imaging.",
+                        "text": "The specimen temperature maximum (kelvin) for the duration\n of imaging.",
                         "context": "dictionary"
                      }
                   ]
                },
                "recording_temperature_minimum": {
                   "type": "number",
-                  "description": "The specimen temperature minimum (degrees Kelvin) for the duration\n of imaging.",
+                  "description": "The specimen temperature minimum (kelvin) for the duration\n of imaging.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
-                        "text": "The specimen temperature minimum (degrees Kelvin) for the duration\n of imaging.",
+                        "text": "The specimen temperature minimum (kelvin) for the duration\n of imaging.",
                         "context": "dictionary"
                      }
                   ]
@@ -3702,14 +3715,14 @@
                },
                "temperature": {
                   "type": "number",
-                  "description": "The mean specimen stage temperature (degrees Kelvin) during imaging\n in the microscope.",
+                  "description": "The mean specimen stage temperature (in kelvin) during imaging\n in the microscope.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
-                        "text": "The mean specimen stage temperature (degrees Kelvin) during imaging\n in the microscope.",
+                        "text": "The mean specimen stage temperature (in kelvin) during imaging\n in the microscope.",
                         "context": "dictionary"
                      }
                   ]
@@ -4272,14 +4285,14 @@
             "properties": {
                "chamber_temperature": {
                   "type": "number",
-                  "description": "The temperature (in degrees Kelvin) of the sample just prior to vitrification.",
+                  "description": "The temperature (in kelvin) of the sample just prior to vitrification.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
-                        "text": "The temperature (in degrees Kelvin) of the sample just prior to vitrification.",
+                        "text": "The temperature (in kelvin) of the sample just prior to vitrification.",
                         "context": "dictionary"
                      }
                   ]
@@ -4415,14 +4428,14 @@
                },
                "temp": {
                   "type": "number",
-                  "description": "The vitrification temperature (in degrees Kelvin), e.g.,\n  temperature of the plunge instrument cryogen bath.",
+                  "description": "The vitrification temperature (in kelvin), e.g.,\n  temperature of the plunge instrument cryogen bath.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "kelvins",
                   "rcsb_description": [
                      {
-                        "text": "The vitrification temperature (in degrees Kelvin), e.g.,\n  temperature of the plunge instrument cryogen bath.",
+                        "text": "The vitrification temperature (in kelvin), e.g.,\n  temperature of the plunge instrument cryogen bath.",
                         "context": "dictionary"
                      }
                   ]
@@ -4459,6 +4472,16 @@
                "rcsb_description": [
                   {
                      "text": "The value of _entry.id identifies the data block.\n\n Note that this item need not be a number; it can be any unique\n identifier.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "ma_collection_id": {
+               "type": "string",
+               "description": "An identifier for the model collection associated with the entry.",
+               "rcsb_description": [
+                  {
+                     "text": "An identifier for the model collection associated with the entry.",
                      "context": "dictionary"
                   }
                ]
@@ -4961,6 +4984,114 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "ma_data": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "content_type": {
+                  "type": "string",
+                  "enum": [
+                     "coevolution MSA",
+                     "input structure",
+                     "model coordinates",
+                     "other",
+                     "polymeric template library",
+                     "spatial restraints",
+                     "target",
+                     "target-template alignment",
+                     "template structure"
+                  ],
+                  "description": "The type of data held in the dataset.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "coevolution MSA",
+                        "detail": "coevolution MSA"
+                     },
+                     {
+                        "value": "input structure",
+                        "detail": "input structure used in deep learning methods"
+                     },
+                     {
+                        "value": "model coordinates",
+                        "detail": "model coordinates"
+                     },
+                     {
+                        "value": "other",
+                        "detail": "other"
+                     },
+                     {
+                        "value": "polymeric template library",
+                        "detail": "polymeric template library"
+                     },
+                     {
+                        "value": "spatial restraints",
+                        "detail": "spatial restraints"
+                     },
+                     {
+                        "value": "target",
+                        "detail": "target"
+                     },
+                     {
+                        "value": "target-template alignment",
+                        "detail": "target-template alignment"
+                     },
+                     {
+                        "value": "template structure",
+                        "detail": "template structure"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The type of data held in the dataset.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "content_type_other_details": {
+                  "type": "string",
+                  "description": "Details for other content types.",
+                  "rcsb_description": [
+                     {
+                        "text": "Details for other content types.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "A unique identifier for the data.",
+                  "rcsb_description": [
+                     {
+                        "text": "A unique identifier for the data.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "name": {
+                  "type": "string",
+                  "examples": [
+                     "NMR NOE Distances",
+                     "Target Template Alignment",
+                     "Coevolution Data"
+                  ],
+                  "description": "An author-given name for the content held in the dataset.",
+                  "rcsb_description": [
+                     {
+                        "text": "An author-given name for the content held in the dataset.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_SG_project": {
          "type": "array",
          "items": {
@@ -5286,7 +5417,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "Deposition",
+                        "group_name": "Structure Details",
                         "priority_order": 45
                      }
                   ]
@@ -5624,7 +5755,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "Deposition",
+                        "group_name": "Structure Details",
                         "priority_order": 40
                      }
                   ]
@@ -5662,7 +5793,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "Deposition",
+                        "group_name": "Structure Details",
                         "priority_order": 35
                      }
                   ]
@@ -6298,7 +6429,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "Deposition",
+                        "group_name": "Structure Details",
                         "priority_order": 70
                      }
                   ]
@@ -6328,7 +6459,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "Deposition",
+                        "group_name": "Structure Details",
                         "priority_order": 60
                      }
                   ]
@@ -6352,7 +6483,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "Deposition",
+                        "group_name": "Structure Details",
                         "priority_order": 65
                      }
                   ]
@@ -6526,7 +6657,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "Deposition",
+                        "group_name": "Structure Details",
                         "priority_order": 80
                      }
                   ]
@@ -6579,7 +6710,7 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "Deposition",
+                        "group_name": "Structure Details",
                         "priority_order": 85
                      }
                   ]
@@ -6730,7 +6861,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposition",
+                     "group_name": "Structure Details",
                      "priority_order": 55
                   }
                ]
@@ -7933,10 +8064,10 @@
                },
                "temperature": {
                   "type": "string",
-                  "description": "The temperature (in Kelvin) at which NMR data were\n collected.",
+                  "description": "The temperature (in kelvin) at which NMR data were\n collected.",
                   "rcsb_description": [
                      {
-                        "text": "The temperature (in Kelvin) at which NMR data were\n collected.",
+                        "text": "The temperature (in kelvin) at which NMR data were\n collected.",
                         "context": "dictionary"
                      }
                   ]
@@ -11212,7 +11343,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposition",
+                     "group_name": "Structure Details",
                      "priority_order": 20
                   }
                ]
@@ -11244,7 +11375,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposition",
+                     "group_name": "Structure Details",
                      "priority_order": 50
                   }
                ]
@@ -11272,7 +11403,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposition",
+                     "group_name": "Structure Details",
                      "priority_order": 25
                   }
                ]
@@ -11320,7 +11451,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposition",
+                     "group_name": "Structure Details",
                      "priority_order": 30
                   }
                ]
@@ -11353,6 +11484,102 @@
             }
          },
          "additionalProperties": false
+      },
+      "rcsb_comp_model_provenance": {
+         "type": "object",
+         "properties": {
+            "entry_id": {
+               "type": "string",
+               "examples": [
+                  "AF-P60325-F1",
+                  "ma-bak-cepc-0019"
+               ],
+               "description": "Entry identifier corresponding to the computed structure model.",
+               "rcsb_search_context": [
+                  "exact-match",
+                  "suggest"
+               ],
+               "rcsb_full_text_priority": 20,
+               "rcsb_description": [
+                  {
+                     "text": "Entry identifier corresponding to the computed structure model.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Computed Structure Model ID(s)",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Computed Structure Model Details",
+                     "priority_order": 5
+                  }
+               ]
+            },
+            "source_db": {
+               "type": "string",
+               "enum": [
+                  "AlphaFoldDB",
+                  "ModelArchive"
+               ],
+               "description": "Source database for the computed structure model.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
+               "rcsb_enum_annotated": [
+                  {
+                     "value": "AlphaFoldDB",
+                     "detail": "AlphaFoldDB"
+                  },
+                  {
+                     "value": "ModelArchive",
+                     "detail": "ModelArchive"
+                  }
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "Source database for the computed structure model.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Source Database",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Computed Structure Model Details",
+                     "priority_order": 10
+                  }
+               ]
+            },
+            "source_filename": {
+               "type": "string",
+               "description": "Source filename for the computed structure model.",
+               "rcsb_description": [
+                  {
+                     "text": "Source filename for the computed structure model.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "source_url": {
+               "type": "string",
+               "description": "Source URL for computed structure model file.",
+               "rcsb_description": [
+                  {
+                     "text": "Source URL for computed structure model file.",
+                     "context": "dictionary"
+                  }
+               ]
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "entry_id"
+         ]
       },
       "rcsb_entry_container_identifiers": {
          "type": "object",
@@ -11434,8 +11661,9 @@
             "entry_id": {
                "type": "string",
                "examples": [
-                  "1KIP",
-                  "4HHB"
+                  "4HHB",
+                  "AF_AFP60325F1",
+                  "MA_MABAKCEPC0019"
                ],
                "description": "Entry identifier for the container.",
                "rcsb_search_context": [
@@ -11449,7 +11677,7 @@
                      "context": "dictionary"
                   },
                   {
-                     "text": "PDB ID(s)",
+                     "text": "Entry ID(s)",
                      "context": "brief"
                   }
                ],
@@ -11661,7 +11889,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 65
                   }
                ]
@@ -11684,7 +11912,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 70
                   }
                ]
@@ -11707,7 +11935,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 80
                   }
                ]
@@ -11743,7 +11971,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 55
                   }
                ]
@@ -11766,7 +11994,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 50
                   }
                ]
@@ -11789,7 +12017,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 60
                   }
                ]
@@ -11812,7 +12040,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 75
                   }
                ]
@@ -11896,7 +12124,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 85
                   }
                ]
@@ -11919,7 +12147,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 20
                   }
                ]
@@ -11946,7 +12174,7 @@
                "rcsb_enum_annotated": [
                   {
                      "value": "EM",
-                     "detail": "ELECTRON MICROSCOPY or ELECTRON CRYSTALLOGRAPHY or ELECTRON TOMOGRAPH"
+                     "detail": "ELECTRON MICROSCOPY or ELECTRON CRYSTALLOGRAPHY or ELECTRON TOMOGRAPHY"
                   },
                   {
                      "value": "Multiple methods",
@@ -11962,7 +12190,7 @@
                   },
                   {
                      "value": "Other",
-                     "detail": "SOLUTION SCATTERING, EPR, THEORETICAL MODEL, INFRARED SPECTROSCOPY or FLUORESCENCE TRANSFER"
+                     "detail": "SOLUTION SCATTERING, EPR, INFRARED SPECTROSCOPY or FLUORESCENCE TRANSFER"
                   },
                   {
                      "value": "X-ray",
@@ -12058,7 +12286,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 15
                   }
                ]
@@ -12141,7 +12369,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 25
                   }
                ]
@@ -12278,7 +12506,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 10
                   }
                ]
@@ -12314,7 +12542,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 40
                   }
                ]
@@ -12337,7 +12565,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 35
                   }
                ]
@@ -12373,7 +12601,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 45
                   }
                ]
@@ -12396,7 +12624,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 30
                   }
                ]
@@ -12568,7 +12796,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposited Entry Features",
+                     "group_name": "Entry Features",
                      "priority_order": 5
                   }
                ]
@@ -12620,6 +12848,60 @@
                   {
                      "text": "Number of Distinct Solvent Entities",
                      "context": "brief"
+                  }
+               ]
+            },
+            "structure_determination_methodology": {
+               "type": "string",
+               "enum": [
+                  "computational",
+                  "experimental"
+               ],
+               "examples": [
+                  "experimental"
+               ],
+               "description": "Indicates if the structure was determined using experimental or computational methods.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
+               "rcsb_enum_annotated": [
+                  {
+                     "value": "computational",
+                     "detail": "Computational modeling"
+                  },
+                  {
+                     "value": "experimental",
+                     "detail": "Experimentally based structure determination"
+                  }
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "Indicates if the structure was determined using experimental or computational methods.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Structure Determination Methodology",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Structure Details",
+                     "priority_order": 90
+                  }
+               ]
+            },
+            "structure_determination_methodology_priority": {
+               "type": "integer",
+               "description": "Indicates the priority of the value in _rcsb_entry_info.structure_determination_methodology.\n The lower the number the higher the priority.\n Priority values for \"experimental\" structures is currently set to 10 and\n the values for \"computational\" structures is set to 100.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "Indicates the priority of the value in _rcsb_entry_info.structure_determination_methodology.\n The lower the number the higher the priority.\n Priority values for \"experimental\" structures is currently set to 10 and\n the values for \"computational\" structures is set to 100.",
+                     "context": "dictionary"
                   }
                ]
             },
@@ -12684,6 +12966,214 @@
             }
          },
          "additionalProperties": false
+      },
+      "rcsb_ma_qa_metric_global": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "model_id": {
+                  "type": "integer",
+                  "description": "The model identifier.",
+                  "rcsb_description": [
+                     {
+                        "text": "The model identifier.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "ma_qa_metric_global": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "description": {
+                           "type": "string",
+                           "examples": [
+                              "confidence score predicting accuracy according to the CA-only Local Distance Difference Test (lDDT-CA) in [0,100]"
+                           ],
+                           "description": "Description of the global QA metric.",
+                           "rcsb_description": [
+                              {
+                                 "text": "Description of the global QA metric.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "name": {
+                           "type": "string",
+                           "examples": [
+                              "pLDDT"
+                           ],
+                           "description": "Name of the global QA metric.",
+                           "rcsb_description": [
+                              {
+                                 "text": "Name of the global QA metric.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "type": {
+                           "type": "string",
+                           "enum": [
+                              "PAE",
+                              "contact probability",
+                              "distance",
+                              "energy",
+                              "ipTM",
+                              "normalized score",
+                              "other",
+                              "pLDDT",
+                              "pLDDT all-atom",
+                              "pLDDT all-atom in [0,1]",
+                              "pLDDT in [0,1]",
+                              "pTM",
+                              "zscore"
+                           ],
+                           "examples": [
+                              "pLDDT"
+                           ],
+                           "description": "The type of global QA metric.",
+                           "rcsb_search_context": [
+                              "exact-match"
+                           ],
+                           "rcsb_full_text_priority": 10,
+                           "rcsb_enum_annotated": [
+                              {
+                                 "value": "PAE",
+                                 "detail": "predicted aligned error (in Angstroms)"
+                              },
+                              {
+                                 "value": "contact probability",
+                                 "detail": "the contact probability of a pairwise interaction"
+                              },
+                              {
+                                 "value": "distance",
+                                 "detail": "the lower the distance, the better the quality"
+                              },
+                              {
+                                 "value": "energy",
+                                 "detail": "the lower the energy, the better the quality"
+                              },
+                              {
+                                 "value": "ipTM",
+                                 "detail": "confidence score of protein-protein interface based on the template modeling score in [0,1]"
+                              },
+                              {
+                                 "value": "normalized score",
+                                 "detail": "normalized score ranging from 0 to 1"
+                              },
+                              {
+                                 "value": "other",
+                                 "detail": "other type of QA metric"
+                              },
+                              {
+                                 "value": "pLDDT",
+                                 "detail": "confidence score predicting accuracy according to the CA-only Local Distance Difference Test (lDDT-CA) in [0,100]"
+                              },
+                              {
+                                 "value": "pLDDT all-atom",
+                                 "detail": "confidence score predicting accuracy according to the all-atom Local Distance Difference Test (lDDT) in [0,100]"
+                              },
+                              {
+                                 "value": "pLDDT all-atom in [0,1]",
+                                 "detail": "confidence score predicting accuracy according to the all-atom Local Distance Difference Test (lDDT) in [0,1]"
+                              },
+                              {
+                                 "value": "pLDDT in [0,1]",
+                                 "detail": "confidence score predicting accuracy according to the CA-only Local Distance Difference Test (lDDT-CA) in [0,1]"
+                              },
+                              {
+                                 "value": "pTM",
+                                 "detail": "confidence score predicting accuracy according to the template modeling score in [0,1]"
+                              },
+                              {
+                                 "value": "zscore",
+                                 "detail": "number of standard deviations from optimal/best"
+                              }
+                           ],
+                           "rcsb_description": [
+                              {
+                                 "text": "The type of global QA metric.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "type_other_details": {
+                           "type": "string",
+                           "description": "Details for other type of global QA metric.",
+                           "rcsb_description": [
+                              {
+                                 "text": "Details for other type of global QA metric.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "value": {
+                           "type": "number",
+                           "examples": [
+                              81.23
+                           ],
+                           "description": "Value of the global QA metric.",
+                           "rcsb_search_context": [
+                              "default-match"
+                           ],
+                           "rcsb_description": [
+                              {
+                                 "text": "Value of the global QA metric.",
+                                 "context": "dictionary"
+                              },
+                              {
+                                 "text": "Global Quality Score",
+                                 "context": "brief"
+                              }
+                           ],
+                           "rcsb_search_group": [
+                              {
+                                 "group_name": "Computed Structure Model Details",
+                                 "priority_order": 15
+                              }
+                           ]
+                        }
+                     },
+                     "additionalProperties": false,
+                     "required": [
+                        "name",
+                        "type",
+                        "value"
+                     ]
+                  },
+                  "uniqueItems": false,
+                  "rcsb_nested_indexing": true,
+                  "rcsb_nested_indexing_context": [
+                     {
+                        "category_name": "ma_qa_metric_global",
+                        "category_path": "rcsb_ma_qa_metric_global.ma_qa_metric_global.type",
+                        "context_attributes": [
+                           {
+                              "context_value": "pLDDT",
+                              "attributes": [
+                                 {
+                                    "examples": [
+                                       0.83,
+                                       0.29
+                                    ],
+                                    "path": "rcsb_ma_qa_metric_global.ma_qa_metric_global.value"
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "model_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
       },
       "rcsb_primary_citation": {
          "type": "object",
@@ -15508,6 +15998,16 @@
          "items": {
             "type": "object",
             "properties": {
+               "citation_id": {
+                  "type": "string",
+                  "description": "This data item is a pointer to _citation.id in the CITATION\n category.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is a pointer to _citation.id in the CITATION\n category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "classification": {
                   "type": "string",
                   "examples": [
@@ -15886,7 +16386,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "Deposition",
+                     "group_name": "Structure Details",
                      "priority_order": 5
                   }
                ]
@@ -16193,11 +16693,12 @@
    },
    "additionalProperties": false,
    "required": [
+      "rcsb_entry_info",
       "rcsb_id"
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 8.16.4",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 8.16.4. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 8.16.4"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 9.0.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 9.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 9.0.0"
 }

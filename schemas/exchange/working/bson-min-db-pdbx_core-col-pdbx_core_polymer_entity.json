@@ -28,6 +28,13 @@
             "pdbx_seq_one_letter_code_can": {
                "bsonType": "string"
             },
+            "pdbx_sequence_evidence_code": {
+               "bsonType": "string",
+               "enum": [
+                  "depositor provided",
+                  "derived from coordinates"
+               ]
+            },
             "pdbx_strand_id": {
                "bsonType": "string"
             },
@@ -494,7 +501,8 @@
                "provenance_source": {
                   "bsonType": "string",
                   "enum": [
-                     "PDB Primary Data"
+                     "PDB Primary Data",
+                     "UniProt"
                   ]
                },
                "scientific_name": {
@@ -857,7 +865,8 @@
                         "enum": [
                            "PDB",
                            "RCSB",
-                           "SIFTS"
+                           "SIFTS",
+                           "UniProt"
                         ]
                      }
                   },

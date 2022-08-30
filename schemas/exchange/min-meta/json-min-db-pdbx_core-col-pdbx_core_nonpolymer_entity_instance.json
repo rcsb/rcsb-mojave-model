@@ -1862,6 +1862,104 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "struct_asym": {
+         "type": "object",
+         "properties": {
+            "pdbx_PDB_id": {
+               "type": "string",
+               "examples": [
+                  "1ABC"
+               ],
+               "description": "This data item is a pointer to _atom_site.pdbx_PDB_strand_id the\n ATOM_SITE category.",
+               "rcsb_description": [
+                  {
+                     "text": "This data item is a pointer to _atom_site.pdbx_PDB_strand_id the\n ATOM_SITE category.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "pdbx_alt_id": {
+               "type": "string",
+               "description": "This data item is a pointer to _atom_site.ndb_alias_strand_id the\n ATOM_SITE category.",
+               "rcsb_description": [
+                  {
+                     "text": "This data item is a pointer to _atom_site.ndb_alias_strand_id the\n ATOM_SITE category.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "pdbx_order": {
+               "type": "integer",
+               "description": "This data item gives the order of the structural elements in the\n ATOM_SITE category.",
+               "rcsb_description": [
+                  {
+                     "text": "This data item gives the order of the structural elements in the\n ATOM_SITE category.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "pdbx_type": {
+               "type": "string",
+               "enum": [
+                  "ATOMN",
+                  "ATOMP",
+                  "ATOMS",
+                  "HETAC",
+                  "HETAD",
+                  "HETAI",
+                  "HETAIN",
+                  "HETAS",
+                  "HETIC"
+               ],
+               "description": "This data item describes the general type of the structural elements\n in the ATOM_SITE category.",
+               "rcsb_enum_annotated": [
+                  {
+                     "value": "ATOMN",
+                     "detail": "nucleic acid"
+                  },
+                  {
+                     "value": "ATOMP",
+                     "detail": "protein"
+                  },
+                  {
+                     "value": "ATOMS",
+                     "detail": "sugar"
+                  },
+                  {
+                     "value": "HETAC",
+                     "detail": "coenzyme"
+                  },
+                  {
+                     "value": "HETAD",
+                     "detail": "drug"
+                  },
+                  {
+                     "value": "HETAI",
+                     "detail": "ion"
+                  },
+                  {
+                     "value": "HETAIN",
+                     "detail": "inhibitor"
+                  },
+                  {
+                     "value": "HETAS",
+                     "detail": "solvent"
+                  },
+                  {
+                     "value": "HETIC",
+                     "detail": "ion complex"
+                  }
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "This data item describes the general type of the structural elements\n in the ATOM_SITE category.",
+                     "context": "dictionary"
+                  }
+               ]
+            }
+         },
+         "additionalProperties": false
+      },
       "rcsb_id": {
          "type": "string",
          "examples": [
@@ -1886,7 +1984,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 9.2.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 9.2.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 9.2.0"
+   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 10.0.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 10.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 10.0.0"
 }
