@@ -3710,6 +3710,31 @@
                   "RNA (only)"
                ]
             },
+            "ndb_struct_conf_na_feature_combined": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string",
+                  "enum": [
+                     "a-form double helix",
+                     "b-form double helix",
+                     "bulge loop",
+                     "double helix",
+                     "four-way junction",
+                     "hairpin loop",
+                     "internal loop",
+                     "mismatched base pair",
+                     "other right-handed double helix",
+                     "parallel strands",
+                     "quadruple helix",
+                     "tetraloop",
+                     "three-way junction",
+                     "triple helix",
+                     "two-way junction",
+                     "z-form double helix"
+                  ]
+               },
+               "uniqueItems": false
+            },
             "nonpolymer_bound_components": {
                "bsonType": "array",
                "items": {
