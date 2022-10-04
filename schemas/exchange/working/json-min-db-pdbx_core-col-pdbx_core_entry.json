@@ -12337,6 +12337,41 @@
                   }
                ]
             },
+            "ndb_struct_conf_na_feature_combined": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "enum": [
+                     "a-form double helix",
+                     "b-form double helix",
+                     "bulge loop",
+                     "double helix",
+                     "four-way junction",
+                     "hairpin loop",
+                     "internal loop",
+                     "mismatched base pair",
+                     "other right-handed double helix",
+                     "parallel strands",
+                     "quadruple helix",
+                     "tetraloop",
+                     "three-way junction",
+                     "triple helix",
+                     "two-way junction",
+                     "z-form double helix"
+                  ],
+                  "examples": [
+                     "four-way junction"
+                  ],
+                  "description": "This data item identifies secondary structure\n features of nucleic acids in the entry.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item identifies secondary structure\n features of nucleic acids in the entry.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "uniqueItems": false
+            },
             "nonpolymer_bound_components": {
                "type": "array",
                "items": {
