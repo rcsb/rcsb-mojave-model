@@ -13027,10 +13027,10 @@
                            "examples": [
                               "confidence score predicting accuracy according to the CA-only Local Distance Difference Test (lDDT-CA) in [0,100]"
                            ],
-                           "description": "Description of the global QA metric for computed structure models.",
+                           "description": "Description of the global QA metric.",
                            "rcsb_description": [
                               {
-                                 "text": "Description of the global QA metric for computed structure models.",
+                                 "text": "Description of the global QA metric.",
                                  "context": "dictionary"
                               }
                            ]
@@ -13040,10 +13040,10 @@
                            "examples": [
                               "pLDDT"
                            ],
-                           "description": "Name of the global QA metric for computed structure models.",
+                           "description": "Name of the global QA metric.",
                            "rcsb_description": [
                               {
-                                 "text": "Name of the global QA metric for computed structure models.",
+                                 "text": "Name of the global QA metric.",
                                  "context": "dictionary"
                               }
                            ]
@@ -13068,7 +13068,7 @@
                            "examples": [
                               "pLDDT"
                            ],
-                           "description": "The type of global QA metric for computed structure models.",
+                           "description": "The type of global QA metric.",
                            "rcsb_search_context": [
                               "exact-match"
                            ],
@@ -13104,19 +13104,19 @@
                               },
                               {
                                  "value": "pLDDT",
-                                 "detail": "The average of per-residue predicted confidence measure of Local Distance Difference Test on C-alpha (lDDT-C-alpha) in [0,100]. Higher value indicates greater confidence."
+                                 "detail": "confidence score predicting accuracy according to the CA-only Local Distance Difference Test (lDDT-CA) in [0,100]"
                               },
                               {
                                  "value": "pLDDT all-atom",
-                                 "detail": "The average of per-residue predicted confidence measure of Local Distance Difference Test on all atoms (lDDT) in [0,100]. Higher value indicates greater confidence."
+                                 "detail": "confidence score predicting accuracy according to the all-atom Local Distance Difference Test (lDDT) in [0,100]"
                               },
                               {
                                  "value": "pLDDT all-atom in [0,1]",
-                                 "detail": "The average of per-residue predicted confidence measure of Local Distance Difference Test on all atoms (lDDT) in [0,1]. Higher value indicates greater confidence."
+                                 "detail": "confidence score predicting accuracy according to the all-atom Local Distance Difference Test (lDDT) in [0,1]"
                               },
                               {
                                  "value": "pLDDT in [0,1]",
-                                 "detail": "The average of per-residue predicted confidence measure of Local Distance Difference Test on C-alpha (lDDT-C-alpha) in [0,1]. Higher value indicates greater confidence."
+                                 "detail": "confidence score predicting accuracy according to the CA-only Local Distance Difference Test (lDDT-CA) in [0,1]"
                               },
                               {
                                  "value": "pTM",
@@ -13129,17 +13129,17 @@
                            ],
                            "rcsb_description": [
                               {
-                                 "text": "The type of global QA metric for computed structure models.",
+                                 "text": "The type of global QA metric.",
                                  "context": "dictionary"
                               }
                            ]
                         },
                         "type_other_details": {
                            "type": "string",
-                           "description": "Details for other type of global QA metric for computed structure models.",
+                           "description": "Details for other type of global QA metric.",
                            "rcsb_description": [
                               {
-                                 "text": "Details for other type of global QA metric for computed structure models.",
+                                 "text": "Details for other type of global QA metric.",
                                  "context": "dictionary"
                               }
                            ]
@@ -13149,13 +13149,13 @@
                            "examples": [
                               81.23
                            ],
-                           "description": "Value of the global QA metric for computed structure models.",
+                           "description": "Value of the global QA metric.",
                            "rcsb_search_context": [
                               "default-match"
                            ],
                            "rcsb_description": [
                               {
-                                 "text": "Value of the global QA metric for computed structure models.",
+                                 "text": "Value of the global QA metric.",
                                  "context": "dictionary"
                               },
                               {
