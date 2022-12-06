@@ -73718,6 +73718,7 @@
             "ENTRY_ID": "entry_id",
             "SOURCE_DB": "source_db",
             "SOURCE_FILENAME": "source_filename",
+            "SOURCE_PAE_URL": "source_pae_url",
             "SOURCE_URL": "source_url"
          },
          "ATTRIBUTE_MAP": {
@@ -73736,6 +73737,12 @@
             "SOURCE_FILENAME": {
                "CATEGORY": "rcsb_comp_model_provenance",
                "ATTRIBUTE": "source_filename",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "SOURCE_PAE_URL": {
+               "CATEGORY": "rcsb_comp_model_provenance",
+               "ATTRIBUTE": "source_pae_url",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -73800,8 +73807,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "SOURCE_URL": {
+            "SOURCE_PAE_URL": {
                "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "SOURCE_URL": {
+               "ORDER": 5,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
