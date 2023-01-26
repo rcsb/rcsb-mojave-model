@@ -3508,16 +3508,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
-                  "AF",
+                  "AlphaFoldDB",
                   "BMRB",
                   "CAS",
                   "CSD",
                   "EBI",
                   "EMDB",
                   "ICSD",
-                  "MA",
                   "MDF",
                   "MODBASE",
+                  "ModelArchive",
                   "NBS",
                   "NDB",
                   "PDB",
@@ -3525,7 +3525,7 @@
                   "PDB_ACC",
                   "PDF",
                   "RCSB",
-                  "SMR",
+                  "SWISS-MODEL_REPOSITORY",
                   "WWPDB"
                ],
                "CONTENT_CLASSES": [],
@@ -19780,6 +19780,7 @@
                   "model coordinates",
                   "other",
                   "polymeric template library",
+                  "reference database",
                   "spatial restraints",
                   "target",
                   "target-template alignment",
@@ -22007,12 +22008,12 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "AlphaFoldDB",
                   "MA",
-                  "Model Archive",
                   "Other",
                   "PDB",
                   "PDB-Dev",
-                  "Protein Data Bank"
+                  "PubChem"
                ],
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
@@ -39431,6 +39432,7 @@
             "FRAMES_INDEXED": "frames_indexed",
             "FRAMES_TOTAL": "frames_total",
             "LATTICES_INDEXED": "lattices_indexed",
+            "LATTICES_MERGED": "lattices_merged",
             "XFEL_PULSE_EVENTS": "xfel_pulse_events",
             "XFEL_RUN_NUMBERS": "xfel_run_numbers"
          },
@@ -39480,6 +39482,12 @@
             "LATTICES_INDEXED": {
                "CATEGORY": "pdbx_serial_crystallography_data_reduction",
                "ATTRIBUTE": "lattices_indexed",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "LATTICES_MERGED": {
+               "CATEGORY": "pdbx_serial_crystallography_data_reduction",
+               "ATTRIBUTE": "lattices_merged",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -39632,7 +39640,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "XFEL_PULSE_EVENTS": {
+            "LATTICES_MERGED": {
                "ORDER": 9,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -39649,8 +39657,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "XFEL_RUN_NUMBERS": {
+            "XFEL_PULSE_EVENTS": {
                "ORDER": 10,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "EVOLVING_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "XFEL_RUN_NUMBERS": {
+               "ORDER": 11,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -67664,7 +67689,7 @@
                   "AUCO",
                   "AUTH",
                   "HOLD",
-                  "HPUB'",
+                  "HPUB",
                   "POLC",
                   "PROC",
                   "REFI",
@@ -108280,7 +108305,7 @@
             },
             "CODE": {
                "ORDER": 2,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
                "APP_TYPE": "char",
@@ -108313,7 +108338,7 @@
             },
             "MATRIX_1_1": {
                "ORDER": 4,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -108330,7 +108355,7 @@
             },
             "MATRIX_1_2": {
                "ORDER": 5,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -108347,7 +108372,7 @@
             },
             "MATRIX_1_3": {
                "ORDER": 6,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -108364,7 +108389,7 @@
             },
             "MATRIX_2_1": {
                "ORDER": 7,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -108381,7 +108406,7 @@
             },
             "MATRIX_2_2": {
                "ORDER": 8,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -108398,7 +108423,7 @@
             },
             "MATRIX_2_3": {
                "ORDER": 9,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -108415,7 +108440,7 @@
             },
             "MATRIX_3_1": {
                "ORDER": 10,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -108432,7 +108457,7 @@
             },
             "MATRIX_3_2": {
                "ORDER": 11,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -108449,7 +108474,7 @@
             },
             "MATRIX_3_3": {
                "ORDER": 12,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -108466,7 +108491,7 @@
             },
             "VECTOR_1": {
                "ORDER": 13,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -108483,7 +108508,7 @@
             },
             "VECTOR_2": {
                "ORDER": 14,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
@@ -108500,7 +108525,7 @@
             },
             "VECTOR_3": {
                "ORDER": 15,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
                "APP_TYPE": "float",
