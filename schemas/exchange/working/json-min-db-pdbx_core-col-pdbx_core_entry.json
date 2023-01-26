@@ -1429,10 +1429,10 @@
                },
                "id": {
                   "type": "string",
-                  "description": "Unique key for the 2d_crystal_entity category.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "Unique key for the 2d_crystal_entity category.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -1449,6 +1449,9 @@
                },
                "length_a": {
                   "type": "number",
+                  "examples": [
+                     62.4
+                  ],
                   "description": "Unit-cell length a in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
@@ -1463,6 +1466,9 @@
                },
                "length_b": {
                   "type": "number",
+                  "examples": [
+                     62.4
+                  ],
                   "description": "Unit-cell length b in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
@@ -1477,6 +1483,9 @@
                },
                "length_c": {
                   "type": "number",
+                  "examples": [
+                     62.4
+                  ],
                   "description": "Thickness of 2D crystal",
                   "rcsb_search_context": [
                      "default-match"
@@ -1605,6 +1614,9 @@
             "properties": {
                "angle_alpha": {
                   "type": "number",
+                  "examples": [
+                     120.0
+                  ],
                   "description": "Unit-cell angle alpha in degrees.",
                   "rcsb_search_context": [
                      "default-match"
@@ -1619,6 +1631,9 @@
                },
                "angle_beta": {
                   "type": "number",
+                  "examples": [
+                     120.0
+                  ],
                   "description": "Unit-cell angle beta in degrees.",
                   "rcsb_search_context": [
                      "default-match"
@@ -1633,6 +1648,9 @@
                },
                "angle_gamma": {
                   "type": "number",
+                  "examples": [
+                     120.0
+                  ],
                   "description": "Unit-cell angle gamma in degrees.",
                   "rcsb_search_context": [
                      "default-match"
@@ -1647,10 +1665,10 @@
                },
                "id": {
                   "type": "string",
-                  "description": "Unique key for the em_3d_crystal_entity category.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "Unique key for the em_3d_crystal_entity category.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -1667,6 +1685,9 @@
                },
                "length_a": {
                   "type": "number",
+                  "examples": [
+                     62.4
+                  ],
                   "description": "Unit-cell length a in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
@@ -1681,6 +1702,9 @@
                },
                "length_b": {
                   "type": "number",
+                  "examples": [
+                     62.4
+                  ],
                   "description": "Unit-cell length b in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
@@ -1695,6 +1719,9 @@
                },
                "length_c": {
                   "type": "number",
+                  "examples": [
+                     62.4
+                  ],
                   "description": "Unit-cell length c in angstroms.",
                   "rcsb_search_context": [
                      "default-match"
@@ -1818,9 +1845,6 @@
                      "OTHER",
                      "RIGID BODY FIT"
                   ],
-                  "examples": [
-                     "Local refinement, Flexible fitting"
-                  ],
                   "description": "The refinement protocol used.",
                   "rcsb_search_context": [
                      "exact-match"
@@ -1894,6 +1918,9 @@
                },
                "details": {
                   "type": "string",
+                  "examples": [
+                     "The initial model consisted of the complete biological assembly for PDB entry 2GTL."
+                  ],
                   "description": "Details about the model used in fitting.",
                   "rcsb_search_context": [
                      "full-text"
@@ -1908,16 +1935,19 @@
                },
                "id": {
                   "type": "string",
-                  "description": "This data item is a unique identifier.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "This data item is a unique identifier.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
                },
                "pdb_chain_id": {
                   "type": "string",
+                  "examples": [
+                     "The ID of the biopolymer chain used for fitting, e.g., A. Please note that only one chain can be specified per instance. If all chains of a particular structure have been used for fitting, this field can be left blank."
+                  ],
                   "description": "The ID of the biopolymer chain used for fitting, e.g., A.  Please note that\nonly one chain can be specified per instance.  If all chains of a particular\nstructure have been used for fitting, this field can be left blank.",
                   "rcsb_description": [
                      {
@@ -1928,10 +1958,10 @@
                },
                "pdb_chain_residue_range": {
                   "type": "string",
-                  "description": "The molecular entities represented in this fitting description.",
+                  "description": "Residue range for the identified chain.",
                   "rcsb_description": [
                      {
-                        "text": "The molecular entities represented in this fitting description.",
+                        "text": "Residue range for the identified chain.",
                         "context": "dictionary"
                      }
                   ]
@@ -1939,7 +1969,7 @@
                "pdb_entry_id": {
                   "type": "string",
                   "examples": [
-                     "PDB entry 1EHZ"
+                     "1EHZ"
                   ],
                   "description": "The PDB code for the entry used in fitting.",
                   "rcsb_description": [
@@ -1970,27 +2000,27 @@
                      2.8,
                      5.76
                   ],
-                  "description": "The actual pixel size of projection set of images.",
+                  "description": "The actual pixel size of the projection set of images in Angstroms.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_description": [
                      {
-                        "text": "The actual pixel size of projection set of images.",
+                        "text": "The actual pixel size of the projection set of images in Angstroms.",
                         "context": "dictionary"
                      }
                   ]
                },
                "algorithm": {
                   "type": "string",
-                  "description": "The algorithm used project from 2D orientations to 3D map.",
+                  "description": "The reconstruction algorithm/technique used to generate the map.",
                   "rcsb_search_context": [
                      "full-text"
                   ],
                   "rcsb_full_text_priority": 1,
                   "rcsb_description": [
                      {
-                        "text": "The algorithm used project from 2D orientations to 3D map.",
+                        "text": "The reconstruction algorithm/technique used to generate the map.",
                         "context": "dictionary"
                      }
                   ]
@@ -2010,10 +2040,10 @@
                },
                "id": {
                   "type": "string",
-                  "description": "The value of _em_3d_reconstruction.id must\n uniquely identify the 3d reconstruction.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "The value of _em_3d_reconstruction.id must\n uniquely identify the 3d reconstruction.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -2065,26 +2095,26 @@
                      3.11,
                      6.78
                   ],
-                  "description": "The nominal pixel size of the projection set of images.",
+                  "description": "The nominal pixel size of the projection set of images in Angstroms.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_description": [
                      {
-                        "text": "The nominal pixel size of the projection set of images.",
+                        "text": "The nominal pixel size of the projection set of images in Angstroms.",
                         "context": "dictionary"
                      }
                   ]
                },
                "num_class_averages": {
                   "type": "integer",
-                  "description": "This item was correspondence to two type of em dataset\n processing_emDataSet_singleParticle.numClassAverages\n processing_emDataSet_icosahedral.numClassAverages",
+                  "description": "The number of classes used in the final 3d reconstruction",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_description": [
                      {
-                        "text": "This item was correspondence to two type of em dataset\n processing_emDataSet_singleParticle.numClassAverages\n processing_emDataSet_icosahedral.numClassAverages",
+                        "text": "The number of classes used in the final 3d reconstruction",
                         "context": "dictionary"
                      }
                   ]
@@ -2111,17 +2141,14 @@
                      "HALF-MAPS REFINED WITH FREQUENCY RANGE OMITTED",
                      "OTHER"
                   ],
-                  "examples": [
-                     "HALF-MAPS REFINED INDEPENDENTLY"
-                  ],
-                  "description": "type of refinement performed in order to determine map resolution",
+                  "description": "Indicates details on how the half-map used for resolution determination (usually by FSC) have been generated.",
                   "rcsb_search_context": [
                      "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
-                        "text": "type of refinement performed in order to determine map resolution",
+                        "text": "Indicates details on how the half-map used for resolution determination (usually by FSC) have been generated.",
                         "context": "dictionary"
                      }
                   ]
@@ -2132,14 +2159,14 @@
                      8.9,
                      10.0
                   ],
-                  "description": "The final resolution (in angstroms)of the 3D reconstruction.",
+                  "description": "The final resolution (in angstroms) of the 3D reconstruction.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "angstroms",
                   "rcsb_description": [
                      {
-                        "text": "The final resolution (in angstroms)of the 3D reconstruction.",
+                        "text": "The final resolution (in angstroms) of the 3D reconstruction.",
                         "context": "dictionary"
                      },
                      {
@@ -2235,10 +2262,10 @@
                },
                "id": {
                   "type": "string",
-                  "description": "Primary key",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "Primary key",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -2273,24 +2300,24 @@
             "properties": {
                "camera_length": {
                   "type": "number",
-                  "description": "TODO",
+                  "description": "The camera length (in millimeters). The camera length is the\n product of the objective focal length and the combined magnification\n of the intermediate and projector lenses when the microscope is\n operated in the diffraction mode.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "millimetres",
                   "rcsb_description": [
                      {
-                        "text": "TODO",
+                        "text": "The camera length (in millimeters). The camera length is the\n product of the objective focal length and the combined magnification\n of the intermediate and projector lenses when the microscope is\n operated in the diffraction mode.",
                         "context": "dictionary"
                      }
                   ]
                },
                "id": {
                   "type": "string",
-                  "description": "Primary key",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "Primary key",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -2377,10 +2404,10 @@
                },
                "id": {
                   "type": "string",
-                  "description": "Unique identifier for the category em_diffraction_shell",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "Unique identifier for the category em_diffraction_shell",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -2510,10 +2537,10 @@
                },
                "id": {
                   "type": "string",
-                  "description": "Identifier for this category",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "Identifier for this category",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -2666,10 +2693,10 @@
                },
                "id": {
                   "type": "string",
-                  "description": "This data item is the primary key of the category.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "This data item is the primary key of the category.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -2693,10 +2720,10 @@
                },
                "specimen_id": {
                   "type": "string",
-                  "description": "Foreign key relationship to the EMD SPECIMEN category",
+                  "description": "Foreign key relationship to the EM SPECIMEN category",
                   "rcsb_description": [
                      {
-                        "text": "Foreign key relationship to the EMD SPECIMEN category",
+                        "text": "Foreign key relationship to the EM SPECIMEN category",
                         "context": "dictionary"
                      }
                   ]
@@ -2720,10 +2747,10 @@
                   "examples": [
                      "Fab fragment generated by proteolytic cleavage of LA2 IgG antibody."
                   ],
-                  "description": "Additional details about the component.",
+                  "description": "Additional details about the sample or sample subcomponent.",
                   "rcsb_description": [
                      {
-                        "text": "Additional details about the component.",
+                        "text": "Additional details about the sample or sample subcomponent.",
                         "context": "dictionary"
                      }
                   ]
@@ -2732,6 +2759,9 @@
                   "type": "array",
                   "items": {
                      "type": "string",
+                     "examples": [
+                        "1,2,3,4"
+                     ],
                      "description": "macromolecules associated with this component, if defined\n as comma separated list of entity ids (integers).",
                      "rcsb_description": [
                         {
@@ -2744,10 +2774,10 @@
                },
                "id": {
                   "type": "string",
-                  "description": "The value of _em_entity_assembly.id identifies\n one component of the complex.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "The value of _em_entity_assembly.id identifies\n one component of the complex.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -2762,10 +2792,10 @@
                      "GroEL",
                      "antibody Fab fragment"
                   ],
-                  "description": "Name of this component in the observed assembly.",
+                  "description": "The name of the sample or sample subcomponent.",
                   "rcsb_description": [
                      {
-                        "text": "Name of this component in the observed assembly.",
+                        "text": "The name of the sample or sample subcomponent.",
                         "context": "dictionary"
                      }
                   ]
@@ -2801,14 +2831,14 @@
                      "RECOMBINANT",
                      "SYNTHETIC"
                   ],
-                  "description": "The assembly type.",
+                  "description": "The type of source (e.g., natural source) for the component (sample or sample\nsubcomponent)",
                   "rcsb_search_context": [
                      "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
-                        "text": "The assembly type.",
+                        "text": "The type of source (e.g., natural source) for the component (sample or sample\nsubcomponent)",
                         "context": "dictionary"
                      }
                   ]
@@ -2828,10 +2858,10 @@
                },
                "type": {
                   "type": "string",
-                  "description": "A description of types of components of the\n assembly of the biological structure.",
+                  "description": "The general type of the sample or sample subcomponent.",
                   "rcsb_description": [
                      {
-                        "text": "A description of types of components of the\n assembly of the biological structure.",
+                        "text": "The general type of the sample or sample subcomponent.",
                         "context": "dictionary"
                      }
                   ]
@@ -2893,10 +2923,10 @@
             },
             "id": {
                "type": "string",
-               "description": "Placeholder ID.",
+               "description": "PRIMARY KEY",
                "rcsb_description": [
                   {
-                     "text": "Placeholder ID.",
+                     "text": "PRIMARY KEY",
                      "context": "dictionary"
                   }
                ]
@@ -2945,14 +2975,14 @@
                   "examples": [
                      -34.616
                   ],
-                  "description": "The angular rotation per helical subunit in degrees.",
+                  "description": "The angular rotation per helical subunit in degrees. Negative values indicate left-handed helices; positive values indicate right handed helices.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
-                        "text": "The angular rotation per helical subunit in degrees.",
+                        "text": "The angular rotation per helical subunit in degrees. Negative values indicate left-handed helices; positive values indicate right handed helices.",
                         "context": "dictionary"
                      }
                   ]
@@ -3008,20 +3038,20 @@
                },
                "id": {
                   "type": "string",
-                  "description": "The value of _em_helical_entity.id must uniquely identify\n a set of the filament parameters for this assembly component.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "The value of _em_helical_entity.id must uniquely identify\n a set of the filament parameters for this assembly component.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
                },
                "image_processing_id": {
                   "type": "string",
-                  "description": "The value of _em_helical_entity.reconstruction_id identifies a particular reconstruction.\n\n This data item is a pointer to _em_image_processing.id.",
+                  "description": "This data item is a pointer to _em_image_processing.id.",
                   "rcsb_description": [
                      {
-                        "text": "The value of _em_helical_entity.reconstruction_id identifies a particular reconstruction.\n\n This data item is a pointer to _em_image_processing.id.",
+                        "text": "This data item is a pointer to _em_image_processing.id.",
                         "context": "dictionary"
                      }
                   ]
@@ -3110,7 +3140,7 @@
                },
                "film_or_detector_model": {
                   "type": "string",
-                  "description": "The detector type used for recording images.\n Usually film or CCD camera.",
+                  "description": "The detector type used for recording images.\n Usually film , CCD camera or direct electron detector.",
                   "rcsb_search_context": [
                      "exact-match",
                      "full-text"
@@ -3118,7 +3148,7 @@
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
-                        "text": "The detector type used for recording images.\n Usually film or CCD camera.",
+                        "text": "The detector type used for recording images.\n Usually film , CCD camera or direct electron detector.",
                         "context": "dictionary"
                      },
                      {
@@ -3135,10 +3165,10 @@
                },
                "id": {
                   "type": "string",
-                  "description": "The item _em_image_recording.id uniquely identifies\n a set of recorded images.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "The item _em_image_recording.id uniquely identifies\n a set of recorded images.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -3240,14 +3270,14 @@
                      "OTHER",
                      "ZEMLIN TABLEAU"
                   ],
-                  "description": "microscope alignment procedure",
+                  "description": "The type of procedure used to align the microscope electron beam.",
                   "rcsb_search_context": [
                      "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
-                        "text": "microscope alignment procedure",
+                        "text": "The type of procedure used to align the microscope electron beam.",
                         "context": "dictionary"
                      }
                   ]
@@ -3278,28 +3308,28 @@
                },
                "calibrated_defocus_max": {
                   "type": "number",
-                  "description": "The maximum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images.",
+                  "description": "The maximum calibrated defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "nanometers",
                   "rcsb_description": [
                      {
-                        "text": "The maximum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images.",
+                        "text": "The maximum calibrated defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
                         "context": "dictionary"
                      }
                   ]
                },
                "calibrated_defocus_min": {
                   "type": "number",
-                  "description": "The minimum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images.",
+                  "description": "The minimum calibrated defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "nanometers",
                   "rcsb_description": [
                      {
-                        "text": "The minimum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images.",
+                        "text": "The minimum calibrated defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
                         "context": "dictionary"
                      }
                   ]
@@ -3401,10 +3431,10 @@
                },
                "id": {
                   "type": "string",
-                  "description": "The value of _em_imaging.id must uniquely identify\n each imaging experiment.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "The value of _em_imaging.id must uniquely identify\n each imaging experiment.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -3567,28 +3597,28 @@
                },
                "nominal_defocus_max": {
                   "type": "number",
-                  "description": "The maximum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images.",
+                  "description": "The maximum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "nanometers",
                   "rcsb_description": [
                      {
-                        "text": "The maximum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images.",
+                        "text": "The maximum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
                         "context": "dictionary"
                      }
                   ]
                },
                "nominal_defocus_min": {
                   "type": "number",
-                  "description": "The minimum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images.",
+                  "description": "The minimum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "nanometers",
                   "rcsb_description": [
                      {
-                        "text": "The minimum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images.",
+                        "text": "The minimum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
                         "context": "dictionary"
                      }
                   ]
@@ -3636,14 +3666,14 @@
                },
                "residual_tilt": {
                   "type": "number",
-                  "description": "residual tilt of the electron beam",
+                  "description": "Residual tilt of the electron beam (in miliradians)",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "milliradians",
                   "rcsb_description": [
                      {
-                        "text": "residual tilt of the electron beam",
+                        "text": "Residual tilt of the electron beam (in miliradians)",
                         "context": "dictionary"
                      }
                   ]
@@ -3774,20 +3804,20 @@
                   "examples": [
                      "negative monitor contrast facilitated particle picking"
                   ],
-                  "description": "Any additional details used for selecting particles",
+                  "description": "Additional detail such as description of filters used, if selection was\nmanual or automated, and/or template details.",
                   "rcsb_description": [
                      {
-                        "text": "Any additional details used for selecting particles",
+                        "text": "Additional detail such as description of filters used, if selection was\nmanual or automated, and/or template details.",
                         "context": "dictionary"
                      }
                   ]
                },
                "id": {
                   "type": "string",
-                  "description": "Ordinal identifier",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "Ordinal identifier",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -3832,10 +3862,10 @@
             "properties": {
                "id": {
                   "type": "integer",
-                  "description": "Unique category label.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "Unique category label.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -3954,10 +3984,10 @@
                },
                "id": {
                   "type": "string",
-                  "description": "Unique identifier for each software description.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "Unique identifier for each software description.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -4101,10 +4131,10 @@
                },
                "id": {
                   "type": "string",
-                  "description": "The item  _em_specimen.id uniquely identifies a specimen along with\n its preparation methods.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "The item  _em_specimen.id uniquely identifies a specimen along with\n its preparation methods.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -4201,10 +4231,10 @@
                },
                "id": {
                   "type": "string",
-                  "description": "This data item is the primary key of the category.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "This data item is the primary key of the category.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -4238,10 +4268,10 @@
                },
                "specimen_id": {
                   "type": "string",
-                  "description": "Foreign key relationship to the EMD SPECIMEN category",
+                  "description": "Foreign key relationship to the EM SPECIMEN category",
                   "rcsb_description": [
                      {
-                        "text": "Foreign key relationship to the EMD SPECIMEN category",
+                        "text": "Foreign key relationship to the EM SPECIMEN category",
                         "context": "dictionary"
                      }
                   ]
@@ -4337,23 +4367,23 @@
                },
                "humidity": {
                   "type": "number",
-                  "description": "The humidity (%) in the vicinity of the vitrification process.",
+                  "description": "Relative humidity (%) of air surrounding the specimen just prior to\nvitrification.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_description": [
                      {
-                        "text": "The humidity (%) in the vicinity of the vitrification process.",
+                        "text": "Relative humidity (%) of air surrounding the specimen just prior to\nvitrification.",
                         "context": "dictionary"
                      }
                   ]
                },
                "id": {
                   "type": "string",
-                  "description": "The value of _em_vitrification.id must uniquely identify\n the vitrification procedure.",
+                  "description": "PRIMARY KEY",
                   "rcsb_description": [
                      {
-                        "text": "The value of _em_vitrification.id must uniquely identify\n the vitrification procedure.",
+                        "text": "PRIMARY KEY",
                         "context": "dictionary"
                      }
                   ]
@@ -4763,14 +4793,14 @@
                },
                "pdbx_mosaicity": {
                   "type": "number",
-                  "description": "The of the distribution of mis-orientation angles specified in degrees\nof all the unit cells in the crystal. Lower mosaicity indicates better\nordered crystals.",
+                  "description": "Isotropic approximation of the distribution of mis-orientation angles\nspecified in degrees of all the mosaic domain blocks in the crystal,\nrepresented as a standard deviation. Here, a mosaic block is a set of\ncontiguous unit cells assumed to be perfectly aligned. Lower mosaicity\nindicates better ordered crystals. See for example:\n\nNave, C. (1998). Acta Cryst. D54, 848-853.\n\nNote that many software packages estimate the mosaic rotation distribution\ndifferently and may combine several physical properties of the experiment\ninto a single mosaic term. This term will help fit the modeled spots\nto the observed spots without necessarily being directly related to the\nphysics of the crystal itself.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_units": "degrees",
                   "rcsb_description": [
                      {
-                        "text": "The of the distribution of mis-orientation angles specified in degrees\nof all the unit cells in the crystal. Lower mosaicity indicates better\nordered crystals.",
+                        "text": "Isotropic approximation of the distribution of mis-orientation angles\nspecified in degrees of all the mosaic domain blocks in the crystal,\nrepresented as a standard deviation. Here, a mosaic block is a set of\ncontiguous unit cells assumed to be perfectly aligned. Lower mosaicity\nindicates better ordered crystals. See for example:\n\nNave, C. (1998). Acta Cryst. D54, 848-853.\n\nNote that many software packages estimate the mosaic rotation distribution\ndifferently and may combine several physical properties of the experiment\ninto a single mosaic term. This term will help fit the modeled spots\nto the observed spots without necessarily being directly related to the\nphysics of the crystal itself.",
                         "context": "dictionary"
                      }
                   ]
@@ -4997,6 +5027,7 @@
                      "model coordinates",
                      "other",
                      "polymeric template library",
+                     "reference database",
                      "spatial restraints",
                      "target",
                      "target-template alignment",
@@ -5023,6 +5054,10 @@
                      {
                         "value": "polymeric template library",
                         "detail": "polymeric template library"
+                     },
+                     {
+                        "value": "reference database",
+                        "detail": "reference database used"
                      },
                      {
                         "value": "spatial restraints",
@@ -8904,6 +8939,16 @@
                   "rcsb_description": [
                      {
                         "text": "For experiments in which samples are provided in a\n continuous stream, the total number of lattices indexed.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "lattices_merged": {
+                  "type": "integer",
+                  "description": "For experiments in which samples are provided in a\n            continuous stream, the total number of crystal lattices\n            that were merged in the final dataset.  Can be\n            less than frames_indexed depending on filtering during merging or\n\t    can be more than frames_indexed if there are multiple lattices.\n\t    per frame.",
+                  "rcsb_description": [
+                     {
+                        "text": "For experiments in which samples are provided in a\n            continuous stream, the total number of crystal lattices\n            that were merged in the final dataset.  Can be\n            less than frames_indexed depending on filtering during merging or\n\t    can be more than frames_indexed if there are multiple lattices.\n\t    per frame.",
                         "context": "dictionary"
                      }
                   ]
