@@ -44,20 +44,47 @@ jobs:
       - name: Increment version for next dev cycle
         run: |
           NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
-          mvn versions:set -DnewVersion="${{ github.event.inputs.major }}.${{ github.event.inputs.minor }}.$NEXT_PATCH-SNAPSHOT" -DallowSnapshots --no-transfer-progress
+          mvn versions:set -DnewVersion="${{ inputs.major }}.${{ inputs.minor }}.$NEXT_PATCH-SNAPSHOT" -DallowSnapshots --no-transfer-progress
       - name: Commit new version for next dev cycle
         run: |
           git add pom.xml
           git commit -m "[actions] Next development cycle"
       - name: Push back to GitHub
         run: git push --all
-  update-mojave-model:
-    uses: rcsb/devops-cicd-github-actions/.github/workflows/update-schema-dependency-version.yaml@master
-    with:
-      schema-version: $NEW_SCHEMA_VERSION
-      downstream-repo-to-update: rcsb-mojave-model
-      schema-property-name-in-repo: rcsb-json-schema.version
-# TODO mojave-model needs building and publishing to nexus on tag creation. How to wait for that?
+  release-mojave-model:
+    runs-on:
+      - self-hosted
+      - java
+    steps:
+      - name: Checking out rcsb-mojave-model
+        uses: actions/checkout@v3
+        with:
+          repository: rcsb/rcsb-mojave-model
+          path: rcsb-mojave-model
+      - name: Setup git author information
+        run: |
+          git config user.name RCSBSystem
+          git config user.email it@rcsb.org
+      - run: mvn --version
+      - name: Set new schema dependency version
+        run: |
+          mvn versions:set-property -Dproperty=rcsb-json-schema.version -DnewVersion=$NEW_SCHEMA_VERSION -DgenerateBackupPoms=false
+      - name: Commit and tag
+        run: |
+          git add pom.xml
+          git commit -m "[automatic-schema-release] Updated schema dependency version to $NEW_SCHEMA_VERSION"
+      - name: Publish to nexus via maven deploy
+        run: mvn --batch-mode --errors -U clean deploy
+      - name: Increment version for next dev cycle
+        run: |
+          NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
+          mvn versions:set -DnewVersion="${{ inputs.major }}.${{ inputs.minor }}.$NEXT_PATCH-SNAPSHOT" -DallowSnapshots --no-transfer-progress
+      - name: Commit new version for next dev cycle
+        run: |
+          git add pom.xml
+          git commit -m "[actions] Next development cycle"
+      - name: Push back to GitHub
+        run: git push --all
   update-downstreams:
     strategy:
       matrix:
