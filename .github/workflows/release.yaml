@@ -21,7 +21,7 @@ env:
   NEW_SCHEMA_VERSION: "${{ inputs.major }}.${{ inputs.minor }}.${{ inputs.patch }}"
 
 jobs:
-  update-version:
+  release-rcsb-json-schemas:
     runs-on:
       - self-hosted
       - java
@@ -39,6 +39,8 @@ jobs:
           git add pom.xml
           git commit -m "[actions] Updated version in pom.xml to $NEW_SCHEMA_VERSION"
           git tag $NEW_VERSION
+      - name: Publish to nexus via maven deploy
+        run: mvn --batch-mode --errors -U clean deploy
       - name: Increment version for next dev cycle
         run: |
           NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
@@ -49,8 +51,6 @@ jobs:
           git commit -m "[actions] Next development cycle"
       - name: Push back to GitHub
         run: git push --all
-# After this, publish-on-tag.yaml should build and publish the jar to nexus.
-# TODO how to wait? Should jobs be chained?
   update-mojave-model:
     uses: rcsb/devops-cicd-github-actions/.github/workflows/update-schema-dependency-version.yaml@master
     with:
