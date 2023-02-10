@@ -52,6 +52,7 @@ jobs:
       - name: Push back to GitHub
         run: git push --all
   release-mojave-model:
+    needs: release-rcsb-json-schemas
     runs-on:
       - self-hosted
       - java
@@ -86,6 +87,7 @@ jobs:
       - name: Push back to GitHub
         run: git push --all
   update-downstreams:
+    needs: release-mojave-model
     strategy:
       matrix:
         repos: [rcsb-redwood, rcsb-yosemite, rcsb-shape, rcsb-borrego, rcsb-everglades]
