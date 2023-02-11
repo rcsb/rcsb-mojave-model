@@ -1,0 +1,23 @@
+variables:
+  VERSION: "${CI_BUILD_REF_NAME}"
+
+stages:
+- build
+
+build:
+  stage: build
+  script:
+  #    Handy for debugging
+  - whoami
+  - hostname
+  - pwd
+
+  #    Build via maven
+  - mvn -v
+  - mvn --batch-mode --errors -U clean deploy
+
+  only:
+    - branches
+
+  tags:
+  - Java8-Nexus3
