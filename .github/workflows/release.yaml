@@ -40,7 +40,7 @@ jobs:
           git commit -m "[actions] Updated version in pom.xml to $NEW_SCHEMA_VERSION"
           git tag $NEW_VERSION
       - name: Publish to nexus via maven deploy
-        run: mvn --batch-mode --errors -U clean deploy
+        run: echo "mvn --batch-mode --errors -U clean deploy"
       - name: Increment version for next dev cycle
         run: |
           NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
@@ -50,7 +50,7 @@ jobs:
           git add pom.xml
           git commit -m "[actions] Next development cycle"
       - name: Push back to GitHub
-        run: git push --all
+        run: echo "git push --all"
   release-mojave-model:
     needs: release-rcsb-json-schemas
     runs-on:
@@ -75,7 +75,7 @@ jobs:
           git add pom.xml
           git commit -m "[automatic-schema-release] Updated schema dependency version to $NEW_SCHEMA_VERSION"
       - name: Publish to nexus via maven deploy
-        run: mvn --batch-mode --errors -U clean deploy
+        run: echo "mvn --batch-mode --errors -U clean deploy"
       - name: Increment version for next dev cycle
         run: |
           NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
@@ -85,8 +85,10 @@ jobs:
           git add pom.xml
           git commit -m "[actions] Next development cycle"
       - name: Push back to GitHub
-        run: git push --all
+        run: echo "git push --all"
   update-downstreams:
+# TODO re-enable by removing the if. For now disabled for initial debugging
+    if: ${{ false }}
     needs: release-mojave-model
     strategy:
       matrix:
