@@ -96,7 +96,7 @@ jobs:
 # TODO point to master branch when done testing
     uses: rcsb/devops-cicd-github-actions/.github/workflows/update-schema-dependency-version.yaml@dev-jd-schema-release
     with:
-      schema-versiom: $NEW_SCHEMA_VERSION
+      schema-version: $NEW_SCHEMA_VERSION
       downstream-repo-to-update: ${{ matrix.repos }}
       schema-property-name-in-repo: rcsb.mojave.model.version
 
