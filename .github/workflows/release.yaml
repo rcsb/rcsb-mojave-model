@@ -1,0 +1,102 @@
+name: Schema and full stack release
+
+on:
+  workflow_dispatch:
+    inputs:
+      major:
+        description: 'Schema Major version'
+        type: string
+        required: true
+      minor:
+        description: 'Schema Minor version'
+        type: string
+        required: true
+      patch:
+        description: 'Schema Patch version'
+        type: string
+        required: true
+
+
+env:
+  NEW_SCHEMA_VERSION: "${{ inputs.major }}.${{ inputs.minor }}.${{ inputs.patch }}"
+
+jobs:
+  release-rcsb-json-schemas:
+    runs-on:
+      - self-hosted
+      - java
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup git author information
+        run: |
+          git config user.name RCSBSystem
+          git config user.email it@rcsb.org
+      - run: mvn --version
+      - name: Set version
+        run: mvn versions:set -DnewVersion=$NEW_SCHEMA_VERSION --no-transfer-progress
+      - name: Commit and tag new version
+        run: |
+          git add pom.xml
+          git commit -m "[actions] Updated version in pom.xml to $NEW_SCHEMA_VERSION"
+          git tag $NEW_VERSION
+      - name: Publish to nexus via maven deploy
+        run: echo "mvn --batch-mode --errors -U clean deploy"
+      - name: Increment version for next dev cycle
+        run: |
+          NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
+          mvn versions:set -DnewVersion="${{ inputs.major }}.${{ inputs.minor }}.$NEXT_PATCH-SNAPSHOT" -DallowSnapshots --no-transfer-progress
+      - name: Commit new version for next dev cycle
+        run: |
+          git add pom.xml
+          git commit -m "[actions] Next development cycle"
+      - name: Push back to GitHub
+        run: echo "git push --all"
+  release-mojave-model:
+    needs: release-rcsb-json-schemas
+    runs-on:
+      - self-hosted
+      - java
+    steps:
+      - name: Checking out rcsb-mojave-model
+        uses: actions/checkout@v3
+        with:
+          repository: rcsb/rcsb-mojave-model
+          path: rcsb-mojave-model
+      - name: Setup git author information
+        run: |
+          git config user.name RCSBSystem
+          git config user.email it@rcsb.org
+      - run: mvn --version
+      - name: Set new schema dependency version
+        run: |
+          mvn versions:set-property -Dproperty=rcsb-json-schema.version -DnewVersion=$NEW_SCHEMA_VERSION -DgenerateBackupPoms=false
+      - name: Commit and tag
+        run: |
+          git add pom.xml
+          git commit -m "[automatic-schema-release] Updated schema dependency version to $NEW_SCHEMA_VERSION"
+      - name: Publish to nexus via maven deploy
+        run: echo "mvn --batch-mode --errors -U clean deploy"
+      - name: Increment version for next dev cycle
+        run: |
+          NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
+          mvn versions:set -DnewVersion="${{ inputs.major }}.${{ inputs.minor }}.$NEXT_PATCH-SNAPSHOT" -DallowSnapshots --no-transfer-progress
+      - name: Commit new version for next dev cycle
+        run: |
+          git add pom.xml
+          git commit -m "[actions] Next development cycle"
+      - name: Push back to GitHub
+        run: echo "git push --all"
+  update-downstreams:
+# TODO re-enable by removing the if. For now disabled for initial debugging
+    if: ${{ false }}
+    needs: release-mojave-model
+    strategy:
+      matrix:
+        repos: [rcsb-redwood, rcsb-yosemite, rcsb-shape, rcsb-borrego, rcsb-everglades]
+# TODO point to master branch when done testing
+    uses: rcsb/devops-cicd-github-actions/.github/workflows/update-schema-dependency-version.yaml@dev-jd-schema-release
+    with:
+      schema-versiom: $NEW_SCHEMA_VERSION
+      downstream-repo-to-update: ${{ matrix.repos }}
+      schema-property-name-in-repo: rcsb.mojave.model.version
+
