@@ -61,8 +61,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: rcsb/rcsb-mojave-model
+          token: ${{ secrets.RCSBSYSTEMSPAT }}
           path: rcsb-mojave-model
-          ref: master
       - name: Setup git author information
         run: |
           git config user.name RCSBSystem
