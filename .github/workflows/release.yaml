@@ -109,4 +109,6 @@ jobs:
       schema-version: $NEW_SCHEMA_VERSION
       downstream-repo-to-update: ${{ matrix.repos }}
       schema-property-name-in-repo: rcsb.mojave.model.version
+    secrets:
+      RCSBSYSTEMSPAT: ${{ secrets.RCSBSYSTEMSPAT }}
 
