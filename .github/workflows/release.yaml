@@ -104,7 +104,7 @@ jobs:
     strategy:
       matrix:
         repos: [rcsb-redwood, rcsb-yosemite, rcsb-shape, rcsb-borrego, rcsb-everglades]
-    uses: update-schema-dependency-version.yaml
+    uses: rcsb/rcsb-json-schema/.github/workflows/update-schema-dependency-version.yaml@master
     with:
       schema-version: $NEW_SCHEMA_VERSION
       downstream-repo-to-update: ${{ matrix.repos }}
