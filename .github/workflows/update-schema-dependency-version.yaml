@@ -44,7 +44,7 @@ jobs:
       - name: Set new schema dependency version
         run: |
           cd ${{ inputs.downstream-repo-to-update }}
-          mvn versions:set-property -Dproperty=${{ inputs.schema-property-name-in-repo }} -DnewVersion=${{ inputs.schema-version }} -DgenerateBackupPoms=false
+          mvn versions:set-property -Dproperty=${{ inputs.schema-property-name-in-repo }} -DnewVersion=${{ inputs.schema-version }} -DgenerateBackupPoms=false --no-transfer-progress
       - name: Commit and tag
         run: |
           cd ${{ inputs.downstream-repo-to-update }}

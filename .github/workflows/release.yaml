@@ -75,7 +75,7 @@ jobs:
       - name: Set new schema dependency version
         run: |
           cd $PROJECT_NAME
-          mvn versions:set-property -Dproperty=rcsb-json-schema.version -DnewVersion=$NEW_SCHEMA_VERSION -DgenerateBackupPoms=false
+          mvn versions:set-property -Dproperty=rcsb-json-schema.version -DnewVersion=$NEW_SCHEMA_VERSION -DgenerateBackupPoms=false --no-transfer-progress
       - name: Commit and tag
         run: |
           cd $PROJECT_NAME
