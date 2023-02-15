@@ -62,9 +62,9 @@ jobs:
       - name: Checking out rcsb-mojave-model
         uses: actions/checkout@v3
         with:
-          repository: rcsb/$PROJECT_NAME
+          repository: rcsb/rcsb-mojave-model
           token: ${{ secrets.RCSBSYSTEMSPAT }}
-          path: $PROJECT_NAME
+          path: rcsb-mojave-model
       - name: Setup git author information
         run: |
           cd $PROJECT_NAME
