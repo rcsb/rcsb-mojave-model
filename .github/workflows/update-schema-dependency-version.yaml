@@ -15,7 +15,7 @@ on:
         description: 'The property name in the repos pom.xml for the schema version, e.g. rcsb.mojave.model.version'
         type: string
         required: true
-# https://docs.github.com/en/enterprise-cloud@latest/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
+    # Secrets must be passed explicitly https://docs.github.com/en/enterprise-cloud@latest/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
     secrets:
       RCSBSYSTEMSPAT:
         required: true
