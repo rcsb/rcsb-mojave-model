@@ -1,0 +1,52 @@
+name: Update Schema Version
+
+on:
+  workflow_call:
+    inputs:
+      schema-version:
+        description: 'Schema version'
+        type: string
+        required: true
+      downstream-repo-to-update:
+        description: 'The name of the downstream repository for which to update the schema version'
+        type: string
+        required: true
+      schema-property-name-in-repo:
+        description: 'The property name in the repos pom.xml for the schema version, e.g. rcsb.mojave.model.version'
+        type: string
+        required: true
+
+# TODO get rid of echo in git push commands when ready to go to prod
+# NOTE the secret for PAT must be defined in the project where this script runs in (not in the project we are checking out)
+jobs:
+  update-version:
+    runs-on:
+      - self-hosted
+      - java
+    steps:
+      - name: Checking out ${{ inputs.downstream-repo-to-update }}
+        uses: actions/checkout@v3
+        with:
+          repository: rcsb/${{ inputs.downstream-repo-to-update }}
+          path: ${{ inputs.downstream-repo-to-update }}
+          token: ${{ secrets.RCSBSYSTEMSPAT }}
+      - name: Setup git author information
+        run: |
+          cd ${{ inputs.downstream-repo-to-update }}
+          git config user.name RCSBSystem
+          git config user.email it@rcsb.org
+      - run: mvn --version
+      - name: Set new schema dependency version
+        run: |
+          cd ${{ inputs.downstream-repo-to-update }}
+          mvn versions:set-property -Dproperty=${{ inputs.schema-property-name-in-repo }} -DnewVersion=${{ inputs.schema-version }} -DgenerateBackupPoms=false
+      - name: Commit and tag
+        run: |
+          cd ${{ inputs.downstream-repo-to-update }}
+          git add pom.xml
+          git commit -m "[automatic-schema-release] Updated schema dependency version to ${{ inputs.schema-version }}"
+      - name: Push back to GitHub
+        run: |
+          cd ${{ inputs.downstream-repo-to-update }}
+          echo "git push --all"
+# from here push-to-master will take over: it will do the commits necessary for release and for next dev cycle

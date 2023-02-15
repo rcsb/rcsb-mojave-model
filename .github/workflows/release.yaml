@@ -104,8 +104,7 @@ jobs:
     strategy:
       matrix:
         repos: [rcsb-redwood, rcsb-yosemite, rcsb-shape, rcsb-borrego, rcsb-everglades]
-# TODO point to master branch when done testing
-    uses: rcsb/devops-cicd-github-actions/.github/workflows/update-schema-dependency-version.yaml@dev-jd-schema-release
+    uses: update-schema-dependency-version.yaml
     with:
       schema-version: $NEW_SCHEMA_VERSION
       downstream-repo-to-update: ${{ matrix.repos }}
