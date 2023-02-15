@@ -65,6 +65,7 @@ jobs:
           path: rcsb-mojave-model
       - name: Setup git author information
         run: |
+          cd rcsb-mojave-model
           git config user.name RCSBSystem
           git config user.email it@rcsb.org
       - run: mvn --version
