@@ -56,38 +56,48 @@ jobs:
     runs-on:
       - self-hosted
       - java
+    env:
+      PROJECT_NAME: rcsb-mojave-model
     steps:
       - name: Checking out rcsb-mojave-model
         uses: actions/checkout@v3
         with:
-          repository: rcsb/rcsb-mojave-model
+          repository: rcsb/$PROJECT_NAME
           token: ${{ secrets.RCSBSYSTEMSPAT }}
-          path: rcsb-mojave-model
+          path: $PROJECT_NAME
       - name: Setup git author information
         run: |
-          cd rcsb-mojave-model
+          cd $PROJECT_NAME
           git config user.name RCSBSystem
           git config user.email it@rcsb.org
       - run: mvn --version
       - name: Set new schema dependency version
         run: |
+          cd $PROJECT_NAME
           mvn versions:set-property -Dproperty=rcsb-json-schema.version -DnewVersion=$NEW_SCHEMA_VERSION -DgenerateBackupPoms=false
       - name: Commit and tag
         run: |
+          cd $PROJECT_NAME
           git add pom.xml
           git commit -m "[automatic-schema-release] Updated schema dependency version to $NEW_SCHEMA_VERSION"
       - name: Publish to nexus via maven deploy
-        run: echo "mvn --batch-mode --errors -U clean deploy"
+        run: |
+          cd $PROJECT_NAME
+          echo "mvn --batch-mode --errors -U clean deploy"
       - name: Increment version for next dev cycle
         run: |
+          cd $PROJECT_NAME
           NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
           mvn versions:set -DnewVersion="${{ inputs.major }}.${{ inputs.minor }}.$NEXT_PATCH-SNAPSHOT" -DallowSnapshots --no-transfer-progress
       - name: Commit new version for next dev cycle
         run: |
+          cd $PROJECT_NAME
           git add pom.xml
           git commit -m "[actions] Next development cycle"
       - name: Push back to GitHub
-        run: echo "git push --all"
+        run: |
+          cd $PROJECT_NAME
+          echo "git push --all"
   update-downstreams:
 # TODO re-enable by removing the if. For now disabled for initial debugging
     if: ${{ false }}
