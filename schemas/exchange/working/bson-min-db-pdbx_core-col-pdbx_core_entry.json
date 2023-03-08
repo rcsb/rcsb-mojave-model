@@ -2667,6 +2667,48 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "pdbx_reflns_twin": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "crystal_id": {
+                  "bsonType": "string"
+               },
+               "diffrn_id": {
+                  "bsonType": "string"
+               },
+               "domain_id": {
+                  "bsonType": "string"
+               },
+               "fraction": {
+                  "bsonType": "double"
+               },
+               "operator": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "epitaxial",
+                     "hemihedral",
+                     "merohedral",
+                     "non-merohedral",
+                     "pseudo-merohedral",
+                     "tetartohedral"
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "crystal_id",
+               "diffrn_id",
+               "operator"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_related_exp_data_set": {
          "bsonType": "array",
          "items": {
