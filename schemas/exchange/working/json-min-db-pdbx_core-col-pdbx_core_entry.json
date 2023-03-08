@@ -8794,6 +8794,113 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "pdbx_reflns_twin": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "crystal_id": {
+                  "type": "string",
+                  "description": "The crystal identifier.  A reference to\n _exptl_crystal.id in category EXPTL_CRYSTAL.",
+                  "rcsb_description": [
+                     {
+                        "text": "The crystal identifier.  A reference to\n _exptl_crystal.id in category EXPTL_CRYSTAL.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "diffrn_id": {
+                  "type": "string",
+                  "description": "The diffraction data set identifier.  A reference to\n _diffrn.id in category DIFFRN.",
+                  "rcsb_description": [
+                     {
+                        "text": "The diffraction data set identifier.  A reference to\n _diffrn.id in category DIFFRN.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "domain_id": {
+                  "type": "string",
+                  "description": "An identifier for the twin domain.",
+                  "rcsb_description": [
+                     {
+                        "text": "An identifier for the twin domain.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "fraction": {
+                  "type": "number",
+                  "description": "The twin fraction or twin factor represents a quantitative parameter for the\ncrystal twinning.  The value 0 represents no twinning, < 0.5 partial twinning,\n = 0.5 for perfect twinning.",
+                  "rcsb_description": [
+                     {
+                        "text": "The twin fraction or twin factor represents a quantitative parameter for the\ncrystal twinning.  The value 0 represents no twinning, < 0.5 partial twinning,\n = 0.5 for perfect twinning.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "operator": {
+                  "type": "string",
+                  "examples": [
+                     "h,-h-k,-l",
+                     "h+k,-k,-l",
+                     "-h,-k,l",
+                     "h,-k,-l",
+                     "h,-h-k,-l",
+                     "-h,-k,l",
+                     "k,-h,l"
+                  ],
+                  "description": "The possible merohedral or hemihedral twinning operators for different\npoint groups are:\n\nTrue point group  \tTwin operation  \thkl related to\n3                      \t2 along a,b             h,-h-k,-l\n                       \t2 along a*,b*           h+k,-k,-l\n                        2 along c               -h,-k,l\n4                       2 along a,b,a*,b*       h,-k,-l\n6                       2 along a,b,a*,b*       h,-h-k,-l\n321                     2 along a*,b*,c         -h,-k,l\n312                     2 along a,b,c           -h,-k,l\n23                      4 along a,b,c            k,-h,l\n\nReferences:\n Yeates, T.O. (1997) Methods in Enzymology 276, 344-358. Detecting and\n Overcoming Crystal Twinning.\n\n and information from the following on-line sites:\n\n   CNS site http://cns.csb.yale.edu/v1.1/\n   CCP4 site http://www.ccp4.ac.uk/dist/html/detwin.html\n   SHELX site http://shelx.uni-ac.gwdg.de/~rherbst/twin.html",
+                  "rcsb_description": [
+                     {
+                        "text": "The possible merohedral or hemihedral twinning operators for different\npoint groups are:\n\nTrue point group  \tTwin operation  \thkl related to\n3                      \t2 along a,b             h,-h-k,-l\n                       \t2 along a*,b*           h+k,-k,-l\n                        2 along c               -h,-k,l\n4                       2 along a,b,a*,b*       h,-k,-l\n6                       2 along a,b,a*,b*       h,-h-k,-l\n321                     2 along a*,b*,c         -h,-k,l\n312                     2 along a,b,c           -h,-k,l\n23                      4 along a,b,c            k,-h,l\n\nReferences:\n Yeates, T.O. (1997) Methods in Enzymology 276, 344-358. Detecting and\n Overcoming Crystal Twinning.\n\n and information from the following on-line sites:\n\n   CNS site http://cns.csb.yale.edu/v1.1/\n   CCP4 site http://www.ccp4.ac.uk/dist/html/detwin.html\n   SHELX site http://shelx.uni-ac.gwdg.de/~rherbst/twin.html",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "epitaxial",
+                     "hemihedral",
+                     "merohedral",
+                     "non-merohedral",
+                     "pseudo-merohedral",
+                     "tetartohedral"
+                  ],
+                  "description": "There are two types of twinning: merohedral or hemihedral\n                                 non-merohedral or epitaxial\n\nFor merohedral twinning the diffraction patterns from the different domains are\ncompletely superimposable.   Hemihedral twinning is a special case of merohedral\ntwinning. It only involves two distinct domains.  Pseudo-merohedral twinning is\na subclass merohedral twinning in which lattice is coincidentally superimposable.\n\nIn the case of non-merohedral or epitaxial twinning  the reciprocal\nlattices do not superimpose exactly. In this case the  diffraction pattern\nconsists of two (or more) interpenetrating lattices, which can in principle\nbe separated.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "There are two types of twinning: merohedral or hemihedral\n                                 non-merohedral or epitaxial\n\nFor merohedral twinning the diffraction patterns from the different domains are\ncompletely superimposable.   Hemihedral twinning is a special case of merohedral\ntwinning. It only involves two distinct domains.  Pseudo-merohedral twinning is\na subclass merohedral twinning in which lattice is coincidentally superimposable.\n\nIn the case of non-merohedral or epitaxial twinning  the reciprocal\nlattices do not superimpose exactly. In this case the  diffraction pattern\nconsists of two (or more) interpenetrating lattices, which can in principle\nbe separated.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Type of Twinning",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Crystal Properties",
+                        "priority_order": 35
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "crystal_id",
+               "diffrn_id",
+               "operator"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_related_exp_data_set": {
          "type": "array",
          "items": {
