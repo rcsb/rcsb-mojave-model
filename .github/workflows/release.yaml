@@ -21,7 +21,9 @@ env:
   NEW_SCHEMA_VERSION: "${{ inputs.major }}.${{ inputs.minor }}.${{ inputs.patch }}"
 
 # TODO get rid of echos in `git push` and `mvn deploy` commands when ready for prod!
-# TODO in release-mojave-model we should only do commits and push. Then the mvn deploy should be done by a "java library" workflow (https://rcsbpdb.atlassian.net/browse/RO-3818)
+# NOTE: in release-rcsb-json-schemas and release-mojave-model we do `mvn deploy` as part of the workflow so that it is synchronous.
+#       If we left it to a separate workflow in the repository (similar to push-to-master) then the downstream tasks would not be waiting for the
+#       artifacts to be deployed in Nexus (and would fail because they would be building before the dependency artifact was there)
 jobs:
   release-rcsb-json-schemas:
     runs-on:
