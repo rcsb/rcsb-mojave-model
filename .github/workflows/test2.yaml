@@ -1,0 +1,20 @@
+name: Test step 2
+
+on:
+  workflow_call:
+    inputs:
+      testvar2:
+        description: 'Test var in second script'
+        type: string
+        required: true
+
+
+jobs:
+  test-job:
+    runs-on:
+      - self-hosted
+      - java
+    steps:
+      - name: Echoing variable passed by workflow
+        run: |
+          echo ${{ inputs.testvar2 }}
