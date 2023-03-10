@@ -15,4 +15,4 @@ jobs:
   dispatcher-job:
     uses: rcsb/rcsb-json-schema/.github/workflows/test2.yaml@master
     with:
-      schema-version: ${{ env.NEW_SCHEMA_VERSION }}
+      schema-version: "${{ env.NEW_SCHEMA_VERSION }}"
