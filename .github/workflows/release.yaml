@@ -43,7 +43,7 @@ jobs:
           git commit -m "[actions] Updated version in pom.xml to $NEW_SCHEMA_VERSION"
           git tag $NEW_VERSION
       - name: Publish to nexus via maven deploy
-        run: mvn --batch-mode --errors -U clean deploy
+        run: mvn --batch-mode --errors -U clean deploy --no-transfer-progress
       - name: Increment version for next dev cycle
         run: |
           NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
@@ -78,6 +78,10 @@ jobs:
         run: |
           cd $PROJECT_NAME
           mvn versions:set-property -Dproperty=rcsb-json-schema.version -DnewVersion=$NEW_SCHEMA_VERSION -DgenerateBackupPoms=false --no-transfer-progress
+      - name: Set new mojave-model version, matching schema version
+        run: |
+          cd $PROJECT_NAME
+          mvn versions:set -DnewVersion=$NEW_SCHEMA_VERSION -DgenerateBackupPoms=false --no-transfer-progress
       - name: Commit and tag
         run: |
           cd $PROJECT_NAME
@@ -86,7 +90,7 @@ jobs:
       - name: Publish to nexus via maven deploy
         run: |
           cd $PROJECT_NAME
-          mvn --batch-mode --errors -U clean deploy
+          mvn --batch-mode --errors -U clean deploy --no-transfer-progress
       - name: Increment version for next dev cycle
         run: |
           cd $PROJECT_NAME
