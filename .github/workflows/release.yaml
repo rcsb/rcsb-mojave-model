@@ -112,7 +112,7 @@ jobs:
         repos: [rcsb-redwood, rcsb-yosemite, rcsb-shape, rcsb-borrego, rcsb-everglades]
     uses: rcsb/rcsb-json-schema/.github/workflows/update-schema-dependency-version.yaml@master
     with:
-      schema-version: ${{ NEW_SCHEMA_VERSION }}
+      schema-version: ${{ env.NEW_SCHEMA_VERSION }}
       downstream-repo-to-update: ${{ matrix.repos }}
       schema-property-name-in-repo: rcsb.mojave.model.version
     # Secrets must be passed explicitly https://docs.github.com/en/enterprise-cloud@latest/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
