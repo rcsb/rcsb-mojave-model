@@ -53,7 +53,9 @@ jobs:
           git add pom.xml
           git commit -m "[actions] Next development cycle"
       - name: Push back to GitHub
-        run: git push --all
+        run: |
+          git push --all
+          git push --tags
   release-mojave-model:
     needs: release-rcsb-json-schemas
     runs-on:
@@ -106,6 +108,7 @@ jobs:
         run: |
           cd $PROJECT_NAME
           git push --all
+          git push --tags
   update-downstreams:
     needs: release-mojave-model
     strategy:
