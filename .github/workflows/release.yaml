@@ -20,7 +20,6 @@ on:
 env:
   NEW_SCHEMA_VERSION: "${{ inputs.major }}.${{ inputs.minor }}.${{ inputs.patch }}"
 
-# TODO get rid of echos in `git push` and `mvn deploy` commands when ready for prod!
 # NOTE: in release-rcsb-json-schemas and release-mojave-model we do `mvn deploy` as part of the workflow so that it is synchronous.
 #       If we left it to a separate workflow in the repository (similar to push-to-master) then the downstream tasks would not be waiting for the
 #       artifacts to be deployed in Nexus (and would fail because they would be building before the dependency artifact was there)
@@ -44,7 +43,7 @@ jobs:
           git commit -m "[actions] Updated version in pom.xml to $NEW_SCHEMA_VERSION"
           git tag $NEW_VERSION
       - name: Publish to nexus via maven deploy
-        run: echo "mvn --batch-mode --errors -U clean deploy"
+        run: mvn --batch-mode --errors -U clean deploy
       - name: Increment version for next dev cycle
         run: |
           NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
@@ -54,7 +53,7 @@ jobs:
           git add pom.xml
           git commit -m "[actions] Next development cycle"
       - name: Push back to GitHub
-        run: echo "git push --all"
+        run: git push --all
   release-mojave-model:
     needs: release-rcsb-json-schemas
     runs-on:
@@ -87,7 +86,7 @@ jobs:
       - name: Publish to nexus via maven deploy
         run: |
           cd $PROJECT_NAME
-          echo "mvn --batch-mode --errors -U clean deploy"
+          mvn --batch-mode --errors -U clean deploy
       - name: Increment version for next dev cycle
         run: |
           cd $PROJECT_NAME
@@ -101,7 +100,7 @@ jobs:
       - name: Push back to GitHub
         run: |
           cd $PROJECT_NAME
-          echo "git push --all"
+          git push --all
   update-downstreams:
     needs: release-mojave-model
     strategy:
