@@ -16,6 +16,8 @@ jobs:
     runs-on:
       - self-hosted
       - java
+    env:
+      MYENV: $NEW_SCHEMA_VERSION
     steps:
       - name: Echo variable
         run: |
@@ -24,4 +26,4 @@ jobs:
     needs: echojob
     uses: rcsb/rcsb-json-schema/.github/workflows/test2.yaml@master
     with:
-      testvar2: "${{ env.NEW_SCHEMA_VERSION }}"
+      testvar2: "${{ inputs.mytestvar }}"
