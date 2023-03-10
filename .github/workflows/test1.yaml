@@ -12,7 +12,16 @@ env:
   NEW_SCHEMA_VERSION: "${{ inputs.mytestvar }}-HOLA"
 
 jobs:
+  echojob:
+    runs-on:
+      - self-hosted
+      - java
+    steps:
+      - name: Echo variable
+        run: |
+          echo "$NEW_SCHEMA_VERSION"
   dispatcher-job:
+    needs: echojob
     uses: rcsb/rcsb-json-schema/.github/workflows/test2.yaml@master
     with:
-      testvar2: "$NEW_SCHEMA_VERSION"
+      testvar2: "${{ env.NEW_SCHEMA_VERSION }}"
