@@ -2756,6 +2756,7 @@
                "type": {
                   "type": "string",
                   "enum": [
+                     "CARD",
                      "GO",
                      "GlyCosmos",
                      "GlyGen",
@@ -2776,6 +2777,11 @@
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
+                     {
+                        "value": "CARD",
+                        "detail": "Comprehensive Antibiotic Resistance Database",
+                        "name": "CARD"
+                     },
                      {
                         "value": "GO",
                         "detail": "Gene Ontology",
@@ -2909,6 +2915,80 @@
                   },
                   "uniqueItems": false,
                   "rcsb_nested_indexing": true
+               },
+               "additional_properties": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "name": {
+                           "type": "string",
+                           "enum": [
+                              "CARD_ARO_CATEGORY",
+                              "CARD_ARO_CVTERM_ID",
+                              "CARD_ARO_DRUG_CLASS",
+                              "CARD_ARO_RESISTANCE_MECHANISM"
+                           ],
+                           "examples": [
+                              "CARD_ARO_CATEGORY"
+                           ],
+                           "description": "The additional property name.",
+                           "rcsb_enum_annotated": [
+                              {
+                                 "value": "CARD_ARO_CATEGORY",
+                                 "detail": "Ontological level of a given CARD annotation (either AMR Gene Family or AMR Gene)"
+                              },
+                              {
+                                 "value": "CARD_ARO_CVTERM_ID",
+                                 "detail": "ID to locate a given ARO term on the CARD website"
+                              },
+                              {
+                                 "value": "CARD_ARO_DRUG_CLASS",
+                                 "detail": "Target drug class"
+                              },
+                              {
+                                 "value": "CARD_ARO_RESISTANCE_MECHANISM",
+                                 "detail": "Mechanism of resistance"
+                              }
+                           ],
+                           "rcsb_description": [
+                              {
+                                 "text": "The additional property name.",
+                                 "context": "dictionary"
+                              }
+                           ]
+                        },
+                        "values": {
+                           "type": "array",
+                           "items": {
+                              "anyOf": [
+                                 {
+                                    "type": "string"
+                                 },
+                                 {
+                                    "type": "integer"
+                                 },
+                                 {
+                                    "type": "number"
+                                 }
+                              ],
+                              "examples": [
+                                 "AMR Gene Family"
+                              ],
+                              "description": "The value(s) of the additional property.",
+                              "rcsb_description": [
+                                 {
+                                    "text": "The value(s) of the additional property.",
+                                    "context": "dictionary"
+                                 }
+                              ]
+                           },
+                           "uniqueItems": false
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false
@@ -2975,6 +3055,25 @@
                               "Acyl-CoA dehydrogenase, C-terminal domain (Acyl-CoA_dh_1)"
                            ],
                            "path": "rcsb_polymer_entity_annotation.name"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "CARD",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "ARO:3001059",
+                              "ARO:3000015"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.annotation_lineage.id"
+                        },
+                        {
+                           "examples": [
+                              "SHV-1",
+                              "SHV beta-lactamase"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.annotation_lineage.name"
                         }
                      ]
                   },
@@ -4576,7 +4675,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 10.0.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 10.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 10.0.0"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 10.0.1",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 10.0.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 10.0.1"
 }

@@ -753,6 +753,7 @@
                "type": {
                   "bsonType": "string",
                   "enum": [
+                     "CARD",
                      "GO",
                      "GlyCosmos",
                      "GlyGen",
@@ -777,6 +778,42 @@
                         },
                         "name": {
                            "bsonType": "string"
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               },
+               "additional_properties": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "name": {
+                           "bsonType": "string",
+                           "enum": [
+                              "CARD_ARO_CATEGORY",
+                              "CARD_ARO_CVTERM_ID",
+                              "CARD_ARO_DRUG_CLASS",
+                              "CARD_ARO_RESISTANCE_MECHANISM"
+                           ]
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "anyOf": [
+                                 {
+                                    "bsonType": "string"
+                                 },
+                                 {
+                                    "bsonType": "int"
+                                 },
+                                 {
+                                    "bsonType": "double"
+                                 }
+                              ]
+                           },
+                           "uniqueItems": false
                         }
                      },
                      "additionalProperties": false

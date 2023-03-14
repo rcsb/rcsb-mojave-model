@@ -73924,10 +73924,13 @@
          ],
          "SCHEMA_MANDATORY": false,
          "SCHEMA_SUB_CATEGORIES": [
+            "additional_properties",
             "annotation_lineage"
          ],
          "ATTRIBUTES": {
             "ORDINAL": "ordinal",
+            "ADDITIONAL_PROPERTIES_NAME": "additional_properties_name",
+            "ADDITIONAL_PROPERTIES_VALUES": "additional_properties_values",
             "ANNOTATION_ID": "annotation_id",
             "ANNOTATION_LINEAGE_DEPTH": "annotation_lineage_depth",
             "ANNOTATION_LINEAGE_ID": "annotation_lineage_id",
@@ -73945,6 +73948,18 @@
             "ORDINAL": {
                "CATEGORY": "rcsb_entity_annotation",
                "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ADDITIONAL_PROPERTIES_NAME": {
+               "CATEGORY": "rcsb_entity_annotation",
+               "ATTRIBUTE": "additional_properties_name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ADDITIONAL_PROPERTIES_VALUES": {
+               "CATEGORY": "rcsb_entity_annotation",
+               "ATTRIBUTE": "additional_properties_values",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -74038,8 +74053,51 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "ANNOTATION_ID": {
+            "ADDITIONAL_PROPERTIES_NAME": {
                "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "CARD_ARO_CATEGORY",
+                  "CARD_ARO_CVTERM_ID",
+                  "CARD_ARO_DRUG_CLASS",
+                  "CARD_ARO_RESISTANCE_MECHANISM"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "additional_properties"
+               ]
+            },
+            "ADDITIONAL_PROPERTIES_VALUES": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "any",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "additional_properties"
+               ]
+            },
+            "ANNOTATION_ID": {
+               "ORDER": 4,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -74056,7 +74114,7 @@
                "SUB_CATEGORIES": []
             },
             "ANNOTATION_LINEAGE_DEPTH": {
-               "ORDER": 3,
+               "ORDER": 5,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -74075,7 +74133,7 @@
                ]
             },
             "ANNOTATION_LINEAGE_ID": {
-               "ORDER": 4,
+               "ORDER": 6,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -74094,7 +74152,7 @@
                ]
             },
             "ANNOTATION_LINEAGE_NAME": {
-               "ORDER": 5,
+               "ORDER": 7,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -74113,40 +74171,6 @@
                ]
             },
             "ASSIGNMENT_VERSION": {
-               "ORDER": 6,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "COMP_ID": {
-               "ORDER": 7,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "DESCRIPTION": {
                "ORDER": 8,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -74163,8 +74187,42 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "ENTITY_ID": {
+            "COMP_ID": {
                "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DESCRIPTION": {
+               "ORDER": 10,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTITY_ID": {
+               "ORDER": 11,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -74181,40 +74239,6 @@
                "SUB_CATEGORIES": []
             },
             "ENTRY_ID": {
-               "ORDER": 10,
-               "NULLABLE": false,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "NAME": {
-               "ORDER": 11,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "PROVENANCE_SOURCE": {
                "ORDER": 12,
                "NULLABLE": false,
                "PRECISION": 0,
@@ -74231,8 +74255,42 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "TYPE": {
+            "NAME": {
                "ORDER": 13,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PROVENANCE_SOURCE": {
+               "ORDER": 14,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 15,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -74243,6 +74301,7 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "CARD",
                   "GO",
                   "GlyCosmos",
                   "GlyGen",
@@ -89643,10 +89702,13 @@
          ],
          "SCHEMA_MANDATORY": false,
          "SCHEMA_SUB_CATEGORIES": [
+            "additional_properties",
             "annotation_lineage"
          ],
          "ATTRIBUTES": {
             "ORDINAL": "ordinal",
+            "ADDITIONAL_PROPERTIES_NAME": "additional_properties_name",
+            "ADDITIONAL_PROPERTIES_VALUES": "additional_properties_values",
             "ANNOTATION_ID": "annotation_id",
             "ANNOTATION_LINEAGE_DEPTH": "annotation_lineage_depth",
             "ANNOTATION_LINEAGE_ID": "annotation_lineage_id",
@@ -89663,6 +89725,18 @@
             "ORDINAL": {
                "CATEGORY": "rcsb_polymer_entity_annotation",
                "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ADDITIONAL_PROPERTIES_NAME": {
+               "CATEGORY": "rcsb_polymer_entity_annotation",
+               "ATTRIBUTE": "additional_properties_name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ADDITIONAL_PROPERTIES_VALUES": {
+               "CATEGORY": "rcsb_polymer_entity_annotation",
+               "ATTRIBUTE": "additional_properties_values",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -89750,8 +89824,51 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "ANNOTATION_ID": {
+            "ADDITIONAL_PROPERTIES_NAME": {
                "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "CARD_ARO_CATEGORY",
+                  "CARD_ARO_CVTERM_ID",
+                  "CARD_ARO_DRUG_CLASS",
+                  "CARD_ARO_RESISTANCE_MECHANISM"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "additional_properties"
+               ]
+            },
+            "ADDITIONAL_PROPERTIES_VALUES": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "any",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "additional_properties"
+               ]
+            },
+            "ANNOTATION_ID": {
+               "ORDER": 4,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -89768,7 +89885,7 @@
                "SUB_CATEGORIES": []
             },
             "ANNOTATION_LINEAGE_DEPTH": {
-               "ORDER": 3,
+               "ORDER": 5,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -89787,7 +89904,7 @@
                ]
             },
             "ANNOTATION_LINEAGE_ID": {
-               "ORDER": 4,
+               "ORDER": 6,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -89806,7 +89923,7 @@
                ]
             },
             "ANNOTATION_LINEAGE_NAME": {
-               "ORDER": 5,
+               "ORDER": 7,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -89825,7 +89942,7 @@
                ]
             },
             "ASSIGNMENT_VERSION": {
-               "ORDER": 6,
+               "ORDER": 8,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -89842,7 +89959,7 @@
                "SUB_CATEGORIES": []
             },
             "DESCRIPTION": {
-               "ORDER": 7,
+               "ORDER": 9,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -89859,7 +89976,7 @@
                "SUB_CATEGORIES": []
             },
             "ENTITY_ID": {
-               "ORDER": 8,
+               "ORDER": 10,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -89876,40 +89993,6 @@
                "SUB_CATEGORIES": []
             },
             "ENTRY_ID": {
-               "ORDER": 9,
-               "NULLABLE": false,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "NAME": {
-               "ORDER": 10,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "PROVENANCE_SOURCE": {
                "ORDER": 11,
                "NULLABLE": false,
                "PRECISION": 0,
@@ -89926,8 +90009,42 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "TYPE": {
+            "NAME": {
                "ORDER": 12,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PROVENANCE_SOURCE": {
+               "ORDER": 13,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 14,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -89938,6 +90055,7 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "CARD",
                   "GO",
                   "GlyCosmos",
                   "GlyGen",
@@ -112002,7 +112120,7 @@
          },
          {
             "NAME": "pdbx_core_polymer_entity",
-            "VERSION": "10.0.0"
+            "VERSION": "10.0.1"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity",
