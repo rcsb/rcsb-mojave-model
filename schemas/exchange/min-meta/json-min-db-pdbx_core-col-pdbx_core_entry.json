@@ -7378,6 +7378,133 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "pdbx_initial_refinement_model": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "accession_code": {
+                  "type": "string",
+                  "description": "This item identifies an accession code of the resource where the initial model\n is used",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "This item identifies an accession code of the resource where the initial model\n is used",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Starting Model Accession",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Methods",
+                        "priority_order": 40
+                     }
+                  ]
+               },
+               "details": {
+                  "type": "string",
+                  "description": "A description of special aspects of the initial model",
+                  "rcsb_description": [
+                     {
+                        "text": "A description of special aspects of the initial model",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "entity_id_list": {
+                  "type": "array",
+                  "items": {},
+                  "uniqueItems": false
+               },
+               "id": {
+                  "type": "integer",
+                  "description": "A unique identifier for the starting model record.",
+                  "rcsb_description": [
+                     {
+                        "text": "A unique identifier for the starting model record.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "source_name": {
+                  "type": "string",
+                  "enum": [
+                     "AlphaFold",
+                     "ITasser",
+                     "ModelArchive",
+                     "Modeller",
+                     "Other",
+                     "PDB",
+                     "RoseTTAFold",
+                     "SwissModel"
+                  ],
+                  "description": "This item identifies the resource of initial model used for refinement",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "This item identifies the resource of initial model used for refinement",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Starting Model Source",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Methods",
+                        "priority_order": 35
+                     }
+                  ]
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "experimental model",
+                     "in silico model",
+                     "integrative model",
+                     "other"
+                  ],
+                  "description": "This item describes the type of the initial model was generated",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "This item describes the type of the initial model was generated",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Starting Model Type",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Methods",
+                        "priority_order": 30
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_molecule_features": {
          "type": "array",
          "items": {

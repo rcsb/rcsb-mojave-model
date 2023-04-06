@@ -2237,6 +2237,56 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "pdbx_initial_refinement_model": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "accession_code": {
+                  "bsonType": "string"
+               },
+               "details": {
+                  "bsonType": "string"
+               },
+               "entity_id_list": {
+                  "bsonType": "array",
+                  "items": {},
+                  "uniqueItems": false
+               },
+               "id": {
+                  "bsonType": "int"
+               },
+               "source_name": {
+                  "bsonType": "string",
+                  "enum": [
+                     "AlphaFold",
+                     "ITasser",
+                     "ModelArchive",
+                     "Modeller",
+                     "Other",
+                     "PDB",
+                     "RoseTTAFold",
+                     "SwissModel"
+                  ]
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "experimental model",
+                     "in silico model",
+                     "integrative model",
+                     "other"
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_molecule_features": {
          "bsonType": "array",
          "items": {
