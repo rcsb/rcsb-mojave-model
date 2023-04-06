@@ -1648,7 +1648,8 @@
                "provenance_source": {
                   "type": "string",
                   "enum": [
-                     "PDB Primary Data"
+                     "PDB Primary Data",
+                     "Primary Data"
                   ],
                   "description": "A code indicating the provenance of the host organism.",
                   "rcsb_description": [
@@ -2058,7 +2059,9 @@
                         "provenance_source": {
                            "type": "string",
                            "enum": [
+                              "NCBI",
                               "PDB Primary Data",
+                              "Primary Data",
                               "UniProt"
                            ],
                            "description": "A code indicating the provenance of the source organism details for the entity",
