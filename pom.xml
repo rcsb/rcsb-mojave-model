@@ -21,7 +21,7 @@
 
         <project.auto.package>org.rcsb.mojave.auto</project.auto.package>
         <project.enums.package>org.rcsb.mojave.enumeration</project.enums.package>
-        <rcsb-json-schema.version>1.39.0</rcsb-json-schema.version>
+        <rcsb-json-schema.version>1.39.1-SNAPSHOT</rcsb-json-schema.version>
 
         <mojave.meta.version>1.5.0</mojave.meta.version>
         <mojave.tools.version>1.6.2</mojave.tools.version>
@@ -584,6 +584,8 @@
                         <configuration>
                             <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
                             <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
                                 <!-- where to put final schema -->
                                 <argument>-o</argument>
                                 <argument>${project.build.directory}/${core.schema.location}/${core.polymer.entity.json.schema.name}</argument>
