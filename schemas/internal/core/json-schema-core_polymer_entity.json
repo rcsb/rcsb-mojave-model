@@ -1,8 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Core Polymer Entity",
   "description": "JSON schema for polymer entity core.",
   "type": "object",
+  "$id": "/internal/core/json-schema-core_polymer_entity.json",
   "required": [
     "rcsb_polymer_entity_container_identifiers"
   ],
@@ -128,6 +129,9 @@
               "default-match"
             ],
             "description": "Degree of similarity expressed as a floating-point number"
+          },
+          "aligned_regions": {
+            "$ref": "../../exchange/min-meta/json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json#/properties/rcsb_polymer_entity_align/items/properties/aligned_regions"
           }
         },
         "additionalProperties": false
