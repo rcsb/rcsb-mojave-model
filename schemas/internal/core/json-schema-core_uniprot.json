@@ -567,7 +567,6 @@
             "rcsb_search_context": [
               "exact-match"
             ],
-            "rcsb_full_text_priority": 10,
             "rcsb_description": [
               {
                 "text": "An identifier for the annotation.",
@@ -641,13 +640,14 @@
             "type": "string",
             "enum": [
               "disease",
-              "phenotype"
+              "phenotype",
+              "GO",
+              "InterPro"
             ],
             "description": "A type or category of the annotation.",
             "rcsb_search_context": [
               "exact-match"
             ],
-            "rcsb_full_text_priority": 10,
             "rcsb_enum_annotated": [
               {
                 "value": "disease",
@@ -658,6 +658,16 @@
                 "value": "phenotype",
                 "detail": "Phenotypic data including mouse phenotypes, mouse/human orthologs and GWAS results represented in Pharos",
                 "name": "Phenotype"
+              },
+              {
+                "value": "InterPro",
+                "detail": "InterPro Protein Family",
+                "name": "InterPro Protein Family"
+              },
+              {
+                "value": "GO",
+                "detail": "Gene Ontology",
+                "name": "Gene Ontology"
               }
             ],
             "rcsb_description": [
@@ -733,7 +743,47 @@
       "rcsb_nested_indexing_context": [
         {
           "category_name": "annotation_type",
-          "category_path": "rcsb_uniprot_annotation.type"
+          "category_path": "rcsb_uniprot_annotation.type",
+          "context_attributes": [
+            {
+              "context_value": "GO",
+              "attributes": [
+                {
+                  "examples": [
+                    "GO:0005575",
+                    "GO:0005622"
+                  ],
+                  "path": "rcsb_uniprot_annotation.annotation_lineage.id"
+                },
+                {
+                  "examples": [
+                    "cellular_component",
+                    "intracellular"
+                  ],
+                  "path": "rcsb_uniprot_annotation.annotation_lineage.name"
+                }
+              ]
+            },
+            {
+              "context_value": "InterPro",
+              "attributes": [
+                {
+                  "examples": [
+                    "IPR022352",
+                    "IPR004825"
+                  ],
+                  "path": "rcsb_uniprot_annotation.annotation_lineage.id"
+                },
+                {
+                  "examples": [
+                    "Insulin family",
+                    "Insulin"
+                  ],
+                  "path": "rcsb_uniprot_annotation.annotation_lineage.name"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
