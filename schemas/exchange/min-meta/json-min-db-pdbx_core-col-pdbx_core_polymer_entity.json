@@ -3404,6 +3404,23 @@
                            }
                         ]
                      },
+                     "entity_sequence_coverage": {
+                        "type": "number",
+                        "examples": [
+                           0.75,
+                           0.25
+                        ],
+                        "description": "Indicates what fraction of this polymer entity sequence is covered by the reference sequence.",
+                        "rcsb_search_context": [
+                           "default-match"
+                        ],
+                        "rcsb_description": [
+                           {
+                              "text": "Indicates what fraction of this polymer entity sequence is covered by the reference sequence.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
                      "provenance_source": {
                         "type": "string",
                         "enum": [
@@ -3420,6 +3437,23 @@
                         "rcsb_description": [
                            {
                               "text": "Source of the reference database assignment",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "reference_sequence_coverage": {
+                        "type": "number",
+                        "examples": [
+                           0.75,
+                           0.25
+                        ],
+                        "description": "Indicates what fraction of the reference sequence is covered by this polymer entity sequence.",
+                        "rcsb_search_context": [
+                           "default-match"
+                        ],
+                        "rcsb_description": [
+                           {
+                              "text": "Indicates what fraction of the reference sequence is covered by this polymer entity sequence.",
                               "context": "dictionary"
                            }
                         ]
@@ -3443,6 +3477,20 @@
                                     "P0CX43"
                                  ],
                                  "path": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession"
+                              },
+                              {
+                                 "examples": [
+                                    0.25,
+                                    0.75
+                                 ],
+                                 "path": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.reference_sequence_coverage"
+                              },
+                              {
+                                 "examples": [
+                                    0.25,
+                                    0.75
+                                 ],
+                                 "path": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.entity_sequence_coverage"
                               }
                            ]
                         },
@@ -4680,7 +4728,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 10.0.2",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 10.0.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 10.0.2"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 10.0.3",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 10.0.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 10.0.3"
 }
