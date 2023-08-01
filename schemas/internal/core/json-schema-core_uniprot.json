@@ -573,7 +573,7 @@
                 "context": "dictionary"
               },
               {
-                "text": "Annotation identifier",
+                "text": "Identifier",
                 "context": "brief"
               }
             ]
@@ -621,8 +621,14 @@
             "rcsb_full_text_priority": 10,
             "rcsb_description": [
               {
-                "text": "Annotation Name",
+                "text": "Name",
                 "context": "brief"
+              }
+            ],
+            "rcsb_search_group": [
+              {
+                "group_name": "Polymer Molecular Features",
+                "priority_order": 108
               }
             ]
           },
@@ -652,12 +658,12 @@
               {
                 "value": "disease",
                 "detail": "Disease data from OMIM and Disease Ontology represented in Pharos",
-                "name": "Disease"
+                "name": "Pharos Disease"
               },
               {
                 "value": "phenotype",
-                "detail": "Phenotypic data including mouse phenotypes, mouse/human orthologs and GWAS results represented in Pharos",
-                "name": "Phenotype"
+                "detail": "Phenotypic data including mouse phenotypes, mouse/human orthologs and GWAS results represented in IMPC",
+                "name": "IMPC Phenotype"
               },
               {
                 "value": "InterPro",
@@ -745,6 +751,29 @@
           "category_name": "annotation_type",
           "category_path": "rcsb_uniprot_annotation.type",
           "context_attributes": [
+            {
+              "context_value": "disease",
+              "attributes": [
+                {
+                  "examples": [
+                    "hepatocellular carcinoma",
+                    "tuberculosis"
+                  ],
+                  "path": "rcsb_uniprot_annotation.name"
+                }
+              ]
+            },            {
+              "context_value": "phenotype",
+              "attributes": [
+                {
+                  "examples": [
+                    "immune system phenotype",
+                    "mortality/aging"
+                  ],
+                  "path": "rcsb_uniprot_annotation.name"
+                }
+              ]
+            },
             {
               "context_value": "GO",
               "attributes": [
