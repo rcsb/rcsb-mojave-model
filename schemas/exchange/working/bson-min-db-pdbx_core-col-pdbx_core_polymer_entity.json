@@ -902,6 +902,9 @@
                            "UniProt"
                         ]
                      },
+                     "entity_sequence_coverage": {
+                        "bsonType": "double"
+                     },
                      "provenance_source": {
                         "bsonType": "string",
                         "enum": [
@@ -910,6 +913,9 @@
                            "SIFTS",
                            "UniProt"
                         ]
+                     },
+                     "reference_sequence_coverage": {
+                        "bsonType": "double"
                      }
                   },
                   "additionalProperties": false
