@@ -3410,6 +3410,23 @@
                            }
                         ]
                      },
+                     "entity_sequence_coverage": {
+                        "type": "number",
+                        "examples": [
+                           0.75,
+                           0.25
+                        ],
+                        "description": "Indicates what fraction of this polymer entity sequence is covered by the reference sequence.",
+                        "rcsb_search_context": [
+                           "default-match"
+                        ],
+                        "rcsb_description": [
+                           {
+                              "text": "Indicates what fraction of this polymer entity sequence is covered by the reference sequence.",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
                      "provenance_source": {
                         "type": "string",
                         "enum": [
@@ -3426,6 +3443,23 @@
                         "rcsb_description": [
                            {
                               "text": "Source of the reference database assignment",
+                              "context": "dictionary"
+                           }
+                        ]
+                     },
+                     "reference_sequence_coverage": {
+                        "type": "number",
+                        "examples": [
+                           0.75,
+                           0.25
+                        ],
+                        "description": "Indicates what fraction of the reference sequence is covered by this polymer entity sequence.",
+                        "rcsb_search_context": [
+                           "default-match"
+                        ],
+                        "rcsb_description": [
+                           {
+                              "text": "Indicates what fraction of the reference sequence is covered by this polymer entity sequence.",
                               "context": "dictionary"
                            }
                         ]
@@ -3449,6 +3483,20 @@
                                     "P0CX43"
                                  ],
                                  "path": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession"
+                              },
+                              {
+                                 "examples": [
+                                    0.25,
+                                    0.75
+                                 ],
+                                 "path": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.reference_sequence_coverage"
+                              },
+                              {
+                                 "examples": [
+                                    0.25,
+                                    0.75
+                                 ],
+                                 "path": "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.entity_sequence_coverage"
                               }
                            ]
                         },

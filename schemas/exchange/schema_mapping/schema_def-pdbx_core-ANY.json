@@ -77867,7 +77867,9 @@
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ACCESSION": "reference_sequence_identifiers_database_accession",
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ISOFORM": "reference_sequence_identifiers_database_isoform",
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_NAME": "reference_sequence_identifiers_database_name",
-            "REFERENCE_SEQUENCE_IDENTIFIERS_PROVENANCE_SOURCE": "reference_sequence_identifiers_provenance_source"
+            "REFERENCE_SEQUENCE_IDENTIFIERS_ENTITY_SEQUENCE_COVERAGE": "reference_sequence_identifiers_entity_sequence_coverage",
+            "REFERENCE_SEQUENCE_IDENTIFIERS_PROVENANCE_SOURCE": "reference_sequence_identifiers_provenance_source",
+            "REFERENCE_SEQUENCE_IDENTIFIERS_REFERENCE_SEQUENCE_COVERAGE": "reference_sequence_identifiers_reference_sequence_coverage"
          },
          "ATTRIBUTE_MAP": {
             "ENTITY_ID": {
@@ -77942,9 +77944,21 @@
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
+            "REFERENCE_SEQUENCE_IDENTIFIERS_ENTITY_SEQUENCE_COVERAGE": {
+               "CATEGORY": "rcsb_polymer_entity_container_identifiers",
+               "ATTRIBUTE": "reference_sequence_identifiers_entity_sequence_coverage",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
             "REFERENCE_SEQUENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
                "CATEGORY": "rcsb_polymer_entity_container_identifiers",
                "ATTRIBUTE": "reference_sequence_identifiers_provenance_source",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REFERENCE_SEQUENCE_IDENTIFIERS_REFERENCE_SEQUENCE_COVERAGE": {
+               "CATEGORY": "rcsb_polymer_entity_container_identifiers",
+               "ATTRIBUTE": "reference_sequence_identifiers_reference_sequence_coverage",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             }
@@ -78168,8 +78182,27 @@
                   "reference_sequence_identifiers"
                ]
             },
-            "REFERENCE_SEQUENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
+            "REFERENCE_SEQUENCE_IDENTIFIERS_ENTITY_SEQUENCE_COVERAGE": {
                "ORDER": 13,
+               "NULLABLE": true,
+               "PRECISION": 3,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "reference_sequence_identifiers"
+               ]
+            },
+            "REFERENCE_SEQUENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
+               "ORDER": 14,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -78185,6 +78218,25 @@
                   "SIFTS",
                   "UniProt"
                ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "reference_sequence_identifiers"
+               ]
+            },
+            "REFERENCE_SEQUENCE_IDENTIFIERS_REFERENCE_SEQUENCE_COVERAGE": {
+               "ORDER": 15,
+               "NULLABLE": true,
+               "PRECISION": 3,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
                ],
