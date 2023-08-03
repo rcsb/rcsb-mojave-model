@@ -739,6 +739,62 @@
             },
             "uniqueItems": false,
             "rcsb_nested_indexing": true
+          },
+          "additional_properties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": [
+                    "INTERPRO_TYPE"
+                  ],
+                  "examples": [
+                    "INTERPRO_TYPE"
+                  ],
+                  "description": "The additional property name",
+                  "rcsb_enum_annotated": [
+                    {
+                      "value": "INTERPRO_TYPE",
+                      "detail": "Describes the type of InterPro annotations: annotations for individual protein families, domains, important sites, etc."
+                    }
+                  ],
+                  "rcsb_description": [
+                    {
+                      "text": "The additional property name",
+                      "context": "dictionary"
+                    }
+                  ]
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "description": "The value(s) of the additional property",
+                    "rcsb_description": [
+                      {
+                        "text": "The value(s) of the additional property",
+                        "context": "dictionary"
+                      }
+                    ]
+                  },
+                  "uniqueItems": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "uniqueItems": false
           }
         },
         "additionalProperties": false
