@@ -1324,6 +1324,7 @@
                   "Initial release",
                   "Modify aromatic_flag",
                   "Modify atom id",
+                  "Modify backbone",
                   "Modify charge",
                   "Modify component atom id",
                   "Modify component comp_id",
@@ -3301,7 +3302,7 @@
             },
             "ONE_LETTER_CODES": {
                "ORDER": 4,
-               "NULLABLE": false,
+               "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
                "APP_TYPE": "char",
@@ -6749,6 +6750,7 @@
                "ENUMERATION": [
                   "CAS",
                   "CCDC/CSD",
+                  "COD",
                   "ChEBI",
                   "ChEMBL",
                   "DrugBank",

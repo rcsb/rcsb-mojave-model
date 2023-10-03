@@ -506,6 +506,7 @@
                      "Initial release",
                      "Modify aromatic_flag",
                      "Modify atom id",
+                     "Modify backbone",
                      "Modify charge",
                      "Modify component atom id",
                      "Modify component comp_id",
@@ -3858,6 +3859,7 @@
                   "enum": [
                      "CAS",
                      "CCDC/CSD",
+                     "COD",
                      "ChEBI",
                      "ChEMBL",
                      "DrugBank",
@@ -3883,6 +3885,11 @@
                         "value": "CCDC/CSD",
                         "detail": "Cambridge Crystallographic Data Center",
                         "name": "CCDC/CSD"
+                     },
+                     {
+                        "value": "COD",
+                        "detail": "Crystallography Open Database",
+                        "name": "COD"
                      },
                      {
                         "value": "ChEBI",
@@ -3960,6 +3967,18 @@
                            "examples": [
                               "QAXDEZ",
                               "XEGJEA"
+                           ],
+                           "path": "rcsb_chem_comp_related.resource_accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "COD",
+                     "attributes": [
+                        {
+                           "examples": [
+                              2236573,
+                              7229993
                            ],
                            "path": "rcsb_chem_comp_related.resource_accession_code"
                         }
