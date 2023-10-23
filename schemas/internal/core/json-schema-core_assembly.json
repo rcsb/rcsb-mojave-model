@@ -1,6 +1,6 @@
 {
-  "$schema" : "http://json-schema.org/draft-04/schema#",
-  "title" : "Core Assembly",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Core Assembly",
   "description": "JSON schema for assembly level core data. Combines RCSB Exchange Database schema: json-schema-min-pdbx_core_assembly.json and RCSB Data Warehouse schema: json-schema-core_assembly.json",
   "type": "object",
   "required": [
@@ -20,12 +20,12 @@
       }
     },
     "rcsb_struct_symmetry": {
-      "type":"array",
+      "type": "array",
       "minItems": 1,
       "uniqueItems": true,
       "items": {
         "type": "object",
-        "required":[
+        "required": [
           "symbol",
           "type",
           "stoichiometry",
@@ -121,17 +121,17 @@
             "description": "Oligomeric state refers to a composition of polymeric subunits in quaternary structure. Quaternary structure may be composed either exclusively of several copies of identical subunits, in which case they are termed homo-oligomers, or alternatively by at least one copy of different subunits (hetero-oligomers). Quaternary structure composed of a single subunit is denoted as 'Monomer'."
           },
           "clusters": {
-            "type":"array",
+            "type": "array",
             "minItems": 1,
             "uniqueItems": true,
             "items": {
               "type": "object",
-              "required":[
+              "required": [
                 "members"
               ],
               "properties": {
                 "members": {
-                  "type":"array",
+                  "type": "array",
                   "minItems": 1,
                   "uniqueItems": true,
                   "items": {
@@ -182,7 +182,7 @@
             "uniqueItems": true,
             "items": {
               "type": "object",
-              "required":[
+              "required": [
                 "start",
                 "end"
               ],
@@ -207,8 +207,8 @@
                   },
                   "description": "Describes x,y,z coordinates of the end point of the symmetry axis."
                 },
-                "order":{
-                  "type":"integer",
+                "order": {
+                  "type": "integer",
                   "description": "The number of times (order of rotation) that a subunit can be repeated by a rotation operation, being transformed into a new state indistinguishable from its starting state."
                 }
               },
@@ -251,10 +251,10 @@
       "description": "The title and version of software package used for symmetry calculations."
     },
     "rcsb_struct_symmetry_lineage": {
-      "type" : "array",
-      "minItems" : 1,
-      "uniqueItems" : true,
-      "items" : {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
         "type": "object",
         "properties": {
           "id": {
@@ -279,7 +279,7 @@
             ],
             "description": "Automatically assigned ID to uniquely identify the symmetry term in the Protein Symmetry Browser."
           },
-          "name":{
+          "name": {
             "type": "string",
             "examples": [
               "Asymmetric",
@@ -299,8 +299,8 @@
             "description": "A human-readable term describing protein symmetry."
           },
           "depth": {
-            "type" : "integer",
-            "description" : "Hierarchy depth.",
+            "type": "integer",
+            "description": "Hierarchy depth.",
             "rcsb_search_context": [
               "default-match"
             ]
@@ -309,6 +309,343 @@
         "additionalProperties": false
       },
       "rcsb_nested_indexing": true
+    },
+    "rcsb_assembly_feature": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "assignment_version": {
+            "type": "string",
+            "examples": [
+              "V4_0_2"
+            ],
+            "description": "Identifies the version of the feature assignment.",
+            "rcsb_description": [
+              {
+                "text": "Identifies the version of the feature assignment.",
+                "context": "dictionary"
+              },
+              {
+                "text": "Feature Version",
+                "context": "brief"
+              }
+            ]
+          },
+          "description": {
+            "type": "string",
+            "description": "A description for the feature.",
+            "rcsb_description": [
+              {
+                "text": "A description for the feature.",
+                "context": "dictionary"
+              },
+              {
+                "text": "Feature Description",
+                "context": "brief"
+              }
+            ]
+          },
+          "feature_id": {
+            "type": "string",
+            "description": "An identifier for the feature.",
+            "rcsb_description": [
+              {
+                "text": "An identifier for the feature.",
+                "context": "dictionary"
+              }
+            ]
+          },
+          "name": {
+            "type": "string",
+            "description": "A name for the feature.",
+            "rcsb_description": [
+              {
+                "text": "A name for the feature.",
+                "context": "dictionary"
+              },
+              {
+                "text": "Name",
+                "context": "brief"
+              }
+            ]
+          },
+          "provenance_source": {
+            "type": "string",
+            "examples": [
+              "PDB"
+            ],
+            "description": "Code identifying the individual, organization or program that\n assigned the feature.",
+            "rcsb_description": [
+              {
+                "text": "Code identifying the individual, organization or program that\n assigned the feature.",
+                "context": "dictionary"
+              },
+              {
+                "text": "Feature Source",
+                "context": "brief"
+              }
+            ]
+          },
+          "reference_scheme": {
+            "type": "string",
+            "enum": [
+              "NCBI",
+              "PDB entity",
+              "UniProt"
+            ],
+            "examples": [
+              "PDB entity",
+              "UniProt",
+              "NCBI"
+            ],
+            "description": "Code residue coordinate system for the assigned feature.",
+            "rcsb_enum_annotated": [
+              {
+                "value": "NCBI",
+                "detail": "The reference polymer sequence in NCBI entry"
+              },
+              {
+                "value": "PDB entity",
+                "detail": "The reference polymer entity sequence in PDB entry"
+              },
+              {
+                "value": "UniProt",
+                "detail": "The reference polymer sequence in UniProt entry"
+              }
+            ],
+            "rcsb_description": [
+              {
+                "text": "Code residue coordinate system for the assigned feature.",
+                "context": "dictionary"
+              }
+            ]
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "MCSA"
+            ],
+            "examples": [
+              "MCSA"
+            ],
+            "description": "A type or category of the feature.",
+            "rcsb_enum_annotated": [
+              {
+                "value": "MCSA",
+                "detail": "A set of catalytically active residues according to the M-CSA.",
+                "name": "Mechanism and Catalytic Site Atlas"
+              }
+            ],
+            "rcsb_description": [
+              {
+                "text": "A type or category of the feature.",
+                "context": "dictionary"
+              },
+              {
+                "text": "Feature Type",
+                "context": "brief"
+              }
+            ]
+          },
+          "feature_positions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "asym_id": {
+                  "type": "string",
+                  "examples": [
+                    "A",
+                    "B"
+                  ],
+                  "description": [
+                    {
+                      "text": "An identifier of polymer chain corresponding to the feature assignment.",
+                      "context": "dictionary"
+                    }
+                  ]
+                },
+                "rcsb_instance_operator": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "maxLength": 2,
+                    "minLength": 1,
+                    "examples": [
+                      [
+                        "1"
+                      ],
+                      [
+                        "P",
+                        "63"
+                      ]
+                    ],
+                    "description": "List of pdbx_struct_oper_list_ids for each chain instance.",
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "Identifies the list of operations from the category pdbx_struct_oper_list. One item in array per operator applied. The order follows how operators are applied."
+                    }
+                  }
+                },
+                "beg_comp_id": {
+                  "type": "string",
+                  "examples": [
+                    "TRP",
+                    "VAL"
+                  ],
+                  "description": "An identifier for the leading monomer corresponding to the feature assignment.",
+                  "rcsb_description": [
+                    {
+                      "text": "An identifier for the leading monomer corresponding to the feature assignment.",
+                      "context": "dictionary"
+                    }
+                  ]
+                },
+                "beg_seq_id": {
+                  "type": "integer",
+                  "description": "An identifier for the monomer at which this segment of the feature begins.",
+                  "rcsb_description": [
+                    {
+                      "text": "An identifier for the monomer at which this segment of the feature begins.",
+                      "context": "dictionary"
+                    }
+                  ]
+                },
+                "end_seq_id": {
+                  "type": "integer",
+                  "description": "An identifier for the monomer at which this segment of the feature ends.",
+                  "rcsb_description": [
+                    {
+                      "text": "An identifier for the monomer at which this segment of the feature ends.",
+                      "context": "dictionary"
+                    }
+                  ]
+                },
+                "value": {
+                  "type": "number",
+                  "examples": [
+                    5,
+                    0.25
+                  ],
+                  "description": "The value for the feature over this monomer segment.",
+                  "rcsb_description": [
+                    {
+                      "text": "The value for the feature over this monomer segment.",
+                      "context": "dictionary"
+                    }
+                  ]
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "examples": [
+                      5,
+                      0.25
+                    ],
+                    "description": "The value(s) for the feature over this monomer segment.",
+                    "rcsb_description": [
+                      {
+                        "text": "The value(s) for the feature over this monomer segment.",
+                        "context": "dictionary"
+                      }
+                    ]
+                  },
+                  "uniqueItems": false
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "beg_seq_id"
+              ]
+            },
+            "uniqueItems": false
+          },
+          "additional_properties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": [
+                    "MCSA_MOTIF_DESCRIPTION",
+                    "MCSA_MOTIF_NAME",
+                    "MCSA_MOTIF_IDENTIFIER",
+                    "MCSA_MOTIF_COMPATIBILITY"
+                  ],
+                  "examples": [
+                    "MCSA_MOTIF_DESCRIPTION"
+                  ],
+                  "description": "The additional property name.",
+                  "rcsb_enum_annotated": [
+                    {
+                      "value": "MCSA_MOTIF_DESCRIPTION",
+                      "detail": "A detailed description of this M-CSA motif."
+                    },
+                    {
+                      "value": "MCSA_MOTIF_NAME",
+                      "detail": "A brief name of this M-CSA motif."
+                    },
+                    {
+                      "value": "MCSA_MOTIF_IDENTIFIER",
+                      "detail": "The unique M-CSA-specific that can be used to compose outgoing links to the external resource."
+                    },
+                    {
+                      "value": "MCSA_MOTIF_COMPATIBILITY",
+                      "detail": "Internal enum that captures whether a M-CSA motif supports visualization and/or structure motif searching."
+                    }
+                  ],
+                  "rcsb_description": [
+                    {
+                      "text": "The additional property name.",
+                      "context": "dictionary"
+                    }
+                  ]
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "examples": [
+                      "globin-like",
+                      "2.54",
+                      "300"
+                    ],
+                    "description": "The value(s) of the additional property.",
+                    "rcsb_description": [
+                      {
+                        "text": "The value(s) of the additional property.",
+                        "context": "dictionary"
+                      }
+                    ]
+                  },
+                  "uniqueItems": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "uniqueItems": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "rcsb_latest_revision": {
       "type": "object",
