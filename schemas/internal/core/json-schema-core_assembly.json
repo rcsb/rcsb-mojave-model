@@ -448,8 +448,9 @@
               }
             ]
           },
-          "feature_positions": {
+          "feature_containers": {
             "type": "array",
+            "description": "This container groups together chain-level identifiers of the assigned features.",
             "items": {
               "type": "object",
               "properties": {
@@ -461,7 +462,21 @@
                   ],
                   "description": [
                     {
-                      "text": "An identifier of polymer chain corresponding to the feature assignment.",
+                      "text": "An identifier of polymer chain (label_asym_id) corresponding to the feature assignment.",
+                      "context": "dictionary"
+                    }
+                  ]
+                },
+                "entity_id": {
+                  "type": "string",
+                  "examples": [
+                    "1",
+                    "2"
+                  ],
+                  "description": "Entity identifier for the container.",
+                  "rcsb_description": [
+                    {
+                      "text": "Entity identifier for the container.",
                       "context": "dictionary"
                     }
                   ]
@@ -491,77 +506,69 @@
                     }
                   }
                 },
-                "beg_comp_id": {
-                  "type": "string",
-                  "examples": [
-                    "TRP",
-                    "VAL"
-                  ],
-                  "description": "An identifier for the leading monomer corresponding to the feature assignment.",
-                  "rcsb_description": [
-                    {
-                      "text": "An identifier for the leading monomer corresponding to the feature assignment.",
-                      "context": "dictionary"
-                    }
-                  ]
-                },
-                "beg_seq_id": {
-                  "type": "integer",
-                  "description": "An identifier for the monomer at which this segment of the feature begins.",
-                  "rcsb_description": [
-                    {
-                      "text": "An identifier for the monomer at which this segment of the feature begins.",
-                      "context": "dictionary"
-                    }
-                  ]
-                },
-                "end_seq_id": {
-                  "type": "integer",
-                  "description": "An identifier for the monomer at which this segment of the feature ends.",
-                  "rcsb_description": [
-                    {
-                      "text": "An identifier for the monomer at which this segment of the feature ends.",
-                      "context": "dictionary"
-                    }
-                  ]
-                },
-                "value": {
-                  "type": "number",
-                  "examples": [
-                    5,
-                    0.25
-                  ],
-                  "description": "The value for the feature over this monomer segment.",
-                  "rcsb_description": [
-                    {
-                      "text": "The value for the feature over this monomer segment.",
-                      "context": "dictionary"
-                    }
-                  ]
-                },
-                "values": {
+                "feature_positions": {
                   "type": "array",
                   "items": {
-                    "type": "number",
-                    "examples": [
-                      5,
-                      0.25
-                    ],
-                    "description": "The value(s) for the feature over this monomer segment.",
-                    "rcsb_description": [
-                      {
-                        "text": "The value(s) for the feature over this monomer segment.",
-                        "context": "dictionary"
-                      }
-                    ]
+                    "beg_comp_id": {
+                      "type": "string",
+                      "examples": [
+                        "TRP",
+                        "VAL"
+                      ],
+                      "description": "An identifier for the leading monomer corresponding to the feature assignment.",
+                      "rcsb_description": [
+                        {
+                          "text": "An identifier for the leading monomer corresponding to the feature assignment.",
+                          "context": "dictionary"
+                        }
+                      ]
+                    },
+                    "beg_seq_id": {
+                      "type": "integer",
+                      "description": "An identifier for the monomer at which this segment of the feature begins.",
+                      "rcsb_description": [
+                        {
+                          "text": "An identifier for the monomer at which this segment of the feature begins.",
+                          "context": "dictionary"
+                        }
+                      ]
+                    },
+                    "end_seq_id": {
+                      "type": "integer",
+                      "description": "An identifier for the monomer at which this segment of the feature ends.",
+                      "rcsb_description": [
+                        {
+                          "text": "An identifier for the monomer at which this segment of the feature ends.",
+                          "context": "dictionary"
+                        }
+                      ]
+                    },
+                    "values": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "examples": [
+                          5,
+                          0.25
+                        ],
+                        "description": "The value(s) for the feature over this monomer segment.",
+                        "rcsb_description": [
+                          {
+                            "text": "The value(s) for the feature over this monomer segment.",
+                            "context": "dictionary"
+                          }
+                        ]
+                      },
+                      "uniqueItems": false
+                    }
                   },
-                  "uniqueItems": false
-                }
-              },
-              "additionalProperties": false,
-              "required": [
-                "beg_seq_id"
-              ]
+                  "additionalProperties": false,
+                  "required": [
+                    "beg_seq_id"
+                  ]
+                },
+                "uniqueItems": false
+              }
             },
             "uniqueItems": false
           },
