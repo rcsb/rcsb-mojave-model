@@ -454,18 +454,13 @@
                 "name": {
                   "type": "string",
                   "enum": [
-                    "MCSA_MOTIF_DESCRIPTION",
                     "MCSA_MOTIF_COMPATIBILITY"
                   ],
                   "examples": [
-                    "MCSA_MOTIF_DESCRIPTION"
+                    "MCSA_MOTIF_COMPATIBILITY"
                   ],
                   "description": "The additional property name.",
                   "rcsb_enum_annotated": [
-                    {
-                      "value": "MCSA_MOTIF_DESCRIPTION",
-                      "detail": "A detailed description of this M-CSA motif."
-                    },
                     {
                       "value": "MCSA_MOTIF_COMPATIBILITY",
                       "detail": "Internal enum that captures whether a M-CSA motif supports visualization and/or structure motif searching."
@@ -487,7 +482,6 @@
                       }
                     ],
                     "examples": [
-                      "Glutamate racemase",
                       "SUPPORTED"
                     ],
                     "description": "The value(s) of the additional property."
