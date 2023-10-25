@@ -320,72 +320,26 @@
             "examples": [
               "V4_0_2"
             ],
-            "description": "Identifies the version of the feature assignment.",
-            "rcsb_description": [
-              {
-                "text": "Identifies the version of the feature assignment.",
-                "context": "dictionary"
-              },
-              {
-                "text": "Feature Version",
-                "context": "brief"
-              }
-            ]
+            "description": "Identifies the version of the feature assignment."
           },
           "description": {
             "type": "string",
-            "description": "A description for the feature.",
-            "rcsb_description": [
-              {
-                "text": "A description for the feature.",
-                "context": "dictionary"
-              },
-              {
-                "text": "Feature Description",
-                "context": "brief"
-              }
-            ]
+            "description": "A description for the feature."
           },
           "feature_id": {
             "type": "string",
-            "description": "An identifier for the feature.",
-            "rcsb_description": [
-              {
-                "text": "An identifier for the feature.",
-                "context": "dictionary"
-              }
-            ]
+            "description": "An identifier for the feature."
           },
           "name": {
             "type": "string",
-            "description": "A name for the feature.",
-            "rcsb_description": [
-              {
-                "text": "A name for the feature.",
-                "context": "dictionary"
-              },
-              {
-                "text": "Name",
-                "context": "brief"
-              }
-            ]
+            "description": "A name for the feature."
           },
           "provenance_source": {
             "type": "string",
             "examples": [
               "PDB"
             ],
-            "description": "Code identifying the individual, organization or program that\n assigned the feature.",
-            "rcsb_description": [
-              {
-                "text": "Code identifying the individual, organization or program that\n assigned the feature.",
-                "context": "dictionary"
-              },
-              {
-                "text": "Feature Source",
-                "context": "brief"
-              }
-            ]
+            "description": "Code identifying the individual, organization or program that\n assigned the feature."
           },
           "type": {
             "type": "string",
@@ -402,16 +356,6 @@
                 "detail": "A set of catalytically active residues according to the M-CSA.",
                 "name": "Mechanism and Catalytic Site Atlas"
               }
-            ],
-            "rcsb_description": [
-              {
-                "text": "A type or category of the feature.",
-                "context": "dictionary"
-              },
-              {
-                "text": "Feature Type",
-                "context": "brief"
-              }
             ]
           },
           "feature_containers": {
@@ -426,12 +370,7 @@
                     "A",
                     "B"
                   ],
-                  "description": [
-                    {
-                      "text": "An identifier of polymer chain (label_asym_id) corresponding to the feature assignment.",
-                      "context": "dictionary"
-                    }
-                  ]
+                  "description": "An identifier of polymer chain (label_asym_id) corresponding to the feature assignment."
                 },
                 "entity_id": {
                   "type": "string",
@@ -439,13 +378,7 @@
                     "1",
                     "2"
                   ],
-                  "description": "Entity identifier for the container.",
-                  "rcsb_description": [
-                    {
-                      "text": "Entity identifier for the container.",
-                      "context": "dictionary"
-                    }
-                  ]
+                  "description": "Entity identifier for the container."
                 },
                 "rcsb_instance_operator": {
                   "type": "array",
@@ -481,33 +414,15 @@
                         "TRP",
                         "VAL"
                       ],
-                      "description": "An identifier for the leading monomer corresponding to the feature assignment.",
-                      "rcsb_description": [
-                        {
-                          "text": "An identifier for the leading monomer corresponding to the feature assignment.",
-                          "context": "dictionary"
-                        }
-                      ]
+                      "description": "An identifier for the leading monomer corresponding to the feature assignment."
                     },
                     "beg_seq_id": {
                       "type": "integer",
-                      "description": "An identifier for the monomer at which this segment of the feature begins.",
-                      "rcsb_description": [
-                        {
-                          "text": "An identifier for the monomer at which this segment of the feature begins.",
-                          "context": "dictionary"
-                        }
-                      ]
+                      "description": "An identifier for the monomer at which this segment of the feature begins."
                     },
                     "end_seq_id": {
                       "type": "integer",
-                      "description": "An identifier for the monomer at which this segment of the feature ends.",
-                      "rcsb_description": [
-                        {
-                          "text": "An identifier for the monomer at which this segment of the feature ends.",
-                          "context": "dictionary"
-                        }
-                      ]
+                      "description": "An identifier for the monomer at which this segment of the feature ends."
                     },
                     "values": {
                       "type": "array",
@@ -517,13 +432,7 @@
                           5,
                           0.25
                         ],
-                        "description": "The value(s) for the feature over this monomer segment.",
-                        "rcsb_description": [
-                          {
-                            "text": "The value(s) for the feature over this monomer segment.",
-                            "context": "dictionary"
-                          }
-                        ]
+                        "description": "The value(s) for the feature over this monomer segment."
                       },
                       "uniqueItems": false
                     }
@@ -572,12 +481,6 @@
                       "value": "MCSA_MOTIF_COMPATIBILITY",
                       "detail": "Internal enum that captures whether a M-CSA motif supports visualization and/or structure motif searching."
                     }
-                  ],
-                  "rcsb_description": [
-                    {
-                      "text": "The additional property name.",
-                      "context": "dictionary"
-                    }
                   ]
                 },
                 "values": {
@@ -599,13 +502,7 @@
                       "1",
                       "SUPPORTED"
                     ],
-                    "description": "The value(s) of the additional property.",
-                    "rcsb_description": [
-                      {
-                        "text": "The value(s) of the additional property.",
-                        "context": "dictionary"
-                      }
-                    ]
+                    "description": "The value(s) of the additional property."
                   },
                   "uniqueItems": false
                 }
