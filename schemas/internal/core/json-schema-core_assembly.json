@@ -387,40 +387,6 @@
               }
             ]
           },
-          "reference_scheme": {
-            "type": "string",
-            "enum": [
-              "NCBI",
-              "PDB entity",
-              "UniProt"
-            ],
-            "examples": [
-              "PDB entity",
-              "UniProt",
-              "NCBI"
-            ],
-            "description": "Code residue coordinate system for the assigned feature.",
-            "rcsb_enum_annotated": [
-              {
-                "value": "NCBI",
-                "detail": "The reference polymer sequence in NCBI entry"
-              },
-              {
-                "value": "PDB entity",
-                "detail": "The reference polymer entity sequence in PDB entry"
-              },
-              {
-                "value": "UniProt",
-                "detail": "The reference polymer sequence in UniProt entry"
-              }
-            ],
-            "rcsb_description": [
-              {
-                "text": "Code residue coordinate system for the assigned feature.",
-                "context": "dictionary"
-              }
-            ]
-          },
           "type": {
             "type": "string",
             "enum": [
