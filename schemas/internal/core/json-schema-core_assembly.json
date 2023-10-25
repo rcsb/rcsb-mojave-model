@@ -455,8 +455,6 @@
                   "type": "string",
                   "enum": [
                     "MCSA_MOTIF_DESCRIPTION",
-                    "MCSA_MOTIF_NAME",
-                    "MCSA_MOTIF_IDENTIFIER",
                     "MCSA_MOTIF_COMPATIBILITY"
                   ],
                   "examples": [
@@ -467,14 +465,6 @@
                     {
                       "value": "MCSA_MOTIF_DESCRIPTION",
                       "detail": "A detailed description of this M-CSA motif."
-                    },
-                    {
-                      "value": "MCSA_MOTIF_NAME",
-                      "detail": "A brief name of this M-CSA motif."
-                    },
-                    {
-                      "value": "MCSA_MOTIF_IDENTIFIER",
-                      "detail": "The unique M-CSA-specific that can be used to compose outgoing links to the external resource."
                     },
                     {
                       "value": "MCSA_MOTIF_COMPATIBILITY",
@@ -498,7 +488,6 @@
                     ],
                     "examples": [
                       "Glutamate racemase",
-                      "1",
                       "SUPPORTED"
                     ],
                     "description": "The value(s) of the additional property."
