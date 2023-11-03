@@ -402,31 +402,9 @@
                 "feature_positions": {
                   "type": "array",
                   "items": {
-                    "beg_seq_id": {
-                      "type": "integer",
-                      "description": "An identifier for the monomer at which this segment of the feature begins."
-                    },
-                    "end_seq_id": {
-                      "type": "integer",
-                      "description": "An identifier for the monomer at which this segment of the feature ends."
-                    },
-                    "values": {
-                      "type": "array",
-                      "items": {
-                        "type": "number",
-                        "examples": [
-                          5,
-                          0.25
-                        ],
-                        "description": "The value(s) for the feature over this monomer segment."
-                      },
-                      "uniqueItems": false
-                    }
+                    "$ref": "../common/common-schema-feature_positions.json#/definitions/feature_positions"
                   },
-                  "additionalProperties": false,
-                  "required": [
-                    "beg_seq_id"
-                  ]
+                  "uniqueItems": true
                 },
                 "uniqueItems": false
               }

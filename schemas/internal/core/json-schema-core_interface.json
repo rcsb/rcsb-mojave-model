@@ -125,35 +125,9 @@
                 "feature_positions": {
                   "type": "array",
                   "items": {
-                    "type": "object",
-                    "properties": {
-                      "beg_seq_id": {
-                        "type": "integer",
-                        "description": "An identifier for the monomer at which this segment of the feature begins."
-                      },
-                      "end_seq_id": {
-                        "type": "integer",
-                        "description": "An identifier for the monomer at which this segment of the feature ends."
-                      },
-                      "values": {
-                        "type": "array",
-                        "items": {
-                          "type": "number",
-                          "examples": [
-                            1.5,
-                            0.25
-                          ],
-                          "description": "The value(s) of the feature over the monomer segment."
-                        },
-                        "uniqueItems": false
-                      }
-                    },
-                    "additionalProperties": false,
-                    "required": [
-                      "beg_seq_id"
-                    ]
+                    "$ref": "../common/common-schema-feature_positions.json#/definitions/feature_positions"
                   },
-                  "uniqueItems": false
+                  "uniqueItems": true
                 },
                 "additional_properties": {
                   "type": "array",
