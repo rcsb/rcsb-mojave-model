@@ -568,6 +568,34 @@
       },
       "minItems": 1,
       "uniqueItems": true,
+      "rcsb_nested_indexing": true,
+      "rcsb_nested_indexing_context": [
+        {
+          "category_name": "annotation_type",
+          "category_path": "rcsb_assembly_annotation.type",
+          "context_attributes": [
+            {
+              "context_value": "MCSA",
+              "attributes": [
+                {
+                  "examples": [
+                    "1",
+                    "587",
+                  ],
+                  "path": "rcsb_assembly_annotation.annotation_id"
+                },
+                {
+                  "examples": [
+                    "Glutamate racemase",
+                    "Leucyl aminopeptidase",
+                  ],
+                  "path": "rcsb_assembly_annotation.name"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "rcsb_latest_revision": {
       "type": "object",
