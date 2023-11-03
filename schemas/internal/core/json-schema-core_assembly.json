@@ -452,6 +452,123 @@
       "minItems": 1,
       "uniqueItems": true
     },
+    "rcsb_assembly_annotation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "annotation_id": {
+            "type": "string",
+            "description": "An identifier for the annotation.",
+            "rcsb_search_context": [
+              "exact-match"
+            ],
+            "rcsb_full_text_priority": 10,
+            "rcsb_search_group": [
+              {
+                "group_name": "Assembly Molecular Features",
+                "priority_order": 100
+              }
+            ],
+          },
+          "assignment_version": {
+            "type": "string",
+            "description": "Identifies the version of the annotation assignment.",
+          },
+          "description": {
+            "type": "string",
+            "description": "A description for the annotation.",
+          },
+          "name": {
+            "type": "string",
+            "description": "A name for the annotation.",
+            "rcsb_search_context": [
+              "exact-match",
+              "full-text"
+            ],
+            "rcsb_full_text_priority": 10,
+            "rcsb_search_group": [
+              {
+                "group_name": "Assembly Molecular Features",
+                "priority_order": 105
+              }
+            ]
+          },
+          "provenance_source": {
+            "type": "string",
+            "examples": [
+              "MCSA"
+            ],
+            "description": "Code identifying the individual, organization or program that\n assigned the annotation.",
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "MCSA"
+            ],
+            "description": "A type or category of the annotation.",
+            "rcsb_search_context": [
+              "exact-match"
+            ],
+            "rcsb_full_text_priority": 10,
+              "rcsb_enum_annotated": [
+                {
+                "value": "MCSA",
+                "detail": "A set of catalytically active residues according to the M-CSA.",
+                "name": "Mechanism and Catalytic Site Atlas"
+              }
+            ]
+          },
+          "additional_properties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": [
+                    "MCSA_MOTIF_COMPATIBILITY"
+                  ],
+                  "description": "The additional property name.",
+                  "rcsb_enum_annotated": [
+                    {
+                      "value": "MCSA_MOTIF_COMPATIBILITY",
+                      "detail": "Internal enum that captures whether a M-CSA motif supports visualization and/or structure motif searching."
+                    }
+                  ]
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "examples": [
+                      "SUPPORTED"
+                    ],
+                    "description": "The value(s) of the additional property."
+                  },
+                  "uniqueItems": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "uniqueItems": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+    },
     "rcsb_latest_revision": {
       "type": "object",
       "properties": {
