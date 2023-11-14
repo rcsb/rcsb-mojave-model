@@ -352,12 +352,32 @@
               }
             ]
           },
-          "feature_containers": {
+          "feature_positions": {
             "type": "array",
             "description": "This container groups together chain-level identifiers of the assigned features.",
             "items": {
               "type": "object",
               "properties": {
+                "beg_seq_id": {
+                  "type": "integer",
+                  "description": "An identifier for the monomer at which this segment of the feature begins."
+                },
+                "end_seq_id": {
+                  "type": "integer",
+                  "description": "An identifier for the monomer at which this segment of the feature ends."
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "examples": [
+                      1.5,
+                      0.25
+                    ],
+                    "description": "The value(s) of the feature over the monomer segment."
+                  },
+                  "uniqueItems": false
+                },
                 "asym_id": {
                   "type": "string",
                   "examples": [
@@ -391,15 +411,14 @@
                     }
                   }
                 },
-                "feature_positions": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "../common/common-schema-feature_positions.json#/definitions/feature_positions"
-                  },
-                  "uniqueItems": false
-                },
                 "uniqueItems": false
-              }
+              },
+              "additionalProperties": false,
+              "required": [
+                "beg_seq_id",
+                "asym_id",
+                "rcsb_instance_operator"
+              ]
             }
           },
           "additional_properties": {
