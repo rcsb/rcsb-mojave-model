@@ -53,9 +53,19 @@
             "drug_groups": {
                "bsonType": "array",
                "items": {
-                  "bsonType": "string"
+                  "bsonType": "string",
+                  "enum": [
+                     "approved",
+                     "experimental",
+                     "illicit",
+                     "investigational",
+                     "nutraceutical",
+                     "vet_approved",
+                     "withdrawn"
+                  ]
                },
-               "uniqueItems": false
+               "minItems": 1,
+               "uniqueItems": true
             },
             "drugbank_id": {
                "bsonType": "string"
@@ -78,6 +88,49 @@
                   "bsonType": "string"
                },
                "uniqueItems": false
+            },
+            "drug_products": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "object",
+                  "properties": {
+                     "approved": {
+                        "bsonType": "string",
+                        "enum": [
+                           "N",
+                           "Y"
+                        ]
+                     },
+                     "country": {
+                        "bsonType": "string",
+                        "enum": [
+                           "Canada",
+                           "EU",
+                           "US"
+                        ]
+                     },
+                     "ended_marketing_on": {
+                        "bsonType": "date"
+                     },
+                     "name": {
+                        "bsonType": "string"
+                     },
+                     "source": {
+                        "bsonType": "string",
+                        "enum": [
+                           "DPD",
+                           "EMA",
+                           "FDA NDC"
+                        ]
+                     },
+                     "started_marketing_on": {
+                        "bsonType": "date"
+                     }
+                  },
+                  "additionalProperties": false
+               },
+               "minItems": 1,
+               "uniqueItems": true
             }
          },
          "additionalProperties": false,
