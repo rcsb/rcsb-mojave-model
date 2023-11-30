@@ -1,7 +1,7 @@
 {
-  "$schema" : "http://json-schema.org/draft-04/schema#",
-  "title" : "Core Assembly",
-  "description": "JSON schema for entity level core data. Combines RCSB Exchange Database schema: json-schema-min-pdbx_core_assembly.json and RCSB Data Warehouse schema: json-schema-core_assembly.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Core Assembly",
+  "description": "JSON schema for assembly level core data. Combines RCSB Exchange Database schema: json-schema-min-pdbx_core_assembly.json and RCSB Data Warehouse schema: json-schema-core_assembly.json",
   "type": "object",
   "required": [
     "rcsb_assembly_container_identifiers"
@@ -20,12 +20,12 @@
       }
     },
     "rcsb_struct_symmetry": {
-      "type":"array",
+      "type": "array",
       "minItems": 1,
       "uniqueItems": true,
       "items": {
         "type": "object",
-        "required":[
+        "required": [
           "symbol",
           "type",
           "stoichiometry",
@@ -121,17 +121,17 @@
             "description": "Oligomeric state refers to a composition of polymeric subunits in quaternary structure. Quaternary structure may be composed either exclusively of several copies of identical subunits, in which case they are termed homo-oligomers, or alternatively by at least one copy of different subunits (hetero-oligomers). Quaternary structure composed of a single subunit is denoted as 'Monomer'."
           },
           "clusters": {
-            "type":"array",
+            "type": "array",
             "minItems": 1,
             "uniqueItems": true,
             "items": {
               "type": "object",
-              "required":[
+              "required": [
                 "members"
               ],
               "properties": {
                 "members": {
-                  "type":"array",
+                  "type": "array",
                   "minItems": 1,
                   "uniqueItems": true,
                   "items": {
@@ -182,7 +182,7 @@
             "uniqueItems": true,
             "items": {
               "type": "object",
-              "required":[
+              "required": [
                 "start",
                 "end"
               ],
@@ -207,8 +207,8 @@
                   },
                   "description": "Describes x,y,z coordinates of the end point of the symmetry axis."
                 },
-                "order":{
-                  "type":"integer",
+                "order": {
+                  "type": "integer",
                   "description": "The number of times (order of rotation) that a subunit can be repeated by a rotation operation, being transformed into a new state indistinguishable from its starting state."
                 }
               },
@@ -251,10 +251,10 @@
       "description": "The title and version of software package used for symmetry calculations."
     },
     "rcsb_struct_symmetry_lineage": {
-      "type" : "array",
-      "minItems" : 1,
-      "uniqueItems" : true,
-      "items" : {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
         "type": "object",
         "properties": {
           "id": {
@@ -279,7 +279,7 @@
             ],
             "description": "Automatically assigned ID to uniquely identify the symmetry term in the Protein Symmetry Browser."
           },
-          "name":{
+          "name": {
             "type": "string",
             "examples": [
               "Asymmetric",
@@ -299,8 +299,8 @@
             "description": "A human-readable term describing protein symmetry."
           },
           "depth": {
-            "type" : "integer",
-            "description" : "Hierarchy depth.",
+            "type": "integer",
+            "description": "Hierarchy depth.",
             "rcsb_search_context": [
               "default-match"
             ]
@@ -309,6 +309,305 @@
         "additionalProperties": false
       },
       "rcsb_nested_indexing": true
+    },
+    "rcsb_assembly_feature": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "assignment_version": {
+            "type": "string",
+            "description": "Identifies the version of the feature assignment."
+          },
+          "description": {
+            "type": "string",
+            "description": "A description for the feature."
+          },
+          "feature_id": {
+            "type": "string",
+            "description": "An identifier for the feature."
+          },
+          "name": {
+            "type": "string",
+            "description": "A name for the feature."
+          },
+          "provenance_source": {
+            "type": "string",
+            "examples": [
+              "MCSA"
+            ],
+            "description": "Code identifying the individual, organization or program that\n assigned the feature."
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "MCSA"
+            ],
+            "description": "A type or category of the feature.",
+            "rcsb_enum_annotated": [
+              {
+                "value": "MCSA",
+                "detail": "A set of catalytically active residues according to the M-CSA.",
+                "name": "Mechanism and Catalytic Site Atlas"
+              }
+            ]
+          },
+          "feature_positions": {
+            "type": "array",
+            "description": "This container groups together chain-level identifiers of the assigned features.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "beg_seq_id": {
+                  "type": "integer",
+                  "description": "An identifier for the monomer at which this segment of the feature begins."
+                },
+                "end_seq_id": {
+                  "type": "integer",
+                  "description": "An identifier for the monomer at which this segment of the feature ends."
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "examples": [
+                      1.5,
+                      0.25
+                    ],
+                    "description": "The value(s) of the feature over the monomer segment."
+                  },
+                  "uniqueItems": false
+                },
+                "asym_id": {
+                  "type": "string",
+                  "examples": [
+                    "A",
+                    "B"
+                  ],
+                  "description": "An identifier of polymer chain (label_asym_id) corresponding to the feature assignment."
+                },
+                "struct_oper_list": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "maxLength": 2,
+                    "minLength": 1,
+                    "examples": [
+                      [
+                        "1"
+                      ],
+                      [
+                        "P",
+                        "63"
+                      ]
+                    ],
+                    "description": "List of pdbx_struct_oper_list_ids for each chain instance.",
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "Identifies the list of operations from the category pdbx_struct_oper_list. One item in array per operator applied. The order follows how operators are applied."
+                    }
+                  }
+                },
+                "uniqueItems": false
+              },
+              "additionalProperties": false,
+              "required": [
+                "beg_seq_id",
+                "asym_id",
+                "struct_oper_list"
+              ]
+            }
+          },
+          "additional_properties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": [
+                    "MCSA_MOTIF_COMPATIBILITY"
+                  ],
+                  "description": "The additional property name.",
+                  "rcsb_enum_annotated": [
+                    {
+                      "value": "MCSA_MOTIF_COMPATIBILITY",
+                      "detail": "Internal enum that captures whether a M-CSA motif supports visualization and/or structure motif searching."
+                    }
+                  ]
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "examples": [
+                      "SUPPORTED"
+                    ],
+                    "description": "The value(s) of the additional property."
+                  },
+                  "uniqueItems": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "uniqueItems": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "rcsb_assembly_annotation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "annotation_id": {
+            "type": "string",
+            "description": "An identifier for the annotation.",
+            "rcsb_search_context": [
+              "exact-match"
+            ],
+            "rcsb_full_text_priority": 10,
+            "rcsb_search_group": [
+              {
+                "group_name": "Assembly Features",
+                "priority_order": 100
+              }
+            ]
+          },
+          "assignment_version": {
+            "type": "string",
+            "description": "Identifies the version of the annotation assignment."
+          },
+          "description": {
+            "type": "string",
+            "description": "A description for the annotation."
+          },
+          "name": {
+            "type": "string",
+            "description": "A name for the annotation.",
+            "rcsb_search_context": [
+              "exact-match",
+              "full-text"
+            ],
+            "rcsb_full_text_priority": 10,
+            "rcsb_search_group": [
+              {
+                "group_name": "Assembly Features",
+                "priority_order": 105
+              }
+            ]
+          },
+          "provenance_source": {
+            "type": "string",
+            "examples": [
+              "MCSA"
+            ],
+            "description": "Code identifying the individual, organization or program that\n assigned the annotation."
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "MCSA"
+            ],
+            "description": "A type or category of the annotation.",
+            "rcsb_search_context": [
+              "exact-match"
+            ],
+            "rcsb_full_text_priority": 10,
+              "rcsb_enum_annotated": [
+                {
+                "value": "MCSA",
+                "detail": "A set of catalytically active residues according to the M-CSA.",
+                "name": "Mechanism and Catalytic Site Atlas"
+              }
+            ]
+          },
+          "additional_properties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": [
+                    "MCSA_MOTIF_COMPATIBILITY"
+                  ],
+                  "description": "The additional property name.",
+                  "rcsb_enum_annotated": [
+                    {
+                      "value": "MCSA_MOTIF_COMPATIBILITY",
+                      "detail": "Internal enum that captures whether a M-CSA motif supports visualization and/or structure motif searching."
+                    }
+                  ]
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "examples": [
+                      "SUPPORTED"
+                    ],
+                    "description": "The value(s) of the additional property."
+                  },
+                  "uniqueItems": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "uniqueItems": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "rcsb_nested_indexing": true,
+      "rcsb_nested_indexing_context": [
+        {
+          "category_name": "annotation_type",
+          "category_path": "rcsb_assembly_annotation.type",
+          "context_attributes": [
+            {
+              "context_value": "MCSA",
+              "attributes": [
+                {
+                  "examples": [
+                    "Glutamate racemase",
+                    "Leucyl aminopeptidase"
+                  ],
+                  "path": "rcsb_assembly_annotation.name"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "rcsb_latest_revision": {
       "type": "object",
