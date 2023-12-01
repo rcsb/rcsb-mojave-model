@@ -410,8 +410,7 @@
                       "description": "Identifies the list of operations from the category pdbx_struct_oper_list. One item in array per operator applied. The order follows how operators are applied."
                     }
                   }
-                },
-                "uniqueItems": false
+                }
               },
               "additionalProperties": false,
               "required": [
@@ -419,7 +418,8 @@
                 "asym_id",
                 "struct_oper_list"
               ]
-            }
+            },
+            "uniqueItems": false
           },
           "additional_properties": {
             "type": "array",
