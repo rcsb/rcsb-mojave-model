@@ -388,8 +388,9 @@
                 },
                 "struct_oper_list": {
                   "type": "array",
+                  "description": "pdbx_struct_oper_list_ids of the chain instance.",
                   "items": {
-                    "type": "array",
+                    "type": "string",
                     "maxLength": 2,
                     "minLength": 1,
                     "examples": [
@@ -401,14 +402,7 @@
                         "63"
                       ]
                     ],
-                    "description": "List of pdbx_struct_oper_list_ids for each chain instance.",
-                    "items": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "description": "Identifies the list of operations from the category pdbx_struct_oper_list. One item in array per operator applied. The order follows how operators are applied."
-                    }
+                    "description": "Identifies the list of operations from the category pdbx_struct_oper_list. One item in array per operator applied. The order follows how operators are applied."
                   }
                 }
               },
