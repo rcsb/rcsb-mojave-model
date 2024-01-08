@@ -1,0 +1,148 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "annotation_features",
+  "$id": "/annotation_features_schema.json",
+  "description": "JSON schema to map positional features over multiple reference systems",
+  "properties": {
+    "target_id": {
+      "type": "string",
+      "description": "Database source entry identifier associated to the positional features"
+    },
+    "target_identifiers": {
+      "type": "object",
+      "javaType":"org.rcsb.rcsbsequencecoordinates.auto.TargetIdentifiers",
+      "properties": {
+        "target_id": {
+          "type": "string"
+        },
+        "entry_id": {
+          "type": "string"
+        },
+        "assembly_id": {
+          "type": "string"
+        },
+        "entity_id": {
+          "type": "string"
+        },
+        "asym_id": {
+          "type": "string"
+        },
+        "uniprot_id": {
+          "type": "string"
+        },
+        "interface_id": {
+          "type": "string"
+        },
+        "interface_partner_index": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "string",
+      "description": "Enumerated value that identifies the provenance type of the positional features",
+      "enum": ["PDB_INTERFACE", "PDB_INSTANCE", "PDB_ENTITY", "UNIPROT"]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "feature",
+        "description": "List of positional features",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "Free-form text describing the feature"
+          },
+          "feature_id": {
+            "type": "string",
+            "description": "Identifier of the feature"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name associated to the feature"
+          },
+          "type": {
+            "type": "string",
+            "description": "A type or category of the feature",
+            "allOf": [{
+              "type": "string",
+              "$ref": "/internal/common/common-schema-annotation.json#/definitions/annotation/properties/type"
+            },{
+              "type": "string",
+              "enum": ["PROTEIN_BINDING"]
+            }]
+          },
+          "provenance_source": {
+            "type": "string",
+            "description": "Original database or software name used to obtain the feature"
+          },
+          "value": {
+            "type": "number",
+            "description": "Numerical value associated with the feature"
+          },
+          "feature_positions": {
+            "type": "array",
+            "description": " List of documents that describes the location of the feature",
+            "items": {
+              "type": "object",
+              "title": "feature_position",
+              "properties": {
+                "beg_seq_id": {
+                  "type": "integer",
+                  "description": "Index at which this segment of the feature begins"
+                },
+                "end_seq_id": {
+                  "type": "integer",
+                  "description": "Index at which this segment of the feature ends. If the positional feature maps to a single residue this field will be null"
+                },
+                "beg_ori_id": {
+                  "type": "integer",
+                  "description": "Index at which this segment of the feature begins on the original provenance_source. When reference and source point to the same reference system this file will be null"
+                },
+                "end_ori_id": {
+                  "type": "integer",
+                  "description": "Index at which this segment of the feature ends on the original provenance_source. If the positional feature maps to a single residue this field will be null. When reference and source point to the same reference system this file will be null"
+                },
+                "range_id": {
+                  "type": "string",
+                  "description": "Fragment identifier that groups a set of ranges resulting from gaps"
+                },
+                "open_begin": {
+                  "description": "Flag that indicates the feature begins before the feature index begin",
+                  "type": "boolean"
+                },
+                "open_end": {
+                  "description": "Flag that indicates the feature end after the feature index end",
+                  "type": "boolean"
+                },
+                "value": {
+                  "type": "number",
+                  "description": "The value for the feature at this region"
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "description": "The value(s) for the feature at this region"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additional_properties":{
+            "type": "array",
+            "items": {
+              "$ref": "/internal/common/common-schema-annotation-additional-properties.json#/definitions/additional_property"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
