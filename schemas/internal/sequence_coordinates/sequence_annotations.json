@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "title": "annotation_features",
-  "$id": "/annotation_features_schema.json",
+  "$id": "/internal/sequence_coordinates/sequence_annotations.json",
   "description": "JSON schema to map positional features over multiple reference systems",
   "properties": {
     "target_id": {
@@ -11,7 +11,6 @@
     },
     "target_identifiers": {
       "type": "object",
-      "javaType":"org.rcsb.rcsbsequencecoordinates.auto.TargetIdentifiers",
       "properties": {
         "target_id": {
           "type": "string"
