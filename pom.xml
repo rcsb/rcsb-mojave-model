@@ -1469,13 +1469,20 @@
                         <id>generate-validation-schema-sequence_alignments</id>
                         <phase>generate-sources</phase>
                         <goals>
+                            <!-- execute Java programs in the same VM -->
                             <goal>java</goal>
                         </goals>
                         <configuration>
-                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
                             <arguments>
-                                <argument>${project.build.directory}/${core.schema.location}/${sequence.coordinates.alignments.json.schema.name}</argument>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
                                 <argument>${project.build.directory}/${validation.schema.location}/${validation.sequence.coordinates.alignments.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.alignments.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -1483,13 +1490,20 @@
                         <id>generate-validation-schema-sequence_annotations</id>
                         <phase>generate-sources</phase>
                         <goals>
+                            <!-- execute Java programs in the same VM -->
                             <goal>java</goal>
                         </goals>
                         <configuration>
-                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
                             <arguments>
-                                <argument>${project.build.directory}/${core.schema.location}/${sequence.coordinates.annotations.json.schema.name}</argument>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
                                 <argument>${project.build.directory}/${validation.schema.location}/${validation.sequence.coordinates.annotations.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.annotations.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -1513,6 +1527,50 @@
                                 <argument>${project.build.directory}/${auto.schema.location}</argument>
                                 <argument>-t</argument>
                                 <argument>${project.auto.package}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                    <!-- Overwrite Auto Schemas for Sequence Coordinates -->
+                    <execution>
+                        <id>annotate-schemas-for-java-types-exception-alignments-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${auto.schema.location}/${sequence.coordinates.alignments.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.alignments.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>annotate-schemas-for-java-types-exception-annotations-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${auto.schema.location}/${sequence.coordinates.annotations.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.annotations.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
