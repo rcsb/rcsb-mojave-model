@@ -7,7 +7,11 @@
     "query_id",
     "target_id",
     "coverage",
-    "aligned_regions"
+    "aligned_regions",
+    "target_begin",
+    "query_begin",
+    "target_end",
+    "query_end"
   ],
   "properties": {
     "query_id": {
@@ -88,6 +92,22 @@
         },
         "additionalProperties": false
       }
+    },
+    "target_begin": {
+      "type": "integer",
+      "description": "Target sequence start position in the alignment"
+    },
+    "query_begin": {
+      "type": "integer",
+      "description": "Query sequence start position in the alignment"
+    },
+    "target_end": {
+      "type": "integer",
+      "description": "Target sequence start position in the alignment"
+    },
+    "query_end": {
+      "type": "integer",
+      "description": "Query sequence end position in the alignment"
     },
     "orientation": {
       "type": "integer",
