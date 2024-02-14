@@ -302,7 +302,8 @@
                   "type": "string",
                   "enum": [
                      "HAS_COVALENT_LINKAGE",
-                     "HAS_METAL_COORDINATION_LINKAGE"
+                     "HAS_METAL_COORDINATION_LINKAGE",
+                     "HAS_NO_COVALENT_LINKAGE"
                   ],
                   "examples": [
                      "HAS_COVALENT_LINKAGE"
@@ -315,11 +316,15 @@
                   "rcsb_enum_annotated": [
                      {
                         "value": "HAS_COVALENT_LINKAGE",
-                        "detail": "Has a covalent attachment"
+                        "detail": "Ligands with inter-molecular covalent interactions involving non-metal elements such as Carbon, Nitrogen, Oxygen, Phosphorus, and Sulfur"
                      },
                      {
                         "value": "HAS_METAL_COORDINATION_LINKAGE",
-                        "detail": "Has a metal coordination attachment"
+                        "detail": "Ligands involved in metal coordination"
+                     },
+                     {
+                        "value": "HAS_NO_COVALENT_LINKAGE",
+                        "detail": "Ligands with no inter-molecular covalent interactions, but may be involved in metal coordination or other non-bonded interactions"
                      }
                   ],
                   "rcsb_description": [
