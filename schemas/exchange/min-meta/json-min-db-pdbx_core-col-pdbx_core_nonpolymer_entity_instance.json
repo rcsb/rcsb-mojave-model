@@ -217,19 +217,25 @@
                   "examples": [
                      "ATP"
                   ],
-                  "description": "Chemical component identifier.",
+                  "description": "Non-polymer (ligand) chemical component identifier.",
                   "rcsb_search_context": [
                      "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
-                        "text": "Chemical component identifier.",
+                        "text": "Non-polymer (ligand) chemical component identifier.",
                         "context": "dictionary"
                      },
                      {
                         "text": "Component Identifier",
                         "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Nonpolymer Molecular Features",
+                        "priority_order": 15
                      }
                   ]
                },
@@ -316,15 +322,18 @@
                   "rcsb_enum_annotated": [
                      {
                         "value": "HAS_COVALENT_LINKAGE",
-                        "detail": "Ligands with inter-molecular covalent interactions involving non-metal elements such as Carbon, Nitrogen, Oxygen, Phosphorus, and Sulfur"
+                        "detail": "Ligands with inter-molecular covalent interactions involving non-metal elements such as Carbon, Nitrogen, Oxygen, Phosphorus, and Sulfur",
+                        "name": "Has Covalent Linkage"
                      },
                      {
                         "value": "HAS_METAL_COORDINATION_LINKAGE",
-                        "detail": "Ligands involved in metal coordination"
+                        "detail": "Ligands involved in metal coordination",
+                        "name": "Has Metal Coordination"
                      },
                      {
                         "value": "HAS_NO_COVALENT_LINKAGE",
-                        "detail": "Ligands with no inter-molecular covalent interactions, but may be involved in metal coordination or other non-bonded interactions"
+                        "detail": "Ligands with no inter-molecular covalent interactions, but may be involved in metal coordination or other non-bonded interactions",
+                        "name": "Has No Covalent Linkage"
                      }
                   ],
                   "rcsb_description": [
@@ -415,7 +424,45 @@
          "rcsb_nested_indexing_context": [
             {
                "category_name": "annotation_type",
-               "category_path": "rcsb_nonpolymer_instance_annotation.type"
+               "category_path": "rcsb_nonpolymer_instance_annotation.type",
+               "context_attributes": [
+                  {
+                     "context_value": "HAS_COVALENT_LINKAGE",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "BMZ",
+                              "ATP"
+                           ],
+                           "path": "rcsb_nonpolymer_instance_annotation.comp_id"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "HAS_METAL_COORDINATION_LINKAGE",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "BMZ",
+                              "ATP"
+                           ],
+                           "path": "rcsb_nonpolymer_instance_annotation.comp_id"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "HAS_NO_COVALENT_LINKAGE",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "BMZ",
+                              "ATP"
+                           ],
+                           "path": "rcsb_nonpolymer_instance_annotation.comp_id"
+                        }
+                     ]
+                  }
+               ]
             }
          ]
       },
