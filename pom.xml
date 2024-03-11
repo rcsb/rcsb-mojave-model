@@ -9,7 +9,7 @@
 
     <groupId>org.rcsb</groupId>
     <artifactId>rcsb-mojave-model</artifactId>
-    <version>1.43.3-SEQUENCE-COORDINATES-SNAPSHOT</version>
+    <version>1.45.1-SEQUENCE-COORDINATES-SNAPSHOT</version>
 
     <properties>
 
@@ -21,7 +21,7 @@
 
         <project.auto.package>org.rcsb.mojave.auto</project.auto.package>
         <project.enums.package>org.rcsb.mojave.enumeration</project.enums.package>
-        <rcsb-json-schema.version>1.43.3-SEQUENCE-COORDINATES-SNAPSHOT</rcsb-json-schema.version>
+        <rcsb-json-schema.version>1.45.1-SEQUENCE-COORDINATES-SNAPSHOT</rcsb-json-schema.version>
 
         <mojave.meta.version>1.5.0</mojave.meta.version>
         <mojave.tools.version>1.7.1</mojave.tools.version>
@@ -104,6 +104,7 @@
         <rcsb.sequence.coordinates.alignments.json.schema.name>json-schema-sequence_alignments.json</rcsb.sequence.coordinates.alignments.json.schema.name>
         <rcsb.sequence.coordinates.annotations.json.schema.name>json-schema-sequence_annotations.json</rcsb.sequence.coordinates.annotations.json.schema.name>
         <rcsb.sequence.coordinates.sequences.json.schema.name>json-schema-sequences.json</rcsb.sequence.coordinates.sequences.json.schema.name>
+        <rcsb.sequence.coordinates.map.json.schema.name>json-schema-identifier_map.json</rcsb.sequence.coordinates.map.json.schema.name>
 
         <!-- ================================= WHERE WE KEEP SCHEMAS PRODUCTS ====================================== -->
 
@@ -167,6 +168,7 @@
         <sequence.coordinates.alignments.json.schema.name>sequence_alignments.json</sequence.coordinates.alignments.json.schema.name>
         <sequence.coordinates.annotations.json.schema.name>sequence_annotations.json</sequence.coordinates.annotations.json.schema.name>
         <sequence.coordinates.sequences.json.schema.name>sequences.json</sequence.coordinates.sequences.json.schema.name>
+        <sequence.coordinates.map.json.schema.name>identifier_map.json</sequence.coordinates.map.json.schema.name>
 
         <!-- VALIDATION SCHEMA NAMES -->
         <validation.assembly.bson.schema.name>validation-core_assembly.json</validation.assembly.bson.schema.name>
@@ -209,6 +211,7 @@
         <validation.sequence.coordinates.alignments.bson.schema.name>validation-sequence_alignments.json</validation.sequence.coordinates.alignments.bson.schema.name>
         <validation.sequence.coordinates.annotations.bson.schema.name>validation-sequence_annotations.json</validation.sequence.coordinates.annotations.bson.schema.name>
         <validation.sequence.coordinates.sequences.bson.schema.name>validation-sequences.json</validation.sequence.coordinates.sequences.bson.schema.name>
+        <validation.sequence.coordinates.map.bson.schema.name>validation-identifier_map.json</validation.sequence.coordinates.map.bson.schema.name>
 
     </properties>
 
@@ -1093,7 +1096,27 @@
                             </arguments>
                         </configuration>
                     </execution>
-
+                    <execution>
+                        <id>build-map-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${sequence.coordinates.map.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>jar:${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.map.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
                     <!-- GENERATE VALIDATION SCHEMAS FOR GROUPS -->
                     <execution>
                         <id>generate-validation-schema-group-provenance</id>
@@ -1531,6 +1554,21 @@
                             <arguments>
                                 <argument>${project.build.directory}/${core.schema.location}/${sequence.coordinates.sequences.json.schema.name}</argument>
                                 <argument>${project.build.directory}/${validation.schema.location}/${validation.sequence.coordinates.sequences.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-map</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${sequence.coordinates.map.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.sequence.coordinates.map.bson.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>

@@ -105,7 +105,8 @@ public enum SchemaRegistry {
     SEQUENCE_COORDINATES_SEQUENCES_JSON("sequence.coordinates.sequences.json.schema.name"),
     SEQUENCE_COORDINATES_SEQUENCES_BSON("validation.sequence.coordinates.sequences.bson.schema.name"),
     SEQUENCE_COORDINATES_ANNOTATIONS_JSON("sequence.coordinates.annotations.json.schema.name"),
-    SEQUENCE_COORDINATES_ANNOTATIONS_BSON("validation.sequence.coordinates.annotations.bson.schema.name");
+    SEQUENCE_COORDINATES_ANNOTATIONS_BSON("validation.sequence.coordinates.annotations.bson.schema.name"),
+    SEQUENCE_COORDINATES_PDB_INSTANCE_MAP_BSON("validation.sequence.coordinates.map.bson.schema.name");
 
     private final String value;
     private static final Map<String, SchemaRegistry> CONSTANTS = new HashMap<>();
