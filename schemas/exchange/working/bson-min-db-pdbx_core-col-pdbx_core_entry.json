@@ -2064,7 +2064,19 @@
                   "bsonType": "string"
                },
                "db_name": {
-                  "bsonType": "string"
+                  "bsonType": "string",
+                  "enum": [
+                     "BIOISIS",
+                     "BMCD",
+                     "BMRB",
+                     "EMDB",
+                     "NDB",
+                     "PDB",
+                     "PDB-Dev",
+                     "SASBDB",
+                     "TargetDB",
+                     "TargetTrack"
+                  ]
                },
                "details": {
                   "bsonType": "string"
@@ -3316,6 +3328,9 @@
                "bsonType": "int"
             },
             "deposited_atom_count": {
+               "bsonType": "int"
+            },
+            "deposited_deuterated_water_count": {
                "bsonType": "int"
             },
             "deposited_hydrogen_atom_count": {

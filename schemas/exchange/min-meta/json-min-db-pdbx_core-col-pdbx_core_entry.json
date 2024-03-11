@@ -6736,6 +6736,18 @@
                },
                "db_name": {
                   "type": "string",
+                  "enum": [
+                     "BIOISIS",
+                     "BMCD",
+                     "BMRB",
+                     "EMDB",
+                     "NDB",
+                     "PDB",
+                     "PDB-Dev",
+                     "SASBDB",
+                     "TargetDB",
+                     "TargetTrack"
+                  ],
                   "examples": [
                      "PDB  - Protein Databank\nNDB  - Nucleic Acid Database\nBMRB - BioMagResBank\nEMDB - Electron Microscopy Database\nBMCD - Biological Macromolecule Crystallization Database\nTargetTrack - Target Registration and Protocol Database\nSASBDB - Small Angle Scattering Biological Data Bank"
                   ],
@@ -10846,6 +10858,29 @@
                   }
                ]
             },
+            "deposited_deuterated_water_count": {
+               "type": "integer",
+               "description": "The number of deuterated water molecules per deposited structure model.",
+               "rcsb_search_context": [
+                  "default-match"
+               ],
+               "rcsb_description": [
+                  {
+                     "text": "The number of deuterated water molecules per deposited structure model.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Number of Deuterated Water Molecules per Deposited Model",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Entry Features",
+                     "priority_order": 85
+                  }
+               ]
+            },
             "deposited_hydrogen_atom_count": {
                "type": "integer",
                "description": "The number of hydrogen atom coordinates records per deposited structure model.",
@@ -10888,7 +10923,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Entry Features",
-                     "priority_order": 85
+                     "priority_order": 90
                   }
                ]
             },
@@ -11077,7 +11112,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Entry Features",
-                     "priority_order": 90
+                     "priority_order": 95
                   }
                ]
             },
