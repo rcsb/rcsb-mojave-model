@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "title": "sequence_pairwise_alignment",
-  "description": "JSON schema to store pairwise sequence alignments for the 1D coordinate service",
+  "description": "JSON schema for pairwise sequence alignments in the 1D coordinate service",
   "required": [
     "query_id",
     "target_id",
@@ -15,11 +15,13 @@
   ],
   "properties": {
     "query_id": {
-      "description": "Full sequence of the query",
+      "examples": ["101M_1", "P01112", "NP_190408"],
+      "description": "Identifier of the query sequence",
       "type": "string"
     },
     "target_id": {
-      "description": "Database identifier of the target",
+      "examples": ["101M_1", "P01112", "NP_190408"],
+      "description": "Identifier of the target sequence",
       "type": "string"
     },
     "coverage": {
@@ -34,18 +36,22 @@
       ],
       "properties": {
         "target_coverage": {
-          "description": "Percentage of the target sequence covered byt the alignment",
+          "examples": [0.5, 0.75],
+          "description": "Fraction of the target sequence covered byt the alignment",
           "type": "number"
         },
         "query_coverage": {
-          "description": "Percentage of the query sequence covered byt the alignment",
+          "examples": [0.5, 0.75],
+          "description": "Fraction of the query sequence covered byt the alignment",
           "type": "number"
         },
         "target_length": {
+          "examples": [156, 48],
           "description": "Length of the full target sequence",
           "type": "integer"
         },
         "query_length": {
+          "examples": [156, 48],
           "description": "Length of the full query sequence",
           "type": "integer"
         }
@@ -54,11 +60,9 @@
     },
     "aligned_regions": {
       "type": "array",
-      "description": "Aligned sequence regions between query and target",
+      "description": "Aligned sequence regions between query and target sequences",
       "items": {
         "type": "object",
-        "title": "aligned_region",
-        "description": "Aligned region",
         "required": [
           "target_begin",
           "query_begin",
@@ -67,18 +71,22 @@
         ],
         "properties": {
           "target_begin": {
+            "examples": [1, 23],
             "type": "integer",
             "description": "Target sequence start position"
           },
           "query_begin": {
+            "examples": [1, 23],
             "type": "integer",
             "description": "Query sequence start position"
           },
           "target_end": {
+            "examples": [150, 823],
             "type": "integer",
             "description": "Target sequence start position"
           },
           "query_end": {
+            "examples": [150, 823],
             "type": "integer",
             "description": "Query sequence end position"
           },
@@ -94,24 +102,29 @@
       }
     },
     "target_begin": {
+      "examples": [1, 10],
       "type": "integer",
       "description": "Target sequence start position in the alignment"
     },
     "query_begin": {
+      "examples": [1, 10],
       "type": "integer",
       "description": "Query sequence start position in the alignment"
     },
     "target_end": {
+      "examples": [100, 150],
       "type": "integer",
-      "description": "Target sequence start position in the alignment"
+      "description": "Target sequence end position in the alignment"
     },
     "query_end": {
+      "examples": [100, 150],
       "type": "integer",
       "description": "Query sequence end position in the alignment"
     },
     "orientation": {
+      "examples": [1, 2],
       "type": "integer",
-      "description": "integer that identifies the DNA strand of genome alignments (1 positive strand / -1 negative strand)"
+      "description": "integer that identifies the DNA strand of genome alignments (1 positive strand / 2 negative strand)"
     }
   },
   "additionalProperties": false
