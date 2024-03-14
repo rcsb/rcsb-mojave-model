@@ -37,12 +37,12 @@
       "properties": {
         "target_coverage": {
           "examples": [0.5, 0.75],
-          "description": "Fraction of the target sequence covered byt the alignment",
+          "description": "Fraction of the target sequence covered by the alignment",
           "type": "number"
         },
         "query_coverage": {
           "examples": [0.5, 0.75],
-          "description": "Fraction of the query sequence covered byt the alignment",
+          "description": "Fraction of the query sequence covered by the alignment",
           "type": "number"
         },
         "target_length": {
@@ -98,7 +98,9 @@
             }
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "uniqueItems": true,
+        "minItems": 1
       }
     },
     "target_begin": {
