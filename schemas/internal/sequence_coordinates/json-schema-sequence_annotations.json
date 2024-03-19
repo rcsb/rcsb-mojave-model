@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "$id": "/internal/sequence_coordinates/json-schema-sequence_annotations.json",
+  "title": "sequence_positional_annotations",
+  "description": "JSON schema to store sequence annotations for the 1D coordinate service",
+  "properties": {
+    "target_id": {
+      "examples": ["101M_1", "2UZI.C", "P01112"],
+      "type": "string",
+      "description": "Database identifier associated to the annotation"
+    },
+    "target_identifiers": {
+      "type": "object",
+      "properties": {
+        "target_id": {
+          "examples": ["101M_1", "2UZI.C", "P01112"],
+          "type": "string",
+          "description": "Database identifier associated to the annotation"
+        },
+        "entry_id": {
+          "type": "string",
+          "description": "This item references an entry in core_entry",
+          "examples": ["101M", "1ACB"]
+        },
+        "assembly_id": {
+          "type": "string",
+          "description": "This item references an assembly in core_assembly",
+          "examples": ["1", "2"]
+        },
+        "entity_id": {
+          "type": "string",
+          "description": "This item references an entity in core_polymer_entity",
+          "examples": ["1", "2"]
+        },
+        "asym_id": {
+          "type": "string",
+          "description": "This item references an instance in core_polymer_entity_instance",
+          "examples": ["A", "B", "1", "2"]
+        },
+        "uniprot_id": {
+          "type": "string",
+          "description": "This item references a UniProt document in core_uniprot",
+          "examples": ["P01112"]
+        },
+        "interface_id": {
+          "type": "string",
+          "description": "This item references an interface in core_interface",
+          "examples": ["1", "2"]
+        },
+        "interface_partner_index": {
+          "type": "integer",
+          "description": "This item references a partner of an interface in core_interface",
+          "examples": [0, 1]
+        }
+      },
+      "additionalProperties": false
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "feature",
+        "description": "List of positional features",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "Free-form text describing the feature",
+            "examples": ["Software generated binding site for ligand entity 2 component HEM instance C chain A"]
+          },
+          "feature_id": {
+            "type": "string",
+            "description": "Identifier of the feature",
+            "examples": ["HELX_P11", "AC1"]
+          },
+          "name": {
+            "type": "string",
+            "description": "Name associated to the feature",
+            "examples": ["ligand HEM"]
+          },
+          "type": {
+            "examples": ["BINDING_SITE"],
+            "type": "string",
+            "description": "A type or category of the feature",
+            "allOf": [{
+              "type": "string",
+              "$ref": "../common/common-schema-annotation.json#/definitions/annotation/properties/type"
+            },{
+              "type": "string",
+              "enum": ["PROTEIN_BINDING"]
+            }]
+          },
+          "provenance_source": {
+            "type": "string",
+            "description": "Original database or software name used to obtain the feature",
+            "examples": ["PDB", "UNIPROT"]
+          },
+          "value": {
+            "type": "number",
+            "description": "Numerical value associated with the feature",
+            "examples": [2, 3.14]
+          },
+          "feature_positions": {
+            "type": "array",
+            "description": "List of documents that describes the location of the feature",
+            "items": {
+              "type": "object",
+              "title": "feature_position",
+              "properties": {
+                "beg_seq_id": {
+                  "type": "integer",
+                  "description": "Index at which this segment of the feature begins",
+                  "examples": [1, 45]
+                },
+                "end_seq_id": {
+                  "type": "integer",
+                  "description": "Index at which this segment of the feature ends. If the positional feature maps to a single residue this field will be null",
+                  "examples": [100, 500]
+                },
+                "beg_ori_id": {
+                  "type": "integer",
+                  "description": "Index at which this segment of the feature begins on the original provenance_source. When reference and source point to the same reference system this file will be null",
+                  "examples": [10, 435]
+                },
+                "end_ori_id": {
+                  "type": "integer",
+                  "description": "Index at which this segment of the feature ends on the original provenance_source. If the positional feature maps to a single residue this field will be null. When reference and source point to the same reference system this file will be null",
+                  "examples": [150, 540]
+                },
+                "range_id": {
+                  "type": "string",
+                  "description": "Fragment identifier that groups a set of ranges resulting from gaps",
+                  "examples": ["range-1", "range-2"]
+                },
+                "open_begin": {
+                  "description": "Flag that indicates the feature begins before the feature index begin",
+                  "type": "boolean",
+                  "examples": [true, false]
+                },
+                "open_end": {
+                  "description": "Flag that indicates the feature end after the feature index end",
+                  "type": "boolean",
+                  "examples": [true, false]
+                },
+                "value": {
+                  "type": "number",
+                  "description": "The value for the feature at this region",
+                  "examples": [1, 2,56]
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "description": "The value(s) for the feature at this region"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additional_properties":{
+            "type": "array",
+            "description": "Attribute/Value list",
+            "items": {
+              "$ref": "../common/common-schema-annotation-additional-properties.json#/definitions/additional_property"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}
