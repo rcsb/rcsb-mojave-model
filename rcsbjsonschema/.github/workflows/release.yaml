@@ -1,0 +1,126 @@
+name: Schema and full stack release
+
+on:
+  workflow_dispatch:
+    inputs:
+      major:
+        description: 'Schema Major version'
+        type: string
+        required: true
+      minor:
+        description: 'Schema Minor version'
+        type: string
+        required: true
+      patch:
+        description: 'Schema Patch version'
+        type: string
+        required: true
+
+
+env:
+  NEW_SCHEMA_VERSION: "${{ inputs.major }}.${{ inputs.minor }}.${{ inputs.patch }}"
+
+# NOTE: in release-rcsb-json-schemas and release-mojave-model we do `mvn deploy` as part of the workflow so that it is synchronous.
+#       If we left it to a separate workflow in the repository (similar to push-to-master) then the downstream tasks would not be waiting for the
+#       artifacts to be deployed in Nexus (and would fail because they would be building before the dependency artifact was there)
+jobs:
+  release-rcsb-json-schemas:
+    runs-on:
+      - self-hosted
+      - java
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup git author information
+        run: |
+          git config user.name RCSBSystem
+          git config user.email it@rcsb.org
+      - run: mvn --version
+      - name: Set version
+        run: mvn versions:set -DnewVersion=$NEW_SCHEMA_VERSION --no-transfer-progress
+      - name: Commit and tag new version
+        run: |
+          git add pom.xml
+          git commit -m "[actions] Updated version in pom.xml to $NEW_SCHEMA_VERSION"
+          git tag v$NEW_SCHEMA_VERSION
+      - name: Publish to nexus via maven deploy
+        run: mvn --batch-mode --errors -U clean deploy --no-transfer-progress
+      - name: Increment version for next dev cycle
+        run: |
+          NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
+          mvn versions:set -DnewVersion="${{ inputs.major }}.${{ inputs.minor }}.$NEXT_PATCH-SNAPSHOT" -DallowSnapshots --no-transfer-progress
+      - name: Commit new version for next dev cycle
+        run: |
+          git add pom.xml
+          git commit -m "[actions] Next development cycle"
+      - name: Push back to GitHub
+        run: |
+          git push --all
+          git push --tags
+  release-mojave-model:
+    needs: release-rcsb-json-schemas
+    runs-on:
+      - self-hosted
+      - java
+    env:
+      PROJECT_NAME: rcsb-mojave-model
+    steps:
+      - name: Checking out rcsb-mojave-model
+        uses: actions/checkout@v3
+        with:
+          repository: rcsb/rcsb-mojave-model
+          token: ${{ secrets.RCSBSYSTEMSPAT }}
+          path: rcsb-mojave-model
+      - name: Setup git author information
+        run: |
+          cd $PROJECT_NAME
+          git config user.name RCSBSystem
+          git config user.email it@rcsb.org
+      - run: mvn --version
+      - name: Set new schema dependency version
+        run: |
+          cd $PROJECT_NAME
+          mvn versions:set-property -Dproperty=rcsb-json-schema.version -DnewVersion=$NEW_SCHEMA_VERSION -DgenerateBackupPoms=false --no-transfer-progress
+      - name: Set new mojave-model version, matching schema version
+        run: |
+          cd $PROJECT_NAME
+          mvn versions:set -DnewVersion=$NEW_SCHEMA_VERSION -DgenerateBackupPoms=false --no-transfer-progress
+      - name: Commit and tag
+        run: |
+          cd $PROJECT_NAME
+          git add pom.xml
+          git commit -m "[automatic-schema-release] Updated schema dependency version to $NEW_SCHEMA_VERSION"
+          git tag v$NEW_SCHEMA_VERSION
+      - name: Publish to nexus via maven deploy
+        run: |
+          cd $PROJECT_NAME
+          mvn --batch-mode --errors -U clean deploy --no-transfer-progress
+      - name: Increment version for next dev cycle
+        run: |
+          cd $PROJECT_NAME
+          NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
+          mvn versions:set -DnewVersion="${{ inputs.major }}.${{ inputs.minor }}.$NEXT_PATCH-SNAPSHOT" -DallowSnapshots --no-transfer-progress
+      - name: Commit new version for next dev cycle
+        run: |
+          cd $PROJECT_NAME
+          git add pom.xml
+          git commit -m "[actions] Next development cycle"
+      - name: Push back to GitHub
+        run: |
+          cd $PROJECT_NAME
+          git push --all
+          git push --tags
+  update-downstreams:
+    needs: release-mojave-model
+    strategy:
+      matrix:
+        repos: [rcsb-redwood, rcsb-yosemite, rcsb-shape, rcsb-borrego, rcsb-everglades]
+    uses: rcsb/rcsb-json-schema/.github/workflows/update-schema-dependency-version.yaml@master
+    with:
+# NOTE here I've tried ${{ env.NEW_SCHEMA_VERSION }} and $NEW_SCHEMA_VERSION. None of those work. Don't understand why
+      schema-version: "${{ inputs.major }}.${{ inputs.minor }}.${{ inputs.patch }}"
+      downstream-repo-to-update: ${{ matrix.repos }}
+      schema-property-name-in-repo: rcsb.mojave.model.version
+    # Secrets must be passed explicitly https://docs.github.com/en/enterprise-cloud@latest/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
+    secrets:
+      RCSBSYSTEMSPAT: ${{ secrets.RCSBSYSTEMSPAT }}
+

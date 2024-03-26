@@ -1,0 +1,69 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "rcsb_repository_holdings_update": {
+         "bsonType": "object",
+         "properties": {
+            "repository_content_types": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Combined NMR data (NEF)",
+                     "Combined NMR data (NMR-STAR)",
+                     "NMR chemical shifts",
+                     "NMR restraints",
+                     "coordinates",
+                     "structure factors"
+                  ]
+               },
+               "uniqueItems": false
+            },
+            "update_type": {
+               "bsonType": "string",
+               "enum": [
+                  "added",
+                  "modified",
+                  "obsolete",
+                  "removed"
+               ]
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "repository_content_types",
+            "update_type"
+         ]
+      },
+      "rcsb_repository_holdings_update_entry_container_identifiers": {
+         "bsonType": "object",
+         "properties": {
+            "entry_id": {
+               "bsonType": "string"
+            },
+            "rcsb_id": {
+               "bsonType": "string"
+            },
+            "update_id": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "entry_id",
+            "rcsb_id",
+            "update_id"
+         ]
+      },
+      "rcsb_id": {
+         "bsonType": "string"
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ]
+}

@@ -1,0 +1,3298 @@
+{
+   "NAME": "repository_holdings",
+   "APP_NAME": "ANY",
+   "DATABASE_NAME": "repository_holdings",
+   "DATABASE_VERSION": "7.8.3",
+   "SELECTION_FILTERS": {},
+   "SCHEMA_DICT": {
+      "RCSB_REPOSITORY_HOLDINGS_COMBINED": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_COMBINED",
+         "SCHEMA_NAME": "rcsb_repository_holdings_combined",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "UPDATE_ID": "update_id",
+            "ID_CODE_REPLACED_BY_LATEST": "id_code_replaced_by_latest",
+            "STATUS": "status",
+            "STATUS_CODE": "status_code"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_combined",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_combined",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ID_CODE_REPLACED_BY_LATEST": {
+               "CATEGORY": "rcsb_repository_holdings_combined",
+               "ATTRIBUTE": "id_code_replaced_by_latest",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "STATUS": {
+               "CATEGORY": "rcsb_repository_holdings_combined",
+               "ATTRIBUTE": "status",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "STATUS_CODE": {
+               "CATEGORY": "rcsb_repository_holdings_combined",
+               "ATTRIBUTE": "status_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ID_CODE_REPLACED_BY_LATEST": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "STATUS": {
+               "ORDER": 4,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "CURRENT",
+                  "REMOVED",
+                  "UNRELEASED"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "STATUS_CODE": {
+               "ORDER": 5,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "AUCO",
+                  "AUTH",
+                  "HOLD",
+                  "HPUB",
+                  "OBS",
+                  "POLC",
+                  "PROC",
+                  "REFI",
+                  "REL",
+                  "REPL",
+                  "RMVD",
+                  "TRSF",
+                  "WAIT",
+                  "WDRN"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID",
+                  "UPDATE_ID"
+               ]
+            },
+            "s1": {
+               "TYPE": "SEARCH",
+               "ATTRIBUTES": [
+                  null
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_combined": {
+               "ATTRIBUTES": [
+                  "entry_id",
+                  "update_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_COMBINED_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_COMBINED_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": true,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_COMBINED_ENTRY_CONTAINER_IDENTIFIERS": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_COMBINED_ENTRY_CONTAINER_IDENTIFIERS",
+         "SCHEMA_NAME": "rcsb_repository_holdings_combined_entry_container_identifiers",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "RCSB_ID": "rcsb_id",
+            "UPDATE_ID": "update_id"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_combined_entry_container_identifiers",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_ID": {
+               "CATEGORY": "rcsb_repository_holdings_combined_entry_container_identifiers",
+               "ATTRIBUTE": "rcsb_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_combined_entry_container_identifiers",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_combined_entry_container_identifiers": {
+               "ATTRIBUTES": [
+                  "entry_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_COMBINED_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_COMBINED_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": true,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_CURRENT": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_CURRENT",
+         "SCHEMA_NAME": "rcsb_repository_holdings_current",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "UPDATE_ID": "update_id",
+            "REPOSITORY_CONTENT_TYPES": "repository_content_types"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_current",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_current",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REPOSITORY_CONTENT_TYPES": {
+               "CATEGORY": "rcsb_repository_holdings_current",
+               "ATTRIBUTE": "repository_content_types",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REPOSITORY_CONTENT_TYPES": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "2fo-fc Map",
+                  "Combined NMR data (NEF)",
+                  "Combined NMR data (NMR-STAR)",
+                  "FASTA sequence",
+                  "Map Coefficients",
+                  "NMR chemical shifts",
+                  "NMR restraints V1",
+                  "NMR restraints V2",
+                  "assembly PDB",
+                  "assembly mmCIF",
+                  "entry PDB",
+                  "entry PDB bundle",
+                  "entry PDBML",
+                  "entry mmCIF",
+                  "fo-fc Map",
+                  "structure factors",
+                  "validation data mmCIF",
+                  "validation report",
+                  "validation slider image"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID",
+                  "UPDATE_ID"
+               ]
+            },
+            "s1": {
+               "TYPE": "SEARCH",
+               "ATTRIBUTES": [
+                  null
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_current": {
+               "ATTRIBUTES": [
+                  "entry_id",
+                  "update_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_CURRENT_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_CURRENT_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": true,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_CURRENT_ENTRY_CONTAINER_IDENTIFIERS": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_CURRENT_ENTRY_CONTAINER_IDENTIFIERS",
+         "SCHEMA_NAME": "rcsb_repository_holdings_current_entry_container_identifiers",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "ASSEMBLY_IDS": "assembly_ids",
+            "RCSB_ID": "rcsb_id",
+            "UPDATE_ID": "update_id"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_current_entry_container_identifiers",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ASSEMBLY_IDS": {
+               "CATEGORY": "rcsb_repository_holdings_current_entry_container_identifiers",
+               "ATTRIBUTE": "assembly_ids",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_ID": {
+               "CATEGORY": "rcsb_repository_holdings_current_entry_container_identifiers",
+               "ATTRIBUTE": "rcsb_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_current_entry_container_identifiers",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ASSEMBLY_IDS": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 4,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_current_entry_container_identifiers": {
+               "ATTRIBUTES": [
+                  "entry_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_CURRENT_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_CURRENT_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": true,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_INSILICO_MODELS": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_INSILICO_MODELS",
+         "SCHEMA_NAME": "rcsb_repository_holdings_insilico_models",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "UPDATE_ID": "update_id",
+            "AUDIT_AUTHORS": "audit_authors",
+            "DEPOSIT_DATE": "deposit_date",
+            "ID_CODES_REPLACED_BY": "id_codes_replaced_by",
+            "RELEASE_DATE": "release_date",
+            "REMOVE_DATE": "remove_date",
+            "STATUS_CODE": "status_code",
+            "TITLE": "title"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_insilico_models",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_insilico_models",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUDIT_AUTHORS": {
+               "CATEGORY": "rcsb_repository_holdings_insilico_models",
+               "ATTRIBUTE": "audit_authors",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DEPOSIT_DATE": {
+               "CATEGORY": "rcsb_repository_holdings_insilico_models",
+               "ATTRIBUTE": "deposit_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ID_CODES_REPLACED_BY": {
+               "CATEGORY": "rcsb_repository_holdings_insilico_models",
+               "ATTRIBUTE": "id_codes_replaced_by",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RELEASE_DATE": {
+               "CATEGORY": "rcsb_repository_holdings_insilico_models",
+               "ATTRIBUTE": "release_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REMOVE_DATE": {
+               "CATEGORY": "rcsb_repository_holdings_insilico_models",
+               "ATTRIBUTE": "remove_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "STATUS_CODE": {
+               "CATEGORY": "rcsb_repository_holdings_insilico_models",
+               "ATTRIBUTE": "status_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TITLE": {
+               "CATEGORY": "rcsb_repository_holdings_insilico_models",
+               "ATTRIBUTE": "title",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AUDIT_AUTHORS": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DEPOSIT_DATE": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ID_CODES_REPLACED_BY": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RELEASE_DATE": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REMOVE_DATE": {
+               "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "STATUS_CODE": {
+               "ORDER": 8,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "OBS",
+                  "TRSF",
+                  "WDRN"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TITLE": {
+               "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID",
+                  "UPDATE_ID"
+               ]
+            },
+            "s1": {
+               "TYPE": "SEARCH",
+               "ATTRIBUTES": [
+                  null
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_insilico_models": {
+               "ATTRIBUTES": [
+                  "entry_id",
+                  "update_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_REMOVED_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_REMOVED_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": true,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_PRERELEASE": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_PRERELEASE",
+         "SCHEMA_NAME": "rcsb_repository_holdings_prerelease",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTITY_ID": "entity_id",
+            "ENTRY_ID": "entry_id",
+            "UPDATE_ID": "update_id",
+            "SEQ_ONE_LETTER_CODE": "seq_one_letter_code"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTITY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_prerelease",
+               "ATTRIBUTE": "entity_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_prerelease",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_prerelease",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "SEQ_ONE_LETTER_CODE": {
+               "CATEGORY": "rcsb_repository_holdings_prerelease",
+               "ATTRIBUTE": "seq_one_letter_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTITY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTRY_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "SEQ_ONE_LETTER_CODE": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTITY_ID",
+                  "ENTRY_ID",
+                  "UPDATE_ID"
+               ]
+            },
+            "s1": {
+               "TYPE": "SEARCH",
+               "ATTRIBUTES": [
+                  null
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_prerelease": {
+               "ATTRIBUTES": [
+                  "entity_id",
+                  "entry_id",
+                  "update_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_UNRELEASED_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_UNRELEASED_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_REMOVED": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_REMOVED",
+         "SCHEMA_NAME": "rcsb_repository_holdings_removed",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "UPDATE_ID": "update_id",
+            "AUDIT_AUTHORS": "audit_authors",
+            "DEPOSIT_DATE": "deposit_date",
+            "DETAILS": "details",
+            "ID_CODES_REPLACED_BY": "id_codes_replaced_by",
+            "RELEASE_DATE": "release_date",
+            "REMOVE_DATE": "remove_date",
+            "REPOSITORY_CONTENT_TYPES": "repository_content_types",
+            "TITLE": "title"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_removed",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_removed",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUDIT_AUTHORS": {
+               "CATEGORY": "rcsb_repository_holdings_removed",
+               "ATTRIBUTE": "audit_authors",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DEPOSIT_DATE": {
+               "CATEGORY": "rcsb_repository_holdings_removed",
+               "ATTRIBUTE": "deposit_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DETAILS": {
+               "CATEGORY": "rcsb_repository_holdings_removed",
+               "ATTRIBUTE": "details",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ID_CODES_REPLACED_BY": {
+               "CATEGORY": "rcsb_repository_holdings_removed",
+               "ATTRIBUTE": "id_codes_replaced_by",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RELEASE_DATE": {
+               "CATEGORY": "rcsb_repository_holdings_removed",
+               "ATTRIBUTE": "release_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REMOVE_DATE": {
+               "CATEGORY": "rcsb_repository_holdings_removed",
+               "ATTRIBUTE": "remove_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REPOSITORY_CONTENT_TYPES": {
+               "CATEGORY": "rcsb_repository_holdings_removed",
+               "ATTRIBUTE": "repository_content_types",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TITLE": {
+               "CATEGORY": "rcsb_repository_holdings_removed",
+               "ATTRIBUTE": "title",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AUDIT_AUTHORS": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DEPOSIT_DATE": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DETAILS": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ID_CODES_REPLACED_BY": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RELEASE_DATE": {
+               "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REMOVE_DATE": {
+               "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REPOSITORY_CONTENT_TYPES": {
+               "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "Combined NMR data (NEF)",
+                  "Combined NMR data (NMR-STAR)",
+                  "NMR chemical shifts",
+                  "NMR restraints V1",
+                  "NMR restraints V2",
+                  "assembly PDB",
+                  "assembly mmCIF",
+                  "entry PDB",
+                  "entry PDB bundle",
+                  "entry PDBML",
+                  "entry mmCIF",
+                  "structure factors"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TITLE": {
+               "ORDER": 10,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID",
+                  "UPDATE_ID"
+               ]
+            },
+            "s1": {
+               "TYPE": "SEARCH",
+               "ATTRIBUTES": [
+                  null
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_removed": {
+               "ATTRIBUTES": [
+                  "entry_id",
+                  "update_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_REMOVED_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_REMOVED_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": true,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_REMOVED_AUDIT_AUTHOR": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_REMOVED_AUDIT_AUTHOR",
+         "SCHEMA_NAME": "rcsb_repository_holdings_removed_audit_author",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "ORDINAL_ID": "ordinal_id",
+            "UPDATE_ID": "update_id",
+            "AUDIT_AUTHOR": "audit_author"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_removed_audit_author",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ORDINAL_ID": {
+               "CATEGORY": "rcsb_repository_holdings_removed_audit_author",
+               "ATTRIBUTE": "ordinal_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_removed_audit_author",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUDIT_AUTHOR": {
+               "CATEGORY": "rcsb_repository_holdings_removed_audit_author",
+               "ATTRIBUTE": "audit_author",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ORDINAL_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AUDIT_AUTHOR": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID",
+                  "ORDINAL_ID",
+                  "UPDATE_ID"
+               ]
+            },
+            "s1": {
+               "TYPE": "SEARCH",
+               "ATTRIBUTES": [
+                  null
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_removed_audit_author": {
+               "ATTRIBUTES": [
+                  "entry_id",
+                  "ordinal_id",
+                  "update_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_REMOVED_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_REMOVED_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_REMOVED_ENTRY_CONTAINER_IDENTIFIERS": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_REMOVED_ENTRY_CONTAINER_IDENTIFIERS",
+         "SCHEMA_NAME": "rcsb_repository_holdings_removed_entry_container_identifiers",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "RCSB_ID": "rcsb_id",
+            "UPDATE_ID": "update_id"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_removed_entry_container_identifiers",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_ID": {
+               "CATEGORY": "rcsb_repository_holdings_removed_entry_container_identifiers",
+               "ATTRIBUTE": "rcsb_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_removed_entry_container_identifiers",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_removed_entry_container_identifiers": {
+               "ATTRIBUTES": [
+                  "entry_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_REMOVED_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_REMOVED_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": true,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_SUPERSEDED": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_SUPERSEDED",
+         "SCHEMA_NAME": "rcsb_repository_holdings_superseded",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "UPDATE_ID": "update_id",
+            "ID_CODES_SUPERSEDED": "id_codes_superseded"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_superseded",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_superseded",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ID_CODES_SUPERSEDED": {
+               "CATEGORY": "rcsb_repository_holdings_superseded",
+               "ATTRIBUTE": "id_codes_superseded",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ID_CODES_SUPERSEDED": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID",
+                  "UPDATE_ID"
+               ]
+            },
+            "s1": {
+               "TYPE": "SEARCH",
+               "ATTRIBUTES": [
+                  null
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_superseded": {
+               "ATTRIBUTES": [
+                  "entry_id",
+                  "update_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_REMOVED_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_REMOVED_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": true,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_TRANSFERRED": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_TRANSFERRED",
+         "SCHEMA_NAME": "rcsb_repository_holdings_transferred",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "UPDATE_ID": "update_id",
+            "AUDIT_AUTHORS": "audit_authors",
+            "DEPOSIT_DATE": "deposit_date",
+            "RELEASE_DATE": "release_date",
+            "REMOTE_ACCESSION_CODE": "remote_accession_code",
+            "REMOTE_REPOSITORY_NAME": "remote_repository_name",
+            "REPOSITORY_CONTENT_TYPES": "repository_content_types",
+            "STATUS_CODE": "status_code",
+            "TITLE": "title"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_transferred",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_transferred",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUDIT_AUTHORS": {
+               "CATEGORY": "rcsb_repository_holdings_transferred",
+               "ATTRIBUTE": "audit_authors",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DEPOSIT_DATE": {
+               "CATEGORY": "rcsb_repository_holdings_transferred",
+               "ATTRIBUTE": "deposit_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RELEASE_DATE": {
+               "CATEGORY": "rcsb_repository_holdings_transferred",
+               "ATTRIBUTE": "release_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REMOTE_ACCESSION_CODE": {
+               "CATEGORY": "rcsb_repository_holdings_transferred",
+               "ATTRIBUTE": "remote_accession_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REMOTE_REPOSITORY_NAME": {
+               "CATEGORY": "rcsb_repository_holdings_transferred",
+               "ATTRIBUTE": "remote_repository_name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REPOSITORY_CONTENT_TYPES": {
+               "CATEGORY": "rcsb_repository_holdings_transferred",
+               "ATTRIBUTE": "repository_content_types",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "STATUS_CODE": {
+               "CATEGORY": "rcsb_repository_holdings_transferred",
+               "ATTRIBUTE": "status_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TITLE": {
+               "CATEGORY": "rcsb_repository_holdings_transferred",
+               "ATTRIBUTE": "title",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AUDIT_AUTHORS": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DEPOSIT_DATE": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RELEASE_DATE": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REMOTE_ACCESSION_CODE": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REMOTE_REPOSITORY_NAME": {
+               "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REPOSITORY_CONTENT_TYPES": {
+               "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "Combined NMR data (NEF)",
+                  "Combined NMR data (NMR-STAR)",
+                  "NMR chemical shifts",
+                  "NMR restraints",
+                  "coordinates",
+                  "structure factors"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "STATUS_CODE": {
+               "ORDER": 9,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "TRSF"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TITLE": {
+               "ORDER": 10,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID",
+                  "UPDATE_ID"
+               ]
+            },
+            "s1": {
+               "TYPE": "SEARCH",
+               "ATTRIBUTES": [
+                  null
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_transferred": {
+               "ATTRIBUTES": [
+                  "entry_id",
+                  "update_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_REMOVED_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_REMOVED_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": true,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_UNRELEASED": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_UNRELEASED",
+         "SCHEMA_NAME": "rcsb_repository_holdings_unreleased",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "UPDATE_ID": "update_id",
+            "AUDIT_AUTHORS": "audit_authors",
+            "AUTHOR_PRERELEASE_SEQUENCE_STATUS": "author_prerelease_sequence_status",
+            "DEPOSIT_DATE": "deposit_date",
+            "DEPOSIT_DATE_COORDINATES": "deposit_date_coordinates",
+            "DEPOSIT_DATE_NMR_RESTRAINTS": "deposit_date_nmr_restraints",
+            "DEPOSIT_DATE_STRUCTURE_FACTORS": "deposit_date_structure_factors",
+            "HOLD_DATE_COORDINATES": "hold_date_coordinates",
+            "HOLD_DATE_NMR_RESTRAINTS": "hold_date_nmr_restraints",
+            "HOLD_DATE_STRUCTURE_FACTORS": "hold_date_structure_factors",
+            "PRERELEASE_SEQUENCE_AVAILABLE_FLAG": "prerelease_sequence_available_flag",
+            "RELEASE_DATE": "release_date",
+            "STATUS_CODE": "status_code",
+            "TITLE": "title"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUDIT_AUTHORS": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "audit_authors",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUTHOR_PRERELEASE_SEQUENCE_STATUS": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "author_prerelease_sequence_status",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DEPOSIT_DATE": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "deposit_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DEPOSIT_DATE_COORDINATES": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "deposit_date_coordinates",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DEPOSIT_DATE_NMR_RESTRAINTS": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "deposit_date_nmr_restraints",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DEPOSIT_DATE_STRUCTURE_FACTORS": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "deposit_date_structure_factors",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "HOLD_DATE_COORDINATES": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "hold_date_coordinates",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "HOLD_DATE_NMR_RESTRAINTS": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "hold_date_nmr_restraints",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "HOLD_DATE_STRUCTURE_FACTORS": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "hold_date_structure_factors",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PRERELEASE_SEQUENCE_AVAILABLE_FLAG": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "prerelease_sequence_available_flag",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RELEASE_DATE": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "release_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "STATUS_CODE": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "status_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TITLE": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased",
+               "ATTRIBUTE": "title",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AUDIT_AUTHORS": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AUTHOR_PRERELEASE_SEQUENCE_STATUS": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "HOLD FOR PUBLICATION",
+                  "HOLD FOR RELEASE",
+                  "RELEASE IMMEDIATELY",
+                  "RELEASE NOW"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DEPOSIT_DATE": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DEPOSIT_DATE_COORDINATES": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DEPOSIT_DATE_NMR_RESTRAINTS": {
+               "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DEPOSIT_DATE_STRUCTURE_FACTORS": {
+               "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "HOLD_DATE_COORDINATES": {
+               "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "HOLD_DATE_NMR_RESTRAINTS": {
+               "ORDER": 10,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "HOLD_DATE_STRUCTURE_FACTORS": {
+               "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PRERELEASE_SEQUENCE_AVAILABLE_FLAG": {
+               "ORDER": 12,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "N",
+                  "Y"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RELEASE_DATE": {
+               "ORDER": 13,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "STATUS_CODE": {
+               "ORDER": 14,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "AUCO",
+                  "AUTH",
+                  "HOLD",
+                  "HPUB",
+                  "POLC",
+                  "PROC",
+                  "REFI",
+                  "REPL",
+                  "WAIT",
+                  "WDRN"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TITLE": {
+               "ORDER": 15,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID",
+                  "UPDATE_ID"
+               ]
+            },
+            "s1": {
+               "TYPE": "SEARCH",
+               "ATTRIBUTES": [
+                  null
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_unreleased": {
+               "ATTRIBUTES": [
+                  "entry_id",
+                  "update_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_UNRELEASED_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_UNRELEASED_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": true
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_UNRELEASED_ENTRY_CONTAINER_IDENTIFIERS": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_UNRELEASED_ENTRY_CONTAINER_IDENTIFIERS",
+         "SCHEMA_NAME": "rcsb_repository_holdings_unreleased_entry_container_identifiers",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "RCSB_ID": "rcsb_id",
+            "UPDATE_ID": "update_id"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased_entry_container_identifiers",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_ID": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased_entry_container_identifiers",
+               "ATTRIBUTE": "rcsb_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_unreleased_entry_container_identifiers",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_unreleased_entry_container_identifiers": {
+               "ATTRIBUTES": [
+                  "entry_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_UNRELEASED_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_UNRELEASED_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": true
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_UPDATE": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_UPDATE",
+         "SCHEMA_NAME": "rcsb_repository_holdings_update",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "UPDATE_ID": "update_id",
+            "REPOSITORY_CONTENT_TYPES": "repository_content_types",
+            "UPDATE_TYPE": "update_type"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_update",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_update",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REPOSITORY_CONTENT_TYPES": {
+               "CATEGORY": "rcsb_repository_holdings_update",
+               "ATTRIBUTE": "repository_content_types",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_TYPE": {
+               "CATEGORY": "rcsb_repository_holdings_update",
+               "ATTRIBUTE": "update_type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REPOSITORY_CONTENT_TYPES": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "Combined NMR data (NEF)",
+                  "Combined NMR data (NMR-STAR)",
+                  "NMR chemical shifts",
+                  "NMR restraints",
+                  "coordinates",
+                  "structure factors"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_TYPE": {
+               "ORDER": 4,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "added",
+                  "modified",
+                  "obsolete",
+                  "removed"
+               ],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID",
+                  "UPDATE_ID"
+               ]
+            },
+            "s1": {
+               "TYPE": "SEARCH",
+               "ATTRIBUTES": [
+                  null
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_update": {
+               "ATTRIBUTES": [
+                  "entry_id",
+                  "update_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_UPDATE_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_UPDATE_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": true,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      },
+      "RCSB_REPOSITORY_HOLDINGS_UPDATE_ENTRY_CONTAINER_IDENTIFIERS": {
+         "SCHEMA_ID": "RCSB_REPOSITORY_HOLDINGS_UPDATE_ENTRY_CONTAINER_IDENTIFIERS",
+         "SCHEMA_NAME": "rcsb_repository_holdings_update_entry_container_identifiers",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "REPO_HOLDINGS_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTRY_ID": "entry_id",
+            "RCSB_ID": "rcsb_id",
+            "UPDATE_ID": "update_id"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_repository_holdings_update_entry_container_identifiers",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_ID": {
+               "CATEGORY": "rcsb_repository_holdings_update_entry_container_identifiers",
+               "ATTRIBUTE": "rcsb_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UPDATE_ID": {
+               "CATEGORY": "rcsb_repository_holdings_update_entry_container_identifiers",
+               "ATTRIBUTE": "update_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTRY_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UPDATE_ID": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "REPO_HOLDINGS_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTRY_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_repository_holdings_update_entry_container_identifiers": {
+               "ATTRIBUTES": [
+                  "entry_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "SLICE_REPO_UPDATE_ENTRY": [
+               {
+                  "PARENT_CATEGORY": "RCSB_REPOSITORY_HOLDINGS_UPDATE_ENTRY_CONTAINER_IDENTIFIERS",
+                  "PARENT_ATTRIBUTE": "ENTRY_ID",
+                  "CHILD_ATTRIBUTE": "ENTRY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "SLICE_REPO_UPDATE_ENTRY": true,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "SLICE_REPO_UPDATE_ENTRY": false,
+            "SLICE_REPO_REMOVED_ENTRY": false,
+            "SLICE_REPO_CURRENT_ENTRY": false,
+            "SLICE_REPO_COMBINED_ENTRY": false,
+            "SLICE_REPO_UNRELEASED_ENTRY": false
+         }
+      }
+   },
+   "DOCUMENT_DICT": {
+      "CONTENT_TYPE_COLLECTION_INFO": [
+         {
+            "NAME": "repository_holdings_update_entry",
+            "VERSION": "3.3.0"
+         },
+         {
+            "NAME": "repository_holdings_combined_entry",
+            "VERSION": "1.0.0"
+         },
+         {
+            "NAME": "repository_holdings_current_entry",
+            "VERSION": "3.4.3"
+         },
+         {
+            "NAME": "repository_holdings_unreleased_entry",
+            "VERSION": "3.5.0"
+         },
+         {
+            "NAME": "repository_holdings_removed_entry",
+            "VERSION": "3.3.0"
+         }
+      ],
+      "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
+         "repository_holdings_update_entry": [
+            "rcsb_repository_holdings_update_entry_container_identifiers.entry_id"
+         ],
+         "repository_holdings_combined_entry": [
+            "rcsb_repository_holdings_combined_entry_container_identifiers.entry_id"
+         ],
+         "repository_holdings_current_entry": [
+            "rcsb_repository_holdings_current_entry_container_identifiers.entry_id"
+         ],
+         "repository_holdings_unreleased_entry": [
+            "rcsb_repository_holdings_unreleased_entry_container_identifiers.entry_id"
+         ],
+         "repository_holdings_removed_entry": [
+            "rcsb_repository_holdings_removed_entry_container_identifiers.entry_id"
+         ]
+      },
+      "COLLECTION_DOCUMENT_REPLACE_ATTRIBUTE_NAMES": {
+         "repository_holdings_update_entry": [
+            "rcsb_repository_holdings_update_entry_container_identifiers.entry_id"
+         ],
+         "repository_holdings_combined_entry": [
+            "rcsb_repository_holdings_combined_entry_container_identifiers.entry_id"
+         ],
+         "repository_holdings_current_entry": [
+            "rcsb_repository_holdings_current_entry_container_identifiers.entry_id"
+         ],
+         "repository_holdings_unreleased_entry": [
+            "rcsb_repository_holdings_unreleased_entry_container_identifiers.entry_id"
+         ],
+         "repository_holdings_removed_entry": [
+            "rcsb_repository_holdings_removed_entry_container_identifiers.entry_id"
+         ]
+      },
+      "COLLECTION_DOCUMENT_PRIVATE_KEYS": {
+         "repository_holdings_update_entry": [
+            {
+               "NAME": "rcsb_id",
+               "CATEGORY_NAME": "rcsb_repository_holdings_update_entry_container_identifiers",
+               "ATTRIBUTE_NAME": "rcsb_id",
+               "PRIVATE_DOCUMENT_NAME": "rcsb_id",
+               "MANDATORY": true,
+               "UPDATE_ON_LOAD": false
+            }
+         ],
+         "repository_holdings_combined_entry": [
+            {
+               "NAME": "rcsb_id",
+               "CATEGORY_NAME": "rcsb_repository_holdings_combined_entry_container_identifiers",
+               "ATTRIBUTE_NAME": "rcsb_id",
+               "PRIVATE_DOCUMENT_NAME": "rcsb_id",
+               "MANDATORY": true,
+               "UPDATE_ON_LOAD": false
+            }
+         ],
+         "repository_holdings_current_entry": [
+            {
+               "NAME": "rcsb_id",
+               "CATEGORY_NAME": "rcsb_repository_holdings_current_entry_container_identifiers",
+               "ATTRIBUTE_NAME": "rcsb_id",
+               "PRIVATE_DOCUMENT_NAME": "rcsb_id",
+               "MANDATORY": true,
+               "UPDATE_ON_LOAD": false
+            }
+         ],
+         "repository_holdings_unreleased_entry": [
+            {
+               "NAME": "rcsb_id",
+               "CATEGORY_NAME": "rcsb_repository_holdings_unreleased_entry_container_identifiers",
+               "ATTRIBUTE_NAME": "rcsb_id",
+               "PRIVATE_DOCUMENT_NAME": "rcsb_id",
+               "MANDATORY": true,
+               "UPDATE_ON_LOAD": false
+            }
+         ],
+         "repository_holdings_removed_entry": [
+            {
+               "NAME": "rcsb_id",
+               "CATEGORY_NAME": "rcsb_repository_holdings_removed_entry_container_identifiers",
+               "ATTRIBUTE_NAME": "rcsb_id",
+               "PRIVATE_DOCUMENT_NAME": "rcsb_id",
+               "MANDATORY": true,
+               "UPDATE_ON_LOAD": false
+            }
+         ]
+      },
+      "COLLECTION_DOCUMENT_INDICES": {
+         "repository_holdings_update_entry": [
+            {
+               "INDEX_NAME": "primary",
+               "ATTRIBUTE_NAMES": [
+                  "rcsb_repository_holdings_update_entry_container_identifiers.entry_id"
+               ]
+            }
+         ],
+         "repository_holdings_combined_entry": [
+            {
+               "INDEX_NAME": "primary",
+               "ATTRIBUTE_NAMES": [
+                  "rcsb_repository_holdings_combined_entry_container_identifiers.entry_id"
+               ]
+            }
+         ],
+         "repository_holdings_current_entry": [
+            {
+               "INDEX_NAME": "primary",
+               "ATTRIBUTE_NAMES": [
+                  "rcsb_repository_holdings_current_entry_container_identifiers.entry_id"
+               ]
+            }
+         ],
+         "repository_holdings_unreleased_entry": [
+            {
+               "INDEX_NAME": "primary",
+               "ATTRIBUTE_NAMES": [
+                  "rcsb_repository_holdings_unreleased_entry_container_identifiers.entry_id"
+               ]
+            }
+         ],
+         "repository_holdings_removed_entry": [
+            {
+               "INDEX_NAME": "primary",
+               "ATTRIBUTE_NAMES": [
+                  "rcsb_repository_holdings_removed_entry_container_identifiers.entry_id"
+               ]
+            }
+         ]
+      },
+      "COLLECTION_CONTENT": {
+         "repository_holdings_update_entry": {
+            "INCLUDE": [
+               "RCSB_REPOSITORY_HOLDINGS_UPDATE_ENTRY_CONTAINER_IDENTIFIERS",
+               "RCSB_REPOSITORY_HOLDINGS_UPDATE"
+            ],
+            "EXCLUDE": [],
+            "SLICE_FILTER": "SLICE_REPO_UPDATE_ENTRY",
+            "EXCLUDED_ATTRIBUTES": {
+               "rcsb_repository_holdings_update": [
+                  "entry_id",
+                  "update_id"
+               ]
+            }
+         },
+         "repository_holdings_combined_entry": {
+            "INCLUDE": [
+               "RCSB_REPOSITORY_HOLDINGS_COMBINED_ENTRY_CONTAINER_IDENTIFIERS",
+               "RCSB_REPOSITORY_HOLDINGS_COMBINED"
+            ],
+            "EXCLUDE": [],
+            "SLICE_FILTER": "SLICE_REPO_COMBINED_ENTRY",
+            "EXCLUDED_ATTRIBUTES": {
+               "rcsb_repository_holdings_combined": [
+                  "entry_id",
+                  "update_id"
+               ]
+            }
+         },
+         "repository_holdings_current_entry": {
+            "INCLUDE": [
+               "RCSB_REPOSITORY_HOLDINGS_CURRENT_ENTRY_CONTAINER_IDENTIFIERS",
+               "RCSB_REPOSITORY_HOLDINGS_CURRENT"
+            ],
+            "EXCLUDE": [],
+            "SLICE_FILTER": "SLICE_REPO_CURRENT_ENTRY",
+            "EXCLUDED_ATTRIBUTES": {
+               "rcsb_repository_holdings_current": [
+                  "entry_id",
+                  "update_id"
+               ]
+            }
+         },
+         "repository_holdings_unreleased_entry": {
+            "INCLUDE": [
+               "RCSB_REPOSITORY_HOLDINGS_UNRELEASED_ENTRY_CONTAINER_IDENTIFIERS",
+               "RCSB_REPOSITORY_HOLDINGS_UNRELEASED",
+               "RCSB_REPOSITORY_HOLDINGS_PRERELEASE"
+            ],
+            "EXCLUDE": [],
+            "SLICE_FILTER": "SLICE_REPO_UNRELEASED_ENTRY",
+            "EXCLUDED_ATTRIBUTES": {
+               "rcsb_repository_holdings_unreleased": [
+                  "entry_id",
+                  "update_id"
+               ],
+               "rcsb_repository_holdings_prerelease": [
+                  "entry_id",
+                  "update_id"
+               ]
+            }
+         },
+         "repository_holdings_removed_entry": {
+            "INCLUDE": [
+               "RCSB_REPOSITORY_HOLDINGS_REMOVED_ENTRY_CONTAINER_IDENTIFIERS",
+               "RCSB_REPOSITORY_HOLDINGS_REMOVED",
+               "RCSB_REPOSITORY_HOLDINGS_REMOVED_AUDIT_AUTHOR",
+               "RCSB_REPOSITORY_HOLDINGS_SUPERSEDED",
+               "RCSB_REPOSITORY_HOLDINGS_TRANSFERRED",
+               "RCSB_REPOSITORY_HOLDINGS_INSILICO_MODELS"
+            ],
+            "EXCLUDE": [],
+            "SLICE_FILTER": "SLICE_REPO_REMOVED_ENTRY",
+            "EXCLUDED_ATTRIBUTES": {
+               "rcsb_repository_holdings_removed": [
+                  "entry_id",
+                  "update_id"
+               ],
+               "rcsb_repository_holdings_removed_audit_author": [
+                  "entry_id",
+                  "update_id"
+               ],
+               "rcsb_repository_holdings_superseded": [
+                  "entry_id",
+                  "update_id"
+               ],
+               "rcsb_repository_holdings_transferred": [
+                  "entry_id",
+                  "update_id"
+               ],
+               "rcsb_repository_holdings_insilico_models": [
+                  "entry_id",
+                  "update_id"
+               ]
+            }
+         }
+      },
+      "COLLECTION_SUB_CATEGORY_AGGREGATES": {
+         "repository_holdings_update_entry": [],
+         "repository_holdings_combined_entry": [],
+         "repository_holdings_current_entry": [],
+         "repository_holdings_unreleased_entry": [],
+         "repository_holdings_removed_entry": []
+      }
+   },
+   "SLICE_PARENT_ITEMS": {
+      "SLICE_REPO_UPDATE_ENTRY": [
+         {
+            "CATEGORY": "RCSB_REPOSITORY_HOLDINGS_UPDATE_ENTRY_CONTAINER_IDENTIFIERS",
+            "ATTRIBUTE": "ENTRY_ID"
+         }
+      ],
+      "SLICE_REPO_REMOVED_ENTRY": [
+         {
+            "CATEGORY": "RCSB_REPOSITORY_HOLDINGS_REMOVED_ENTRY_CONTAINER_IDENTIFIERS",
+            "ATTRIBUTE": "ENTRY_ID"
+         }
+      ],
+      "SLICE_REPO_CURRENT_ENTRY": [
+         {
+            "CATEGORY": "RCSB_REPOSITORY_HOLDINGS_CURRENT_ENTRY_CONTAINER_IDENTIFIERS",
+            "ATTRIBUTE": "ENTRY_ID"
+         }
+      ],
+      "SLICE_REPO_COMBINED_ENTRY": [
+         {
+            "CATEGORY": "RCSB_REPOSITORY_HOLDINGS_COMBINED_ENTRY_CONTAINER_IDENTIFIERS",
+            "ATTRIBUTE": "ENTRY_ID"
+         }
+      ],
+      "SLICE_REPO_UNRELEASED_ENTRY": [
+         {
+            "CATEGORY": "RCSB_REPOSITORY_HOLDINGS_UNRELEASED_ENTRY_CONTAINER_IDENTIFIERS",
+            "ATTRIBUTE": "ENTRY_ID"
+         }
+      ]
+   },
+   "SLICE_PARENT_FILTERS": {}
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title" : "UniProt Annotations",
+  "type" : "object",
+  "$id": "/internal/annotations/json-schema-annotations_uniprot.json",
+  "required" : [
+    "annotations_uniprot_container_identifiers", "sequence"
+  ],
+  "properties" : {
+    "annotations_uniprot_container_identifiers": {
+      "type" : "object",
+      "properties" : {
+        "uniprot_id" : {
+          "type" : "string",
+          "description" : "Primary accession number of a given UniProtKB entry."
+        }
+      },
+      "additionalProperties": false
+    },
+    "sequence" : {
+      "type" : "string",
+      "description": "Protein sequence data for canonical protein sequence."
+    },
+    "annotations": {
+      "type": "array",
+      "items": {
+        "$ref": "../common/common-schema-annotation.json#/definitions/annotation"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

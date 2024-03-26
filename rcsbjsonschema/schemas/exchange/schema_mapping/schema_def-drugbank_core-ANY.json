@@ -1,0 +1,877 @@
+{
+   "NAME": "drugbank_core",
+   "APP_NAME": "ANY",
+   "DATABASE_NAME": "drugbank_core",
+   "DATABASE_VERSION": "5.4.1",
+   "SELECTION_FILTERS": {},
+   "SCHEMA_DICT": {
+      "DRUGBANK_CONTAINER_IDENTIFIERS": {
+         "SCHEMA_ID": "DRUGBANK_CONTAINER_IDENTIFIERS",
+         "SCHEMA_NAME": "drugbank_container_identifiers",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": true,
+         "SCHEMA_CONTENT_CLASSES": [
+            "INTEGRATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "DRUGBANK_ID": "drugbank_id"
+         },
+         "ATTRIBUTE_MAP": {
+            "DRUGBANK_ID": {
+               "CATEGORY": "drugbank_container_identifiers",
+               "ATTRIBUTE": "drugbank_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "DRUGBANK_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "DRUGBANK_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "drugbank_container_identifiers": {
+               "ATTRIBUTES": [
+                  "drugbank_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {},
+         "SLICE_UNIT_CARDINALITY": {},
+         "SLICE_CATEGORY_EXTRAS": {}
+      },
+      "DRUGBANK_INFO": {
+         "SCHEMA_ID": "DRUGBANK_INFO",
+         "SCHEMA_NAME": "drugbank_info",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": true,
+         "SCHEMA_CONTENT_CLASSES": [
+            "INTEGRATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [
+            "drug_products"
+         ],
+         "ATTRIBUTES": {
+            "DRUGBANK_ID": "drugbank_id",
+            "AFFECTED_ORGANISMS": "affected_organisms",
+            "ATC_CODES": "atc_codes",
+            "BRAND_NAMES": "brand_names",
+            "CAS_NUMBER": "cas_number",
+            "DESCRIPTION": "description",
+            "DRUG_CATEGORIES": "drug_categories",
+            "DRUG_GROUPS": "drug_groups",
+            "DRUG_PRODUCTS_APPROVED": "drug_products_approved",
+            "DRUG_PRODUCTS_COUNTRY": "drug_products_country",
+            "DRUG_PRODUCTS_ENDED_MARKETING_ON": "drug_products_ended_marketing_on",
+            "DRUG_PRODUCTS_NAME": "drug_products_name",
+            "DRUG_PRODUCTS_SOURCE": "drug_products_source",
+            "DRUG_PRODUCTS_STARTED_MARKETING_ON": "drug_products_started_marketing_on",
+            "INDICATION": "indication",
+            "MECHANISM_OF_ACTION": "mechanism_of_action",
+            "NAME": "name",
+            "PHARMACOLOGY": "pharmacology",
+            "SYNONYMS": "synonyms"
+         },
+         "ATTRIBUTE_MAP": {
+            "DRUGBANK_ID": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "drugbank_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AFFECTED_ORGANISMS": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "affected_organisms",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ATC_CODES": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "atc_codes",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "BRAND_NAMES": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "brand_names",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "CAS_NUMBER": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "cas_number",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DESCRIPTION": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "description",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DRUG_CATEGORIES": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "drug_categories",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DRUG_GROUPS": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "drug_groups",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DRUG_PRODUCTS_APPROVED": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "drug_products_approved",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DRUG_PRODUCTS_COUNTRY": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "drug_products_country",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DRUG_PRODUCTS_ENDED_MARKETING_ON": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "drug_products_ended_marketing_on",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DRUG_PRODUCTS_NAME": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "drug_products_name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DRUG_PRODUCTS_SOURCE": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "drug_products_source",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DRUG_PRODUCTS_STARTED_MARKETING_ON": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "drug_products_started_marketing_on",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "INDICATION": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "indication",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MECHANISM_OF_ACTION": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "mechanism_of_action",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NAME": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PHARMACOLOGY": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "pharmacology",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "SYNONYMS": {
+               "CATEGORY": "drugbank_info",
+               "ATTRIBUTE": "synonyms",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "DRUGBANK_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AFFECTED_ORGANISMS": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "ATC_CODES": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "BRAND_NAMES": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "CAS_NUMBER": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DESCRIPTION": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DRUG_CATEGORIES": {
+               "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DRUG_GROUPS": {
+               "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "approved",
+                  "experimental",
+                  "illicit",
+                  "investigational",
+                  "nutraceutical",
+                  "vet_approved",
+                  "withdrawn"
+               ],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DRUG_PRODUCTS_APPROVED": {
+               "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "N",
+                  "Y"
+               ],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "drug_products"
+               ]
+            },
+            "DRUG_PRODUCTS_COUNTRY": {
+               "ORDER": 10,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "Canada",
+                  "EU",
+                  "US"
+               ],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "drug_products"
+               ]
+            },
+            "DRUG_PRODUCTS_ENDED_MARKETING_ON": {
+               "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "drug_products"
+               ]
+            },
+            "DRUG_PRODUCTS_NAME": {
+               "ORDER": 12,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "drug_products"
+               ]
+            },
+            "DRUG_PRODUCTS_SOURCE": {
+               "ORDER": 13,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "DPD",
+                  "EMA",
+                  "FDA NDC"
+               ],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "drug_products"
+               ]
+            },
+            "DRUG_PRODUCTS_STARTED_MARKETING_ON": {
+               "ORDER": 14,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "drug_products"
+               ]
+            },
+            "INDICATION": {
+               "ORDER": 15,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MECHANISM_OF_ACTION": {
+               "ORDER": 16,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NAME": {
+               "ORDER": 17,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PHARMACOLOGY": {
+               "ORDER": 18,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "SYNONYMS": {
+               "ORDER": 19,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "DRUGBANK_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "drugbank_info": {
+               "ATTRIBUTES": [
+                  "drugbank_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {},
+         "SLICE_UNIT_CARDINALITY": {},
+         "SLICE_CATEGORY_EXTRAS": {}
+      },
+      "DRUGBANK_TARGET": {
+         "SCHEMA_ID": "DRUGBANK_TARGET",
+         "SCHEMA_NAME": "drugbank_target",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "INTEGRATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ORDINAL": "ordinal",
+            "INTERACTION_TYPE": "interaction_type",
+            "NAME": "name",
+            "ORGANISM_COMMON_NAME": "organism_common_name",
+            "REFERENCE_DATABASE_ACCESSION_CODE": "reference_database_accession_code",
+            "REFERENCE_DATABASE_NAME": "reference_database_name",
+            "SEQ_ONE_LETTER_CODE": "seq_one_letter_code",
+            "TARGET_ACTIONS": "target_actions"
+         },
+         "ATTRIBUTE_MAP": {
+            "ORDINAL": {
+               "CATEGORY": "drugbank_target",
+               "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "INTERACTION_TYPE": {
+               "CATEGORY": "drugbank_target",
+               "ATTRIBUTE": "interaction_type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NAME": {
+               "CATEGORY": "drugbank_target",
+               "ATTRIBUTE": "name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ORGANISM_COMMON_NAME": {
+               "CATEGORY": "drugbank_target",
+               "ATTRIBUTE": "organism_common_name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REFERENCE_DATABASE_ACCESSION_CODE": {
+               "CATEGORY": "drugbank_target",
+               "ATTRIBUTE": "reference_database_accession_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REFERENCE_DATABASE_NAME": {
+               "CATEGORY": "drugbank_target",
+               "ATTRIBUTE": "reference_database_name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "SEQ_ONE_LETTER_CODE": {
+               "CATEGORY": "drugbank_target",
+               "ATTRIBUTE": "seq_one_letter_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TARGET_ACTIONS": {
+               "CATEGORY": "drugbank_target",
+               "ATTRIBUTE": "target_actions",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ORDINAL": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "INTERACTION_TYPE": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NAME": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ORGANISM_COMMON_NAME": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REFERENCE_DATABASE_ACCESSION_CODE": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REFERENCE_DATABASE_NAME": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "UniProt"
+               ],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "SEQ_ONE_LETTER_CODE": {
+               "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TARGET_ACTIONS": {
+               "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "INTEGRATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ORDINAL"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "drugbank_target": {
+               "ATTRIBUTES": [
+                  "ordinal"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {},
+         "SLICE_UNIT_CARDINALITY": {},
+         "SLICE_CATEGORY_EXTRAS": {}
+      }
+   },
+   "DOCUMENT_DICT": {
+      "CONTENT_TYPE_COLLECTION_INFO": [
+         {
+            "NAME": "drugbank_core",
+            "VERSION": "1.3.2"
+         }
+      ],
+      "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
+         "drugbank_core": [
+            "drugbank_info.drugbank_id"
+         ]
+      },
+      "COLLECTION_DOCUMENT_REPLACE_ATTRIBUTE_NAMES": {
+         "drugbank_core": [
+            "drugbank_info.drugbank_id"
+         ]
+      },
+      "COLLECTION_DOCUMENT_PRIVATE_KEYS": {
+         "drugbank_core": []
+      },
+      "COLLECTION_DOCUMENT_INDICES": {
+         "drugbank_core": [
+            {
+               "INDEX_NAME": "primary",
+               "ATTRIBUTE_NAMES": [
+                  "drugbank_info.drugbank_id"
+               ]
+            }
+         ]
+      },
+      "COLLECTION_CONTENT": {
+         "drugbank_core": {
+            "INCLUDE": [
+               "DRUGBANK_INFO",
+               "DRUGBANK_TARGET",
+               "DRUGBANK_CONTAINER_IDENTIFIERS"
+            ],
+            "EXCLUDE": [],
+            "SLICE_FILTER": null,
+            "EXCLUDED_ATTRIBUTES": {}
+         }
+      },
+      "COLLECTION_SUB_CATEGORY_AGGREGATES": {
+         "drugbank_core": [
+            {
+               "NAME": "drug_products",
+               "HAS_UNIT_CARDINALITY": false,
+               "MIN_ITEMS": 1,
+               "UNIQUE_ITEMS": true
+            }
+         ]
+      }
+   },
+   "SLICE_PARENT_ITEMS": {},
+   "SLICE_PARENT_FILTERS": {}
+}

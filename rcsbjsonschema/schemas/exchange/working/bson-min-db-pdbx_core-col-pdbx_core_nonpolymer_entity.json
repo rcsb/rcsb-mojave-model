@@ -1,0 +1,310 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "pdbx_entity_nonpoly": {
+         "bsonType": "object",
+         "properties": {
+            "comp_id": {
+               "bsonType": "string"
+            },
+            "entity_id": {
+               "bsonType": "string"
+            },
+            "name": {
+               "bsonType": "string"
+            },
+            "rcsb_prd_id": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "entity_id"
+         ]
+      },
+      "rcsb_nonpolymer_entity": {
+         "bsonType": "object",
+         "properties": {
+            "details": {
+               "bsonType": "string"
+            },
+            "formula_weight": {
+               "bsonType": "double"
+            },
+            "pdbx_description": {
+               "bsonType": "string"
+            },
+            "pdbx_number_of_molecules": {
+               "bsonType": "int"
+            }
+         },
+         "additionalProperties": false
+      },
+      "rcsb_nonpolymer_entity_annotation": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "annotation_id": {
+                  "bsonType": "string"
+               },
+               "assignment_version": {
+                  "bsonType": "string"
+               },
+               "comp_id": {
+                  "bsonType": "string"
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "provenance_source": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "SUBJECT_OF_INVESTIGATION"
+                  ]
+               },
+               "annotation_lineage": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "depth": {
+                           "bsonType": "int"
+                        },
+                        "id": {
+                           "bsonType": "string"
+                        },
+                        "name": {
+                           "bsonType": "string"
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_nonpolymer_entity_container_identifiers": {
+         "bsonType": "object",
+         "properties": {
+            "asym_ids": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "auth_asym_ids": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "chem_ref_def_id": {
+               "bsonType": "string"
+            },
+            "entity_id": {
+               "bsonType": "string"
+            },
+            "entry_id": {
+               "bsonType": "string"
+            },
+            "nonpolymer_comp_id": {
+               "bsonType": "string"
+            },
+            "prd_id": {
+               "bsonType": "string"
+            },
+            "rcsb_id": {
+               "bsonType": "string"
+            },
+            "reference_chemical_identifiers_provenance_source": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string",
+                  "enum": [
+                     "PDB",
+                     "RCSB"
+                  ]
+               },
+               "uniqueItems": false
+            },
+            "reference_chemical_identifiers_resource_accession": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "reference_chemical_identifiers_resource_name": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string",
+                  "enum": [
+                     "ChEBI",
+                     "ChEMBL",
+                     "DrugBank",
+                     "PubChem"
+                  ]
+               },
+               "uniqueItems": false
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "entity_id",
+            "entry_id"
+         ]
+      },
+      "rcsb_nonpolymer_entity_feature": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "assignment_version": {
+                  "bsonType": "string"
+               },
+               "comp_id": {
+                  "bsonType": "string"
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "feature_id": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "provenance_source": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "SUBJECT_OF_INVESTIGATION"
+                  ]
+               },
+               "value": {
+                  "bsonType": "double"
+               },
+               "additional_properties": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "name": {
+                           "bsonType": "string"
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "anyOf": [
+                                 {
+                                    "bsonType": "string"
+                                 },
+                                 {
+                                    "bsonType": "int"
+                                 },
+                                 {
+                                    "bsonType": "double"
+                                 }
+                              ]
+                           },
+                           "uniqueItems": false
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_nonpolymer_entity_feature_summary": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "comp_id": {
+                  "bsonType": "string"
+               },
+               "count": {
+                  "bsonType": "int"
+               },
+               "maximum_length": {
+                  "bsonType": "int"
+               },
+               "maximum_value": {
+                  "bsonType": "double"
+               },
+               "minimum_length": {
+                  "bsonType": "int"
+               },
+               "minimum_value": {
+                  "bsonType": "double"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "SUBJECT_OF_INVESTIGATION"
+                  ]
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_nonpolymer_entity_keywords": {
+         "bsonType": "object",
+         "properties": {
+            "text": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false
+      },
+      "rcsb_nonpolymer_entity_name_com": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "name": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "name"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_id": {
+         "bsonType": "string"
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ]
+}
