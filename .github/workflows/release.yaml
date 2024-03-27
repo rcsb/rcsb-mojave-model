@@ -60,8 +60,14 @@ jobs:
         run: |
           git push --all
           git push --tags
-  update-downstreams:
+  delay-for-maven-central:
     needs: release-mojave-model
+    steps:
+      - name: Sleep for 15 minutes to give time for rcsb-mojave-model artifacts to appear in maven central
+        run: sleep 15m
+        shell: bash
+  update-downstreams:
+    needs: delay-for-maven-central
     strategy:
       matrix:
         repos: [rcsb-redwood, rcsb-yosemite, rcsb-shape, rcsb-borrego, rcsb-everglades]
