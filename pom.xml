@@ -21,16 +21,15 @@
 
         <project.auto.package>org.rcsb.mojave.auto</project.auto.package>
         <project.enums.package>org.rcsb.mojave.enumeration</project.enums.package>
-        <rcsb-json-schema.version>1.46.2</rcsb-json-schema.version>
 
         <mojave.meta.version>1.5.1</mojave.meta.version>
-        <mojave.tools.version>1.7.5</mojave.tools.version>
+        <mojave.tools.version>1.7.6-SNAPSHOT</mojave.tools.version>
         <!-- 0.10 has breaking changes -->
         <reflection.version>0.9.11</reflection.version>
 
         <!-- ==================================== EXCHANGE DB JSON SCHEMAS ========================================= -->
 
-        <exch.json.schemas.location>/exchange/min-meta</exch.json.schemas.location>
+        <exch.json.schemas.location>${project.basedir}/schemas/exchange/min-meta</exch.json.schemas.location>
 
         <!-- schemas for core collections -->
         <exch.core.entry.json.schema.name>json-min-db-pdbx_core-col-pdbx_core_entry.json</exch.core.entry.json.schema.name>
@@ -60,9 +59,9 @@
 
         <!-- ==================================== INTERNAL DW JSON SCHEMAS ========================================= -->
 
-        <rcsb.core.json.schemas.location>/internal/core</rcsb.core.json.schemas.location>
-        <rcsb.supl.json.schemas.location>/internal/supplemental</rcsb.supl.json.schemas.location>
-        <rcsb.annotations.json.schemas.location>/internal/annotations</rcsb.annotations.json.schemas.location>
+        <rcsb.core.json.schemas.location>${project.basedir}/schemas/internal/core</rcsb.core.json.schemas.location>
+        <rcsb.supl.json.schemas.location>${project.basedir}/schemas/internal/supplemental</rcsb.supl.json.schemas.location>
+        <rcsb.annotations.json.schemas.location>${project.basedir}/schemas/internal/annotations</rcsb.annotations.json.schemas.location>
 
         <!-- schemas for core collections -->
         <rcsb.core.assembly.json.schema.name>json-schema-core_assembly.json</rcsb.core.assembly.json.schema.name>
@@ -92,7 +91,7 @@
         <rcsb.annotations.interface.polymer.entity.instance.json.schema.name>json-schema-annotations_interface_polymer_entity_instance.json</rcsb.annotations.interface.polymer.entity.instance.json.schema.name>
 
         <!-- ==================================== GROUPS DW JSON SCHEMAS ========================================= -->
-        <rcsb.group.json.schemas.location>/internal/groups</rcsb.group.json.schemas.location>
+        <rcsb.group.json.schemas.location>${project.basedir}/schemas/internal/groups</rcsb.group.json.schemas.location>
         <rcsb.group.provenance.json.schema.name>json-schema-group_provenance.json</rcsb.group.provenance.json.schema.name>
         <rcsb.group.core.json.schema.name>json-schema-group_core.json</rcsb.group.core.json.schema.name>
         <rcsb.group.entry.json.schema.name>json-schema-group_entry.json</rcsb.group.entry.json.schema.name>
@@ -222,12 +221,6 @@
 
         <dependency>
             <groupId>org.rcsb</groupId>
-            <artifactId>rcsb-json-schema</artifactId>
-            <version>${rcsb-json-schema.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.rcsb</groupId>
             <artifactId>rcsb-mojave-tools</artifactId>
             <version>${mojave.tools.version}</version>
         </dependency>
@@ -351,7 +344,7 @@
                                 <argument>${project.build.directory}/${exchange.schema.location}/${exch.sequence.clusters.cluster.members.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.sequence.clusters.cluster.members.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.sequence.clusters.cluster.members.json.schema.name}</argument>
                             </arguments>
                             <systemProperties>
                                 <!-- Identifies a resource by type -->
@@ -380,7 +373,7 @@
                                 <argument>${project.build.directory}/${exchange.schema.location}/${exch.sequence.clusters.provenance.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.sequence.clusters.provenance.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.sequence.clusters.provenance.json.schema.name}</argument>
                             </arguments>
                             <systemProperties>
                                 <!-- Identifies a resource by type -->
@@ -405,7 +398,7 @@
                             <arguments>
                                 <!-- where to get source schema -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.sequence.clusters.entity.members.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.sequence.clusters.entity.members.json.schema.name}</argument>
                                 <!-- where to put final schema -->
                                 <argument>-o</argument>
                                 <argument>${project.build.directory}/${derived.schema.location}/${sequence.clusters.derived.json.schema.name}</argument>
@@ -431,7 +424,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${group.provenance.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.group.json.schemas.location}/${rcsb.group.provenance.json.schema.name}</argument>
+                                <argument>file://${rcsb.group.json.schemas.location}/${rcsb.group.provenance.json.schema.name}</argument>
                             </arguments>
                             <systemProperties>
                                 <!-- Identifies a resource by type -->
@@ -459,8 +452,8 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${group.entry.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.group.json.schemas.location}/${rcsb.group.core.json.schema.name}</argument>
-                                <argument>jar:${rcsb.group.json.schemas.location}/${rcsb.group.entry.json.schema.name}</argument>
+                                <argument>file://${rcsb.group.json.schemas.location}/${rcsb.group.core.json.schema.name}</argument>
+                                <argument>file://${rcsb.group.json.schemas.location}/${rcsb.group.entry.json.schema.name}</argument>
                             </arguments>
                             <systemProperties>
                                 <!-- Identifies a resource by type -->
@@ -488,8 +481,8 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${group.polymer.entity.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.group.json.schemas.location}/${rcsb.group.core.json.schema.name}</argument>
-                                <argument>jar:${rcsb.group.json.schemas.location}/${rcsb.group.polymer.entity.json.schema.name}</argument>
+                                <argument>file://${rcsb.group.json.schemas.location}/${rcsb.group.core.json.schema.name}</argument>
+                                <argument>file://${rcsb.group.json.schemas.location}/${rcsb.group.polymer.entity.json.schema.name}</argument>
                             </arguments>
                             <systemProperties>
                                 <!-- Identifies a resource by type -->
@@ -517,8 +510,8 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.assembly.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.core.assembly.json.schema.name}</argument>
-                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.assembly.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.core.assembly.json.schema.name}</argument>
+                                <argument>file://${rcsb.core.json.schemas.location}/${rcsb.core.assembly.json.schema.name}</argument>
                             </arguments>
                             <systemProperties>
                                 <!-- Identifies a resource by type -->
@@ -544,7 +537,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.interface.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.interface.json.schema.name}</argument>
+                                <argument>file://${rcsb.core.json.schemas.location}/${rcsb.core.interface.json.schema.name}</argument>
                             </arguments>
                             <systemProperties>
                                 <!-- Identifies a resource by type -->
@@ -569,8 +562,8 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.entry.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.core.entry.json.schema.name}</argument>
-                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.entry.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.core.entry.json.schema.name}</argument>
+                                <argument>file://${rcsb.core.json.schemas.location}/${rcsb.core.entry.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -592,8 +585,8 @@
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
                                 <argument>file://${project.build.directory}/${derived.schema.location}/${sequence.clusters.derived.json.schema.name}</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.core.polymer.entity.json.schema.name}</argument>
-                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.polymer.entity.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.core.polymer.entity.json.schema.name}</argument>
+                                <argument>file://${rcsb.core.json.schemas.location}/${rcsb.core.polymer.entity.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -612,8 +605,8 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.nonpolymer.entity.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.core.nonpolymer.entity.json.schema.name}</argument>
-                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.nonpolymer.entity.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.core.nonpolymer.entity.json.schema.name}</argument>
+                                <argument>file://${rcsb.core.json.schemas.location}/${rcsb.core.nonpolymer.entity.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -632,8 +625,8 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.branched.entity.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.core.branched.entity.json.schema.name}</argument>
-                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.branched.entity.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.core.branched.entity.json.schema.name}</argument>
+                                <argument>file://${rcsb.core.json.schemas.location}/${rcsb.core.branched.entity.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -652,8 +645,8 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.polymer.entity.instance.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.core.polymer.entity.instance.json.schema.name}</argument>
-                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.polymer.entity.instance.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.core.polymer.entity.instance.json.schema.name}</argument>
+                                <argument>file://${rcsb.core.json.schemas.location}/${rcsb.core.polymer.entity.instance.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -672,8 +665,8 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.nonpolymer.entity.instance.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.core.nonpolymer.entity.instance.json.schema.name}</argument>
-                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.nonpolymer.entity.instance.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.core.nonpolymer.entity.instance.json.schema.name}</argument>
+                                <argument>file://${rcsb.core.json.schemas.location}/${rcsb.core.nonpolymer.entity.instance.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -692,8 +685,8 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.branched.entity.instance.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.core.branched.entity.instance.json.schema.name}</argument>
-                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.branched.entity.instance.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.core.branched.entity.instance.json.schema.name}</argument>
+                                <argument>file://${rcsb.core.json.schemas.location}/${rcsb.core.branched.entity.instance.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -714,7 +707,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.uniprot.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.uniprot.json.schema.name}</argument>
+                                <argument>file://${rcsb.core.json.schemas.location}/${rcsb.core.uniprot.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -733,7 +726,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.pubmed.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.pubmed.json.schema.name}</argument>
+                                <argument>file://${rcsb.core.json.schemas.location}/${rcsb.core.pubmed.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -754,7 +747,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.ncbi.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.ncbi.json.schema.name}</argument>
+                                <argument>file://${rcsb.core.json.schemas.location}/${rcsb.core.ncbi.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -773,7 +766,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.bird.chemcomp.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.core.bird.chemcomp.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.core.bird.chemcomp.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -792,7 +785,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.drugbank.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.core.drugbank.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.core.drugbank.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -811,7 +804,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${holdings.current.entry.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.holdings.current.entries.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.holdings.current.entries.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -830,7 +823,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${holdings.removed.entry.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.holdings.removed.entries.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.holdings.removed.entries.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -849,7 +842,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${holdings.unreleased.entry.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.holdings.unreleased.entries.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.holdings.unreleased.entries.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -868,7 +861,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${holdings.combined.entry.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${exch.json.schemas.location}/${exch.holdings.combined.entries.json.schema.name}</argument>
+                                <argument>file://${exch.json.schemas.location}/${exch.holdings.combined.entries.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -887,7 +880,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.graph.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.supl.json.schemas.location}/${rcsb.tree.json.schema.name}</argument>
+                                <argument>file://${rcsb.supl.json.schemas.location}/${rcsb.tree.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -906,7 +899,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${core.pfam.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.core.json.schemas.location}/${rcsb.core.pfam.json.schema.name}</argument>
+                                <argument>file://${rcsb.core.json.schemas.location}/${rcsb.core.pfam.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -925,7 +918,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${shape.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.supl.json.schemas.location}/${rcsb.shape.json.schema.name}</argument>
+                                <argument>file://${rcsb.supl.json.schemas.location}/${rcsb.shape.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -946,7 +939,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${annotations.uniprot.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.annotations.json.schemas.location}/${rcsb.annotations.uniprot.json.schema.name}</argument>
+                                <argument>file://${rcsb.annotations.json.schemas.location}/${rcsb.annotations.uniprot.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -967,7 +960,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${annotations.polymer.entity.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.annotations.json.schemas.location}/${rcsb.annotations.polymer.entity.json.schema.name}</argument>
+                                <argument>file://${rcsb.annotations.json.schemas.location}/${rcsb.annotations.polymer.entity.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -988,7 +981,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${annotations.polymer.entity.instance.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.annotations.json.schemas.location}/${rcsb.annotations.polymer.entity.instance.json.schema.name}</argument>
+                                <argument>file://${rcsb.annotations.json.schemas.location}/${rcsb.annotations.polymer.entity.instance.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -1010,7 +1003,7 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${annotations.interface.polymer.entity.instance.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.annotations.json.schemas.location}/${rcsb.annotations.interface.polymer.entity.instance.json.schema.name}</argument>
+                                <argument>file://${rcsb.annotations.json.schemas.location}/${rcsb.annotations.interface.polymer.entity.instance.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
