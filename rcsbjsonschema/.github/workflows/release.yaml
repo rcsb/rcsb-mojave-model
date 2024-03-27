@@ -79,6 +79,7 @@ jobs:
       - name: Set new schema dependency version
         run: |
           cd $PROJECT_NAME
+# TODO we should not set rcsb-json-schema.version property anymore. The property is now attached to the project's version
           mvn versions:set-property -Dproperty=rcsb-json-schema.version -DnewVersion=$NEW_SCHEMA_VERSION -DgenerateBackupPoms=false --no-transfer-progress
       - name: Set new mojave-model version, matching schema version
         run: |
