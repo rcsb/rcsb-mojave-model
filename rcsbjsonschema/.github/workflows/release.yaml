@@ -24,24 +24,28 @@ env:
 #       If we left it to a separate workflow in the repository (similar to push-to-master) then the downstream tasks would not be waiting for the
 #       artifacts to be deployed in Nexus (and would fail because they would be building before the dependency artifact was there)
 jobs:
-  release-rcsb-json-schemas:
+  release-mojave-model:
     runs-on:
       - self-hosted
       - java
+    env:
+      PROJECT_NAME: rcsb-mojave-model
     steps:
       - uses: actions/checkout@v3
       - name: Setup git author information
         run: |
+          cd $PROJECT_NAME
           git config user.name RCSBSystem
           git config user.email it@rcsb.org
       - run: mvn --version
       - name: Set version
         run: mvn versions:set -DnewVersion=$NEW_SCHEMA_VERSION --no-transfer-progress
       - name: Commit and tag new version
-        run: |
+        run: |          
           git add pom.xml
-          git commit -m "[actions] Updated version in pom.xml to $NEW_SCHEMA_VERSION"
+          git commit -m "[automatic-schema-release] Updated version in pom.xml to $NEW_SCHEMA_VERSION"
           git tag v$NEW_SCHEMA_VERSION
+# TODO publish to maven central. Will need some secrets and setup
       - name: Publish to nexus via maven deploy
         run: mvn --batch-mode --errors -U clean deploy --no-transfer-progress
       - name: Increment version for next dev cycle
@@ -54,60 +58,6 @@ jobs:
           git commit -m "[actions] Next development cycle"
       - name: Push back to GitHub
         run: |
-          git push --all
-          git push --tags
-  release-mojave-model:
-    needs: release-rcsb-json-schemas
-    runs-on:
-      - self-hosted
-      - java
-    env:
-      PROJECT_NAME: rcsb-mojave-model
-    steps:
-      - name: Checking out rcsb-mojave-model
-        uses: actions/checkout@v3
-        with:
-          repository: rcsb/rcsb-mojave-model
-          token: ${{ secrets.RCSBSYSTEMSPAT }}
-          path: rcsb-mojave-model
-      - name: Setup git author information
-        run: |
-          cd $PROJECT_NAME
-          git config user.name RCSBSystem
-          git config user.email it@rcsb.org
-      - run: mvn --version
-      - name: Set new schema dependency version
-        run: |
-          cd $PROJECT_NAME
-# TODO we should not set rcsb-json-schema.version property anymore. The property is now attached to the project's version
-          mvn versions:set-property -Dproperty=rcsb-json-schema.version -DnewVersion=$NEW_SCHEMA_VERSION -DgenerateBackupPoms=false --no-transfer-progress
-      - name: Set new mojave-model version, matching schema version
-        run: |
-          cd $PROJECT_NAME
-          mvn versions:set -DnewVersion=$NEW_SCHEMA_VERSION -DgenerateBackupPoms=false --no-transfer-progress
-      - name: Commit and tag
-        run: |
-          cd $PROJECT_NAME
-          git add pom.xml
-          git commit -m "[automatic-schema-release] Updated schema dependency version to $NEW_SCHEMA_VERSION"
-          git tag v$NEW_SCHEMA_VERSION
-      - name: Publish to nexus via maven deploy
-        run: |
-          cd $PROJECT_NAME
-          mvn --batch-mode --errors -U clean deploy --no-transfer-progress
-      - name: Increment version for next dev cycle
-        run: |
-          cd $PROJECT_NAME
-          NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
-          mvn versions:set -DnewVersion="${{ inputs.major }}.${{ inputs.minor }}.$NEXT_PATCH-SNAPSHOT" -DallowSnapshots --no-transfer-progress
-      - name: Commit new version for next dev cycle
-        run: |
-          cd $PROJECT_NAME
-          git add pom.xml
-          git commit -m "[actions] Next development cycle"
-      - name: Push back to GitHub
-        run: |
-          cd $PROJECT_NAME
           git push --all
           git push --tags
   update-downstreams:
