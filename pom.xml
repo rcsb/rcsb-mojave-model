@@ -106,6 +106,7 @@
 
         <project.auto.package>org.rcsb.mojave.auto</project.auto.package>
         <project.enums.package>org.rcsb.mojave.enumeration</project.enums.package>
+        <!-- This property is needed so that it is written out to the model.module.properties file, which is then used by SchemaResolver -->
         <rcsb-json-schema.version>${version}</rcsb-json-schema.version>
 
         <mojave.meta.version>1.5.1</mojave.meta.version>
