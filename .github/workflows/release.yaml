@@ -39,6 +39,7 @@ jobs:
           mvn --version
           java --version
           gpg --version
+          ls -altrh ~/.m2/settings.xml
       - name: Set new schema version
         run: mvn versions:set -DnewVersion=$NEW_SCHEMA_VERSION --no-transfer-progress
       - name: Commit and tag new version
