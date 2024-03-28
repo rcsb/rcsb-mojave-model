@@ -6,10 +6,95 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
     <name>Mojave: RCSB data models</name>
+    <description>The data models behind rcsb.org, in JSON schema format and as Java types</description>
+    <url>https://github.com/rcsb/rcsb-mojave-model</url>
 
     <groupId>org.rcsb</groupId>
     <artifactId>rcsb-mojave-model</artifactId>
     <version>1.46.3-SNAPSHOT</version>
+
+    <!-- https://central.sonatype.org/pages/apache-maven.html -->
+    <!-- https://github.com/chhh/sonatype-ossrh-parent/blob/master/pom.xml -->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <organization>
+        <name>RCSB PDB</name>
+        <url>https://www.rcsb.org/</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/license/mit/</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Yana Rose</name>
+            <email>yana.rose@rcsb.org</email>
+            <organization>RCSB PDB</organization>
+            <organizationUrl>https://www.rcsb.org</organizationUrl>
+        </developer>
+        <developer>
+            <name>John Westbrook</name>
+            <email>john.westbrook@rcsb.org</email>
+            <organization>RCSB PDB</organization>
+            <organizationUrl>https://www.rcsb.org</organizationUrl>
+        </developer>
+        <developer>
+            <name>Jose M Duarte</name>
+            <email>jose.duarte@rcsb.org</email>
+            <organization>RCSB PDB</organization>
+            <organizationUrl>https://www.rcsb.org</organizationUrl>
+        </developer>
+        <developer>
+            <name>Brinda Vallat</name>
+            <email>brinda.vallat@rcsb.org</email>
+            <organization>RCSB PDB</organization>
+            <organizationUrl>https://www.rcsb.org</organizationUrl>
+        </developer>
+        <developer>
+            <name>Dennis Piehl</name>
+            <email>dennis.piehl@rcsb.org</email>
+            <organization>RCSB PDB</organization>
+            <organizationUrl>https://www.rcsb.org</organizationUrl>
+        </developer>
+        <developer>
+            <name>Joan Segura</name>
+            <email>joan.segura@rcsb.org</email>
+            <organization>RCSB PDB</organization>
+            <organizationUrl>https://www.rcsb.org</organizationUrl>
+        </developer>
+        <developer>
+            <name>Sebastian Bittrich</name>
+            <email>sebastian.bittrich@rcsb.org</email>
+            <organization>RCSB PDB</organization>
+            <organizationUrl>https://www.rcsb.org</organizationUrl>
+        </developer>
+        <developer>
+            <name>Chunxiao Bi</name>
+            <email>chunxiao.bi@rcsb.org</email>
+            <organization>RCSB PDB</organization>
+            <organizationUrl>https://www.rcsb.org</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/rcsb/rcsb-mojave-model</url>
+        <connection>scm:git:git://github.com/rcsb/rcsb-mojave-model.git</connection>
+        <developerConnection>scm:git:git@github.com:rcsb/rcsb-mojave-model.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
 
@@ -196,27 +281,6 @@
         <validation.annotations.interface.polymer.entity.instance.bson.schema.name>validation-annotations_interface_polymer_entity_instance.json</validation.annotations.interface.polymer.entity.instance.bson.schema.name>
 
     </properties>
-
-    <distributionManagement>
-        <downloadUrl>http://nexus3.rcsb.org/repository/rcsb-super-proxy/</downloadUrl>
-        <repository>
-            <id>releases</id>
-            <name>RCSB PDB Maven Repository</name>
-            <url>http://nexus3.rcsb.org/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <url>http://nexus3.rcsb.org/repository/maven-snapshots/</url>
-            <uniqueVersion>false</uniqueVersion>
-        </snapshotRepository>
-    </distributionManagement>
-
-    <!-- Maven will use the information embedded in the scm configuration to determine the command
-        mapping for the scm command. -->
-    <scm>
-        <url>https://github.com/rcsb/rcsb-mojave-model</url>
-        <connection>scm:git:git://github.com/rcsb/rcsb-mojave-model.git</connection>
-    </scm>
 
     <dependencies>
 
@@ -1571,4 +1635,87 @@
             </plugin>
         </plugins>
     </build>
+
+    <!-- ==================================== PROFILES ========================================= -->
+    <profiles>
+        <profile>
+            <!-- A profile only to be used when releasing-->
+            <id>release</id>
+            <build>
+                <plugins>
+                    <!-- handles propagating the build to the staging repository -->
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.13</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+
+                    <!-- signing of content to be published -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>3.1.0</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                                <configuration>
+                                    <!-- This is necessary for gpg to not try to use the pinentry programs -->
+                                    <gpgArguments>
+                                        <arg>--pinentry-mode</arg>
+                                        <arg>loopback</arg>
+                                    </gpgArguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <!-- create source -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.3.0</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <!-- create javadoc -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>3.6.3</version>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <!-- so that javadoc generator is not so strict about missing docs -->
+                            <!-- https://stackoverflow.com/questions/15886209/maven-is-not-working-in-java-8-when-javadoc-tags-are-incomplete -->
+                            <doclint>none</doclint>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+    </profiles>
 </project>
