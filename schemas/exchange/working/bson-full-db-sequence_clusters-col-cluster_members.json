@@ -1,0 +1,43 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "cluster_id": {
+         "bsonType": "int"
+      },
+      "data_set_id": {
+         "bsonType": "string"
+      },
+      "identity": {
+         "bsonType": "int"
+      },
+      "sequence_membership": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "entity_id": {
+                  "bsonType": "string"
+               },
+               "entry_id": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "entity_id",
+               "entry_id"
+            ]
+         },
+         "uniqueItems": false
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "cluster_id",
+      "data_set_id",
+      "identity"
+   ]
+}

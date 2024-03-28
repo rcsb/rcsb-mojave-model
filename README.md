@@ -25,7 +25,30 @@ The other example of use is text indexing. We use [Elasticsearch](https://www.el
 (mapping) is automatically derived from JSON schemas.
 
 ## Schema Sources
-Schema source files are stored in [rcsb-json-schema](https://github.com/rcsb/rcsb-json-schema) repository.
+Schema source files are stored in the `schemas` directory.
+
+This project has 2 types of schema sources:
+- `schemas/exchange` - automatically generated JSON Schema files that contain definitions for data items that are coming
+  from the Exchange DB. Those files are not sources and should not be updated directly. The definitions need to be updated
+  in the [py-rcsb_exdb_assets](https://github.com/rcsb/py-rcsb_exdb_assets) repository, JSON Schema files need to be
+  generated and pushed to this project
+- `schemas/internal` - manually curated JSON Schema files that contain definitions for data items that are NOT coming
+  from the Exchange DB. If changes are needed for those definitions, they should be done to the files in this folder
+  directly
+
+## Versioning
+Versioning of schema files is handled by adding a tag to a specific commit in the repository’s history referring
+to a release point. Version numbers should follow [Semantic Versioning Specification](https://semver.org/#semantic-versioning-specification-semver)
+(SemVer). Release version takes the **x.y.z** form, where **x** is the major version, **y** is the minor version,
+and **z** is the patch version (e.g. 0.1.0). Pre-release versions are denoted by appending a hyphen and a series
+of dot separated identifiers immediately following the patch version (e.g. 1.0.0-3.7, 1.0.0-alpha.3.7, 1.0.0-dev.3.7).
+
+Given a version number **major.minor.patch**, increment the:
+
+- **major** version when changes are incompatible (removing fields, changing fields name or type) with previous version,
+- **minor** version when changes are backwards-compatible (adding new fields), and
+- **patch** version when changes are backwards-compatible and related to metadata (changing field description, adding examples, etc.).
+
 
 ## Product
 This module contains: 

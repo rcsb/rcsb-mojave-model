@@ -1,0 +1,37 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "database_name": {
+         "bsonType": "string"
+      },
+      "object_name": {
+         "bsonType": "string"
+      },
+      "update_begin_timestamp": {
+         "bsonType": "date"
+      },
+      "update_end_timestamp": {
+         "bsonType": "date"
+      },
+      "update_id": {
+         "bsonType": "string"
+      },
+      "update_status_flag": {
+         "bsonType": "string",
+         "enum": [
+            "N",
+            "Y"
+         ]
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "database_name",
+      "object_name",
+      "update_id",
+      "update_status_flag"
+   ]
+}

@@ -1,0 +1,365 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "pdbx_entity_branch": {
+         "bsonType": "object",
+         "properties": {
+            "rcsb_branched_component_count": {
+               "bsonType": "int"
+            },
+            "type": {
+               "bsonType": "string",
+               "enum": [
+                  "oligosaccharide"
+               ]
+            }
+         },
+         "additionalProperties": false
+      },
+      "pdbx_entity_branch_descriptor": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "descriptor": {
+                  "bsonType": "string"
+               },
+               "program": {
+                  "bsonType": "string"
+               },
+               "program_version": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Glycam Condensed Core Sequence",
+                     "Glycam Condensed Sequence",
+                     "LINUCS",
+                     "WURCS"
+                  ]
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_branched_entity": {
+         "bsonType": "object",
+         "properties": {
+            "details": {
+               "bsonType": "string"
+            },
+            "formula_weight": {
+               "bsonType": "double"
+            },
+            "pdbx_description": {
+               "bsonType": "string"
+            },
+            "pdbx_number_of_molecules": {
+               "bsonType": "int"
+            }
+         },
+         "additionalProperties": false
+      },
+      "rcsb_branched_entity_annotation": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "annotation_id": {
+                  "bsonType": "string"
+               },
+               "assignment_version": {
+                  "bsonType": "string"
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "provenance_source": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string"
+               },
+               "annotation_lineage": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "depth": {
+                           "bsonType": "int"
+                        },
+                        "id": {
+                           "bsonType": "string"
+                        },
+                        "name": {
+                           "bsonType": "string"
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_branched_entity_container_identifiers": {
+         "bsonType": "object",
+         "properties": {
+            "asym_ids": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "auth_asym_ids": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "chem_comp_monomers": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "chem_ref_def_id": {
+               "bsonType": "string"
+            },
+            "entity_id": {
+               "bsonType": "string"
+            },
+            "entry_id": {
+               "bsonType": "string"
+            },
+            "prd_id": {
+               "bsonType": "string"
+            },
+            "rcsb_id": {
+               "bsonType": "string"
+            },
+            "reference_identifiers": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "object",
+                  "properties": {
+                     "provenance_source": {
+                        "bsonType": "string",
+                        "enum": [
+                           "PDB",
+                           "RCSB"
+                        ]
+                     },
+                     "resource_accession": {
+                        "bsonType": "string"
+                     },
+                     "resource_name": {
+                        "bsonType": "string",
+                        "enum": [
+                           "GlyCosmos",
+                           "GlyGen",
+                           "GlyTouCan"
+                        ]
+                     }
+                  },
+                  "additionalProperties": false
+               },
+               "uniqueItems": false
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "entity_id",
+            "entry_id"
+         ]
+      },
+      "rcsb_branched_entity_feature": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "assignment_version": {
+                  "bsonType": "string"
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "feature_id": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "provenance_source": {
+                  "bsonType": "string"
+               },
+               "reference_scheme": {
+                  "bsonType": "string",
+                  "enum": [
+                     "PDB entity"
+                  ]
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "mutation"
+                  ]
+               },
+               "feature_positions": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "beg_comp_id": {
+                           "bsonType": "string"
+                        },
+                        "beg_seq_id": {
+                           "bsonType": "int"
+                        },
+                        "end_seq_id": {
+                           "bsonType": "int"
+                        },
+                        "value": {
+                           "bsonType": "double"
+                        }
+                     },
+                     "additionalProperties": false,
+                     "required": [
+                        "beg_seq_id"
+                     ]
+                  },
+                  "uniqueItems": false
+               },
+               "additional_properties": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "name": {
+                           "bsonType": "string"
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "anyOf": [
+                                 {
+                                    "bsonType": "string"
+                                 },
+                                 {
+                                    "bsonType": "int"
+                                 },
+                                 {
+                                    "bsonType": "double"
+                                 }
+                              ]
+                           },
+                           "uniqueItems": false
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_branched_entity_feature_summary": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "count": {
+                  "bsonType": "int"
+               },
+               "coverage": {
+                  "bsonType": "double"
+               },
+               "maximum_length": {
+                  "bsonType": "int"
+               },
+               "maximum_value": {
+                  "bsonType": "double"
+               },
+               "minimum_length": {
+                  "bsonType": "int"
+               },
+               "minimum_value": {
+                  "bsonType": "double"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "mutation"
+                  ]
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_branched_entity_keywords": {
+         "bsonType": "object",
+         "properties": {
+            "text": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false
+      },
+      "rcsb_branched_entity_name_com": {
+         "bsonType": "object",
+         "properties": {
+            "name": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false
+      },
+      "rcsb_branched_entity_name_sys": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "name": {
+                  "bsonType": "string"
+               },
+               "system": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "name"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_id": {
+         "bsonType": "string"
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ]
+}

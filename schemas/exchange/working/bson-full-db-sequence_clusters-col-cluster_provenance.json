@@ -1,0 +1,276 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "citation": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "abstract": {
+                  "bsonType": "string"
+               },
+               "abstract_id_CAS": {
+                  "bsonType": "string"
+               },
+               "book_id_ISBN": {
+                  "bsonType": "string"
+               },
+               "book_publisher": {
+                  "bsonType": "string"
+               },
+               "book_publisher_city": {
+                  "bsonType": "string"
+               },
+               "book_title": {
+                  "bsonType": "string"
+               },
+               "coordinate_linkage": {
+                  "bsonType": "string",
+                  "enum": [
+                     "n",
+                     "no",
+                     "y",
+                     "yes"
+                  ]
+               },
+               "country": {
+                  "bsonType": "string"
+               },
+               "database_id_CSD": {
+                  "bsonType": "string"
+               },
+               "database_id_Medline": {
+                  "bsonType": "int",
+                  "minimum": 1
+               },
+               "details": {
+                  "bsonType": "string"
+               },
+               "id": {
+                  "bsonType": "string"
+               },
+               "journal_abbrev": {
+                  "bsonType": "string"
+               },
+               "journal_full": {
+                  "bsonType": "string"
+               },
+               "journal_id_ASTM": {
+                  "bsonType": "string"
+               },
+               "journal_id_CSD": {
+                  "bsonType": "string"
+               },
+               "journal_id_ISSN": {
+                  "bsonType": "string"
+               },
+               "journal_issue": {
+                  "bsonType": "string"
+               },
+               "journal_volume": {
+                  "bsonType": "string"
+               },
+               "language": {
+                  "bsonType": "string"
+               },
+               "page_first": {
+                  "bsonType": "string"
+               },
+               "page_last": {
+                  "bsonType": "string"
+               },
+               "pdbx_database_id_DOI": {
+                  "bsonType": "string"
+               },
+               "pdbx_database_id_PubMed": {
+                  "bsonType": "int",
+                  "minimum": -1
+               },
+               "pdbx_database_id_patent": {
+                  "bsonType": "string"
+               },
+               "rcsb_ORCID_identifiers": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "string"
+                  },
+                  "uniqueItems": false
+               },
+               "rcsb_authors": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "string"
+                  },
+                  "uniqueItems": false
+               },
+               "rcsb_is_primary": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "rcsb_journal_abbrev": {
+                  "bsonType": "string"
+               },
+               "title": {
+                  "bsonType": "string"
+               },
+               "unpublished_flag": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "year": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "citation_author": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "citation_id": {
+                  "bsonType": "string"
+               },
+               "identifier_ORCID": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "ordinal": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "citation_id",
+               "name",
+               "ordinal"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "software": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "citation_id": {
+                  "bsonType": "string"
+               },
+               "classification": {
+                  "bsonType": "string"
+               },
+               "compiler_name": {
+                  "bsonType": "string"
+               },
+               "compiler_version": {
+                  "bsonType": "string"
+               },
+               "contact_author": {
+                  "bsonType": "string"
+               },
+               "contact_author_email": {
+                  "bsonType": "string"
+               },
+               "date": {
+                  "bsonType": "string"
+               },
+               "dependencies": {
+                  "bsonType": "string"
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "hardware": {
+                  "bsonType": "string"
+               },
+               "language": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Ada",
+                     "Awk",
+                     "Basic",
+                     "C",
+                     "C++",
+                     "C/C++",
+                     "Fortran",
+                     "Fortran 77",
+                     "Fortran 90",
+                     "Fortran_77",
+                     "Java",
+                     "Java & Fortran",
+                     "Other",
+                     "Pascal",
+                     "Perl",
+                     "Python",
+                     "Python/C++",
+                     "Tcl",
+                     "assembler",
+                     "csh",
+                     "ksh",
+                     "sh"
+                  ]
+               },
+               "location": {
+                  "bsonType": "string"
+               },
+               "mods": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "os": {
+                  "bsonType": "string"
+               },
+               "os_version": {
+                  "bsonType": "string"
+               },
+               "pdbx_ordinal": {
+                  "bsonType": "int"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "filter",
+                     "jiffy",
+                     "library",
+                     "other",
+                     "package",
+                     "program"
+                  ]
+               },
+               "version": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "classification",
+               "name",
+               "pdbx_ordinal"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false
+}

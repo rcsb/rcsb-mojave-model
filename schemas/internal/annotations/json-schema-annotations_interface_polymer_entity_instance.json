@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title" : "Entity Annotations",
+  "type" : "object",
+  "$id": "./schemas/internal/annotations/json-schema-annotations_polymer_entity_instance.json",
+  "required" : [
+    "annotations_interface_polymer_entity_instance_container_identifiers"
+  ],
+  "properties" : {
+    "annotations_interface_polymer_entity_instance_container_identifiers": {
+      "type" : "object",
+      "properties" : {
+        "entity_id": {
+          "type": "string",
+          "description": "Entity identifier for the container."
+        },
+        "entry_id": {
+          "type": "string",
+          "description": "Entry identifier for the container."
+        },
+        "asym_id": {
+          "type": "string",
+          "description": "Asymmetric chain identifier for the container."
+        },
+        "assembly_id": {
+          "type": "string",
+          "description": "This item references an assembly in pdbx_struct_assembly."
+        },
+        "interface_id": {
+          "type": "string",
+          "description": "This item references an interface."
+        },
+        "interface_partner_index": {
+          "type": "integer",
+          "description": "This item references an interface partner array index."
+        }
+      },
+      "additionalProperties": false
+    },
+    "annotations": {
+      "type": "array",
+      "items": {
+        "$ref": "../common/common-schema-annotation.json#/definitions/annotation"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}
