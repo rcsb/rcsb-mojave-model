@@ -24,7 +24,7 @@
         <rcsb-json-schema.version>1.46.2</rcsb-json-schema.version>
 
         <mojave.meta.version>1.5.1</mojave.meta.version>
-        <mojave.tools.version>1.7.5</mojave.tools.version>
+        <mojave.tools.version>1.7.6-SNAPSHOT</mojave.tools.version>
         <!-- 0.10 has breaking changes -->
         <reflection.version>0.9.11</reflection.version>
 
@@ -1064,6 +1064,8 @@
                         <configuration>
                             <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
                             <arguments>
+                                <argument>-se</argument>
+                                <argument>false</argument>
                                 <argument>-r</argument>
                                 <argument>true</argument>
                                 <!-- where to put final schema -->
@@ -1592,28 +1594,6 @@
                                 <argument>${project.build.directory}/${auto.schema.location}</argument>
                                 <argument>-t</argument>
                                 <argument>${project.auto.package}</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-
-                    <execution>
-                        <id>annotate-schemas-for-java-types-exception-annotations-schema</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <!-- execute Java programs in the same VM -->
-                            <goal>java</goal>
-                        </goals>
-                        <configuration>
-                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
-                            <arguments>
-                                <argument>-r</argument>
-                                <argument>true</argument>
-                                <!-- where to put final schema -->
-                                <argument>-o</argument>
-                                <argument>${project.build.directory}/${auto.schema.location}/${sequence.coordinates.annotations.json.schema.name}</argument>
-                                <!-- list of schemas to stitch -->
-                                <argument>-i</argument>
-                                <argument>jar:${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.annotations.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
