@@ -59,8 +59,19 @@ jobs:
         run: |
           git push --all
           git push --tags
-  update-downstreams:
+  delay-for-maven-central:
     needs: release-mojave-model
+    runs-on:
+      - self-hosted
+      - java
+    steps:
+      # TODO This is not ideal and not guaranteed to work, but needed because there are no options to wait in the maven plugin we use now (nexus-staging-maven-plugin), however
+      # TODO in the central-plublishing-maven-plugin it seems to be possible for maven to hold the deploy process until maven says it's ready, see https://central.sonatype.org/publish/publish-portal-maven/
+      - name: Sleep for 15 minutes to give time for rcsb-mojave-model artifacts to appear in maven central
+        run: sleep 15m
+        shell: bash
+  update-downstreams:
+    needs: delay-for-maven-central
     strategy:
       matrix:
         repos: [rcsb-redwood, rcsb-yosemite, rcsb-shape, rcsb-borrego, rcsb-everglades]
