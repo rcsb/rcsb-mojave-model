@@ -47,9 +47,11 @@ jobs:
           git commit -m "[automatic-schema-release] Updated version in pom.xml to $NEW_SCHEMA_VERSION"
           git tag v$NEW_SCHEMA_VERSION
       - name: Import gpg keys for signing artifacts in maven deploy phase
+        # note that when importing private key gpg needs the passphrase. We grep it out from settings.xml
         run: |
           gpg --import ~/.secrets/maven_signing_public.gpg
-          gpg --import ~/.secrets/maven_signing_private.gpg
+          passphrase=$(grep gpg.passphrase ~/.secrets/settings.xml | sed "s/.*<.*>\(.*\)<.*>/\1/")
+          gpg --pinentry-mode=loopback --passphrase  "$passphrase" --import ~/.secrets/maven_signing_private.gpg
       - name: Publish to ossrh (maven central) via maven deploy
         run: mvn -Prelease --batch-mode --errors -U clean deploy --no-transfer-progress
       - name: Increment version for next dev cycle
