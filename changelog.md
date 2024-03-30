@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First public version released to maven central
 - Now the previously separate rcsb-json-schema is merged into this repository 
 - The schema and java types are identical to 1.46.2
+- Note the raw schemas are missing from this release
 
 ## [1.29.0]
 ### Upgraded
