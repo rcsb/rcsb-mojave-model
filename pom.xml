@@ -186,7 +186,7 @@
 
 
         <!-- ==================================== SEQUENCE COORDINATES JSON SCHEMAS ========================================= -->
-        <rcsb.sequence.coordinates.json.schemas.location>/internal/sequence_coordinates</rcsb.sequence.coordinates.json.schemas.location>
+        <rcsb.sequence.coordinates.json.schemas.location>${project.basedir}/schemas/internal/sequence_coordinates</rcsb.sequence.coordinates.json.schemas.location>
         <rcsb.sequence.coordinates.alignments.json.schema.name>json-schema-sequence_alignments.json</rcsb.sequence.coordinates.alignments.json.schema.name>
         <rcsb.sequence.coordinates.annotations.json.schema.name>json-schema-sequence_annotations.json</rcsb.sequence.coordinates.annotations.json.schema.name>
         <rcsb.sequence.coordinates.sequences.json.schema.name>json-schema-sequences.json</rcsb.sequence.coordinates.sequences.json.schema.name>
@@ -1120,7 +1120,7 @@
                                 <argument>${project.build.directory}/${sequence.coordinates.schema.location}/${sequence.coordinates.alignments.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.alignments.json.schema.name}</argument>
+                                <argument>file://${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.alignments.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -1141,7 +1141,7 @@
                                 <argument>${project.build.directory}/${sequence.coordinates.schema.location}/${sequence.coordinates.annotations.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.annotations.json.schema.name}</argument>
+                                <argument>file://${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.annotations.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -1162,7 +1162,7 @@
                                 <argument>${project.build.directory}/${sequence.coordinates.schema.location}/${sequence.coordinates.sequences.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.sequences.json.schema.name}</argument>
+                                <argument>file://${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.sequences.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -1183,7 +1183,7 @@
                                 <argument>${project.build.directory}/${sequence.coordinates.schema.location}/${sequence.coordinates.map.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>jar:${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.map.json.schema.name}</argument>
+                                <argument>file://${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.map.json.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
