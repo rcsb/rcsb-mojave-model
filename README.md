@@ -24,12 +24,33 @@ solution where data is persisted as documents (JSON-style objects).
 The other example of use is text indexing. We use [Elasticsearch](https://www.elastic.co) and index configuration 
 (mapping) is automatically derived from JSON schemas.
 
+## Versioning
+Versioning of schema files is handled by adding a tag to a specific commit in the repository’s history referring
+to a release point. Version numbers should follow [Semantic Versioning Specification](https://semver.org/#semantic-versioning-specification-semver)
+(SemVer). Release version takes the **x.y.z** form, where **x** is the major version, **y** is the minor version,
+and **z** is the patch version (e.g. 0.1.0). Pre-release versions are denoted by appending a hyphen and a series
+of dot separated identifiers immediately following the patch version (e.g. 1.0.0-3.7, 1.0.0-alpha.3.7, 1.0.0-dev.3.7).
+
+Given a version number **major.minor.patch**, increment the:
+
+- **major** version when changes are incompatible (removing fields, changing fields name or type) with previous version,
+- **minor** version when changes are backwards-compatible (adding new fields), and
+- **patch** version when changes are backwards-compatible and related to metadata (changing field description, adding examples, etc.).
+
 ## Schema Sources
-Schema source files are stored in [rcsb-json-schema](https://github.com/rcsb/rcsb-json-schema) repository.
+Schema source files are stored in the `schemas` directory.
+
+This project has 2 types of schema sources:
+- `schemas/exchange` - automatically generated JSON Schema files that contain definitions for data items that are coming
+  from the Exchange DB. Those files are not sources and should not be updated directly. The definitions need to be updated
+  in the [py-rcsb_exdb_assets](https://github.com/rcsb/py-rcsb_exdb_assets) repository, JSON Schema files need to be
+  generated and pushed to this project
+- `schemas/internal` - manually curated JSON Schema files that contain definitions for data items that are NOT coming
+  from the Exchange DB. If changes are needed for those definitions, they should be done to the files in this folder
+  directly
 
 ## Product
 This module contains: 
-  - Manually curated JSON schemas for the sources we integrate that don't provide a schema: `src/main/resources/schema`.
   - Automatically generated JSON schemas for core collections: `target/generated-sources/schema/core`.
   - Automatically generated schemas for MongoDB validation: `target/generated-sources/schema/validation`.
   - Automatically generated POJOs from combined core JSON schemas: `target/generated-sources/classes/org.rcsb.mojave.auto`.
@@ -68,7 +89,7 @@ These properties are taken from _pom.xml_ file where schemas names are configure
 
 ## Validation with JSON schema
 Data in MongoDB has a flexible schema. Collections do not enforce document structure by default. We do want, however, 
-have a clear idea of what’s going into the database. Since v3.6 MongoDB provides the capability for schema validation 
+to have a clear idea of what’s going into the database. Since v3.6 MongoDB provides the capability for schema validation 
 during updates and insertions. _Redwood_ uses JSON schemas as an input for MongoDB 
 [JSON Schema Validator](https://docs.mongodb.com/manual/core/schema-validation/) to introduce 
 validation checks at the database level so that the data integrity is ensured.
@@ -76,8 +97,3 @@ validation checks at the database level so that the data integrity is ensured.
  Due to [MongoDB’s implementation](https://docs.mongodb.com/manual/reference/operator/query/jsonSchema/#omissions) 
  of JSON Schema some of the specification-compliant definitions are not supported. BSON schemas compatible with validator 
  are generated and stored in `target/generated-sources/schema/validation`.
-
-## Versioning
- Version numbers should follow [Semantic Versioning Specification](https://semver.org/#semantic-versioning-specification-semver) 
-(SemVer). Release version takes the **x.y.z** form, where **x** is the major version, **y** is the minor version, 
-and **z** is the patch version (e.g. 0.1.0).

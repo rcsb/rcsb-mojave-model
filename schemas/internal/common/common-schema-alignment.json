@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "definitions": {
+    "alignment": {
+      "type": "object",
+      "required": ["scores","aligned_regions"],
+      "properties": {
+        "scores": {
+          "type": "object",
+          "description": "Alignment scores",
+          "required": ["target_coverage","query_coverage","target_length","query_length"],
+          "properties": {
+            "target_coverage": {
+              "type": "integer"
+            },
+            "query_coverage": {
+              "type": "integer"
+            },
+            "target_length": {
+              "type": "integer"
+            },
+            "query_length": {
+              "type": "integer"
+            }
+          }
+        },
+        "aligned_regions": {
+          "type": "array",
+          "description": "Aligned sequence regions",
+          "items": {
+            "type": "object",
+            "description": "Aligned region",
+            "required": ["target_begin","query_begin","length"],
+            "properties": {
+              "target_begin":{
+                "type": "integer",
+                "description": "NCBI sequence start position"
+              },
+              "query_begin": {
+                "type": "integer",
+                "description": "Entity seqeunce start position"
+              },
+              "length": {
+                "type": "integer",
+                "description": "Aligned region length"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "rcsb_repository_holdings_current": {
+         "bsonType": "object",
+         "properties": {
+            "repository_content_types": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string",
+                  "enum": [
+                     "2fo-fc Map",
+                     "Combined NMR data (NEF)",
+                     "Combined NMR data (NMR-STAR)",
+                     "FASTA sequence",
+                     "Map Coefficients",
+                     "NMR chemical shifts",
+                     "NMR restraints V1",
+                     "NMR restraints V2",
+                     "assembly PDB",
+                     "assembly mmCIF",
+                     "entry PDB",
+                     "entry PDB bundle",
+                     "entry PDBML",
+                     "entry mmCIF",
+                     "fo-fc Map",
+                     "structure factors",
+                     "validation data mmCIF",
+                     "validation report",
+                     "validation slider image"
+                  ]
+               },
+               "uniqueItems": false
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "repository_content_types"
+         ]
+      },
+      "rcsb_repository_holdings_current_entry_container_identifiers": {
+         "bsonType": "object",
+         "properties": {
+            "assembly_ids": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "entry_id": {
+               "bsonType": "string"
+            },
+            "rcsb_id": {
+               "bsonType": "string"
+            },
+            "update_id": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "entry_id",
+            "rcsb_id",
+            "update_id"
+         ]
+      },
+      "rcsb_id": {
+         "bsonType": "string"
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ]
+}

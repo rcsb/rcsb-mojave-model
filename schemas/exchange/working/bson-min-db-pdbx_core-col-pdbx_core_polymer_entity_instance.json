@@ -1,0 +1,606 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "pdbx_struct_special_symmetry": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "bsonType": "int"
+               },
+               "auth_seq_id": {
+                  "bsonType": "string"
+               },
+               "id": {
+                  "bsonType": "int"
+               },
+               "label_asym_id": {
+                  "bsonType": "string"
+               },
+               "label_comp_id": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_ligand_neighbors": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "alt_id": {
+                  "bsonType": "string"
+               },
+               "atom_id": {
+                  "bsonType": "string"
+               },
+               "auth_seq_id": {
+                  "bsonType": "int"
+               },
+               "comp_id": {
+                  "bsonType": "string"
+               },
+               "distance": {
+                  "bsonType": "double"
+               },
+               "ligand_alt_id": {
+                  "bsonType": "string"
+               },
+               "ligand_asym_id": {
+                  "bsonType": "string"
+               },
+               "ligand_atom_id": {
+                  "bsonType": "string"
+               },
+               "ligand_comp_id": {
+                  "bsonType": "string"
+               },
+               "ligand_entity_id": {
+                  "bsonType": "string"
+               },
+               "ligand_is_bound": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "ligand_model_id": {
+                  "bsonType": "int"
+               },
+               "seq_id": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_polymer_entity_instance_container_identifiers": {
+         "bsonType": "object",
+         "properties": {
+            "asym_id": {
+               "bsonType": "string"
+            },
+            "auth_asym_id": {
+               "bsonType": "string"
+            },
+            "auth_to_entity_poly_seq_mapping": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "entity_id": {
+               "bsonType": "string"
+            },
+            "entry_id": {
+               "bsonType": "string"
+            },
+            "rcsb_id": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "asym_id",
+            "entry_id"
+         ]
+      },
+      "rcsb_polymer_instance_annotation": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "annotation_id": {
+                  "bsonType": "string"
+               },
+               "assignment_version": {
+                  "bsonType": "string"
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "ordinal": {
+                  "bsonType": "int"
+               },
+               "provenance_source": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "CATH",
+                     "ECOD",
+                     "SCOP",
+                     "SCOP2"
+                  ]
+               },
+               "annotation_lineage": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "depth": {
+                           "bsonType": "int"
+                        },
+                        "id": {
+                           "bsonType": "string"
+                        },
+                        "name": {
+                           "bsonType": "string"
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_polymer_instance_feature": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "assignment_version": {
+                  "bsonType": "string"
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "feature_id": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "ordinal": {
+                  "bsonType": "int"
+               },
+               "provenance_source": {
+                  "bsonType": "string"
+               },
+               "reference_scheme": {
+                  "bsonType": "string",
+                  "enum": [
+                     "NCBI",
+                     "PDB entity",
+                     "PDB entry",
+                     "UniProt"
+                  ]
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "ANGLE_OUTLIER",
+                     "BEND",
+                     "BINDING_SITE",
+                     "BOND_OUTLIER",
+                     "C-MANNOSYLATION_SITE",
+                     "CATH",
+                     "CIS-PEPTIDE",
+                     "ECOD",
+                     "HELIX_P",
+                     "HELX_LH_PP_P",
+                     "HELX_RH_3T_P",
+                     "HELX_RH_AL_P",
+                     "HELX_RH_PI_P",
+                     "MA_QA_METRIC_LOCAL_TYPE_CONTACT_PROBABILITY",
+                     "MA_QA_METRIC_LOCAL_TYPE_DISTANCE",
+                     "MA_QA_METRIC_LOCAL_TYPE_ENERGY",
+                     "MA_QA_METRIC_LOCAL_TYPE_IPTM",
+                     "MA_QA_METRIC_LOCAL_TYPE_NORMALIZED_SCORE",
+                     "MA_QA_METRIC_LOCAL_TYPE_OTHER",
+                     "MA_QA_METRIC_LOCAL_TYPE_PAE",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT_ALL-ATOM",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT_ALL-ATOM_[0,1]",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT_[0,1]",
+                     "MA_QA_METRIC_LOCAL_TYPE_PTM",
+                     "MA_QA_METRIC_LOCAL_TYPE_ZSCORE",
+                     "MEMBRANE_SEGMENT",
+                     "MOGUL_ANGLE_OUTLIER",
+                     "MOGUL_BOND_OUTLIER",
+                     "N-GLYCOSYLATION_SITE",
+                     "O-GLYCOSYLATION_SITE",
+                     "RAMACHANDRAN_OUTLIER",
+                     "ROTAMER_OUTLIER",
+                     "RSCC_OUTLIER",
+                     "RSRZ_OUTLIER",
+                     "S-GLYCOSYLATION_SITE",
+                     "SABDAB_ANTIBODY_HEAVY_CHAIN_SUBCLASS",
+                     "SABDAB_ANTIBODY_LIGHT_CHAIN_SUBCLASS",
+                     "SABDAB_ANTIBODY_LIGHT_CHAIN_TYPE",
+                     "SCOP",
+                     "SCOP2B_SUPERFAMILY",
+                     "SCOP2_FAMILY",
+                     "SCOP2_SUPERFAMILY",
+                     "SHEET",
+                     "STEREO_OUTLIER",
+                     "STRN",
+                     "TURN_TY1_P",
+                     "UNASSIGNED_SEC_STRUCT",
+                     "UNOBSERVED_ATOM_XYZ",
+                     "UNOBSERVED_RESIDUE_XYZ",
+                     "ZERO_OCCUPANCY_ATOM_XYZ",
+                     "ZERO_OCCUPANCY_RESIDUE_XYZ"
+                  ]
+               },
+               "feature_positions": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "beg_comp_id": {
+                           "bsonType": "string"
+                        },
+                        "beg_seq_id": {
+                           "bsonType": "int"
+                        },
+                        "end_seq_id": {
+                           "bsonType": "int"
+                        },
+                        "value": {
+                           "bsonType": "double"
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "bsonType": "double"
+                           },
+                           "uniqueItems": false
+                        }
+                     },
+                     "additionalProperties": false,
+                     "required": [
+                        "beg_seq_id"
+                     ]
+                  },
+                  "uniqueItems": false
+               },
+               "additional_properties": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "name": {
+                           "bsonType": "string",
+                           "enum": [
+                              "CATH_DOMAIN_ID",
+                              "CATH_NAME",
+                              "ECOD_DOMAIN_ID",
+                              "ECOD_FAMILY_NAME",
+                              "MODELCIF_MODEL_ID",
+                              "OMEGA_ANGLE",
+                              "PARTNER_ASYM_ID",
+                              "PARTNER_BOND_DISTANCE",
+                              "PARTNER_COMP_ID",
+                              "SCOP2_DOMAIN_ID",
+                              "SCOP2_FAMILY_ID",
+                              "SCOP2_FAMILY_NAME",
+                              "SCOP2_SUPERFAMILY_ID",
+                              "SCOP2_SUPERFAMILY_NAME",
+                              "SCOP_DOMAIN_ID",
+                              "SCOP_NAME",
+                              "SCOP_SUN_ID",
+                              "SHEET_SENSE"
+                           ]
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "anyOf": [
+                                 {
+                                    "bsonType": "string"
+                                 },
+                                 {
+                                    "bsonType": "int"
+                                 },
+                                 {
+                                    "bsonType": "double"
+                                 }
+                              ]
+                           },
+                           "uniqueItems": false
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_polymer_instance_feature_summary": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "count": {
+                  "bsonType": "int"
+               },
+               "coverage": {
+                  "bsonType": "double"
+               },
+               "maximum_length": {
+                  "bsonType": "int"
+               },
+               "maximum_value": {
+                  "bsonType": "double"
+               },
+               "minimum_length": {
+                  "bsonType": "int"
+               },
+               "minimum_value": {
+                  "bsonType": "double"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "ANGLE_OUTLIER",
+                     "BEND",
+                     "BINDING_SITE",
+                     "BOND_OUTLIER",
+                     "C-MANNOSYLATION_SITE",
+                     "CATH",
+                     "CIS-PEPTIDE",
+                     "ECOD",
+                     "HELIX_P",
+                     "HELX_LH_PP_P",
+                     "HELX_RH_3T_P",
+                     "HELX_RH_AL_P",
+                     "HELX_RH_PI_P",
+                     "MA_QA_METRIC_LOCAL_TYPE_CONTACT_PROBABILITY",
+                     "MA_QA_METRIC_LOCAL_TYPE_DISTANCE",
+                     "MA_QA_METRIC_LOCAL_TYPE_ENERGY",
+                     "MA_QA_METRIC_LOCAL_TYPE_IPTM",
+                     "MA_QA_METRIC_LOCAL_TYPE_NORMALIZED_SCORE",
+                     "MA_QA_METRIC_LOCAL_TYPE_OTHER",
+                     "MA_QA_METRIC_LOCAL_TYPE_PAE",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT_ALL-ATOM",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT_ALL-ATOM_[0,1]",
+                     "MA_QA_METRIC_LOCAL_TYPE_PLDDT_[0,1]",
+                     "MA_QA_METRIC_LOCAL_TYPE_PTM",
+                     "MA_QA_METRIC_LOCAL_TYPE_ZSCORE",
+                     "MEMBRANE_SEGMENT",
+                     "MOGUL_ANGLE_OUTLIER",
+                     "MOGUL_BOND_OUTLIER",
+                     "N-GLYCOSYLATION_SITE",
+                     "O-GLYCOSYLATION_SITE",
+                     "RAMACHANDRAN_OUTLIER",
+                     "ROTAMER_OUTLIER",
+                     "RSCC_OUTLIER",
+                     "RSRZ_OUTLIER",
+                     "S-GLYCOSYLATION_SITE",
+                     "SABDAB_ANTIBODY_HEAVY_CHAIN_SUBCLASS",
+                     "SABDAB_ANTIBODY_LIGHT_CHAIN_SUBCLASS",
+                     "SABDAB_ANTIBODY_LIGHT_CHAIN_TYPE",
+                     "SCOP",
+                     "SCOP2B_SUPERFAMILY",
+                     "SCOP2_FAMILY",
+                     "SCOP2_SUPERFAMILY",
+                     "SHEET",
+                     "STEREO_OUTLIER",
+                     "STRN",
+                     "TURN_TY1_P",
+                     "UNASSIGNED_SEC_STRUCT",
+                     "UNOBSERVED_ATOM_XYZ",
+                     "UNOBSERVED_RESIDUE_XYZ",
+                     "ZERO_OCCUPANCY_ATOM_XYZ",
+                     "ZERO_OCCUPANCY_RESIDUE_XYZ"
+                  ]
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_polymer_struct_conn": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "connect_type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "covalent bond",
+                     "covalent modification of a nucleotide base",
+                     "covalent modification of a nucleotide phosphate",
+                     "covalent modification of a nucleotide sugar",
+                     "covalent residue modification",
+                     "disulfide bridge",
+                     "hydrogen bond",
+                     "ionic interaction",
+                     "metal coordination",
+                     "mismatched base pairs"
+                  ]
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "dist_value": {
+                  "bsonType": "double"
+               },
+               "id": {
+                  "bsonType": "string"
+               },
+               "ordinal_id": {
+                  "bsonType": "int"
+               },
+               "role": {
+                  "bsonType": "string",
+                  "enum": [
+                     "C-Mannosylation",
+                     "N-Glycosylation",
+                     "O-Glycosylation",
+                     "S-Glycosylation"
+                  ]
+               },
+               "value_order": {
+                  "bsonType": "string",
+                  "enum": [
+                     "doub",
+                     "quad",
+                     "sing",
+                     "trip"
+                  ]
+               },
+               "connect_target": {
+                  "bsonType": "object",
+                  "properties": {
+                     "auth_asym_id": {
+                        "bsonType": "string"
+                     },
+                     "auth_seq_id": {
+                        "bsonType": "string"
+                     },
+                     "label_alt_id": {
+                        "bsonType": "string"
+                     },
+                     "label_asym_id": {
+                        "bsonType": "string"
+                     },
+                     "label_atom_id": {
+                        "bsonType": "string"
+                     },
+                     "label_comp_id": {
+                        "bsonType": "string"
+                     },
+                     "label_seq_id": {
+                        "bsonType": "int"
+                     },
+                     "symmetry": {
+                        "bsonType": "string"
+                     }
+                  },
+                  "additionalProperties": false,
+                  "required": [
+                     "label_asym_id",
+                     "label_comp_id"
+                  ]
+               },
+               "connect_partner": {
+                  "bsonType": "object",
+                  "properties": {
+                     "label_alt_id": {
+                        "bsonType": "string"
+                     },
+                     "label_asym_id": {
+                        "bsonType": "string"
+                     },
+                     "label_atom_id": {
+                        "bsonType": "string"
+                     },
+                     "label_comp_id": {
+                        "bsonType": "string"
+                     },
+                     "label_seq_id": {
+                        "bsonType": "int"
+                     },
+                     "symmetry": {
+                        "bsonType": "string"
+                     }
+                  },
+                  "additionalProperties": false,
+                  "required": [
+                     "label_asym_id",
+                     "label_comp_id"
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "struct_asym": {
+         "bsonType": "object",
+         "properties": {
+            "pdbx_PDB_id": {
+               "bsonType": "string"
+            },
+            "pdbx_alt_id": {
+               "bsonType": "string"
+            },
+            "pdbx_order": {
+               "bsonType": "int"
+            },
+            "pdbx_type": {
+               "bsonType": "string",
+               "enum": [
+                  "ATOMN",
+                  "ATOMP",
+                  "ATOMS",
+                  "HETAC",
+                  "HETAD",
+                  "HETAI",
+                  "HETAIN",
+                  "HETAS",
+                  "HETIC"
+               ]
+            }
+         },
+         "additionalProperties": false
+      },
+      "rcsb_id": {
+         "bsonType": "string"
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ]
+}

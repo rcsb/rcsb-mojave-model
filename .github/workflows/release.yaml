@@ -1,0 +1,95 @@
+name: Schema and full stack release
+
+on:
+  workflow_dispatch:
+    inputs:
+      major:
+        description: 'Schema Major version'
+        type: string
+        required: true
+      minor:
+        description: 'Schema Minor version'
+        type: string
+        required: true
+      patch:
+        description: 'Schema Patch version'
+        type: string
+        required: true
+
+
+env:
+  NEW_SCHEMA_VERSION: "${{ inputs.major }}.${{ inputs.minor }}.${{ inputs.patch }}"
+
+# NOTE: in release-rcsb-json-schemas and release-mojave-model we do `mvn deploy` as part of the workflow so that it is synchronous.
+#       If we left it to a separate workflow in the repository (similar to push-to-master) then the downstream tasks would not be waiting for the
+#       artifacts to be deployed in Nexus (and would fail because they would be building before the dependency artifact was there)
+jobs:
+  release-mojave-model:
+    runs-on:
+      - self-hosted
+      - java
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup git author information
+        run: |
+          git config user.name RCSBSystem
+          git config user.email it@rcsb.org
+      - name: Print out mvn, java and gpg versions
+        run: |
+          mvn --version
+          java --version
+          gpg --version
+      - name: Set new schema version
+        run: mvn versions:set -DnewVersion=$NEW_SCHEMA_VERSION --no-transfer-progress
+      - name: Commit and tag new version
+        run: |          
+          git add pom.xml
+          git commit -m "[automatic-schema-release] Updated version in pom.xml to $NEW_SCHEMA_VERSION"
+          git tag v$NEW_SCHEMA_VERSION
+      - name: Import gpg keys for signing artifacts in maven deploy phase
+        # note that when importing private key gpg needs the passphrase. We grep it out from settings.xml
+        run: |
+          gpg --import ~/.secrets/maven_signing_public.gpg
+          passphrase=$(grep gpg.passphrase ~/.secrets/settings.xml | sed "s/.*<.*>\(.*\)<.*>/\1/")
+          gpg --pinentry-mode=loopback --passphrase  "$passphrase" --import ~/.secrets/maven_signing_private.gpg
+      - name: Publish to ossrh (maven central) via maven deploy
+        run: mvn -Prelease --batch-mode --errors -U clean deploy --no-transfer-progress
+      - name: Increment version for next dev cycle
+        run: |
+          NEXT_PATCH=$(mvn build-helper:parse-version help:evaluate -Dexpression=parsedVersion.nextIncrementalVersion -q -DforceStdout --no-transfer-progress)
+          mvn versions:set -DnewVersion="${{ inputs.major }}.${{ inputs.minor }}.$NEXT_PATCH-SNAPSHOT" -DallowSnapshots --no-transfer-progress
+      - name: Commit new version for next dev cycle
+        run: |
+          git add pom.xml
+          git commit -m "[actions] Next development cycle"
+      - name: Push back to GitHub
+        run: |
+          git push --all
+          git push --tags
+  delay-for-maven-central:
+    needs: release-mojave-model
+    runs-on:
+      - self-hosted
+      - java
+    steps:
+      # TODO This is not ideal, but needed because there are no options to wait in the maven plugin we use now (nexus-staging-maven-plugin), however
+      # TODO in the central-plublishing-maven-plugin it seems to be possible for maven to hold the deploy process until maven says it's ready, see https://central.sonatype.org/publish/publish-portal-maven/
+      - name: Wait for rcsb-mojave-model artifacts to appear in maven central
+        # retry every 60 seconds x 180 times: 3 hours (after which it will fail)
+        run: |
+          curl --retry 180 --retry-all-errors --retry-delay 60 -f "https://repo1.maven.org/maven2/org/rcsb/rcsb-mojave-model/$NEW_SCHEMA_VERSION/rcsb-mojave-model-$NEW_SCHEMA_VERSION.pom"
+  update-downstreams:
+    needs: delay-for-maven-central
+    strategy:
+      matrix:
+        repos: [rcsb-redwood, rcsb-yosemite, rcsb-shape, rcsb-borrego, rcsb-everglades]
+    uses: rcsb/rcsb-json-schema/.github/workflows/update-schema-dependency-version.yaml@master
+    with:
+# NOTE here I've tried ${{ env.NEW_SCHEMA_VERSION }} and $NEW_SCHEMA_VERSION. None of those work. Don't understand why
+      schema-version: "${{ inputs.major }}.${{ inputs.minor }}.${{ inputs.patch }}"
+      downstream-repo-to-update: ${{ matrix.repos }}
+      schema-property-name-in-repo: rcsb.mojave.model.version
+    # Secrets must be passed explicitly https://docs.github.com/en/enterprise-cloud@latest/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
+    secrets:
+      RCSBSYSTEMSPAT: ${{ secrets.RCSBSYSTEMSPAT }}
+

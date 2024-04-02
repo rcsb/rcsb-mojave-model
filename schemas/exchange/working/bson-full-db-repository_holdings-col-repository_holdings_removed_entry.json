@@ -1,0 +1,222 @@
+{
+   "bsonType": "object",
+   "properties": {
+      "rcsb_repository_holdings_insilico_models": {
+         "bsonType": "object",
+         "properties": {
+            "audit_authors": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "deposit_date": {
+               "bsonType": "date"
+            },
+            "id_codes_replaced_by": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "release_date": {
+               "bsonType": "date"
+            },
+            "remove_date": {
+               "bsonType": "date"
+            },
+            "status_code": {
+               "bsonType": "string",
+               "enum": [
+                  "OBS",
+                  "TRSF",
+                  "WDRN"
+               ]
+            },
+            "title": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "status_code"
+         ]
+      },
+      "rcsb_repository_holdings_removed": {
+         "bsonType": "object",
+         "properties": {
+            "audit_authors": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "deposit_date": {
+               "bsonType": "date"
+            },
+            "details": {
+               "bsonType": "string"
+            },
+            "id_codes_replaced_by": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "release_date": {
+               "bsonType": "date"
+            },
+            "remove_date": {
+               "bsonType": "date"
+            },
+            "repository_content_types": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Combined NMR data (NEF)",
+                     "Combined NMR data (NMR-STAR)",
+                     "NMR chemical shifts",
+                     "NMR restraints V1",
+                     "NMR restraints V2",
+                     "assembly PDB",
+                     "assembly mmCIF",
+                     "entry PDB",
+                     "entry PDB bundle",
+                     "entry PDBML",
+                     "entry mmCIF",
+                     "structure factors"
+                  ]
+               },
+               "uniqueItems": false
+            },
+            "title": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false
+      },
+      "rcsb_repository_holdings_removed_audit_author": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "audit_author": {
+                  "bsonType": "string"
+               },
+               "ordinal_id": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "ordinal_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_repository_holdings_removed_entry_container_identifiers": {
+         "bsonType": "object",
+         "properties": {
+            "entry_id": {
+               "bsonType": "string"
+            },
+            "rcsb_id": {
+               "bsonType": "string"
+            },
+            "update_id": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "entry_id",
+            "rcsb_id",
+            "update_id"
+         ]
+      },
+      "rcsb_repository_holdings_superseded": {
+         "bsonType": "object",
+         "properties": {
+            "id_codes_superseded": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "id_codes_superseded"
+         ]
+      },
+      "rcsb_repository_holdings_transferred": {
+         "bsonType": "object",
+         "properties": {
+            "audit_authors": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
+            "deposit_date": {
+               "bsonType": "date"
+            },
+            "release_date": {
+               "bsonType": "date"
+            },
+            "remote_accession_code": {
+               "bsonType": "string"
+            },
+            "remote_repository_name": {
+               "bsonType": "string"
+            },
+            "repository_content_types": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Combined NMR data (NEF)",
+                     "Combined NMR data (NMR-STAR)",
+                     "NMR chemical shifts",
+                     "NMR restraints",
+                     "coordinates",
+                     "structure factors"
+                  ]
+               },
+               "uniqueItems": false
+            },
+            "status_code": {
+               "bsonType": "string",
+               "enum": [
+                  "TRSF"
+               ]
+            },
+            "title": {
+               "bsonType": "string"
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "status_code"
+         ]
+      },
+      "rcsb_id": {
+         "bsonType": "string"
+      },
+      "_id": {
+         "bsonType": "objectId"
+      }
+   },
+   "additionalProperties": false,
+   "required": [
+      "rcsb_id"
+   ]
+}
