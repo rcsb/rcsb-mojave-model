@@ -346,10 +346,12 @@
                     <include>ExchangeConstants.java</include>
                 </includes>
             </resource>
-            <!-- The raw schemas -->
+            <!-- Note that the raw schemas are not needed downstream. The following would be the way to include them -->
+            <!--
             <resource>
                 <directory>schemas</directory>
             </resource>
+            -->
         </resources>
 
         <plugins>
