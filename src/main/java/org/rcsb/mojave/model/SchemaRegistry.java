@@ -99,7 +99,14 @@ public enum SchemaRegistry {
     ANNOTATIONS_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_BSON("validation.annotations.polymer.entity.instance.bson.schema.name"),
 
     ANNOTATIONS_INTERFACE_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_JSON("annotations.interface.polymer.entity.instance.json.schema.name"),
-    ANNOTATIONS_INTERFACE_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_BSON("validation.annotations.interface.polymer.entity.instance.bson.schema.name");
+    ANNOTATIONS_INTERFACE_POLYMER_ENTITY_INSTANCE_DESCRIPTOR_BSON("validation.annotations.interface.polymer.entity.instance.bson.schema.name"),
+    SEQUENCE_COORDINATES_ALIGNMENTS_JSON("sequence.coordinates.alignments.json.schema.name"),
+    SEQUENCE_COORDINATES_ALIGNMENTS_BSON("validation.sequence.coordinates.alignments.bson.schema.name"),
+    SEQUENCE_COORDINATES_SEQUENCES_JSON("sequence.coordinates.sequences.json.schema.name"),
+    SEQUENCE_COORDINATES_SEQUENCES_BSON("validation.sequence.coordinates.sequences.bson.schema.name"),
+    SEQUENCE_COORDINATES_ANNOTATIONS_JSON("sequence.coordinates.annotations.json.schema.name"),
+    SEQUENCE_COORDINATES_ANNOTATIONS_BSON("validation.sequence.coordinates.annotations.bson.schema.name"),
+    SEQUENCE_COORDINATES_PDB_INSTANCE_MAP_BSON("validation.sequence.coordinates.map.bson.schema.name");
 
     private final String value;
     private static final Map<String, SchemaRegistry> CONSTANTS = new HashMap<>();

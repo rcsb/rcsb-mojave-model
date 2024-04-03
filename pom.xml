@@ -184,6 +184,14 @@
         <rcsb.group.entry.json.schema.name>json-schema-group_entry.json</rcsb.group.entry.json.schema.name>
         <rcsb.group.polymer.entity.json.schema.name>json-schema-group_polymer_entity.json</rcsb.group.polymer.entity.json.schema.name>
 
+
+        <!-- ==================================== SEQUENCE COORDINATES JSON SCHEMAS ========================================= -->
+        <rcsb.sequence.coordinates.json.schemas.location>${project.basedir}/schemas/internal/sequence_coordinates</rcsb.sequence.coordinates.json.schemas.location>
+        <rcsb.sequence.coordinates.alignments.json.schema.name>json-schema-sequence_alignments.json</rcsb.sequence.coordinates.alignments.json.schema.name>
+        <rcsb.sequence.coordinates.annotations.json.schema.name>json-schema-sequence_annotations.json</rcsb.sequence.coordinates.annotations.json.schema.name>
+        <rcsb.sequence.coordinates.sequences.json.schema.name>json-schema-sequences.json</rcsb.sequence.coordinates.sequences.json.schema.name>
+        <rcsb.sequence.coordinates.map.json.schema.name>json-schema-identifier_map.json</rcsb.sequence.coordinates.map.json.schema.name>
+
         <!-- ================================= WHERE WE KEEP SCHEMAS PRODUCTS ====================================== -->
 
         <!-- for schema files we create automatically or download -->
@@ -194,6 +202,8 @@
         <derived.schema.location>${generated.schema.location}/derived</derived.schema.location>
         <!-- schemas automatically created for DW core collections in JSON -->
         <core.schema.location>${generated.schema.location}/core</core.schema.location>
+        <!-- schemas automatically created for Sequence Coordinate  Service in JSON -->
+        <sequence.coordinates.schema.location>${generated.schema.location}/sequence-coordinates</sequence.coordinates.schema.location>
         <!-- schemas automatically created for Java types generation in JSON -->
         <auto.schema.location>${generated.schema.location}/auto</auto.schema.location>
         <!-- schemas automatically created for validation of DW core collections in BSON -->
@@ -243,6 +253,11 @@
         <annotations.polymer.entity.instance.json.schema.name>annotations_polymer_entity_instance.json</annotations.polymer.entity.instance.json.schema.name>
         <annotations.interface.polymer.entity.instance.json.schema.name>annotations_interface_polymer_entity_instance.json</annotations.interface.polymer.entity.instance.json.schema.name>
 
+        <sequence.coordinates.alignments.json.schema.name>sequence_alignments.json</sequence.coordinates.alignments.json.schema.name>
+        <sequence.coordinates.annotations.json.schema.name>sequence_annotations.json</sequence.coordinates.annotations.json.schema.name>
+        <sequence.coordinates.sequences.json.schema.name>sequences.json</sequence.coordinates.sequences.json.schema.name>
+        <sequence.coordinates.map.json.schema.name>identifier_map.json</sequence.coordinates.map.json.schema.name>
+
         <!-- VALIDATION SCHEMA NAMES -->
         <validation.assembly.bson.schema.name>validation-core_assembly.json</validation.assembly.bson.schema.name>
         <validation.entry.bson.schema.name>validation-core_entry.json</validation.entry.bson.schema.name>
@@ -280,6 +295,11 @@
         <validation.annotations.polymer.entity.bson.schema.name>validation-annotations_polymer_entity.json</validation.annotations.polymer.entity.bson.schema.name>
         <validation.annotations.polymer.entity.instance.bson.schema.name>validation-annotations_polymer_entity_instance.json</validation.annotations.polymer.entity.instance.bson.schema.name>
         <validation.annotations.interface.polymer.entity.instance.bson.schema.name>validation-annotations_interface_polymer_entity_instance.json</validation.annotations.interface.polymer.entity.instance.bson.schema.name>
+
+        <validation.sequence.coordinates.alignments.bson.schema.name>validation-sequence_alignments.json</validation.sequence.coordinates.alignments.bson.schema.name>
+        <validation.sequence.coordinates.annotations.bson.schema.name>validation-sequence_annotations.json</validation.sequence.coordinates.annotations.bson.schema.name>
+        <validation.sequence.coordinates.sequences.bson.schema.name>validation-sequences.json</validation.sequence.coordinates.sequences.bson.schema.name>
+        <validation.sequence.coordinates.map.bson.schema.name>validation-identifier_map.json</validation.sequence.coordinates.map.bson.schema.name>
 
     </properties>
 
@@ -332,6 +352,9 @@
             </resource>
             <resource>
                 <directory>target/generated-sources/schema/validation</directory>
+            </resource>
+            <resource>
+                <directory>target/generated-sources/schema/sequence-coordinates</directory>
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
@@ -1080,6 +1103,90 @@
                         </configuration>
                     </execution>
 
+                    <execution>
+                        <id>build-sequence-alignments-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${sequence.coordinates.schema.location}/${sequence.coordinates.alignments.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>file://${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.alignments.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-sequence-annotations-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${sequence.coordinates.schema.location}/${sequence.coordinates.annotations.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>file://${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.annotations.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-sequences-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${sequence.coordinates.schema.location}/${sequence.coordinates.sequences.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>file://${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.sequences.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-map-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${sequence.coordinates.schema.location}/${sequence.coordinates.map.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>file://${rcsb.sequence.coordinates.json.schemas.location}/${rcsb.sequence.coordinates.map.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
                     <!-- GENERATE VALIDATION SCHEMAS FOR GROUPS -->
                     <execution>
                         <id>generate-validation-schema-group-provenance</id>
@@ -1475,6 +1582,66 @@
                             </arguments>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>generate-validation-schema-sequence_alignments</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${sequence.coordinates.schema.location}/${sequence.coordinates.alignments.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.sequence.coordinates.alignments.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-sequence_annotations</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${sequence.coordinates.schema.location}/${sequence.coordinates.annotations.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.sequence.coordinates.annotations.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-sequences</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${sequence.coordinates.schema.location}/${sequence.coordinates.sequences.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.sequence.coordinates.sequences.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-map</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${sequence.coordinates.schema.location}/${sequence.coordinates.map.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.sequence.coordinates.map.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
 
                     <!-- GENERATE SCHEMAS USED TO CREATE JAVA TYPES -->
                     <execution>
@@ -1498,7 +1665,29 @@
                             </arguments>
                         </configuration>
                     </execution>
-
+                    <execution>
+                        <id>annotate-schemas-for-sequence-coordinates-java-types</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateAutoJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-se</argument>
+                                <argument>false</argument>
+                                <!-- core schema location -->
+                                <argument>-i</argument>
+                                <argument>${project.build.directory}/${sequence.coordinates.schema.location}</argument>
+                                <!-- auto schema location -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${auto.schema.location}</argument>
+                                <argument>-t</argument>
+                                <argument>${project.auto.package}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
                     <!-- GENERATE EXCHANGE CONSTANTS -->
                     <execution>
                         <id>generate-exchange-constants</id>
