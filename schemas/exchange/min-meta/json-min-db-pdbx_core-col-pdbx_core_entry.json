@@ -3562,6 +3562,7 @@
                "mode": {
                   "type": "string",
                   "enum": [
+                     "4D-STEM",
                      "BRIGHT FIELD",
                      "DARK FIELD",
                      "DIFFRACTION",
@@ -7443,6 +7444,10 @@
                         {
                            "text": "A comma separated list of entities reflecting the initial model used for refinement",
                            "context": "dictionary"
+                        },
+                        {
+                           "text": "A comma separated list of macromolecule entities in the current entry for which the specified initial refinement model was used.",
+                           "context": "deposition"
                         }
                      ]
                   },
@@ -7463,11 +7468,14 @@
                   "enum": [
                      "AlphaFold",
                      "ITasser",
+                     "InsightII",
                      "ModelArchive",
                      "Modeller",
                      "Other",
                      "PDB",
                      "PDB-Dev",
+                     "PHYRE",
+                     "Robetta",
                      "RoseTTAFold",
                      "SwissModel"
                   ],
@@ -15720,7 +15728,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_entry version: 9.0.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 9.0.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 9.0.1"
+   "title": "schema: pdbx_core collection: pdbx_core_entry version: 9.0.2",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_entry version 9.0.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 9.0.2"
 }
