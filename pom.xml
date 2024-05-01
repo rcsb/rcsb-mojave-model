@@ -1736,6 +1736,30 @@
                         </configuration>
                     </execution>
 
+                    <!-- GENERATE CORE CONSTANTS -->
+                    <execution>
+                        <id>generate-sequence-coordinate-constants</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateSchemaConstants</mainClass>
+                            <arguments>
+                                <!-- Location of the JSON Schema file(s). -->
+                                <argument>-i</argument>
+                                <argument>${project.build.directory}/${sequence.coordinates.schema.location}</argument>
+                                <!-- Target directory for generated Java source files. -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/generated-sources/classes</argument>
+                                <!-- Target fully qualified class name used for generated Java class. -->
+                                <argument>-t</argument>
+                                <argument>org.rcsb.mojave.SequenceCoordinatesConstants</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
                     <!-- GENERATE CORE ENUMS -->
                     <execution>
                         <id>generate-schema-enums</id>
