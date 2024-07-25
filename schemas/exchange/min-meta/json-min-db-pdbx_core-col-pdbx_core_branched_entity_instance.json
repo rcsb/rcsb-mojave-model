@@ -1355,6 +1355,38 @@
                      }
                   ]
                },
+               "connect_type": {
+                  "type": "string",
+                  "enum": [
+                     "covalent bond",
+                     "metal coordination",
+                     "non-bonded"
+                  ],
+                  "examples": [
+                     "covalent bond"
+                  ],
+                  "description": "The type of ligand interaction (covalent, metal-coordination, or non-bonded).",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "covalent bond",
+                        "detail": "The target is bound through a covalent interaction"
+                     },
+                     {
+                        "value": "metal coordination",
+                        "detail": "The target is bound through a metal-coordination interaction"
+                     },
+                     {
+                        "value": "non-bonded",
+                        "detail": "The target is not bound through a covalent or metal-coordination interaction"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The type of ligand interaction (covalent, metal-coordination, or non-bonded).",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
                "distance": {
                   "type": "number",
                   "description": "Distance value for this ligand interaction.",
@@ -1649,7 +1681,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_branched_entity_instance version: 9.0.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity_instance version 9.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 9.0.0"
+   "title": "schema: pdbx_core collection: pdbx_core_branched_entity_instance version: 9.0.1",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_branched_entity_instance version 9.0.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_branched_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 9.0.1"
 }
