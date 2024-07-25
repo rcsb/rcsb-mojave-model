@@ -125,7 +125,7 @@
                   "examples": [
                      "covalent bond"
                   ],
-                  "description": "The type of ligand interaction (covalent, metal-coordination, or non-bonded).",
+                  "description": "The type of ligand interaction (covalent, metal coordination, or non-bonded).",
                   "rcsb_enum_annotated": [
                      {
                         "value": "covalent bond",
@@ -133,16 +133,16 @@
                      },
                      {
                         "value": "metal coordination",
-                        "detail": "The target is bound through a metal-coordination interaction"
+                        "detail": "The target is bound through a metal coordination interaction"
                      },
                      {
                         "value": "non-bonded",
-                        "detail": "The target is not bound through a covalent or metal-coordination interaction"
+                        "detail": "The target is not bound through a covalent or metal coordination interaction, but is within a specified cutoff distance"
                      }
                   ],
                   "rcsb_description": [
                      {
-                        "text": "The type of ligand interaction (covalent, metal-coordination, or non-bonded).",
+                        "text": "The type of ligand interaction (covalent, metal coordination, or non-bonded).",
                         "context": "dictionary"
                      }
                   ]
@@ -1016,7 +1016,7 @@
                      },
                      {
                         "value": "LIGAND_INTERACTION",
-                        "detail": "Ligand interactions with macromolecular target",
+                        "detail": "Ligand interactions with macromolecular target (includes covalent, metal coordination, and non-bonded interactions)",
                         "name": "Ligand Interactions"
                      },
                      {
@@ -1716,7 +1716,7 @@
                      },
                      {
                         "value": "LIGAND_INTERACTION",
-                        "detail": "Ligand interactions with macromolecular target",
+                        "detail": "Ligand interactions with macromolecular target (includes covalent, metal coordination, and non-bonded interactions)",
                         "name": "Ligand Interactions"
                      },
                      {
