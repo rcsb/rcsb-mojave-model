@@ -863,6 +863,9 @@
                      "HELX_RH_3T_P",
                      "HELX_RH_AL_P",
                      "HELX_RH_PI_P",
+                     "LIGAND_COVALENT_LINKAGE",
+                     "LIGAND_INTERACTION",
+                     "LIGAND_METAL_COORDINATION_LINKAGE",
                      "MA_QA_METRIC_LOCAL_TYPE_CONTACT_PROBABILITY",
                      "MA_QA_METRIC_LOCAL_TYPE_DISTANCE",
                      "MA_QA_METRIC_LOCAL_TYPE_ENERGY",
@@ -973,6 +976,21 @@
                         "value": "HELX_RH_PI_P",
                         "detail": "Right-handed pi helix (protein)",
                         "name": "Right-handed pi helix (protein)"
+                     },
+                     {
+                        "value": "LIGAND_COVALENT_LINKAGE",
+                        "detail": "Covalent ligand linkages with macromolecular target",
+                        "name": "Covalent Ligand Linkages"
+                     },
+                     {
+                        "value": "LIGAND_INTERACTION",
+                        "detail": "Ligand interactions with macromolecular target (includes covalent, metal coordination, and non-bonded interactions)",
+                        "name": "Ligand Interactions"
+                     },
+                     {
+                        "value": "LIGAND_METAL_COORDINATION_LINKAGE",
+                        "detail": "Metal coordination ligand linkages with macromolecular target",
+                        "name": "Metal Coordination Ligand Linkages"
                      },
                      {
                         "value": "MA_QA_METRIC_LOCAL_TYPE_CONTACT_PROBABILITY",
@@ -1541,6 +1559,9 @@
                      "HELX_RH_3T_P",
                      "HELX_RH_AL_P",
                      "HELX_RH_PI_P",
+                     "LIGAND_COVALENT_LINKAGE",
+                     "LIGAND_INTERACTION",
+                     "LIGAND_METAL_COORDINATION_LINKAGE",
                      "MA_QA_METRIC_LOCAL_TYPE_CONTACT_PROBABILITY",
                      "MA_QA_METRIC_LOCAL_TYPE_DISTANCE",
                      "MA_QA_METRIC_LOCAL_TYPE_ENERGY",
@@ -1655,6 +1676,21 @@
                         "value": "HELX_RH_PI_P",
                         "detail": "Right-handed pi helix (protein)",
                         "name": "Right-handed pi helix (protein)"
+                     },
+                     {
+                        "value": "LIGAND_COVALENT_LINKAGE",
+                        "detail": "Covalent ligand linkages with macromolecular target",
+                        "name": "Covalent Ligand Linkages"
+                     },
+                     {
+                        "value": "LIGAND_INTERACTION",
+                        "detail": "Ligand interactions with macromolecular target (includes covalent, metal coordination, and non-bonded interactions)",
+                        "name": "Ligand Interactions"
+                     },
+                     {
+                        "value": "LIGAND_METAL_COORDINATION_LINKAGE",
+                        "detail": "Metal coordination ligand linkages with macromolecular target",
+                        "name": "Metal Coordination Ligand Linkages"
                      },
                      {
                         "value": "MA_QA_METRIC_LOCAL_TYPE_CONTACT_PROBABILITY",
@@ -2419,7 +2455,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 10.0.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 10.0.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 10.0.1"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 10.0.2",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 10.0.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 10.0.2"
 }
