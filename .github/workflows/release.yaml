@@ -84,7 +84,7 @@ jobs:
     needs: delay-for-maven-central
     strategy:
       matrix:
-        repos: [rcsb-redwood, rcsb-yosemite, rcsb-shape, rcsb-borrego, rcsb-everglades]
+        repos: [rcsb-redwood, rcsb-yosemite, rcsb-shape, rcsb-borrego, rcsb-everglades, rcsb-sequence-coordinates]
     uses: rcsb/rcsb-mojave-model/.github/workflows/update-schema-dependency-version.yaml@master
     with:
 # NOTE here I've tried ${{ env.NEW_SCHEMA_VERSION }} and $NEW_SCHEMA_VERSION. None of those work. Don't understand why
