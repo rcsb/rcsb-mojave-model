@@ -886,8 +886,7 @@
                   ],
                   "description": "Y/N if using serial crystallography experiment in which multiple crystals contribute to each diffraction frame in the experiment.",
                   "rcsb_search_context": [
-                     "exact-match",
-                     "full-text"
+                     "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
@@ -10790,16 +10789,6 @@
          "items": {
             "type": "object",
             "properties": {
-               "EMDB_resolution": {
-                  "type": "number",
-                  "description": "The resolution reported in the entry.",
-                  "rcsb_description": [
-                     {
-                        "text": "The resolution reported in the entry.",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
                "Q_score": {
                   "type": "number",
                   "description": "The overall Q-score of the fit of coordinates to the electron map.\nThe Q-score is defined in Pintilie, GH. et al., Nature Methods, 17, 328-334 (2020)",
