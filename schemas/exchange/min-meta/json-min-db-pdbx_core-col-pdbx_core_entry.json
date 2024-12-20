@@ -10292,49 +10292,6 @@
       "pdbx_vrpt_summary": {
          "type": "object",
          "properties": {
-            "EMDB_deposition_date": {
-               "type": "string",
-               "format": "date",
-               "description": "Date in yyyy-mm-dd format when map was deposited to the EMDB.",
-               "rcsb_description": [
-                  {
-                     "text": "Date in yyyy-mm-dd format when map was deposited to the EMDB.",
-                     "context": "dictionary"
-                  }
-               ]
-            },
-            "PDB_deposition_date": {
-               "type": "string",
-               "format": "date",
-               "description": "Date in yyyy-mm-dd format when structure was deposited to the PDB.\nObtained from model file _pdbx_database_status.recvd_initial_deposition_date.",
-               "rcsb_description": [
-                  {
-                     "text": "Date in yyyy-mm-dd format when structure was deposited to the PDB.\nObtained from model file _pdbx_database_status.recvd_initial_deposition_date.",
-                     "context": "dictionary"
-                  }
-               ]
-            },
-            "PDB_revision_date": {
-               "type": "string",
-               "format": "date",
-               "description": "Date in yyyy-mm-dd format when the structure was last revised by PDB.\nObtained from the mmCIF model file _pdbx_audit_revision_history.revision_date",
-               "rcsb_description": [
-                  {
-                     "text": "Date in yyyy-mm-dd format when the structure was last revised by PDB.\nObtained from the mmCIF model file _pdbx_audit_revision_history.revision_date",
-                     "context": "dictionary"
-                  }
-               ]
-            },
-            "PDB_revision_number": {
-               "type": "integer",
-               "description": "The highest number that appears in mmCIF model item _pdbx_audit_revision_history.ordinal.",
-               "rcsb_description": [
-                  {
-                     "text": "The highest number that appears in mmCIF model item _pdbx_audit_revision_history.ordinal.",
-                     "context": "dictionary"
-                  }
-               ]
-            },
             "RNA_suiteness": {
                "type": "number",
                "examples": [
