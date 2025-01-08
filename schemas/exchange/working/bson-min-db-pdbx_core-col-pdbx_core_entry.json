@@ -3164,6 +3164,299 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "pdbx_vrpt_summary": {
+         "bsonType": "object",
+         "properties": {
+            "RNA_suiteness": {
+               "bsonType": "double"
+            },
+            "attempted_validation_steps": {
+               "bsonType": "string"
+            },
+            "ligands_for_buster_report": {
+               "bsonType": "string",
+               "enum": [
+                  "N",
+                  "Y"
+               ]
+            },
+            "report_creation_date": {
+               "bsonType": "date"
+            },
+            "restypes_notchecked_for_bond_angle_geometry": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            }
+         },
+         "additionalProperties": false
+      },
+      "pdbx_vrpt_summary_diffraction": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "B_factor_type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "FULL",
+                     "PARTIAL"
+                  ]
+               },
+               "Babinet_b": {
+                  "bsonType": "double"
+               },
+               "Babinet_k": {
+                  "bsonType": "double"
+               },
+               "CCP4_version": {
+                  "bsonType": "string"
+               },
+               "DCC_R": {
+                  "bsonType": "double"
+               },
+               "DCC_Rfree": {
+                  "bsonType": "double"
+               },
+               "EDS_R": {
+                  "bsonType": "double"
+               },
+               "EDS_R_warning": {
+                  "bsonType": "string"
+               },
+               "EDS_res_high": {
+                  "bsonType": "double"
+               },
+               "EDS_res_low": {
+                  "bsonType": "double"
+               },
+               "Fo_Fc_correlation": {
+                  "bsonType": "double"
+               },
+               "I_over_sigma": {
+                  "bsonType": "string"
+               },
+               "Padilla_Yeates_L2_mean": {
+                  "bsonType": "double"
+               },
+               "Padilla_Yeates_L_mean": {
+                  "bsonType": "double"
+               },
+               "Q_score": {
+                  "bsonType": "double"
+               },
+               "Wilson_B_aniso": {
+                  "bsonType": "string"
+               },
+               "Wilson_B_estimate": {
+                  "bsonType": "double"
+               },
+               "acentric_outliers": {
+                  "bsonType": "int"
+               },
+               "bulk_solvent_b": {
+                  "bsonType": "double"
+               },
+               "bulk_solvent_k": {
+                  "bsonType": "double"
+               },
+               "centric_outliers": {
+                  "bsonType": "int"
+               },
+               "data_anisotropy": {
+                  "bsonType": "double"
+               },
+               "data_completeness": {
+                  "bsonType": "double"
+               },
+               "density_fitness_version": {
+                  "bsonType": "string"
+               },
+               "exp_method": {
+                  "bsonType": "string"
+               },
+               "num_miller_indices": {
+                  "bsonType": "int"
+               },
+               "number_reflns_R_free": {
+                  "bsonType": "int"
+               },
+               "percent_RSRZ_outliers": {
+                  "bsonType": "double"
+               },
+               "percent_free_reflections": {
+                  "bsonType": "double"
+               },
+               "servalcat_version": {
+                  "bsonType": "string"
+               },
+               "trans_NCS_details": {
+                  "bsonType": "string"
+               },
+               "twin_fraction": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_summary_em": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "Q_score": {
+                  "bsonType": "double"
+               },
+               "atom_inclusion_all_atoms": {
+                  "bsonType": "double"
+               },
+               "atom_inclusion_backbone": {
+                  "bsonType": "double"
+               },
+               "author_provided_fsc_resolution_by_cutoff_halfbit": {
+                  "bsonType": "double"
+               },
+               "author_provided_fsc_resolution_by_cutoff_onebit": {
+                  "bsonType": "double"
+               },
+               "author_provided_fsc_resolution_by_cutoff_pt_143": {
+                  "bsonType": "double"
+               },
+               "author_provided_fsc_resolution_by_cutoff_pt_333": {
+                  "bsonType": "double"
+               },
+               "author_provided_fsc_resolution_by_cutoff_pt_5": {
+                  "bsonType": "double"
+               },
+               "author_provided_fsc_resolution_by_cutoff_threesigma": {
+                  "bsonType": "double"
+               },
+               "calculated_fsc_resolution_by_cutoff_halfbit": {
+                  "bsonType": "double"
+               },
+               "calculated_fsc_resolution_by_cutoff_onebit": {
+                  "bsonType": "double"
+               },
+               "calculated_fsc_resolution_by_cutoff_pt_143": {
+                  "bsonType": "double"
+               },
+               "calculated_fsc_resolution_by_cutoff_pt_333": {
+                  "bsonType": "double"
+               },
+               "calculated_fsc_resolution_by_cutoff_pt_5": {
+                  "bsonType": "double"
+               },
+               "calculated_fsc_resolution_by_cutoff_threesigma": {
+                  "bsonType": "double"
+               },
+               "contour_level_primary_map": {
+                  "bsonType": "double"
+               },
+               "exp_method": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_summary_geometry": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "angles_RMSZ": {
+                  "bsonType": "double"
+               },
+               "bonds_RMSZ": {
+                  "bsonType": "double"
+               },
+               "clashscore": {
+                  "bsonType": "double"
+               },
+               "clashscore_full_length": {
+                  "bsonType": "double"
+               },
+               "num_H_reduce": {
+                  "bsonType": "int"
+               },
+               "num_angles_RMSZ": {
+                  "bsonType": "int"
+               },
+               "num_bonds_RMSZ": {
+                  "bsonType": "int"
+               },
+               "percent_ramachandran_outliers": {
+                  "bsonType": "double"
+               },
+               "percent_ramachandran_outliers_full_length": {
+                  "bsonType": "double"
+               },
+               "percent_rotamer_outliers": {
+                  "bsonType": "double"
+               },
+               "percent_rotamer_outliers_full_length": {
+                  "bsonType": "double"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_summary_nmr": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "chemical_shift_completeness": {
+                  "bsonType": "double"
+               },
+               "chemical_shift_completeness_full_length": {
+                  "bsonType": "double"
+               },
+               "cyrange_error": {
+                  "bsonType": "string"
+               },
+               "cyrange_number_of_domains": {
+                  "bsonType": "int"
+               },
+               "exp_method": {
+                  "bsonType": "string"
+               },
+               "medoid_model": {
+                  "bsonType": "int"
+               },
+               "nmr_models_consistency_flag": {
+                  "bsonType": "string"
+               },
+               "nmrclust_error": {
+                  "bsonType": "string"
+               },
+               "nmrclust_number_of_clusters": {
+                  "bsonType": "int"
+               },
+               "nmrclust_number_of_models": {
+                  "bsonType": "int"
+               },
+               "nmrclust_number_of_outliers": {
+                  "bsonType": "int"
+               },
+               "nmrclust_representative_model": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_accession_info": {
          "bsonType": "object",
          "properties": {

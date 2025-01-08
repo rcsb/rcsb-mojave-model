@@ -30,6 +30,55 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "pdbx_vrpt_summary_entity_fit_to_map": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "bsonType": "int"
+               },
+               "Q_score": {
+                  "bsonType": "double"
+               },
+               "average_residue_inclusion": {
+                  "bsonType": "double"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "pdbx_vrpt_summary_entity_geometry": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "PDB_model_num": {
+                  "bsonType": "int"
+               },
+               "angles_RMSZ": {
+                  "bsonType": "double"
+               },
+               "average_residue_inclusion": {
+                  "bsonType": "double"
+               },
+               "bonds_RMSZ": {
+                  "bsonType": "double"
+               },
+               "num_angles_RMSZ": {
+                  "bsonType": "int"
+               },
+               "num_bonds_RMSZ": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_nonpolymer_entity_instance_container_identifiers": {
          "bsonType": "object",
          "properties": {
@@ -92,7 +141,9 @@
                   "enum": [
                      "HAS_COVALENT_LINKAGE",
                      "HAS_METAL_COORDINATION_LINKAGE",
-                     "HAS_NO_COVALENT_LINKAGE"
+                     "HAS_NO_COVALENT_LINKAGE",
+                     "IS_RSCC_OUTLIER",
+                     "IS_RSRZ_OUTLIER"
                   ]
                },
                "annotation_lineage": {
@@ -154,11 +205,17 @@
                   "enum": [
                      "HAS_COVALENT_LINKAGE",
                      "HAS_METAL_COORDINATION_LINKAGE",
+                     "MODELED_ATOMS",
                      "MOGUL_ANGLE_OUTLIER",
+                     "MOGUL_ANGLE_OUTLIERS",
                      "MOGUL_BOND_OUTLIER",
+                     "MOGUL_BOND_OUTLIERS",
+                     "MOGUL_RING_OUTLIERS",
+                     "MOGUL_TORSION_OUTLIERS",
                      "RSCC_OUTLIER",
                      "RSRZ_OUTLIER",
-                     "STEREO_OUTLIER"
+                     "STEREO_OUTLIER",
+                     "STEREO_OUTLIERS"
                   ]
                },
                "feature_value": {
@@ -242,6 +299,9 @@
                "count": {
                   "bsonType": "int"
                },
+               "coverage": {
+                  "bsonType": "double"
+               },
                "maximum_length": {
                   "bsonType": "int"
                },
@@ -259,11 +319,17 @@
                   "enum": [
                      "HAS_COVALENT_LINKAGE",
                      "HAS_METAL_COORDINATION_LINKAGE",
+                     "MODELED_ATOMS",
                      "MOGUL_ANGLE_OUTLIER",
+                     "MOGUL_ANGLE_OUTLIERS",
                      "MOGUL_BOND_OUTLIER",
+                     "MOGUL_BOND_OUTLIERS",
+                     "MOGUL_RING_OUTLIERS",
+                     "MOGUL_TORSION_OUTLIERS",
                      "RSCC_OUTLIER",
                      "RSRZ_OUTLIER",
-                     "STEREO_OUTLIER"
+                     "STEREO_OUTLIER",
+                     "STEREO_OUTLIERS"
                   ]
                }
             },
@@ -327,6 +393,15 @@
                },
                "mogul_bonds_RMSZ": {
                   "bsonType": "double"
+               },
+               "natoms_eds": {
+                  "bsonType": "int"
+               },
+               "num_mogul_angles_RMSZ": {
+                  "bsonType": "int"
+               },
+               "num_mogul_bonds_RMSZ": {
+                  "bsonType": "int"
                },
                "ranking_model_fit": {
                   "bsonType": "double"
