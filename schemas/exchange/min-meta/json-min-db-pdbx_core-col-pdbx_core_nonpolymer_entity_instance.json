@@ -945,10 +945,6 @@
                "comp_id": {
                   "type": "string",
                   "description": "Component identifier for non-polymer entity instance.",
-                  "rcsb_search_context": [
-                     "exact-match"
-                  ],
-                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "Component identifier for non-polymer entity instance.",
@@ -959,17 +955,10 @@
                "count": {
                   "type": "integer",
                   "description": "The feature count.",
-                  "rcsb_search_context": [
-                     "default-match"
-                  ],
                   "rcsb_description": [
                      {
                         "text": "The feature count.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Feature Count",
-                        "context": "brief"
                      }
                   ]
                },
@@ -1057,10 +1046,6 @@
                      "MOGUL_BOND_OUTLIER"
                   ],
                   "description": "Type or category of the feature.",
-                  "rcsb_search_context": [
-                     "exact-match"
-                  ],
-                  "rcsb_full_text_priority": 10,
                   "rcsb_enum_annotated": [
                      {
                         "value": "HAS_COVALENT_LINKAGE",
@@ -1119,10 +1104,6 @@
                      {
                         "text": "Type or category of the feature.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Feature Type",
-                        "context": "brief"
                      }
                   ]
                }
@@ -1130,88 +1111,7 @@
             "additionalProperties": false
          },
          "minItems": 1,
-         "uniqueItems": true,
-         "rcsb_nested_indexing": true,
-         "rcsb_nested_indexing_context": [
-            {
-               "category_name": "feature_summary",
-               "category_path": "rcsb_nonpolymer_instance_feature_summary.type",
-               "context_attributes": [
-                  {
-                     "context_value": "HAS_COVALENT_LINKAGE",
-                     "attributes": [
-                        {
-                           "examples": [
-                              1,
-                              5
-                           ],
-                           "path": "rcsb_nonpolymer_instance_feature_summary.count"
-                        }
-                     ]
-                  },
-                  {
-                     "context_value": "HAS_METAL_COORDINATION_LINKAGE",
-                     "attributes": [
-                        {
-                           "examples": [
-                              1,
-                              5
-                           ],
-                           "path": "rcsb_nonpolymer_instance_feature_summary.count"
-                        }
-                     ]
-                  },
-                  {
-                     "context_value": "MOGUL_ANGLE_OUTLIER",
-                     "attributes": [
-                        {
-                           "examples": [
-                              1,
-                              5
-                           ],
-                           "path": "rcsb_nonpolymer_instance_feature_summary.count"
-                        }
-                     ]
-                  },
-                  {
-                     "context_value": "MOGUL_BOND_OUTLIER",
-                     "attributes": [
-                        {
-                           "examples": [
-                              1,
-                              5
-                           ],
-                           "path": "rcsb_nonpolymer_instance_feature_summary.count"
-                        }
-                     ]
-                  },
-                  {
-                     "context_value": "RSCC_OUTLIER",
-                     "attributes": [
-                        {
-                           "examples": [
-                              1,
-                              5
-                           ],
-                           "path": "rcsb_nonpolymer_instance_feature_summary.count"
-                        }
-                     ]
-                  },
-                  {
-                     "context_value": "RSRZ_OUTLIER",
-                     "attributes": [
-                        {
-                           "examples": [
-                              1,
-                              5
-                           ],
-                           "path": "rcsb_nonpolymer_instance_feature_summary.count"
-                        }
-                     ]
-                  }
-               ]
-            }
-         ]
+         "uniqueItems": true
       },
       "rcsb_nonpolymer_instance_validation_score": {
          "type": "array",
@@ -2264,7 +2164,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 10.0.0",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 10.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 10.0.0"
+   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 10.0.1",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 10.0.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 10.0.1"
 }
