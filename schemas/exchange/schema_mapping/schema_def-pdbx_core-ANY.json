@@ -3510,21 +3510,15 @@
                "ENUMERATION": [
                   "AlphaFoldDB",
                   "BMRB",
-                  "CAS",
-                  "CSD",
                   "EBI",
                   "EMDB",
-                  "ICSD",
-                  "MDF",
                   "MODBASE",
                   "ModelArchive",
-                  "NBS",
                   "NDB",
                   "PDB",
                   "PDB-Dev",
                   "PDBE",
                   "PDB_ACC",
-                  "PDF",
                   "RCSB",
                   "SWISS-MODEL_REPOSITORY",
                   "WWPDB"
@@ -4399,7 +4393,10 @@
                "EMBEDDED_ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
+               "ENUMERATION": [
+                  "N",
+                  "Y"
+               ],
                "CONTENT_CLASSES": [
                   "EVOLVING_CONTENT"
                ],
@@ -11608,6 +11605,7 @@
                   "TFS TALOS",
                   "TFS TALOS F200C",
                   "TFS TALOS L120C",
+                  "TFS TITAN THEMIS",
                   "TFS TUNDRA",
                   "ZEISS LEO912",
                   "ZEISS LIBRA120PLUS"
@@ -24824,9 +24822,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Additional map",
                   "Chemical component",
+                  "EM metadata",
+                  "FSC",
+                  "Half map",
+                  "Image",
+                  "Mask",
                   "NMR restraints",
                   "NMR shifts",
+                  "Primary map",
                   "Structure factors",
                   "Structure model"
                ],
@@ -25007,9 +25012,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Additional map",
                   "Chemical component",
+                  "EM metadata",
+                  "FSC",
+                  "Half map",
+                  "Image",
+                  "Mask",
                   "NMR restraints",
                   "NMR shifts",
+                  "Primary map",
                   "Structure factors",
                   "Structure model"
                ],
@@ -25117,6 +25129,9 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "Coordinate replacement",
+                  "Data added",
+                  "Data removed",
+                  "Data updated",
                   "Initial release",
                   "Obsolete",
                   "Remediation"
@@ -25234,9 +25249,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Additional map",
                   "Chemical component",
+                  "EM metadata",
+                  "FSC",
+                  "Half map",
+                  "Image",
+                  "Mask",
                   "NMR restraints",
                   "NMR shifts",
+                  "Primary map",
                   "Structure factors",
                   "Structure model"
                ],
@@ -25292,7 +25314,7 @@
                   "Derived calculations",
                   "Experimental data",
                   "Experimental preparation",
-                  "Initial release",
+                  "Experimental summary",
                   "Non-polymer description",
                   "Other",
                   "Polymer sequence",
@@ -25419,9 +25441,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Additional map",
                   "Chemical component",
+                  "EM metadata",
+                  "FSC",
+                  "Half map",
+                  "Image",
+                  "Mask",
                   "NMR restraints",
                   "NMR shifts",
+                  "Primary map",
                   "Structure factors",
                   "Structure model"
                ],
@@ -25593,9 +25622,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Additional map",
                   "Chemical component",
+                  "EM metadata",
+                  "FSC",
+                  "Half map",
+                  "Image",
+                  "Mask",
                   "NMR restraints",
                   "NMR shifts",
+                  "Primary map",
                   "Structure factors",
                   "Structure model"
                ],
@@ -103930,6 +103966,7 @@
                "STRUCT",
                "STRUCT_KEYWORDS",
                "SYMMETRY",
+               "DATABASE_2",
                "MA_DATA"
             ],
             "EXCLUDE": [],
