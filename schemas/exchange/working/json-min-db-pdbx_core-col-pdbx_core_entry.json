@@ -879,6 +879,47 @@
                         "context": "dictionary"
                      }
                   ]
+               },
+               "pdbx_DOI": {
+                  "type": "string",
+                  "examples": [
+                     "10.2210/pdb6lu7/pdb"
+                  ],
+                  "description": "Document Object Identifier (DOI) for this entry registered\nwith http://crossref.org.",
+                  "rcsb_description": [
+                     {
+                        "text": "Document Object Identifier (DOI) for this entry registered\nwith http://crossref.org.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "pdbx_database_accession": {
+                  "type": "string",
+                  "examples": [
+                     "pdb_00006lu7"
+                  ],
+                  "description": "Extended accession code issued for for _database_2.database_code assigned by the database identified in\n _database_2.database_id.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "suggest"
+                  ],
+                  "rcsb_full_text_priority": 20,
+                  "rcsb_description": [
+                     {
+                        "text": "Extended accession code issued for for _database_2.database_code assigned by the database identified in\n _database_2.database_id.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Database Accession",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "ID(s) and Keywords",
+                        "priority_order": 10
+                     }
+                  ]
                }
             },
             "additionalProperties": false,
