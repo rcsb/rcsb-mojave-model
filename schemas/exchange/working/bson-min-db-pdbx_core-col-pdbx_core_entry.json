@@ -167,6 +167,49 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "database_2": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "database_code": {
+                  "bsonType": "string"
+               },
+               "database_id": {
+                  "bsonType": "string",
+                  "enum": [
+                     "AlphaFoldDB",
+                     "BMRB",
+                     "EBI",
+                     "EMDB",
+                     "MODBASE",
+                     "ModelArchive",
+                     "NDB",
+                     "PDB",
+                     "PDB-Dev",
+                     "PDBE",
+                     "PDB_ACC",
+                     "RCSB",
+                     "SWISS-MODEL_REPOSITORY",
+                     "WWPDB"
+                  ]
+               },
+               "pdbx_DOI": {
+                  "bsonType": "string"
+               },
+               "pdbx_database_accession": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "database_code",
+               "database_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "diffrn": {
          "bsonType": "array",
          "items": {
@@ -194,7 +237,11 @@
                   "bsonType": "string"
                },
                "pdbx_serial_crystal_experiment": {
-                  "bsonType": "string"
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
                }
             },
             "additionalProperties": false,
@@ -1055,6 +1102,7 @@
                      "TFS TALOS",
                      "TFS TALOS F200C",
                      "TFS TALOS L120C",
+                     "TFS TITAN THEMIS",
                      "TFS TUNDRA",
                      "ZEISS LEO912",
                      "ZEISS LIBRA120PLUS"
@@ -1770,9 +1818,16 @@
                "data_content_type": {
                   "bsonType": "string",
                   "enum": [
+                     "Additional map",
                      "Chemical component",
+                     "EM metadata",
+                     "FSC",
+                     "Half map",
+                     "Image",
+                     "Mask",
                      "NMR restraints",
                      "NMR shifts",
+                     "Primary map",
                      "Structure factors",
                      "Structure model"
                   ]
@@ -1802,9 +1857,16 @@
                "data_content_type": {
                   "bsonType": "string",
                   "enum": [
+                     "Additional map",
                      "Chemical component",
+                     "EM metadata",
+                     "FSC",
+                     "Half map",
+                     "Image",
+                     "Mask",
                      "NMR restraints",
                      "NMR shifts",
+                     "Primary map",
                      "Structure factors",
                      "Structure model"
                   ]
@@ -1832,6 +1894,9 @@
                   "bsonType": "string",
                   "enum": [
                      "Coordinate replacement",
+                     "Data added",
+                     "Data removed",
+                     "Data updated",
                      "Initial release",
                      "Obsolete",
                      "Remediation"
@@ -1856,9 +1921,16 @@
                "data_content_type": {
                   "bsonType": "string",
                   "enum": [
+                     "Additional map",
                      "Chemical component",
+                     "EM metadata",
+                     "FSC",
+                     "Half map",
+                     "Image",
+                     "Mask",
                      "NMR restraints",
                      "NMR shifts",
+                     "Primary map",
                      "Structure factors",
                      "Structure model"
                   ]
@@ -1875,7 +1947,7 @@
                      "Derived calculations",
                      "Experimental data",
                      "Experimental preparation",
-                     "Initial release",
+                     "Experimental summary",
                      "Non-polymer description",
                      "Other",
                      "Polymer sequence",
@@ -1910,9 +1982,16 @@
                "data_content_type": {
                   "bsonType": "string",
                   "enum": [
+                     "Additional map",
                      "Chemical component",
+                     "EM metadata",
+                     "FSC",
+                     "Half map",
+                     "Image",
+                     "Mask",
                      "NMR restraints",
                      "NMR shifts",
+                     "Primary map",
                      "Structure factors",
                      "Structure model"
                   ]
@@ -1947,9 +2026,16 @@
                "data_content_type": {
                   "bsonType": "string",
                   "enum": [
+                     "Additional map",
                      "Chemical component",
+                     "EM metadata",
+                     "FSC",
+                     "Half map",
+                     "Image",
+                     "Mask",
                      "NMR restraints",
                      "NMR shifts",
+                     "Primary map",
                      "Structure factors",
                      "Structure model"
                   ]

@@ -3466,7 +3466,9 @@
          "SCHEMA_SUB_CATEGORIES": [],
          "ATTRIBUTES": {
             "DATABASE_CODE": "database_code",
-            "DATABASE_ID": "database_id"
+            "DATABASE_ID": "database_id",
+            "PDBX_DOI": "pdbx_DOI",
+            "PDBX_DATABASE_ACCESSION": "pdbx_database_accession"
          },
          "ATTRIBUTE_MAP": {
             "DATABASE_CODE": {
@@ -3480,6 +3482,18 @@
                "ATTRIBUTE": "database_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
+            },
+            "PDBX_DOI": {
+               "CATEGORY": "database_2",
+               "ATTRIBUTE": "pdbx_DOI",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PDBX_DATABASE_ACCESSION": {
+               "CATEGORY": "database_2",
+               "ATTRIBUTE": "pdbx_database_accession",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
             }
          },
          "ATTRIBUTE_INFO": {
@@ -3489,7 +3503,7 @@
                "PRECISION": 0,
                "PRIMARY_KEY": true,
                "APP_TYPE": "char",
-               "WIDTH": 14,
+               "WIDTH": 18,
                "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
@@ -3503,32 +3517,56 @@
                "PRECISION": 0,
                "PRIMARY_KEY": true,
                "APP_TYPE": "char",
-               "WIDTH": 10,
+               "WIDTH": 26,
                "ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "AlphaFoldDB",
                   "BMRB",
-                  "CAS",
-                  "CSD",
                   "EBI",
                   "EMDB",
-                  "ICSD",
-                  "MDF",
                   "MODBASE",
                   "ModelArchive",
-                  "NBS",
                   "NDB",
                   "PDB",
                   "PDB-Dev",
                   "PDBE",
                   "PDB_ACC",
-                  "PDF",
                   "RCSB",
                   "SWISS-MODEL_REPOSITORY",
                   "WWPDB"
                ],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "PDBX_DOI": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 28,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "PDBX_DATABASE_ACCESSION": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 18,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             }
@@ -4399,7 +4437,10 @@
                "EMBEDDED_ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
+               "ENUMERATION": [
+                  "N",
+                  "Y"
+               ],
                "CONTENT_CLASSES": [
                   "EVOLVING_CONTENT"
                ],
@@ -11608,6 +11649,7 @@
                   "TFS TALOS",
                   "TFS TALOS F200C",
                   "TFS TALOS L120C",
+                  "TFS TITAN THEMIS",
                   "TFS TUNDRA",
                   "ZEISS LEO912",
                   "ZEISS LIBRA120PLUS"
@@ -24824,9 +24866,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Additional map",
                   "Chemical component",
+                  "EM metadata",
+                  "FSC",
+                  "Half map",
+                  "Image",
+                  "Mask",
                   "NMR restraints",
                   "NMR shifts",
+                  "Primary map",
                   "Structure factors",
                   "Structure model"
                ],
@@ -25007,9 +25056,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Additional map",
                   "Chemical component",
+                  "EM metadata",
+                  "FSC",
+                  "Half map",
+                  "Image",
+                  "Mask",
                   "NMR restraints",
                   "NMR shifts",
+                  "Primary map",
                   "Structure factors",
                   "Structure model"
                ],
@@ -25117,6 +25173,9 @@
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
                   "Coordinate replacement",
+                  "Data added",
+                  "Data removed",
+                  "Data updated",
                   "Initial release",
                   "Obsolete",
                   "Remediation"
@@ -25234,9 +25293,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Additional map",
                   "Chemical component",
+                  "EM metadata",
+                  "FSC",
+                  "Half map",
+                  "Image",
+                  "Mask",
                   "NMR restraints",
                   "NMR shifts",
+                  "Primary map",
                   "Structure factors",
                   "Structure model"
                ],
@@ -25292,7 +25358,7 @@
                   "Derived calculations",
                   "Experimental data",
                   "Experimental preparation",
-                  "Initial release",
+                  "Experimental summary",
                   "Non-polymer description",
                   "Other",
                   "Polymer sequence",
@@ -25419,9 +25485,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Additional map",
                   "Chemical component",
+                  "EM metadata",
+                  "FSC",
+                  "Half map",
+                  "Image",
+                  "Mask",
                   "NMR restraints",
                   "NMR shifts",
+                  "Primary map",
                   "Structure factors",
                   "Structure model"
                ],
@@ -25593,9 +25666,16 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "Additional map",
                   "Chemical component",
+                  "EM metadata",
+                  "FSC",
+                  "Half map",
+                  "Image",
+                  "Mask",
                   "NMR restraints",
                   "NMR shifts",
+                  "Primary map",
                   "Structure factors",
                   "Structure model"
                ],
@@ -103930,6 +104010,7 @@
                "STRUCT",
                "STRUCT_KEYWORDS",
                "SYMMETRY",
+               "DATABASE_2",
                "MA_DATA"
             ],
             "EXCLUDE": [],
