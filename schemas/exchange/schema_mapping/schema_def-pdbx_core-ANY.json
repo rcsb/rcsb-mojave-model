@@ -72434,6 +72434,7 @@
             "IHM_MULTI_SCALE_FLAG": "ihm_multi_scale_flag",
             "IHM_MULTI_STATE_FLAG": "ihm_multi_state_flag",
             "IHM_ORDERED_STATE_FLAG": "ihm_ordered_state_flag",
+            "IHM_STRUCTURE_DESCRIPTION": "ihm_structure_description",
             "INTER_MOL_COVALENT_BOND_COUNT": "inter_mol_covalent_bond_count",
             "INTER_MOL_METALIC_BOND_COUNT": "inter_mol_metalic_bond_count",
             "MOLECULAR_WEIGHT": "molecular_weight",
@@ -72629,6 +72630,12 @@
             "IHM_ORDERED_STATE_FLAG": {
                "CATEGORY": "rcsb_entry_info",
                "ATTRIBUTE": "ihm_ordered_state_flag",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "IHM_STRUCTURE_DESCRIPTION": {
+               "CATEGORY": "rcsb_entry_info",
+               "ATTRIBUTE": "ihm_structure_description",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -73305,24 +73312,24 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "INTER_MOL_COVALENT_BOND_COUNT": {
+            "IHM_STRUCTURE_DESCRIPTION": {
                "ORDER": 29,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
+               "APP_TYPE": "char",
                "WIDTH": 10,
                "ITERABLE_DELIMITER": null,
                "EMBEDDED_ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
+               "IS_CHAR_TYPE": true,
                "ENUMERATION": [],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
                ],
                "SUB_CATEGORIES": []
             },
-            "INTER_MOL_METALIC_BOND_COUNT": {
+            "INTER_MOL_COVALENT_BOND_COUNT": {
                "ORDER": 30,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -73339,8 +73346,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "MOLECULAR_WEIGHT": {
+            "INTER_MOL_METALIC_BOND_COUNT": {
                "ORDER": 31,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MOLECULAR_WEIGHT": {
+               "ORDER": 32,
                "NULLABLE": true,
                "PRECISION": 6,
                "PRIMARY_KEY": false,
@@ -73357,7 +73381,7 @@
                "SUB_CATEGORIES": []
             },
             "NA_POLYMER_ENTITY_TYPES": {
-               "ORDER": 32,
+               "ORDER": 33,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -73380,7 +73404,7 @@
                "SUB_CATEGORIES": []
             },
             "NDB_STRUCT_CONF_NA_FEATURE_COMBINED": {
-               "ORDER": 33,
+               "ORDER": 34,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -73414,7 +73438,7 @@
                "SUB_CATEGORIES": []
             },
             "NONPOLYMER_BOUND_COMPONENTS": {
-               "ORDER": 34,
+               "ORDER": 35,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -73431,7 +73455,7 @@
                "SUB_CATEGORIES": []
             },
             "NONPOLYMER_ENTITY_COUNT": {
-               "ORDER": 35,
+               "ORDER": 36,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -73448,23 +73472,6 @@
                "SUB_CATEGORIES": []
             },
             "NONPOLYMER_MOLECULAR_WEIGHT_MAXIMUM": {
-               "ORDER": 36,
-               "NULLABLE": true,
-               "PRECISION": 6,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "float",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "NONPOLYMER_MOLECULAR_WEIGHT_MINIMUM": {
                "ORDER": 37,
                "NULLABLE": true,
                "PRECISION": 6,
@@ -73481,8 +73488,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_COMPOSITION": {
+            "NONPOLYMER_MOLECULAR_WEIGHT_MINIMUM": {
                "ORDER": 38,
+               "NULLABLE": true,
+               "PRECISION": 6,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "POLYMER_COMPOSITION": {
+               "ORDER": 39,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -73514,23 +73538,6 @@
                "SUB_CATEGORIES": []
             },
             "POLYMER_ENTITY_COUNT": {
-               "ORDER": 39,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "POLYMER_ENTITY_COUNT_DNA": {
                "ORDER": 40,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -73547,7 +73554,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_ENTITY_COUNT_RNA": {
+            "POLYMER_ENTITY_COUNT_DNA": {
                "ORDER": 41,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -73564,7 +73571,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_ENTITY_COUNT_NUCLEIC_ACID": {
+            "POLYMER_ENTITY_COUNT_RNA": {
                "ORDER": 42,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -73581,7 +73588,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_ENTITY_COUNT_NUCLEIC_ACID_HYBRID": {
+            "POLYMER_ENTITY_COUNT_NUCLEIC_ACID": {
                "ORDER": 43,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -73598,7 +73605,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_ENTITY_COUNT_PROTEIN": {
+            "POLYMER_ENTITY_COUNT_NUCLEIC_ACID_HYBRID": {
                "ORDER": 44,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -73615,7 +73622,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_ENTITY_TAXONOMY_COUNT": {
+            "POLYMER_ENTITY_COUNT_PROTEIN": {
                "ORDER": 45,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -73632,12 +73639,12 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_MOLECULAR_WEIGHT_MAXIMUM": {
+            "POLYMER_ENTITY_TAXONOMY_COUNT": {
                "ORDER": 46,
                "NULLABLE": true,
-               "PRECISION": 6,
+               "PRECISION": 0,
                "PRIMARY_KEY": false,
-               "APP_TYPE": "float",
+               "APP_TYPE": "int",
                "WIDTH": 10,
                "ITERABLE_DELIMITER": null,
                "EMBEDDED_ITERABLE_DELIMITER": null,
@@ -73649,7 +73656,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_MOLECULAR_WEIGHT_MINIMUM": {
+            "POLYMER_MOLECULAR_WEIGHT_MAXIMUM": {
                "ORDER": 47,
                "NULLABLE": true,
                "PRECISION": 6,
@@ -73666,12 +73673,12 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_MONOMER_COUNT_MAXIMUM": {
+            "POLYMER_MOLECULAR_WEIGHT_MINIMUM": {
                "ORDER": 48,
                "NULLABLE": true,
-               "PRECISION": 0,
+               "PRECISION": 6,
                "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
+               "APP_TYPE": "float",
                "WIDTH": 10,
                "ITERABLE_DELIMITER": null,
                "EMBEDDED_ITERABLE_DELIMITER": null,
@@ -73683,7 +73690,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_MONOMER_COUNT_MINIMUM": {
+            "POLYMER_MONOMER_COUNT_MAXIMUM": {
                "ORDER": 49,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -73700,8 +73707,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "REPRESENTATIVE_MODEL": {
+            "POLYMER_MONOMER_COUNT_MINIMUM": {
                "ORDER": 50,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REPRESENTATIVE_MODEL": {
+               "ORDER": 51,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -73718,7 +73742,7 @@
                "SUB_CATEGORIES": []
             },
             "RESOLUTION_COMBINED": {
-               "ORDER": 51,
+               "ORDER": 52,
                "NULLABLE": true,
                "PRECISION": 3,
                "PRIMARY_KEY": false,
@@ -73735,7 +73759,7 @@
                "SUB_CATEGORIES": []
             },
             "SELECTED_POLYMER_ENTITY_TYPES": {
-               "ORDER": 52,
+               "ORDER": 53,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -73759,7 +73783,7 @@
                "SUB_CATEGORIES": []
             },
             "SOFTWARE_PROGRAMS_COMBINED": {
-               "ORDER": 53,
+               "ORDER": 54,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -73776,7 +73800,7 @@
                "SUB_CATEGORIES": []
             },
             "SOLVENT_ENTITY_COUNT": {
-               "ORDER": 54,
+               "ORDER": 55,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -73793,7 +73817,7 @@
                "SUB_CATEGORIES": []
             },
             "STRUCTURE_DETERMINATION_METHODOLOGY": {
-               "ORDER": 55,
+               "ORDER": 56,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -73814,7 +73838,7 @@
                "SUB_CATEGORIES": []
             },
             "STRUCTURE_DETERMINATION_METHODOLOGY_PRIORITY": {
-               "ORDER": 56,
+               "ORDER": 57,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,

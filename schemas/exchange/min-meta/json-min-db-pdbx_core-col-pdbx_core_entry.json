@@ -5220,10 +5220,25 @@
                "collection_id": {
                   "type": "string",
                   "description": "Identifier for the entry collection. \n This data item is a pointer to _ihm_entry_collection.id in the \n IHM_ENTRY_COLLECTION category.",
+                  "rcsb_search_context": [
+                     "exact-match",
+                     "suggest"
+                  ],
+                  "rcsb_full_text_priority": 20,
                   "rcsb_description": [
                      {
                         "text": "Identifier for the entry collection. \n This data item is a pointer to _ihm_entry_collection.id in the \n IHM_ENTRY_COLLECTION category.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "IHM Entry Collection ID(s)",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "ID(s) and Keywords",
+                        "priority_order": 30
                      }
                   ]
                }
@@ -11964,7 +11979,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "ID(s) and Keywords",
-                        "priority_order": 30
+                        "priority_order": 35
                      }
                   ]
                },
@@ -12099,7 +12114,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "ID(s) and Keywords",
-                        "priority_order": 35
+                        "priority_order": 40
                      }
                   ]
                },
@@ -12608,10 +12623,24 @@
                   "Y"
                ],
                "description": "Ensemble flag for integrative structures.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Ensemble flag for integrative structures.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "IHM Ensemble Flag",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "IHM Method Details",
+                     "priority_order": 20
                   }
                ]
             },
@@ -12622,10 +12651,24 @@
                   "Y"
                ],
                "description": "Multi-scale modeling flag for integrative structures.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Multi-scale modeling flag for integrative structures.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "IHM Multi-Scale Flag",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "IHM Method Details",
+                     "priority_order": 5
                   }
                ]
             },
@@ -12636,10 +12679,24 @@
                   "Y"
                ],
                "description": "Multi-state modeling flag for integrative structures.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Multi-state modeling flag for integrative structures.",
                      "context": "dictionary"
+                  },
+                  {
+                     "text": "IHM Multi-State Flag",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "IHM Method Details",
+                     "priority_order": 10
                   }
                ]
             },
@@ -12650,9 +12707,37 @@
                   "Y"
                ],
                "description": "Ordered-state modeling flag for integrative structures.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
                      "text": "Ordered-state modeling flag for integrative structures.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "IHM Ordered-State Flag",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "IHM Method Details",
+                     "priority_order": 15
+                  }
+               ]
+            },
+            "ihm_structure_description": {
+               "type": "string",
+               "description": "Description of the integrative structure.",
+               "rcsb_search_context": [
+                  "full-text"
+               ],
+               "rcsb_full_text_priority": 1,
+               "rcsb_description": [
+                  {
+                     "text": "Description of the integrative structure.",
                      "context": "dictionary"
                   }
                ]
@@ -13481,10 +13566,24 @@
                      "Yeast two-hybrid screening data"
                   ],
                   "description": "Name of input dataset used in integrative modeling.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "Name of input dataset used in integrative modeling.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "IHM DATASET NAME",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "IHM Method Details",
+                        "priority_order": 25
                      }
                   ]
                },
@@ -13528,10 +13627,24 @@
                      "MA-CO2KC"
                   ],
                   "description": "Accession code for the input dataset.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "Accession code for the input dataset.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "IHM DATASET SOURCE DB ACCESSION CODE",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "IHM Method Details",
+                        "priority_order": 30
                      }
                   ]
                },
@@ -13557,10 +13670,105 @@
                      "jPOSTrepo"
                   ],
                   "description": "Name of the source database for the input dataset.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "AlphaFoldDB",
+                        "detail": "AlphaFold Protein Structure Database",
+                        "name": "AlphaFoldDB"
+                     },
+                     {
+                        "value": "BMRB",
+                        "detail": "Biological Magnetic Resonance Bank",
+                        "name": "BMRB"
+                     },
+                     {
+                        "value": "BMRbig",
+                        "detail": "Biological Magnetic Resonance Bank BMRbig Project",
+                        "name": "BMRbig"
+                     },
+                     {
+                        "value": "BioGRID",
+                        "detail": "Biological General Repository for Interaction Datasets",
+                        "name": "BioGRID"
+                     },
+                     {
+                        "value": "EMDB",
+                        "detail": "Electron Microscopy Data Bank",
+                        "name": "EMDB"
+                     },
+                     {
+                        "value": "EMPIAR",
+                        "detail": "Electron Microscopy Public Image Archive",
+                        "name": "EMPIAR"
+                     },
+                     {
+                        "value": "MASSIVE",
+                        "detail": "Mass Spectrometry Interactive Virtual Environment",
+                        "name": "MASSIVE"
+                     },
+                     {
+                        "value": "ModelArchive",
+                        "detail": "ModelArchive Repository for Computed Structure Models",
+                        "name": "ModelArchive"
+                     },
+                     {
+                        "value": "Other",
+                        "detail": "Other type of database",
+                        "name": "Other"
+                     },
+                     {
+                        "value": "PDB",
+                        "detail": "Protein Data Bank",
+                        "name": "PDB"
+                     },
+                     {
+                        "value": "PDB-Dev",
+                        "detail": "PDB prototype repository for integrative structures",
+                        "name": "PDB-Dev"
+                     },
+                     {
+                        "value": "PRIDE",
+                        "detail": "Proteomics Identification Database",
+                        "name": "PRIDE"
+                     },
+                     {
+                        "value": "ProXL",
+                        "detail": "Protein Cross-linking Database",
+                        "name": "ProXL"
+                     },
+                     {
+                        "value": "ProteomeXchange",
+                        "detail": "ProteomeXchange Consortium",
+                        "name": "ProteomeXchange"
+                     },
+                     {
+                        "value": "SASBDB",
+                        "detail": "Small Angle Scattering Biological Data Bank",
+                        "name": "SASBDB"
+                     },
+                     {
+                        "value": "iProX",
+                        "detail": "Integrated Proteome Resource Center",
+                        "name": "iProX"
+                     },
+                     {
+                        "value": "jPOSTrepo",
+                        "detail": "Japan Proteome Standard Repository",
+                        "name": "jPOSTrepo"
+                     }
+                  ],
                   "rcsb_description": [
                      {
                         "text": "Name of the source database for the input dataset.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "IHM DATASET SOURCE DB NAME",
+                        "context": "brief"
                      }
                   ]
                }
@@ -13572,7 +13780,181 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true
+         "uniqueItems": true,
+         "rcsb_nested_indexing": true,
+         "rcsb_nested_indexing_context": [
+            {
+               "category_name": "source_database_name",
+               "category_path": "rcsb_ihm_dataset_source_db_reference.db_name",
+               "context_attributes": [
+                  {
+                     "context_value": "PDB",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "5FM1",
+                              "7CKA"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "BMRB",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "27171",
+                              "27600"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "EMDB",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "EMD-2634",
+                              "EMD-7321"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "EMPIAR",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "EMPIAR-10155",
+                              "EMPIAR-10162"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "SASBDB",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "SASDKU3",
+                              "SASDBX9"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "PRIDE",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "PXD012723",
+                              "PXD016595"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "ProteomeXchange",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "PXD032818"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "ModelArchive",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "ma-fejd6",
+                              "ma-2chon"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "AlphaFoldDB",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "AF-Q12445-F1",
+                              "AF-Q6P0N0-F1"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "MASSIVE",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "MSV000079237",
+                              "MSV000084311"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "ProXL",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "RJAZ180",
+                              "RJAZ110"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "jPOSTrepo",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "JPST001851"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "iProX",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "IPX0004576001"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "BMRbig",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "bmrbig94",
+                              "bmrbig101"
+                           ],
+                           "path": "rcsb_ihm_dataset_source_db_reference.accession_code"
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
       },
       "rcsb_ma_qa_metric_global": {
          "type": "array",
@@ -17038,7 +17420,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "ID(s) and Keywords",
-                     "priority_order": 45
+                     "priority_order": 50
                   }
                ]
             },
@@ -17073,7 +17455,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "ID(s) and Keywords",
-                     "priority_order": 50
+                     "priority_order": 55
                   }
                ]
             }
