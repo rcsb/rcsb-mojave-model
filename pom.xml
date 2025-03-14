@@ -183,7 +183,7 @@
         <rcsb.group.core.json.schema.name>json-schema-group_core.json</rcsb.group.core.json.schema.name>
         <rcsb.group.entry.json.schema.name>json-schema-group_entry.json</rcsb.group.entry.json.schema.name>
         <rcsb.group.polymer.entity.json.schema.name>json-schema-group_polymer_entity.json</rcsb.group.polymer.entity.json.schema.name>
-
+        <rcsb.group.non_polymer.entity.json.schema.name>json-schema-group_non_polymer_entity.json</rcsb.group.non_polymer.entity.json.schema.name>
 
         <!-- ==================================== SEQUENCE COORDINATES JSON SCHEMAS ========================================= -->
         <rcsb.sequence.coordinates.json.schemas.location>${project.basedir}/schemas/internal/sequence_coordinates</rcsb.sequence.coordinates.json.schemas.location>
@@ -237,6 +237,7 @@
 
         <group.entry.json.schema.name>group_entry.json</group.entry.json.schema.name>
         <group.polymer.entity.json.schema.name>group_polymer_entity.json</group.polymer.entity.json.schema.name>
+        <group.non_polymer.entity.json.schema.name>group_non_polymer_entity.json</group.non_polymer.entity.json.schema.name>
         <group.provenance.json.schema.name>group_provenance.json</group.provenance.json.schema.name>
 
         <holdings.current.entry.json.schema.name>current_entry.json</holdings.current.entry.json.schema.name>
@@ -280,6 +281,7 @@
 
         <validation.group.entry.bson.schema.name>validation-group_entry.json</validation.group.entry.bson.schema.name>
         <validation.group.polymer.entity.bson.schema.name>validation-group_polymer_entity.json</validation.group.polymer.entity.bson.schema.name>
+        <validation.group.non_polymer.entity.bson.schema.name>validation-group_non_polymer_entity.json</validation.group.non_polymer.entity.bson.schema.name>
         <validation.group.provenance.bson.schema.name>validation-group_provenance.json</validation.group.provenance.bson.schema.name>
 
         <validation.graph.bson.schema.name>validation-rcsb_graph_node.json</validation.graph.bson.schema.name>
@@ -578,6 +580,35 @@
                                 <argument>-i</argument>
                                 <argument>file://${rcsb.group.json.schemas.location}/${rcsb.group.core.json.schema.name}</argument>
                                 <argument>file://${rcsb.group.json.schemas.location}/${rcsb.group.polymer.entity.json.schema.name}</argument>
+                            </arguments>
+                            <systemProperties>
+                                <!-- Identifies a resource by type -->
+                                <systemProperty>
+                                    <key>sourceScheme</key>
+                                    <value>resource</value>
+                                </systemProperty>
+                            </systemProperties>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>build-non_polymer_entity-group-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${group.non_polymer.entity.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>file://${rcsb.group.json.schemas.location}/${rcsb.group.core.json.schema.name}</argument>
+                                <argument>file://${rcsb.group.json.schemas.location}/${rcsb.group.non_polymer.entity.json.schema.name}</argument>
                             </arguments>
                             <systemProperties>
                                 <!-- Identifies a resource by type -->
@@ -1230,7 +1261,20 @@
                             </arguments>
                         </configuration>
                     </execution>
-
+                    <execution>
+                        <id>generate-validation-schema-group-non_polymer-entity</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${group.non_polymer.entity.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.group.non_polymer.entity.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
                     <!-- GENERATE VALIDATION SCHEMAS FOR CORES -->
                     <execution>
                         <id>generate-validation-schema-assembly</id>

@@ -15,6 +15,11 @@ on:
         description: 'Schema Patch version'
         type: string
         required: true
+      skip-stack-release:
+        description: 'Skip schema version updates in dependent projects and releasing them'
+        type: boolean
+        default: false
+        required: false
 
 
 env:
@@ -81,6 +86,7 @@ jobs:
           echo "Will check the following URL via curl: $MAVEN_MOJAVE_URL"
           curl --retry 180 --retry-all-errors --retry-delay 60 -f "$MAVEN_MOJAVE_URL"
   update-downstreams:
+    if: inputs.skip-stack-release != true
     needs: delay-for-maven-central
     strategy:
       matrix:
