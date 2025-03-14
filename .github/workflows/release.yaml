@@ -16,7 +16,7 @@ on:
         type: string
         required: true
       skip-stack-release:
-        description: 'Skip stack release'
+        description: 'Skip schema version updates in dependent projects and releasing them'
         type: boolean
         default: false
         required: false
