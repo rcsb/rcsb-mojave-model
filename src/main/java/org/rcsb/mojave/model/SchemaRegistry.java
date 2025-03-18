@@ -26,6 +26,9 @@ public enum SchemaRegistry {
     GROUP_POLYMER_ENTITY_JSON("group.polymer.entity.json.schema.name"),
     GROUP_POLYMER_ENTITY_BSON("validation.group.polymer.entity.bson.schema.name"),
 
+    GROUP_NON_POLYMER_ENTITY_JSON("group.non_polymer.entity.json.schema.name"),
+    GROUP_NON_POLYMER_ENTITY_BSON("validation.group.non_polymer.entity.bson.schema.name"),
+
     CORE_ASSEMBLY_JSON("core.assembly.json.schema.name"),
     CORE_ASSEMBLY_BSON("validation.assembly.bson.schema.name"),
 

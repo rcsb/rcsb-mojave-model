@@ -21,7 +21,8 @@
           "enum": [
             "provenance_sequence_identity",
             "provenance_matching_uniprot_accession",
-            "provenance_matching_deposit_group_id"
+            "provenance_matching_deposit_group_id",
+            "provenance_matching_chemical_component_id"
           ],
           "description": "A unique group provenance identifier"
         }
@@ -39,7 +40,8 @@
           "enum": [
             "sequence_identity",
             "matching_uniprot_accession",
-            "matching_deposit_group_id"
+            "matching_deposit_group_id",
+            "matching_chemical_component_id"
           ],
           "rcsb_search_context": [
             "exact-match"
