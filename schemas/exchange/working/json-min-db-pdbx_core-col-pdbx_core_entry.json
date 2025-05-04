@@ -4852,7 +4852,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Methods",
-                        "priority_order": 5
+                        "priority_order": 10
                      }
                   ]
                },
@@ -12589,7 +12589,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Methods",
-                     "priority_order": 10
+                     "priority_order": 5
                   }
                ]
             },
@@ -12616,34 +12616,6 @@
                   }
                ]
             },
-            "ihm_ensemble_flag": {
-               "type": "string",
-               "enum": [
-                  "N",
-                  "Y"
-               ],
-               "description": "Ensemble flag for integrative structures.",
-               "rcsb_search_context": [
-                  "exact-match"
-               ],
-               "rcsb_full_text_priority": 10,
-               "rcsb_description": [
-                  {
-                     "text": "Ensemble flag for integrative structures.",
-                     "context": "dictionary"
-                  },
-                  {
-                     "text": "IHM Ensemble Flag",
-                     "context": "brief"
-                  }
-               ],
-               "rcsb_search_group": [
-                  {
-                     "group_name": "IHM Method Details",
-                     "priority_order": 20
-                  }
-               ]
-            },
             "ihm_multi_scale_flag": {
                "type": "string",
                "enum": [
@@ -12667,7 +12639,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "IHM Method Details",
+                     "group_name": "Integrative/Hybrid Method Details",
                      "priority_order": 5
                   }
                ]
@@ -12695,7 +12667,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "IHM Method Details",
+                     "group_name": "Integrative/Hybrid Method Details",
                      "priority_order": 10
                   }
                ]
@@ -12723,7 +12695,7 @@
                ],
                "rcsb_search_group": [
                   {
-                     "group_name": "IHM Method Details",
+                     "group_name": "Integrative/Hybrid Method Details",
                      "priority_order": 15
                   }
                ]
@@ -13582,8 +13554,8 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "IHM Method Details",
-                        "priority_order": 25
+                        "group_name": "Integrative/Hybrid Method Details",
+                        "priority_order": 20
                      }
                   ]
                },
@@ -13643,8 +13615,8 @@
                   ],
                   "rcsb_search_group": [
                      {
-                        "group_name": "IHM Method Details",
-                        "priority_order": 30
+                        "group_name": "Integrative/Hybrid Method Details",
+                        "priority_order": 25
                      }
                   ]
                },
