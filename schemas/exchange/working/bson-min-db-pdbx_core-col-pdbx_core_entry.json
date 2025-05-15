@@ -1603,6 +1603,43 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "ihm_entry_collection_mapping": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "collection_id": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "collection_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "ihm_external_reference_info": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "associated_url": {
+                  "bsonType": "string"
+               },
+               "reference": {
+                  "bsonType": "string"
+               },
+               "reference_provider": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "ma_data": {
          "bsonType": "array",
          "items": {
@@ -3757,6 +3794,7 @@
                "bsonType": "string",
                "enum": [
                   "EM",
+                  "Integrative",
                   "Multiple methods",
                   "NMR",
                   "Neutron",
@@ -3766,6 +3804,30 @@
             },
             "experimental_method_count": {
                "bsonType": "int"
+            },
+            "ihm_multi_scale_flag": {
+               "bsonType": "string",
+               "enum": [
+                  "N",
+                  "Y"
+               ]
+            },
+            "ihm_multi_state_flag": {
+               "bsonType": "string",
+               "enum": [
+                  "N",
+                  "Y"
+               ]
+            },
+            "ihm_ordered_state_flag": {
+               "bsonType": "string",
+               "enum": [
+                  "N",
+                  "Y"
+               ]
+            },
+            "ihm_structure_description": {
+               "bsonType": "string"
             },
             "inter_mol_covalent_bond_count": {
                "bsonType": "int"
@@ -3879,6 +3941,9 @@
             "polymer_monomer_count_minimum": {
                "bsonType": "int"
             },
+            "representative_model": {
+               "bsonType": "int"
+            },
             "resolution_combined": {
                "bsonType": "array",
                "items": {
@@ -3911,7 +3976,8 @@
                "bsonType": "string",
                "enum": [
                   "computational",
-                  "experimental"
+                  "experimental",
+                  "integrative"
                ]
             },
             "structure_determination_methodology_priority": {
@@ -3936,6 +4002,101 @@
             }
          },
          "additionalProperties": false
+      },
+      "rcsb_ihm_dataset_list": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "count": {
+                  "bsonType": "int"
+               },
+               "name": {
+                  "bsonType": "string",
+                  "enum": [
+                     "2DEM class average",
+                     "3DEM volume",
+                     "CX-MS data",
+                     "Comparative model",
+                     "Crosslinking-MS data",
+                     "DNA footprinting data",
+                     "De Novo model",
+                     "EM raw micrographs",
+                     "EPR data",
+                     "Ensemble FRET data",
+                     "Experimental model",
+                     "H/D exchange data",
+                     "Hydroxyl radical footprinting data",
+                     "Integrative model",
+                     "Mass Spectrometry data",
+                     "Mutagenesis data",
+                     "NMR data",
+                     "Other",
+                     "Predicted contacts",
+                     "Quantitative measurements of genetic interactions",
+                     "SAS data",
+                     "Single molecule FRET data",
+                     "X-ray diffraction data",
+                     "Yeast two-hybrid screening data"
+                  ]
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Computed restraints",
+                     "Experimental data",
+                     "Other",
+                     "Starting model"
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "name"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_ihm_dataset_source_db_reference": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "accession_code": {
+                  "bsonType": "string"
+               },
+               "db_name": {
+                  "bsonType": "string",
+                  "enum": [
+                     "AlphaFoldDB",
+                     "BMRB",
+                     "BMRbig",
+                     "BioGRID",
+                     "EMDB",
+                     "EMPIAR",
+                     "MASSIVE",
+                     "ModelArchive",
+                     "Other",
+                     "PDB",
+                     "PDB-Dev",
+                     "PRIDE",
+                     "ProXL",
+                     "ProteomeXchange",
+                     "SASBDB",
+                     "iProX",
+                     "jPOSTrepo"
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "accession_code",
+               "db_name"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
       },
       "rcsb_ma_qa_metric_global": {
          "bsonType": "array",
