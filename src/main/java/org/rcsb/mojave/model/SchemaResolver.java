@@ -34,8 +34,6 @@ public class SchemaResolver {
     }
 
     private InputStream getResourceAsInputStream(String name) {
-        if(name.contains("embedding"))
-            System.out.println("Empty resource name");
         return getClass().getResourceAsStream("/"+name);
     }
 
