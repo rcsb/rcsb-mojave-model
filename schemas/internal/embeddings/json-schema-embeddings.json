@@ -1,9 +1,9 @@
 {
-  "title" : "Core Entry",
+  "title" : "Structure Embedding",
   "description": "JSON schema for storing embedding data.",
   "type": "object",
   "required": [
-    "rcsb_accession_info",
+    "rcsb_embedding_info",
     "rcsb_id",
     "embedding"
   ],
@@ -52,6 +52,10 @@
          "description": "Fixed length vector encoding a 3D macromolecular structure."
       },
       "uniqueItems": false
+    },
+    "n_residues": {
+      "type": "integer",
+      "description": "Number of encoded residues in the embedding"
     }
   }
 }
