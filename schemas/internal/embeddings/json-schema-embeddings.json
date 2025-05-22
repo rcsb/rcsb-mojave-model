@@ -15,18 +15,36 @@
       ],
       "description": "A unique identifier for each object in this entry container."
     },
+    "rcsb_container_identifiers": {
+      "type": "object",
+      "properties": {
+        "entry_id": {
+          "type": "string",
+          "examples": [
+            "4HHB",
+            "AF_AFP60325F1",
+            "MA_MABAKCEPC0019"
+          ],
+          "description": "Entry identifier for this embedding."
+        },
+        "asym_id": {
+          "type": "string",
+          "description": "Instance identifier for this embedding."
+        },
+        "assembly_id": {
+          "type": "string",
+          "examples": [
+            "1",
+            "5"
+          ],
+          "description": "Assembly identifier for this embedding."
+        }
+      },
+      "additionalProperties": false
+    },
     "rcsb_embedding_info": {
          "type": "object",
          "properties": {
-           "entry_id": {
-             "type": "string",
-             "examples": [
-               "4HHB",
-               "AF_AFP60325F1",
-               "MA_MABAKCEPC0019"
-             ],
-             "description": "Entry identifier for the container."
-           },
            "major_revision": {
                "type": "integer",
                "description": "The latest entry major revision number."
