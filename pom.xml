@@ -192,6 +192,10 @@
         <rcsb.sequence.coordinates.sequences.json.schema.name>json-schema-sequences.json</rcsb.sequence.coordinates.sequences.json.schema.name>
         <rcsb.sequence.coordinates.map.json.schema.name>json-schema-identifier_map.json</rcsb.sequence.coordinates.map.json.schema.name>
 
+        <!-- ==================================== EMBEDDINGS JSON SCHEMAS ========================================= -->
+        <rcsb.embeddings.json.schemas.location>${project.basedir}/schemas/internal/embeddings</rcsb.embeddings.json.schemas.location>
+        <rcsb.embeddings.json.schema.name>json-schema-embeddings.json</rcsb.embeddings.json.schema.name>
+
         <!-- ================================= WHERE WE KEEP SCHEMAS PRODUCTS ====================================== -->
 
         <!-- for schema files we create automatically or download -->
@@ -204,6 +208,8 @@
         <core.schema.location>${generated.schema.location}/core</core.schema.location>
         <!-- schemas automatically created for Sequence Coordinate  Service in JSON -->
         <sequence.coordinates.schema.location>${generated.schema.location}/sequence-coordinates</sequence.coordinates.schema.location>
+        <!-- schemas automatically created for embeddings in JSON -->
+        <embeddings.schema.location>${generated.schema.location}/embeddings</embeddings.schema.location>
         <!-- schemas automatically created for Java types generation in JSON -->
         <auto.schema.location>${generated.schema.location}/auto</auto.schema.location>
         <!-- schemas automatically created for validation of DW core collections in BSON -->
@@ -259,6 +265,8 @@
         <sequence.coordinates.sequences.json.schema.name>sequences.json</sequence.coordinates.sequences.json.schema.name>
         <sequence.coordinates.map.json.schema.name>identifier_map.json</sequence.coordinates.map.json.schema.name>
 
+        <embeddings.json.schema.name>structure_embeddings.json</embeddings.json.schema.name>
+
         <!-- VALIDATION SCHEMA NAMES -->
         <validation.assembly.bson.schema.name>validation-core_assembly.json</validation.assembly.bson.schema.name>
         <validation.entry.bson.schema.name>validation-core_entry.json</validation.entry.bson.schema.name>
@@ -302,6 +310,8 @@
         <validation.sequence.coordinates.annotations.bson.schema.name>validation-sequence_annotations.json</validation.sequence.coordinates.annotations.bson.schema.name>
         <validation.sequence.coordinates.sequences.bson.schema.name>validation-sequences.json</validation.sequence.coordinates.sequences.bson.schema.name>
         <validation.sequence.coordinates.map.bson.schema.name>validation-identifier_map.json</validation.sequence.coordinates.map.bson.schema.name>
+
+        <validation.embeddings.bson.schema.name>validation-structure_embedding.json</validation.embeddings.bson.schema.name>
 
     </properties>
 
@@ -357,6 +367,9 @@
             </resource>
             <resource>
                 <directory>target/generated-sources/schema/sequence-coordinates</directory>
+            </resource>
+            <resource>
+                <directory>target/generated-sources/schema/embeddings</directory>
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
@@ -1218,6 +1231,24 @@
                             </arguments>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>build-embeddings-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${embeddings.schema.location}/${embeddings.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>file://${rcsb.embeddings.json.schemas.location}/${rcsb.embeddings.json.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
                     <!-- GENERATE VALIDATION SCHEMAS FOR GROUPS -->
                     <execution>
                         <id>generate-validation-schema-group-provenance</id>
@@ -1686,6 +1717,21 @@
                             </arguments>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>generate-validation-schema-embeddings</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${embeddings.schema.location}/${embeddings.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.embeddings.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
 
                     <!-- GENERATE SCHEMAS USED TO CREATE JAVA TYPES -->
                     <execution>
@@ -1732,6 +1778,28 @@
                             </arguments>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>annotate-schemas-for-embeddings-java-types</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateAutoJsonSchema</mainClass>
+                            <arguments>
+                                <!-- core schema location -->
+                                <argument>-i</argument>
+                                <argument>${project.build.directory}/${embeddings.schema.location}</argument>
+                                <!-- auto schema location -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${auto.schema.location}</argument>
+                                <argument>-t</argument>
+                                <argument>${project.auto.package}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
                     <!-- GENERATE EXCHANGE CONSTANTS -->
                     <execution>
                         <id>generate-exchange-constants</id>
@@ -1780,7 +1848,7 @@
                         </configuration>
                     </execution>
 
-                    <!-- GENERATE CORE CONSTANTS -->
+                    <!-- GENERATE SEQUENCE COORDINATES CONSTANTS -->
                     <execution>
                         <id>generate-sequence-coordinate-constants</id>
                         <phase>generate-sources</phase>
@@ -1800,6 +1868,30 @@
                                 <!-- Target fully qualified class name used for generated Java class. -->
                                 <argument>-t</argument>
                                 <argument>org.rcsb.mojave.SequenceCoordinatesConstants</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                    <!-- GENERATE EMBEDDINGS CONSTANTS -->
+                    <execution>
+                        <id>generate-embeddings-constants</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateSchemaConstants</mainClass>
+                            <arguments>
+                                <!-- Location of the JSON Schema file(s). -->
+                                <argument>-i</argument>
+                                <argument>${project.build.directory}/${embeddings.schema.location}</argument>
+                                <!-- Target directory for generated Java source files. -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/generated-sources/classes</argument>
+                                <!-- Target fully qualified class name used for generated Java class. -->
+                                <argument>-t</argument>
+                                <argument>org.rcsb.mojave.StructureEmbeddingsConstants</argument>
                             </arguments>
                         </configuration>
                     </execution>
