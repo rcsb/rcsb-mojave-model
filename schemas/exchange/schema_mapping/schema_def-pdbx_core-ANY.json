@@ -72088,6 +72088,7 @@
             "MODEL_IDS": "model_ids",
             "NON_POLYMER_ENTITY_IDS": "non_polymer_entity_ids",
             "POLYMER_ENTITY_IDS": "polymer_entity_ids",
+            "PUBMED_ID": "pubmed_id",
             "RCSB_ID": "rcsb_id",
             "RELATED_EMDB_IDS": "related_emdb_ids",
             "WATER_ENTITY_IDS": "water_entity_ids"
@@ -72138,6 +72139,12 @@
             "POLYMER_ENTITY_IDS": {
                "CATEGORY": "rcsb_entry_container_identifiers",
                "ATTRIBUTE": "polymer_entity_ids",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PUBMED_ID": {
+               "CATEGORY": "rcsb_entry_container_identifiers",
+               "ATTRIBUTE": "pubmed_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -72296,8 +72303,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RCSB_ID": {
+            "PUBMED_ID": {
                "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 10,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -72314,7 +72338,7 @@
                "SUB_CATEGORIES": []
             },
             "RELATED_EMDB_IDS": {
-               "ORDER": 10,
+               "ORDER": 11,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -72331,7 +72355,7 @@
                "SUB_CATEGORIES": []
             },
             "WATER_ENTITY_IDS": {
-               "ORDER": 11,
+               "ORDER": 12,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -82210,7 +82234,8 @@
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_NAME": "reference_sequence_identifiers_database_name",
             "REFERENCE_SEQUENCE_IDENTIFIERS_ENTITY_SEQUENCE_COVERAGE": "reference_sequence_identifiers_entity_sequence_coverage",
             "REFERENCE_SEQUENCE_IDENTIFIERS_PROVENANCE_SOURCE": "reference_sequence_identifiers_provenance_source",
-            "REFERENCE_SEQUENCE_IDENTIFIERS_REFERENCE_SEQUENCE_COVERAGE": "reference_sequence_identifiers_reference_sequence_coverage"
+            "REFERENCE_SEQUENCE_IDENTIFIERS_REFERENCE_SEQUENCE_COVERAGE": "reference_sequence_identifiers_reference_sequence_coverage",
+            "UNIPROT_IDS": "uniprot_ids"
          },
          "ATTRIBUTE_MAP": {
             "ENTITY_ID": {
@@ -82300,6 +82325,12 @@
             "REFERENCE_SEQUENCE_IDENTIFIERS_REFERENCE_SEQUENCE_COVERAGE": {
                "CATEGORY": "rcsb_polymer_entity_container_identifiers",
                "ATTRIBUTE": "reference_sequence_identifiers_reference_sequence_coverage",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UNIPROT_IDS": {
+               "CATEGORY": "rcsb_polymer_entity_container_identifiers",
+               "ATTRIBUTE": "uniprot_ids",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             }
@@ -82584,6 +82615,23 @@
                "SUB_CATEGORIES": [
                   "reference_sequence_identifiers"
                ]
+            },
+            "UNIPROT_IDS": {
+               "ORDER": 16,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
             }
          },
          "SCHEMA_DELETE_ATTRIBUTE": null,

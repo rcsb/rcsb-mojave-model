@@ -1335,6 +1335,7 @@
             "NAME": "name",
             "OS": "os",
             "OS_VERSION": "os_version",
+            "PDBX_REFERENCE_DOI": "pdbx_reference_DOI",
             "TYPE": "type",
             "VERSION": "version"
          },
@@ -1438,6 +1439,12 @@
             "OS_VERSION": {
                "CATEGORY": "software",
                "ATTRIBUTE": "os_version",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PDBX_REFERENCE_DOI": {
+               "CATEGORY": "software",
+               "ATTRIBUTE": "pdbx_reference_DOI",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -1732,8 +1739,23 @@
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             },
-            "TYPE": {
+            "PDBX_REFERENCE_DOI": {
                "ORDER": 18,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 19,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -1755,7 +1777,7 @@
                "SUB_CATEGORIES": []
             },
             "VERSION": {
-               "ORDER": 19,
+               "ORDER": 20,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,

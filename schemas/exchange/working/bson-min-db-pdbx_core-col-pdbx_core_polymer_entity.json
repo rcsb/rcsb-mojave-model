@@ -877,6 +877,13 @@
             "rcsb_id": {
                "bsonType": "string"
             },
+            "uniprot_ids": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "uniqueItems": false
+            },
             "reference_sequence_identifiers": {
                "bsonType": "array",
                "items": {
