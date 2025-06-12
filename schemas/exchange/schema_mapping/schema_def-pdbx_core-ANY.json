@@ -65747,7 +65747,8 @@
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ACCESSION": "reference_sequence_identifiers_database_accession",
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_ISOFORM": "reference_sequence_identifiers_database_isoform",
             "REFERENCE_SEQUENCE_IDENTIFIERS_DATABASE_NAME": "reference_sequence_identifiers_database_name",
-            "REFERENCE_SEQUENCE_IDENTIFIERS_PROVENANCE_SOURCE": "reference_sequence_identifiers_provenance_source"
+            "REFERENCE_SEQUENCE_IDENTIFIERS_PROVENANCE_SOURCE": "reference_sequence_identifiers_provenance_source",
+            "UNIPROT_IDS": "uniprot_ids"
          },
          "ATTRIBUTE_MAP": {
             "ENTITY_ID": {
@@ -65849,6 +65850,12 @@
             "REFERENCE_SEQUENCE_IDENTIFIERS_PROVENANCE_SOURCE": {
                "CATEGORY": "rcsb_entity_container_identifiers",
                "ATTRIBUTE": "reference_sequence_identifiers_provenance_source",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UNIPROT_IDS": {
+               "CATEGORY": "rcsb_entity_container_identifiers",
+               "ATTRIBUTE": "uniprot_ids",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             }
@@ -66175,6 +66182,23 @@
                "SUB_CATEGORIES": [
                   "reference_sequence_identifiers"
                ]
+            },
+            "UNIPROT_IDS": {
+               "ORDER": 18,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
             }
          },
          "SCHEMA_DELETE_ATTRIBUTE": null,
