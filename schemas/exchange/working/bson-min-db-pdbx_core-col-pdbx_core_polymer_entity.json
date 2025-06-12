@@ -882,7 +882,8 @@
                "items": {
                   "bsonType": "string"
                },
-               "uniqueItems": false
+               "minItems": 1,
+               "uniqueItems": true
             },
             "reference_sequence_identifiers": {
                "bsonType": "array",
