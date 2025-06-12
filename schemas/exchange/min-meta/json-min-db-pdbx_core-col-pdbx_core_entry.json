@@ -771,8 +771,8 @@
                "database_code": {
                   "type": "string",
                   "examples": [
-                     "1ABC",
-                     "ABCDEF"
+                     "4HHB",
+                     "3LTQ"
                   ],
                   "description": "The code assigned by the database identified in\n _database_2.database_id.",
                   "rcsb_search_context": [
@@ -12070,6 +12070,16 @@
                   ]
                },
                "uniqueItems": false
+            },
+            "pubmed_id": {
+               "type": "integer",
+               "description": "Unique integer value assigned to each PubMed record.",
+               "rcsb_description": [
+                  {
+                     "text": "Unique integer value assigned to each PubMed record.",
+                     "context": "dictionary"
+                  }
+               ]
             },
             "rcsb_id": {
                "type": "string",

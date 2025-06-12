@@ -3251,6 +3251,25 @@
                   }
                ]
             },
+            "uniprot_ids": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "examples": [
+                     "P01116",
+                     "P69905"
+                  ],
+                  "description": "Uniprot accession codes assigned to polymeric entities.",
+                  "rcsb_description": [
+                     {
+                        "text": "Uniprot accession codes assigned to polymeric entities.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "minItems": 1,
+               "uniqueItems": true
+            },
             "reference_sequence_identifiers": {
                "type": "array",
                "items": {
