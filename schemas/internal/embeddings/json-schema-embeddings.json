@@ -5,7 +5,9 @@
   "required": [
     "rcsb_embedding_info",
     "rcsb_id",
-    "embedding"
+    "embedding",
+    "rcsb_embedding_container_identifiers",
+    "n_residues"
   ],
   "properties": {
     "rcsb_id": {
@@ -40,6 +42,9 @@
           "description": "Assembly identifier for this embedding."
         }
       },
+      "required": [
+        "entry_id"
+      ],
       "additionalProperties": false
     },
     "rcsb_embedding_info": {
@@ -54,6 +59,10 @@
                "description": "The latest entry minor revision number."
             }
          },
+         "required": [
+           "major_revision",
+           "minor_revision"
+         ],
          "additionalProperties": false
     },
     "embedding": {
