@@ -2329,6 +2329,22 @@
             }
          ]
       },
+      "rcsb_polymer_instance_info": {
+         "type": "object",
+         "properties": {
+            "modeled_residue_count": {
+               "type": "integer",
+               "description": "The number of modeled residues in the polymer instance.",
+               "rcsb_description": [
+                  {
+                     "text": "The number of modeled residues in the polymer instance.",
+                     "context": "dictionary"
+                  }
+               ]
+            }
+         },
+         "additionalProperties": false
+      },
       "rcsb_polymer_struct_conn": {
          "type": "array",
          "items": {
