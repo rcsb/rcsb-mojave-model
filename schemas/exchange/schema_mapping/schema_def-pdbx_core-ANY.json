@@ -86016,6 +86016,7 @@
             "AUTH_ASYM_ID": "auth_asym_id",
             "ENTITY_ID": "entity_id",
             "ENTRY_ID": "entry_id",
+            "MODEL_ID": "model_id",
             "MODELED_RESIDUE_COUNT": "modeled_residue_count"
          },
          "ATTRIBUTE_MAP": {
@@ -86040,6 +86041,12 @@
             "ENTRY_ID": {
                "CATEGORY": "rcsb_polymer_instance_info",
                "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODEL_ID": {
+               "CATEGORY": "rcsb_polymer_instance_info",
+               "ATTRIBUTE": "model_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -86118,8 +86125,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "MODELED_RESIDUE_COUNT": {
+            "MODEL_ID": {
                "ORDER": 5,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODELED_RESIDUE_COUNT": {
+               "ORDER": 6,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -105850,7 +105874,8 @@
                   "asym_id",
                   "auth_asym_id",
                   "entity_id",
-                  "entry_id"
+                  "entry_id",
+                  "model_id"
                ],
                "struct_asym": [
                   "entity_id",
