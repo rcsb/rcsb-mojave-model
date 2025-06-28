@@ -533,6 +533,15 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "rcsb_polymer_instance_info": {
+         "bsonType": "object",
+         "properties": {
+            "modeled_residue_count": {
+               "bsonType": "int"
+            }
+         },
+         "additionalProperties": false
+      },
       "rcsb_polymer_struct_conn": {
          "bsonType": "array",
          "items": {
