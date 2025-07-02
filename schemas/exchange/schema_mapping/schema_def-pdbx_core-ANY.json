@@ -86001,6 +86001,274 @@
             "SLICE_ENTITY_INSTANCE_BRANCHED": false
          }
       },
+      "RCSB_POLYMER_INSTANCE_INFO": {
+         "SCHEMA_ID": "RCSB_POLYMER_INSTANCE_INFO",
+         "SCHEMA_NAME": "rcsb_polymer_instance_info",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ASYM_ID": "asym_id",
+            "AUTH_ASYM_ID": "auth_asym_id",
+            "ENTITY_ID": "entity_id",
+            "ENTRY_ID": "entry_id",
+            "MODEL_ID": "model_id",
+            "MODELED_RESIDUE_COUNT": "modeled_residue_count"
+         },
+         "ATTRIBUTE_MAP": {
+            "ASYM_ID": {
+               "CATEGORY": "rcsb_polymer_instance_info",
+               "ATTRIBUTE": "asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUTH_ASYM_ID": {
+               "CATEGORY": "rcsb_polymer_instance_info",
+               "ATTRIBUTE": "auth_asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTITY_ID": {
+               "CATEGORY": "rcsb_polymer_instance_info",
+               "ATTRIBUTE": "entity_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_polymer_instance_info",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODEL_ID": {
+               "CATEGORY": "rcsb_polymer_instance_info",
+               "ATTRIBUTE": "model_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODELED_RESIDUE_COUNT": {
+               "CATEGORY": "rcsb_polymer_instance_info",
+               "ATTRIBUTE": "modeled_residue_count",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ASYM_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AUTH_ASYM_ID": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTITY_ID": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTRY_ID": {
+               "ORDER": 4,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODEL_ID": {
+               "ORDER": 5,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODELED_RESIDUE_COUNT": {
+               "ORDER": 6,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ASYM_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_polymer_instance_info": {
+               "ATTRIBUTES": [
+                  "asym_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ENTITY": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "ENTITY_INSTANCE": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASYM_ID"
+               }
+            ],
+            "ENTITY_INSTANCE_VALIDATION": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": true,
+            "ENTITY_INSTANCE_VALIDATION": true,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": true,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": true,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": true
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
       "RCSB_POLYMER_STRUCT_CONN": {
          "SCHEMA_ID": "RCSB_POLYMER_STRUCT_CONN",
          "SCHEMA_NAME": "rcsb_polymer_struct_conn",
@@ -104335,7 +104603,7 @@
          },
          {
             "NAME": "pdbx_core_polymer_entity_instance",
-            "VERSION": "10.0.3"
+            "VERSION": "10.0.4"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity_instance",
@@ -105087,6 +105355,7 @@
                "RCSB_POLYMER_INSTANCE_FEATURE",
                "RCSB_POLYMER_INSTANCE_FEATURE_SUMMARY",
                "RCSB_STRUCT_CONN",
+               "RCSB_POLYMER_INSTANCE_INFO",
                "RCSB_POLYMER_STRUCT_CONN",
                "RCSB_NONPOLYMER_STRUCT_CONN",
                "RCSB_BRANCHED_STRUCT_CONN",
@@ -105267,6 +105536,7 @@
                "RCSB_POLYMER_INSTANCE_FEATURE_SUMMARY",
                "RCSB_POLYMER_ENTITY_ALIGN",
                "RCSB_STRUCT_CONN",
+               "RCSB_POLYMER_INSTANCE_INFO",
                "RCSB_POLYMER_STRUCT_CONN",
                "RCSB_NONPOLYMER_STRUCT_CONN",
                "RCSB_BRANCHED_STRUCT_CONN",
@@ -105405,6 +105675,7 @@
                "RCSB_POLYMER_INSTANCE_FEATURE",
                "RCSB_POLYMER_INSTANCE_FEATURE_SUMMARY",
                "RCSB_STRUCT_CONN",
+               "RCSB_POLYMER_INSTANCE_INFO",
                "RCSB_POLYMER_STRUCT_CONN",
                "RCSB_NONPOLYMER_STRUCT_CONN",
                "RCSB_BRANCHED_STRUCT_CONN",
@@ -105599,6 +105870,13 @@
                   "entity_id",
                   "entry_id"
                ],
+               "rcsb_polymer_instance_info": [
+                  "asym_id",
+                  "auth_asym_id",
+                  "entity_id",
+                  "entry_id",
+                  "model_id"
+               ],
                "struct_asym": [
                   "entity_id",
                   "id",
@@ -105662,6 +105940,7 @@
                "RCSB_POLYMER_INSTANCE_VALIDATION_FEATURE_SUMMARY",
                "RCSB_LIGAND_NEIGHBORS",
                "RCSB_STRUCT_CONN",
+               "RCSB_POLYMER_INSTANCE_INFO",
                "RCSB_POLYMER_STRUCT_CONN",
                "RCSB_BRANCHED_STRUCT_CONN",
                "REFINE_LS_RESTR_NCS",
@@ -105819,6 +106098,7 @@
                "RCSB_POLYMER_INSTANCE_VALIDATION_FEATURE_SUMMARY",
                "RCSB_POLYMER_INSTANCE_VALIDATION_FEATURE_SUMMARY",
                "RCSB_STRUCT_CONN",
+               "RCSB_POLYMER_INSTANCE_INFO",
                "RCSB_POLYMER_STRUCT_CONN",
                "RCSB_NONPOLYMER_STRUCT_CONN",
                "REFINE_LS_RESTR_NCS",
