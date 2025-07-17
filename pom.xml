@@ -2007,6 +2007,11 @@
                         <extensions>true</extensions>
                         <configuration>
                             <publishingServerId>central</publishingServerId>
+                            <!-- If this is set to false, the artifact is only staged and then needs pushing manually via the web interface at https://central.sonatype.com/publishing/deployments -->
+                            <!-- With true it publishes automatically -->
+                            <autoPublish>true</autoPublish>
+                            <!-- NOTE this is essential for the automatic github workflow to wait for the new release to be validated and publicly available -->
+                            <waitUntil>published</waitUntil>
                         </configuration>
                     </plugin>
 

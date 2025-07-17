@@ -57,7 +57,9 @@ jobs:
           gpg --import ~/.secrets/maven_signing_public.gpg
           passphrase=$(grep gpg.passphrase ~/.secrets/settings.xml | sed "s/.*<.*>\(.*\)<.*>/\1/")
           gpg --pinentry-mode=loopback --passphrase  "$passphrase" --import ~/.secrets/maven_signing_private.gpg
-      - name: Publish to ossrh (maven central) via maven deploy
+      - name: Publish to maven central via maven deploy
+        # Note: this will wait until the new artifact is fully validated and available publicly.
+        # The wait is essential to trigger the update-downstream job below
         run: mvn -Prelease --batch-mode --errors -U clean deploy --no-transfer-progress
       - name: Increment version for next dev cycle
         run: |
@@ -71,23 +73,9 @@ jobs:
         run: |
           git push --all
           git push --tags
-  delay-for-maven-central:
-    needs: release-mojave-model
-    runs-on:
-      - self-hosted
-      - java
-    steps:
-      # TODO This is not ideal, but needed because there are no options to wait in the maven plugin we use now (nexus-staging-maven-plugin), however
-      # TODO in the central-publishing-maven-plugin it seems to be possible for maven to hold the deploy process until maven says it's ready, see https://central.sonatype.org/publish/publish-portal-maven/
-      - name: Wait for rcsb-mojave-model artifacts to appear in maven central
-        # retry every 60 seconds x 180 times: 3 hours (after which it will fail)
-        run: |
-          MAVEN_MOJAVE_URL="https://repo1.maven.org/maven2/org/rcsb/rcsb-mojave-model/$NEW_SCHEMA_VERSION/rcsb-mojave-model-$NEW_SCHEMA_VERSION.pom"
-          echo "Will check the following URL via curl: $MAVEN_MOJAVE_URL"
-          curl --retry 180 --retry-all-errors --retry-delay 60 -f "$MAVEN_MOJAVE_URL"
   update-downstreams:
     if: inputs.skip-stack-release != true
-    needs: delay-for-maven-central
+    needs: release-mojave-model
     strategy:
       matrix:
         repos: [rcsb-redwood, rcsb-yosemite, rcsb-shape, rcsb-everglades, rcsb-sequence-coordinates]
