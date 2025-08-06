@@ -1,8 +1,8 @@
 {
-   "NAME": "drugbank_core",
+   "NAME": "core_drugbank",
    "APP_NAME": "ANY",
-   "DATABASE_NAME": "drugbank_core",
-   "DATABASE_VERSION": "5.4.1",
+   "DATABASE_NAME": "dw",
+   "DATABASE_VERSION": "5.5.0",
    "SELECTION_FILTERS": {},
    "SCHEMA_DICT": {
       "DRUGBANK_CONTAINER_IDENTIFIERS": {
@@ -822,35 +822,42 @@
    "DOCUMENT_DICT": {
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
-            "NAME": "drugbank_core",
-            "VERSION": "1.3.2"
+            "NAME": "core_drugbank",
+            "VERSION": "1.4.0"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
-         "drugbank_core": [
+         "core_drugbank": [
             "drugbank_info.drugbank_id"
          ]
       },
       "COLLECTION_DOCUMENT_REPLACE_ATTRIBUTE_NAMES": {
-         "drugbank_core": [
+         "core_drugbank": [
             "drugbank_info.drugbank_id"
          ]
       },
       "COLLECTION_DOCUMENT_PRIVATE_KEYS": {
-         "drugbank_core": []
+         "core_drugbank": []
       },
       "COLLECTION_DOCUMENT_INDICES": {
-         "drugbank_core": [
+         "core_drugbank": [
             {
                "INDEX_NAME": "primary",
                "ATTRIBUTE_NAMES": [
                   "drugbank_info.drugbank_id"
                ]
+            },
+            {
+               "INDEX_NAME": "index_2",
+               "UNIQUE": true,
+               "ATTRIBUTE_NAMES": [
+                  "drugbank_container_identifiers.drugbank_id"
+               ]
             }
          ]
       },
       "COLLECTION_CONTENT": {
-         "drugbank_core": {
+         "core_drugbank": {
             "INCLUDE": [
                "DRUGBANK_INFO",
                "DRUGBANK_TARGET",
@@ -862,7 +869,7 @@
          }
       },
       "COLLECTION_SUB_CATEGORY_AGGREGATES": {
-         "drugbank_core": [
+         "core_drugbank": [
             {
                "NAME": "drug_products",
                "HAS_UNIT_CARDINALITY": false,

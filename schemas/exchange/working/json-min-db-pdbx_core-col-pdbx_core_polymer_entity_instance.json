@@ -65,117 +65,46 @@
          "minItems": 1,
          "uniqueItems": true
       },
-      "pdbx_vrpt_summary_entity_fit_to_map": {
-         "type": "array",
-         "items": {
-            "type": "object",
-            "properties": {
-               "PDB_model_num": {
-                  "type": "integer",
-                  "description": "The unique model number from _atom_site.pdbx_PDB_model_num.",
-                  "rcsb_description": [
-                     {
-                        "text": "The unique model number from _atom_site.pdbx_PDB_model_num.",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "Q_score": {
-                  "type": "number",
-                  "description": "The calculated average Q-score.",
-                  "rcsb_description": [
-                     {
-                        "text": "The calculated average Q-score.",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "average_residue_inclusion": {
-                  "type": "number",
-                  "description": "The average of the residue inclusions for all residues in this instance",
-                  "rcsb_description": [
-                     {
-                        "text": "The average of the residue inclusions for all residues in this instance",
-                        "context": "dictionary"
-                     }
-                  ]
-               }
+      "rcsb_latest_revision": {
+         "type": "object",
+         "properties": {
+            "major_revision": {
+               "type": "integer",
+               "description": "The major version number of the latest revision.",
+               "rcsb_description": [
+                  {
+                     "text": "The major version number of the latest revision.",
+                     "context": "dictionary"
+                  }
+               ]
             },
-            "additionalProperties": false
-         },
-         "minItems": 1,
-         "uniqueItems": true
-      },
-      "pdbx_vrpt_summary_entity_geometry": {
-         "type": "array",
-         "items": {
-            "type": "object",
-            "properties": {
-               "PDB_model_num": {
-                  "type": "integer",
-                  "description": "The unique model number from _atom_site.pdbx_PDB_model_num.",
-                  "rcsb_description": [
-                     {
-                        "text": "The unique model number from _atom_site.pdbx_PDB_model_num.",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "angles_RMSZ": {
-                  "type": "number",
-                  "description": "The overall root mean square of the Z-score for deviations of bond angles in comparison to \n\"standard geometry\" made using the MolProbity dangle program.\nStandard geometry parameters are taken from Engh and Huber (2001) and Parkinson et al. (1996).",
-                  "rcsb_description": [
-                     {
-                        "text": "The overall root mean square of the Z-score for deviations of bond angles in comparison to \n\"standard geometry\" made using the MolProbity dangle program.\nStandard geometry parameters are taken from Engh and Huber (2001) and Parkinson et al. (1996).",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "average_residue_inclusion": {
-                  "type": "number",
-                  "description": "The average of the residue inclusions for all residues in this instance",
-                  "rcsb_description": [
-                     {
-                        "text": "The average of the residue inclusions for all residues in this instance",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "bonds_RMSZ": {
-                  "type": "number",
-                  "description": "The overall root mean square of the Z-score for deviations of bond lengths in comparison to \n\"standard geometry\" made using the MolProbity dangle program.\nStandard geometry parameters are taken from Engh and Huber (2001) and Parkinson et al. (1996).",
-                  "rcsb_description": [
-                     {
-                        "text": "The overall root mean square of the Z-score for deviations of bond lengths in comparison to \n\"standard geometry\" made using the MolProbity dangle program.\nStandard geometry parameters are taken from Engh and Huber (2001) and Parkinson et al. (1996).",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "num_angles_RMSZ": {
-                  "type": "integer",
-                  "description": "The number of bond angles compared to \"standard geometry\" made using the MolProbity dangle program.\nStandard geometry parameters are taken from Engh and Huber (2001) and Parkinson et al. (1996).",
-                  "rcsb_description": [
-                     {
-                        "text": "The number of bond angles compared to \"standard geometry\" made using the MolProbity dangle program.\nStandard geometry parameters are taken from Engh and Huber (2001) and Parkinson et al. (1996).",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "num_bonds_RMSZ": {
-                  "type": "integer",
-                  "description": "The number of bond lengths compared to \"standard geometry\" made using the MolProbity dangle program.\nStandard geometry parameters are taken from Engh and Huber (2001) and Parkinson et al. (1996).",
-                  "rcsb_description": [
-                     {
-                        "text": "The number of bond lengths compared to \"standard geometry\" made using the MolProbity dangle program.\nStandard geometry parameters are taken from Engh and Huber (2001) and Parkinson et al. (1996).",
-                        "context": "dictionary"
-                     }
-                  ]
-               }
+            "minor_revision": {
+               "type": "integer",
+               "description": "The minor version number of the latest revision.",
+               "rcsb_description": [
+                  {
+                     "text": "The minor version number of the latest revision.",
+                     "context": "dictionary"
+                  }
+               ]
             },
-            "additionalProperties": false
+            "revision_date": {
+               "type": "string",
+               "format": "date-time",
+               "examples": [
+                  "2020-02-11",
+                  "2018-10-23"
+               ],
+               "description": "The release date of the latest revision item.",
+               "rcsb_description": [
+                  {
+                     "text": "The release date of the latest revision item.",
+                     "context": "dictionary"
+                  }
+               ]
+            }
          },
-         "minItems": 1,
-         "uniqueItems": true
+         "additionalProperties": false
       },
       "rcsb_ligand_neighbors": {
          "type": "array",
@@ -964,6 +893,7 @@
                   "enum": [
                      "ANGLE_OUTLIER",
                      "ANGLE_OUTLIERS",
+                     "ASA",
                      "AVERAGE_OCCUPANCY",
                      "BEND",
                      "BINDING_SITE",
@@ -1050,6 +980,11 @@
                         "value": "ANGLE_OUTLIERS",
                         "detail": "Number of atoms with angle outliers",
                         "name": "ANGLE_OUTLIERS"
+                     },
+                     {
+                        "value": "ASA",
+                        "detail": "Accessible Surface Area",
+                        "name": "ASA"
                      },
                      {
                         "value": "AVERAGE_OCCUPANCY",
@@ -2451,7 +2386,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Polymer Molecular Features",
-                        "priority_order": 35
+                        "priority_order": 40
                      }
                   ]
                },
@@ -2790,9 +2725,9 @@
    "required": [
       "rcsb_id"
    ],
-   "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json",
+   "$id": "https://github.com/rcsb/py-rcsb_exdb_assets/tree/master/json_schema_definitions/json-min-db-pdbx_core-col-pdbx_core_polymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 10.0.4",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 10.0.4. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 10.0.4"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity_instance version: 10.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity_instance version 10.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb_exdb_assets/tree/master/json_schema_definitions/json-min-db-pdbx_core-col-pdbx_core_polymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 10.1.0"
 }

@@ -1,8 +1,8 @@
 {
-   "NAME": "bird_chem_comp_core",
+   "NAME": "core_chem_comp",
    "APP_NAME": "ANY",
-   "DATABASE_NAME": "bird_chem_comp_core",
-   "DATABASE_VERSION": "7.1.2",
+   "DATABASE_NAME": "dw",
+   "DATABASE_VERSION": "7.2.0",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -7346,22 +7346,22 @@
    "DOCUMENT_DICT": {
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
-            "NAME": "bird_chem_comp_core",
-            "VERSION": "7.1.4"
+            "NAME": "core_chem_comp",
+            "VERSION": "7.2.0"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
-         "bird_chem_comp_core": [
+         "core_chem_comp": [
             "chem_comp.id"
          ]
       },
       "COLLECTION_DOCUMENT_REPLACE_ATTRIBUTE_NAMES": {
-         "bird_chem_comp_core": [
+         "core_chem_comp": [
             "chem_comp.id"
          ]
       },
       "COLLECTION_DOCUMENT_PRIVATE_KEYS": {
-         "bird_chem_comp_core": [
+         "core_chem_comp": [
             {
                "NAME": "comp.id",
                "CATEGORY_NAME": "rcsb_chem_comp_container_identifiers",
@@ -7373,7 +7373,7 @@
          ]
       },
       "COLLECTION_DOCUMENT_INDICES": {
-         "bird_chem_comp_core": [
+         "core_chem_comp": [
             {
                "INDEX_NAME": "primary",
                "ATTRIBUTE_NAMES": [
@@ -7382,6 +7382,7 @@
             },
             {
                "INDEX_NAME": "search_1",
+               "UNIQUE": true,
                "ATTRIBUTE_NAMES": [
                   "rcsb_entity_chem_comp_container_identifiers.comp_id"
                ]
@@ -7407,7 +7408,7 @@
          ]
       },
       "COLLECTION_CONTENT": {
-         "bird_chem_comp_core": {
+         "core_chem_comp": {
             "INCLUDE": [],
             "EXCLUDE": [
                "CHEM_COMP_ATOM",
@@ -7439,7 +7440,7 @@
          }
       },
       "COLLECTION_SUB_CATEGORY_AGGREGATES": {
-         "bird_chem_comp_core": [
+         "core_chem_comp": [
             {
                "NAME": "annotation_lineage",
                "HAS_UNIT_CARDINALITY": false
