@@ -238,6 +238,14 @@
             "entry_id": {
                "bsonType": "string"
             },
+            "interface_ids": {
+               "bsonType": "array",
+               "items": {
+                  "bsonType": "string"
+               },
+               "minItems": 1,
+               "uniqueItems": true
+            },
             "rcsb_id": {
                "bsonType": "string"
             }
@@ -295,6 +303,33 @@
                "bsonType": "int"
             },
             "nonpolymer_entity_instance_count": {
+               "bsonType": "int"
+            },
+            "num_heterologous_interface_entities": {
+               "bsonType": "int"
+            },
+            "num_heteromeric_interface_entities": {
+               "bsonType": "int"
+            },
+            "num_homomeric_interface_entities": {
+               "bsonType": "int"
+            },
+            "num_interface_entities": {
+               "bsonType": "int"
+            },
+            "num_interfaces": {
+               "bsonType": "int"
+            },
+            "num_isologous_interface_entities": {
+               "bsonType": "int"
+            },
+            "num_na_interface_entities": {
+               "bsonType": "int"
+            },
+            "num_prot_na_interface_entities": {
+               "bsonType": "int"
+            },
+            "num_protein_interface_entities": {
                "bsonType": "int"
             },
             "polymer_atom_count": {
@@ -376,6 +411,12 @@
             "solvent_entity_instance_count": {
                "bsonType": "int"
             },
+            "total_assembly_buried_surface_area": {
+               "bsonType": "double"
+            },
+            "total_number_interface_residues": {
+               "bsonType": "int"
+            },
             "unmodeled_polymer_monomer_count": {
                "bsonType": "int"
             }
@@ -385,7 +426,181 @@
             "entry_id"
          ]
       },
+      "rcsb_latest_revision": {
+         "bsonType": "object",
+         "properties": {
+            "major_revision": {
+               "bsonType": "int"
+            },
+            "minor_revision": {
+               "bsonType": "int"
+            },
+            "revision_date": {
+               "bsonType": "date"
+            }
+         },
+         "additionalProperties": false
+      },
+      "rcsb_struct_symmetry": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "kind": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Global Symmetry",
+                     "Local Symmetry",
+                     "Pseudo Symmetry"
+                  ]
+               },
+               "oligomeric_state": {
+                  "bsonType": "string"
+               },
+               "stoichiometry": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "string"
+                  },
+                  "uniqueItems": false
+               },
+               "symbol": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Asymmetric",
+                     "Cyclic",
+                     "Dihedral",
+                     "Helical",
+                     "Icosahedral",
+                     "Octahedral",
+                     "Tetrahedral"
+                  ]
+               },
+               "rotation_axes": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "end": {
+                           "bsonType": "array",
+                           "items": {
+                              "bsonType": "double"
+                           },
+                           "uniqueItems": false,
+                           "minItems": 3,
+                           "maxItems": 3,
+                           "description": "Describes x,y,z coordinates of the end point of the symmetry axis."
+                        },
+                        "order": {
+                           "bsonType": "int"
+                        },
+                        "start": {
+                           "bsonType": "array",
+                           "items": {
+                              "bsonType": "double"
+                           },
+                           "uniqueItems": false,
+                           "minItems": 3,
+                           "maxItems": 3,
+                           "description": "Describes x,y,z coordinates of the start point of the symmetry axis."
+                        }
+                     },
+                     "additionalProperties": false,
+                     "description": "The orientation of the principal rotation (symmetry) axis.",
+                     "required": [
+                        "end",
+                        "start"
+                     ]
+                  },
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "description": "Specifies a single or multiple rotation axes through the same point."
+               },
+               "clusters": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "members": {
+                           "bsonType": "array",
+                           "items": {
+                              "bsonType": "object",
+                              "properties": {
+                                 "asym_id": {
+                                    "bsonType": "string"
+                                 },
+                                 "pdbx_struct_oper_list_ids": {
+                                    "bsonType": "array",
+                                    "items": {
+                                       "bsonType": "string"
+                                    },
+                                    "minItems": 1,
+                                    "description": "Optional list of operator ids (pdbx_struct_oper_list.id) as appears in pdbx_struct_assembly_gen.oper_expression."
+                                 }
+                              },
+                              "additionalProperties": false,
+                              "description": "Subunits that belong to the cluster, identified by asym_id and optionally by assembly operator id(s).",
+                              "required": [
+                                 "asym_id"
+                              ]
+                           },
+                           "minItems": 1,
+                           "uniqueItems": true
+                        },
+                        "avg_rmsd": {
+                           "bsonType": "double"
+                        }
+                     },
+                     "additionalProperties": false,
+                     "required": [
+                        "members"
+                     ]
+                  },
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "description": "Clusters describe grouping of identical subunits."
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "clusters",
+               "kind",
+               "oligomeric_state",
+               "stoichiometry",
+               "symbol",
+               "type"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_struct_symmetry_lineage": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "depth": {
+                  "bsonType": "int"
+               },
+               "id": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_id": {
+         "bsonType": "string"
+      },
+      "rcsb_struct_symmetry_provenance_code": {
          "bsonType": "string"
       },
       "_id": {
@@ -394,6 +609,7 @@
    },
    "additionalProperties": false,
    "required": [
+      "rcsb_assembly_container_identifiers",
       "rcsb_id"
    ]
 }
