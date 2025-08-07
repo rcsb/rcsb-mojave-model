@@ -7351,14 +7351,10 @@
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
-         "core_chem_comp": [
-            "chem_comp.id"
-         ]
+         "core_chem_comp": []
       },
       "COLLECTION_DOCUMENT_REPLACE_ATTRIBUTE_NAMES": {
-         "core_chem_comp": [
-            "chem_comp.id"
-         ]
+         "core_chem_comp": []
       },
       "COLLECTION_DOCUMENT_PRIVATE_KEYS": {
          "core_chem_comp": [
@@ -7375,34 +7371,40 @@
       "COLLECTION_DOCUMENT_INDICES": {
          "core_chem_comp": [
             {
-               "INDEX_NAME": "primary",
+               "INDEX_NAME": "index_primary_key",
+               "UNIQUE": true,
                "ATTRIBUTE_NAMES": [
-                  "chem_comp.id"
+                  "rcsb_chem_comp_container_identifiers.comp_id"
                ]
             },
             {
                "INDEX_NAME": "search_1",
-               "UNIQUE": true,
                "ATTRIBUTE_NAMES": [
-                  "rcsb_entity_chem_comp_container_identifiers.comp_id"
+                  "rcsb_id"
                ]
             },
             {
                "INDEX_NAME": "search_2",
                "ATTRIBUTE_NAMES": [
-                  "rcsb_entity_chem_comp_container_identifiers.prd_id"
+                  "rcsb_chem_comp_container_identifiers.rcsb_id"
                ]
             },
             {
                "INDEX_NAME": "search_3",
                "ATTRIBUTE_NAMES": [
-                  "rcsb_entity_chem_comp_container_identifiers.rcsb_id"
+                  "pdbx_reference_molecule.prd_id"
                ]
             },
             {
                "INDEX_NAME": "search_4",
                "ATTRIBUTE_NAMES": [
-                  "rcsb_id"
+                  "rcsb_chem_comp_container_identifiers.prd_id"
+               ]
+            },
+            {
+               "INDEX_NAME": "search_5",
+               "ATTRIBUTE_NAMES": [
+                  "chem_comp.id"
                ]
             }
          ]

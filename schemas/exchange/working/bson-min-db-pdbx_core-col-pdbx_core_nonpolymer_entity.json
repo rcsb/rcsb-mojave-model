@@ -104,7 +104,10 @@
                   "uniqueItems": false
                }
             },
-            "additionalProperties": false
+            "additionalProperties": false,
+            "required": [
+               "type"
+            ]
          },
          "minItems": 1,
          "uniqueItems": true
@@ -245,7 +248,10 @@
                   "uniqueItems": false
                }
             },
-            "additionalProperties": false
+            "additionalProperties": false,
+            "required": [
+               "type"
+            ]
          },
          "minItems": 1,
          "uniqueItems": true
