@@ -4,37 +4,5 @@
   "description": "JSON schema for entity instance core data.",
   "type": "object",
   "properties": {
-    "rcsb_latest_revision": {
-      "type": "object",
-      "properties": {
-        "major_revision": {
-          "type": "integer",
-          "description": "The major version number of the latest revision."
-        },
-        "minor_revision": {
-          "type": "integer",
-          "description": "The minor version number of the latest revision."
-        },
-        "revision_date": {
-          "type": "string",
-          "format": "date-time",
-          "description": "The release date of the latest revision item."
-        }
-      }
-    },
-    "rcsb_polymer_instance_feature": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "enum": [
-              "ASA"
-            ]
-          }
-        }
-      }
-    }
   }
 }
