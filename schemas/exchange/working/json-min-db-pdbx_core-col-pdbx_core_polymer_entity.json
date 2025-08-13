@@ -4515,9 +4515,9 @@
             "properties": {
                "aggregation_method": {
                   "type": "string",
-                  "examples": [
-                     "sequence_identity",
-                     "matching_uniprot_accession"
+                  "enum": [
+                     "matching_uniprot_accession",
+                     "sequence_identity"
                   ],
                   "description": "Method used to establish group membership",
                   "rcsb_search_context": [
@@ -5179,6 +5179,7 @@
    },
    "additionalProperties": false,
    "required": [
+      "rcsb_polymer_entity_container_identifiers",
       "rcsb_id"
    ],
    "$id": "https://github.com/rcsb/py-rcsb_exdb_assets/tree/master/json_schema_definitions/json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json",

@@ -229,6 +229,71 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "rcsb_assembly_annotation": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "annotation_id": {
+                  "bsonType": "string"
+               },
+               "assignment_version": {
+                  "bsonType": "string"
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "provenance_source": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "MCSA"
+                  ]
+               },
+               "additional_properties": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "name": {
+                           "bsonType": "string",
+                           "enum": [
+                              "MCSA_MOTIF_COMPATIBILITY"
+                           ]
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "anyOf": [
+                                 {
+                                    "bsonType": "string"
+                                 },
+                                 {
+                                    "bsonType": "int"
+                                 },
+                                 {
+                                    "bsonType": "double"
+                                 }
+                              ]
+                           },
+                           "uniqueItems": false
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_assembly_container_identifiers": {
          "bsonType": "object",
          "properties": {
@@ -255,6 +320,111 @@
             "assembly_id",
             "entry_id"
          ]
+      },
+      "rcsb_assembly_feature": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "assignment_version": {
+                  "bsonType": "string"
+               },
+               "description": {
+                  "bsonType": "string"
+               },
+               "feature_id": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               },
+               "provenance_source": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "MCSA"
+                  ]
+               },
+               "additional_properties": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "name": {
+                           "bsonType": "string",
+                           "enum": [
+                              "MCSA_MOTIF_COMPATIBILITY"
+                           ]
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "anyOf": [
+                                 {
+                                    "bsonType": "string"
+                                 },
+                                 {
+                                    "bsonType": "int"
+                                 },
+                                 {
+                                    "bsonType": "double"
+                                 }
+                              ]
+                           },
+                           "uniqueItems": false
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               },
+               "feature_positions": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "asym_id": {
+                           "bsonType": "string"
+                        },
+                        "beg_seq_id": {
+                           "bsonType": "int"
+                        },
+                        "end_seq_id": {
+                           "bsonType": "int"
+                        },
+                        "struct_oper_list": {
+                           "bsonType": "array",
+                           "items": {
+                              "bsonType": "string"
+                           },
+                           "uniqueItems": false,
+                           "minLength": 1,
+                           "maxLength": 2
+                        },
+                        "values": {
+                           "bsonType": "array",
+                           "items": {
+                              "bsonType": "double"
+                           },
+                           "uniqueItems": false
+                        }
+                     },
+                     "additionalProperties": false,
+                     "required": [
+                        "asym_id",
+                        "beg_seq_id",
+                        "struct_oper_list"
+                     ]
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
       },
       "rcsb_assembly_info": {
          "bsonType": "object",
@@ -462,6 +632,7 @@
                   "items": {
                      "bsonType": "string"
                   },
+                  "minItems": 1,
                   "uniqueItems": false
                },
                "symbol": {

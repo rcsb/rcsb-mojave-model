@@ -59049,6 +59049,348 @@
             "SLICE_ENTITY_INSTANCE_BRANCHED": false
          }
       },
+      "RCSB_ASSEMBLY_ANNOTATION": {
+         "SCHEMA_ID": "RCSB_ASSEMBLY_ANNOTATION",
+         "SCHEMA_NAME": "rcsb_assembly_annotation",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [
+            "additional_properties"
+         ],
+         "ATTRIBUTES": {
+            "ORDINAL": "ordinal",
+            "ADDITIONAL_PROPERTIES_NAME": "additional_properties_name",
+            "ADDITIONAL_PROPERTIES_VALUES": "additional_properties_values",
+            "ANNOTATION_ID": "annotation_id",
+            "ASSEMBLY_ID": "assembly_id",
+            "ASSIGNMENT_VERSION": "assignment_version",
+            "DESCRIPTION": "description",
+            "ENTRY_ID": "entry_id",
+            "NAME": "name",
+            "PROVENANCE_SOURCE": "provenance_source",
+            "TYPE": "type"
+         },
+         "ATTRIBUTE_MAP": {
+            "ORDINAL": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ADDITIONAL_PROPERTIES_NAME": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "additional_properties_name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ADDITIONAL_PROPERTIES_VALUES": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "additional_properties_values",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ANNOTATION_ID": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "annotation_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ASSEMBLY_ID": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "assembly_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ASSIGNMENT_VERSION": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "assignment_version",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DESCRIPTION": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "description",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NAME": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PROVENANCE_SOURCE": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "provenance_source",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TYPE": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ORDINAL": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ADDITIONAL_PROPERTIES_NAME": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "MCSA_MOTIF_COMPATIBILITY"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "additional_properties"
+               ]
+            },
+            "ADDITIONAL_PROPERTIES_VALUES": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "any",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "additional_properties"
+               ]
+            },
+            "ANNOTATION_ID": {
+               "ORDER": 4,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ASSEMBLY_ID": {
+               "ORDER": 5,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ASSIGNMENT_VERSION": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DESCRIPTION": {
+               "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTRY_ID": {
+               "ORDER": 8,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NAME": {
+               "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PROVENANCE_SOURCE": {
+               "ORDER": 10,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 11,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "MCSA"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ORDINAL"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_assembly_annotation": {
+               "ATTRIBUTES": [
+                  "ordinal"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ASSEMBLY": [
+               {
+                  "PARENT_CATEGORY": "PDBX_STRUCT_ASSEMBLY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASSEMBLY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
       "RCSB_ASSEMBLY_CONTAINER_IDENTIFIERS": {
          "SCHEMA_ID": "RCSB_ASSEMBLY_CONTAINER_IDENTIFIERS",
          "SCHEMA_NAME": "rcsb_assembly_container_identifiers",
@@ -59196,6 +59538,514 @@
          "SLICE_UNIT_CARDINALITY": {
             "ENTITY": false,
             "ASSEMBLY": true,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "RCSB_ASSEMBLY_FEATURE": {
+         "SCHEMA_ID": "RCSB_ASSEMBLY_FEATURE",
+         "SCHEMA_NAME": "rcsb_assembly_feature",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [
+            "additional_properties",
+            "feature_positions"
+         ],
+         "ATTRIBUTES": {
+            "ORDINAL": "ordinal",
+            "ADDITIONAL_PROPERTIES_NAME": "additional_properties_name",
+            "ADDITIONAL_PROPERTIES_VALUES": "additional_properties_values",
+            "ASSEMBLY_ID": "assembly_id",
+            "ASSIGNMENT_VERSION": "assignment_version",
+            "DESCRIPTION": "description",
+            "ENTRY_ID": "entry_id",
+            "FEATURE_ID": "feature_id",
+            "FEATURE_POSITIONS_ASYM_ID": "feature_positions_asym_id",
+            "FEATURE_POSITIONS_BEG_SEQ_ID": "feature_positions_beg_seq_id",
+            "FEATURE_POSITIONS_END_SEQ_ID": "feature_positions_end_seq_id",
+            "FEATURE_POSITIONS_STRUCT_OPER_LIST": "feature_positions_struct_oper_list",
+            "FEATURE_POSITIONS_VALUES": "feature_positions_values",
+            "NAME": "name",
+            "PROVENANCE_SOURCE": "provenance_source",
+            "TYPE": "type"
+         },
+         "ATTRIBUTE_MAP": {
+            "ORDINAL": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ADDITIONAL_PROPERTIES_NAME": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "additional_properties_name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ADDITIONAL_PROPERTIES_VALUES": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "additional_properties_values",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ASSEMBLY_ID": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "assembly_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ASSIGNMENT_VERSION": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "assignment_version",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DESCRIPTION": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "description",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "FEATURE_ID": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "feature_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "FEATURE_POSITIONS_ASYM_ID": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "feature_positions_asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "FEATURE_POSITIONS_BEG_SEQ_ID": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "feature_positions_beg_seq_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "FEATURE_POSITIONS_END_SEQ_ID": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "feature_positions_end_seq_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "FEATURE_POSITIONS_STRUCT_OPER_LIST": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "feature_positions_struct_oper_list",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "FEATURE_POSITIONS_VALUES": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "feature_positions_values",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NAME": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PROVENANCE_SOURCE": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "provenance_source",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TYPE": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ORDINAL": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ADDITIONAL_PROPERTIES_NAME": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "MCSA_MOTIF_COMPATIBILITY"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "additional_properties"
+               ]
+            },
+            "ADDITIONAL_PROPERTIES_VALUES": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "any",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "additional_properties"
+               ]
+            },
+            "ASSEMBLY_ID": {
+               "ORDER": 4,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ASSIGNMENT_VERSION": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DESCRIPTION": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTRY_ID": {
+               "ORDER": 7,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "FEATURE_ID": {
+               "ORDER": 8,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "FEATURE_POSITIONS_ASYM_ID": {
+               "ORDER": 9,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "feature_positions"
+               ]
+            },
+            "FEATURE_POSITIONS_BEG_SEQ_ID": {
+               "ORDER": 10,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "feature_positions"
+               ]
+            },
+            "FEATURE_POSITIONS_END_SEQ_ID": {
+               "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "feature_positions"
+               ]
+            },
+            "FEATURE_POSITIONS_STRUCT_OPER_LIST": {
+               "ORDER": 12,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "feature_positions"
+               ]
+            },
+            "FEATURE_POSITIONS_VALUES": {
+               "ORDER": 13,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "feature_positions"
+               ]
+            },
+            "NAME": {
+               "ORDER": 14,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PROVENANCE_SOURCE": {
+               "ORDER": 15,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 16,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "MCSA"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ORDINAL"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_assembly_feature": {
+               "ATTRIBUTES": [
+                  "ordinal"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ASSEMBLY": [
+               {
+                  "PARENT_CATEGORY": "PDBX_STRUCT_ASSEMBLY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASSEMBLY_ID"
+               }
+            ],
+            "ENTITY_INSTANCE": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "FEATURE_POSITIONS_ASYM_ID"
+               }
+            ],
+            "ENTITY_INSTANCE_VALIDATION": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "FEATURE_POSITIONS_ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "FEATURE_POSITIONS_ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "FEATURE_POSITIONS_ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "FEATURE_POSITIONS_ASYM_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
             "ENTITY_MONOMER": false,
             "ENTITY_INSTANCE": false,
             "ENTITY_INSTANCE_VALIDATION": false,
@@ -85541,7 +86391,10 @@
                "EMBEDDED_ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
+               "ENUMERATION": [
+                  "matching_uniprot_accession",
+                  "sequence_identity"
+               ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
                ],
@@ -108041,6 +108894,16 @@
                "rcsb_struct_symmetry_lineage": [
                   "assembly_id",
                   "ordinal"
+               ],
+               "rcsb_assembly_feature": [
+                  "assembly_id",
+                  "entry_id",
+                  "ordinal"
+               ],
+               "rcsb_assembly_annotation": [
+                  "assembly_id",
+                  "entry_id",
+                  "ordinal"
                ]
             }
          },
@@ -108580,6 +109443,7 @@
                "RCSB_ENTITY_INSTANCE_VALIDATION_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_VALIDATION_FEATURE",
                "RCSB_ENTITY_INSTANCE_VALIDATION_FEATURE_SUMMARY",
+               "RCSB_ASSEMBLY_FEATURE",
                "RCSB_NONPOLYMER_ENTITY_INSTANCE_CONTAINER_IDENTIFIERS",
                "RCSB_NONPOLYMER_INSTANCE_FEATURE",
                "RCSB_NONPOLYMER_INSTANCE_FEATURE_SUMMARY",
@@ -108724,6 +109588,7 @@
                "RCSB_ENTITY_INSTANCE_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_FEATURE",
                "RCSB_ENTITY_INSTANCE_FEATURE_SUMMARY",
+               "RCSB_ASSEMBLY_FEATURE",
                "RCSB_ENTITY_INSTANCE_VALIDATION_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_VALIDATION_FEATURE",
                "RCSB_ENTITY_INSTANCE_VALIDATION_FEATURE_SUMMARY",
@@ -108884,6 +109749,7 @@
                "RCSB_ENTITY_INSTANCE_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_FEATURE",
                "RCSB_ENTITY_INSTANCE_FEATURE_SUMMARY",
+               "RCSB_ASSEMBLY_FEATURE",
                "RCSB_ENTITY_INSTANCE_VALIDATION_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_VALIDATION_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_VALIDATION_FEATURE",
@@ -109024,6 +109890,14 @@
                "MIN_ITEMS": 1,
                "UNIQUE_ITEMS": true,
                "DESCRIPTION": "Subunits that belong to the cluster, identified by asym_id and optionally by assembly operator id(s)."
+            },
+            {
+               "NAME": "additional_properties",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
+               "NAME": "feature_positions",
+               "HAS_UNIT_CARDINALITY": false
             }
          ],
          "pdbx_core_polymer_entity": [
