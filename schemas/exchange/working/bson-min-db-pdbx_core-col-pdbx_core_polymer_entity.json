@@ -1223,7 +1223,11 @@
             "bsonType": "object",
             "properties": {
                "aggregation_method": {
-                  "bsonType": "string"
+                  "bsonType": "string",
+                  "enum": [
+                     "matching_uniprot_accession",
+                     "sequence_identity"
+                  ]
                },
                "group_id": {
                   "bsonType": "string"
@@ -1452,6 +1456,7 @@
    },
    "additionalProperties": false,
    "required": [
+      "rcsb_polymer_entity_container_identifiers",
       "rcsb_id"
    ]
 }
