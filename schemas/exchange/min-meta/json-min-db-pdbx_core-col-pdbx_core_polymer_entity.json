@@ -1590,6 +1590,56 @@
          },
          "additionalProperties": false
       },
+      "rcsb_cluster_membership": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "cluster_id": {
+                  "type": "integer",
+                  "description": "Identifier for a cluster at the specified level of sequence identity within the cluster data set.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "Identifier for a cluster at the specified level of sequence identity within the cluster data set.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Cluster Identifier",
+                        "context": "brief"
+                     }
+                  ]
+               },
+               "identity": {
+                  "type": "integer",
+                  "description": "Sequence identity expressed as an integer percent value.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "Sequence identity expressed as an integer percent value.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Cluster Sequence Identity",
+                        "context": "brief"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "cluster_id",
+               "identity"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true,
+         "rcsb_nested_indexing": true
+      },
       "rcsb_entity_host_organism": {
          "type": "array",
          "items": {

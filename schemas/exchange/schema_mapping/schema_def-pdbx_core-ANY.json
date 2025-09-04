@@ -66693,6 +66693,167 @@
             "SLICE_ENTITY_INSTANCE_BRANCHED": false
          }
       },
+      "RCSB_CLUSTER_MEMBERSHIP": {
+         "SCHEMA_ID": "RCSB_CLUSTER_MEMBERSHIP",
+         "SCHEMA_NAME": "rcsb_cluster_membership",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "CLUSTER_ID": "cluster_id",
+            "ENTITY_ID": "entity_id",
+            "IDENTITY": "identity"
+         },
+         "ATTRIBUTE_MAP": {
+            "CLUSTER_ID": {
+               "CATEGORY": "rcsb_cluster_membership",
+               "ATTRIBUTE": "cluster_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTITY_ID": {
+               "CATEGORY": "rcsb_cluster_membership",
+               "ATTRIBUTE": "entity_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "IDENTITY": {
+               "CATEGORY": "rcsb_cluster_membership",
+               "ATTRIBUTE": "identity",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "CLUSTER_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTITY_ID": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "IDENTITY": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "CLUSTER_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_cluster_membership": {
+               "ATTRIBUTES": [
+                  "cluster_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ENTITY": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
       "RCSB_COMP_MODEL_PROVENANCE": {
          "SCHEMA_ID": "RCSB_COMP_MODEL_PROVENANCE",
          "SCHEMA_NAME": "rcsb_comp_model_provenance",
@@ -109087,6 +109248,9 @@
                "rcsb_polymer_entity_group_membership": [
                   "entity_id"
                ],
+               "rcsb_cluster_membership": [
+                  "entity_id"
+               ],
                "rcsb_genomic_lineage": [
                   "entity_id",
                   "ordinal"
@@ -109184,6 +109348,7 @@
                "MA_TARGET_ENTITY_INSTANCE",
                "MA_TARGET_REF_DB_DETAILS",
                "RCSB_POLYMER_ENTITY_GROUP_MEMBERSHIP",
+               "RCSB_CLUSTER_MEMBERSHIP",
                "RCSB_GENOMIC_LINEAGE",
                "RCSB_MEMBRANE_LINEAGE",
                "RCSB_CLUSTER_FLEXIBILITY"
@@ -109332,6 +109497,7 @@
                "MA_TARGET_ENTITY_INSTANCE",
                "MA_TARGET_REF_DB_DETAILS",
                "RCSB_POLYMER_ENTITY_GROUP_MEMBERSHIP",
+               "RCSB_CLUSTER_MEMBERSHIP",
                "RCSB_GENOMIC_LINEAGE",
                "RCSB_MEMBRANE_LINEAGE",
                "RCSB_CLUSTER_FLEXIBILITY"
@@ -109471,6 +109637,7 @@
                "MA_STRUCT_ASSEMBLY",
                "MA_QA_METRIC_LOCAL",
                "RCSB_POLYMER_ENTITY_GROUP_MEMBERSHIP",
+               "RCSB_CLUSTER_MEMBERSHIP",
                "RCSB_GENOMIC_LINEAGE",
                "RCSB_MEMBRANE_LINEAGE",
                "RCSB_CLUSTER_FLEXIBILITY"
@@ -109622,6 +109789,7 @@
                "MA_STRUCT_ASSEMBLY",
                "MA_QA_METRIC_LOCAL",
                "RCSB_POLYMER_ENTITY_GROUP_MEMBERSHIP",
+               "RCSB_CLUSTER_MEMBERSHIP",
                "RCSB_GENOMIC_LINEAGE",
                "RCSB_MEMBRANE_LINEAGE",
                "RCSB_CLUSTER_FLEXIBILITY"
@@ -109790,6 +109958,7 @@
                "MA_STRUCT_ASSEMBLY",
                "MA_QA_METRIC_LOCAL",
                "RCSB_POLYMER_ENTITY_GROUP_MEMBERSHIP",
+               "RCSB_CLUSTER_MEMBERSHIP",
                "RCSB_GENOMIC_LINEAGE",
                "RCSB_MEMBRANE_LINEAGE",
                "RCSB_CLUSTER_FLEXIBILITY"
