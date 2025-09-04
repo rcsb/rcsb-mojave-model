@@ -419,6 +419,27 @@
          },
          "additionalProperties": false
       },
+      "rcsb_cluster_membership": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "cluster_id": {
+                  "bsonType": "int"
+               },
+               "identity": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "cluster_id",
+               "identity"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_entity_host_organism": {
          "bsonType": "array",
          "items": {
