@@ -423,6 +423,10 @@
                                     <destinationFile>${project.build.directory}/${core.schema.location}/${core.nonpolymer.entity.json.schema.name}</destinationFile>
                                 </fileSet>
                                 <fileSet>
+                                    <sourceFile>${exch.json.schemas.location}/${exch.core.polymer.entity.json.schema.name}</sourceFile>
+                                    <destinationFile>${project.build.directory}/${core.schema.location}/${core.polymer.entity.json.schema.name}</destinationFile>
+                                </fileSet>
+                                <fileSet>
                                     <sourceFile>${exch.json.schemas.location}/${exch.core.branched.entity.json.schema.name}</sourceFile>
                                     <destinationFile>${project.build.directory}/${core.schema.location}/${core.branched.entity.json.schema.name}</destinationFile>
                                 </fileSet>
@@ -522,53 +526,7 @@
                 <!-- executes the supplied java class in the current VM with the enclosing project's dependencies as classpath -->
                 <executions>
 
-                    <!-- GENERATE INTERMEDIATE SEQUENCE CLUSTERS JSON SCHEMA -->
-                    <execution>
-                        <id>generate-derived-seq-clusters-schema</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                        <configuration>
-                            <includeProjectDependencies>true</includeProjectDependencies>
-                            <mainClass>org.rcsb.mojave.tools.derived.GenerateDerivedSchemaSeqClusters</mainClass>
-                            <arguments>
-                                <!-- where to get source schema -->
-                                <argument>-i</argument>
-                                <argument>file://${exch.json.schemas.location}/${exch.sequence.clusters.entity.members.json.schema.name}</argument>
-                                <!-- where to put final schema -->
-                                <argument>-o</argument>
-                                <argument>${project.build.directory}/${derived.schema.location}/${sequence.clusters.derived.json.schema.name}</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-
                     <!-- GENERATE CORE SCHEMAS -->
-
-                    <!-- EXCHANGE DB CORES -->
-                    <!-- TODO: review sequence cluster definitions -->
-                    <execution>
-                        <id>build-core-polymer-entity-schema</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <!-- execute Java programs in the same VM -->
-                            <goal>java</goal>
-                        </goals>
-                        <configuration>
-                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
-                            <arguments>
-                                <argument>-r</argument>
-                                <argument>true</argument>
-                                <!-- where to put final schema -->
-                                <argument>-o</argument>
-                                <argument>${project.build.directory}/${core.schema.location}/${core.polymer.entity.json.schema.name}</argument>
-                                <!-- list of schemas to stitch -->
-                                <argument>-i</argument>
-                                <argument>file://${project.build.directory}/${derived.schema.location}/${sequence.clusters.derived.json.schema.name}</argument>
-                                <argument>file://${exch.json.schemas.location}/${exch.core.polymer.entity.json.schema.name}</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
 
                     <!-- DWH DB CORES -->
                     <!-- These schemas contain "ref" that need to be resolved -->
