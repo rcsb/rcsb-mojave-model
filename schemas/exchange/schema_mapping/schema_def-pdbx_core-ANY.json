@@ -66747,13 +66747,12 @@
             },
             "ENTITY_ID": {
                "ORDER": 2,
-               "NULLABLE": true,
+               "NULLABLE": false,
                "PRECISION": 0,
-               "PRIMARY_KEY": false,
+               "PRIMARY_KEY": true,
                "APP_TYPE": "char",
                "WIDTH": 10,
                "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [],
@@ -66785,14 +66784,22 @@
             "p1": {
                "TYPE": "UNIQUE",
                "ATTRIBUTES": [
-                  "CLUSTER_ID"
+                  "CLUSTER_ID",
+                  "ENTITY_ID"
+               ]
+            },
+            "s1": {
+               "TYPE": "SEARCH",
+               "ATTRIBUTES": [
+                  null
                ]
             }
          },
          "MAP_MERGE_INDICES": {
             "rcsb_cluster_membership": {
                "ATTRIBUTES": [
-                  "cluster_id"
+                  "cluster_id",
+                  "entity_id"
                ],
                "TYPE": "EQUI-JOIN"
             }
