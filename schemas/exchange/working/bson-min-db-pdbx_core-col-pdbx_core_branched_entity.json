@@ -351,6 +351,21 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "rcsb_latest_revision": {
+         "bsonType": "object",
+         "properties": {
+            "major_revision": {
+               "bsonType": "int"
+            },
+            "minor_revision": {
+               "bsonType": "int"
+            },
+            "revision_date": {
+               "bsonType": "date"
+            }
+         },
+         "additionalProperties": false
+      },
       "rcsb_id": {
          "bsonType": "string"
       },
@@ -360,6 +375,7 @@
    },
    "additionalProperties": false,
    "required": [
+      "rcsb_branched_entity_container_identifiers",
       "rcsb_id"
    ]
 }

@@ -3624,6 +3624,64 @@
          },
          "additionalProperties": false
       },
+      "rcsb_binding_affinity": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "comp_id": {
+                  "bsonType": "string"
+               },
+               "link": {
+                  "bsonType": "string"
+               },
+               "provenance_code": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Binding MOAD",
+                     "BindingDB",
+                     "PDBBind"
+                  ]
+               },
+               "reference_sequence_identity": {
+                  "bsonType": "int"
+               },
+               "symbol": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "&Delta;G",
+                     "&Delta;H",
+                     "-T&Delta;S",
+                     "EC50",
+                     "IC50",
+                     "Ka",
+                     "Kd",
+                     "Ki"
+                  ]
+               },
+               "unit": {
+                  "bsonType": "string"
+               },
+               "value": {
+                  "bsonType": "double"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "comp_id",
+               "link",
+               "provenance_code",
+               "type",
+               "unit",
+               "value"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_comp_model_provenance": {
          "bsonType": "object",
          "properties": {
@@ -3732,6 +3790,30 @@
          "required": [
             "entry_id"
          ]
+      },
+      "rcsb_entry_group_membership": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "aggregation_method": {
+                  "bsonType": "string",
+                  "enum": [
+                     "matching_deposit_group_id"
+                  ]
+               },
+               "group_id": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "aggregation_method",
+               "group_id"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
       },
       "rcsb_entry_info": {
          "bsonType": "object",
@@ -4004,7 +4086,43 @@
                "additionalProperties": false
             }
          },
-         "additionalProperties": false
+         "additionalProperties": false,
+         "required": [
+            "structure_determination_methodology"
+         ]
+      },
+      "rcsb_external_references": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "id": {
+                  "bsonType": "string"
+               },
+               "link": {
+                  "bsonType": "string"
+               },
+               "type": {
+                  "bsonType": "string",
+                  "enum": [
+                     "BMRB",
+                     "EM DATA RESOURCE",
+                     "NAKB",
+                     "NDB",
+                     "OLDERADO",
+                     "PROTEIN DIFFRACTION",
+                     "SB GRID"
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "id",
+               "type"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
       },
       "rcsb_ihm_dataset_list": {
          "bsonType": "array",
@@ -5037,6 +5155,7 @@
    },
    "additionalProperties": false,
    "required": [
+      "rcsb_entry_container_identifiers",
       "rcsb_entry_info",
       "rcsb_id"
    ]

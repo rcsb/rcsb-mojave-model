@@ -79,6 +79,21 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "rcsb_latest_revision": {
+         "bsonType": "object",
+         "properties": {
+            "major_revision": {
+               "bsonType": "int"
+            },
+            "minor_revision": {
+               "bsonType": "int"
+            },
+            "revision_date": {
+               "bsonType": "date"
+            }
+         },
+         "additionalProperties": false
+      },
       "rcsb_ligand_neighbors": {
          "bsonType": "array",
          "items": {
@@ -220,7 +235,8 @@
             },
             "additionalProperties": false,
             "required": [
-               "ordinal"
+               "ordinal",
+               "type"
             ]
          },
          "minItems": 1,
@@ -263,6 +279,7 @@
                   "enum": [
                      "ANGLE_OUTLIER",
                      "ANGLE_OUTLIERS",
+                     "ASA",
                      "AVERAGE_OCCUPANCY",
                      "BEND",
                      "BINDING_SITE",
@@ -421,7 +438,8 @@
             },
             "additionalProperties": false,
             "required": [
-               "ordinal"
+               "ordinal",
+               "type"
             ]
          },
          "minItems": 1,

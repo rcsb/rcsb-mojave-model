@@ -177,6 +177,47 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "rcsb_latest_revision": {
+         "type": "object",
+         "properties": {
+            "major_revision": {
+               "type": "integer",
+               "description": "The major version number of the latest revision.",
+               "rcsb_description": [
+                  {
+                     "text": "The major version number of the latest revision.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "minor_revision": {
+               "type": "integer",
+               "description": "The minor version number of the latest revision.",
+               "rcsb_description": [
+                  {
+                     "text": "The minor version number of the latest revision.",
+                     "context": "dictionary"
+                  }
+               ]
+            },
+            "revision_date": {
+               "type": "string",
+               "format": "date-time",
+               "examples": [
+                  "2020-02-11",
+                  "2018-10-23"
+               ],
+               "description": "The release date of the latest revision item.",
+               "rcsb_description": [
+                  {
+                     "text": "The release date of the latest revision item.",
+                     "context": "dictionary"
+                  }
+               ]
+            }
+         },
+         "additionalProperties": false
+      },
       "rcsb_nonpolymer_entity_instance_container_identifiers": {
          "type": "object",
          "properties": {
@@ -539,7 +580,8 @@
             },
             "additionalProperties": false,
             "required": [
-               "ordinal"
+               "ordinal",
+               "type"
             ]
          },
          "minItems": 1,
@@ -2162,9 +2204,9 @@
    "required": [
       "rcsb_id"
    ],
-   "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json",
+   "$id": "https://github.com/rcsb/py-rcsb_exdb_assets/tree/master/json_schema_definitions/json-min-db-pdbx_core-col-pdbx_core_nonpolymer_entity_instance.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 10.0.1",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 10.0.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-min-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 10.0.1"
+   "title": "schema: pdbx_core collection: pdbx_core_nonpolymer_entity_instance version: 10.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_nonpolymer_entity_instance version 10.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb_exdb_assets/tree/master/json_schema_definitions/json-min-db-pdbx_core-col-pdbx_core_nonpolymer_entity_instance.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 10.1.0"
 }

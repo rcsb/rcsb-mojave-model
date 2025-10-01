@@ -22,6 +22,21 @@
             "entity_id"
          ]
       },
+      "rcsb_latest_revision": {
+         "bsonType": "object",
+         "properties": {
+            "major_revision": {
+               "bsonType": "int"
+            },
+            "minor_revision": {
+               "bsonType": "int"
+            },
+            "revision_date": {
+               "bsonType": "date"
+            }
+         },
+         "additionalProperties": false
+      },
       "rcsb_nonpolymer_entity": {
          "bsonType": "object",
          "properties": {
@@ -89,7 +104,10 @@
                   "uniqueItems": false
                }
             },
-            "additionalProperties": false
+            "additionalProperties": false,
+            "required": [
+               "type"
+            ]
          },
          "minItems": 1,
          "uniqueItems": true
@@ -230,7 +248,10 @@
                   "uniqueItems": false
                }
             },
-            "additionalProperties": false
+            "additionalProperties": false,
+            "required": [
+               "type"
+            ]
          },
          "minItems": 1,
          "uniqueItems": true
@@ -305,6 +326,7 @@
    },
    "additionalProperties": false,
    "required": [
+      "rcsb_nonpolymer_entity_container_identifiers",
       "rcsb_id"
    ]
 }

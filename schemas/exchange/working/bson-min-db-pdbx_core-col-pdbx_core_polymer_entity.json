@@ -395,6 +395,51 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "rcsb_cluster_flexibility": {
+         "bsonType": "object",
+         "properties": {
+            "avg_rmsd": {
+               "bsonType": "double"
+            },
+            "label": {
+               "bsonType": "string"
+            },
+            "link": {
+               "bsonType": "string"
+            },
+            "max_rmsd": {
+               "bsonType": "double"
+            },
+            "provenance_code": {
+               "bsonType": "string",
+               "enum": [
+                  "PDBFlex"
+               ]
+            }
+         },
+         "additionalProperties": false
+      },
+      "rcsb_cluster_membership": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "cluster_id": {
+                  "bsonType": "int"
+               },
+               "identity": {
+                  "bsonType": "int"
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "cluster_id",
+               "identity"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_entity_host_organism": {
          "bsonType": "array",
          "items": {
@@ -569,6 +614,61 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "rcsb_genomic_lineage": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "depth": {
+                  "bsonType": "int"
+               },
+               "id": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_latest_revision": {
+         "bsonType": "object",
+         "properties": {
+            "major_revision": {
+               "bsonType": "int"
+            },
+            "minor_revision": {
+               "bsonType": "int"
+            },
+            "revision_date": {
+               "bsonType": "date"
+            }
+         },
+         "additionalProperties": false
+      },
+      "rcsb_membrane_lineage": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "depth": {
+                  "bsonType": "int"
+               },
+               "id": {
+                  "bsonType": "string"
+               },
+               "name": {
+                  "bsonType": "string"
+               }
+            },
+            "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "rcsb_polymer_entity": {
          "bsonType": "object",
          "properties": {
@@ -678,6 +778,28 @@
                   "additionalProperties": false
                },
                "uniqueItems": false
+            },
+            "rcsb_polymer_name_combined": {
+               "bsonType": "object",
+               "properties": {
+                  "names": {
+                     "bsonType": "array",
+                     "items": {
+                        "bsonType": "string"
+                     },
+                     "uniqueItems": true,
+                     "minItems": 1
+                  },
+                  "provenance_source": {
+                     "bsonType": "string",
+                     "enum": [
+                        "PDB Description",
+                        "PDB Preferred Name",
+                        "UniProt Name"
+                     ]
+                  }
+               },
+               "additionalProperties": false
             }
          },
          "additionalProperties": false
@@ -826,7 +948,10 @@
                   "uniqueItems": false
                }
             },
-            "additionalProperties": false
+            "additionalProperties": false,
+            "required": [
+               "type"
+            ]
          },
          "minItems": 1,
          "uniqueItems": true
@@ -981,6 +1106,9 @@
                      "SABDAB_ANTIBODY_NAME",
                      "SABDAB_ANTIBODY_TARGET",
                      "artifact",
+                     "disorder",
+                     "disorder_binding",
+                     "hydropathy",
                      "modified_monomer",
                      "mutation"
                   ]
@@ -1053,7 +1181,10 @@
                   "uniqueItems": false
                }
             },
-            "additionalProperties": false
+            "additionalProperties": false,
+            "required": [
+               "type"
+            ]
          },
          "minItems": 1,
          "uniqueItems": true
@@ -1103,6 +1234,53 @@
                }
             },
             "additionalProperties": false
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
+      "rcsb_polymer_entity_group_membership": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "aggregation_method": {
+                  "bsonType": "string",
+                  "enum": [
+                     "matching_uniprot_accession",
+                     "sequence_identity"
+                  ]
+               },
+               "group_id": {
+                  "bsonType": "string"
+               },
+               "similarity_cutoff": {
+                  "bsonType": "double"
+               },
+               "aligned_regions": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "object",
+                     "properties": {
+                        "entity_beg_seq_id": {
+                           "bsonType": "int"
+                        },
+                        "length": {
+                           "bsonType": "int"
+                        },
+                        "ref_beg_seq_id": {
+                           "bsonType": "int"
+                        }
+                     },
+                     "additionalProperties": false
+                  },
+                  "uniqueItems": false
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "aggregation_method",
+               "group_id"
+            ]
          },
          "minItems": 1,
          "uniqueItems": true
@@ -1286,12 +1464,20 @@
       "rcsb_id": {
          "bsonType": "string"
       },
+      "rcsb_membrane_lineage_provenance_code": {
+         "bsonType": "string",
+         "enum": [
+            "Homology",
+            "Mpstruc"
+         ]
+      },
       "_id": {
          "bsonType": "objectId"
       }
    },
    "additionalProperties": false,
    "required": [
+      "rcsb_polymer_entity_container_identifiers",
       "rcsb_id"
    ]
 }

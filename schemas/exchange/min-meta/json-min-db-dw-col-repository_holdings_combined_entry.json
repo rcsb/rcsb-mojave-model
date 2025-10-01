@@ -123,11 +123,7 @@
                ]
             }
          },
-         "additionalProperties": false,
-         "required": [
-            "status",
-            "status_code"
-         ]
+         "additionalProperties": false
       },
       "rcsb_repository_holdings_combined_entry_container_identifiers": {
          "type": "object",
@@ -174,9 +170,7 @@
          },
          "additionalProperties": false,
          "required": [
-            "entry_id",
-            "rcsb_id",
-            "update_id"
+            "entry_id"
          ]
       },
       "rcsb_id": {
@@ -197,9 +191,9 @@
    "required": [
       "rcsb_id"
    ],
-   "$id": "https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-repository_holdings_combined_entry.json",
+   "$id": "https://github.com/rcsb/py-rcsb_exdb_assets/tree/master/json_schema_definitions/json-min-db-dw-col-repository_holdings_combined_entry.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: repository_holdings collection: repository_holdings_combined_entry version: 1.0.0",
-   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_combined_entry version 1.0.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb.db/tree/master/rcsb.db/data/json-schema/json-schema-full-repository_holdings_combined_entry.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 1.0.0"
+   "title": "schema: repository_holdings collection: repository_holdings_combined_entry version: 1.1.0",
+   "description": "RCSB Exchange Database JSON schema derived from the repository_holdings content type schema. This schema supports collection repository_holdings_combined_entry version 1.1.0. This schema is hosted in repository https://github.com/rcsb/py-rcsb_exdb_assets/tree/master/json_schema_definitions/json-min-db-dw-col-repository_holdings_combined_entry.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 1.1.0"
 }

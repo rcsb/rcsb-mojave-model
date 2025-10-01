@@ -79,6 +79,21 @@
          "minItems": 1,
          "uniqueItems": true
       },
+      "rcsb_latest_revision": {
+         "bsonType": "object",
+         "properties": {
+            "major_revision": {
+               "bsonType": "int"
+            },
+            "minor_revision": {
+               "bsonType": "int"
+            },
+            "revision_date": {
+               "bsonType": "date"
+            }
+         },
+         "additionalProperties": false
+      },
       "rcsb_nonpolymer_entity_instance_container_identifiers": {
          "bsonType": "object",
          "properties": {
@@ -168,7 +183,8 @@
             },
             "additionalProperties": false,
             "required": [
-               "ordinal"
+               "ordinal",
+               "type"
             ]
          },
          "minItems": 1,

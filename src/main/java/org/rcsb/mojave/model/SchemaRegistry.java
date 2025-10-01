@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * Schema Registry assigns unique names for each Schema type that can be resolved. Each type has its own priority,
  * hardcoded inside, that maps a given type to a property name in 'model.module.properties' file.
- *
+ * <p>
  * Created on 10/2/18.
  *
  * @author Yana Valasatava
@@ -36,25 +36,19 @@ public enum SchemaRegistry {
     CORE_INTERFACE_BSON("validation.interface.bson.schema.name"),
 
     CORE_ENTRY_JSON("core.entry.json.schema.name"),
-    CORE_ENTRY_BSON("validation.entry.bson.schema.name"),
 
     CORE_POLYMER_ENTITY_JSON("core.polymer.entity.json.schema.name"),
-    CORE_POLYMER_ENTITY_BSON("validation.polymer.entity.bson.schema.name"),
 
     CORE_NONPOLYMER_ENTITY_JSON("core.nonpolymer.entity.json.schema.name"),
-    CORE_NONPOLYMER_ENTITY_BSON("validation.nonpolymer.entity.bson.schema.name"),
 
     CORE_BRANCHED_ENTITY_JSON("core.branched.entity.json.schema.name"),
-    CORE_BRANCHED_ENTITY_BSON("validation.branched.entity.bson.schema.name"),
 
     CORE_POLYMER_ENTITY_INSTANCE_JSON("core.polymer.entity.instance.json.schema.name"),
     CORE_POLYMER_ENTITY_INSTANCE_BSON("validation.polymer.entity.instance.bson.schema.name"),
 
     CORE_NONPOLYMER_ENTITY_INSTANCE_JSON("core.nonpolymer.entity.instance.json.schema.name"),
-    CORE_NONPOLYMER_ENTITY_INSTANCE_BSON("validation.nonpolymer.entity.instance.bson.schema.name"),
 
     CORE_BRANCHED_ENTITY_INSTANCE_JSON("core.branched.entity.instance.json.schema.name"),
-    CORE_BRANCHED_ENTITY_INSTANCE_BSON("validation.branched.entity.instance.bson.schema.name"),
 
     CORE_UNIPROT_JSON("core.uniprot.json.schema.name"),
     CORE_UNIPROT_BSON("validation.uniprot.bson.schema.name"),
@@ -63,10 +57,8 @@ public enum SchemaRegistry {
     CORE_NCBI_BSON("validation.ncbi.bson.schema.name"),
 
     CORE_BIRD_CHEMCOMP_JSON("core.bird.chemcomp.json.schema.name"),
-    CORE_BIRD_CHEMCOMP_BSON("validation.bird.chemcomp.bson.schema.name"),
 
     CORE_DRUGBANK_JSON("core.drugbank.json.schema.name"),
-    CORE_DRUGBANK_BSON("validation.drugbank.bson.schema.name"),
 
     CORE_PFAM_JSON("core.pfam.json.schema.name"),
     CORE_PFAM_BSON("validation.pfam.bson.schema.name"),
@@ -78,16 +70,12 @@ public enum SchemaRegistry {
     TREE_BSON("validation.graph.bson.schema.name"),
 
     CURRENT_ENTRIES_JSON("holdings.current.entry.json.schema.name"),
-    CURRENT_ENTRIES_BSON("validation.current.entry.bson.schema.name"),
 
     REMOVED_ENTRIES_JSON("holdings.removed.entry.json.schema.name"),
-    REMOVED_ENTRIES_BSON("validation.removed.entry.bson.schema.name"),
 
     UNRELEASED_ENTRIES_JSON("holdings.unreleased.entry.json.schema.name"),
-    UNRELEASED_ENTRIES_BSON("validation.unreleased.entry.bson.schema.name"),
 
     COMBINED_ENTRIES_JSON("holdings.combined.entry.json.schema.name"),
-    COMBINED_ENTRIES_BSON("validation.combined.entry.bson.schema.name"),
 
     SHAPE_DESCRIPTOR_JSON("shape.json.schema.name"),
     SHAPE_DESCRIPTOR_BSON("validation.shape.bson.schema.name"),

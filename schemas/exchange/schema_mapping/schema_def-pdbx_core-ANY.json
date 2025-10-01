@@ -59049,6 +59049,348 @@
             "SLICE_ENTITY_INSTANCE_BRANCHED": false
          }
       },
+      "RCSB_ASSEMBLY_ANNOTATION": {
+         "SCHEMA_ID": "RCSB_ASSEMBLY_ANNOTATION",
+         "SCHEMA_NAME": "rcsb_assembly_annotation",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [
+            "additional_properties"
+         ],
+         "ATTRIBUTES": {
+            "ORDINAL": "ordinal",
+            "ADDITIONAL_PROPERTIES_NAME": "additional_properties_name",
+            "ADDITIONAL_PROPERTIES_VALUES": "additional_properties_values",
+            "ANNOTATION_ID": "annotation_id",
+            "ASSEMBLY_ID": "assembly_id",
+            "ASSIGNMENT_VERSION": "assignment_version",
+            "DESCRIPTION": "description",
+            "ENTRY_ID": "entry_id",
+            "NAME": "name",
+            "PROVENANCE_SOURCE": "provenance_source",
+            "TYPE": "type"
+         },
+         "ATTRIBUTE_MAP": {
+            "ORDINAL": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ADDITIONAL_PROPERTIES_NAME": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "additional_properties_name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ADDITIONAL_PROPERTIES_VALUES": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "additional_properties_values",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ANNOTATION_ID": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "annotation_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ASSEMBLY_ID": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "assembly_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ASSIGNMENT_VERSION": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "assignment_version",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DESCRIPTION": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "description",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NAME": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PROVENANCE_SOURCE": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "provenance_source",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TYPE": {
+               "CATEGORY": "rcsb_assembly_annotation",
+               "ATTRIBUTE": "type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ORDINAL": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ADDITIONAL_PROPERTIES_NAME": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "MCSA_MOTIF_COMPATIBILITY"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "additional_properties"
+               ]
+            },
+            "ADDITIONAL_PROPERTIES_VALUES": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "any",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "additional_properties"
+               ]
+            },
+            "ANNOTATION_ID": {
+               "ORDER": 4,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ASSEMBLY_ID": {
+               "ORDER": 5,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ASSIGNMENT_VERSION": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DESCRIPTION": {
+               "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTRY_ID": {
+               "ORDER": 8,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NAME": {
+               "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PROVENANCE_SOURCE": {
+               "ORDER": 10,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 11,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "MCSA"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ORDINAL"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_assembly_annotation": {
+               "ATTRIBUTES": [
+                  "ordinal"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ASSEMBLY": [
+               {
+                  "PARENT_CATEGORY": "PDBX_STRUCT_ASSEMBLY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASSEMBLY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
       "RCSB_ASSEMBLY_CONTAINER_IDENTIFIERS": {
          "SCHEMA_ID": "RCSB_ASSEMBLY_CONTAINER_IDENTIFIERS",
          "SCHEMA_NAME": "rcsb_assembly_container_identifiers",
@@ -59057,11 +59399,12 @@
          "SCHEMA_CONTENT_CLASSES": [
             "GENERATED_CONTENT"
          ],
-         "SCHEMA_MANDATORY": false,
+         "SCHEMA_MANDATORY": true,
          "SCHEMA_SUB_CATEGORIES": [],
          "ATTRIBUTES": {
             "ASSEMBLY_ID": "assembly_id",
             "ENTRY_ID": "entry_id",
+            "INTERFACE_IDS": "interface_ids",
             "RCSB_ID": "rcsb_id"
          },
          "ATTRIBUTE_MAP": {
@@ -59074,6 +59417,12 @@
             "ENTRY_ID": {
                "CATEGORY": "rcsb_assembly_container_identifiers",
                "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "INTERFACE_IDS": {
+               "CATEGORY": "rcsb_assembly_container_identifiers",
+               "ATTRIBUTE": "interface_ids",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -59117,8 +59466,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RCSB_ID": {
+            "INTERFACE_IDS": {
                "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_ID": {
+               "ORDER": 4,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -59196,6 +59562,514 @@
             "SLICE_ENTITY_INSTANCE_BRANCHED": false
          }
       },
+      "RCSB_ASSEMBLY_FEATURE": {
+         "SCHEMA_ID": "RCSB_ASSEMBLY_FEATURE",
+         "SCHEMA_NAME": "rcsb_assembly_feature",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [
+            "additional_properties",
+            "feature_positions"
+         ],
+         "ATTRIBUTES": {
+            "ORDINAL": "ordinal",
+            "ADDITIONAL_PROPERTIES_NAME": "additional_properties_name",
+            "ADDITIONAL_PROPERTIES_VALUES": "additional_properties_values",
+            "ASSEMBLY_ID": "assembly_id",
+            "ASSIGNMENT_VERSION": "assignment_version",
+            "DESCRIPTION": "description",
+            "ENTRY_ID": "entry_id",
+            "FEATURE_ID": "feature_id",
+            "FEATURE_POSITIONS_ASYM_ID": "feature_positions_asym_id",
+            "FEATURE_POSITIONS_BEG_SEQ_ID": "feature_positions_beg_seq_id",
+            "FEATURE_POSITIONS_END_SEQ_ID": "feature_positions_end_seq_id",
+            "FEATURE_POSITIONS_STRUCT_OPER_LIST": "feature_positions_struct_oper_list",
+            "FEATURE_POSITIONS_VALUES": "feature_positions_values",
+            "NAME": "name",
+            "PROVENANCE_SOURCE": "provenance_source",
+            "TYPE": "type"
+         },
+         "ATTRIBUTE_MAP": {
+            "ORDINAL": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ADDITIONAL_PROPERTIES_NAME": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "additional_properties_name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ADDITIONAL_PROPERTIES_VALUES": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "additional_properties_values",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ASSEMBLY_ID": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "assembly_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ASSIGNMENT_VERSION": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "assignment_version",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DESCRIPTION": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "description",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTRY_ID": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "entry_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "FEATURE_ID": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "feature_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "FEATURE_POSITIONS_ASYM_ID": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "feature_positions_asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "FEATURE_POSITIONS_BEG_SEQ_ID": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "feature_positions_beg_seq_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "FEATURE_POSITIONS_END_SEQ_ID": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "feature_positions_end_seq_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "FEATURE_POSITIONS_STRUCT_OPER_LIST": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "feature_positions_struct_oper_list",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "FEATURE_POSITIONS_VALUES": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "feature_positions_values",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NAME": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PROVENANCE_SOURCE": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "provenance_source",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TYPE": {
+               "CATEGORY": "rcsb_assembly_feature",
+               "ATTRIBUTE": "type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ORDINAL": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ADDITIONAL_PROPERTIES_NAME": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "MCSA_MOTIF_COMPATIBILITY"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "additional_properties"
+               ]
+            },
+            "ADDITIONAL_PROPERTIES_VALUES": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "any",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "additional_properties"
+               ]
+            },
+            "ASSEMBLY_ID": {
+               "ORDER": 4,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ASSIGNMENT_VERSION": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DESCRIPTION": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTRY_ID": {
+               "ORDER": 7,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "FEATURE_ID": {
+               "ORDER": 8,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "FEATURE_POSITIONS_ASYM_ID": {
+               "ORDER": 9,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "feature_positions"
+               ]
+            },
+            "FEATURE_POSITIONS_BEG_SEQ_ID": {
+               "ORDER": 10,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "feature_positions"
+               ]
+            },
+            "FEATURE_POSITIONS_END_SEQ_ID": {
+               "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "feature_positions"
+               ]
+            },
+            "FEATURE_POSITIONS_STRUCT_OPER_LIST": {
+               "ORDER": 12,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "feature_positions"
+               ]
+            },
+            "FEATURE_POSITIONS_VALUES": {
+               "ORDER": 13,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "feature_positions"
+               ]
+            },
+            "NAME": {
+               "ORDER": 14,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PROVENANCE_SOURCE": {
+               "ORDER": 15,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 16,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "MCSA"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ORDINAL"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_assembly_feature": {
+               "ATTRIBUTES": [
+                  "ordinal"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ASSEMBLY": [
+               {
+                  "PARENT_CATEGORY": "PDBX_STRUCT_ASSEMBLY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASSEMBLY_ID"
+               }
+            ],
+            "ENTITY_INSTANCE": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "FEATURE_POSITIONS_ASYM_ID"
+               }
+            ],
+            "ENTITY_INSTANCE_VALIDATION": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "FEATURE_POSITIONS_ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "FEATURE_POSITIONS_ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "FEATURE_POSITIONS_ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "FEATURE_POSITIONS_ASYM_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
       "RCSB_ASSEMBLY_INFO": {
          "SCHEMA_ID": "RCSB_ASSEMBLY_INFO",
          "SCHEMA_NAME": "rcsb_assembly_info",
@@ -59220,6 +60094,15 @@
             "NONPOLYMER_ATOM_COUNT": "nonpolymer_atom_count",
             "NONPOLYMER_ENTITY_COUNT": "nonpolymer_entity_count",
             "NONPOLYMER_ENTITY_INSTANCE_COUNT": "nonpolymer_entity_instance_count",
+            "NUM_HETEROLOGOUS_INTERFACE_ENTITIES": "num_heterologous_interface_entities",
+            "NUM_HETEROMERIC_INTERFACE_ENTITIES": "num_heteromeric_interface_entities",
+            "NUM_HOMOMERIC_INTERFACE_ENTITIES": "num_homomeric_interface_entities",
+            "NUM_INTERFACE_ENTITIES": "num_interface_entities",
+            "NUM_INTERFACES": "num_interfaces",
+            "NUM_ISOLOGOUS_INTERFACE_ENTITIES": "num_isologous_interface_entities",
+            "NUM_NA_INTERFACE_ENTITIES": "num_na_interface_entities",
+            "NUM_PROT_NA_INTERFACE_ENTITIES": "num_prot_na_interface_entities",
+            "NUM_PROTEIN_INTERFACE_ENTITIES": "num_protein_interface_entities",
             "POLYMER_ATOM_COUNT": "polymer_atom_count",
             "POLYMER_COMPOSITION": "polymer_composition",
             "POLYMER_ENTITY_COUNT": "polymer_entity_count",
@@ -59239,6 +60122,8 @@
             "SOLVENT_ATOM_COUNT": "solvent_atom_count",
             "SOLVENT_ENTITY_COUNT": "solvent_entity_count",
             "SOLVENT_ENTITY_INSTANCE_COUNT": "solvent_entity_instance_count",
+            "TOTAL_ASSEMBLY_BURIED_SURFACE_AREA": "total_assembly_buried_surface_area",
+            "TOTAL_NUMBER_INTERFACE_RESIDUES": "total_number_interface_residues",
             "UNMODELED_POLYMER_MONOMER_COUNT": "unmodeled_polymer_monomer_count"
          },
          "ATTRIBUTE_MAP": {
@@ -59317,6 +60202,60 @@
             "NONPOLYMER_ENTITY_INSTANCE_COUNT": {
                "CATEGORY": "rcsb_assembly_info",
                "ATTRIBUTE": "nonpolymer_entity_instance_count",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NUM_HETEROLOGOUS_INTERFACE_ENTITIES": {
+               "CATEGORY": "rcsb_assembly_info",
+               "ATTRIBUTE": "num_heterologous_interface_entities",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NUM_HETEROMERIC_INTERFACE_ENTITIES": {
+               "CATEGORY": "rcsb_assembly_info",
+               "ATTRIBUTE": "num_heteromeric_interface_entities",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NUM_HOMOMERIC_INTERFACE_ENTITIES": {
+               "CATEGORY": "rcsb_assembly_info",
+               "ATTRIBUTE": "num_homomeric_interface_entities",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NUM_INTERFACE_ENTITIES": {
+               "CATEGORY": "rcsb_assembly_info",
+               "ATTRIBUTE": "num_interface_entities",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NUM_INTERFACES": {
+               "CATEGORY": "rcsb_assembly_info",
+               "ATTRIBUTE": "num_interfaces",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NUM_ISOLOGOUS_INTERFACE_ENTITIES": {
+               "CATEGORY": "rcsb_assembly_info",
+               "ATTRIBUTE": "num_isologous_interface_entities",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NUM_NA_INTERFACE_ENTITIES": {
+               "CATEGORY": "rcsb_assembly_info",
+               "ATTRIBUTE": "num_na_interface_entities",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NUM_PROT_NA_INTERFACE_ENTITIES": {
+               "CATEGORY": "rcsb_assembly_info",
+               "ATTRIBUTE": "num_prot_na_interface_entities",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NUM_PROTEIN_INTERFACE_ENTITIES": {
+               "CATEGORY": "rcsb_assembly_info",
+               "ATTRIBUTE": "num_protein_interface_entities",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -59431,6 +60370,18 @@
             "SOLVENT_ENTITY_INSTANCE_COUNT": {
                "CATEGORY": "rcsb_assembly_info",
                "ATTRIBUTE": "solvent_entity_instance_count",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TOTAL_ASSEMBLY_BURIED_SURFACE_AREA": {
+               "CATEGORY": "rcsb_assembly_info",
+               "ATTRIBUTE": "total_assembly_buried_surface_area",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TOTAL_NUMBER_INTERFACE_RESIDUES": {
+               "CATEGORY": "rcsb_assembly_info",
+               "ATTRIBUTE": "total_number_interface_residues",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -59668,7 +60619,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_ATOM_COUNT": {
+            "NUM_HETEROLOGOUS_INTERFACE_ENTITIES": {
                "ORDER": 14,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -59685,8 +60636,161 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_COMPOSITION": {
+            "NUM_HETEROMERIC_INTERFACE_ENTITIES": {
                "ORDER": 15,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NUM_HOMOMERIC_INTERFACE_ENTITIES": {
+               "ORDER": 16,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NUM_INTERFACE_ENTITIES": {
+               "ORDER": 17,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NUM_INTERFACES": {
+               "ORDER": 18,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NUM_ISOLOGOUS_INTERFACE_ENTITIES": {
+               "ORDER": 19,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NUM_NA_INTERFACE_ENTITIES": {
+               "ORDER": 20,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NUM_PROT_NA_INTERFACE_ENTITIES": {
+               "ORDER": 21,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NUM_PROTEIN_INTERFACE_ENTITIES": {
+               "ORDER": 22,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "POLYMER_ATOM_COUNT": {
+               "ORDER": 23,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "POLYMER_COMPOSITION": {
+               "ORDER": 24,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -59718,159 +60822,6 @@
                "SUB_CATEGORIES": []
             },
             "POLYMER_ENTITY_COUNT": {
-               "ORDER": 16,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "POLYMER_ENTITY_COUNT_DNA": {
-               "ORDER": 17,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "POLYMER_ENTITY_COUNT_RNA": {
-               "ORDER": 18,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "POLYMER_ENTITY_COUNT_NUCLEIC_ACID": {
-               "ORDER": 19,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "POLYMER_ENTITY_COUNT_NUCLEIC_ACID_HYBRID": {
-               "ORDER": 20,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "POLYMER_ENTITY_COUNT_PROTEIN": {
-               "ORDER": 21,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "POLYMER_ENTITY_INSTANCE_COUNT": {
-               "ORDER": 22,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "POLYMER_ENTITY_INSTANCE_COUNT_DNA": {
-               "ORDER": 23,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "POLYMER_ENTITY_INSTANCE_COUNT_RNA": {
-               "ORDER": 24,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "int",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [],
-               "IS_CHAR_TYPE": false,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [
-                  "GENERATED_CONTENT"
-               ],
-               "SUB_CATEGORIES": []
-            },
-            "POLYMER_ENTITY_INSTANCE_COUNT_NUCLEIC_ACID": {
                "ORDER": 25,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -59887,7 +60838,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_ENTITY_INSTANCE_COUNT_NUCLEIC_ACID_HYBRID": {
+            "POLYMER_ENTITY_COUNT_DNA": {
                "ORDER": 26,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -59904,7 +60855,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_ENTITY_INSTANCE_COUNT_PROTEIN": {
+            "POLYMER_ENTITY_COUNT_RNA": {
                "ORDER": 27,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -59921,7 +60872,7 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "POLYMER_MONOMER_COUNT": {
+            "POLYMER_ENTITY_COUNT_NUCLEIC_ACID": {
                "ORDER": 28,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -59938,8 +60889,161 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "SELECTED_POLYMER_ENTITY_TYPES": {
+            "POLYMER_ENTITY_COUNT_NUCLEIC_ACID_HYBRID": {
                "ORDER": 29,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "POLYMER_ENTITY_COUNT_PROTEIN": {
+               "ORDER": 30,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "POLYMER_ENTITY_INSTANCE_COUNT": {
+               "ORDER": 31,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "POLYMER_ENTITY_INSTANCE_COUNT_DNA": {
+               "ORDER": 32,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "POLYMER_ENTITY_INSTANCE_COUNT_RNA": {
+               "ORDER": 33,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "POLYMER_ENTITY_INSTANCE_COUNT_NUCLEIC_ACID": {
+               "ORDER": 34,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "POLYMER_ENTITY_INSTANCE_COUNT_NUCLEIC_ACID_HYBRID": {
+               "ORDER": 35,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "POLYMER_ENTITY_INSTANCE_COUNT_PROTEIN": {
+               "ORDER": 36,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "POLYMER_MONOMER_COUNT": {
+               "ORDER": 37,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "SELECTED_POLYMER_ENTITY_TYPES": {
+               "ORDER": 38,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -59961,7 +61065,7 @@
                "SUB_CATEGORIES": []
             },
             "SOLVENT_ATOM_COUNT": {
-               "ORDER": 30,
+               "ORDER": 39,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -59978,7 +61082,7 @@
                "SUB_CATEGORIES": []
             },
             "SOLVENT_ENTITY_COUNT": {
-               "ORDER": 31,
+               "ORDER": 40,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -59995,7 +61099,41 @@
                "SUB_CATEGORIES": []
             },
             "SOLVENT_ENTITY_INSTANCE_COUNT": {
-               "ORDER": 32,
+               "ORDER": 41,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TOTAL_ASSEMBLY_BURIED_SURFACE_AREA": {
+               "ORDER": 42,
+               "NULLABLE": true,
+               "PRECISION": 6,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TOTAL_NUMBER_INTERFACE_RESIDUES": {
+               "ORDER": 43,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -60012,7 +61150,7 @@
                "SUB_CATEGORIES": []
             },
             "UNMODELED_POLYMER_MONOMER_COUNT": {
-               "ORDER": 33,
+               "ORDER": 44,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -60058,6 +61196,271 @@
          "SLICE_UNIT_CARDINALITY": {
             "ENTITY": false,
             "ASSEMBLY": true,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "RCSB_BINDING_AFFINITY": {
+         "SCHEMA_ID": "RCSB_BINDING_AFFINITY",
+         "SCHEMA_NAME": "rcsb_binding_affinity",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "COMP_ID": "comp_id",
+            "LINK": "link",
+            "PROVENANCE_CODE": "provenance_code",
+            "REFERENCE_SEQUENCE_IDENTITY": "reference_sequence_identity",
+            "SYMBOL": "symbol",
+            "TYPE": "type",
+            "UNIT": "unit",
+            "VALUE": "value"
+         },
+         "ATTRIBUTE_MAP": {
+            "COMP_ID": {
+               "CATEGORY": "rcsb_binding_affinity",
+               "ATTRIBUTE": "comp_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "LINK": {
+               "CATEGORY": "rcsb_binding_affinity",
+               "ATTRIBUTE": "link",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PROVENANCE_CODE": {
+               "CATEGORY": "rcsb_binding_affinity",
+               "ATTRIBUTE": "provenance_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REFERENCE_SEQUENCE_IDENTITY": {
+               "CATEGORY": "rcsb_binding_affinity",
+               "ATTRIBUTE": "reference_sequence_identity",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "SYMBOL": {
+               "CATEGORY": "rcsb_binding_affinity",
+               "ATTRIBUTE": "symbol",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TYPE": {
+               "CATEGORY": "rcsb_binding_affinity",
+               "ATTRIBUTE": "type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UNIT": {
+               "CATEGORY": "rcsb_binding_affinity",
+               "ATTRIBUTE": "unit",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "VALUE": {
+               "CATEGORY": "rcsb_binding_affinity",
+               "ATTRIBUTE": "value",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "COMP_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "LINK": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PROVENANCE_CODE": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "Binding MOAD",
+                  "BindingDB",
+                  "PDBBind"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REFERENCE_SEQUENCE_IDENTITY": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "SYMBOL": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 6,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "&Delta;G",
+                  "&Delta;H",
+                  "-T&Delta;S",
+                  "EC50",
+                  "IC50",
+                  "Ka",
+                  "Kd",
+                  "Ki"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "UNIT": {
+               "ORDER": 7,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "VALUE": {
+               "ORDER": 8,
+               "NULLABLE": false,
+               "PRECISION": 6,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "COMP_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_binding_affinity": {
+               "ATTRIBUTES": [
+                  "comp_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {},
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
             "ENTITY_MONOMER": false,
             "ENTITY_INSTANCE": false,
             "ENTITY_INSTANCE_VALIDATION": false,
@@ -65011,6 +66414,409 @@
                   "PARENT_CATEGORY": "STRUCT_ASYM",
                   "PARENT_ATTRIBUTE": "ID",
                   "CHILD_ATTRIBUTE": "CONNECT_TARGET_LABEL_ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "RCSB_CLUSTER_FLEXIBILITY": {
+         "SCHEMA_ID": "RCSB_CLUSTER_FLEXIBILITY",
+         "SCHEMA_NAME": "rcsb_cluster_flexibility",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ENTITY_ID": "entity_id",
+            "AVG_RMSD": "avg_rmsd",
+            "LABEL": "label",
+            "LINK": "link",
+            "MAX_RMSD": "max_rmsd",
+            "PROVENANCE_CODE": "provenance_code"
+         },
+         "ATTRIBUTE_MAP": {
+            "ENTITY_ID": {
+               "CATEGORY": "rcsb_cluster_flexibility",
+               "ATTRIBUTE": "entity_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AVG_RMSD": {
+               "CATEGORY": "rcsb_cluster_flexibility",
+               "ATTRIBUTE": "avg_rmsd",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "LABEL": {
+               "CATEGORY": "rcsb_cluster_flexibility",
+               "ATTRIBUTE": "label",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "LINK": {
+               "CATEGORY": "rcsb_cluster_flexibility",
+               "ATTRIBUTE": "link",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MAX_RMSD": {
+               "CATEGORY": "rcsb_cluster_flexibility",
+               "ATTRIBUTE": "max_rmsd",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PROVENANCE_CODE": {
+               "CATEGORY": "rcsb_cluster_flexibility",
+               "ATTRIBUTE": "provenance_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ENTITY_ID": {
+               "ORDER": 1,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AVG_RMSD": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 6,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "LABEL": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "LINK": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MAX_RMSD": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 6,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PROVENANCE_CODE": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "PDBFlex"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ENTITY_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_cluster_flexibility": {
+               "ATTRIBUTES": [
+                  "entity_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ENTITY": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": true,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": true,
+            "SLICE_ENTITY_NONPOLYMER": true,
+            "SLICE_ENTITY_BRANCHED": true,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "RCSB_CLUSTER_MEMBERSHIP": {
+         "SCHEMA_ID": "RCSB_CLUSTER_MEMBERSHIP",
+         "SCHEMA_NAME": "rcsb_cluster_membership",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "CLUSTER_ID": "cluster_id",
+            "ENTITY_ID": "entity_id",
+            "IDENTITY": "identity"
+         },
+         "ATTRIBUTE_MAP": {
+            "CLUSTER_ID": {
+               "CATEGORY": "rcsb_cluster_membership",
+               "ATTRIBUTE": "cluster_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTITY_ID": {
+               "CATEGORY": "rcsb_cluster_membership",
+               "ATTRIBUTE": "entity_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "IDENTITY": {
+               "CATEGORY": "rcsb_cluster_membership",
+               "ATTRIBUTE": "identity",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "CLUSTER_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTITY_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "IDENTITY": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "CLUSTER_ID",
+                  "ENTITY_ID"
+               ]
+            },
+            "s1": {
+               "TYPE": "SEARCH",
+               "ATTRIBUTES": [
+                  null
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_cluster_membership": {
+               "ATTRIBUTES": [
+                  "cluster_id",
+                  "entity_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ENTITY": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
                }
             ],
             "SLICE_ENTITY_NONPOLYMER": [
@@ -72101,7 +73907,7 @@
          "SCHEMA_CONTENT_CLASSES": [
             "GENERATED_CONTENT"
          ],
-         "SCHEMA_MANDATORY": false,
+         "SCHEMA_MANDATORY": true,
          "SCHEMA_SUB_CATEGORIES": [],
          "ATTRIBUTES": {
             "ENTRY_ID": "entry_id",
@@ -72409,6 +74215,116 @@
             "rcsb_entry_container_identifiers": {
                "ATTRIBUTES": [
                   "entry_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {},
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "RCSB_ENTRY_GROUP_MEMBERSHIP": {
+         "SCHEMA_ID": "RCSB_ENTRY_GROUP_MEMBERSHIP",
+         "SCHEMA_NAME": "rcsb_entry_group_membership",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "GROUP_ID": "group_id",
+            "AGGREGATION_METHOD": "aggregation_method"
+         },
+         "ATTRIBUTE_MAP": {
+            "GROUP_ID": {
+               "CATEGORY": "rcsb_entry_group_membership",
+               "ATTRIBUTE": "group_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AGGREGATION_METHOD": {
+               "CATEGORY": "rcsb_entry_group_membership",
+               "ATTRIBUTE": "aggregation_method",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "GROUP_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AGGREGATION_METHOD": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "matching_deposit_group_id"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "GROUP_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_entry_group_membership": {
+               "ATTRIBUTES": [
+                  "group_id"
                ],
                "TYPE": "EQUI-JOIN"
             }
@@ -73921,6 +75837,362 @@
             "SLICE_ENTITY_INSTANCE_BRANCHED": false
          }
       },
+      "RCSB_EXTERNAL_REFERENCES": {
+         "SCHEMA_ID": "RCSB_EXTERNAL_REFERENCES",
+         "SCHEMA_NAME": "rcsb_external_references",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ID": "id",
+            "TYPE": "type",
+            "LINK": "link"
+         },
+         "ATTRIBUTE_MAP": {
+            "ID": {
+               "CATEGORY": "rcsb_external_references",
+               "ATTRIBUTE": "id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TYPE": {
+               "CATEGORY": "rcsb_external_references",
+               "ATTRIBUTE": "type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "LINK": {
+               "CATEGORY": "rcsb_external_references",
+               "ATTRIBUTE": "link",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "BMRB",
+                  "EM DATA RESOURCE",
+                  "NAKB",
+                  "NDB",
+                  "OLDERADO",
+                  "PROTEIN DIFFRACTION",
+                  "SB GRID"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "LINK": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ID",
+                  "TYPE"
+               ]
+            },
+            "s1": {
+               "TYPE": "SEARCH",
+               "ATTRIBUTES": [
+                  null
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_external_references": {
+               "ATTRIBUTES": [
+                  "id",
+                  "type"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {},
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "RCSB_GENOMIC_LINEAGE": {
+         "SCHEMA_ID": "RCSB_GENOMIC_LINEAGE",
+         "SCHEMA_NAME": "rcsb_genomic_lineage",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ORDINAL": "ordinal",
+            "DEPTH": "depth",
+            "ENTITY_ID": "entity_id",
+            "ID": "id",
+            "NAME": "name"
+         },
+         "ATTRIBUTE_MAP": {
+            "ORDINAL": {
+               "CATEGORY": "rcsb_genomic_lineage",
+               "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DEPTH": {
+               "CATEGORY": "rcsb_genomic_lineage",
+               "ATTRIBUTE": "depth",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTITY_ID": {
+               "CATEGORY": "rcsb_genomic_lineage",
+               "ATTRIBUTE": "entity_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ID": {
+               "CATEGORY": "rcsb_genomic_lineage",
+               "ATTRIBUTE": "id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NAME": {
+               "CATEGORY": "rcsb_genomic_lineage",
+               "ATTRIBUTE": "name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ORDINAL": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DEPTH": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTITY_ID": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ID": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NAME": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ORDINAL"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_genomic_lineage": {
+               "ATTRIBUTES": [
+                  "ordinal"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ENTITY": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
       "RCSB_IHM_DATASET_LIST": {
          "SCHEMA_ID": "RCSB_IHM_DATASET_LIST",
          "SCHEMA_NAME": "rcsb_ihm_dataset_list",
@@ -74216,6 +76488,281 @@
          "SLICE_UNIT_CARDINALITY": {
             "ENTITY": false,
             "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "RCSB_LATEST_REVISION": {
+         "SCHEMA_ID": "RCSB_LATEST_REVISION",
+         "SCHEMA_NAME": "rcsb_latest_revision",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": true,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ASSEMBLY_ID": "assembly_id",
+            "ASYM_ID": "asym_id",
+            "ENTITY_ID": "entity_id",
+            "MAJOR_REVISION": "major_revision",
+            "MINOR_REVISION": "minor_revision",
+            "REVISION_DATE": "revision_date"
+         },
+         "ATTRIBUTE_MAP": {
+            "ASSEMBLY_ID": {
+               "CATEGORY": "rcsb_latest_revision",
+               "ATTRIBUTE": "assembly_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ASYM_ID": {
+               "CATEGORY": "rcsb_latest_revision",
+               "ATTRIBUTE": "asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTITY_ID": {
+               "CATEGORY": "rcsb_latest_revision",
+               "ATTRIBUTE": "entity_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MAJOR_REVISION": {
+               "CATEGORY": "rcsb_latest_revision",
+               "ATTRIBUTE": "major_revision",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MINOR_REVISION": {
+               "CATEGORY": "rcsb_latest_revision",
+               "ATTRIBUTE": "minor_revision",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REVISION_DATE": {
+               "CATEGORY": "rcsb_latest_revision",
+               "ATTRIBUTE": "revision_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ASSEMBLY_ID": {
+               "ORDER": 1,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ASYM_ID": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTITY_ID": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MAJOR_REVISION": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MINOR_REVISION": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REVISION_DATE": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "datetime",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ASSEMBLY_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_latest_revision": {
+               "ATTRIBUTES": [
+                  "assembly_id"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ASSEMBLY": [
+               {
+                  "PARENT_CATEGORY": "PDBX_STRUCT_ASSEMBLY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASSEMBLY_ID"
+               }
+            ],
+            "ENTITY": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "ENTITY_INSTANCE": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASYM_ID"
+               }
+            ],
+            "ENTITY_INSTANCE_VALIDATION": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": true,
             "ENTITY_MONOMER": false,
             "ENTITY_INSTANCE": false,
             "ENTITY_INSTANCE_VALIDATION": false,
@@ -75057,6 +77604,242 @@
             }
          },
          "SLICE_ATTRIBUTES": {},
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "RCSB_MEMBRANE_LINEAGE": {
+         "SCHEMA_ID": "RCSB_MEMBRANE_LINEAGE",
+         "SCHEMA_NAME": "rcsb_membrane_lineage",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ORDINAL": "ordinal",
+            "DEPTH": "depth",
+            "ENTITY_ID": "entity_id",
+            "ID": "id",
+            "NAME": "name",
+            "PROVENANCE_CODE": "provenance_code"
+         },
+         "ATTRIBUTE_MAP": {
+            "ORDINAL": {
+               "CATEGORY": "rcsb_membrane_lineage",
+               "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DEPTH": {
+               "CATEGORY": "rcsb_membrane_lineage",
+               "ATTRIBUTE": "depth",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTITY_ID": {
+               "CATEGORY": "rcsb_membrane_lineage",
+               "ATTRIBUTE": "entity_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ID": {
+               "CATEGORY": "rcsb_membrane_lineage",
+               "ATTRIBUTE": "id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NAME": {
+               "CATEGORY": "rcsb_membrane_lineage",
+               "ATTRIBUTE": "name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PROVENANCE_CODE": {
+               "CATEGORY": "rcsb_membrane_lineage",
+               "ATTRIBUTE": "provenance_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ORDINAL": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DEPTH": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ENTITY_ID": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ID": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NAME": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PROVENANCE_CODE": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "Homology",
+                  "Mpstruc"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ORDINAL"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_membrane_lineage": {
+               "ATTRIBUTES": [
+                  "ordinal"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ENTITY": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ]
+         },
          "SLICE_UNIT_CARDINALITY": {
             "ENTITY": false,
             "ASSEMBLY": false,
@@ -80814,7 +83597,8 @@
          "SCHEMA_SUB_CATEGORIES": [
             "rcsb_ec_lineage",
             "rcsb_enzyme_class_combined",
-            "rcsb_macromolecular_names_combined"
+            "rcsb_macromolecular_names_combined",
+            "rcsb_polymer_name_combined"
          ],
          "ATTRIBUTES": {
             "ENTITY_ID": "entity_id",
@@ -80835,6 +83619,8 @@
             "RCSB_MACROMOLECULAR_NAMES_COMBINED_PROVENANCE_CODE": "rcsb_macromolecular_names_combined_provenance_code",
             "RCSB_MACROMOLECULAR_NAMES_COMBINED_PROVENANCE_SOURCE": "rcsb_macromolecular_names_combined_provenance_source",
             "RCSB_MULTIPLE_SOURCE_FLAG": "rcsb_multiple_source_flag",
+            "RCSB_POLYMER_NAME_COMBINED_NAMES": "rcsb_polymer_name_combined_names",
+            "RCSB_POLYMER_NAME_COMBINED_PROVENANCE_SOURCE": "rcsb_polymer_name_combined_provenance_source",
             "RCSB_SOURCE_PART_COUNT": "rcsb_source_part_count",
             "RCSB_SOURCE_TAXONOMY_COUNT": "rcsb_source_taxonomy_count",
             "SRC_METHOD": "src_method"
@@ -80945,6 +83731,18 @@
             "RCSB_MULTIPLE_SOURCE_FLAG": {
                "CATEGORY": "rcsb_polymer_entity",
                "ATTRIBUTE": "rcsb_multiple_source_flag",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_POLYMER_NAME_COMBINED_NAMES": {
+               "CATEGORY": "rcsb_polymer_entity",
+               "ATTRIBUTE": "rcsb_polymer_name_combined_names",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_POLYMER_NAME_COMBINED_PROVENANCE_SOURCE": {
+               "CATEGORY": "rcsb_polymer_entity",
+               "ATTRIBUTE": "rcsb_polymer_name_combined_provenance_source",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -81300,8 +84098,50 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "RCSB_SOURCE_PART_COUNT": {
+            "RCSB_POLYMER_NAME_COMBINED_NAMES": {
                "ORDER": 19,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "rcsb_polymer_name_combined"
+               ]
+            },
+            "RCSB_POLYMER_NAME_COMBINED_PROVENANCE_SOURCE": {
+               "ORDER": 20,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "PDB Description",
+                  "PDB Preferred Name",
+                  "UniProt Name"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "rcsb_polymer_name_combined"
+               ]
+            },
+            "RCSB_SOURCE_PART_COUNT": {
+               "ORDER": 21,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -81318,7 +84158,7 @@
                "SUB_CATEGORIES": []
             },
             "RCSB_SOURCE_TAXONOMY_COUNT": {
-               "ORDER": 20,
+               "ORDER": 22,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -81335,7 +84175,7 @@
                "SUB_CATEGORIES": []
             },
             "SRC_METHOD": {
-               "ORDER": 21,
+               "ORDER": 23,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -83195,6 +86035,9 @@
                   "SABDAB_ANTIBODY_NAME",
                   "SABDAB_ANTIBODY_TARGET",
                   "artifact",
+                  "disorder",
+                  "disorder_binding",
+                  "hydropathy",
                   "modified_monomer",
                   "mutation"
                ],
@@ -83562,6 +86405,274 @@
             "rcsb_polymer_entity_feature_summary": {
                "ATTRIBUTES": [
                   "ordinal"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ENTITY": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ],
+            "SLICE_ENTITY_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "ENTITY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "RCSB_POLYMER_ENTITY_GROUP_MEMBERSHIP": {
+         "SCHEMA_ID": "RCSB_POLYMER_ENTITY_GROUP_MEMBERSHIP",
+         "SCHEMA_NAME": "rcsb_polymer_entity_group_membership",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [
+            "aligned_regions"
+         ],
+         "ATTRIBUTES": {
+            "GROUP_ID": "group_id",
+            "AGGREGATION_METHOD": "aggregation_method",
+            "ALIGNED_REGIONS_ENTITY_BEG_SEQ_ID": "aligned_regions_entity_beg_seq_id",
+            "ALIGNED_REGIONS_LENGTH": "aligned_regions_length",
+            "ALIGNED_REGIONS_REF_BEG_SEQ_ID": "aligned_regions_ref_beg_seq_id",
+            "ENTITY_ID": "entity_id",
+            "SIMILARITY_CUTOFF": "similarity_cutoff"
+         },
+         "ATTRIBUTE_MAP": {
+            "GROUP_ID": {
+               "CATEGORY": "rcsb_polymer_entity_group_membership",
+               "ATTRIBUTE": "group_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AGGREGATION_METHOD": {
+               "CATEGORY": "rcsb_polymer_entity_group_membership",
+               "ATTRIBUTE": "aggregation_method",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ALIGNED_REGIONS_ENTITY_BEG_SEQ_ID": {
+               "CATEGORY": "rcsb_polymer_entity_group_membership",
+               "ATTRIBUTE": "aligned_regions_entity_beg_seq_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ALIGNED_REGIONS_LENGTH": {
+               "CATEGORY": "rcsb_polymer_entity_group_membership",
+               "ATTRIBUTE": "aligned_regions_length",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ALIGNED_REGIONS_REF_BEG_SEQ_ID": {
+               "CATEGORY": "rcsb_polymer_entity_group_membership",
+               "ATTRIBUTE": "aligned_regions_ref_beg_seq_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ENTITY_ID": {
+               "CATEGORY": "rcsb_polymer_entity_group_membership",
+               "ATTRIBUTE": "entity_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "SIMILARITY_CUTOFF": {
+               "CATEGORY": "rcsb_polymer_entity_group_membership",
+               "ATTRIBUTE": "similarity_cutoff",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "GROUP_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AGGREGATION_METHOD": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "matching_uniprot_accession",
+                  "sequence_identity"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ALIGNED_REGIONS_ENTITY_BEG_SEQ_ID": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "aligned_regions"
+               ]
+            },
+            "ALIGNED_REGIONS_LENGTH": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "aligned_regions"
+               ]
+            },
+            "ALIGNED_REGIONS_REF_BEG_SEQ_ID": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "aligned_regions"
+               ]
+            },
+            "ENTITY_ID": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "SIMILARITY_CUTOFF": {
+               "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 6,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "GROUP_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_polymer_entity_group_membership": {
+               "ATTRIBUTES": [
+                  "group_id"
                ],
                "TYPE": "EQUI-JOIN"
             }
@@ -85330,6 +88441,7 @@
                "ENUMERATION": [
                   "ANGLE_OUTLIER",
                   "ANGLE_OUTLIERS",
+                  "ASA",
                   "AVERAGE_OCCUPANCY",
                   "BEND",
                   "BINDING_SITE",
@@ -89010,6 +92122,625 @@
                   "PARENT_CATEGORY": "ENTITY",
                   "PARENT_ATTRIBUTE": "ID",
                   "CHILD_ATTRIBUTE": "ENTITY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "RCSB_STRUCT_SYMMETRY": {
+         "SCHEMA_ID": "RCSB_STRUCT_SYMMETRY",
+         "SCHEMA_NAME": "rcsb_struct_symmetry",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [
+            "clusters",
+            "rotation_axes"
+         ],
+         "ATTRIBUTES": {
+            "ORDINAL": "ordinal",
+            "ASSEMBLY_ID": "assembly_id",
+            "CLUSTERS_AVG_RMSD": "clusters_avg_rmsd",
+            "CLUSTERS_MEMBERS_ASYM_ID": "clusters_members_asym_id",
+            "CLUSTERS_MEMBERS_PDBX_STRUCT_OPER_LIST_IDS": "clusters_members_pdbx_struct_oper_list_ids",
+            "KIND": "kind",
+            "OLIGOMERIC_STATE": "oligomeric_state",
+            "PROVENANCE_CODE": "provenance_code",
+            "ROTATION_AXES_END": "rotation_axes_end",
+            "ROTATION_AXES_ORDER": "rotation_axes_order",
+            "ROTATION_AXES_START": "rotation_axes_start",
+            "STOICHIOMETRY": "stoichiometry",
+            "SYMBOL": "symbol",
+            "TYPE": "type"
+         },
+         "ATTRIBUTE_MAP": {
+            "ORDINAL": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ASSEMBLY_ID": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "assembly_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "CLUSTERS_AVG_RMSD": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "clusters_avg_rmsd",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "CLUSTERS_MEMBERS_ASYM_ID": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "clusters_members_asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "CLUSTERS_MEMBERS_PDBX_STRUCT_OPER_LIST_IDS": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "clusters_members_pdbx_struct_oper_list_ids",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "KIND": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "kind",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "OLIGOMERIC_STATE": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "oligomeric_state",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PROVENANCE_CODE": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "provenance_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ROTATION_AXES_END": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "rotation_axes_end",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ROTATION_AXES_ORDER": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "rotation_axes_order",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ROTATION_AXES_START": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "rotation_axes_start",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "STOICHIOMETRY": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "stoichiometry",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "SYMBOL": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "symbol",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TYPE": {
+               "CATEGORY": "rcsb_struct_symmetry",
+               "ATTRIBUTE": "type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ORDINAL": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ASSEMBLY_ID": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "CLUSTERS_AVG_RMSD": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 3,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "clusters"
+               ]
+            },
+            "CLUSTERS_MEMBERS_ASYM_ID": {
+               "ORDER": 4,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "clusters"
+               ]
+            },
+            "CLUSTERS_MEMBERS_PDBX_STRUCT_OPER_LIST_IDS": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "clusters"
+               ]
+            },
+            "KIND": {
+               "ORDER": 6,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "Global Symmetry",
+                  "Local Symmetry",
+                  "Pseudo Symmetry"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "OLIGOMERIC_STATE": {
+               "ORDER": 7,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PROVENANCE_CODE": {
+               "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ROTATION_AXES_END": {
+               "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "rotation_axes"
+               ]
+            },
+            "ROTATION_AXES_ORDER": {
+               "ORDER": 10,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "rotation_axes"
+               ]
+            },
+            "ROTATION_AXES_START": {
+               "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "float",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": ",",
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": [
+                  "rotation_axes"
+               ]
+            },
+            "STOICHIOMETRY": {
+               "ORDER": 12,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "SYMBOL": {
+               "ORDER": 13,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 14,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "Asymmetric",
+                  "Cyclic",
+                  "Dihedral",
+                  "Helical",
+                  "Icosahedral",
+                  "Octahedral",
+                  "Tetrahedral"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ORDINAL"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_struct_symmetry": {
+               "ATTRIBUTES": [
+                  "ordinal"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ASSEMBLY": [
+               {
+                  "PARENT_CATEGORY": "PDBX_STRUCT_ASSEMBLY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASSEMBLY_ID"
+               }
+            ]
+         },
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "RCSB_STRUCT_SYMMETRY_LINEAGE": {
+         "SCHEMA_ID": "RCSB_STRUCT_SYMMETRY_LINEAGE",
+         "SCHEMA_NAME": "rcsb_struct_symmetry_lineage",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ORDINAL": "ordinal",
+            "ASSEMBLY_ID": "assembly_id",
+            "DEPTH": "depth",
+            "ID": "id",
+            "NAME": "name"
+         },
+         "ATTRIBUTE_MAP": {
+            "ORDINAL": {
+               "CATEGORY": "rcsb_struct_symmetry_lineage",
+               "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ASSEMBLY_ID": {
+               "CATEGORY": "rcsb_struct_symmetry_lineage",
+               "ATTRIBUTE": "assembly_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "DEPTH": {
+               "CATEGORY": "rcsb_struct_symmetry_lineage",
+               "ATTRIBUTE": "depth",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "ID": {
+               "CATEGORY": "rcsb_struct_symmetry_lineage",
+               "ATTRIBUTE": "id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "NAME": {
+               "CATEGORY": "rcsb_struct_symmetry_lineage",
+               "ATTRIBUTE": "name",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ORDINAL": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ASSEMBLY_ID": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "DEPTH": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "ID": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "NAME": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ORDINAL"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "rcsb_struct_symmetry_lineage": {
+               "ATTRIBUTES": [
+                  "ordinal"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ASSEMBLY": [
+               {
+                  "PARENT_CATEGORY": "PDBX_STRUCT_ASSEMBLY",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "ASSEMBLY_ID"
                }
             ]
          },
@@ -104583,35 +108314,35 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "pdbx_core_entry",
-            "VERSION": "9.0.4"
+            "VERSION": "9.1.0"
          },
          {
             "NAME": "pdbx_core_assembly",
-            "VERSION": "9.0.0"
+            "VERSION": "9.1.0"
          },
          {
             "NAME": "pdbx_core_polymer_entity",
-            "VERSION": "10.0.5"
+            "VERSION": "10.1.0"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity",
-            "VERSION": "10.0.0"
+            "VERSION": "10.1.0"
          },
          {
             "NAME": "pdbx_core_branched_entity",
-            "VERSION": "10.0.0"
+            "VERSION": "10.1.0"
          },
          {
             "NAME": "pdbx_core_polymer_entity_instance",
-            "VERSION": "10.0.4"
+            "VERSION": "10.1.0"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity_instance",
-            "VERSION": "10.0.1"
+            "VERSION": "10.1.0"
          },
          {
             "NAME": "pdbx_core_branched_entity_instance",
-            "VERSION": "9.0.0"
+            "VERSION": "9.1.0"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
@@ -104692,6 +108423,14 @@
                "PRIVATE_DOCUMENT_NAME": "rcsb_id",
                "MANDATORY": true,
                "UPDATE_ON_LOAD": false
+            },
+            {
+               "NAME": "assembly.id",
+               "CATEGORY_NAME": "rcsb_struct_symmetry",
+               "ATTRIBUTE_NAME": "provenance_code",
+               "PRIVATE_DOCUMENT_NAME": "rcsb_struct_symmetry_provenance_code",
+               "MANDATORY": false,
+               "UPDATE_ON_LOAD": false
             }
          ],
          "pdbx_core_polymer_entity": [
@@ -104701,6 +108440,14 @@
                "ATTRIBUTE_NAME": "rcsb_id",
                "PRIVATE_DOCUMENT_NAME": "rcsb_id",
                "MANDATORY": true,
+               "UPDATE_ON_LOAD": false
+            },
+            {
+               "NAME": "entity.id",
+               "CATEGORY_NAME": "rcsb_membrane_lineage",
+               "ATTRIBUTE_NAME": "provenance_code",
+               "PRIVATE_DOCUMENT_NAME": "rcsb_membrane_lineage_provenance_code",
+               "MANDATORY": false,
                "UPDATE_ON_LOAD": false
             }
          ],
@@ -104759,6 +108506,7 @@
          "pdbx_core_entry": [
             {
                "INDEX_NAME": "primary",
+               "UNIQUE": true,
                "ATTRIBUTE_NAMES": [
                   "rcsb_entry_container_identifiers.entry_id"
                ]
@@ -104807,6 +108555,7 @@
          "pdbx_core_assembly": [
             {
                "INDEX_NAME": "primary",
+               "UNIQUE": true,
                "ATTRIBUTE_NAMES": [
                   "rcsb_assembly_container_identifiers.entry_id",
                   "rcsb_assembly_container_identifiers.assembly_id"
@@ -104834,6 +108583,7 @@
          "pdbx_core_polymer_entity": [
             {
                "INDEX_NAME": "primary",
+               "UNIQUE": true,
                "ATTRIBUTE_NAMES": [
                   "rcsb_polymer_entity_container_identifiers.entry_id",
                   "rcsb_polymer_entity_container_identifiers.entity_id"
@@ -104861,6 +108611,7 @@
          "pdbx_core_nonpolymer_entity": [
             {
                "INDEX_NAME": "primary",
+               "UNIQUE": true,
                "ATTRIBUTE_NAMES": [
                   "rcsb_nonpolymer_entity_container_identifiers.entry_id",
                   "rcsb_nonpolymer_entity_container_identifiers.entity_id"
@@ -104888,6 +108639,7 @@
          "pdbx_core_branched_entity": [
             {
                "INDEX_NAME": "primary",
+               "UNIQUE": true,
                "ATTRIBUTE_NAMES": [
                   "rcsb_branched_entity_container_identifiers.entry_id",
                   "rcsb_branched_entity_container_identifiers.entity_id"
@@ -104915,6 +108667,7 @@
          "pdbx_core_polymer_entity_instance": [
             {
                "INDEX_NAME": "primary",
+               "UNIQUE": true,
                "ATTRIBUTE_NAMES": [
                   "rcsb_polymer_entity_instance_container_identifiers.entry_id",
                   "rcsb_polymer_entity_instance_container_identifiers.asym_id"
@@ -104963,6 +108716,7 @@
          "pdbx_core_nonpolymer_entity_instance": [
             {
                "INDEX_NAME": "primary",
+               "UNIQUE": true,
                "ATTRIBUTE_NAMES": [
                   "rcsb_nonpolymer_entity_instance_container_identifiers.entry_id",
                   "rcsb_nonpolymer_entity_instance_container_identifiers.asym_id"
@@ -105011,6 +108765,7 @@
          "pdbx_core_branched_entity_instance": [
             {
                "INDEX_NAME": "primary",
+               "UNIQUE": true,
                "ATTRIBUTE_NAMES": [
                   "rcsb_branched_entity_instance_container_identifiers.entry_id",
                   "rcsb_branched_entity_instance_container_identifiers.asym_id"
@@ -105136,6 +108891,8 @@
                "RCSB_ENTRY_INFO",
                "RCSB_COMP_MODEL_PROVENANCE",
                "RCSB_MA_QA_METRIC_GLOBAL",
+               "RCSB_ENTRY_GROUP_MEMBERSHIP",
+               "RCSB_BINDING_AFFINITY",
                "RCSB_EXTERNAL_REFERENCES",
                "RCSB_HAS_CHEMICAL_SHIFT_FILE",
                "RCSB_HAS_ED_MAP_FILE",
@@ -105145,7 +108902,6 @@
                "RCSB_HAS_STRUCTURE_FACTORS_FILE",
                "RCSB_HAS_TWOFOFC_FILE",
                "RCSB_HAS_VALIDATION_REPORT",
-               "RCSB_LATEST_REVISION",
                "RCSB_MODELS_COUNT",
                "RCSB_MOLECULAR_WEIGHT",
                "RCSB_RELEASE_DATE",
@@ -105292,7 +109048,32 @@
             "INCLUDE": [],
             "EXCLUDE": [],
             "SLICE_FILTER": "ASSEMBLY",
-            "EXCLUDED_ATTRIBUTES": {}
+            "EXCLUDED_ATTRIBUTES": {
+               "rcsb_latest_revision": [
+                  "entity_id",
+                  "asym_id",
+                  "assembly_id"
+               ],
+               "rcsb_struct_symmetry": [
+                  "assembly_id",
+                  "ordinal",
+                  "provenance_code"
+               ],
+               "rcsb_struct_symmetry_lineage": [
+                  "assembly_id",
+                  "ordinal"
+               ],
+               "rcsb_assembly_feature": [
+                  "assembly_id",
+                  "entry_id",
+                  "ordinal"
+               ],
+               "rcsb_assembly_annotation": [
+                  "assembly_id",
+                  "entry_id",
+                  "ordinal"
+               ]
+            }
          },
          "pdbx_core_polymer_entity": {
             "INCLUDE": [],
@@ -105465,6 +109246,29 @@
                   "rcsb_source_taxonomy_count",
                   "src_method",
                   "type"
+               ],
+               "rcsb_latest_revision": [
+                  "entity_id",
+                  "asym_id",
+                  "assembly_id"
+               ],
+               "rcsb_polymer_entity_group_membership": [
+                  "entity_id"
+               ],
+               "rcsb_cluster_membership": [
+                  "entity_id"
+               ],
+               "rcsb_genomic_lineage": [
+                  "entity_id",
+                  "ordinal"
+               ],
+               "rcsb_membrane_lineage": [
+                  "entity_id",
+                  "ordinal",
+                  "provenance_code"
+               ],
+               "rcsb_cluster_flexibility": [
+                  "entity_id"
                ]
             }
          },
@@ -105549,7 +109353,12 @@
                "MA_STRUCT_ASSEMBLY",
                "MA_TARGET_ENTITY",
                "MA_TARGET_ENTITY_INSTANCE",
-               "MA_TARGET_REF_DB_DETAILS"
+               "MA_TARGET_REF_DB_DETAILS",
+               "RCSB_POLYMER_ENTITY_GROUP_MEMBERSHIP",
+               "RCSB_CLUSTER_MEMBERSHIP",
+               "RCSB_GENOMIC_LINEAGE",
+               "RCSB_MEMBRANE_LINEAGE",
+               "RCSB_CLUSTER_FLEXIBILITY"
             ],
             "SLICE_FILTER": "SLICE_ENTITY_NONPOLYMER",
             "EXCLUDED_ATTRIBUTES": {
@@ -105605,6 +109414,11 @@
                   "rcsb_source_taxonomy_count",
                   "src_method",
                   "type"
+               ],
+               "rcsb_latest_revision": [
+                  "entity_id",
+                  "asym_id",
+                  "assembly_id"
                ]
             }
          },
@@ -105688,7 +109502,12 @@
                "MA_STRUCT_ASSEMBLY",
                "MA_TARGET_ENTITY",
                "MA_TARGET_ENTITY_INSTANCE",
-               "MA_TARGET_REF_DB_DETAILS"
+               "MA_TARGET_REF_DB_DETAILS",
+               "RCSB_POLYMER_ENTITY_GROUP_MEMBERSHIP",
+               "RCSB_CLUSTER_MEMBERSHIP",
+               "RCSB_GENOMIC_LINEAGE",
+               "RCSB_MEMBRANE_LINEAGE",
+               "RCSB_CLUSTER_FLEXIBILITY"
             ],
             "SLICE_FILTER": "SLICE_ENTITY_BRANCHED",
             "EXCLUDED_ATTRIBUTES": {
@@ -105750,6 +109569,11 @@
                   "rcsb_source_taxonomy_count",
                   "src_method",
                   "type"
+               ],
+               "rcsb_latest_revision": [
+                  "entity_id",
+                  "asym_id",
+                  "assembly_id"
                ]
             }
          },
@@ -105792,6 +109616,7 @@
                "RCSB_ENTITY_INSTANCE_VALIDATION_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_VALIDATION_FEATURE",
                "RCSB_ENTITY_INSTANCE_VALIDATION_FEATURE_SUMMARY",
+               "RCSB_ASSEMBLY_FEATURE",
                "RCSB_NONPOLYMER_ENTITY_INSTANCE_CONTAINER_IDENTIFIERS",
                "RCSB_NONPOLYMER_INSTANCE_FEATURE",
                "RCSB_NONPOLYMER_INSTANCE_FEATURE_SUMMARY",
@@ -105817,7 +109642,12 @@
                "RCSB_RELATED_TARGET_REFERENCES",
                "RCSB_TARGET_COFACTORS",
                "MA_STRUCT_ASSEMBLY",
-               "MA_QA_METRIC_LOCAL"
+               "MA_QA_METRIC_LOCAL",
+               "RCSB_POLYMER_ENTITY_GROUP_MEMBERSHIP",
+               "RCSB_CLUSTER_MEMBERSHIP",
+               "RCSB_GENOMIC_LINEAGE",
+               "RCSB_MEMBRANE_LINEAGE",
+               "RCSB_CLUSTER_FLEXIBILITY"
             ],
             "SLICE_FILTER": "SLICE_ENTITY_INSTANCE_POLYMER",
             "EXCLUDED_ATTRIBUTES": {
@@ -105891,6 +109721,11 @@
                   "asym_id",
                   "auth_asym_id",
                   "model_id"
+               ],
+               "rcsb_latest_revision": [
+                  "entity_id",
+                  "asym_id",
+                  "assembly_id"
                ]
             }
          },
@@ -105927,6 +109762,7 @@
                "RCSB_ENTITY_INSTANCE_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_FEATURE",
                "RCSB_ENTITY_INSTANCE_FEATURE_SUMMARY",
+               "RCSB_ASSEMBLY_FEATURE",
                "RCSB_ENTITY_INSTANCE_VALIDATION_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_VALIDATION_FEATURE",
                "RCSB_ENTITY_INSTANCE_VALIDATION_FEATURE_SUMMARY",
@@ -105958,7 +109794,12 @@
                "RCSB_RELATED_TARGET_REFERENCES",
                "RCSB_TARGET_COFACTORS",
                "MA_STRUCT_ASSEMBLY",
-               "MA_QA_METRIC_LOCAL"
+               "MA_QA_METRIC_LOCAL",
+               "RCSB_POLYMER_ENTITY_GROUP_MEMBERSHIP",
+               "RCSB_CLUSTER_MEMBERSHIP",
+               "RCSB_GENOMIC_LINEAGE",
+               "RCSB_MEMBRANE_LINEAGE",
+               "RCSB_CLUSTER_FLEXIBILITY"
             ],
             "SLICE_FILTER": "SLICE_ENTITY_INSTANCE_NONPOLYMER",
             "EXCLUDED_ATTRIBUTES": {
@@ -106042,6 +109883,11 @@
                   "asym_id",
                   "auth_asym_id",
                   "model_id"
+               ],
+               "rcsb_latest_revision": [
+                  "entity_id",
+                  "asym_id",
+                  "assembly_id"
                ]
             }
          },
@@ -106078,6 +109924,7 @@
                "RCSB_ENTITY_INSTANCE_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_FEATURE",
                "RCSB_ENTITY_INSTANCE_FEATURE_SUMMARY",
+               "RCSB_ASSEMBLY_FEATURE",
                "RCSB_ENTITY_INSTANCE_VALIDATION_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_VALIDATION_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_VALIDATION_FEATURE",
@@ -106116,7 +109963,12 @@
                "RCSB_RELATED_TARGET_REFERENCES",
                "RCSB_TARGET_COFACTORS",
                "MA_STRUCT_ASSEMBLY",
-               "MA_QA_METRIC_LOCAL"
+               "MA_QA_METRIC_LOCAL",
+               "RCSB_POLYMER_ENTITY_GROUP_MEMBERSHIP",
+               "RCSB_CLUSTER_MEMBERSHIP",
+               "RCSB_GENOMIC_LINEAGE",
+               "RCSB_MEMBRANE_LINEAGE",
+               "RCSB_CLUSTER_FLEXIBILITY"
             ],
             "SLICE_FILTER": "SLICE_ENTITY_INSTANCE_BRANCHED",
             "EXCLUDED_ATTRIBUTES": {
@@ -106169,6 +110021,11 @@
                   "asym_id",
                   "auth_asym_id",
                   "model_id"
+               ],
+               "rcsb_latest_revision": [
+                  "entity_id",
+                  "asym_id",
+                  "assembly_id"
                ]
             }
          }
@@ -106181,11 +110038,44 @@
             },
             {
                "NAME": "ma_qa_metric_global",
-               "HAS_UNIT_CARDINALITY": false,
-               "MANDATORY": true
+               "HAS_UNIT_CARDINALITY": false
             }
          ],
-         "pdbx_core_assembly": [],
+         "pdbx_core_assembly": [
+            {
+               "NAME": "rotation_axes",
+               "HAS_UNIT_CARDINALITY": false,
+               "MIN_ITEMS": 1,
+               "UNIQUE_ITEMS": true,
+               "DESCRIPTION": "The orientation of the principal rotation (symmetry) axis.",
+               "DESCRIPTION_ALT": "Specifies a single or multiple rotation axes through the same point."
+            },
+            {
+               "NAME": "clusters",
+               "HAS_UNIT_CARDINALITY": false,
+               "NESTED_CHILD": "members",
+               "MANDATORY": true,
+               "MIN_ITEMS": 1,
+               "UNIQUE_ITEMS": true,
+               "DESCRIPTION_ALT": "Clusters describe grouping of identical subunits."
+            },
+            {
+               "NAME": "members",
+               "HAS_UNIT_CARDINALITY": false,
+               "MANDATORY": true,
+               "MIN_ITEMS": 1,
+               "UNIQUE_ITEMS": true,
+               "DESCRIPTION": "Subunits that belong to the cluster, identified by asym_id and optionally by assembly operator id(s)."
+            },
+            {
+               "NAME": "additional_properties",
+               "HAS_UNIT_CARDINALITY": false
+            },
+            {
+               "NAME": "feature_positions",
+               "HAS_UNIT_CARDINALITY": false
+            }
+         ],
          "pdbx_core_polymer_entity": [
             {
                "NAME": "taxonomy_lineage",
@@ -106202,6 +110092,10 @@
             {
                "NAME": "rcsb_enzyme_class_combined",
                "HAS_UNIT_CARDINALITY": false
+            },
+            {
+               "NAME": "rcsb_polymer_name_combined",
+               "HAS_UNIT_CARDINALITY": true
             },
             {
                "NAME": "feature_positions",
