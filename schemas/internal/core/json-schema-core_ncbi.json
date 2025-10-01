@@ -376,7 +376,44 @@
                 },
                 "rcsb_latest_revision": {
                   "type": "object",
-                  "$ref": "./json-schema-core_polymer_entity.json#/properties/rcsb_latest_revision"
+                  "properties": {
+                    "major_revision": {
+                      "type": "integer",
+                      "description": "The major version number of the latest revision.",
+                      "rcsb_description": [
+                        {
+                          "text": "The major version number of the latest revision.",
+                          "context": "dictionary"
+                        }
+                      ]
+                    },
+                    "minor_revision": {
+                      "type": "integer",
+                      "description": "The minor version number of the latest revision.",
+                      "rcsb_description": [
+                        {
+                          "text": "The minor version number of the latest revision.",
+                          "context": "dictionary"
+                        }
+                      ]
+                    },
+                    "revision_date": {
+                      "type": "string",
+                      "format": "date-time",
+                      "examples": [
+                        "2020-02-11",
+                        "2018-10-23"
+                      ],
+                      "description": "The release date of the latest revision item.",
+                      "rcsb_description": [
+                        {
+                          "text": "The release date of the latest revision item.",
+                          "context": "dictionary"
+                        }
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
                 }
               }
             }]
