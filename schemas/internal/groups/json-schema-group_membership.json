@@ -1,0 +1,81 @@
+{
+  "title" : "Group membership",
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "./schemas/internal/groups/json-schema-group_membership.json",
+  "type": "object",
+  "required": [
+    "group_id",
+    "member_id",
+    "member_type",
+    "aggregation_method"
+  ],
+  "properties": {
+    "group_id": {
+      "type": "string",
+      "description": "A unique identifier for a group"
+    },
+    "member_id": {
+      "type": "string",
+      "description": "A unique identifier for a group member"
+    },
+    "aligned_regions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "entity_beg_seq_id": {
+            "type": "integer",
+            "description": "An identifier for the monomer in the entity sequence at which this segment of the alignment begins.",
+            "rcsb_description": [
+              {
+                "text": "An identifier for the monomer in the entity sequence at which this segment of the alignment begins.",
+                "context": "dictionary"
+              }
+            ]
+          },
+          "length": {
+            "type": "integer",
+            "description": "The length of this segment of the alignment.",
+            "rcsb_description": [
+              {
+                "text": "The length of this segment of the alignment.",
+                "context": "dictionary"
+              }
+            ]
+          },
+          "ref_beg_seq_id": {
+            "type": "integer",
+            "description": "An identifier for the monomer in the reference sequence at which this segment of the alignment begins.",
+            "rcsb_description": [
+              {
+                "text": "An identifier for the monomer in the reference sequence at which this segment of the alignment begins.",
+                "context": "dictionary"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "uniqueItems": false
+    },
+    "member_type": {
+      "type": "string",
+      "description": "Whether the group member id corresponds to a PDB or a CSM entry.",
+      "enum": [
+        "PDB",
+        "CSM"
+      ]
+    },
+    "aggregation_method": {
+      "type": "string",
+      "description": "Specifies the type of similarity criteria used to aggregate members into higher levels in the hierarchy",
+      "enum": [
+        "sequence_identity",
+        "matching_uniprot_accession",
+        "matching_deposit_group_id",
+        "matching_chemical_component_id"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
