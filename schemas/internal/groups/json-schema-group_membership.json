@@ -6,8 +6,7 @@
   "required": [
     "group_id",
     "member_id",
-    "member_type",
-    "aggregation_method"
+    "member_type"
   ],
   "properties": {
     "group_id": {
@@ -64,16 +63,6 @@
       "enum": [
         "PDB",
         "CSM"
-      ]
-    },
-    "aggregation_method": {
-      "type": "string",
-      "description": "Specifies the type of similarity criteria used to aggregate members into higher levels in the hierarchy",
-      "enum": [
-        "sequence_identity",
-        "matching_uniprot_accession",
-        "matching_deposit_group_id",
-        "matching_chemical_component_id"
       ]
     }
   },
