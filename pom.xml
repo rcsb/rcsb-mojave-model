@@ -832,7 +832,7 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>build-membership-group-schema</id>
+                        <id>build-group-membership-schema</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <!-- execute Java programs in the same VM -->
@@ -848,7 +848,6 @@
                                 <argument>${project.build.directory}/${core.schema.location}/${group.membership.json.schema.name}</argument>
                                 <!-- list of schemas to stitch -->
                                 <argument>-i</argument>
-                                <argument>file://${rcsb.group.json.schemas.location}/${rcsb.group.core.json.schema.name}</argument>
                                 <argument>file://${rcsb.group.json.schemas.location}/${rcsb.group.membership.json.schema.name}</argument>
                             </arguments>
                             <systemProperties>
