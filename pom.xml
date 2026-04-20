@@ -266,6 +266,7 @@
         <validation.pubmed.bson.schema.name>${validation.schema.prefix}${core.pubmed.json.schema.name}</validation.pubmed.bson.schema.name>
         <validation.ncbi.bson.schema.name>${validation.schema.prefix}${core.ncbi.json.schema.name}</validation.ncbi.bson.schema.name>
         <!-- groups -->
+        <validation.group.membership.bson.schema.name>${validation.schema.prefix}${group.membership.json.schema.name}</validation.group.membership.bson.schema.name>
         <validation.group.entry.bson.schema.name>${validation.schema.prefix}${group.entry.json.schema.name}</validation.group.entry.bson.schema.name>
         <validation.group.polymer.entity.bson.schema.name>${validation.schema.prefix}${group.polymer.entity.json.schema.name}</validation.group.polymer.entity.bson.schema.name>
         <validation.group.non_polymer.entity.bson.schema.name>${validation.schema.prefix}${group.non_polymer.entity.json.schema.name}</validation.group.non_polymer.entity.bson.schema.name>
@@ -1131,6 +1132,20 @@
                             <arguments>
                                 <argument>${project.build.directory}/${core.schema.location}/${group.provenance.json.schema.name}</argument>
                                 <argument>${project.build.directory}/${validation.schema.location}/${validation.group.provenance.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-group-membership</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${group.membership.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.group.membership.bson.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
