@@ -11,7 +11,7 @@
 
     <groupId>org.rcsb</groupId>
     <artifactId>rcsb-mojave-model</artifactId>
-    <version>1.55.1-SNAPSHOT</version>
+    <version>1.56.0-SNAPSHOT</version>
 
     <!-- https://central.sonatype.org/pages/apache-maven.html -->
     <!-- https://github.com/chhh/sonatype-ossrh-parent/blob/master/pom.xml -->
@@ -171,6 +171,7 @@
         <rcsb.group.provenance.json.schema.name>json-schema-group_provenance.json</rcsb.group.provenance.json.schema.name>
         <rcsb.group.core.json.schema.name>json-schema-group_core.json</rcsb.group.core.json.schema.name>
         <rcsb.group.entry.json.schema.name>json-schema-group_entry.json</rcsb.group.entry.json.schema.name>
+        <rcsb.group.membership.json.schema.name>json-schema-group_membership.json</rcsb.group.membership.json.schema.name>
         <rcsb.group.polymer.entity.json.schema.name>json-schema-group_polymer_entity.json</rcsb.group.polymer.entity.json.schema.name>
         <rcsb.group.non_polymer.entity.json.schema.name>json-schema-group_non_polymer_entity.json</rcsb.group.non_polymer.entity.json.schema.name>
 
@@ -228,6 +229,7 @@
         <core.pfam.json.schema.name>core_pfam.json</core.pfam.json.schema.name>
 
         <group.entry.json.schema.name>group_entry.json</group.entry.json.schema.name>
+        <group.membership.json.schema.name>group_membership.json</group.membership.json.schema.name>
         <group.polymer.entity.json.schema.name>group_polymer_entity.json</group.polymer.entity.json.schema.name>
         <group.non_polymer.entity.json.schema.name>group_non_polymer_entity.json</group.non_polymer.entity.json.schema.name>
         <group.provenance.json.schema.name>group_provenance.json</group.provenance.json.schema.name>
@@ -264,6 +266,7 @@
         <validation.pubmed.bson.schema.name>${validation.schema.prefix}${core.pubmed.json.schema.name}</validation.pubmed.bson.schema.name>
         <validation.ncbi.bson.schema.name>${validation.schema.prefix}${core.ncbi.json.schema.name}</validation.ncbi.bson.schema.name>
         <!-- groups -->
+        <validation.group.membership.bson.schema.name>${validation.schema.prefix}${group.membership.json.schema.name}</validation.group.membership.bson.schema.name>
         <validation.group.entry.bson.schema.name>${validation.schema.prefix}${group.entry.json.schema.name}</validation.group.entry.bson.schema.name>
         <validation.group.polymer.entity.bson.schema.name>${validation.schema.prefix}${group.polymer.entity.json.schema.name}</validation.group.polymer.entity.bson.schema.name>
         <validation.group.non_polymer.entity.bson.schema.name>${validation.schema.prefix}${group.non_polymer.entity.json.schema.name}</validation.group.non_polymer.entity.bson.schema.name>
@@ -829,6 +832,34 @@
                             </systemProperties>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>build-group-membership-schema</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateCombinedJsonSchema</mainClass>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>true</argument>
+                                <!-- where to put final schema -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${core.schema.location}/${group.membership.json.schema.name}</argument>
+                                <!-- list of schemas to stitch -->
+                                <argument>-i</argument>
+                                <argument>file://${rcsb.group.json.schemas.location}/${rcsb.group.membership.json.schema.name}</argument>
+                            </arguments>
+                            <systemProperties>
+                                <!-- Identifies a resource by type -->
+                                <systemProperty>
+                                    <key>sourceScheme</key>
+                                    <value>resource</value>
+                                </systemProperty>
+                            </systemProperties>
+                        </configuration>
+                    </execution>
 
                     <!-- GENERATE VALIDATION SCHEMAS FOR CORES -->
                     <!-- cores -->
@@ -1105,6 +1136,20 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <id>generate-validation-schema-group-membership</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${core.schema.location}/${group.membership.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.group.membership.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>generate-validation-schema-group-entry</id>
                         <phase>generate-sources</phase>
                         <goals>
@@ -1205,6 +1250,27 @@
                                 <!-- core schema location -->
                                 <argument>-i</argument>
                                 <argument>${project.build.directory}/${embeddings.schema.location}</argument>
+                                <!-- auto schema location -->
+                                <argument>-o</argument>
+                                <argument>${project.build.directory}/${auto.schema.location}</argument>
+                                <argument>-t</argument>
+                                <argument>${project.auto.package}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>annotate-schemas-for-groups-java-types</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateAutoJsonSchema</mainClass>
+                            <arguments>
+                                <!-- groups schema location -->
+                                <argument>-i</argument>
+                                <argument>${project.basedir}/schemas/internal/groups</argument>
                                 <!-- auto schema location -->
                                 <argument>-o</argument>
                                 <argument>${project.build.directory}/${auto.schema.location}</argument>
