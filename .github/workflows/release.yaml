@@ -56,7 +56,13 @@ jobs:
         run: |
           gpg --import ~/.secrets/maven_signing_public.gpg
           passphrase=$(grep gpg.passphrase ~/.secrets/settings.xml | sed "s/.*<.*>\(.*\)<.*>/\1/")
-          gpg --pinentry-mode=loopback --passphrase  "$passphrase" --import ~/.secrets/maven_signing_private.gpg
+          if [ -z "$passphrase" ]; then
+            echo "ERROR: Could not extract GPG passphrase from settings.xml"
+            exit 1
+          fi
+          gpg --pinentry-mode=loopback --passphrase "$passphrase" --import ~/.secrets/maven_signing_private.gpg
+          echo "Verifying GPG secret key was imported:"
+          gpg --list-secret-keys
       - name: Publish to maven central via maven deploy
         # Note: this will wait until the new artifact is fully validated and available publicly.
         # The wait is essential to trigger the update-downstream job below
