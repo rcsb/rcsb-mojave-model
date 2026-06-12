@@ -98,10 +98,16 @@
       "properties": {
         "similarity_cutoff": {
           "type": "number",
+          "description": "Degree of similarity expressed as a floating-point number",
           "rcsb_search_context": [
             "default-match"
           ],
-          "description": "The desired lower limit for the similarity between two members that belong to the same group"
+          "rcsb_description": [
+            {
+              "text": "Degree of similarity expressed as a floating-point number",
+              "context": "dictionary"
+            }
+          ]
         },
         "similarity_score_min": {
           "type": "number",

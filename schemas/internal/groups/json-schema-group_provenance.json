@@ -43,10 +43,17 @@
             "matching_deposit_group_id",
             "matching_chemical_component_id"
           ],
+          "description": "Method used to establish group membership",
           "rcsb_search_context": [
             "exact-match"
           ],
-          "description": "Specifies the type of similarity criteria used to aggregate members into higher levels in the hierarchy"
+          "rcsb_full_text_priority": 10,
+          "rcsb_description": [
+            {
+              "text": "Method used to establish group membership",
+              "context": "dictionary"
+            }
+          ]
         },
         "method": {
           "type": "object",
