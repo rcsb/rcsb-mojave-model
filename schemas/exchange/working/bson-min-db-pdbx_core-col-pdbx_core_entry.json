@@ -1096,6 +1096,9 @@
                      "JEOL CRYO ARM 200",
                      "JEOL CRYO ARM 300",
                      "JEOL KYOTO-3000SFF",
+                     "SHUIMU TOTEM 120S",
+                     "SHUIMU TOTEM 200S",
+                     "SHUIMU TOTEM 300S",
                      "SIEMENS SULEIKA",
                      "TFS GLACIOS",
                      "TFS KRIOS",
@@ -2917,6 +2920,32 @@
                },
                "data_set_type": {
                   "bsonType": "string"
+               },
+               "db_source": {
+                  "bsonType": "string",
+                  "enum": [
+                     "Apollo - University of Cambridge Repository",
+                     "CXIDB",
+                     "DRYAD Database",
+                     "EMPIAR",
+                     "ESRF Data Portal",
+                     "ETH Zurich Research Collection",
+                     "Etsin",
+                     "Integrated Resource for Reproducibility in Macromolecular Crystallography",
+                     "International Union of Crystallography",
+                     "KAUST Repository",
+                     "Keele Data Repository",
+                     "MAXIV Public Data Repository",
+                     "MX-RDR (Macromolecular Xtallography Raw Data Repository)",
+                     "Manchester eScholar Services",
+                     "Mendeley Data",
+                     "PSI Public Data Repository",
+                     "ProteinDiffraction",
+                     "RMIT University Figshare",
+                     "SBGrid Data Bank",
+                     "Xtal Raw Data Archive",
+                     "Zenodo"
+                  ]
                },
                "details": {
                   "bsonType": "string"

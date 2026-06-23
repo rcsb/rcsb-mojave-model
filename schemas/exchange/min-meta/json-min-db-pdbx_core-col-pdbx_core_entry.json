@@ -3500,28 +3500,28 @@
                },
                "calibrated_defocus_max": {
                   "type": "number",
-                  "description": "The maximum calibrated defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
+                  "description": "The maximum calibrated defocus value of the objective lens (in nanometres) used\n to obtain the recorded images. Negative values refer to overfocus.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
-                  "rcsb_units": "nanometers",
+                  "rcsb_units": "nanometres",
                   "rcsb_description": [
                      {
-                        "text": "The maximum calibrated defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
+                        "text": "The maximum calibrated defocus value of the objective lens (in nanometres) used\n to obtain the recorded images. Negative values refer to overfocus.",
                         "context": "dictionary"
                      }
                   ]
                },
                "calibrated_defocus_min": {
                   "type": "number",
-                  "description": "The minimum calibrated defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
+                  "description": "The minimum calibrated defocus value of the objective lens (in nanometres) used\n to obtain the recorded images. Negative values refer to overfocus.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
-                  "rcsb_units": "nanometers",
+                  "rcsb_units": "nanometres",
                   "rcsb_description": [
                      {
-                        "text": "The minimum calibrated defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
+                        "text": "The minimum calibrated defocus value of the objective lens (in nanometres) used\n to obtain the recorded images. Negative values refer to overfocus.",
                         "context": "dictionary"
                      }
                   ]
@@ -3718,6 +3718,9 @@
                      "JEOL CRYO ARM 200",
                      "JEOL CRYO ARM 300",
                      "JEOL KYOTO-3000SFF",
+                     "SHUIMU TOTEM 120S",
+                     "SHUIMU TOTEM 200S",
+                     "SHUIMU TOTEM 300S",
                      "SIEMENS SULEIKA",
                      "TFS GLACIOS",
                      "TFS KRIOS",
@@ -3792,28 +3795,28 @@
                },
                "nominal_defocus_max": {
                   "type": "number",
-                  "description": "The maximum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
+                  "description": "The maximum defocus value of the objective lens (in nanometres) used\n to obtain the recorded images. Negative values refer to overfocus.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
-                  "rcsb_units": "nanometers",
+                  "rcsb_units": "nanometres",
                   "rcsb_description": [
                      {
-                        "text": "The maximum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
+                        "text": "The maximum defocus value of the objective lens (in nanometres) used\n to obtain the recorded images. Negative values refer to overfocus.",
                         "context": "dictionary"
                      }
                   ]
                },
                "nominal_defocus_min": {
                   "type": "number",
-                  "description": "The minimum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
+                  "description": "The minimum defocus value of the objective lens (in nanometres) used\n to obtain the recorded images. Negative values refer to overfocus.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
-                  "rcsb_units": "nanometers",
+                  "rcsb_units": "nanometres",
                   "rcsb_description": [
                      {
-                        "text": "The minimum defocus value of the objective lens (in nanometers) used\n to obtain the recorded images. Negative values refer to overfocus.",
+                        "text": "The minimum defocus value of the objective lens (in nanometres) used\n to obtain the recorded images. Negative values refer to overfocus.",
                         "context": "dictionary"
                      }
                   ]
@@ -9561,6 +9564,39 @@
                   "rcsb_description": [
                      {
                         "text": "The type of the experimenatal data set.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "db_source": {
+                  "type": "string",
+                  "enum": [
+                     "Apollo - University of Cambridge Repository",
+                     "CXIDB",
+                     "DRYAD Database",
+                     "EMPIAR",
+                     "ESRF Data Portal",
+                     "ETH Zurich Research Collection",
+                     "Etsin",
+                     "Integrated Resource for Reproducibility in Macromolecular Crystallography",
+                     "International Union of Crystallography",
+                     "KAUST Repository",
+                     "Keele Data Repository",
+                     "MAXIV Public Data Repository",
+                     "MX-RDR (Macromolecular Xtallography Raw Data Repository)",
+                     "Manchester eScholar Services",
+                     "Mendeley Data",
+                     "PSI Public Data Repository",
+                     "ProteinDiffraction",
+                     "RMIT University Figshare",
+                     "SBGrid Data Bank",
+                     "Xtal Raw Data Archive",
+                     "Zenodo"
+                  ],
+                  "description": "For external sources, the name of the resource.",
+                  "rcsb_description": [
+                     {
+                        "text": "For external sources, the name of the resource.",
                         "context": "dictionary"
                      }
                   ]
