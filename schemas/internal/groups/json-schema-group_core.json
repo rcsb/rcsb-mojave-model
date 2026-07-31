@@ -11,9 +11,6 @@
   "properties": {
     "rcsb_id": {
       "type": "string",
-      "rcsb_search_context": [
-        "exact-match"
-      ],
       "description": "A unique textual identifier for a group"
     },
     "rcsb_group_container_identifiers": {
@@ -26,10 +23,7 @@
       "properties": {
         "group_id": {
           "type": "string",
-          "description": "A unique textual identifier for a group",
-          "rcsb_search_context": [
-            "exact-match"
-          ]
+          "description": "A unique textual identifier for a group"
         },
         "group_provenance_id": {
           "$ref": "json-schema-group_provenance.json#/properties/rcsb_group_provenance_container_identifiers/properties/group_provenance_id"
@@ -46,10 +40,7 @@
         "group_member_ids": {
           "type": "array",
           "items": {
-            "type": "string",
-            "rcsb_search_context": [
-              "exact-match"
-            ]
+            "type": "string"
           },
           "minItems": 1,
           "uniqueItems": true,
@@ -66,10 +57,7 @@
       ],
       "properties": {
         "group_name": {
-          "type": "string",
-          "rcsb_search_context": [
-            "exact-match"
-          ]
+          "type": "string"
         },
         "group_description": {
           "type": "string"
@@ -86,10 +74,7 @@
           "description": "Granularity of group members identifiers"
         },
         "group_members_count": {
-          "type": "integer",
-          "rcsb_search_context": [
-            "default-match"
-          ]
+          "type": "integer"
         }
       }
     },
@@ -99,9 +84,6 @@
         "similarity_cutoff": {
           "type": "number",
           "description": "Degree of similarity expressed as a floating-point number",
-          "rcsb_search_context": [
-            "default-match"
-          ],
           "rcsb_description": [
             {
               "text": "Degree of similarity expressed as a floating-point number",

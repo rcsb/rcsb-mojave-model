@@ -24,10 +24,7 @@
                 "detail": "The higher the coverage, the better"
               }
             ],
-            "description": "Defines ranking option applicable to group members",
-            "rcsb_search_context": [
-              "exact-match"
-            ]
+            "description": "Defines ranking option applicable to group members"
           },
           "group_members": {
             "type": "array",
@@ -39,24 +36,15 @@
               ],
               "properties": {
                 "member_id": {
-                  "type": "string",
-                  "rcsb_search_context": [
-                    "exact-match"
-                  ]
+                  "type": "string"
                 },
                 "rank": {
                   "type": "integer",
-                  "description": "Reflects a relationship between group members such that, for any two members the first is ranked higher (smaller rank value) than the second",
-                  "rcsb_search_context": [
-                    "default-match"
-                  ]
+                  "description": "Reflects a relationship between group members such that, for any two members the first is ranked higher (smaller rank value) than the second"
                 },
                 "original_score": {
                   "type": "number",
-                  "description": "Quantifies the criteria used for ranking",
-                  "rcsb_search_context": [
-                    "default-match"
-                  ]
+                  "description": "Quantifies the criteria used for ranking"
                 }
               },
               "additionalProperties": false
