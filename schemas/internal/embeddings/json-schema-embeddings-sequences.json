@@ -1,0 +1,27 @@
+{
+  "title" : "Embedding Sequence",
+  "description": "JSON schema for storing embedding sequences.",
+  "type": "object",
+  "required": [
+    "seq_id",
+    "sequence"
+  ],
+  "properties": {
+    "seq_id": {
+      "type": "string",
+      "examples": [
+        "seq_1",
+        "seq_2"
+      ],
+      "description": "A single identifier for each unique sequence."
+    },
+    "sequence": {
+      "type": "string",
+      "examples": [
+        "HGILRERDQWLEELKAMMDDRAQTMKVVMKMNNQ",
+        "TYVDLEKAKSASALWAYIGIDKPSHDRYTKGEAGGGNKTLRTMVWNMANSMIKNRKCPYRTVYEQTKERLAVSEKVTKSR"
+      ],
+      "description": "A unique protein sequence."
+    }
+  }
+}
