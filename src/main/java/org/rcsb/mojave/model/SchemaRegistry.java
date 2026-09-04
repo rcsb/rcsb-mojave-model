@@ -104,7 +104,11 @@ public enum SchemaRegistry {
     SEQUENCE_COORDINATES_PDB_INSTANCE_MAP_BSON("validation.sequence.coordinates.map.bson.schema.name"),
 
     EMBEDDINGS_JSON("embeddings.json.schema.name"),
-    EMBEDDINGS_BSON("validation.embeddings.bson.schema.name");
+    EMBEDDINGS_BSON("validation.embeddings.bson.schema.name"),
+    EMBEDDINGS_SEQUENCES_JSON("embeddings.sequences.json.schema.name"),
+    EMBEDDINGS_SEQUENCES_BSON("validation.embeddings.sequences.bson.schema.name"),
+    EMBEDDINGS_ENTITY_TO_SEQUENCE_JSON("embeddings.sequences.json.schema.name"),
+    EMBEDDINGS_ENTITY_TO_SEQUENCE_BSON("validation.embeddings.entity.to.sequence.bson.schema.name");
 
 
     private final String value;

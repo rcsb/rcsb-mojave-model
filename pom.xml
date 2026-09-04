@@ -185,6 +185,8 @@
         <!-- ==================================== EMBEDDINGS JSON SCHEMAS ========================================= -->
         <rcsb.embeddings.json.schemas.location>${project.basedir}/schemas/internal/embeddings</rcsb.embeddings.json.schemas.location>
         <rcsb.embeddings.json.schema.name>json-schema-embeddings.json</rcsb.embeddings.json.schema.name>
+        <rcsb.embeddings.sequences.json.schema.name>json-schema-embeddings-sequences.json</rcsb.embeddings.sequences.json.schema.name>
+        <rcsb.embeddings.entity.to.sequence.json.schema.name>json-schema-embeddings-entity-to-sequence.json</rcsb.embeddings.entity.to.sequence.json.schema.name>
 
         <!-- ================================= WHERE WE KEEP SCHEMAS PRODUCTS ====================================== -->
 
@@ -254,6 +256,8 @@
         <sequence.coordinates.map.json.schema.name>identifier_map.json</sequence.coordinates.map.json.schema.name>
 
         <embeddings.json.schema.name>structure_embeddings.json</embeddings.json.schema.name>
+        <embeddings.sequences.json.schema.name>embeddings_sequences.json</embeddings.sequences.json.schema.name>
+        <embeddings.entity.to.sequence.json.schema.name>embeddings_entity_to_sequence.json</embeddings.entity.to.sequence.json.schema.name>
 
         <!-- VALIDATION SCHEMA NAMES -->
         <!-- cores -->
@@ -287,6 +291,8 @@
         <validation.sequence.coordinates.map.bson.schema.name>${validation.schema.prefix}${sequence.coordinates.map.json.schema.name}</validation.sequence.coordinates.map.bson.schema.name>
         <!-- embeddings -->
         <validation.embeddings.bson.schema.name>${validation.schema.prefix}${embeddings.json.schema.name}</validation.embeddings.bson.schema.name>
+        <validation.embeddings.sequences.bson.schema.name>${validation.schema.prefix}${embeddings.sequences.json.schema.name}</validation.embeddings.sequences.bson.schema.name>
+        <validation.embeddings.entity.to.sequence.bson.schema.name>${validation.schema.prefix}${embeddings.entity.to.sequence.json.schema.name}</validation.embeddings.entity.to.sequence.bson.schema.name>
 
     </properties>
 
@@ -505,6 +511,14 @@
                                 <fileSet>
                                     <sourceFile>${rcsb.embeddings.json.schemas.location}/${rcsb.embeddings.json.schema.name}</sourceFile>
                                     <destinationFile>${project.build.directory}/${embeddings.schema.location}/${embeddings.json.schema.name}</destinationFile>
+                                </fileSet>
+                                <fileSet>
+                                    <sourceFile>${rcsb.embeddings.json.schemas.location}/${rcsb.embeddings.sequences.json.schema.name}</sourceFile>
+                                    <destinationFile>${project.build.directory}/${embeddings.schema.location}/${embeddings.sequences.json.schema.name}</destinationFile>
+                                </fileSet>
+                                <fileSet>
+                                    <sourceFile>${rcsb.embeddings.json.schemas.location}/${rcsb.embeddings.entity.to.sequence.json.schema.name}</sourceFile>
+                                    <destinationFile>${project.build.directory}/${embeddings.schema.location}/${embeddings.entity.to.sequence.json.schema.name}</destinationFile>
                                 </fileSet>
                                 <fileSet>
                                     <sourceFile>${rcsb.group.json.schemas.location}/${rcsb.group.provenance.json.schema.name}</sourceFile>
@@ -1105,6 +1119,7 @@
                             </arguments>
                         </configuration>
                     </execution>
+                    <!-- embeddings -->
                     <execution>
                         <id>generate-validation-schema-embeddings</id>
                         <phase>generate-sources</phase>
@@ -1117,6 +1132,36 @@
                             <arguments>
                                 <argument>${project.build.directory}/${embeddings.schema.location}/${embeddings.json.schema.name}</argument>
                                 <argument>${project.build.directory}/${validation.schema.location}/${validation.embeddings.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-embeddings-sequences</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${embeddings.schema.location}/${embeddings.sequences.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.embeddings.sequences.bson.schema.name}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-validation-schema-embeddings-entity-to-sequence</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!-- execute Java programs in the same VM -->
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>org.rcsb.mojave.tools.core.GenerateValidationBsonSchema</mainClass>
+                            <arguments>
+                                <argument>${project.build.directory}/${embeddings.schema.location}/${embeddings.entity.to.sequence.json.schema.name}</argument>
+                                <argument>${project.build.directory}/${validation.schema.location}/${validation.embeddings.entity.to.sequence.bson.schema.name}</argument>
                             </arguments>
                         </configuration>
                     </execution>
