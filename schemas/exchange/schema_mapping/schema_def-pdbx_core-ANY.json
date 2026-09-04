@@ -2,7 +2,7 @@
    "NAME": "pdbx_core",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "pdbx_core",
-   "DATABASE_VERSION": "10.0.0",
+   "DATABASE_VERSION": "10.0.1",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -11642,6 +11642,7 @@
                   "JEOL 4000EX",
                   "JEOL CRYO ARM 200",
                   "JEOL CRYO ARM 300",
+                  "JEOL JEM-F200",
                   "JEOL KYOTO-3000SFF",
                   "SHUIMU TOTEM 120S",
                   "SHUIMU TOTEM 200S",
@@ -14248,7 +14249,10 @@
                "FILTER_TYPES": [],
                "IS_CHAR_TYPE": true,
                "ENUMERATION": [
+                  "CHAMELEON",
+                  "CRYOGENIUM",
                   "CRYOSOL VITROJET",
+                  "CRYOWRITER",
                   "EMS-002 RAPID IMMERSION FREEZER",
                   "FEI VITROBOT MARK I",
                   "FEI VITROBOT MARK II",
@@ -14258,6 +14262,7 @@
                   "HOMEMADE PLUNGER",
                   "LEICA EM CPC",
                   "LEICA EM GP",
+                  "LEICA EM GP2",
                   "LEICA KF80",
                   "LEICA PLUNGER",
                   "REICHERT-JUNG PLUNGER",
@@ -30449,6 +30454,7 @@
                   "AlphaFold",
                   "ITasser",
                   "InsightII",
+                  "ModelAngelo",
                   "ModelArchive",
                   "Modeller",
                   "Other",
@@ -30501,6 +30507,984 @@
             }
          },
          "SLICE_ATTRIBUTES": {},
+         "SLICE_UNIT_CARDINALITY": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         },
+         "SLICE_CATEGORY_EXTRAS": {
+            "ENTITY": false,
+            "ASSEMBLY": false,
+            "ENTITY_MONOMER": false,
+            "ENTITY_INSTANCE": false,
+            "ENTITY_INSTANCE_VALIDATION": false,
+            "SLICE_ENTITY_POLYMER": false,
+            "SLICE_ENTITY_NONPOLYMER": false,
+            "SLICE_ENTITY_BRANCHED": false,
+            "SLICE_ENTITY_INSTANCE_POLYMER": false,
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": false,
+            "SLICE_ENTITY_INSTANCE_BRANCHED": false
+         }
+      },
+      "PDBX_MODIFICATION_FEATURE": {
+         "SCHEMA_ID": "PDBX_MODIFICATION_FEATURE",
+         "SCHEMA_NAME": "pdbx_modification_feature",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "ORDINAL": "ordinal",
+            "PDB_INS_CODE": "PDB_ins_code",
+            "AUTH_ASYM_ID": "auth_asym_id",
+            "AUTH_COMP_ID": "auth_comp_id",
+            "AUTH_SEQ_ID": "auth_seq_id",
+            "CATEGORY": "category",
+            "COMP_ID_LINKING_ATOM": "comp_id_linking_atom",
+            "LABEL_ALT_ID": "label_alt_id",
+            "LABEL_ASYM_ID": "label_asym_id",
+            "LABEL_COMP_ID": "label_comp_id",
+            "LABEL_SEQ_ID": "label_seq_id",
+            "MODIFIED_RESIDUE_PDB_INS_CODE": "modified_residue_PDB_ins_code",
+            "MODIFIED_RESIDUE_AUTH_ASYM_ID": "modified_residue_auth_asym_id",
+            "MODIFIED_RESIDUE_AUTH_COMP_ID": "modified_residue_auth_comp_id",
+            "MODIFIED_RESIDUE_AUTH_SEQ_ID": "modified_residue_auth_seq_id",
+            "MODIFIED_RESIDUE_ID": "modified_residue_id",
+            "MODIFIED_RESIDUE_ID_LINKING_ATOM": "modified_residue_id_linking_atom",
+            "MODIFIED_RESIDUE_LABEL_ALT_ID": "modified_residue_label_alt_id",
+            "MODIFIED_RESIDUE_LABEL_ASYM_ID": "modified_residue_label_asym_id",
+            "MODIFIED_RESIDUE_LABEL_COMP_ID": "modified_residue_label_comp_id",
+            "MODIFIED_RESIDUE_LABEL_SEQ_ID": "modified_residue_label_seq_id",
+            "MODIFIED_RESIDUE_SYMMETRY": "modified_residue_symmetry",
+            "RCSB_MODIFIED_RESIDUE_ID": "rcsb_modified_residue_id",
+            "REF_COMP_ID": "ref_comp_id",
+            "REF_PCM_ID": "ref_pcm_id",
+            "SYMMETRY": "symmetry",
+            "TYPE": "type"
+         },
+         "ATTRIBUTE_MAP": {
+            "ORDINAL": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "ordinal",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PDB_INS_CODE": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "PDB_ins_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUTH_ASYM_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "auth_asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUTH_COMP_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "auth_comp_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "AUTH_SEQ_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "auth_seq_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "CATEGORY": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "category",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "COMP_ID_LINKING_ATOM": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "comp_id_linking_atom",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "LABEL_ALT_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "label_alt_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "LABEL_ASYM_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "label_asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "LABEL_COMP_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "label_comp_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "LABEL_SEQ_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "label_seq_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODIFIED_RESIDUE_PDB_INS_CODE": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "modified_residue_PDB_ins_code",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODIFIED_RESIDUE_AUTH_ASYM_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "modified_residue_auth_asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODIFIED_RESIDUE_AUTH_COMP_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "modified_residue_auth_comp_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODIFIED_RESIDUE_AUTH_SEQ_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "modified_residue_auth_seq_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODIFIED_RESIDUE_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "modified_residue_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODIFIED_RESIDUE_ID_LINKING_ATOM": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "modified_residue_id_linking_atom",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODIFIED_RESIDUE_LABEL_ALT_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "modified_residue_label_alt_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODIFIED_RESIDUE_LABEL_ASYM_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "modified_residue_label_asym_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODIFIED_RESIDUE_LABEL_COMP_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "modified_residue_label_comp_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODIFIED_RESIDUE_LABEL_SEQ_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "modified_residue_label_seq_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODIFIED_RESIDUE_SYMMETRY": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "modified_residue_symmetry",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_MODIFIED_RESIDUE_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "rcsb_modified_residue_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REF_COMP_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "ref_comp_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "REF_PCM_ID": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "ref_pcm_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "SYMMETRY": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "symmetry",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TYPE": {
+               "CATEGORY": "pdbx_modification_feature",
+               "ATTRIBUTE": "type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "ORDINAL": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "PDB_INS_CODE": {
+               "ORDER": 2,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AUTH_ASYM_ID": {
+               "ORDER": 3,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AUTH_COMP_ID": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "AUTH_SEQ_ID": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "CATEGORY": {
+               "ORDER": 6,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "ADP-ribose",
+                  "Amino acid",
+                  "Biotin",
+                  "Carbohydrate",
+                  "Chromophore/chromophore-like",
+                  "Covalent chemical modification",
+                  "Crosslinker",
+                  "Disulfide bridge",
+                  "Flavin",
+                  "Heme/heme-like",
+                  "Isopeptide bond",
+                  "Lipid/lipid-like",
+                  "Metal coordination",
+                  "Named protein modification",
+                  "Non-standard linkage",
+                  "Non-standard residue",
+                  "Nucleotide monophosphate",
+                  "Terminal acetylation",
+                  "Terminal amidation"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "COMP_ID_LINKING_ATOM": {
+               "ORDER": 7,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "LABEL_ALT_ID": {
+               "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "LABEL_ASYM_ID": {
+               "ORDER": 9,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "LABEL_COMP_ID": {
+               "ORDER": 10,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "LABEL_SEQ_ID": {
+               "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODIFIED_RESIDUE_PDB_INS_CODE": {
+               "ORDER": 12,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODIFIED_RESIDUE_AUTH_ASYM_ID": {
+               "ORDER": 13,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODIFIED_RESIDUE_AUTH_COMP_ID": {
+               "ORDER": 14,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODIFIED_RESIDUE_AUTH_SEQ_ID": {
+               "ORDER": 15,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODIFIED_RESIDUE_ID": {
+               "ORDER": 16,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODIFIED_RESIDUE_ID_LINKING_ATOM": {
+               "ORDER": 17,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODIFIED_RESIDUE_LABEL_ALT_ID": {
+               "ORDER": 18,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODIFIED_RESIDUE_LABEL_ASYM_ID": {
+               "ORDER": 19,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODIFIED_RESIDUE_LABEL_COMP_ID": {
+               "ORDER": 20,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODIFIED_RESIDUE_LABEL_SEQ_ID": {
+               "ORDER": 21,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "MODIFIED_RESIDUE_SYMMETRY": {
+               "ORDER": 22,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_MODIFIED_RESIDUE_ID": {
+               "ORDER": 23,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REF_COMP_ID": {
+               "ORDER": 24,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REF_PCM_ID": {
+               "ORDER": 25,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "SYMMETRY": {
+               "ORDER": 26,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 27,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "(3-Aminopropyl)(5'-adenosyl)phosphono amidation",
+                  "(3R)-3-Hydroxybutyrylation",
+                  "12-Hydroxyfarnesylation",
+                  "12-Oxomyristoylation",
+                  "12R-Hydroxymyristoylation",
+                  "14-Hydroxy-10,13-dioxo-7-heptadecenoic acid",
+                  "2,3-Dicarboxypropylation",
+                  "2-Aminoadipylation",
+                  "2-Aminoethylphosphorylation",
+                  "2-Cholinephosphorylation",
+                  "2-Hydroxyisobutyrylation",
+                  "2-Oxo-5,5-dimethylhexanoylation",
+                  "2-Oxobutanoic acid",
+                  "3-Oxoalanine",
+                  "3-Phenyllactic acid",
+                  "4-Phosphopantetheine",
+                  "ADP-ribosylation",
+                  "ADP-riboxanation",
+                  "AMPylation",
+                  "Acetamidation",
+                  "Acetamidomethylation",
+                  "Acetylation",
+                  "Alanylation",
+                  "Allysine",
+                  "Amination",
+                  "Arachidoylation",
+                  "Archaeol",
+                  "Arginylation",
+                  "Arsenylation",
+                  "Asparaginylation",
+                  "Aspartylation",
+                  "Bacillithiolation",
+                  "Benzoylation",
+                  "Benzylation",
+                  "Beta-amino acid",
+                  "Beta-hydroxybutyrylation",
+                  "Beta-lysylation",
+                  "Beta-mercaptoethanol",
+                  "Biotinylation",
+                  "Bromination",
+                  "Butyrylation",
+                  "C-Mannosylation",
+                  "CMPylation",
+                  "Carbamoylation",
+                  "Carboxyethylation",
+                  "Carboxylation",
+                  "Carboxymethylation",
+                  "Chlorination",
+                  "Cholesterylation",
+                  "Citrullination",
+                  "Crotonylation",
+                  "Cyanation",
+                  "Cysteinylation",
+                  "D-alanylation",
+                  "D-arginylation",
+                  "D-asparaginylation",
+                  "D-aspartylation",
+                  "D-cysteinylation",
+                  "D-glutaminylation",
+                  "D-glutamylation",
+                  "D-histidinylation",
+                  "D-isoleucylation",
+                  "D-lactate",
+                  "D-leucylation",
+                  "D-lysylation",
+                  "D-methionylation",
+                  "D-phenylalanylation",
+                  "D-prolylation",
+                  "D-serylation",
+                  "D-threoninylation",
+                  "D-tryptophanylation",
+                  "D-tyrosination",
+                  "D-valylation",
+                  "Deamidation",
+                  "Decanoylation",
+                  "Decarboxylation",
+                  "Dehydroamino acid",
+                  "Dehydrocoelenterazination",
+                  "Dehydrogenation",
+                  "Dehydroxylation",
+                  "Deoxidation",
+                  "Deoxyhypusine",
+                  "Diacylglycerol",
+                  "Dihydroxyacetonation",
+                  "Dimethylamination",
+                  "Diphosphorylation",
+                  "Diphthamide",
+                  "Dipyrromethane methylation",
+                  "Dopaminylation",
+                  "Ethylation",
+                  "Ethylsulfanylation",
+                  "Farnesylation",
+                  "Fluorination",
+                  "Formylation",
+                  "GMPylation",
+                  "Geranylgeranylation",
+                  "Glutaminylation",
+                  "Glutamylation",
+                  "Glutarylation",
+                  "Glutathionylation",
+                  "Glycerophosphorylation",
+                  "Glycerylphosphorylethanolamination",
+                  "Glycylation",
+                  "Heptanoylation",
+                  "Hexanoylation",
+                  "Histaminylation",
+                  "Histidinylation",
+                  "Hydrogenation",
+                  "Hydroperoxylation",
+                  "Hydroxyamination",
+                  "Hydroxyethylation",
+                  "Hydroxylation",
+                  "Hydroxymethylation",
+                  "Hydroxysulfanylation",
+                  "Hypusine",
+                  "Iodination",
+                  "Isobutyrylation",
+                  "Isoleucylation",
+                  "L-lactate",
+                  "Lactoylation",
+                  "Laurylation",
+                  "Leucylation",
+                  "Lipoylation",
+                  "Lysylation",
+                  "Malonylation",
+                  "Methacrylation",
+                  "Methionylation",
+                  "Methoxylation",
+                  "Methylamination",
+                  "Methylation",
+                  "Methylsulfanylation",
+                  "Methylsulfation",
+                  "Myristoylation",
+                  "N-Glycosylation",
+                  "N-methylcarbamoylation",
+                  "N-pyruvic acid 2-iminylation",
+                  "N6-benzoyllysine",
+                  "N6-isonicotinyllysine",
+                  "N6-methacryllysine",
+                  "Nitration",
+                  "Nitrosylation",
+                  "None",
+                  "Noradrenylation",
+                  "Norleucine",
+                  "Norvaline",
+                  "O-Glycosylation",
+                  "Octanoylation",
+                  "Oleoylation",
+                  "Ornithine",
+                  "Oxidation",
+                  "Palmitoleoylation",
+                  "Palmitoylation",
+                  "Pentadecanoylation",
+                  "Pentanoylation",
+                  "Phenylalanylation",
+                  "Phosphatidylethanolamine amidation",
+                  "Phosphoenolpyruvate",
+                  "Phosphorylation",
+                  "Prolylation",
+                  "Propionylation",
+                  "Pyridoxal phosphate",
+                  "Pyrrolidone carboxylic acid",
+                  "Pyruvic acid",
+                  "Retinoylation",
+                  "S-Glycosylation",
+                  "Selanylation",
+                  "Selenomethionine",
+                  "Serotonylation",
+                  "Serylation",
+                  "Stearoylation",
+                  "Stereoisomerisation",
+                  "Succinamide ring",
+                  "Succination",
+                  "Succinylation",
+                  "Sulfanylmethylation",
+                  "Sulfation",
+                  "Sulfhydration",
+                  "Tert-butylation",
+                  "Tert-butyloxycarbonylation",
+                  "Threoninylation",
+                  "Thyroxine",
+                  "Triiodothyronine",
+                  "Triphosphorylation",
+                  "Tryptophanylation",
+                  "Tyrosination",
+                  "UMPylation",
+                  "Valylation",
+                  "cGMPylation"
+               ],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "ORDINAL"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "pdbx_modification_feature": {
+               "ATTRIBUTES": [
+                  "ordinal"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {
+            "ENTITY_INSTANCE": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "LABEL_ASYM_ID"
+               },
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "MODIFIED_RESIDUE_LABEL_ASYM_ID"
+               }
+            ],
+            "ENTITY_INSTANCE_VALIDATION": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "LABEL_ASYM_ID"
+               },
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "MODIFIED_RESIDUE_LABEL_ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_BRANCHED": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "LABEL_ASYM_ID"
+               },
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "MODIFIED_RESIDUE_LABEL_ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_NONPOLYMER": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "LABEL_ASYM_ID"
+               },
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "MODIFIED_RESIDUE_LABEL_ASYM_ID"
+               }
+            ],
+            "SLICE_ENTITY_INSTANCE_POLYMER": [
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "LABEL_ASYM_ID"
+               },
+               {
+                  "PARENT_CATEGORY": "STRUCT_ASYM",
+                  "PARENT_ATTRIBUTE": "ID",
+                  "CHILD_ATTRIBUTE": "MODIFIED_RESIDUE_LABEL_ASYM_ID"
+               }
+            ]
+         },
          "SLICE_UNIT_CARDINALITY": {
             "ENTITY": false,
             "ASSEMBLY": false,
@@ -68645,7 +69629,8 @@
                   "SUBJECT_OF_INVESTIGATION",
                   "artifact",
                   "modified_monomer",
-                  "mutation"
+                  "mutation",
+                  "non_standard_monomer"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -68991,7 +69976,8 @@
                   "SUBJECT_OF_INVESTIGATION",
                   "artifact",
                   "modified_monomer",
-                  "mutation"
+                  "mutation",
+                  "non_standard_monomer"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -86136,7 +87122,8 @@
                   "disorder_binding",
                   "hydropathy",
                   "modified_monomer",
-                  "mutation"
+                  "mutation",
+                  "non_standard_monomer"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -86481,7 +87468,8 @@
                   "SABDAB_ANTIBODY_TARGET",
                   "artifact",
                   "modified_monomer",
-                  "mutation"
+                  "mutation",
+                  "non_standard_monomer"
                ],
                "CONTENT_CLASSES": [
                   "GENERATED_CONTENT"
@@ -108431,7 +109419,7 @@
          },
          {
             "NAME": "pdbx_core_polymer_entity_instance",
-            "VERSION": "10.1.2"
+            "VERSION": "10.1.3"
          },
          {
             "NAME": "pdbx_core_nonpolymer_entity_instance",
@@ -109188,6 +110176,7 @@
                "PDBX_STRUCT_ENTITY_INST",
                "PDBX_VRPT_SUMMARY_ENTITY_GEOMETRY",
                "PDBX_VRPT_SUMMARY_ENTITY_FIT_TO_MAP",
+               "PDBX_MODIFICATION_FEATURE",
                "RCSB_BRANCHED_ENTITY",
                "RCSB_BRANCHED_ENTITY_CONTAINER_IDENTIFIERS",
                "RCSB_BRANCHED_ENTITY_FEATURE",
@@ -109389,6 +110378,7 @@
                "PDBX_POLY_SEQ_SCHEME",
                "PDBX_VRPT_SUMMARY_ENTITY_GEOMETRY",
                "PDBX_VRPT_SUMMARY_ENTITY_FIT_TO_MAP",
+               "PDBX_MODIFICATION_FEATURE",
                "RCSB_BRANCHED_ENTITY",
                "RCSB_BRANCHED_ENTITY_CONTAINER_IDENTIFIERS",
                "RCSB_BRANCHED_ENTITY_FEATURE",
@@ -109538,6 +110528,7 @@
                "PDBX_STRUCT_ENTITY_INST",
                "PDBX_VRPT_SUMMARY_ENTITY_GEOMETRY",
                "PDBX_VRPT_SUMMARY_ENTITY_FIT_TO_MAP",
+               "PDBX_MODIFICATION_FEATURE",
                "RCSB_BRANCHED_ENTITY_INSTANCE_CONTAINER_IDENTIFIERS",
                "RCSB_BRANCHED_INSTANCE_FEATURE",
                "RCSB_BRANCHED_INSTANCE_FEATURE_SUMMARY",
@@ -109758,6 +110749,21 @@
                   "auth_comp_id",
                   "label_seq_id"
                ],
+               "pdbx_modification_feature": [
+                  "ordinal",
+                  "label_alt_id",
+                  "modified_residue_label_alt_id",
+                  "auth_comp_id",
+                  "auth_asym_id",
+                  "auth_seq_id",
+                  "PDB_ins_code",
+                  "modified_residue_auth_comp_id",
+                  "modified_residue_auth_asym_id",
+                  "modified_residue_auth_seq_id",
+                  "modified_residue_PDB_ins_code",
+                  "ref_pcm_id",
+                  "ref_comp_id"
+               ],
                "pdbx_vrpt_summary_entity_geometry": [
                   "ordinal",
                   "auth_asym_id",
@@ -109853,6 +110859,8 @@
                "PDBX_VALIDATE_RMSD_BOND",
                "PDBX_VALIDATE_SYMM_CONTACT",
                "PDBX_VALIDATE_TORSION",
+               "PDBX_VRPT_SUMMARY_ENTITY_FIT_TO_MAP",
+               "PDBX_MODIFICATION_FEATURE",
                "RCSB_BRANCHED_ENTITY_INSTANCE_CONTAINER_IDENTIFIERS",
                "RCSB_BRANCHED_INSTANCE_FEATURE",
                "RCSB_BRANCHED_INSTANCE_FEATURE_SUMMARY",
@@ -109911,12 +110919,6 @@
                   "label_seq_id"
                ],
                "pdbx_vrpt_summary_entity_geometry": [
-                  "ordinal",
-                  "auth_asym_id",
-                  "label_asym_id",
-                  "entity_id"
-               ],
-               "pdbx_vrpt_summary_entity_fit_to_map": [
                   "ordinal",
                   "auth_asym_id",
                   "label_asym_id",
@@ -110017,6 +111019,7 @@
                "PDBX_VALIDATE_TORSION",
                "PDBX_VRPT_SUMMARY_ENTITY_GEOMETRY",
                "PDBX_VRPT_SUMMARY_ENTITY_FIT_TO_MAP",
+               "PDBX_MODIFICATION_FEATURE",
                "RCSB_ENTITY_INSTANCE_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_CONTAINER_IDENTIFIERS",
                "RCSB_ENTITY_INSTANCE_FEATURE",

@@ -65,57 +65,6 @@
          "minItems": 1,
          "uniqueItems": true
       },
-      "pdbx_vrpt_summary_entity_fit_to_map": {
-         "type": "array",
-         "items": {
-            "type": "object",
-            "properties": {
-               "PDB_model_num": {
-                  "type": "integer",
-                  "description": "The unique model number from _atom_site.pdbx_PDB_model_num.",
-                  "rcsb_description": [
-                     {
-                        "text": "The unique model number from _atom_site.pdbx_PDB_model_num.",
-                        "context": "dictionary"
-                     }
-                  ]
-               },
-               "Q_score": {
-                  "type": "number",
-                  "description": "The calculated average Q-score.",
-                  "rcsb_description": [
-                     {
-                        "text": "The calculated average Q-score.",
-                        "context": "dictionary"
-                     },
-                     {
-                        "text": "Polymer Instance Average Q-Score",
-                        "context": "brief"
-                     }
-                  ],
-                  "rcsb_search_group": [
-                     {
-                        "group_name": "Polymer Instance (Chain) Features",
-                        "priority_order": 25
-                     }
-                  ]
-               },
-               "average_residue_inclusion": {
-                  "type": "number",
-                  "description": "The average of the residue inclusions for all residues in this instance",
-                  "rcsb_description": [
-                     {
-                        "text": "The average of the residue inclusions for all residues in this instance",
-                        "context": "dictionary"
-                     }
-                  ]
-               }
-            },
-            "additionalProperties": false
-         },
-         "minItems": 1,
-         "uniqueItems": true
-      },
       "pdbx_vrpt_summary_entity_geometry": {
          "type": "array",
          "items": {

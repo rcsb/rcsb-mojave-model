@@ -4036,7 +4036,8 @@
                      "disorder_binding",
                      "hydropathy",
                      "modified_monomer",
-                     "mutation"
+                     "mutation",
+                     "non_standard_monomer"
                   ],
                   "examples": [
                      "mutation",
@@ -4133,6 +4134,11 @@
                         "value": "mutation",
                         "detail": "Engineered mutations and chemical modifications",
                         "name": "Engineered mutations and chemical modifications"
+                     },
+                     {
+                        "value": "non_standard_monomer",
+                        "detail": "Non-standard chemical component",
+                        "name": "Non-standard chemical component"
                      }
                   ],
                   "rcsb_description": [
@@ -4339,13 +4345,13 @@
                      0.012,
                      0.00132
                   ],
-                  "description": "The fractional feature coverage relative to the full entity sequence.\n For instance, the fraction of features such as mutations, artifacts or modified monomers\n relative to the length of the entity sequence.",
+                  "description": "The fractional feature coverage relative to the full entity sequence.\n For instance, the fraction of features such as mutations, artifacts or non-standard monomers\n relative to the length of the entity sequence.",
                   "rcsb_search_context": [
                      "default-match"
                   ],
                   "rcsb_description": [
                      {
-                        "text": "The fractional feature coverage relative to the full entity sequence.\n For instance, the fraction of features such as mutations, artifacts or modified monomers\n relative to the length of the entity sequence.",
+                        "text": "The fractional feature coverage relative to the full entity sequence.\n For instance, the fraction of features such as mutations, artifacts or non-standard monomers\n relative to the length of the entity sequence.",
                         "context": "dictionary"
                      },
                      {
@@ -4431,7 +4437,8 @@
                      "SABDAB_ANTIBODY_TARGET",
                      "artifact",
                      "modified_monomer",
-                     "mutation"
+                     "mutation",
+                     "non_standard_monomer"
                   ],
                   "examples": [
                      "mutation",
@@ -4517,6 +4524,11 @@
                         "value": "mutation",
                         "detail": "Engineered mutations and chemical modifications",
                         "name": "Engineered mutations and chemical modifications"
+                     },
+                     {
+                        "value": "non_standard_monomer",
+                        "detail": "Non-standard chemical component",
+                        "name": "Non-standard chemical component"
                      }
                   ],
                   "rcsb_description": [
