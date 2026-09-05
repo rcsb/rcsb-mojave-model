@@ -1234,16 +1234,6 @@
                      {
                         "text": "The position of the modification on the amino acid.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Modified Residue Part",
-                        "context": "brief"
-                     }
-                  ],
-                  "rcsb_search_group": [
-                     {
-                        "group_name": "Protein Modification Components",
-                        "priority_order": 20
                      }
                   ]
                },
@@ -1464,8 +1454,32 @@
                      }
                   ]
                },
-               "uniprot_generic_ptm_accession": {},
-               "uniprot_specific_ptm_accession": {}
+               "uniprot_generic_ptm_accession": {
+                  "type": "string",
+                  "examples": [
+                     "PTM-0252"
+                  ],
+                  "description": "The UniProt PTM accession code that describes the group of PTMs of which this protein modification is a member.",
+                  "rcsb_description": [
+                     {
+                        "text": "The UniProt PTM accession code that describes the group of PTMs of which this protein modification is a member.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "uniprot_specific_ptm_accession": {
+                  "type": "string",
+                  "examples": [
+                     "PTM-0253"
+                  ],
+                  "description": "The UniProt PTM accession code that is an exact match for the protein modification.",
+                  "rcsb_description": [
+                     {
+                        "text": "The UniProt PTM accession code that is an exact match for the protein modification.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
             },
             "additionalProperties": false
          },
