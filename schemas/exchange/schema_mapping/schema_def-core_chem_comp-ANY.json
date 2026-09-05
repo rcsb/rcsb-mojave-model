@@ -2,7 +2,7 @@
    "NAME": "core_chem_comp",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "dw",
-   "DATABASE_VERSION": "7.2.0",
+   "DATABASE_VERSION": "7.2.1",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -34,6 +34,7 @@
             "PDBX_FORMAL_CHARGE": "pdbx_formal_charge",
             "PDBX_INITIAL_DATE": "pdbx_initial_date",
             "PDBX_MODIFIED_DATE": "pdbx_modified_date",
+            "PDBX_PCM": "pdbx_pcm",
             "PDBX_PROCESSING_SITE": "pdbx_processing_site",
             "PDBX_RELEASE_STATUS": "pdbx_release_status",
             "PDBX_REPLACED_BY": "pdbx_replaced_by",
@@ -100,6 +101,12 @@
             "PDBX_MODIFIED_DATE": {
                "CATEGORY": "chem_comp",
                "ATTRIBUTE": "pdbx_modified_date",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PDBX_PCM": {
+               "CATEGORY": "chem_comp",
+               "ATTRIBUTE": "pdbx_pcm",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -316,8 +323,28 @@
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             },
-            "PDBX_PROCESSING_SITE": {
+            "PDBX_PCM": {
                "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "N",
+                  "Y"
+               ],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "PDBX_PROCESSING_SITE": {
+               "ORDER": 12,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -340,7 +367,7 @@
                "SUB_CATEGORIES": []
             },
             "PDBX_RELEASE_STATUS": {
-               "ORDER": 12,
+               "ORDER": 13,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -364,23 +391,6 @@
                "SUB_CATEGORIES": []
             },
             "PDBX_REPLACED_BY": {
-               "ORDER": 13,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [
-                  "TRANSLATE_XMLCHARREFS"
-               ],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [],
-               "SUB_CATEGORIES": []
-            },
-            "PDBX_REPLACES": {
                "ORDER": 14,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -397,8 +407,25 @@
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             },
-            "PDBX_SUBCOMPONENT_LIST": {
+            "PDBX_REPLACES": {
                "ORDER": 15,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "PDBX_SUBCOMPONENT_LIST": {
+               "ORDER": 16,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -415,7 +442,7 @@
                "SUB_CATEGORIES": []
             },
             "THREE_LETTER_CODE": {
-               "ORDER": 16,
+               "ORDER": 17,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -432,7 +459,7 @@
                "SUB_CATEGORIES": []
             },
             "TYPE": {
-               "ORDER": 17,
+               "ORDER": 18,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -1905,6 +1932,496 @@
                   "program",
                   "program_version",
                   "type"
+               ],
+               "TYPE": "EQUI-JOIN"
+            }
+         },
+         "SLICE_ATTRIBUTES": {},
+         "SLICE_UNIT_CARDINALITY": {},
+         "SLICE_CATEGORY_EXTRAS": {}
+      },
+      "PDBX_CHEM_COMP_PCM": {
+         "SCHEMA_ID": "PDBX_CHEM_COMP_PCM",
+         "SCHEMA_NAME": "pdbx_chem_comp_pcm",
+         "SCHEMA_TYPE": "transactional",
+         "SCHEMA_UNIT_CARDINALITY": false,
+         "SCHEMA_CONTENT_CLASSES": [],
+         "SCHEMA_MANDATORY": false,
+         "SCHEMA_SUB_CATEGORIES": [],
+         "ATTRIBUTES": {
+            "PCM_ID": "pcm_id",
+            "CATEGORY": "category",
+            "COMP_ID": "comp_id",
+            "COMP_ID_LINKING_ATOM": "comp_id_linking_atom",
+            "MODIFIED_RESIDUE_ID": "modified_residue_id",
+            "MODIFIED_RESIDUE_ID_LINKING_ATOM": "modified_residue_id_linking_atom",
+            "POLYPEPTIDE_POSITION": "polypeptide_position",
+            "POSITION": "position",
+            "TYPE": "type",
+            "UNIPROT_GENERIC_PTM_ACCESSION": "uniprot_generic_ptm_accession",
+            "UNIPROT_SPECIFIC_PTM_ACCESSION": "uniprot_specific_ptm_accession"
+         },
+         "ATTRIBUTE_MAP": {
+            "PCM_ID": {
+               "CATEGORY": "pdbx_chem_comp_pcm",
+               "ATTRIBUTE": "pcm_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "CATEGORY": {
+               "CATEGORY": "pdbx_chem_comp_pcm",
+               "ATTRIBUTE": "category",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "COMP_ID": {
+               "CATEGORY": "pdbx_chem_comp_pcm",
+               "ATTRIBUTE": "comp_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "COMP_ID_LINKING_ATOM": {
+               "CATEGORY": "pdbx_chem_comp_pcm",
+               "ATTRIBUTE": "comp_id_linking_atom",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODIFIED_RESIDUE_ID": {
+               "CATEGORY": "pdbx_chem_comp_pcm",
+               "ATTRIBUTE": "modified_residue_id",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "MODIFIED_RESIDUE_ID_LINKING_ATOM": {
+               "CATEGORY": "pdbx_chem_comp_pcm",
+               "ATTRIBUTE": "modified_residue_id_linking_atom",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "POLYPEPTIDE_POSITION": {
+               "CATEGORY": "pdbx_chem_comp_pcm",
+               "ATTRIBUTE": "polypeptide_position",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "POSITION": {
+               "CATEGORY": "pdbx_chem_comp_pcm",
+               "ATTRIBUTE": "position",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "TYPE": {
+               "CATEGORY": "pdbx_chem_comp_pcm",
+               "ATTRIBUTE": "type",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UNIPROT_GENERIC_PTM_ACCESSION": {
+               "CATEGORY": "pdbx_chem_comp_pcm",
+               "ATTRIBUTE": "uniprot_generic_ptm_accession",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "UNIPROT_SPECIFIC_PTM_ACCESSION": {
+               "CATEGORY": "pdbx_chem_comp_pcm",
+               "ATTRIBUTE": "uniprot_specific_ptm_accession",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            }
+         },
+         "ATTRIBUTE_INFO": {
+            "PCM_ID": {
+               "ORDER": 1,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": true,
+               "APP_TYPE": "int",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": false,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "CATEGORY": {
+               "ORDER": 2,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 60,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "ADP-ribose",
+                  "Amino acid",
+                  "Biotin",
+                  "Carbohydrate",
+                  "Chromophore/chromophore-like",
+                  "Covalent chemical modification",
+                  "Crosslinker",
+                  "Flavin",
+                  "Heme/heme-like",
+                  "Lipid/lipid-like",
+                  "Metal coordination",
+                  "Named protein modification",
+                  "Non-standard residue",
+                  "Nucleotide monophosphate",
+                  "Terminal acetylation",
+                  "Terminal amidation"
+               ],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "COMP_ID": {
+               "ORDER": 3,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "COMP_ID_LINKING_ATOM": {
+               "ORDER": 4,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "MODIFIED_RESIDUE_ID": {
+               "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "MODIFIED_RESIDUE_ID_LINKING_ATOM": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "POLYPEPTIDE_POSITION": {
+               "ORDER": 7,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 24,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "Any position",
+                  "C-terminal",
+                  "N-terminal"
+               ],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "POSITION": {
+               "ORDER": 8,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 48,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "Amino-acid backbone",
+                  "Amino-acid side chain",
+                  "Amino-acid side chain and backbone"
+               ],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 9,
+               "NULLABLE": false,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 120,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "(3-Aminopropyl)(5'-adenosyl)phosphono amidation",
+                  "(3R)-3-Hydroxybutyrylation",
+                  "12-Hydroxyfarnesylation",
+                  "12-Oxomyristoylation",
+                  "12R-Hydroxymyristoylation",
+                  "14-Hydroxy-10,13-dioxo-7-heptadecenoic acid",
+                  "2,3-Dicarboxypropylation",
+                  "2-Aminoadipylation",
+                  "2-Aminoethylphosphorylation",
+                  "2-Cholinephosphorylation",
+                  "2-Hydroxyisobutyrylation",
+                  "2-Oxo-5,5-dimethylhexanoylation",
+                  "2-Oxobutanoic acid",
+                  "3-Oxoalanine",
+                  "3-Phenyllactic acid",
+                  "4-Phosphopantetheine",
+                  "ADP-ribosylation",
+                  "ADP-riboxanation",
+                  "AMPylation",
+                  "Acetamidation",
+                  "Acetamidomethylation",
+                  "Acetylation",
+                  "Alanylation",
+                  "Allysine",
+                  "Amination",
+                  "Arachidoylation",
+                  "Archaeol",
+                  "Arginylation",
+                  "Arsenylation",
+                  "Asparaginylation",
+                  "Aspartylation",
+                  "Bacillithiolation",
+                  "Benzoylation",
+                  "Benzylation",
+                  "Beta-amino acid",
+                  "Beta-hydroxybutyrylation",
+                  "Beta-lysylation",
+                  "Beta-mercaptoethanol",
+                  "Biotinylation",
+                  "Bromination",
+                  "Butyrylation",
+                  "C-Mannosylation",
+                  "CMPylation",
+                  "Carbamoylation",
+                  "Carboxyethylation",
+                  "Carboxylation",
+                  "Carboxymethylation",
+                  "Chlorination",
+                  "Cholesterylation",
+                  "Citrullination",
+                  "Crotonylation",
+                  "Cyanation",
+                  "Cysteinylation",
+                  "D-alanylation",
+                  "D-arginylation",
+                  "D-asparaginylation",
+                  "D-aspartylation",
+                  "D-cysteinylation",
+                  "D-glutaminylation",
+                  "D-glutamylation",
+                  "D-histidinylation",
+                  "D-isoleucylation",
+                  "D-lactate",
+                  "D-leucylation",
+                  "D-lysylation",
+                  "D-methionylation",
+                  "D-phenylalanylation",
+                  "D-prolylation",
+                  "D-serylation",
+                  "D-threoninylation",
+                  "D-tryptophanylation",
+                  "D-tyrosination",
+                  "D-valylation",
+                  "Deamidation",
+                  "Decanoylation",
+                  "Decarboxylation",
+                  "Dehydroamino acid",
+                  "Dehydrocoelenterazination",
+                  "Dehydrogenation",
+                  "Dehydroxylation",
+                  "Deoxidation",
+                  "Deoxyhypusine",
+                  "Diacylglycerol",
+                  "Dihydroxyacetonation",
+                  "Dimethylamination",
+                  "Diphosphorylation",
+                  "Diphthamide",
+                  "Dipyrromethane methylation",
+                  "Dopaminylation",
+                  "Ethylation",
+                  "Ethylsulfanylation",
+                  "Farnesylation",
+                  "Fluorination",
+                  "Formylation",
+                  "GMPylation",
+                  "Geranylgeranylation",
+                  "Glutaminylation",
+                  "Glutamylation",
+                  "Glutarylation",
+                  "Glutathionylation",
+                  "Glycerophosphorylation",
+                  "Glycerylphosphorylethanolamination",
+                  "Glycylation",
+                  "Heptanoylation",
+                  "Hexanoylation",
+                  "Histaminylation",
+                  "Histidinylation",
+                  "Hydrogenation",
+                  "Hydroperoxylation",
+                  "Hydroxyamination",
+                  "Hydroxyethylation",
+                  "Hydroxylation",
+                  "Hydroxymethylation",
+                  "Hydroxysulfanylation",
+                  "Hypusine",
+                  "Iodination",
+                  "Isobutyrylation",
+                  "Isoleucylation",
+                  "L-lactate",
+                  "Lactoylation",
+                  "Laurylation",
+                  "Leucylation",
+                  "Lipoylation",
+                  "Lysylation",
+                  "Malonylation",
+                  "Methacrylation",
+                  "Methionylation",
+                  "Methoxylation",
+                  "Methylamination",
+                  "Methylation",
+                  "Methylsulfanylation",
+                  "Methylsulfation",
+                  "Myristoylation",
+                  "N-Glycosylation",
+                  "N-methylcarbamoylation",
+                  "N-pyruvic acid 2-iminylation",
+                  "N6-benzoyllysine",
+                  "N6-isonicotinyllysine",
+                  "N6-methacryllysine",
+                  "Nitration",
+                  "Nitrosylation",
+                  "None",
+                  "Noradrenylation",
+                  "Norleucine",
+                  "Norvaline",
+                  "O-Glycosylation",
+                  "Octanoylation",
+                  "Oleoylation",
+                  "Ornithine",
+                  "Oxidation",
+                  "Palmitoleoylation",
+                  "Palmitoylation",
+                  "Pentadecanoylation",
+                  "Pentanoylation",
+                  "Phenylalanylation",
+                  "Phosphatidylethanolamine amidation",
+                  "Phosphoenolpyruvate",
+                  "Phosphorylation",
+                  "Prolylation",
+                  "Propionylation",
+                  "Pyridoxal phosphate",
+                  "Pyrrolidone carboxylic acid",
+                  "Pyruvic acid",
+                  "Retinoylation",
+                  "S-Glycosylation",
+                  "Selanylation",
+                  "Selenomethionine",
+                  "Serotonylation",
+                  "Serylation",
+                  "Stearoylation",
+                  "Stereoisomerisation",
+                  "Succinamide ring",
+                  "Succination",
+                  "Succinylation",
+                  "Sulfanylmethylation",
+                  "Sulfation",
+                  "Sulfhydration",
+                  "Tert-butylation",
+                  "Tert-butyloxycarbonylation",
+                  "Threoninylation",
+                  "Thyroxine",
+                  "Triiodothyronine",
+                  "Triphosphorylation",
+                  "Tryptophanylation",
+                  "Tyrosination",
+                  "UMPylation",
+                  "Valylation",
+                  "cGMPylation"
+               ],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "UNIPROT_GENERIC_PTM_ACCESSION": {
+               "ORDER": 10,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 24,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "UNIPROT_SPECIFIC_PTM_ACCESSION": {
+               "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 24,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            }
+         },
+         "SCHEMA_DELETE_ATTRIBUTE": null,
+         "INDICES": {
+            "p1": {
+               "TYPE": "UNIQUE",
+               "ATTRIBUTES": [
+                  "PCM_ID"
+               ]
+            }
+         },
+         "MAP_MERGE_INDICES": {
+            "pdbx_chem_comp_pcm": {
+               "ATTRIBUTES": [
+                  "pcm_id"
                ],
                "TYPE": "EQUI-JOIN"
             }
@@ -7348,7 +7865,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "core_chem_comp",
-            "VERSION": "7.2.0"
+            "VERSION": "7.2.1"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {
@@ -7438,6 +7955,10 @@
                   "comp_id",
                   "prd_id",
                   "ordinal"
+               ],
+               "pdbx_chem_comp_pcm": [
+                  "pcm_id",
+                  "comp_id"
                ]
             }
          }
