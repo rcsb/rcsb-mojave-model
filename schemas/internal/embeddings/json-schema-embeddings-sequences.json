@@ -10,10 +10,10 @@
     "seq_id": {
       "type": "string",
       "examples": [
-        "seq_1",
-        "seq_2"
+        "21da122930be996ccc3e92bc520b4091e071d109049af387bb5cbfe168c81c14",
+        "ec9d70396cd69aea1f011484f448e5fdeade7fde39d12d3bb950ca3c9bc69a48"
       ],
-      "description": "A single identifier for each unique sequence."
+      "description": "A single identifier for each unique sequence calculated as an SHA-256 hash on the sequence."
     },
     "sequence": {
       "type": "string",
