@@ -1135,24 +1135,10 @@
                      "SER"
                   ],
                   "description": "Chemical component identifier for the amino acid residue that is being modified.",
-                  "rcsb_search_context": [
-                     "exact-match"
-                  ],
-                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "Chemical component identifier for the amino acid residue that is being modified.",
                         "context": "dictionary"
-                     },
-                     {
-                        "text": "Modified Residue",
-                        "context": "brief"
-                     }
-                  ],
-                  "rcsb_search_group": [
-                     {
-                        "group_name": "Protein Modification Components",
-                        "priority_order": 15
                      }
                   ]
                },
@@ -1232,6 +1218,37 @@
                         "context": "dictionary"
                      }
                   ]
+               },
+               "rcsb_modified_residue_id": {
+                  "type": "array",
+                  "items": {
+                     "type": "string",
+                     "examples": [
+                        "SER"
+                     ],
+                     "description": "Chemical component identifier for the amino acid residue that is being modified.",
+                     "rcsb_search_context": [
+                        "exact-match"
+                     ],
+                     "rcsb_full_text_priority": 10,
+                     "rcsb_description": [
+                        {
+                           "text": "Chemical component identifier for the amino acid residue that is being modified.",
+                           "context": "dictionary"
+                        },
+                        {
+                           "text": "Modified Residue",
+                           "context": "brief"
+                        }
+                     ],
+                     "rcsb_search_group": [
+                        {
+                           "group_name": "Protein Modification Components",
+                           "priority_order": 15
+                        }
+                     ]
+                  },
+                  "uniqueItems": false
                },
                "type": {
                   "type": "string",

@@ -61,7 +61,11 @@
                   "bsonType": "string"
                },
                "rcsb_modified_residue_id": {
-                  "bsonType": "string"
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "string"
+                  },
+                  "uniqueItems": false
                },
                "symmetry": {
                   "bsonType": "string"

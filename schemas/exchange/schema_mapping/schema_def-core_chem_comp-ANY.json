@@ -1945,7 +1945,9 @@
          "SCHEMA_NAME": "pdbx_chem_comp_pcm",
          "SCHEMA_TYPE": "transactional",
          "SCHEMA_UNIT_CARDINALITY": false,
-         "SCHEMA_CONTENT_CLASSES": [],
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
          "SCHEMA_MANDATORY": false,
          "SCHEMA_SUB_CATEGORIES": [],
          "ATTRIBUTES": {
@@ -1957,6 +1959,7 @@
             "MODIFIED_RESIDUE_ID_LINKING_ATOM": "modified_residue_id_linking_atom",
             "POLYPEPTIDE_POSITION": "polypeptide_position",
             "POSITION": "position",
+            "RCSB_MODIFIED_RESIDUE_ID": "rcsb_modified_residue_id",
             "TYPE": "type",
             "UNIPROT_GENERIC_PTM_ACCESSION": "uniprot_generic_ptm_accession",
             "UNIPROT_SPECIFIC_PTM_ACCESSION": "uniprot_specific_ptm_accession"
@@ -2007,6 +2010,12 @@
             "POSITION": {
                "CATEGORY": "pdbx_chem_comp_pcm",
                "ATTRIBUTE": "position",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_MODIFIED_RESIDUE_ID": {
+               "CATEGORY": "pdbx_chem_comp_pcm",
+               "ATTRIBUTE": "rcsb_modified_residue_id",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -2174,8 +2183,25 @@
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             },
-            "TYPE": {
+            "RCSB_MODIFIED_RESIDUE_ID": {
                "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "TYPE": {
+               "ORDER": 10,
                "NULLABLE": false,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -2379,7 +2405,7 @@
                "SUB_CATEGORIES": []
             },
             "UNIPROT_GENERIC_PTM_ACCESSION": {
-               "ORDER": 10,
+               "ORDER": 11,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -2394,7 +2420,7 @@
                "SUB_CATEGORIES": []
             },
             "UNIPROT_SPECIFIC_PTM_ACCESSION": {
-               "ORDER": 11,
+               "ORDER": 12,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
