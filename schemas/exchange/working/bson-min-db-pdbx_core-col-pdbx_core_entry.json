@@ -3074,7 +3074,8 @@
                   "bsonType": "string",
                   "enum": [
                      "fixed target",
-                     "injection"
+                     "injection",
+                     "other"
                   ]
                }
             },
@@ -3869,6 +3870,9 @@
                "bsonType": "int"
             },
             "deposited_atom_count": {
+               "bsonType": "int"
+            },
+            "deposited_branched_entity_instance_count": {
                "bsonType": "int"
             },
             "deposited_deuterated_water_count": {
