@@ -64,8 +64,8 @@ jobs:
           echo "Verifying GPG secret key was imported:"
           gpg --list-secret-keys
       - name: Publish to maven central via maven deploy
-        # Note: this will wait until the new artifact is fully validated and available publicly.
-        # The wait is essential to trigger the update-downstream job below
+        # Note: this only waits until the new artifact is validated (see waitUntil in pom.xml). Publication is then guaranteed
+        # but can take from minutes to hours: the wait-for-central job below takes care of waiting for it
         run: mvn -Prelease --batch-mode --errors -U clean deploy --no-transfer-progress
       - name: Increment version for next dev cycle
         run: |
@@ -79,9 +79,25 @@ jobs:
         run: |
           git push --all
           git push --tags
-  update-downstreams:
+  # A separate job so that if it times out it can be re-run (together with update-downstreams) without re-deploying
+  wait-for-central:
     if: inputs.skip-stack-release != true
     needs: release-mojave-model
+    # Only needs curl, no need to hold a self-hosted runner for potentially hours
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - name: Wait for artifact to be available in maven central
+        run: |
+          url="https://repo1.maven.org/maven2/org/rcsb/rcsb-mojave-model/$NEW_SCHEMA_VERSION/rcsb-mojave-model-$NEW_SCHEMA_VERSION.pom"
+          until curl -sfI "$url" > /dev/null; do
+            echo "$(date -u +%T) $url not available yet, retrying in 60s"
+            sleep 60
+          done
+          echo "Available: $url"
+  update-downstreams:
+    if: inputs.skip-stack-release != true
+    needs: wait-for-central
     strategy:
       matrix:
         repos: [rcsb-redwood, rcsb-yosemite, rcsb-everglades, rcsb-sequence-coordinates]
