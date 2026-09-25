@@ -9,34 +9,34 @@
                "examples": [
                   "The icosahedral virus particle."
                ],
-               "description": "A description of special aspects of the macromolecular assembly.\n\n               In the PDB, 'representative helical assembly', 'complete point assembly',\n\t       'complete icosahedral assembly', 'software_defined_assembly', 'author_defined_assembly',\n\t       and 'author_and_software_defined_assembly' are considered \"biologically relevant assemblies.",
+               "description": "A description of special aspects of the macromolecular assembly. In the PDB, 'representative helical assembly', 'complete point assembly', 'complete icosahedral assembly', 'software_defined_assembly', 'author_defined_assembly', and 'author_and_software_defined_assembly' are considered \"biologically relevant assemblies.",
                "rcsb_search_context": [
                   "full-text"
                ],
                "rcsb_full_text_priority": 1,
                "rcsb_description": [
                   {
-                     "text": "A description of special aspects of the macromolecular assembly.\n\n               In the PDB, 'representative helical assembly', 'complete point assembly',\n\t       'complete icosahedral assembly', 'software_defined_assembly', 'author_defined_assembly',\n\t       and 'author_and_software_defined_assembly' are considered \"biologically relevant assemblies.",
+                     "text": "A description of special aspects of the macromolecular assembly. In the PDB, 'representative helical assembly', 'complete point assembly', 'complete icosahedral assembly', 'software_defined_assembly', 'author_defined_assembly', and 'author_and_software_defined_assembly' are considered \"biologically relevant assemblies.",
                      "context": "dictionary"
                   }
                ]
             },
             "id": {
                "type": "string",
-               "description": "The value of _pdbx_struct_assembly.id must uniquely identify a record in\n the PDBX_STRUCT_ASSEMBLY list.",
+               "description": "The value of _pdbx_struct_assembly.id must uniquely identify a record in the PDBX_STRUCT_ASSEMBLY list.",
                "rcsb_description": [
                   {
-                     "text": "The value of _pdbx_struct_assembly.id must uniquely identify a record in\n the PDBX_STRUCT_ASSEMBLY list.",
+                     "text": "The value of _pdbx_struct_assembly.id must uniquely identify a record in the PDBX_STRUCT_ASSEMBLY list.",
                      "context": "dictionary"
                   }
                ]
             },
             "method_details": {
                "type": "string",
-               "description": "Provides details of the method used to determine or\n compute the assembly.",
+               "description": "Provides details of the method used to determine or compute the assembly.",
                "rcsb_description": [
                   {
-                     "text": "Provides details of the method used to determine or\n compute the assembly.",
+                     "text": "Provides details of the method used to determine or compute the assembly.",
                      "context": "dictionary"
                   }
                ]
@@ -88,10 +88,10 @@
                "examples": [
                   "Y"
                ],
-               "description": "Candidate macromolecular assembly.\n\n Excludes the following cases classified in pdbx_struct_asembly.details:\n\n 'crystal asymmetric unit', 'crystal asymmetric unit, crystal frame', 'helical asymmetric unit',\n 'helical asymmetric unit, std helical frame','icosahedral 23 hexamer', 'icosahedral asymmetric unit',\n 'icosahedral asymmetric unit, std point frame','icosahedral pentamer', 'pentasymmetron capsid unit',\n 'point asymmetric unit', 'point asymmetric unit, std point frame','trisymmetron capsid unit',\n  and 'deposited_coordinates'.",
+               "description": "Candidate macromolecular assembly. Excludes the following cases classified in pdbx_struct_asembly.details: 'crystal asymmetric unit', 'crystal asymmetric unit, crystal frame', 'helical asymmetric unit', 'helical asymmetric unit, std helical frame','icosahedral 23 hexamer', 'icosahedral asymmetric unit', 'icosahedral asymmetric unit, std point frame','icosahedral pentamer', 'pentasymmetron capsid unit', 'point asymmetric unit', 'point asymmetric unit, std point frame','trisymmetron capsid unit', and 'deposited_coordinates'.",
                "rcsb_description": [
                   {
-                     "text": "Candidate macromolecular assembly.\n\n Excludes the following cases classified in pdbx_struct_asembly.details:\n\n 'crystal asymmetric unit', 'crystal asymmetric unit, crystal frame', 'helical asymmetric unit',\n 'helical asymmetric unit, std helical frame','icosahedral 23 hexamer', 'icosahedral asymmetric unit',\n 'icosahedral asymmetric unit, std point frame','icosahedral pentamer', 'pentasymmetron capsid unit',\n 'point asymmetric unit', 'point asymmetric unit, std point frame','trisymmetron capsid unit',\n  and 'deposited_coordinates'.",
+                     "text": "Candidate macromolecular assembly. Excludes the following cases classified in pdbx_struct_asembly.details: 'crystal asymmetric unit', 'crystal asymmetric unit, crystal frame', 'helical asymmetric unit', 'helical asymmetric unit, std helical frame','icosahedral 23 hexamer', 'icosahedral asymmetric unit', 'icosahedral asymmetric unit, std point frame','icosahedral pentamer', 'pentasymmetron capsid unit', 'point asymmetric unit', 'point asymmetric unit, std point frame','trisymmetron capsid unit', and 'deposited_coordinates'.",
                      "context": "dictionary"
                   }
                ]
@@ -239,10 +239,10 @@
             "properties": {
                "assembly_id": {
                   "type": "string",
-                  "description": "This data item is a pointer to _pdbx_struct_assembly.id in the\n PDBX_STRUCT_ASSEMBLY category.",
+                  "description": "This data item is a pointer to _pdbx_struct_assembly.id in the PDBX_STRUCT_ASSEMBLY category.",
                   "rcsb_description": [
                      {
-                        "text": "This data item is a pointer to _pdbx_struct_assembly.id in the\n PDBX_STRUCT_ASSEMBLY category.",
+                        "text": "This data item is a pointer to _pdbx_struct_assembly.id in the PDBX_STRUCT_ASSEMBLY category.",
                         "context": "dictionary"
                      }
                   ]
@@ -251,10 +251,10 @@
                   "type": "array",
                   "items": {
                      "type": "string",
-                     "description": "This data item is a pointer to _struct_asym.id in\n the STRUCT_ASYM category.\n\n This item may be expressed as a comma separated list of identifiers.",
+                     "description": "This data item is a pointer to _struct_asym.id in the STRUCT_ASYM category. This item may be expressed as a comma separated list of identifiers.",
                      "rcsb_description": [
                         {
-                           "text": "This data item is a pointer to _struct_asym.id in\n the STRUCT_ASYM category.\n\n This item may be expressed as a comma separated list of identifiers.",
+                           "text": "This data item is a pointer to _struct_asym.id in the STRUCT_ASYM category. This item may be expressed as a comma separated list of identifiers.",
                            "context": "dictionary"
                         }
                      ]
@@ -269,20 +269,20 @@
                      "(1-60)",
                      "(1-60)(61)"
                   ],
-                  "description": "Identifies the operation of collection of operations\n from category PDBX_STRUCT_OPER_LIST.\n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)",
+                  "description": "Identifies the operation of collection of operations from category PDBX_STRUCT_OPER_LIST. Operation expressions may have the forms: (1) the single operation 1 (1,2,5) the operations 1, 2, 5 (1-4) the operations 1,2,3 and 4 (1,2)(3,4) the combinations of operations 3 and 4 followed by 1 and 2 (i.e. the cartesian product of parenthetical groups applied from right to left)",
                   "rcsb_description": [
                      {
-                        "text": "Identifies the operation of collection of operations\n from category PDBX_STRUCT_OPER_LIST.\n\n Operation expressions may have the forms:\n\n  (1)        the single operation 1\n  (1,2,5)    the operations 1, 2, 5\n  (1-4)      the operations 1,2,3 and 4\n  (1,2)(3,4) the combinations of operations\n             3 and 4 followed by 1 and 2 (i.e.\n             the cartesian product of parenthetical\n             groups applied from right to left)",
+                        "text": "Identifies the operation of collection of operations from category PDBX_STRUCT_OPER_LIST. Operation expressions may have the forms: (1) the single operation 1 (1,2,5) the operations 1, 2, 5 (1-4) the operations 1,2,3 and 4 (1,2)(3,4) the combinations of operations 3 and 4 followed by 1 and 2 (i.e. the cartesian product of parenthetical groups applied from right to left)",
                         "context": "dictionary"
                      }
                   ]
                },
                "ordinal": {
                   "type": "integer",
-                  "description": "This data item is an ordinal index for the\n PDBX_STRUCT_ASSEMBLY category.",
+                  "description": "This data item is an ordinal index for the PDBX_STRUCT_ASSEMBLY category.",
                   "rcsb_description": [
                      {
-                        "text": "This data item is an ordinal index for the\n PDBX_STRUCT_ASSEMBLY category.",
+                        "text": "This data item is an ordinal index for the PDBX_STRUCT_ASSEMBLY category.",
                         "context": "dictionary"
                      }
                   ]
@@ -328,10 +328,10 @@
                      "MORE",
                      "SSA (A^2)"
                   ],
-                  "description": "The property type for the assembly.\n ABSA (A^2) is the \"Total buried surface area (A^2)\"\n SSA (A^2) is \"Surface area for the complex (A^2)\"\n MORE is \"Internal energy (kcal/mol)\"",
+                  "description": "The property type for the assembly. ABSA (A^2) is the \"Total buried surface area (A^2)\" SSA (A^2) is \"Surface area for the complex (A^2)\" MORE is \"Internal energy (kcal/mol)\"",
                   "rcsb_description": [
                      {
-                        "text": "The property type for the assembly.\n ABSA (A^2) is the \"Total buried surface area (A^2)\"\n SSA (A^2) is \"Surface area for the complex (A^2)\"\n MORE is \"Internal energy (kcal/mol)\"",
+                        "text": "The property type for the assembly. ABSA (A^2) is the \"Total buried surface area (A^2)\" SSA (A^2) is \"Surface area for the complex (A^2)\" MORE is \"Internal energy (kcal/mol)\"",
                         "context": "dictionary"
                      }
                   ]
@@ -363,100 +363,100 @@
             "properties": {
                "id": {
                   "type": "string",
-                  "description": "This identifier code must uniquely identify a\n record in the PDBX_STRUCT_OPER_LIST list.",
+                  "description": "This identifier code must uniquely identify a record in the PDBX_STRUCT_OPER_LIST list.",
                   "rcsb_description": [
                      {
-                        "text": "This identifier code must uniquely identify a\n record in the PDBX_STRUCT_OPER_LIST list.",
+                        "text": "This identifier code must uniquely identify a record in the PDBX_STRUCT_OPER_LIST list.",
                         "context": "dictionary"
                      }
                   ]
                },
                "matrix_1_1": {
                   "type": "number",
-                  "description": "The [1][1] element of the 3x3 matrix component of the\n transformation operation.",
+                  "description": "The [1][1] element of the 3x3 matrix component of the transformation operation.",
                   "rcsb_description": [
                      {
-                        "text": "The [1][1] element of the 3x3 matrix component of the\n transformation operation.",
+                        "text": "The [1][1] element of the 3x3 matrix component of the transformation operation.",
                         "context": "dictionary"
                      }
                   ]
                },
                "matrix_1_2": {
                   "type": "number",
-                  "description": "The [1][2] element of the 3x3 matrix component of the\n transformation operation.",
+                  "description": "The [1][2] element of the 3x3 matrix component of the transformation operation.",
                   "rcsb_description": [
                      {
-                        "text": "The [1][2] element of the 3x3 matrix component of the\n transformation operation.",
+                        "text": "The [1][2] element of the 3x3 matrix component of the transformation operation.",
                         "context": "dictionary"
                      }
                   ]
                },
                "matrix_1_3": {
                   "type": "number",
-                  "description": "The [1][3] element of the 3x3 matrix component of the\n transformation operation.",
+                  "description": "The [1][3] element of the 3x3 matrix component of the transformation operation.",
                   "rcsb_description": [
                      {
-                        "text": "The [1][3] element of the 3x3 matrix component of the\n transformation operation.",
+                        "text": "The [1][3] element of the 3x3 matrix component of the transformation operation.",
                         "context": "dictionary"
                      }
                   ]
                },
                "matrix_2_1": {
                   "type": "number",
-                  "description": "The [2][1] element of the 3x3 matrix component of the\n transformation operation.",
+                  "description": "The [2][1] element of the 3x3 matrix component of the transformation operation.",
                   "rcsb_description": [
                      {
-                        "text": "The [2][1] element of the 3x3 matrix component of the\n transformation operation.",
+                        "text": "The [2][1] element of the 3x3 matrix component of the transformation operation.",
                         "context": "dictionary"
                      }
                   ]
                },
                "matrix_2_2": {
                   "type": "number",
-                  "description": "The [2][2] element of the 3x3 matrix component of the\n transformation operation.",
+                  "description": "The [2][2] element of the 3x3 matrix component of the transformation operation.",
                   "rcsb_description": [
                      {
-                        "text": "The [2][2] element of the 3x3 matrix component of the\n transformation operation.",
+                        "text": "The [2][2] element of the 3x3 matrix component of the transformation operation.",
                         "context": "dictionary"
                      }
                   ]
                },
                "matrix_2_3": {
                   "type": "number",
-                  "description": "The [2][3] element of the 3x3 matrix component of the\n transformation operation.",
+                  "description": "The [2][3] element of the 3x3 matrix component of the transformation operation.",
                   "rcsb_description": [
                      {
-                        "text": "The [2][3] element of the 3x3 matrix component of the\n transformation operation.",
+                        "text": "The [2][3] element of the 3x3 matrix component of the transformation operation.",
                         "context": "dictionary"
                      }
                   ]
                },
                "matrix_3_1": {
                   "type": "number",
-                  "description": "The [3][1] element of the 3x3 matrix component of the\n transformation operation.",
+                  "description": "The [3][1] element of the 3x3 matrix component of the transformation operation.",
                   "rcsb_description": [
                      {
-                        "text": "The [3][1] element of the 3x3 matrix component of the\n transformation operation.",
+                        "text": "The [3][1] element of the 3x3 matrix component of the transformation operation.",
                         "context": "dictionary"
                      }
                   ]
                },
                "matrix_3_2": {
                   "type": "number",
-                  "description": "The [3][2] element of the 3x3 matrix component of the\n transformation operation.",
+                  "description": "The [3][2] element of the 3x3 matrix component of the transformation operation.",
                   "rcsb_description": [
                      {
-                        "text": "The [3][2] element of the 3x3 matrix component of the\n transformation operation.",
+                        "text": "The [3][2] element of the 3x3 matrix component of the transformation operation.",
                         "context": "dictionary"
                      }
                   ]
                },
                "matrix_3_3": {
                   "type": "number",
-                  "description": "The [3][3] element of the 3x3 matrix component of the\n transformation operation.",
+                  "description": "The [3][3] element of the 3x3 matrix component of the transformation operation.",
                   "rcsb_description": [
                      {
-                        "text": "The [3][3] element of the 3x3 matrix component of the\n transformation operation.",
+                        "text": "The [3][3] element of the 3x3 matrix component of the transformation operation.",
                         "context": "dictionary"
                      }
                   ]
@@ -518,30 +518,30 @@
                },
                "vector_1": {
                   "type": "number",
-                  "description": "The [1] element of the three-element vector component of the\n transformation operation.",
+                  "description": "The [1] element of the three-element vector component of the transformation operation.",
                   "rcsb_description": [
                      {
-                        "text": "The [1] element of the three-element vector component of the\n transformation operation.",
+                        "text": "The [1] element of the three-element vector component of the transformation operation.",
                         "context": "dictionary"
                      }
                   ]
                },
                "vector_2": {
                   "type": "number",
-                  "description": "The [2] element of the three-element vector component of the\n transformation operation.",
+                  "description": "The [2] element of the three-element vector component of the transformation operation.",
                   "rcsb_description": [
                      {
-                        "text": "The [2] element of the three-element vector component of the\n transformation operation.",
+                        "text": "The [2] element of the three-element vector component of the transformation operation.",
                         "context": "dictionary"
                      }
                   ]
                },
                "vector_3": {
                   "type": "number",
-                  "description": "The [3] element of the three-element vector component of the\n transformation operation.",
+                  "description": "The [3] element of the three-element vector component of the transformation operation.",
                   "rcsb_description": [
                      {
-                        "text": "The [3] element of the three-element vector component of the\n transformation operation.",
+                        "text": "The [3] element of the three-element vector component of the transformation operation.",
                         "context": "dictionary"
                      }
                   ]
@@ -803,14 +803,14 @@
                "examples": [
                   "1KIP-1"
                ],
-               "description": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
+               "description": "A unique identifier for each object in this assembly container formed by a dash separated concatenation of entry and assembly identifiers.",
                "rcsb_search_context": [
                   "exact-match"
                ],
                "rcsb_full_text_priority": 10,
                "rcsb_description": [
                   {
-                     "text": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
+                     "text": "A unique identifier for each object in this assembly container formed by a dash separated concatenation of entry and assembly identifiers.",
                      "context": "dictionary"
                   }
                ]
@@ -1113,13 +1113,13 @@
             },
             "branched_entity_instance_count": {
                "type": "integer",
-               "description": "The number of branched instances in the generated assembly data set.\n This is the total count of branched entity instances generated in the assembly coordinate data.",
+               "description": "The number of branched instances in the generated assembly data set. This is the total count of branched entity instances generated in the assembly coordinate data.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of branched instances in the generated assembly data set.\n This is the total count of branched entity instances generated in the assembly coordinate data.",
+                     "text": "The number of branched instances in the generated assembly data set. This is the total count of branched entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
                   }
                ]
@@ -1200,13 +1200,13 @@
             },
             "modeled_polymer_monomer_count": {
                "type": "integer",
-               "description": "The number of modeled polymer monomers in the assembly coordinate data.\n This is the total count of monomers with reported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
+               "description": "The number of modeled polymer monomers in the assembly coordinate data. This is the total count of monomers with reported coordinate data for all polymer entity instances in the generated assembly coordinate data.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of modeled polymer monomers in the assembly coordinate data.\n This is the total count of monomers with reported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
+                     "text": "The number of modeled polymer monomers in the assembly coordinate data. This is the total count of monomers with reported coordinate data for all polymer entity instances in the generated assembly coordinate data.",
                      "context": "dictionary"
                   },
                   {
@@ -1295,13 +1295,13 @@
             },
             "nonpolymer_entity_instance_count": {
                "type": "integer",
-               "description": "The number of non-polymer instances in the generated assembly data set exclusive of solvent.\n This is the total count of non-polymer entity instances generated in the assembly coordinate data.",
+               "description": "The number of non-polymer instances in the generated assembly data set exclusive of solvent. This is the total count of non-polymer entity instances generated in the assembly coordinate data.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of non-polymer instances in the generated assembly data set exclusive of solvent.\n This is the total count of non-polymer entity instances generated in the assembly coordinate data.",
+                     "text": "The number of non-polymer instances in the generated assembly data set exclusive of solvent. This is the total count of non-polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
                   },
                   {
@@ -1590,13 +1590,13 @@
             },
             "polymer_entity_instance_count": {
                "type": "integer",
-               "description": "The number of polymer instances in the generated assembly data set.\n This is the total count of polymer entity instances generated in the assembly coordinate data.",
+               "description": "The number of polymer instances in the generated assembly data set. This is the total count of polymer entity instances generated in the assembly coordinate data.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of polymer instances in the generated assembly data set.\n This is the total count of polymer entity instances generated in the assembly coordinate data.",
+                     "text": "The number of polymer instances in the generated assembly data set. This is the total count of polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
                   },
                   {
@@ -1613,13 +1613,13 @@
             },
             "polymer_entity_instance_count_DNA": {
                "type": "integer",
-               "description": "The number of DNA polymer instances in the generated assembly data set.\n This is the total count of DNA polymer entity instances generated in the assembly coordinate data.",
+               "description": "The number of DNA polymer instances in the generated assembly data set. This is the total count of DNA polymer entity instances generated in the assembly coordinate data.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of DNA polymer instances in the generated assembly data set.\n This is the total count of DNA polymer entity instances generated in the assembly coordinate data.",
+                     "text": "The number of DNA polymer instances in the generated assembly data set. This is the total count of DNA polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
                   },
                   {
@@ -1636,13 +1636,13 @@
             },
             "polymer_entity_instance_count_RNA": {
                "type": "integer",
-               "description": "The number of RNA polymer instances in the generated assembly data set.\n This is the total count of RNA polymer entity instances generated in the assembly coordinate data.",
+               "description": "The number of RNA polymer instances in the generated assembly data set. This is the total count of RNA polymer entity instances generated in the assembly coordinate data.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of RNA polymer instances in the generated assembly data set.\n This is the total count of RNA polymer entity instances generated in the assembly coordinate data.",
+                     "text": "The number of RNA polymer instances in the generated assembly data set. This is the total count of RNA polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
                   },
                   {
@@ -1659,26 +1659,26 @@
             },
             "polymer_entity_instance_count_nucleic_acid": {
                "type": "integer",
-               "description": "The number of nucleic acid polymer instances in the generated assembly data set.\n This is the total count of nucleic acid polymer entity instances generated in the assembly coordinate data.",
+               "description": "The number of nucleic acid polymer instances in the generated assembly data set. This is the total count of nucleic acid polymer entity instances generated in the assembly coordinate data.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of nucleic acid polymer instances in the generated assembly data set.\n This is the total count of nucleic acid polymer entity instances generated in the assembly coordinate data.",
+                     "text": "The number of nucleic acid polymer instances in the generated assembly data set. This is the total count of nucleic acid polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
                   }
                ]
             },
             "polymer_entity_instance_count_nucleic_acid_hybrid": {
                "type": "integer",
-               "description": "The number of hybrid nucleic acide polymer instances in the generated assembly data set.\n This is the total count of hybrid nucleic acid polymer entity instances generated in the assembly coordinate data.",
+               "description": "The number of hybrid nucleic acide polymer instances in the generated assembly data set. This is the total count of hybrid nucleic acid polymer entity instances generated in the assembly coordinate data.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of hybrid nucleic acide polymer instances in the generated assembly data set.\n This is the total count of hybrid nucleic acid polymer entity instances generated in the assembly coordinate data.",
+                     "text": "The number of hybrid nucleic acide polymer instances in the generated assembly data set. This is the total count of hybrid nucleic acid polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
                   },
                   {
@@ -1695,13 +1695,13 @@
             },
             "polymer_entity_instance_count_protein": {
                "type": "integer",
-               "description": "The number of protein polymer instances in the generated assembly data set.\n This is the total count of protein polymer entity instances generated in the assembly coordinate data.",
+               "description": "The number of protein polymer instances in the generated assembly data set. This is the total count of protein polymer entity instances generated in the assembly coordinate data.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of protein polymer instances in the generated assembly data set.\n This is the total count of protein polymer entity instances generated in the assembly coordinate data.",
+                     "text": "The number of protein polymer instances in the generated assembly data set. This is the total count of protein polymer entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
                   },
                   {
@@ -1718,13 +1718,13 @@
             },
             "polymer_monomer_count": {
                "type": "integer",
-               "description": "The number of polymer monomers in sample entity instances comprising the assembly data set.\n This is the total count of monomers for all polymer entity instances\n in the generated assembly coordinate data.",
+               "description": "The number of polymer monomers in sample entity instances comprising the assembly data set. This is the total count of monomers for all polymer entity instances in the generated assembly coordinate data.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of polymer monomers in sample entity instances comprising the assembly data set.\n This is the total count of monomers for all polymer entity instances\n in the generated assembly coordinate data.",
+                     "text": "The number of polymer monomers in sample entity instances comprising the assembly data set. This is the total count of monomers for all polymer entity instances in the generated assembly coordinate data.",
                      "context": "dictionary"
                   },
                   {
@@ -1818,13 +1818,13 @@
             },
             "solvent_entity_instance_count": {
                "type": "integer",
-               "description": "The number of solvent instances in the generated assembly data set.\n This is the total count of solvent entity instances generated in the assembly coordinate data.",
+               "description": "The number of solvent instances in the generated assembly data set. This is the total count of solvent entity instances generated in the assembly coordinate data.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of solvent instances in the generated assembly data set.\n This is the total count of solvent entity instances generated in the assembly coordinate data.",
+                     "text": "The number of solvent instances in the generated assembly data set. This is the total count of solvent entity instances generated in the assembly coordinate data.",
                      "context": "dictionary"
                   }
                ]
@@ -1851,13 +1851,13 @@
             },
             "unmodeled_polymer_monomer_count": {
                "type": "integer",
-               "description": "The number of unmodeled polymer monomers in the assembly coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
+               "description": "The number of unmodeled polymer monomers in the assembly coordinate data. This is the total count of monomers with unreported coordinate data for all polymer entity instances in the generated assembly coordinate data.",
                "rcsb_search_context": [
                   "default-match"
                ],
                "rcsb_description": [
                   {
-                     "text": "The number of unmodeled polymer monomers in the assembly coordinate data. This is\n the total count of monomers with unreported coordinate data for all polymer\n entity instances in the generated assembly coordinate data.",
+                     "text": "The number of unmodeled polymer monomers in the assembly coordinate data. This is the total count of monomers with unreported coordinate data for all polymer entity instances in the generated assembly coordinate data.",
                      "context": "dictionary"
                   },
                   {
@@ -1931,14 +1931,14 @@
                      "Local Symmetry",
                      "Pseudo Symmetry"
                   ],
-                  "description": "The granularity at which the symmetry calculation is performed. In 'Global Symmetry' all polymeric\n subunits in assembly are used. In 'Local Symmetry' only a subset of polymeric subunits is considered.\n In 'Pseudo Symmetry' the threshold for subunits similarity is relaxed.",
+                  "description": "The granularity at which the symmetry calculation is performed. In 'Global Symmetry' all polymeric subunits in assembly are used. In 'Local Symmetry' only a subset of polymeric subunits is considered. In 'Pseudo Symmetry' the threshold for subunits similarity is relaxed.",
                   "rcsb_search_context": [
                      "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
-                        "text": "The granularity at which the symmetry calculation is performed. In 'Global Symmetry' all polymeric\n subunits in assembly are used. In 'Local Symmetry' only a subset of polymeric subunits is considered.\n In 'Pseudo Symmetry' the threshold for subunits similarity is relaxed.",
+                        "text": "The granularity at which the symmetry calculation is performed. In 'Global Symmetry' all polymeric subunits in assembly are used. In 'Local Symmetry' only a subset of polymeric subunits is considered. In 'Pseudo Symmetry' the threshold for subunits similarity is relaxed.",
                         "context": "dictionary"
                      },
                      {
@@ -1960,14 +1960,14 @@
                      "Homo 2-mer",
                      "Hetero 3-mer"
                   ],
-                  "description": "Oligomeric state refers to a composition of polymeric subunits in quaternary structure.\n Quaternary structure may be composed either exclusively of several copies of identical subunits,\n in which case they are termed homo-oligomers, or alternatively by at least one copy of different\n subunits (hetero-oligomers). Quaternary structure composed of a single subunit is denoted as 'Monomer'.",
+                  "description": "Oligomeric state refers to a composition of polymeric subunits in quaternary structure. Quaternary structure may be composed either exclusively of several copies of identical subunits, in which case they are termed homo-oligomers, or alternatively by at least one copy of different subunits (hetero-oligomers). Quaternary structure composed of a single subunit is denoted as 'Monomer'.",
                   "rcsb_search_context": [
                      "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
-                        "text": "Oligomeric state refers to a composition of polymeric subunits in quaternary structure.\n Quaternary structure may be composed either exclusively of several copies of identical subunits,\n in which case they are termed homo-oligomers, or alternatively by at least one copy of different\n subunits (hetero-oligomers). Quaternary structure composed of a single subunit is denoted as 'Monomer'.",
+                        "text": "Oligomeric state refers to a composition of polymeric subunits in quaternary structure. Quaternary structure may be composed either exclusively of several copies of identical subunits, in which case they are termed homo-oligomers, or alternatively by at least one copy of different subunits (hetero-oligomers). Quaternary structure composed of a single subunit is denoted as 'Monomer'.",
                         "context": "dictionary"
                      },
                      {
@@ -2004,14 +2004,14 @@
                      "D3",
                      "N"
                   ],
-                  "description": "Symmetry symbol refers to point group or helical symmetry of identical polymeric subunits in Schoenflies notation.\n Contains point group symbol (e.g., C2, C5, D2, T, O, I) or H for helical symmetry.",
+                  "description": "Symmetry symbol refers to point group or helical symmetry of identical polymeric subunits in Schoenflies notation. Contains point group symbol (e.g., C2, C5, D2, T, O, I) or H for helical symmetry.",
                   "rcsb_search_context": [
                      "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
-                        "text": "Symmetry symbol refers to point group or helical symmetry of identical polymeric subunits in Schoenflies notation.\n Contains point group symbol (e.g., C2, C5, D2, T, O, I) or H for helical symmetry.",
+                        "text": "Symmetry symbol refers to point group or helical symmetry of identical polymeric subunits in Schoenflies notation. Contains point group symbol (e.g., C2, C5, D2, T, O, I) or H for helical symmetry.",
                         "context": "dictionary"
                      },
                      {
@@ -2037,14 +2037,14 @@
                      "Octahedral",
                      "Tetrahedral"
                   ],
-                  "description": "Symmetry type refers to point group or helical symmetry of identical polymeric subunits.\n Contains point group types (e.g. Cyclic, Dihedral) or Helical for helical symmetry.",
+                  "description": "Symmetry type refers to point group or helical symmetry of identical polymeric subunits. Contains point group types (e.g. Cyclic, Dihedral) or Helical for helical symmetry.",
                   "rcsb_search_context": [
                      "exact-match"
                   ],
                   "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
-                        "text": "Symmetry type refers to point group or helical symmetry of identical polymeric subunits.\n Contains point group types (e.g. Cyclic, Dihedral) or Helical for helical symmetry.",
+                        "text": "Symmetry type refers to point group or helical symmetry of identical polymeric subunits. Contains point group types (e.g. Cyclic, Dihedral) or Helical for helical symmetry.",
                         "context": "dictionary"
                      },
                      {
@@ -2083,10 +2083,10 @@
                         },
                         "order": {
                            "type": "integer",
-                           "description": "The number of times (order of rotation) that a subunit can be repeated by a rotation operation,\n being transformed into a new state indistinguishable from its starting state.",
+                           "description": "The number of times (order of rotation) that a subunit can be repeated by a rotation operation, being transformed into a new state indistinguishable from its starting state.",
                            "rcsb_description": [
                               {
-                                 "text": "The number of times (order of rotation) that a subunit can be repeated by a rotation operation,\n being transformed into a new state indistinguishable from its starting state.",
+                                 "text": "The number of times (order of rotation) that a subunit can be repeated by a rotation operation, being transformed into a new state indistinguishable from its starting state.",
                                  "context": "dictionary"
                               }
                            ]
@@ -2282,14 +2282,14 @@
          "examples": [
             "1KIP-1"
          ],
-         "description": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
+         "description": "A unique identifier for each object in this assembly container formed by a dash separated concatenation of entry and assembly identifiers.",
          "rcsb_search_context": [
             "exact-match"
          ],
          "rcsb_full_text_priority": 10,
          "rcsb_description": [
             {
-               "text": "A unique identifier for each object in this assembly container formed by\n a dash separated concatenation of entry and assembly identifiers.",
+               "text": "A unique identifier for each object in this assembly container formed by a dash separated concatenation of entry and assembly identifiers.",
                "context": "dictionary"
             }
          ]
