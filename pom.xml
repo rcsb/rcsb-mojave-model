@@ -1535,8 +1535,9 @@
                             <!-- If this is set to false, the artifact is only staged and then needs pushing manually via the web interface at https://central.sonatype.com/publishing/deployments -->
                             <!-- With true it publishes automatically -->
                             <autoPublish>true</autoPublish>
-                            <!-- NOTE this is essential for the automatic github workflow to wait for the new release to be validated and publicly available -->
-                            <waitUntil>published</waitUntil>
+                            <!-- Only wait for validation: once validated, autoPublish guarantees publication, but the time to reach Central is unpredictable (minutes to hours). -->
+                            <!-- The github release workflow polls Central for availability in a separate, re-runnable job (wait-for-central) -->
+                            <waitUntil>validated</waitUntil>
                         </configuration>
                     </plugin>
 
