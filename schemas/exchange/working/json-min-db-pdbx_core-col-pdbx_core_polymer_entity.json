@@ -3116,8 +3116,10 @@
                      "InterPro",
                      "MemProtMD",
                      "OPM",
+                     "PAZy",
                      "PDBTM",
                      "Pfam",
+                     "PlasticDB",
                      "mpstruc"
                   ],
                   "examples": [
@@ -3166,6 +3168,11 @@
                         "name": "Orientations of Proteins in Membranes (OPM) Database"
                      },
                      {
+                        "value": "PAZy",
+                        "detail": "Plastics-Active Enzymes Database",
+                        "name": "Plastics-Active Enzymes Database"
+                     },
+                     {
                         "value": "PDBTM",
                         "detail": "Protein Data Bank of Transmembrane Proteins",
                         "name": "Protein Data Bank of Transmembrane Proteins"
@@ -3174,6 +3181,11 @@
                         "value": "Pfam",
                         "detail": "Pfam Protein Family",
                         "name": "Pfam Protein Family"
+                     },
+                     {
+                        "value": "PlasticDB",
+                        "detail": "Database of microorganisms and proteins linked to plastic biodegradation",
+                        "name": "PlasticDB"
                      },
                      {
                         "value": "mpstruc",
@@ -3280,7 +3292,8 @@
                               "CARD_ARO_CATEGORY",
                               "CARD_ARO_CVTERM_ID",
                               "CARD_ARO_DRUG_CLASS",
-                              "CARD_ARO_RESISTANCE_MECHANISM"
+                              "CARD_ARO_RESISTANCE_MECHANISM",
+                              "PLASTIC_SUBSTRATES"
                            ],
                            "examples": [
                               "CARD_ARO_CATEGORY"
@@ -3302,6 +3315,10 @@
                               {
                                  "value": "CARD_ARO_RESISTANCE_MECHANISM",
                                  "detail": "Mechanism of resistance"
+                              },
+                              {
+                                 "value": "PLASTIC_SUBSTRATES",
+                                 "detail": "Plastic substrates of plastic-degrading enzymes (abbreviated names)"
                               }
                            ],
                            "rcsb_description": [
@@ -3426,6 +3443,30 @@
                               "Flavin containing amine oxidoreductase"
                            ],
                            "path": "rcsb_polymer_entity_annotation.annotation_lineage.name"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "PAZy",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "IsPETase",
+                              "RgPETase"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.name"
+                        }
+                     ]
+                  },
+                  {
+                     "context_value": "PlasticDB",
+                     "attributes": [
+                        {
+                           "examples": [
+                              "PETase",
+                              "PHB depolymerase"
+                           ],
+                           "path": "rcsb_polymer_entity_annotation.name"
                         }
                      ]
                   }
@@ -5267,7 +5308,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb_exdb_assets/tree/master/json_schema_definitions/json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 10.1.2",
-   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 10.1.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb_exdb_assets/tree/master/json_schema_definitions/json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 10.1.2"
+   "title": "schema: pdbx_core collection: pdbx_core_polymer_entity version: 10.1.3",
+   "description": "RCSB Exchange Database JSON schema derived from the pdbx_core content type schema. This schema supports collection pdbx_core_polymer_entity version 10.1.3. This schema is hosted in repository https://github.com/rcsb/py-rcsb_exdb_assets/tree/master/json_schema_definitions/json-min-db-pdbx_core-col-pdbx_core_polymer_entity.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 10.1.3"
 }
