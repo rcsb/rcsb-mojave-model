@@ -536,6 +536,181 @@
             "id"
          ]
       },
+      "pdbx_chem_comp_atom_coordination": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "atom_id": {
+                  "type": "string",
+                  "description": "The identifier for the target atom to which the feature is assigned.",
+                  "rcsb_description": [
+                     {
+                        "text": "The identifier for the target atom to which the feature is assigned.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "geometry_generic": {
+                  "type": "string",
+                  "enum": [
+                     "ball",
+                     "bent",
+                     "cubic",
+                     "cubic with vacancy",
+                     "cuboctahedral",
+                     "dodecahedral",
+                     "hexagonal bipyramidal",
+                     "hexagonal bipyramidal with axial vacancy",
+                     "hexagonal bipyramidal with equatorial vacancy",
+                     "hexagonal planar",
+                     "irregular",
+                     "linear",
+                     "linear bicapped",
+                     "linear monocapped",
+                     "octahedral",
+                     "octahedral cis bicapped",
+                     "octahedral edge monocapped",
+                     "octahedral face monocapped",
+                     "octahedral monocapped with capped face vacancy",
+                     "octahedral monocapped with non-capped face vacancy",
+                     "octahedral trans bicapped",
+                     "paired octahedral",
+                     "penta trigonal planar",
+                     "penta trigonal planar i",
+                     "penta trigonal planar i i",
+                     "penta trigonal planar v",
+                     "pentagonal antiprismatic",
+                     "pentagonal bipyramidal",
+                     "pentagonal bipyramidal with axial vacancy",
+                     "pentagonal bipyramidal with equatorial vacancy",
+                     "pentagonal prismatic",
+                     "pyramidal",
+                     "sandwich 4 2",
+                     "sandwich 4 3",
+                     "sandwich 4h 2",
+                     "sandwich 4h 3",
+                     "sandwich 4h 4",
+                     "sandwich 4h 4h",
+                     "sandwich 5 1",
+                     "sandwich 5 2",
+                     "sandwich 5 3",
+                     "sandwich 5 4",
+                     "sandwich 5 4 i",
+                     "sandwich 5 4h",
+                     "sandwich 5 4h v",
+                     "sandwich 5 5",
+                     "sandwich 5 5 4",
+                     "sandwich 5 5 i",
+                     "sandwich 5 5 star",
+                     "sandwich 5 5 v",
+                     "sandwich 5 5 v i",
+                     "sandwich 5 5 v v",
+                     "sandwich 5 5 v v 3d",
+                     "sandwich 5 5o",
+                     "sandwich 5 capped 1",
+                     "sandwich 5 hexagonal pyramidal",
+                     "sandwich 5 pentagonal pyramidal",
+                     "sandwich 5 square pyramidal",
+                     "sandwich 5 square pyramidal monocapped",
+                     "sandwich 5 tricapped i",
+                     "sandwich 5 tricapped v",
+                     "sandwich 5h 3",
+                     "sandwich 6 1",
+                     "sandwich 6 2",
+                     "sandwich 6 3",
+                     "sandwich 6 4",
+                     "sandwich 6 5",
+                     "sandwich 6 5 v",
+                     "sandwich 6 6",
+                     "sandwich 6 6 triangle",
+                     "sandwich 6 6 v",
+                     "sandwich 6 trigonal pyramidal",
+                     "sandwich 7 1",
+                     "sandwich 7 2",
+                     "sandwich 7 3",
+                     "sandwich 7 5",
+                     "sandwich 8 3",
+                     "sandwich 8 4",
+                     "sandwich 8 5",
+                     "sandwich 8 5 i",
+                     "sandwich 8 8",
+                     "sandwich 8 8 i",
+                     "sandwich 8 8 v",
+                     "sandwich c5 5 i",
+                     "seamine",
+                     "square antiprismatic",
+                     "square antiprismatic bicapped",
+                     "square antiprismatic monocapped",
+                     "square antiprismatic with vacancy",
+                     "square non-planar",
+                     "square planar",
+                     "square planar bicapped",
+                     "square planar monocapped",
+                     "square pyramidal",
+                     "square pyramidal with vacancy",
+                     "t shape",
+                     "tetrahedral",
+                     "trigonal bipyramidal",
+                     "trigonal bipyramidal with vacancy",
+                     "trigonal planar",
+                     "trigonal planar bicapped",
+                     "trigonal planar monocapped",
+                     "trigonal planar tricapped",
+                     "trigonal prism tricapped",
+                     "trigonal prismatic",
+                     "trigonal prismatic all face capped",
+                     "trigonal prismatic monocapped",
+                     "trigonal prismatic monocapped with capped face vacancy",
+                     "trigonal prismatic monocapped with non-capped face vacancy",
+                     "trigonal prismatic square-face bicapped",
+                     "trigonal prismatic triangular-face bicapped",
+                     "trigonal prismatic with vacancy",
+                     "trigonal pyramidal"
+                  ],
+                  "description": "This data item translates the geometry output from a software program (for example, FindGeo or MetalCoord) into\n               a unified naming scheme. As software programs sometimes have different names for the same geometry (for instance,\n\t       'tetrahedral' and 'tetrahedron' correspond to the same geometry), this data item provides a name for\n\t       the geometry that is consistent regardless of the provenance to enhance findability. The geometry derived\n\t       from observed geometries in atomic coordinate files.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item translates the geometry output from a software program (for example, FindGeo or MetalCoord) into\n               a unified naming scheme. As software programs sometimes have different names for the same geometry (for instance,\n\t       'tetrahedral' and 'tetrahedron' correspond to the same geometry), this data item provides a name for\n\t       the geometry that is consistent regardless of the provenance to enhance findability. The geometry derived\n\t       from observed geometries in atomic coordinate files.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "number": {
+                  "type": "integer",
+                  "description": "The coordination number of the target atom.",
+                  "rcsb_description": [
+                     {
+                        "text": "The coordination number of the target atom.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "provenance": {
+                  "type": "string",
+                  "enum": [
+                     "Author",
+                     "FindGeo",
+                     "MetalCoord",
+                     "PDB"
+                  ],
+                  "description": "The provenance of the feature assigned to this atom.",
+                  "rcsb_description": [
+                     {
+                        "text": "The provenance of the feature assigned to this atom.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "provenance"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_chem_comp_audit": {
          "type": "array",
          "items": {
