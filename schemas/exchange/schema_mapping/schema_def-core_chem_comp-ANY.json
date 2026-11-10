@@ -2,7 +2,7 @@
    "NAME": "core_chem_comp",
    "APP_NAME": "ANY",
    "DATABASE_NAME": "dw",
-   "DATABASE_VERSION": "7.2.1",
+   "DATABASE_VERSION": "7.2.2",
    "SELECTION_FILTERS": {
       "PUBLIC_RELEASE": [
          {
@@ -31,6 +31,7 @@
             "NAME": "name",
             "ONE_LETTER_CODE": "one_letter_code",
             "PDBX_AMBIGUOUS_FLAG": "pdbx_ambiguous_flag",
+            "PDBX_COMP_TYPE": "pdbx_comp_type",
             "PDBX_FORMAL_CHARGE": "pdbx_formal_charge",
             "PDBX_INITIAL_DATE": "pdbx_initial_date",
             "PDBX_MODIFIED_DATE": "pdbx_modified_date",
@@ -83,6 +84,12 @@
             "PDBX_AMBIGUOUS_FLAG": {
                "CATEGORY": "chem_comp",
                "ATTRIBUTE": "pdbx_ambiguous_flag",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PDBX_COMP_TYPE": {
+               "CATEGORY": "chem_comp",
+               "ATTRIBUTE": "pdbx_comp_type",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -272,8 +279,28 @@
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             },
-            "PDBX_FORMAL_CHARGE": {
+            "PDBX_COMP_TYPE": {
                "ORDER": 8,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 36,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "metal cation",
+                  "metal-containing ligand"
+               ],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "PDBX_FORMAL_CHARGE": {
+               "ORDER": 9,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -290,23 +317,6 @@
                "SUB_CATEGORIES": []
             },
             "PDBX_INITIAL_DATE": {
-               "ORDER": 9,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "date",
-               "WIDTH": 12,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [
-                  "TRANSLATE_XMLCHARREFS"
-               ],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [],
-               "SUB_CATEGORIES": []
-            },
-            "PDBX_MODIFIED_DATE": {
                "ORDER": 10,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -323,8 +333,25 @@
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             },
-            "PDBX_PCM": {
+            "PDBX_MODIFIED_DATE": {
                "ORDER": 11,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "date",
+               "WIDTH": 12,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "PDBX_PCM": {
+               "ORDER": 12,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -344,7 +371,7 @@
                "SUB_CATEGORIES": []
             },
             "PDBX_PROCESSING_SITE": {
-               "ORDER": 12,
+               "ORDER": 13,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -367,7 +394,7 @@
                "SUB_CATEGORIES": []
             },
             "PDBX_RELEASE_STATUS": {
-               "ORDER": 13,
+               "ORDER": 14,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -391,23 +418,6 @@
                "SUB_CATEGORIES": []
             },
             "PDBX_REPLACED_BY": {
-               "ORDER": 14,
-               "NULLABLE": true,
-               "PRECISION": 0,
-               "PRIMARY_KEY": false,
-               "APP_TYPE": "char",
-               "WIDTH": 10,
-               "ITERABLE_DELIMITER": null,
-               "EMBEDDED_ITERABLE_DELIMITER": null,
-               "FILTER_TYPES": [
-                  "TRANSLATE_XMLCHARREFS"
-               ],
-               "IS_CHAR_TYPE": true,
-               "ENUMERATION": [],
-               "CONTENT_CLASSES": [],
-               "SUB_CATEGORIES": []
-            },
-            "PDBX_REPLACES": {
                "ORDER": 15,
                "NULLABLE": true,
                "PRECISION": 0,
@@ -424,8 +434,25 @@
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             },
-            "PDBX_SUBCOMPONENT_LIST": {
+            "PDBX_REPLACES": {
                "ORDER": 16,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [
+                  "TRANSLATE_XMLCHARREFS"
+               ],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "PDBX_SUBCOMPONENT_LIST": {
+               "ORDER": 17,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -442,7 +469,7 @@
                "SUB_CATEGORIES": []
             },
             "THREE_LETTER_CODE": {
-               "ORDER": 17,
+               "ORDER": 18,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -459,7 +486,7 @@
                "SUB_CATEGORIES": []
             },
             "TYPE": {
-               "ORDER": 18,
+               "ORDER": 19,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -8227,7 +8254,7 @@
       "CONTENT_TYPE_COLLECTION_INFO": [
          {
             "NAME": "core_chem_comp",
-            "VERSION": "7.2.1"
+            "VERSION": "7.2.2"
          }
       ],
       "COLLECTION_DOCUMENT_ATTRIBUTE_NAMES": {

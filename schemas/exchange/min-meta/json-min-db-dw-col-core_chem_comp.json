@@ -45,7 +45,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Chemical Components",
-                     "priority_order": 75
+                     "priority_order": 80
                   }
                ]
             },
@@ -155,6 +155,34 @@
                   {
                      "text": "A preliminary classification used by PDB to indicate\n that the chemistry of this component while described\n as clearly as possible is still ambiguous.  Software\n tools may not be able to process this component\n definition.",
                      "context": "dictionary"
+                  }
+               ]
+            },
+            "pdbx_comp_type": {
+               "type": "string",
+               "enum": [
+                  "metal cation",
+                  "metal-containing ligand"
+               ],
+               "description": "A type classification of this chemical component.",
+               "rcsb_search_context": [
+                  "exact-match"
+               ],
+               "rcsb_full_text_priority": 10,
+               "rcsb_description": [
+                  {
+                     "text": "A type classification of this chemical component.",
+                     "context": "dictionary"
+                  },
+                  {
+                     "text": "Metal-containing Component Type",
+                     "context": "brief"
+                  }
+               ],
+               "rcsb_search_group": [
+                  {
+                     "group_name": "Chemical Components",
+                     "priority_order": 35
                   }
                ]
             },
@@ -669,20 +697,47 @@
                      "trigonal pyramidal"
                   ],
                   "description": "This data item translates the geometry output from a software program (for example, FindGeo or MetalCoord) into\n               a unified naming scheme. As software programs sometimes have different names for the same geometry (for instance,\n\t       'tetrahedral' and 'tetrahedron' correspond to the same geometry), this data item provides a name for\n\t       the geometry that is consistent regardless of the provenance to enhance findability. The geometry derived\n\t       from observed geometries in atomic coordinate files.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
                   "rcsb_description": [
                      {
                         "text": "This data item translates the geometry output from a software program (for example, FindGeo or MetalCoord) into\n               a unified naming scheme. As software programs sometimes have different names for the same geometry (for instance,\n\t       'tetrahedral' and 'tetrahedron' correspond to the same geometry), this data item provides a name for\n\t       the geometry that is consistent regardless of the provenance to enhance findability. The geometry derived\n\t       from observed geometries in atomic coordinate files.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Component Coordination Geometry",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Metal-containing Components",
+                        "priority_order": 5
                      }
                   ]
                },
                "number": {
                   "type": "integer",
                   "description": "The coordination number of the target atom.",
+                  "rcsb_search_context": [
+                     "default-match"
+                  ],
                   "rcsb_description": [
                      {
                         "text": "The coordination number of the target atom.",
                         "context": "dictionary"
+                     },
+                     {
+                        "text": "Component Coordination Number",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Metal-containing Components",
+                        "priority_order": 10
                      }
                   ]
                },
@@ -709,7 +764,8 @@
             ]
          },
          "minItems": 1,
-         "uniqueItems": true
+         "uniqueItems": true,
+         "rcsb_nested_indexing": true
       },
       "pdbx_chem_comp_audit": {
          "type": "array",
@@ -3717,7 +3773,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Chemical Components",
-                        "priority_order": 105
+                        "priority_order": 110
                      }
                   ]
                },
@@ -3855,7 +3911,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Chemical Components",
-                                 "priority_order": 115
+                                 "priority_order": 120
                               }
                            ]
                         },
@@ -3880,7 +3936,7 @@
                            "rcsb_search_group": [
                               {
                                  "group_name": "Chemical Components",
-                                 "priority_order": 110
+                                 "priority_order": 115
                               }
                            ]
                         }
@@ -4188,7 +4244,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Chemical Components",
-                     "priority_order": 70
+                     "priority_order": 75
                   }
                ]
             },
@@ -4266,7 +4322,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Chemical Components",
-                     "priority_order": 85
+                     "priority_order": 90
                   }
                ]
             },
@@ -4289,7 +4345,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Chemical Components",
-                     "priority_order": 80
+                     "priority_order": 85
                   }
                ]
             },
@@ -4312,7 +4368,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Chemical Components",
-                     "priority_order": 90
+                     "priority_order": 95
                   }
                ]
             },
@@ -4335,7 +4391,7 @@
                "rcsb_search_group": [
                   {
                      "group_name": "Chemical Components",
-                     "priority_order": 95
+                     "priority_order": 100
                   }
                ]
             },
@@ -4569,7 +4625,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Chemical Components",
-                        "priority_order": 100
+                        "priority_order": 105
                      }
                   ]
                },
@@ -4995,7 +5051,7 @@
                   "rcsb_search_group": [
                      {
                         "group_name": "Chemical Components",
-                        "priority_order": 35
+                        "priority_order": 40
                      }
                   ]
                },
@@ -5146,7 +5202,7 @@
    ],
    "$id": "https://github.com/rcsb/py-rcsb_exdb_assets/tree/master/json_schema_definitions/json-min-db-dw-col-core_chem_comp.json",
    "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "schema: core_chem_comp collection: core_chem_comp version: 7.2.1",
-   "description": "RCSB Exchange Database JSON schema derived from the core_chem_comp content type schema. This schema supports collection core_chem_comp version 7.2.1. This schema is hosted in repository https://github.com/rcsb/py-rcsb_exdb_assets/tree/master/json_schema_definitions/json-min-db-dw-col-core_chem_comp.json and follows JSON schema specification version 4",
-   "$comment": "schema_version: 7.2.1"
+   "title": "schema: core_chem_comp collection: core_chem_comp version: 7.2.2",
+   "description": "RCSB Exchange Database JSON schema derived from the core_chem_comp content type schema. This schema supports collection core_chem_comp version 7.2.2. This schema is hosted in repository https://github.com/rcsb/py-rcsb_exdb_assets/tree/master/json_schema_definitions/json-min-db-dw-col-core_chem_comp.json and follows JSON schema specification version 4",
+   "$comment": "schema_version: 7.2.2"
 }

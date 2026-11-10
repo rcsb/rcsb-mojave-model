@@ -29,6 +29,13 @@
             "pdbx_ambiguous_flag": {
                "bsonType": "string"
             },
+            "pdbx_comp_type": {
+               "bsonType": "string",
+               "enum": [
+                  "metal cation",
+                  "metal-containing ligand"
+               ]
+            },
             "pdbx_formal_charge": {
                "bsonType": "int"
             },
