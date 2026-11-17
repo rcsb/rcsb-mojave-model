@@ -4,7 +4,8 @@
   "type": "object",
   "required": [
     "seq_id",
-    "sequence"
+    "sequence",
+    "residue_codes"
   ],
   "properties": {
     "seq_id": {
@@ -22,6 +23,18 @@
         "TYVDLEKAKSASALWAYIGIDKPSHDRYTKGEAGGGNKTLRTMVWNMANSMIKNRKCPYRTVYEQTKERLAVSEKVTKSR"
       ],
       "description": "A unique protein sequence."
+    },
+    "residue_codes": {
+      "type": "array",
+      "description": "Per-residue embedding codes. Each item is an 8-dimensional array of integers representing the code for a single residue in the sequence.",
+      "items": {
+        "type": "array",
+        "minItems": 8,
+        "maxItems": 8,
+        "items": {
+          "type": "integer"
+        }
+      }
     }
   }
 }
