@@ -125,6 +125,69 @@
             "id"
          ]
       },
+      "chem_comp_bond": {
+         "bsonType": "array",
+         "items": {
+            "bsonType": "object",
+            "properties": {
+               "atom_id_1": {
+                  "bsonType": "string"
+               },
+               "atom_id_2": {
+                  "bsonType": "string"
+               },
+               "pdbx_aromatic_flag": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "pdbx_metal_coordination_flag": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "pdbx_metal_pi_flag": {
+                  "bsonType": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ]
+               },
+               "pdbx_stereo_config": {
+                  "bsonType": "string",
+                  "enum": [
+                     "E",
+                     "N",
+                     "Z"
+                  ]
+               },
+               "value_order": {
+                  "bsonType": "string",
+                  "enum": [
+                     "arom",
+                     "delo",
+                     "doub",
+                     "pi",
+                     "poly",
+                     "quad",
+                     "sing",
+                     "trip"
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "atom_id_1",
+               "atom_id_2"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_chem_comp_atom_coordination": {
          "bsonType": "array",
          "items": {
@@ -262,6 +325,14 @@
                      "MetalCoord",
                      "PDB"
                   ]
+               },
+               "rcsb_coordination_sphere_descriptors": {
+                  "bsonType": "array",
+                  "items": {
+                     "bsonType": "string"
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true
                }
             },
             "additionalProperties": false,

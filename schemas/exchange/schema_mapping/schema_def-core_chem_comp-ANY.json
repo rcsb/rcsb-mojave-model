@@ -1097,6 +1097,8 @@
             "ATOM_ID_2": "atom_id_2",
             "COMP_ID": "comp_id",
             "PDBX_AROMATIC_FLAG": "pdbx_aromatic_flag",
+            "PDBX_METAL_COORDINATION_FLAG": "pdbx_metal_coordination_flag",
+            "PDBX_METAL_PI_FLAG": "pdbx_metal_pi_flag",
             "PDBX_ORDINAL": "pdbx_ordinal",
             "PDBX_STEREO_CONFIG": "pdbx_stereo_config",
             "VALUE_ORDER": "value_order"
@@ -1123,6 +1125,18 @@
             "PDBX_AROMATIC_FLAG": {
                "CATEGORY": "chem_comp_bond",
                "ATTRIBUTE": "pdbx_aromatic_flag",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PDBX_METAL_COORDINATION_FLAG": {
+               "CATEGORY": "chem_comp_bond",
+               "ATTRIBUTE": "pdbx_metal_coordination_flag",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "PDBX_METAL_PI_FLAG": {
+               "CATEGORY": "chem_comp_bond",
+               "ATTRIBUTE": "pdbx_metal_pi_flag",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -1206,8 +1220,44 @@
                "CONTENT_CLASSES": [],
                "SUB_CATEGORIES": []
             },
-            "PDBX_ORDINAL": {
+            "PDBX_METAL_COORDINATION_FLAG": {
                "ORDER": 5,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "N",
+                  "Y"
+               ],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "PDBX_METAL_PI_FLAG": {
+               "ORDER": 6,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": null,
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [
+                  "N",
+                  "Y"
+               ],
+               "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "PDBX_ORDINAL": {
+               "ORDER": 7,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -1222,7 +1272,7 @@
                "SUB_CATEGORIES": []
             },
             "PDBX_STEREO_CONFIG": {
-               "ORDER": 6,
+               "ORDER": 8,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -1241,7 +1291,7 @@
                "SUB_CATEGORIES": []
             },
             "VALUE_ORDER": {
-               "ORDER": 7,
+               "ORDER": 9,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -1301,7 +1351,9 @@
          "SCHEMA_NAME": "pdbx_chem_comp_atom_coordination",
          "SCHEMA_TYPE": "transactional",
          "SCHEMA_UNIT_CARDINALITY": false,
-         "SCHEMA_CONTENT_CLASSES": [],
+         "SCHEMA_CONTENT_CLASSES": [
+            "GENERATED_CONTENT"
+         ],
          "SCHEMA_MANDATORY": false,
          "SCHEMA_SUB_CATEGORIES": [],
          "ATTRIBUTES": {
@@ -1312,7 +1364,8 @@
             "GEOMETRY_ABBR": "geometry_abbr",
             "GEOMETRY_CALCULATED": "geometry_calculated",
             "GEOMETRY_GENERIC": "geometry_generic",
-            "NUMBER": "number"
+            "NUMBER": "number",
+            "RCSB_COORDINATION_SPHERE_DESCRIPTORS": "rcsb_coordination_sphere_descriptors"
          },
          "ATTRIBUTE_MAP": {
             "GEOMETRY_ID": {
@@ -1360,6 +1413,12 @@
             "NUMBER": {
                "CATEGORY": "pdbx_chem_comp_atom_coordination",
                "ATTRIBUTE": "number",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_COORDINATION_SPHERE_DESCRIPTORS": {
+               "CATEGORY": "pdbx_chem_comp_atom_coordination",
+               "ATTRIBUTE": "rcsb_coordination_sphere_descriptors",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             }
@@ -1600,6 +1659,23 @@
                "IS_CHAR_TYPE": false,
                "ENUMERATION": [],
                "CONTENT_CLASSES": [],
+               "SUB_CATEGORIES": []
+            },
+            "RCSB_COORDINATION_SPHERE_DESCRIPTORS": {
+               "ORDER": 9,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ";",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
                "SUB_CATEGORIES": []
             }
          },
@@ -8321,7 +8397,6 @@
             "INCLUDE": [],
             "EXCLUDE": [
                "CHEM_COMP_ATOM",
-               "CHEM_COMP_BOND",
                "CITATION_AUTHOR",
                "RCSB_BIRD_CITATION_AUTHOR"
             ],
@@ -8335,6 +8410,10 @@
                   "pdbx_model_coordinates_db_code",
                   "pdbx_synonyms",
                   "pdbx_type"
+               ],
+               "chem_comp_bond": [
+                  "comp_id",
+                  "pdbx_ordinal"
                ],
                "pdbx_chem_comp_audit": [
                   "processing_site",
