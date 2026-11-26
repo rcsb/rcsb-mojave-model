@@ -564,6 +564,190 @@
             "id"
          ]
       },
+      "chem_comp_bond": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "atom_id_1": {
+                  "type": "string",
+                  "description": "The ID of the first of the two atoms that define the bond.\n\n This data item is a pointer to _chem_comp_atom.atom_id in the\n CHEM_COMP_ATOM category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The ID of the first of the two atoms that define the bond.\n\n This data item is a pointer to _chem_comp_atom.atom_id in the\n CHEM_COMP_ATOM category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "atom_id_2": {
+                  "type": "string",
+                  "description": "The ID of the second of the two atoms that define the bond.\n\n This data item is a pointer to _chem_comp_atom.atom_id in the\n CHEM_COMP_ATOM category.",
+                  "rcsb_description": [
+                     {
+                        "text": "The ID of the second of the two atoms that define the bond.\n\n This data item is a pointer to _chem_comp_atom.atom_id in the\n CHEM_COMP_ATOM category.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "pdbx_aromatic_flag": {
+                  "type": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ],
+                  "description": "A flag indicating an aromatic bond.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "N",
+                        "detail": "No  - not an aromatic bond"
+                     },
+                     {
+                        "value": "Y",
+                        "detail": "Yes - an aromatic bond"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "A flag indicating an aromatic bond.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "pdbx_metal_coordination_flag": {
+                  "type": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ],
+                  "description": "This data item identifies if this is a bond between a metal and its coordinating group, otherwise\n               referred to as a dative or coordinate covalent bond. This flag is used for all bonds between\n\t       metals and non-metals, including metal-pi bonds and all other metal coordination bonds.",
+                  "rcsb_description": [
+                     {
+                        "text": "This data item identifies if this is a bond between a metal and its coordinating group, otherwise\n               referred to as a dative or coordinate covalent bond. This flag is used for all bonds between\n\t       metals and non-metals, including metal-pi bonds and all other metal coordination bonds.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "pdbx_metal_pi_flag": {
+                  "type": "string",
+                  "enum": [
+                     "N",
+                     "Y"
+                  ],
+                  "description": "This data item identifies if this is a bond between a metal and a pi system (alkene, arene, etc).",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "This data item identifies if this is a bond between a metal and a pi system (alkene, arene, etc).",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Metal Pi Bond",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Metal-containing Components",
+                        "priority_order": 20
+                     }
+                  ]
+               },
+               "pdbx_stereo_config": {
+                  "type": "string",
+                  "enum": [
+                     "E",
+                     "N",
+                     "Z"
+                  ],
+                  "description": "Stereochemical configuration across a double bond.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "E",
+                        "detail": "entgegen for opposite"
+                     },
+                     {
+                        "value": "N",
+                        "detail": "none"
+                     },
+                     {
+                        "value": "Z",
+                        "detail": "zusammen for together"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "Stereochemical configuration across a double bond.",
+                        "context": "dictionary"
+                     }
+                  ]
+               },
+               "value_order": {
+                  "type": "string",
+                  "enum": [
+                     "arom",
+                     "delo",
+                     "doub",
+                     "pi",
+                     "poly",
+                     "quad",
+                     "sing",
+                     "trip"
+                  ],
+                  "description": "The value that should be taken as the target for the chemical\n bond associated with the specified atoms, expressed as a bond\n order.",
+                  "rcsb_enum_annotated": [
+                     {
+                        "value": "arom",
+                        "detail": "aromatic bond"
+                     },
+                     {
+                        "value": "delo",
+                        "detail": "delocalized double bond"
+                     },
+                     {
+                        "value": "doub",
+                        "detail": "double bond"
+                     },
+                     {
+                        "value": "pi",
+                        "detail": "pi bond"
+                     },
+                     {
+                        "value": "poly",
+                        "detail": "polymeric bond"
+                     },
+                     {
+                        "value": "quad",
+                        "detail": "quadruple bond"
+                     },
+                     {
+                        "value": "sing",
+                        "detail": "single bond"
+                     },
+                     {
+                        "value": "trip",
+                        "detail": "triple bond"
+                     }
+                  ],
+                  "rcsb_description": [
+                     {
+                        "text": "The value that should be taken as the target for the chemical\n bond associated with the specified atoms, expressed as a bond\n order.",
+                        "context": "dictionary"
+                     }
+                  ]
+               }
+            },
+            "additionalProperties": false,
+            "required": [
+               "atom_id_1",
+               "atom_id_2"
+            ]
+         },
+         "minItems": 1,
+         "uniqueItems": true
+      },
       "pdbx_chem_comp_atom_coordination": {
          "type": "array",
          "items": {
@@ -756,6 +940,37 @@
                         "context": "dictionary"
                      }
                   ]
+               },
+               "rcsb_coordination_sphere_descriptors": {
+                  "type": "array",
+                  "items": {
+                     "type": "string",
+                     "examples": [
+                        "@SPL{Pt,N,O,N,O}"
+                     ],
+                     "description": "An array of descriptors for the coordination environment of an atom. \n     The descriptor is derived from observed coordination environments in\n\t atomic coordinate files.",
+                     "rcsb_search_context": [
+                        "exact-match"
+                     ],
+                     "rcsb_full_text_priority": 10,
+                     "rcsb_description": [
+                        {
+                           "text": "An array of descriptors for the coordination environment of an atom. \n     The descriptor is derived from observed coordination environments in\n\t atomic coordinate files.",
+                           "context": "dictionary"
+                        },
+                        {
+                           "text": "Metal Coordination Descriptor",
+                           "context": "brief"
+                        }
+                     ],
+                     "rcsb_search_group": [
+                        {
+                           "group_name": "Metal-containing Components",
+                           "priority_order": 15
+                        }
+                     ]
+                  },
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false,

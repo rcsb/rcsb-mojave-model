@@ -35047,6 +35047,7 @@
             "LABEL_COMP_ID": "label_comp_id",
             "LABEL_SEQ_ID": "label_seq_id",
             "NUMBER": "number",
+            "RCSB_COORDINATION_SPHERE_DESCRIPTORS": "rcsb_coordination_sphere_descriptors",
             "REMARK": "remark"
          },
          "ATTRIBUTE_MAP": {
@@ -35149,6 +35150,12 @@
             "NUMBER": {
                "CATEGORY": "pdbx_nonpoly_atom_coordination",
                "ATTRIBUTE": "number",
+               "METHOD_NAME": null,
+               "ARGUMENTS": null
+            },
+            "RCSB_COORDINATION_SPHERE_DESCRIPTORS": {
+               "CATEGORY": "pdbx_nonpoly_atom_coordination",
+               "ATTRIBUTE": "rcsb_coordination_sphere_descriptors",
                "METHOD_NAME": null,
                "ARGUMENTS": null
             },
@@ -35570,8 +35577,25 @@
                ],
                "SUB_CATEGORIES": []
             },
-            "REMARK": {
+            "RCSB_COORDINATION_SPHERE_DESCRIPTORS": {
                "ORDER": 18,
+               "NULLABLE": true,
+               "PRECISION": 0,
+               "PRIMARY_KEY": false,
+               "APP_TYPE": "char",
+               "WIDTH": 10,
+               "ITERABLE_DELIMITER": ",",
+               "EMBEDDED_ITERABLE_DELIMITER": null,
+               "FILTER_TYPES": [],
+               "IS_CHAR_TYPE": true,
+               "ENUMERATION": [],
+               "CONTENT_CLASSES": [
+                  "GENERATED_CONTENT"
+               ],
+               "SUB_CATEGORIES": []
+            },
+            "REMARK": {
+               "ORDER": 19,
                "NULLABLE": true,
                "PRECISION": 0,
                "PRIMARY_KEY": false,
@@ -111609,7 +111633,6 @@
                   "geometry_id",
                   "label_asym_id",
                   "label_seq_id",
-                  "label_comp_id",
                   "label_alt_id",
                   "auth_asym_id",
                   "auth_seq_id",

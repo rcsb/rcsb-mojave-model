@@ -184,6 +184,30 @@
                      }
                   ]
                },
+               "label_comp_id": {
+                  "type": "string",
+                  "description": "This data item is a pointer to _atom_site.label_comp_id in the ATOM_SITE\n category.",
+                  "rcsb_search_context": [
+                     "exact-match"
+                  ],
+                  "rcsb_full_text_priority": 10,
+                  "rcsb_description": [
+                     {
+                        "text": "This data item is a pointer to _atom_site.label_comp_id in the ATOM_SITE\n category.",
+                        "context": "dictionary"
+                     },
+                     {
+                        "text": "Metal Coordination Component",
+                        "context": "brief"
+                     }
+                  ],
+                  "rcsb_search_group": [
+                     {
+                        "group_name": "Metal-containing Ligands",
+                        "priority_order": 25
+                     }
+                  ]
+               },
                "number": {
                   "type": "integer",
                   "description": "The coordination number of the target atom.",
@@ -222,6 +246,37 @@
                         "context": "dictionary"
                      }
                   ]
+               },
+               "rcsb_coordination_sphere_descriptors": {
+                  "type": "array",
+                  "items": {
+                     "type": "string",
+                     "examples": [
+                        "@SPL{Pt,N,N,N,O}"
+                     ],
+                     "description": "An array of descriptors for the coordination environment of an atom. \n The descriptor is based on what is observed in the coordinate file.",
+                     "rcsb_search_context": [
+                        "exact-match"
+                     ],
+                     "rcsb_full_text_priority": 10,
+                     "rcsb_description": [
+                        {
+                           "text": "An array of descriptors for the coordination environment of an atom. \n The descriptor is based on what is observed in the coordinate file.",
+                           "context": "dictionary"
+                        },
+                        {
+                           "text": "Metal Coordination Descriptor",
+                           "context": "brief"
+                        }
+                     ],
+                     "rcsb_search_group": [
+                        {
+                           "group_name": "Metal-containing Ligands",
+                           "priority_order": 20
+                        }
+                     ]
+                  },
+                  "uniqueItems": false
                }
             },
             "additionalProperties": false,
